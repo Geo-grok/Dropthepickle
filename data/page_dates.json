@@ -1,0 +1,230 @@
+{
+ "about.html": {
+  "hash": "c68b5b7e401184bd2a605da219a21922c90f4abe08e12ec19fd8ab33bf9e3eb9",
+  "updated": null
+ },
+ "best-paddles-for-beginners.html": {
+  "hash": "d5b02b491bad182dc0ddf316b8f6f322a16b98316849a772abdc6f38aaf6848e",
+  "updated": null
+ },
+ "best-paddles-for-control.html": {
+  "hash": "b291ba143e5621841296dd73812597df9c4bdb442cc94eaeb118f72f68c945b4",
+  "updated": null
+ },
+ "best-paddles-for-power.html": {
+  "hash": "480e2d7d4b0688845e9ae4a4932177776f31ec6d89724f7885b4784dd8c039d6",
+  "updated": null
+ },
+ "best-paddles-under-100.html": {
+  "hash": "2a06ec1862868fce3153072b3c2e5f47d6843c281903abac829ba990c4c98688",
+  "updated": null
+ },
+ "compare.html": {
+  "hash": "63c2e1d056984dd7efcf751b91c9c281b691ab429ff270112cc7475e2de5cf09",
+  "updated": null
+ },
+ "creators.html": {
+  "hash": "530b00e4232b8e12c3b0f2576afabca4d8db0d0555c31e04589ec5931fa63186",
+  "updated": null
+ },
+ "deals.html": {
+  "hash": "839a7e38104c1d158b9ca575b739b195ac934dd35640017bfe3c80e54f4a0865",
+  "updated": null
+ },
+ "index.html": {
+  "hash": "0b20e1170d496ccd4400c592a01b3e34345ebf432135c124d8e57d42de0ec160",
+  "updated": null
+ },
+ "news.html": {
+  "hash": "3658f0d84396a43ea1a444e0070bc67f5ec5427fe8739bfdd394d46763e1c337",
+  "updated": null
+ },
+ "paddle-crbn-crbn1-trufoam-barrage.html": {
+  "hash": "dc9f574209e8c863d95e7ae37e241d4b079958ca7bd42d9080d413718476a708",
+  "updated": null
+ },
+ "paddle-crbn-crbn1-trufoam-genesis.html": {
+  "hash": "15b7bfd002374bcd5e49cebcf1c131bed267c1f9fbcc5d53bc1727cde6928604",
+  "updated": null
+ },
+ "paddle-crbn-crbn1-x-series.html": {
+  "hash": "65e24414d2a71d75a36a67c8859eb254b73529eeb2caa2e6f75aa21c7bca8333",
+  "updated": null
+ },
+ "paddle-crbn-crbn3-trufoam-waves.html": {
+  "hash": "33c84c7612ecc06bcb6b220172ed00635036d3b1dad05bdb0b1bef803e7b14b4",
+  "updated": null
+ },
+ "paddle-engage-axiom-elongated-durable-grit.html": {
+  "hash": "0fbc1333d1c77ca1d726bc3c600fc084cdee2f3bb0a8e4cd27a46d7cad4e4b48",
+  "updated": null
+ },
+ "paddle-engage-pursuit-pro2-elongated-16mm.html": {
+  "hash": "2fe2257f9a9f1aaba93820da0dc1ff379b3cd9308cdfca5b7055bb9f9067b37f",
+  "updated": null
+ },
+ "paddle-engage-x2-elongated.html": {
+  "hash": "2e8348a8589246b4edd7c02386113cc5bb0ff3e314e8745388dbe9df3aa602d0",
+  "updated": null
+ },
+ "paddle-gearbox-gbx-power-elongated-gen-3.html": {
+  "hash": "68562cff323a6739d667eaef3ca7f3f913f953b8ef1058e596e0eadcf9fa2c67",
+  "updated": null
+ },
+ "paddle-gearbox-gx2-power-hybrid.html": {
+  "hash": "a599d884f6b51c9c7f108334d873606206327c279e20f19f4d836b5fc3a73886",
+  "updated": null
+ },
+ "paddle-gearbox-pressure-x-8e.html": {
+  "hash": "bb8588d52a265a8ddc259168d1fcd82025d1a4a48ca02aaceab7dcfac23e9c8f",
+  "updated": null
+ },
+ "paddle-joola-hyperion-pro-v.html": {
+  "hash": "e4d959cd328b27fa60cfd6fb429d4e6d604649698b8457032dff3f3002a7ac17",
+  "updated": null
+ },
+ "paddle-joola-kosmos-pro-v.html": {
+  "hash": "f98f693602be2ab5ccd6cba82131eb47c655c02a7230bf2a7e1bce04754b72c4",
+  "updated": null
+ },
+ "paddle-joola-perseus-3s-dual-16mm.html": {
+  "hash": "e44d65a79a2605d7ec3313b8df28a22193bf4df43db5f9f284b541116c3ede2f",
+  "updated": null
+ },
+ "paddle-joola-perseus-pro-v.html": {
+  "hash": "ff655b7e0b9109f6b4753301a930be2342ae3ec640d5d00d93e1b62cf2ed0e75",
+  "updated": null
+ },
+ "paddle-joola-radius-pro-v.html": {
+  "hash": "2555c0183418a88963445a25f6001a5561bcdf5538849242444c95251cb6c0f0",
+  "updated": null
+ },
+ "paddle-joola-scorpeus-pro-v.html": {
+  "hash": "504873356c5379a242acd53f09cbdb95411d2f2334bfddf9b8d764f5f7bfb381",
+  "updated": null
+ },
+ "paddle-luzz-cannon-xpp-m1.html": {
+  "hash": "a8a1e4724190cf986a370c262a6ab67d16ad154d346686086cbc00fd898f0e66",
+  "updated": null
+ },
+ "paddle-luzz-glider-2026-hybrid.html": {
+  "hash": "32cc33868cde284eed085d5e01a33ae42c2f6e2587760a08ebc9e6e03f85f5a9",
+  "updated": null
+ },
+ "paddle-paddletek-bantam-tko-c.html": {
+  "hash": "4f612147b674a79d08e5a9f3a3372c3bd6092352bd0f421a955cc03476f57bd1",
+  "updated": null
+ },
+ "paddle-paddletek-honeyfoam-tko-x.html": {
+  "hash": "0b7f838b620a81622377e70e19a52328e22217c7c4842b03d8dd751f1106167e",
+  "updated": null
+ },
+ "paddle-paddletek-tempest-wave-pro-c.html": {
+  "hash": "7d67a768de8f6862ee2269d5281e17b7de643d896d2d48436ae2b72a022ce0e8",
+  "updated": null
+ },
+ "paddle-selkirk-labs-project-boomstik.html": {
+  "hash": "88263b548de0e3ff3d68748888f63cfe903e9031d035afc3c7c525aee6c6b551",
+  "updated": null
+ },
+ "paddle-selkirk-luxx-control-air-infinigrit.html": {
+  "hash": "533815583d5b09b2428fd42997b569e979c14ed15d571d198f100dcf2258b21f",
+  "updated": null
+ },
+ "paddle-selkirk-omni.html": {
+  "hash": "b6076ecfc0d7f4b9e1e81f57ef848afba46eed293b235c74fe29527ddab93191",
+  "updated": null
+ },
+ "paddle-selkirk-slk-era-power.html": {
+  "hash": "cd10494e085a36ec1fd0a4a6b37bf91231978408c7a978a862e76d9d6b54e730",
+  "updated": null
+ },
+ "paddle-selkirk-slk-halo-power.html": {
+  "hash": "5ab513e45da70612dc1814d6990e73dd59901c4acfc99e6a19d29dbf40ea6700",
+  "updated": null
+ },
+ "paddle-six-zero-black-opal-14mm.html": {
+  "hash": "9df37dc73d04524b8c0a8603cf59df22fbd1309428c20b9f44d9ce03390eb25e",
+  "updated": null
+ },
+ "paddle-six-zero-coral-16mm.html": {
+  "hash": "5f8640a12ca4563b03e9d77e54e3721494487c4f6841b34215366398e764ebaa",
+  "updated": null
+ },
+ "paddle-six-zero-double-black-diamond-control.html": {
+  "hash": "b2c0b1026890e141b39655e77c4afafbcaae9513c6fa23b4df1af68d1596c734",
+  "updated": null
+ },
+ "paddle-six-zero-ruby.html": {
+  "hash": "507c205405cca51a1dd38c0e3c02bdd5fd72f1e0df9e08ccea67df73601e8e48",
+  "updated": null
+ },
+ "paddles.html": {
+  "hash": "e16e98c9bd350cf154b02e77d251030a2ece58898791f629ee5724bdca792306",
+  "updated": null
+ },
+ "podcasts.html": {
+  "hash": "7bcc8b9014253fde25244c4caf0d6935d06313427201709b1b132ca0576bdd9c",
+  "updated": null
+ },
+ "privacy.html": {
+  "hash": "36fe7370feb3818550cef3b982e8b86fcfd16d11fb710ca5ec3043199c29e5b8",
+  "updated": null
+ },
+ "pro-paddles.html": {
+  "hash": "a92ee421f941466e2be008c6efb9fdd94224cb8363b0ddd58f1607283b9b194e",
+  "updated": null
+ },
+ "pros.html": {
+  "hash": "3a3645942f664dc95c93100b67511b4ed74a74036f2d4b3d590f842911d20026",
+  "updated": null
+ },
+ "reviews.html": {
+  "hash": "d70f20d35bdd8dacc439763c6be553c5117ccc2f72427b1d694555f904e4df7e",
+  "updated": null
+ },
+ "tournaments.html": {
+  "hash": "2b9acc46ebc52ec7f40230363d8facc05bfdefaf39c2770f7abc9d686f47525d",
+  "updated": null
+ },
+ "vs-crbn-crbn1-trufoam-genesis-vs-crbn-crbn1-trufoam-barrage.html": {
+  "hash": "8cc8a5fc0cd439f2940894eadba24dc79fe0984d2cc62cc134be3dd95d3749c9",
+  "updated": null
+ },
+ "vs-crbn-crbn1-x-series-vs-engage-pursuit-pro2-elongated-16mm.html": {
+  "hash": "b6851d2610a7158248a9b08e0fb7766c25663f89dace082e42654a60a3ae8d3a",
+  "updated": null
+ },
+ "vs-engage-pursuit-pro2-elongated-16mm-vs-gearbox-gbx-power-elongated-gen-3.html": {
+  "hash": "1dee37a3a470edb1905424b8efec0190ecac6753584826629e92c9189872e524",
+  "updated": null
+ },
+ "vs-gearbox-gx2-power-hybrid-vs-gearbox-pressure-x-8e.html": {
+  "hash": "88bd19d3ea8e6df495eb5ac02f8e97c5657971d19af5b42860842dc2c14c85ff",
+  "updated": null
+ },
+ "vs-joola-kosmos-pro-v-vs-joola-scorpeus-pro-v.html": {
+  "hash": "7c19dde1a2aca80e82e8fb4f892d51966dd927015de41ebece8a4fdeed0adcc2",
+  "updated": null
+ },
+ "vs-joola-perseus-pro-v-vs-joola-hyperion-pro-v.html": {
+  "hash": "b21d0bfab8ca74a8ce00c3e02c34fd979e5ff3a7b5ff18046c095e9712d688bb",
+  "updated": null
+ },
+ "vs-joola-perseus-pro-v-vs-joola-scorpeus-pro-v.html": {
+  "hash": "49cda72ca65b6794b157730bfe324891dae529be8e42d21819dd3098200e5514",
+  "updated": null
+ },
+ "vs-paddletek-bantam-tko-c-vs-paddletek-tempest-wave-pro-c.html": {
+  "hash": "0aa3e93c2ac5facdb23ca061be9aff8903e8e59086d0a9747917ed6064ebc6f1",
+  "updated": null
+ },
+ "vs-selkirk-omni-vs-joola-perseus-pro-v.html": {
+  "hash": "b0aa19582f75055f983f78950733182abf6d4cc2661744f5c4aa96b1a2db1406",
+  "updated": null
+ },
+ "vs-selkirk-slk-halo-power-vs-luzz-glider-2026-hybrid.html": {
+  "hash": "aaee65b7abec2ca2ee8bc52b5ef8366708d42664cc79f4d3b31ec6097cffbbfd",
+  "updated": null
+ }
+}

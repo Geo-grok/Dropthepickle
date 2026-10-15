@@ -65,6 +65,28 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
         return f'<div class="card pcard"><a class="pimg" href="{slug(p)}">{img(p)}<span class="badges">{badge(h, p)}</span>{credit(p)}</a><div class="body"><span class="brand">{e(p["brand"])}</span><h3><a href="{slug(p)}">{e(p["model"])}</a></h3><div class="meta">{" · ".join(x for x in [p["core"], p["shape"], p["weight"]] if x)}</div><div class="pp">{money(p, cur(p))}{was}</div>{f"<p class={chr(34)}meta{chr(34)}>{e(why)}</p>" if why else ""}<div class="meta" style="margin-top:auto">{buy(p)}</div></div></div>' 
     PP = PD["paddles"]; by = {p["model"]: p for p in PP}
+    base = C["BASE_URL"].rstrip("/")
+    def absu(fn): return base + "/" if fn == "index.html" else base + "/" + fn
+    def fresh_p(p):
+        h = ph(p)
+        return {"brand": p["brand"], "model": p["model"], "weight": p["weight"], "core": p["core"], "shape": p["shape"],
+                "list": p["price"], "currency": p["currency"], "current": h.get("current"), "compare_at": h.get("compare_at"),
+                "available": h.get("available"), "sale": h.get("sale"), "drop": h.get("drop"), "low": h.get("low"),
+                "previous": h.get("previous"), "image": h.get("image") or ""}
+    def product_node(p):
+        h = ph(p)
+        node = {"@type": "Product", "name": f'{p["brand"]} {p["model"]}', "brand": {"@type": "Brand", "name": p["brand"]},
+                "category": "Pickleball paddle", "sku": slug(p)[:-5], "url": absu(slug(p)),
+                "description": f'{p["brand"]} {p["model"]} pickleball paddle. Maker-listed weight: {p["weight"] or "not published"}. Core: {p["core"] or "not published"}. Shape: {p["shape"] or "not published"}.',
+                "offers": {"@type": "Offer", "url": p["buy_url"], "priceCurrency": p["currency"], "price": f"{cur(p):.2f}",
+                           "availability": "https://schema.org/OutOfStock" if h.get("available") is False else "https://schema.org/InStock",
+                           "itemCondition": "https://schema.org/NewCondition"}}
+        if h.get("image"): node["image"] = h["image"]
+        return node
+    def item_list(ps):
+        return {"@type": "ItemList", "numberOfItems": len(ps), "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": f'{p["brand"]} {p["model"]}', "url": absu(slug(p)), "item": product_node(p)}
+            for i, p in enumerate(ps, 1)]}
     DISC = '<p class="disc">Some links are affiliate links. We may earn a commission at no extra cost to you. <a href="disclosure.html">Learn more</a>.</p>'
     SRC = f'<p class="meta">Specs and list prices come from the maker\'s own product page (retrieved {e(PD["retrieved"])}). Today\'s price comes from our daily check of the maker page. Pros and cons are our own notes based on published specs. They are not lab or on-court test results.</p>'
     def pro_users(p):
@@ -87,7 +109,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
         hero = f'<section class="phero"><div class="img" style="position:relative">{img(p)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">Maker price checked {fmt(h.get("checked",""))}. Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p><div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div><p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
         page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}<p><a href="compare.html">Compare paddles →</a></p>',
-             f'{p["brand"]} {p["model"]} specs, price history and reviewer videos.')
+             f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
+             fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
     # comparisons
     PAIRS = [("Perseus Pro V","Hyperion Pro V"),("Perseus Pro V","Scorpeus Pro V"),("Kosmos Pro V","Scorpeus Pro V"),("OMNI","Perseus Pro V"),("CRBN¹ TruFoam Genesis","CRBN¹ TruFoam Barrage"),
              ("GX2 Power Hybrid","Pressure X 8E"),("Pursuit Pro2 Elongated 16mm","GBX Power Elongated (Gen-3)"),("SLK HALO Power","Glider 2026 Hybrid"),("Bantam TKO-C","Tempest Wave Pro-C"),("CRBN¹ X Series","Pursuit Pro2 Elongated 16mm")]
@@ -110,12 +133,15 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         body = f'{vh}{DISC}{SRC}<h2>Specs side by side</h2><p class="meta">Highlighted cells show the edge on paper: the lower price, or more core-thickness options. We don\'t judge feel or performance.</p><div class="tbl vs"><table><tr><th></th><th><a href="{slug(A)}">{e(A["model"])}</a></th><th><a href="{slug(B)}">{e(B["model"])}</a></th></tr>{rows}</table></div><h2>Key differences on paper</h2><ul>{"".join(f"<li>{e(x)}</li>" for x in diff) or "<li>The published specs are very close. Feel is down to the face and core build, so watch the reviews below.</li>"}</ul>'
         for p in (A, B): body += f'<h2>{e(p["model"])}: pros & cons</h2>{pc(p)}<h3>Reviewer videos</h3>{vlist(p)}'
         body += '<p class="meta">We haven\'t lab- or court-tested these paddles. For hands-on impressions, follow the reviewers linked above.</p>'
-        page(fn, t, body, f"{t}: specs, today's price, pros and cons, and reviewer videos."); links.append((fn, t))
+        page(fn, t, body, f"{t}: maker specs and today's prices side by side, with links to independent videos. No score or rating from us.",
+             fresh=[fresh_p(A), fresh_p(B)], schema=[item_list([A, B])]); links.append((fn, t))
     # best-of lists
     usd = [p for p in PP if p["currency"] == "USD"]
     def lst(title, fn, intro, items, why):
         cards = "".join(pcard(p, why(p)) for p in items)
-        page(fn, title, f'<h1>{e(title)}</h1>{DISC}<p>{intro}</p>{SRC}<div class="grid">{cards or "<p>No paddles in our database match yet.</p>"}</div>', title + " from verified maker specs and today's maker prices."); links.append((fn, title))
+        page(fn, title, f'<h1>{e(title)}</h1>{DISC}<p>{intro}</p>{SRC}<div class="grid">{cards or "<p>No paddles in our database match yet.</p>"}</div>',
+             f"{title}, chosen from verified maker specs and today's maker prices. Not a scored ranking.",
+             fresh=[fresh_p(p) for p in items], schema=[item_list(items)] if items else None); links.append((fn, title))
     u100 = sorted([p for p in usd if cur(p) <= 100], key=cur); near = sorted([p for p in usd if 100 < cur(p) <= 150], key=cur)
     lst("Best paddles under $100", "best-paddles-under-100.html", f'Paddles in our database at <b>$100 or less</b> at today\'s maker price ({len(u100)} right now), followed by the closest picks up to $150. Our database is small and focused on major brands, so check back as we add budget models.', u100 + near,
         lambda p: ("At or under $100 today." if cur(p) <= 100 else "Just over $100 today.") + " " + notes(p, ph(p))[0][0])
@@ -129,17 +155,23 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     lst("Best pickleball paddles for control", "best-paddles-for-control.html", "These are paddles their makers market for control, plus 16mm+ hybrids. Thicker cores are generally described as softer and more controlled. We sort by today's price.", sorted(ct, key=cur),
         lambda p: "Control-leaning spec: " + ", ".join(x for x in [p["core"], p["shape"]] if x) + ".")
     # hub
-    page("compare.html", "Compare paddles", f'<h1>Compare paddles</h1><p class="meta">Head-to-head pages and best-of lists, built from maker specs and today\'s maker prices.</p><h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in links[:10])}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in links[10:])}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>')
+    page("compare.html", "Compare paddles", f'<h1>Compare paddles</h1><p class="meta">Head-to-head pages and best-of lists, built from maker specs and today\'s maker prices.</p><h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in links[:10])}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in links[10:])}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
+         "Head-to-head pickleball paddle comparisons and spec-based lists, built from manufacturer pages and today's maker prices.",
+         fresh={"links": links, "paddles": [slug(p) for p in PP]}, schema=[item_list(PP)])
     # deals
     deals = sorted([p for p in PP if ph(p).get("drop") or ph(p).get("sale")], key=lambda p: -(1 - cur(p) / (ph(p).get("compare_at") or ph(p).get("previous") or cur(p))))
     def dcard(p):
         h = ph(p); ref = h.get("compare_at") if h.get("sale") else h.get("previous"); pct = round(100 * (1 - cur(p) / ref)) if ref else 0
         return pcard(p, f"-{pct}% · " + ("Down from our last recorded price" if h.get("drop") else "vs. the maker's compare-at price") + f" · lowest we've seen {money(p, h.get('low', cur(p)))}")
     upd = D("price_history.json").get("updated", "")
-    page("deals.html", "Paddle deals", f'<h1>Paddle deals</h1>{DISC}<p class="meta">Every day we check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Last check: {fmt(upd)}. Prices can change at any time, so confirm at checkout.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals right now. Check back tomorrow.</p>"}</div>', "Today's pickleball paddle price drops and sales from maker sites.")
+    page("deals.html", "Paddle deals", f'<h1>Paddle deals</h1>{DISC}<p class="meta">Every day we check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Last check: {fmt(upd)}. Prices can change at any time, so confirm at checkout.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals right now. Check back tomorrow.</p>"}</div>',
+         "Today's pickleball paddle price drops and maker-site sales. Prices are checked on each brand's own page.",
+         fresh=[fresh_p(p) for p in deals], schema=[item_list(deals)] if deals else None)
     # paddle database (re-rendered with links + badges)
     prow = "".join(f'<tr><td><a href="{slug(p)}"><b>{e(p["brand"])}</b><br>{e(p["model"])}</a> {badge(ph(p), p)}</td><td>{e(p["weight"])}</td><td>{e(p["core"])}</td><td>{e(p["shape"])}</td><td>{pricecell(p)}</td><td>{buy(p)}</td></tr>' for p in PP)
-    page("paddles.html", "Paddle database", f'<h1>Paddle database</h1>{DISC}<p class="meta">Specs and list prices come from each manufacturer\'s own product page (retrieved {e(PD["retrieved"])}). Prices are re-checked daily. Blank means the maker doesn\'t clearly publish it. Six Zero prices are in AUD. See <a href="deals.html">today\'s deals</a> or <a href="compare.html">compare paddles</a>.</p><div class="tbl"><table><tr><th>Paddle</th><th>Weight</th><th>Core</th><th>Shape</th><th>Price today</th><th>Where to buy</th></tr>{prow}</table></div>')
+    page("paddles.html", "Paddle database", f'<h1>Paddle database</h1>{DISC}<p class="meta">Specs and list prices come from each manufacturer\'s own product page (retrieved {e(PD["retrieved"])}). Prices are re-checked daily. Blank means the maker doesn\'t clearly publish it. Six Zero prices are in AUD. See <a href="deals.html">today\'s deals</a> or <a href="compare.html">compare paddles</a>.</p><div class="tbl"><table><tr><th>Paddle</th><th>Weight</th><th>Core</th><th>Shape</th><th>Price today</th><th>Where to buy</th></tr>{prow}</table></div>',
+         "Pickleball paddle specs, core thickness, shape and today's maker price, sourced from each brand's product page.",
+         fresh=[fresh_p(p) for p in PP], schema=[item_list(PP)])
     # pros' paddles
     def match(x):
         for p in PP:
@@ -151,7 +183,15 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         cell = f'<a href="{slug(p)}">{e(x["paddle"])}</a> {badge(ph(p), p)}<br><span class="meta">{pricecell(p)}</span>' if p else e(x["paddle"]) + '<br><span class="meta">not in our database yet</span>'
         rows += f'<tr><td><a href="{e(x["profile"])}" target="_blank" rel="noopener"><b>{e(x["name"])}</b></a></td><td>{cell}</td><td>{buy(p) if p else "-"}</td></tr>'
     brands = ", ".join(f"{k.title()} ({v})" for k, v in sorted(cnt.items(), key=lambda kv: -kv[1]))
-    page("pro-paddles.html", "What paddle do the pros use?", f'<h1>What paddle do the pros use?</h1>{DISC}<p class="meta">From each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Pros often play custom or pre-release versions, and sponsorships change. Brands among these players: {e(brands)}.</p><div class="tbl"><table><tr><th>Player</th><th>Paddle (per profile)</th><th>Buy</th></tr>{rows}</table></div><p class="meta">Players whose profile lists no paddle are left out.</p>', "Which paddles top PPA pros use, linked to specs and today's prices.")
+    matched, seen = [], set()
+    for x in pros:
+        mp = match(x)
+        if mp and slug(mp) not in seen:
+            seen.add(slug(mp)); matched.append(mp)
+    page("pro-paddles.html", "What paddle do the pros use?", f'<h1>What paddle do the pros use?</h1>{DISC}<p class="meta">From each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Pros often play custom or pre-release versions, and sponsorships change. Brands among these players: {e(brands)}.</p><div class="tbl"><table><tr><th>Player</th><th>Paddle (per profile)</th><th>Buy</th></tr>{rows}</table></div><p class="meta">Players whose profile lists no paddle are left out.</p>',
+         "Which paddles top PPA pros list on their official profiles, linked to maker specs and today's prices.",
+         fresh=[{"name": x.get("name"), "paddle": x.get("paddle")} for x in pros if x.get("paddle")],
+         schema=[item_list(matched)] if matched else None)
 
     # ---------- home ----------
     T, N, tcard, ncard, rcard, signup = X["T"], X["N"], X["tcard"], X["ncard"], X["rcard"], X["signup"]
@@ -173,4 +213,12 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 <h2>Find your paddle</h2><div class="grid secs">{"".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">Specs, prices & reviews →</div></a>' for f, t in links[10:])}</div>
 <section class="band" id="signup"><h2>Get the weekly drop</h2><p>The best paddle deals, new reviews and tournament news, once a week. No spam.</p>{signup("home")}</section>
 </main>'''
-    page("index.html", C["TAGLINE"], home, full=True)
+    page("index.html", C["TAGLINE"], home,
+         "Daily pickleball hub for maker paddle prices, pro tournament dates, links to creator videos, news headlines and the gear on PPA profiles.",
+         full=True,
+         fresh={"deals": [fresh_p(p) for p in dl[:8]],
+                "reviews": [(v.get("title"), v.get("date"), v.get("link")) for v in R.get("items", [])[:6]],
+                "news": [(n.get("title"), n.get("date"), n.get("link")) for n in N.get("items", [])[:6]],
+                "events": [(t.get("name"), t.get("start"), t.get("end"), t.get("location")) for t in T.get("items", [])[:6]],
+                "pros": [(x.get("name"), x.get("paddle")) for x in teaser]},
+         schema=[item_list(dl[:8])] if dl else None)

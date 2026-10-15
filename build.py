@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Render data/*.json + config.json into a static site in dist/."""
-import json, pathlib, shutil, html, urllib.parse, datetime, re
+import json, pathlib, shutil, html, urllib.parse, datetime, re, hashlib, struct, zlib
 ROOT = pathlib.Path(__file__).parent; DIST = ROOT / "dist"
 C = json.loads((ROOT / "config.json").read_text())
 def D(n):
@@ -149,6 +149,101 @@ HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs
 FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("podcasts.html","Podcasts"),("creators.html","Creators")]),
             ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
             ("Company",[("about.html","About"),("disclosure.html","Affiliate disclosure"),("privacy.html","Privacy"),("community.html","Join the community")])]
+# Last content-change date per page. A date is recorded only when `fresh` differs from the hash stored in data/page_dates.json.
+_PREV, _NEXT, CATALOG = {}, {}, {}
+def canon(fn):
+    base = C["BASE_URL"].rstrip("/")
+    return base + "/" if fn == "index.html" else f"{base}/{fn}"
+def fingerprint(obj):
+    return hashlib.sha256(json.dumps(obj, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()
+def note_fresh(fn, payload):
+    """Return an ISO date only when this page's data changed since the last build. The first time we see a payload is a baseline, not a change."""
+    if payload is None: return None
+    h = fingerprint(payload); _NEXT[fn] = h
+    prev = _PREV.get(fn)
+    if prev and prev.get("hash") == h: return prev.get("updated")
+    if prev: return datetime.date.today().isoformat()
+    return None
+def save_fresh():
+    store = {}
+    for fn, h in sorted(_NEXT.items()):
+        prev = _PREV.get(fn)
+        if prev and prev.get("hash") == h: updated = prev.get("updated")
+        elif prev: updated = datetime.date.today().isoformat()
+        else: updated = None
+        store[fn] = {"hash": h, "updated": updated}
+    (ROOT / "data" / "page_dates.json").write_text(json.dumps(store, indent=1, sort_keys=True) + "\n")
+def write_og_png(path):
+    w, h, cx, cy, rad = 1200, 630, 600, 315, 168
+    holes = ((cx - 36, cy - 48, 16), (cx + 28, cy - 58, 14), (cx + 52, cy - 6, 16), (cx - 8, cy + 2, 18), (cx - 46, cy + 22, 14), (cx + 8, cy + 52, 15))
+    raw = bytearray(); rad2 = rad * rad
+    for y in range(h):
+        raw.append(0)
+        for x in range(w):
+            dx, dy = x - cx, y - cy
+            if dx * dx + dy * dy <= rad2:
+                r, g, b = 0xc6, 0xf4, 0x32
+                for hx, hy, hr in holes:
+                    ddx, ddy = x - hx, y - hy
+                    if ddx * ddx + ddy * ddy <= hr * hr:
+                        r, g, b = 0x0b, 0x14, 0x26
+                        break
+            else:
+                r, g, b = 0x0b, 0x14, 0x26
+            raw += bytes((r, g, b))
+    def chunk(tag, data):
+        return struct.pack(">I", len(data)) + tag + data + struct.pack(">I", zlib.crc32(tag + data) & 0xffffffff)
+    png = b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 2, 0, 0, 0)) + chunk(b"IDAT", zlib.compress(bytes(raw), 9)) + chunk(b"IEND", b"")
+    path.write_bytes(png)
+def crumbs_for(fn, title, url):
+    base = C["BASE_URL"].rstrip("/") + "/"
+    home = {"name": "Home", "url": base}
+    if fn == "index.html": return [home]
+    crumbs = [home]
+    if fn.startswith("paddle-"): crumbs.append({"name": "Paddles", "url": base + "paddles.html"})
+    elif fn.startswith(("vs-", "best-")): crumbs.append({"name": "Compare", "url": base + "compare.html"})
+    crumbs.append({"name": title, "url": url})
+    return crumbs
+def ld_graph(title, desc, url, crumbs, updated, extra):
+    base = C["BASE_URL"].rstrip("/")
+    org, site = base + "/#organization", base + "/#website"
+    web = {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": title, "description": desc,
+           "isPartOf": {"@id": site}, "publisher": {"@id": org}, "breadcrumb": {"@id": url + "#breadcrumb"}, "inLanguage": "en"}
+    if updated: web["dateModified"] = updated
+    graph = [
+        {"@type": "Organization", "@id": org, "name": C["SITE_NAME"], "url": base + "/", "email": C["CONTACT_EMAIL"],
+         "description": C["TAGLINE"], "logo": {"@type": "ImageObject", "url": base + "/og.png"}},
+        {"@type": "WebSite", "@id": site, "name": C["SITE_NAME"], "url": base + "/", "description": C["TAGLINE"],
+         "publisher": {"@id": org}, "inLanguage": "en"},
+        web,
+        {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": c["name"], "item": c["url"]} for i, c in enumerate(crumbs, 1)]},
+    ]
+    graph.extend(n for n in (extra or []) if n)
+    return {"@context": "https://schema.org", "@graph": graph}
+def emit_crawl_files():
+    base = C["BASE_URL"].rstrip("/")
+    save_fresh()
+    pages = [CATALOG[fn] for fn in CATALOG if fn != "404.html"]
+    pages.sort(key=lambda p: (p["fn"] != "index.html", p["fn"]))
+    urls = []
+    for p in pages:
+        last = f"\n    <lastmod>{p['updated']}</lastmod>" if p.get("updated") else ""
+        urls.append(f"  <url>\n    <loc>{html.escape(canon(p['fn']))}</loc>{last}\n  </url>")
+    (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(urls) + "\n</urlset>\n")
+    bots = ["*", "GPTBot", "ChatGPT-User", "OAI-SearchBot", "Google-Extended", "GoogleOther", "anthropic-ai", "ClaudeBot",
+            "Claude-SearchBot", "PerplexityBot", "Perplexity-User", "CCBot", "Bytespider", "Applebot-Extended", "Amazonbot",
+            "meta-externalagent", "FacebookBot", "cohere-ai", "Diffbot", "AI2Bot", "DuckAssistBot", "MistralAI-User"]
+    (DIST / "robots.txt").write_text("\n".join(f"User-agent: {b}\nAllow: /\n" for b in bots) + f"\nSitemap: {base}/sitemap.xml\n")
+    def bullet(p): return f"- [{p['title']}]({canon(p['fn'])}): {p['desc']}"
+    main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html"}
+    mains = [p for p in pages if p["fn"] in main_names]
+    paddles = [p for p in pages if p["fn"].startswith(("paddle-", "vs-", "best-"))]
+    rest = [p for p in pages if p not in mains and p not in paddles]
+    llms = [f"# {C['SITE_NAME']}", "", f"> {C['TAGLINE']}", "",
+            f"{C['SITE_NAME']} is an independent pickleball hub. It lists pro tournament dates, manufacturer paddle specs, maker prices, news headlines, and links to creator videos and podcasts. Specs and prices come from the makers. This site does not publish its own ratings or reviews.",
+            "", "## Main", *[bullet(p) for p in mains], "", "## Paddles", *[bullet(p) for p in paddles], "", "## Optional", *[bullet(p) for p in rest], ""]
+    (DIST / "llms.txt").write_text("\n".join(llms))
 def pagehead(body):
     m = re.match(r'(<h1>.*?</h1>)((?:<p class="(?:meta|disc)">.*?</p>)*)', body, re.S)
     if not m: return body
@@ -156,21 +251,32 @@ def pagehead(body):
     head = m.group(1) + "".join(f'<p>{t}</p>' for k, t in parts if k == "meta")
     disc = "".join(f'<p class="disc">{t}</p>' for k, t in parts if k == "disc")
     return f'<section class="pagehead">{head}</section>{disc}' + body[m.end():]
-def page(fn, title, body, desc="", full=False):
+def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumbs=None, image=None):
     nav = "".join(f'<a href="{h}" class="{"on" if h==fn else ""}">{t}</a>' for h, t in NAV)
     n = C["SITE_NAME"]; i = len(n.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ")) or max((k for k, ch in enumerate(n) if ch.isupper()), default=0); brand = f'{e(n[:i])}<span>{e(n[i:])}</span>'
-    if not full: body = f"<main>{pagehead(body)}</main>"
+    doc_title = f"{title} · {n}"
+    if not desc: desc = f"{title} on {n}: {C['TAGLINE']}."
+    url = canon(fn)
+    updated = note_fresh(fn, fresh)
+    img = image or (C["BASE_URL"].rstrip("/") + "/og.png")
+    stamp = f'<p class="meta updated">Updated {fmt(updated)}</p>' if updated else ""
+    if not full: body = f"<main>{pagehead(body)}{stamp}</main>"
+    elif stamp: body = body.replace('<span class="eyebrow"><i></i>Updated daily</span>', f'<span class="eyebrow"><i></i>Updated daily</span>{stamp}', 1)
+    ld = json.dumps(ld_graph(doc_title, desc, url, crumbs or crumbs_for(fn, title, url), updated, schema), ensure_ascii=False).replace("<", "\\u003c")
     cols = "".join(f'<div><h4>{h}</h4>{"".join(f"<a href={chr(34)}{u}{chr(34)}>{t}</a>" for u, t in ls)}</div>' for h, ls in FOOTCOLS)
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(title)} · {e(n)}</title><meta name="description" content="{e(desc or C['TAGLINE'])}"><meta name="theme-color" content="#0b1426">
+<title>{e(doc_title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1426">
+<meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
 <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap">
-<link rel="stylesheet" href="style.css"><link rel="canonical" href="{e(C["BASE_URL"].rstrip("/") + "/" + fn)}"></head>
+<link rel="stylesheet" href="style.css"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+<script type="application/ld+json">{ld}</script></head>
 <body><header><div class="bar"><a class="logo" href="index.html" aria-label="{e(n)} home">{LOGO}<b>{brand}</b></a>
 <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav">{nav}</nav><a class="btn sm join" href="community.html#signup">Join free</a></div></header>
 {body}
 <footer><div class="fin"><div><a class="logo" href="index.html">{LOGO}<b>{brand}</b></a><p>The all-in-one pickleball hub: tournaments, paddle reviews, deals, news and pro gear, refreshed daily from public sources.</p></div>{cols}</div>
-<div class="legal">© {datetime.date.today().year} {e(n)}. Headlines, videos, product images and event info belong to their publishers and makers and link to the original source. Some links are affiliate links; as an Amazon Associate we may earn from qualifying purchases. Last updated {datetime.datetime.now():%b %d, %Y}.</div></footer>
+<div class="legal">© {datetime.date.today().year} {e(n)}. Headlines, videos, product images and event info belong to their publishers and makers and link to the original source. Some links are affiliate links; as an Amazon Associate we may earn from qualifying purchases.</div></footer>
 <script>
 (()=>{{const b=document.querySelector('.burger');b.addEventListener('click',()=>{{const o=document.body.classList.toggle('navopen');b.setAttribute('aria-expanded',o)}});
 if('IntersectionObserver'in window){{const io=new IntersectionObserver(es=>es.forEach(x=>{{if(x.isIntersecting){{x.target.classList.add('in');io.unobserve(x.target)}}}}),{{rootMargin:'0px 0px -40px 0px'}});
@@ -178,6 +284,7 @@ document.querySelectorAll('main .card,main .pro,.band').forEach(el=>{{el.classLi
 document.querySelectorAll('form[data-placeholder]').forEach(f=>f.addEventListener('submit',ev=>{{ev.preventDefault();f.innerHTML='<p><b>Thanks!</b> Signups open soon. Nothing was stored.</p>'}}))}})()
 </script></body></html>"""
     (DIST / fn).write_text(doc)
+    CATALOG[fn] = {"fn": fn, "title": doc_title, "desc": desc, "updated": updated}
 
 def buy(p):
     dom = urllib.parse.urlparse(p["buy_url"]).netloc.replace("www.", "")
@@ -200,8 +307,12 @@ def fmt(d):
     except Exception: return e(d)
 
 def build():
+    global _PREV, _NEXT, CATALOG
+    _NEXT, CATALOG = {}, {}
+    try: _PREV = json.loads((ROOT / "data" / "page_dates.json").read_text())
+    except Exception: _PREV = {}
     if DIST.exists(): shutil.rmtree(DIST)
-    DIST.mkdir(); (DIST / "style.css").write_text(CSS); (DIST / "favicon.svg").write_text(FAVICON)
+    DIST.mkdir(); (DIST / "style.css").write_text(CSS); (DIST / "favicon.svg").write_text(FAVICON); write_og_png(DIST / "og.png")
     T, R, N, P = D("tournaments.json"), D("reviews.json"), D("news.json"), D("pros.json")
     PD = json.loads((ROOT / "data/paddles.json").read_text())
     def dbadge(d):
@@ -214,21 +325,44 @@ def build():
             return f'<div class="card"><a class="thumb" href="{e(v["link"])}" target="_blank" rel="noopener" aria-label="Watch on YouTube"><img loading="lazy" src="https://i.ytimg.com/vi/{e(v["video_id"])}/hqdefault.jpg" alt=""><span class="play"></span><span class="chan">{e(v["channel"])}</span></a><h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta">{fmt(v["date"])} · <a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a></div></div>'
         em = f'<div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{e(v["video_id"])}" title="{e(v["title"])}" allowfullscreen></iframe></div>' if embed and v.get("video_id") else ""
         return f'<div class="card">{em}<h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta"><a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a> · {fmt(v["date"])}</div></div>'
+    def sports_events(items):
+        out = []
+        for t in items:
+            loc = t.get("location") or "TBA"
+            ev = {"@type": "SportsEvent", "name": t.get("name"), "sport": "Pickleball", "startDate": t.get("start"), "endDate": t.get("end"),
+                  "url": t.get("link"), "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled",
+                  "location": {"@type": "Place", "name": loc, "address": loc}, "organizer": {"@type": "Organization", "name": t.get("source") or "PPA Tour"}}
+            out.append({k: v for k, v in ev.items() if v})
+        return out
     page("tournaments.html", "Tournaments", f'''<h1>Upcoming tournaments</h1><p class="meta">Pro events from the official <a href="https://www.ppatour.com/events/" target="_blank" rel="noopener">Carvana PPA Tour</a> event feed. Always confirm dates and sign up on the official page.</p>
 <div class="grid">{"".join(tcard(t) for t in T["items"]) or "<p>No events right now.</p>"}</div>
 <h2>Find amateur tournaments near you</h2><p>These directories host signups for local and regional events (including West Texas). We link to them instead of copying their listings:</p>
-<ul><li><a href="https://pickleballtournaments.com/" target="_blank" rel="noopener">PickleballTournaments.com</a></li><li><a href="https://www.pickleballbrackets.com/" target="_blank" rel="noopener">PickleballBrackets.com</a></li><li><a href="https://usapickleball.org/" target="_blank" rel="noopener">USA Pickleball</a> (sanctioned events)</li></ul>''')
-    page("reviews.html", "Paddle review roundup", f'<h1>Paddle review roundup</h1><p class="meta">The newest paddle videos from leading independent reviewers, pulled from their public YouTube feeds. All videos play on YouTube and belong to their creators. Go subscribe!</p><div class="grid">{"".join(rcard(v, False) for v in R["items"])}</div>')
-    page("news.html", "Pickleball news", f'<h1>Pickleball news</h1><p class="meta">Headlines from public RSS feeds: {", ".join(e(s) for s in C["NEWS_FEEDS"])}. Click through to read on the publisher\'s site.</p><div class="grid">{"".join(ncard(n) for n in N["items"])}</div>')
+<ul><li><a href="https://pickleballtournaments.com/" target="_blank" rel="noopener">PickleballTournaments.com</a></li><li><a href="https://www.pickleballbrackets.com/" target="_blank" rel="noopener">PickleballBrackets.com</a></li><li><a href="https://usapickleball.org/" target="_blank" rel="noopener">USA Pickleball</a> (sanctioned events)</li></ul>''',
+         "Upcoming Carvana PPA Tour pro pickleball events with dates, cities and links to the official event pages.",
+         fresh=[{k: t.get(k) for k in ("name", "start", "end", "location", "link", "tickets", "source")} for t in T["items"]],
+         schema=sports_events(T["items"]))
+    page("reviews.html", "Paddle review roundup", f'<h1>Paddle review roundup</h1><p class="meta">The newest paddle videos from leading independent reviewers, pulled from their public YouTube feeds. All videos play on YouTube and belong to their creators. Go subscribe!</p><div class="grid">{"".join(rcard(v, False) for v in R["items"])}</div>',
+         "Newest pickleball paddle videos from independent YouTube reviewers, with a link back to each creator's channel.",
+         fresh=[{k: v.get(k) for k in ("channel", "title", "link", "date", "video_id")} for v in R["items"]])
+    page("news.html", "Pickleball news", f'<h1>Pickleball news</h1><p class="meta">Headlines from public RSS feeds: {", ".join(e(s) for s in C["NEWS_FEEDS"])}. Click through to read on the publisher\'s site.</p><div class="grid">{"".join(ncard(n) for n in N["items"])}</div>',
+         "Pickleball headlines from The Dink, Pickleball Union, Major League Pickleball, The Kitchen Pickle and Pickleball Kitchen.",
+         fresh=[{k: n.get(k) for k in ("source", "title", "link", "date")} for n in N["items"]])
     rows = "".join(f'<tr><td><a href="{e(p["profile"])}" target="_blank" rel="noopener"><b>{e(p["name"])}</b></a></td><td>{e(p["country"])}</td><td>{e(p["paddle"])}</td><td>{" ".join(f"<a href={chr(34)}{e(u)}{chr(34)} target=_blank rel=noopener>{k}</a>" for k,u in p["socials"].items())}</td></tr>' for p in P.get("pros", []))
-    page("pros.html", "Pro players", f'<h1>Top pro players</h1><p class="meta">Facts from each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Blank means the profile didn\'t list it.</p><div class="tbl"><table><tr><th>Player</th><th>Country</th><th>Paddle (per profile)</th><th>Socials</th></tr>{rows}</table></div>')
-    prow = "".join(f'<tr><td><b>{e(p["brand"])}</b><br>{e(p["model"])}</td><td>{e(p["weight"])}</td><td>{e(p["core"])}</td><td>{e(p["shape"])}</td><td>{"$" if p["currency"]=="USD" else "A$"}{p["price"]:.2f}</td><td>{buy(p)}</td></tr>' for p in PD["paddles"])
-    page("paddles.html", "Paddle database", f'<h1>Paddle database</h1><p class="disc">Some links are affiliate links. We may earn a commission at no extra cost to you. <a href="disclosure.html">Learn more</a>.</p><p class="meta">Specs and list prices come from each manufacturer\'s own product page (retrieved {e(PD["retrieved"])}). Blank = not clearly published by the maker. Six Zero lists prices in AUD.</p><div class="tbl"><table><tr><th>Paddle</th><th>Weight</th><th>Core</th><th>Shape</th><th>List price</th><th>Where to buy</th></tr>{prow}</table></div>')
-    page("shop.html", "Merch", f'<h1>Merch shop</h1><div class="card"><h3>Coming soon 👕</h3><p>Shirts, hats and gear for dinkers. Get notified when we launch.</p>{signup("merch")}</div>')
-    page("community.html", "Marketplace & forum", f'<h1>Marketplace & forum</h1><div class="grid"><div class="card"><h3>Used-paddle marketplace</h3><p>Buy and sell paddles and gear. Coming soon.</p></div><div class="card"><h3>Community forum</h3><p>Find partners, talk gear and swap tips. Coming soon.</p></div></div><h2>Be first in line</h2>{signup("community")}')
-    page("about.html", "About", f'<h1>About {e(C["SITE_NAME"])}</h1><p>{e(C["SITE_NAME"])} is an independent pickleball hub started by a player and fitness fan in Midland, Texas. We gather tournaments, reviews, news and gear specs from public sources into one fast page, and always link back to the original.</p><p>We aren\'t affiliated with the PPA Tour, MLP, USA Pickleball or any brand listed. Every headline, video and event belongs to its publisher. The site is refreshed automatically each day. Spot an error? Email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>')
-    page("disclosure.html", "Affiliate disclosure", f'<h1>Affiliate disclosure</h1><p>{e(C["SITE_NAME"])} is reader-supported. Some links on this site, especially "where to buy" links in the paddle database, are <b>affiliate links</b>. If you click one and buy something, we may earn a commission <b>at no extra cost to you</b>.</p><p>As an Amazon Associate, {e(C["SITE_NAME"])} earns from qualifying purchases. We may also take part in affiliate programs run by paddle brands and retailers.</p><p>Commissions never change which products we list or how we describe them. Specs come from manufacturers, and we don\'t accept payment for placement. Affiliate links are marked <code>rel="sponsored"</code>, and pages with them carry a notice near the top, in line with the U.S. FTC Endorsement Guides (16 CFR Part 255).</p>')
-    page("privacy.html", "Privacy policy", f'<h1>Privacy policy</h1><p class="meta">Effective {datetime.date.today():%B %d, %Y}</p><h2>What we collect</h2><p>If you join our email list, we collect your email address and the page you signed up from. We use it only to send launch and site updates, and you can unsubscribe at any time.</p><h2>Third parties</h2><p>Embedded YouTube videos use youtube-nocookie.com, but YouTube may still set cookies once you press play. Affiliate partners (such as Amazon) may use cookies to track referrals after you click a link. Our host may keep standard server logs.</p><h2>Not sold</h2><p>We do not sell your personal information.</p><h2>Contact</h2><p>To ask about or delete your data, email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>')
+    page("pros.html", "Pro players", f'<h1>Top pro players</h1><p class="meta">Facts from each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Blank means the profile didn\'t list it.</p><div class="tbl"><table><tr><th>Player</th><th>Country</th><th>Paddle (per profile)</th><th>Socials</th></tr>{rows}</table></div>',
+         "Country, paddle and social links for top pros, taken from each player's official PPA Tour profile.",
+         fresh=[{k: p.get(k) for k in ("name", "country", "paddle", "profile", "socials")} for p in P.get("pros", [])])
+    page("shop.html", "Merch", f'<h1>Merch shop</h1><div class="card"><h3>Coming soon 👕</h3><p>Shirts, hats and gear for dinkers. Get notified when we launch.</p>{signup("merch")}</div>',
+         "DropThePickle merch is coming soon. Join the list to hear when shirts, hats and gear go on sale.")
+    page("community.html", "Marketplace & forum", f'<h1>Marketplace & forum</h1><div class="grid"><div class="card"><h3>Used-paddle marketplace</h3><p>Buy and sell paddles and gear. Coming soon.</p></div><div class="card"><h3>Community forum</h3><p>Find partners, talk gear and swap tips. Coming soon.</p></div></div><h2>Be first in line</h2>{signup("community")}',
+         "A used-paddle marketplace and community forum are on the way. Join the list to get in first.")
+    page("about.html", "About", f'<h1>About {e(C["SITE_NAME"])}</h1><p>{e(C["SITE_NAME"])} is an independent pickleball hub started by a player and fitness fan in Midland, Texas. We gather tournaments, reviews, news and gear specs from public sources into one fast page, and always link back to the original.</p><p>We aren\'t affiliated with the PPA Tour, MLP, USA Pickleball or any brand listed. Every headline, video and event belongs to its publisher. The site is refreshed automatically each day. Spot an error? Email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>',
+         "DropThePickle is an independent pickleball hub from Midland, Texas, linking tournaments, news and gear specs back to their sources.",
+         fresh={"email": C["CONTACT_EMAIL"]})
+    page("disclosure.html", "Affiliate disclosure", f'<h1>Affiliate disclosure</h1><p>{e(C["SITE_NAME"])} is reader-supported. Some links on this site, especially "where to buy" links in the paddle database, are <b>affiliate links</b>. If you click one and buy something, we may earn a commission <b>at no extra cost to you</b>.</p><p>As an Amazon Associate, {e(C["SITE_NAME"])} earns from qualifying purchases. We may also take part in affiliate programs run by paddle brands and retailers.</p><p>Commissions never change which products we list or how we describe them. Specs come from manufacturers, and we don\'t accept payment for placement. Affiliate links are marked <code>rel="sponsored"</code>, and pages with them carry a notice near the top, in line with the U.S. FTC Endorsement Guides (16 CFR Part 255).</p>',
+         "How DropThePickle uses affiliate links, including Amazon Associates, and why commissions do not change which paddles we list.")
+    page("privacy.html", "Privacy policy", f'<h1>Privacy policy</h1><p class="meta">Effective October 15, 2026</p><h2>What we collect</h2><p>If you join our email list, we collect your email address and the page you signed up from. We use it only to send launch and site updates, and you can unsubscribe at any time.</p><h2>Third parties</h2><p>Embedded YouTube videos use youtube-nocookie.com, but YouTube may still set cookies once you press play. Affiliate partners (such as Amazon) may use cookies to track referrals after you click a link. Our host may keep standard server logs.</p><h2>Not sold</h2><p>We do not sell your personal information.</p><h2>Contact</h2><p>To ask about or delete your data, email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>',
+         "What DropThePickle collects if you join the email list, how YouTube and affiliate cookies work, and how to ask us to delete your data.",
+         fresh={"email": C["CONTACT_EMAIL"], "effective": "2026-10-15"})
     # Creators & Podcasts directories from the living source registry (links only)
     SR = D("sources.json").get("sources", [])
     groups = [("Gear & paddle reviewers", lambda s: "review" in s.get("subtype","")), ("Coaches & instruction", lambda s: "instruction" in s.get("subtype","")),
@@ -244,7 +378,10 @@ def build():
         if items: csecs += f'<h2>{title}</h2><div class="grid">{"".join(ccard(s) for s in items)}</div>'
     socials = [s for s in SR if s["type"] in ("x","instagram")]
     srow = "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a> on {"X" if s["type"]=="x" else "Instagram"} ({e(s["audience"]["value"])} followers)</li>' for s in socials)
-    page("creators.html", "Pickleball creators directory", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>')
+    page("creators.html", "Pickleball creators directory", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>',
+         "A directory of pickleball YouTubers, coaches, reviewers and pros, with links out to their own channels.",
+         fresh={"youtube": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in yts],
+                "social": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in socials]})
     PC = D("podcasts.json")
     shows = [s for s in SR if s["type"] == "podcast" and s.get("flag") != "new"]
     latest = {}
@@ -252,9 +389,13 @@ def build():
     def pcard(s):
         eps = "".join(f'<li><a href="{e(x["link"])}" target="_blank" rel="noopener">{e(x["title"])}</a> <span class="meta">{fmt(x["date"])}</span></li>' for x in latest.get(s["name"], [])[:2])
         return f'<div class="card"><h3><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a></h3><div class="meta">{e(s["audience"].get("episodes",""))} episodes · <a href="{e(s["feed"]["rss"])}" target="_blank" rel="noopener">RSS</a></div>{f"<ul>{eps}</ul>" if eps else ""}</div>'
-    page("podcasts.html", "Pickleball podcasts", f'<h1>Pickleball podcasts</h1><p class="meta">Shows ordered by episode count, with their newest episodes pulled from each public podcast feed. Listen on the show\'s own page.</p><div class="grid">{"".join(pcard(s) for s in sorted(shows, key=lambda s: -(s["audience"].get("episodes") or 0)))}</div>')
+    page("podcasts.html", "Pickleball podcasts", f'<h1>Pickleball podcasts</h1><p class="meta">Shows ordered by episode count, with their newest episodes pulled from each public podcast feed. Listen on the show\'s own page.</p><div class="grid">{"".join(pcard(s) for s in sorted(shows, key=lambda s: -(s["audience"].get("episodes") or 0)))}</div>',
+         "Pickleball podcasts ordered by episode count, with the newest episodes pulled from each public show feed.",
+         fresh={"shows": [(s["name"], s["url"], (s.get("audience") or {}).get("episodes")) for s in shows],
+                "episodes": [(ep.get("show"), ep.get("title"), ep.get("date"), ep.get("link")) for ep in PC.get("items", [])]})
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
-<p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court.")
+<p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
+    emit_crawl_files()
     print("built", len(list(DIST.glob("*.html"))), "pages ->", DIST)
 build()
