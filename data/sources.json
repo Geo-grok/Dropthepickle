@@ -1,0 +1,5036 @@
+{
+ "updated": "2026-10-14",
+ "schema": "name,type,url,audience{value,metric,source,as_of},feed{rss,api},scraping{robots,tos,allowed_method},in_pipeline,status,flag",
+ "notes": "Never invent audience numbers: 'unknown' when no public figure. 'flag':'new' entries come from scripts/discover_sources.py and need human review.",
+ "sources": [
+  {
+   "name": "The Kitchen Pickleball",
+   "type": "youtube",
+   "subtype": "media+reviews",
+   "url": "https://www.youtube.com/@TheKitchenPickleball",
+   "channel_id": "UC8Kri-ozieZq01LLzQSNavQ",
+   "audience": {
+    "value": "329K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@TheKitchenPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC8Kri-ozieZq01LLzQSNavQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UC8Kri-ozieZq01LLzQSNavQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Enhance Pickleball",
+   "type": "youtube",
+   "subtype": "brand+instruction+reviews",
+   "url": "https://www.youtube.com/@EnhancePickleball",
+   "channel_id": "UCb6veypzEzufZ38NaY3fd_w",
+   "audience": {
+    "value": "324K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@EnhancePickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCb6veypzEzufZ38NaY3fd_w",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCb6veypzEzufZ38NaY3fd_w",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "ThatPickleballGuy (Kyle Koszuta)",
+   "type": "youtube",
+   "subtype": "instruction+reviews",
+   "url": "https://www.youtube.com/@thatpickleballguy",
+   "channel_id": "UCuHP7q94VYp-9W19pk8cjjw",
+   "audience": {
+    "value": "265K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@thatpickleballguy channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCuHP7q94VYp-9W19pk8cjjw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCuHP7q94VYp-9W19pk8cjjw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PPA Tour",
+   "type": "youtube",
+   "subtype": "tour",
+   "url": "https://www.youtube.com/channel/UCSP6HlrMmRqogym2aHBPHpw",
+   "channel_id": "UCSP6HlrMmRqogym2aHBPHpw",
+   "audience": {
+    "value": "225K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PPAtour channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSP6HlrMmRqogym2aHBPHpw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCSP6HlrMmRqogym2aHBPHpw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PrimeTime Pickleball",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@primetimepickleball",
+   "channel_id": "UC4trh-axJGxOpSwlvsUbHbg",
+   "audience": {
+    "value": "173K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@primetimepickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC4trh-axJGxOpSwlvsUbHbg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC4trh-axJGxOpSwlvsUbHbg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "tanner.pickleball",
+   "type": "youtube",
+   "subtype": "entertainment",
+   "url": "https://www.youtube.com/@tanner.pickleball",
+   "channel_id": "UCxVy2LJKyDTprHtvkwGJ3oA",
+   "audience": {
+    "value": "158K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@tanner.pickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCxVy2LJKyDTprHtvkwGJ3oA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCxVy2LJKyDTprHtvkwGJ3oA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Briones Pickleball Academy",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@BrionesPickleball",
+   "channel_id": "UCdEjdg9MkhnITa1AGz78Kjw",
+   "audience": {
+    "value": "123K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@BrionesPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCdEjdg9MkhnITa1AGz78Kjw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCdEjdg9MkhnITa1AGz78Kjw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Shea Underwood - Pickleball",
+   "type": "youtube",
+   "subtype": "entertainment",
+   "url": "https://www.youtube.com/@sheaunderwood",
+   "channel_id": "UCjEszgiaZQk5a-rEJ5nmjPA",
+   "audience": {
+    "value": "111K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@sheaunderwood channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCjEszgiaZQk5a-rEJ5nmjPA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCjEszgiaZQk5a-rEJ5nmjPA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PickleballPlaybook - Austin Hardy",
+   "type": "youtube",
+   "subtype": "instruction+reviews",
+   "url": "https://www.youtube.com/@pickleballplaybook",
+   "channel_id": "UCwkHWkyarHJFSQxk8SMs4zA",
+   "audience": {
+    "value": "85.8K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@pickleballplaybook channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCwkHWkyarHJFSQxk8SMs4zA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCwkHWkyarHJFSQxk8SMs4zA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Better Pickleball (Ben & Collin Johns)",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@BetterPickleball",
+   "channel_id": "UCbPCL77CefNGj90THzXYTnA",
+   "audience": {
+    "value": "85.5K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@BetterPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbPCL77CefNGj90THzXYTnA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCbPCL77CefNGj90THzXYTnA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "John Cincola Pickleball",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@johncincolapickleball",
+   "channel_id": "UCCebVtm8TyEpKAkB6Jfk0PA",
+   "audience": {
+    "value": "83.6K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@johncincolapickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCCebVtm8TyEpKAkB6Jfk0PA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCCebVtm8TyEpKAkB6Jfk0PA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Dink Pickleball",
+   "type": "youtube",
+   "subtype": "media",
+   "url": "https://www.youtube.com/@TheDinkPickleball",
+   "channel_id": "UCRqZQ1rnSlnlpAWl_3cLUpg",
+   "audience": {
+    "value": "82.8K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@TheDinkPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRqZQ1rnSlnlpAWl_3cLUpg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCRqZQ1rnSlnlpAWl_3cLUpg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Channel",
+   "type": "youtube",
+   "subtype": "media",
+   "url": "https://www.youtube.com/@PickleballChannel",
+   "channel_id": "UC_tmUu-hoIuBy6xBjoFDqyA",
+   "audience": {
+    "value": "78.8K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballChannel channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_tmUu-hoIuBy6xBjoFDqyA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC_tmUu-hoIuBy6xBjoFDqyA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Kevin Dong Pickleball",
+   "type": "youtube",
+   "subtype": "entertainment",
+   "url": "https://www.youtube.com/@KevinDongPickleball",
+   "channel_id": "UC_uWNk4hO8goFojdMwtPGRw",
+   "audience": {
+    "value": "77.7K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@KevinDongPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_uWNk4hO8goFojdMwtPGRw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC_uWNk4hO8goFojdMwtPGRw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Kitchen",
+   "type": "youtube",
+   "subtype": "instruction+reviews",
+   "url": "https://www.youtube.com/@PickleballKitchen",
+   "channel_id": "UCvFEaERrkqf73DvJ5uN9WcQ",
+   "audience": {
+    "value": "77.2K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballKitchen channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvFEaERrkqf73DvJ5uN9WcQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCvFEaERrkqf73DvJ5uN9WcQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Major League Pickleball",
+   "type": "youtube",
+   "subtype": "league",
+   "url": "https://www.youtube.com/@MajorLeaguePickleball",
+   "channel_id": "UC1_rjn7Y77xzscvYkoA-lDw",
+   "audience": {
+    "value": "71.1K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@MajorLeaguePickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC1_rjn7Y77xzscvYkoA-lDw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC1_rjn7Y77xzscvYkoA-lDw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Zane Navratil Pickleball",
+   "type": "youtube",
+   "subtype": "pro+reviews",
+   "url": "https://www.youtube.com/@ZaneNavratilPickleball",
+   "channel_id": "UCAszu64fi9oHIFpexKGGxlw",
+   "audience": {
+    "value": "67.1K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@ZaneNavratilPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAszu64fi9oHIFpexKGGxlw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCAszu64fi9oHIFpexKGGxlw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Friday Pickleball",
+   "type": "youtube",
+   "subtype": "entertainment",
+   "url": "https://www.youtube.com/@FridayPickleball",
+   "channel_id": "UCMe9rtwb-NRQ17A0eMbFz_A",
+   "audience": {
+    "value": "64.7K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@FridayPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMe9rtwb-NRQ17A0eMbFz_A",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCMe9rtwb-NRQ17A0eMbFz_A",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Tony Roig Pickleball",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@BestPickleballCoach",
+   "channel_id": "UCEIvvPc-JwETHVK33boyGFA",
+   "audience": {
+    "value": "63.6K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@BestPickleballCoach channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCEIvvPc-JwETHVK33boyGFA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCEIvvPc-JwETHVK33boyGFA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Cracked Pickleball",
+   "type": "youtube",
+   "subtype": "entertainment",
+   "url": "https://www.youtube.com/@CrackedPickleball",
+   "channel_id": "UCJ8lFcM9jZ4Ehu0AYyP8Krg",
+   "audience": {
+    "value": "60K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@CrackedPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJ8lFcM9jZ4Ehu0AYyP8Krg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCJ8lFcM9jZ4Ehu0AYyP8Krg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PICKLEBALL 76",
+   "type": "youtube",
+   "subtype": "highlights",
+   "url": "https://www.youtube.com/@Pickleball-76",
+   "channel_id": "UC9ymDdEun1cZe_BFfi0TK3Q",
+   "audience": {
+    "value": "59.6K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@Pickleball-76 channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC9ymDdEun1cZe_BFfi0TK3Q",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC9ymDdEun1cZe_BFfi0TK3Q",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Studio",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@PickleballStudio",
+   "channel_id": "UCge5MvXGyRQPpFnxgRb_pXA",
+   "audience": {
+    "value": "56.4K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballStudio channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCge5MvXGyRQPpFnxgRb_pXA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCge5MvXGyRQPpFnxgRb_pXA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Ben Johns",
+   "type": "youtube",
+   "subtype": "pro",
+   "url": "https://www.youtube.com/@BenJohns_pb",
+   "channel_id": "UCuAEiEnLIHjl-I_unvqaDNQ",
+   "audience": {
+    "value": "52.4K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@BenJohns_pb channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCuAEiEnLIHjl-I_unvqaDNQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCuAEiEnLIHjl-I_unvqaDNQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Cliff Pickleball",
+   "type": "youtube",
+   "subtype": "entertainment",
+   "url": "https://www.youtube.com/@CliffPickleball",
+   "channel_id": "UCRA5079tOaOz8-xLy_cDbjA",
+   "audience": {
+    "value": "47.1K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@CliffPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRA5079tOaOz8-xLy_cDbjA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCRA5079tOaOz8-xLy_cDbjA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "APPTV (APP Tour)",
+   "type": "youtube",
+   "subtype": "tour",
+   "url": "https://www.youtube.com/@TheAPPTour",
+   "channel_id": "UCzp8-zq6Qpd3g1ykc8Tj9BA",
+   "audience": {
+    "value": "41K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@TheAPPTour channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCzp8-zq6Qpd3g1ykc8Tj9BA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCzp8-zq6Qpd3g1ykc8Tj9BA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Johnkew Pickleball",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@johnkewpickleball",
+   "channel_id": "UCIZfb6Kaorky0xrb_v7Yt4g",
+   "audience": {
+    "value": "37.7K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@johnkewpickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIZfb6Kaorky0xrb_v7Yt4g",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCIZfb6Kaorky0xrb_v7Yt4g",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Backpaddle Pickleball",
+   "type": "youtube",
+   "subtype": "entertainment",
+   "url": "https://www.youtube.com/@backpaddle.pickleball",
+   "channel_id": "UChRJNtddOzmHxwdRaQOjk1g",
+   "audience": {
+    "value": "37.5K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@backpaddle.pickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UChRJNtddOzmHxwdRaQOjk1g",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UChRJNtddOzmHxwdRaQOjk1g",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Tyson McGuffin Pickleball",
+   "type": "youtube",
+   "subtype": "pro+instruction",
+   "url": "https://www.youtube.com/@TysonMcGuffinPickleball",
+   "channel_id": "UCFC5KA3m_OfMQIP8yRFom4w",
+   "audience": {
+    "value": "36.3K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@TysonMcGuffinPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFC5KA3m_OfMQIP8yRFom4w",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCFC5KA3m_OfMQIP8yRFom4w",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PPA x MLP Asia",
+   "type": "youtube",
+   "subtype": "tour",
+   "url": "https://www.youtube.com/@PPAxMLPasia",
+   "channel_id": "UC0fRbanMdcKa6grBz7LzNwg",
+   "audience": {
+    "value": "34.8K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PPAxMLPasia channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC0fRbanMdcKa6grBz7LzNwg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC0fRbanMdcKa6grBz7LzNwg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Jilly B Pickleball",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@jillybpickleball",
+   "channel_id": "UCO0_J6pjPySJit9SfZQozZg",
+   "audience": {
+    "value": "30.9K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@jillybpickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCO0_J6pjPySJit9SfZQozZg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCO0_J6pjPySJit9SfZQozZg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Richard Pickleball",
+   "type": "youtube",
+   "subtype": "entertainment",
+   "url": "https://www.youtube.com/@Richard_pickleball",
+   "channel_id": "UCWJsBBe49RVlDoEuSPTLshg",
+   "audience": {
+    "value": "30.9K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@Richard_pickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWJsBBe49RVlDoEuSPTLshg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCWJsBBe49RVlDoEuSPTLshg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PickleballCentral",
+   "type": "youtube",
+   "subtype": "retailer+reviews",
+   "url": "https://www.youtube.com/@PickleballCentral",
+   "channel_id": "UC-iq7lt-CKE3rgheSZ442yw",
+   "audience": {
+    "value": "27.6K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballCentral channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-iq7lt-CKE3rgheSZ442yw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UC-iq7lt-CKE3rgheSZ442yw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Roscoe Bellamy",
+   "type": "youtube",
+   "subtype": "pro",
+   "url": "https://www.youtube.com/@roscoebellamy",
+   "channel_id": "UCgRziOFy9y58JCE8mZdJ5qA",
+   "audience": {
+    "value": "26.9K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@roscoebellamy channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCgRziOFy9y58JCE8mZdJ5qA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCgRziOFy9y58JCE8mZdJ5qA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Journey",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@PickleballJourney",
+   "channel_id": "UCjhxZNMxnKpszzmiizosd3Q",
+   "audience": {
+    "value": "23.2K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballJourney channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCjhxZNMxnKpszzmiizosd3Q",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCjhxZNMxnKpszzmiizosd3Q",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Effect",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@pickleballeffect",
+   "channel_id": "UC7uQuU1OFg0TFHMarvPoKAg",
+   "audience": {
+    "value": "21.8K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@pickleballeffect channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7uQuU1OFg0TFHMarvPoKAg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UC7uQuU1OFg0TFHMarvPoKAg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Coach Jess | Athena Pickleball",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@athena.pickleball",
+   "channel_id": "UCRnFc8wwJNXgUspK65TI-Ew",
+   "audience": {
+    "value": "21K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@athena.pickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRnFc8wwJNXgUspK65TI-Ew",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCRnFc8wwJNXgUspK65TI-Ew",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Michael Oakson (Pickleball Chiropractor)",
+   "type": "youtube",
+   "subtype": "health/PT",
+   "url": "https://www.youtube.com/@thepickleballchiropractor",
+   "channel_id": "UCMOydhTX4Sowdkd7yUlIsFQ",
+   "audience": {
+    "value": "21K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@thepickleballchiropractor channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMOydhTX4Sowdkd7yUlIsFQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCMOydhTX4Sowdkd7yUlIsFQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Sarah Ansboury",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@SarahAnsbouryPKB",
+   "channel_id": "UCHuN2VCgXnwESfgmDTF-Ldg",
+   "audience": {
+    "value": "20.8K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@SarahAnsbouryPKB channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCHuN2VCgXnwESfgmDTF-Ldg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCHuN2VCgXnwESfgmDTF-Ldg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleballtv",
+   "type": "youtube",
+   "subtype": "broadcast",
+   "url": "https://www.youtube.com/@Pickleballtv",
+   "channel_id": "UCRxDMTx5tfhdH2TskRHYC-A",
+   "audience": {
+    "value": "20.8K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@Pickleballtv channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCRxDMTx5tfhdH2TskRHYC-A",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCRxDMTx5tfhdH2TskRHYC-A",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Warehouse",
+   "type": "youtube",
+   "subtype": "retailer+reviews",
+   "url": "https://www.youtube.com/@pickleballwarehouse",
+   "channel_id": "UCmWrepJcpZaQIKOqU3MLKuA",
+   "audience": {
+    "value": "20.2K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@pickleballwarehouse channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCmWrepJcpZaQIKOqU3MLKuA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCmWrepJcpZaQIKOqU3MLKuA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "STS Pickleball",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@stspickleball",
+   "channel_id": "UCSsc6ey7EpbLMvwb1Brlzrg",
+   "audience": {
+    "value": "19.3K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@stspickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSsc6ey7EpbLMvwb1Brlzrg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCSsc6ey7EpbLMvwb1Brlzrg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Selkirk Sport",
+   "type": "youtube",
+   "subtype": "brand",
+   "url": "https://www.youtube.com/@SelkirkSport",
+   "channel_id": "UC1FwJdxwmg-hYJhtmaUeUcA",
+   "audience": {
+    "value": "17.7K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@SelkirkSport channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC1FwJdxwmg-hYJhtmaUeUcA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC1FwJdxwmg-hYJhtmaUeUcA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Connor Garnett Pickleball",
+   "type": "youtube",
+   "subtype": "pro",
+   "url": "https://www.youtube.com/@congarnett",
+   "channel_id": "UC02Fjlhs3r5K8A6YNW0_QcA",
+   "audience": {
+    "value": "16.8K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@congarnett channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC02Fjlhs3r5K8A6YNW0_QcA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC02Fjlhs3r5K8A6YNW0_QcA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Jack Munro",
+   "type": "youtube",
+   "subtype": "pro",
+   "url": "https://www.youtube.com/@Jackmunropickleball",
+   "channel_id": "UCjFknVR-2xx4CXaqjtkViMw",
+   "audience": {
+    "value": "15.7K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@Jackmunropickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCjFknVR-2xx4CXaqjtkViMw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCjFknVR-2xx4CXaqjtkViMw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Troy Akin Pickleball",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@TroyAkin",
+   "channel_id": "UCZQP57kPK6LVOxbiAbdWebg",
+   "audience": {
+    "value": "15.6K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@TroyAkin channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZQP57kPK6LVOxbiAbdWebg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCZQP57kPK6LVOxbiAbdWebg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "USA Pickleball",
+   "type": "youtube",
+   "subtype": "governing body",
+   "url": "https://www.youtube.com/@USAPickleball",
+   "channel_id": "UC2HmpKPxdCOF0tuYgFjzXxw",
+   "audience": {
+    "value": "14.1K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@USAPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC2HmpKPxdCOF0tuYgFjzXxw",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC2HmpKPxdCOF0tuYgFjzXxw",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Matt's Pickleball",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@MattsPickleball",
+   "channel_id": "UC8JA18cHIr0DJfbvRE11bSA",
+   "audience": {
+    "value": "14K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@MattsPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC8JA18cHIr0DJfbvRE11bSA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UC8JA18cHIr0DJfbvRE11bSA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Cori Elliott",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@corielliottpb",
+   "channel_id": "UCYOdkWfy8ZS6e4JjPZ2iR9Q",
+   "audience": {
+    "value": "13.2K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@corielliottpb channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCYOdkWfy8ZS6e4JjPZ2iR9Q",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCYOdkWfy8ZS6e4JjPZ2iR9Q",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PPA Streamed Courts",
+   "type": "youtube",
+   "subtype": "tour",
+   "url": "https://www.youtube.com/@PPAStreamedCourts",
+   "channel_id": "UCwxrKD60cB__M6nhdH0UW0w",
+   "audience": {
+    "value": "12.4K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PPAStreamedCourts channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCwxrKD60cB__M6nhdH0UW0w",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCwxrKD60cB__M6nhdH0UW0w",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Rx",
+   "type": "youtube",
+   "subtype": "health/PT",
+   "url": "https://www.youtube.com/@PicklebRx",
+   "channel_id": "UCF6K-4uFHAq2n0k0Xa5OhIA",
+   "audience": {
+    "value": "12.1K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PicklebRx channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCF6K-4uFHAq2n0k0Xa5OhIA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCF6K-4uFHAq2n0k0Xa5OhIA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Rackets & Runners - Pickleball",
+   "type": "youtube",
+   "subtype": "retailer+reviews",
+   "url": "https://www.youtube.com/@RacketsandRunnersPickleball",
+   "channel_id": "UC-CTKnZZwrGMdVGWW34c22A",
+   "audience": {
+    "value": "11.7K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@RacketsandRunnersPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-CTKnZZwrGMdVGWW34c22A",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UC-CTKnZZwrGMdVGWW34c22A",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Sorry Not Sorry Pickleball Show",
+   "type": "youtube",
+   "subtype": "podcast",
+   "url": "https://www.youtube.com/@sorrynotsorrypickleball",
+   "channel_id": "UCXicY_F9IVq1GY7yNSAKU9g",
+   "audience": {
+    "value": "11.5K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@sorrynotsorrypickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXicY_F9IVq1GY7yNSAKU9g",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCXicY_F9IVq1GY7yNSAKU9g",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Pursuit",
+   "type": "youtube",
+   "subtype": "instruction+reviews",
+   "url": "https://www.youtube.com/@PickleballPursuit",
+   "channel_id": "UCymbPCDl691HA0ErKcoY5EQ",
+   "audience": {
+    "value": "11.3K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballPursuit channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCymbPCDl691HA0ErKcoY5EQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCymbPCDl691HA0ErKcoY5EQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "All Drive No Drop Pickleball",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@AllDriveNoDropPickleball",
+   "channel_id": "UC6XF2LqwvzbRYmaC1_RdD-w",
+   "audience": {
+    "value": "10.6K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@AllDriveNoDropPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC6XF2LqwvzbRYmaC1_RdD-w",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UC6XF2LqwvzbRYmaC1_RdD-w",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Will",
+   "type": "youtube",
+   "subtype": "instruction",
+   "url": "https://www.youtube.com/@PickleballWill",
+   "channel_id": "UCyQIPrK6eoMtvDrLEDUzs2Q",
+   "audience": {
+    "value": "10.9K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballWill channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCyQIPrK6eoMtvDrLEDUzs2Q",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCyQIPrK6eoMtvDrLEDUzs2Q",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Medicine",
+   "type": "youtube",
+   "subtype": "health/PT",
+   "url": "https://www.youtube.com/@PickleballMedicine",
+   "channel_id": "UC1WRkYTNl73sZ_V5oS4c9iQ",
+   "audience": {
+    "value": "9.62K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballMedicine channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC1WRkYTNl73sZ_V5oS4c9iQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC1WRkYTNl73sZ_V5oS4c9iQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleballdotcom",
+   "type": "youtube",
+   "subtype": "media",
+   "url": "https://www.youtube.com/@PickleballdotCom",
+   "channel_id": "UC-wqfvKM0LA8-4O2Enu2bSA",
+   "audience": {
+    "value": "8.57K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PickleballdotCom channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-wqfvKM0LA8-4O2Enu2bSA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC-wqfvKM0LA8-4O2Enu2bSA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "JOOLA Pickleball",
+   "type": "youtube",
+   "subtype": "brand",
+   "url": "https://www.youtube.com/@JOOLAPickleball",
+   "channel_id": "UCISztfkS-yElF5ph-MMxpFQ",
+   "audience": {
+    "value": "7.21K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@JOOLAPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCISztfkS-yElF5ph-MMxpFQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCISztfkS-yElF5ph-MMxpFQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Matthew K Pickleball",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@MatthewKPickleball",
+   "channel_id": "UCFvJjQiH3vm1b51hIjEYGEA",
+   "audience": {
+    "value": "7.14K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@MatthewKPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFvJjQiH3vm1b51hIjEYGEA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCFvJjQiH3vm1b51hIjEYGEA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "CertifiedMcNasty Podcast",
+   "type": "youtube",
+   "subtype": "podcast",
+   "url": "https://www.youtube.com/@CertifiedMcNastyPodcast",
+   "channel_id": "UC5xciZjImgdbZjQbqrB1G6w",
+   "audience": {
+    "value": "6.09K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@CertifiedMcNastyPodcast channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC5xciZjImgdbZjQbqrB1G6w",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC5xciZjImgdbZjQbqrB1G6w",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "DUPR",
+   "type": "youtube",
+   "subtype": "ratings",
+   "url": "https://www.youtube.com/@DUPRPB",
+   "channel_id": "UC7MtALg_EzUWgR9X5UnW32A",
+   "audience": {
+    "value": "5.12K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@DUPRPB channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7MtALg_EzUWgR9X5UnW32A",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC7MtALg_EzUWgR9X5UnW32A",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Tickle My Pickleball",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@TickleMyPickleball",
+   "channel_id": "UC5Txk5Su1Qv1AUVaXJ5FbzA",
+   "audience": {
+    "value": "4.64K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@TickleMyPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC5Txk5Su1Qv1AUVaXJ5FbzA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UC5Txk5Su1Qv1AUVaXJ5FbzA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "This Is Pickleball Podcast",
+   "type": "youtube",
+   "subtype": "podcast",
+   "url": "https://www.youtube.com/@ThisIsPickleballPodcast",
+   "channel_id": "UC38uY1unQ4RrVlf2Nuun6Ig",
+   "audience": {
+    "value": "3.41K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@ThisIsPickleballPodcast channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC38uY1unQ4RrVlf2Nuun6Ig",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UC38uY1unQ4RrVlf2Nuun6Ig",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PickleBaller",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@BecomePickleBaller",
+   "channel_id": "UCvTXVCFzDzF8Po0JvVAtdrg",
+   "audience": {
+    "value": "2.93K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@BecomePickleBaller channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvTXVCFzDzF8Po0JvVAtdrg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCvTXVCFzDzF8Po0JvVAtdrg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Farmer Lanky Pickleball",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@FarmerLankyPickleball",
+   "channel_id": "UCk4QHrMaOo8a3LQ2fs3xEeQ",
+   "audience": {
+    "value": "2.93K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@FarmerLankyPickleball channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCk4QHrMaOo8a3LQ2fs3xEeQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCk4QHrMaOo8a3LQ2fs3xEeQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Cracked Paddles Pickleball",
+   "type": "youtube",
+   "subtype": "podcast+reviews",
+   "url": "https://www.youtube.com/@CrackedPaddles",
+   "channel_id": "UCiE0OXNc9tVx9MisXd3IlPA",
+   "audience": {
+    "value": "2.57K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@CrackedPaddles channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCiE0OXNc9tVx9MisXd3IlPA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "youtube:UCiE0OXNc9tVx9MisXd3IlPA",
+   "added": "2026-10-14",
+   "flag": "seed",
+   "note": "podcast-style; listed on Creators page, not in review feed"
+  },
+  {
+   "name": "Pickleball Playbook Paddles",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@PlaybookPaddles",
+   "channel_id": "UCikz-D2j4_jMVYZrQuPin6A",
+   "audience": {
+    "value": "2.54K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PlaybookPaddles channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCikz-D2j4_jMVYZrQuPin6A",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCikz-D2j4_jMVYZrQuPin6A",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Blast",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@ThePickleballBlast",
+   "channel_id": "UCsPTdgkeMp68IyHd5gMFDfg",
+   "audience": {
+    "value": "2.37K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@ThePickleballBlast channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsPTdgkeMp68IyHd5gMFDfg",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCsPTdgkeMp68IyHd5gMFDfg",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Paddle Plug",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@PaddlePlug",
+   "channel_id": "UClgb_PSuuUN9u7ugZEKl1qA",
+   "audience": {
+    "value": "1.95K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@PaddlePlug channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UClgb_PSuuUN9u7ugZEKl1qA",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UClgb_PSuuUN9u7ugZEKl1qA",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Advocate",
+   "type": "youtube",
+   "subtype": "reviews",
+   "url": "https://www.youtube.com/@Pickleball-Advocate",
+   "channel_id": "UCmIxk2O0tBS694eFJaWEvUQ",
+   "audience": {
+    "value": "1.79K",
+    "metric": "youtube_subscribers",
+    "source": "youtube.com/@Pickleball-Advocate channel page (public subscriber count)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCmIxk2O0tBS694eFJaWEvUQ",
+    "api": "YouTube Data API v3 (key required)"
+   },
+   "scraping": {
+    "robots": "n/a (RSS used)",
+    "tos": "YouTube ToS bars scraping; channel RSS (youtube.com/feeds/videos.xml) and the official embed player are sanctioned. Titles, links, embeds only.",
+    "allowed_method": "rss+embed"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "youtube:UCmIxk2O0tBS694eFJaWEvUQ",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "USA Pickleball",
+   "type": "governing body",
+   "url": "https://usapickleball.org/",
+   "audience": {
+    "value": "Tranco rank #107,053",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "/feed returns 403 to bots; link only",
+   "id": "governing body:https://usapickleball.org/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PickleballTournaments.com",
+   "type": "tournament directory",
+   "url": "https://pickleballtournaments.com/",
+   "audience": {
+    "value": "Tranco rank #114,106",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "tournament directory:https://pickleballtournaments.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball.com (UPA: PPA/MLP data, rankings, results)",
+   "type": "news+stats",
+   "url": "https://pickleball.com/",
+   "audience": {
+    "value": "Tranco rank #139,838",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14",
+    "third_party_estimate": {
+     "value": "~511K monthly visits",
+     "source": "hypestat.com compare page via web search snippet (third-party estimate, methodology varies)"
+    }
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "UPA's hub; /rss 403; results/rankings are link-only",
+   "id": "news+stats:https://pickleball.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Just Paddles",
+   "type": "retailer/gear reviews",
+   "url": "https://www.justpaddles.com/",
+   "audience": {
+    "value": "Tranco rank #140,979",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed (blocks AI crawlers GPTBot/CCBot)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "retailer/gear reviews:https://www.justpaddles.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PlayTime Scheduler",
+   "type": "app/community",
+   "url": "https://playtimescheduler.com/",
+   "audience": {
+    "value": "Tranco rank #151,656",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "app/community:https://playtimescheduler.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleheads",
+   "type": "courts/gear guides",
+   "url": "https://www.pickleheads.com/",
+   "audience": {
+    "value": "Tranco rank #167,737",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14",
+    "third_party_estimate": {
+     "value": "~446K monthly visits (Dec 2025)",
+     "source": "techlist.ai snippet via web search (third-party)"
+    }
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "homepage 403 to bots; link only",
+   "id": "courts/gear guides:https://www.pickleheads.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "DUPR",
+   "type": "ratings/stats",
+   "url": "https://www.dupr.com/",
+   "audience": {
+    "value": "Tranco rank #244,269",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "DUPR partner API (approval required)"
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "ratings/stats:https://www.dupr.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PickleballCentral",
+   "type": "retailer/gear guides",
+   "url": "https://pickleballcentral.com/",
+   "audience": {
+    "value": "Tranco rank #274,394",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed (blocks AI crawlers)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "retailer/gear guides:https://pickleballcentral.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PickleballBrackets.com",
+   "type": "tournament directory",
+   "url": "https://www.pickleballbrackets.com/",
+   "audience": {
+    "value": "Tranco rank #308,591",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "tournament directory:https://www.pickleballbrackets.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Carvana PPA Tour",
+   "type": "tour",
+   "url": "https://www.ppatour.com/",
+   "audience": {
+    "value": "Tranco rank #328,190",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.ppatour.com/events.xml",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "events feed already wired; athlete pages via scripts/fetch_pros.py",
+   "id": "tour:https://www.ppatour.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Dink Pickleball",
+   "type": "news",
+   "url": "https://www.thedinkpickleball.com/",
+   "audience": {
+    "value": "Tranco rank #365,953",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14",
+    "third_party_estimate": {
+     "value": "~374K monthly visits",
+     "source": "hypestat.com compare page via web search snippet (third-party estimate, methodology varies)"
+    }
+   },
+   "feed": {
+    "rss": "https://www.thedinkpickleball.com/rss/",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "",
+   "id": "news:https://www.thedinkpickleball.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Major League Pickleball",
+   "type": "league/news",
+   "url": "https://majorleaguepickleball.co/",
+   "audience": {
+    "value": "Tranco rank #467,323",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://majorleaguepickleball.co/feed/",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "",
+   "id": "league/news:https://majorleaguepickleball.co/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Places2Play (USA Pickleball)",
+   "type": "court directory",
+   "url": "https://places2play.org/",
+   "audience": {
+    "value": "Tranco rank #672,225",
+    "metric": "tranco_rank",
+    "source": "Tranco top-1M list (tranco-list.eu, downloaded 2026-10-14)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "court directory:https://places2play.org/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Kitchen Pickleball",
+   "type": "news/reviews",
+   "url": "https://thekitchenpickle.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://thekitchenpickle.com/feed/",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "",
+   "id": "news/reviews:https://thekitchenpickle.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Union",
+   "type": "news/instruction",
+   "url": "https://pickleballunion.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://pickleballunion.com/feed/",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "",
+   "id": "news/instruction:https://pickleballunion.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Effect (site)",
+   "type": "gear reviews",
+   "url": "https://pickleballeffect.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://pickleballeffect.com/feed/",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "",
+   "id": "gear reviews:https://pickleballeffect.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Pickler – Inside the Den",
+   "type": "news/instruction",
+   "url": "https://thepickler.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://thepickler.com/feed",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "",
+   "id": "news/instruction:https://thepickler.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball England",
+   "type": "governing body (UK)",
+   "url": "https://www.pickleballengland.org/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.pickleballengland.org/feed/",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "",
+   "id": "governing body (UK):https://www.pickleballengland.org/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Kitchen",
+   "type": "instruction/reviews",
+   "url": "https://pickleballkitchen.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://pickleballkitchen.com/feed",
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "note": "feed last updated 2022; kept, low yield",
+   "id": "instruction/reviews:https://pickleballkitchen.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "APP Tour",
+   "type": "tour",
+   "url": "https://www.apptour.org/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "/feed returns empty; link only",
+   "id": "tour:https://www.apptour.org/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Magazine",
+   "type": "news",
+   "url": "https://www.pickleballmagazine.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "news:https://www.pickleballmagazine.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Canada",
+   "type": "governing body (CA)",
+   "url": "https://www.pickleball.ca/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "governing body (CA):https://www.pickleball.ca/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Australia",
+   "type": "governing body (AU)",
+   "url": "https://pickleballaustralia.org.au/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "governing body (AU):https://pickleballaustralia.org.au/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Portal",
+   "type": "news/reviews",
+   "url": "https://pickleballportal.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed (blocks AI crawlers)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "news/reviews:https://pickleballportal.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Superstore",
+   "type": "retailer",
+   "url": "https://pickleballsuperstore.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "retailer:https://pickleballsuperstore.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Warehouse",
+   "type": "retailer",
+   "url": "https://pickleballwarehouse.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "allowed for / (generic UA)",
+    "tos": "not individually reviewed: headlines + links only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "",
+   "id": "retailer:https://pickleballwarehouse.com/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PicklePod (The Dink)",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 216,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.megaphone.fm/picklepod",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Effect: The Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-effect-the-podcast/id1700381801",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 145,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/e5e4d5c8/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-effect-the-podcast/id1700381801",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Fire Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-fire-podcast/id1536604191",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 212,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/1430878.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-fire-podcast/id1536604191",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Everything But The Kitchen Dink",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/everything-but-the-kitchen-dink-pickleball-podcast/id1650123243",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 148,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/c4ea2a58/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/everything-but-the-kitchen-dink-pickleball-podcast/id1650123243",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The James Ignatowich Pickleball Show (Selkirk)",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-james-ignatowich-pickleball-show/id1692596186",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 116,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://media.rss.com/james-ignatowich-show/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-james-ignatowich-pickleball-show/id1692596186",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Dinking Around with Eddie and Webby",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/dinking-around-with-eddie-and-webby-pickleball-podcast/id1456959653",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 114,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/9da934c/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/dinking-around-with-eddie-and-webby-pickleball-podcast/id1456959653",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Kitchen Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-kitchen-podcast/id1277738056",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 100,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://pickleballkitchen.com/feed/podcast/",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-kitchen-podcast/id1277738056",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Bad Calls - Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/bad-calls-pickleball-podcast/id1656341233",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 94,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2077660.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/bad-calls-pickleball-podcast/id1656341233",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "It Feels Right Pickleball Podcast (Selkirk)",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/it-feels-right-pickleball-podcast/id1639822370",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 94,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://media.rss.com/itfeelsright/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/it-feels-right-pickleball-podcast/id1639822370",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The World Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-world-pickleball-podcast/id1807059798",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 78,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.alitu.com/30881321",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-world-pickleball-podcast/id1807059798",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Tips - 4.0 To Pro",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-tips-4-0-to-pro-a-pocket-sized-pickleball-podcast/id1672463911",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 70,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.megaphone.fm/RTOOP1918311170",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-tips-4-0-to-pro-a-pocket-sized-pickleball-podcast/id1672463911",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "This Pickleball Life (Jilly B & K Dub)",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/this-pickleball-life/id1678021752",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 63,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/dc79c174/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/this-pickleball-life/id1678021752",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Inside Major League Pickleball",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/inside-major-league-pickleball/id1645466933",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 54,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.spreaker.com/show/5666274/episodes/feed",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/inside-major-league-pickleball/id1645466933",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Cheat Code (CRBN)",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-cheat-code/id1810074023",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 51,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2471471.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-cheat-code/id1810074023",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleballers (Jared Paul & Roscoe Bellamy)",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleballers/id1816064184",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 51,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.redcircle.com/d7af585b-6cc2-4442-a351-6d4d350d98c8",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleballers/id1816064184",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Cracked Paddles Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/cracked-paddles-podcast-pickleball-podcast/id1815823909",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 50,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.simplecast.com/Af2d0afr",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/cracked-paddles-podcast-pickleball-podcast/id1815823909",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "This is Pickleball",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/this-is-pickleball/id1853965730",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 32,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.pdrl.fm/8eeeb3/feeds.libsyn.com/599705/rss/?redirect=false",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/this-is-pickleball/id1853965730",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Balls Deep Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/balls-deep-pickleball-podcast/id1853089141",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 31,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feed.podbean.com/ballsdeeppb/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/balls-deep-pickleball-podcast/id1853089141",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Drop (Anna Bright & Dylan Frazier)",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-drop-pickleball-podcast-feat-anna-bright-dylan-frazier/id1676240861",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 21,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/dc10bea4/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "in_pipeline": true,
+   "status": "active",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-drop-pickleball-podcast-feat-anna-bright-dylan-frazier/id1676240861",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Kitchen Pickleball",
+   "type": "x",
+   "url": "https://x.com/TheKitchenPB",
+   "audience": {
+    "value": "34,700",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/TheKitchenPB",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Dink Pickleball",
+   "type": "x",
+   "url": "https://x.com/Pickleball",
+   "audience": {
+    "value": "24,549",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/Pickleball",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Major League Pickleball",
+   "type": "x",
+   "url": "https://x.com/MajorLeaguePB",
+   "audience": {
+    "value": "20,415",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/MajorLeaguePB",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Carvana PPA Tour",
+   "type": "x",
+   "url": "https://x.com/PPAtour",
+   "audience": {
+    "value": "19,745",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/PPAtour",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "USA Pickleball",
+   "type": "x",
+   "url": "https://x.com/USAPickleball",
+   "audience": {
+    "value": "13,585",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/USAPickleball",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Anna Leigh Waters",
+   "type": "x",
+   "url": "https://x.com/AnnaLeighWaters",
+   "audience": {
+    "value": "13,187",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/AnnaLeighWaters",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Selkirk",
+   "type": "x",
+   "url": "https://x.com/SelkirkSport",
+   "audience": {
+    "value": "9,387",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/SelkirkSport",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Cracked Racquets",
+   "type": "x",
+   "url": "https://x.com/CrackedRacquets",
+   "audience": {
+    "value": "9,129",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/CrackedRacquets",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Zane Navratil",
+   "type": "x",
+   "url": "https://x.com/ZaneNavratil",
+   "audience": {
+    "value": "7,639",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/ZaneNavratil",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Tyler Loong",
+   "type": "x",
+   "url": "https://x.com/tylerloong",
+   "audience": {
+    "value": "6,288",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/tylerloong",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Pickleball Union",
+   "type": "x",
+   "url": "https://x.com/PickleballUnion",
+   "audience": {
+    "value": "731",
+    "metric": "x_followers",
+    "source": "X API v2 users/by public_metrics",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "X API v2 (paid tiers)"
+   },
+   "scraping": {
+    "robots": "disallowed",
+    "tos": "X ToS bars scraping; counts read via official X API v2 (public_metrics)",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "x:https://x.com/PickleballUnion",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Kitchen Pickleball",
+   "type": "instagram",
+   "url": "https://www.instagram.com/thekitchenpickleball/",
+   "audience": {
+    "value": "770K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/thekitchenpickleball/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Carvana PPA Tour",
+   "type": "instagram",
+   "url": "https://www.instagram.com/ppatour/",
+   "audience": {
+    "value": "261K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/ppatour/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "The Dink Pickleball",
+   "type": "instagram",
+   "url": "https://www.instagram.com/thedinkpickleball/",
+   "audience": {
+    "value": "216K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/thedinkpickleball/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Enhance Pickleball",
+   "type": "instagram",
+   "url": "https://www.instagram.com/enhancepickleball/",
+   "audience": {
+    "value": "179K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/enhancepickleball/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "tanner.pickleball",
+   "type": "instagram",
+   "url": "https://www.instagram.com/tanner.pickleball/",
+   "audience": {
+    "value": "159K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/tanner.pickleball/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "ThatPickleballGuy",
+   "type": "instagram",
+   "url": "https://www.instagram.com/thatpickleballguy/",
+   "audience": {
+    "value": "154K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/thatpickleballguy/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "JOOLA Pickleball",
+   "type": "instagram",
+   "url": "https://www.instagram.com/joolapickleball/",
+   "audience": {
+    "value": "128K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/joolapickleball/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "Selkirk Sport",
+   "type": "instagram",
+   "url": "https://www.instagram.com/selkirksport/",
+   "audience": {
+    "value": "119K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/selkirksport/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "USA Pickleball",
+   "type": "instagram",
+   "url": "https://www.instagram.com/usapickleball/",
+   "audience": {
+    "value": "89K",
+    "metric": "instagram_followers",
+    "source": "public profile og:description meta",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "Instagram Graph API (own/business accounts only)"
+   },
+   "scraping": {
+    "robots": "disallowed for generic bots",
+    "tos": "Instagram ToS bars automated collection; count read once from the public profile page's og:description meta tag",
+    "allowed_method": "link/embed only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "id": "instagram:https://www.instagram.com/usapickleball/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "r/Pickleball",
+   "type": "forum",
+   "url": "https://www.reddit.com/r/Pickleball/",
+   "audience": {
+    "value": "93,180",
+    "metric": "reddit_subscribers",
+    "source": "arctic-shift archive subreddit metadata (snapshot 2025-02-15; current count likely higher)",
+    "as_of": "2025-02-15"
+   },
+   "feed": {
+    "rss": "https://www.reddit.com/r/Pickleball/.rss",
+    "api": "Reddit Data API (OAuth; commercial use requires agreement)"
+   },
+   "scraping": {
+    "robots": "reddit.com blocks this box; robots disallows most bots",
+    "tos": "Reddit ToS/Data API terms restrict commercial reuse; link only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "active",
+   "note": "~48.8K posts / 1.05M comments archived (arctic-shift)",
+   "id": "forum:https://www.reddit.com/r/Pickleball/",
+   "added": "2026-10-14",
+   "flag": "seed"
+  },
+  {
+   "name": "PickleballForum.com",
+   "type": "forum",
+   "url": "https://www.pickleballforum.com/",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "not in Tranco top 1M",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": null
+   },
+   "scraping": {
+    "robots": "not checked",
+    "tos": "link only",
+    "allowed_method": "link only"
+   },
+   "in_pipeline": false,
+   "status": "unverified",
+   "id": "forum:https://www.pickleballforum.com/",
+   "added": "2026-10-14",
+   "flag": "seed",
+   "note": "URL did not respond from the box on 2026-10-14; unverified"
+  },
+  {
+   "name": "R² Koda Pickleball",
+   "type": "youtube",
+   "subtype": "unclassified",
+   "url": "https://www.youtube.com/@rrkoda-r2",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "no official count fetched (set YT_API_KEY)",
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": null,
+    "api": "YouTube Data API v3"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "RSS + embed only",
+    "allowed_method": "rss+embed"
+   },
+   "note": "shared 1x in r/Pickleball in the last 30 days (Arctic Shift archive, resolved via YouTube oEmbed)",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "youtube:https://www.youtube.com/@rrkoda-r2"
+  },
+  {
+   "name": "99% Pickleball",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/99-pickleball/id1896879415",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 12,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2596563.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Empower Pickleball; last release 2026-08-20",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/99-pickleball/id1896879415"
+  },
+  {
+   "name": "Pickle Me This — Sharing the fun, friends & stories of rec pickleball play",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickle-me-this-sharing-the-fun-friends-stories-of/id1799338470",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 36,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/101a1cb18/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Deirdre; last release 2026-05-30",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickle-me-this-sharing-the-fun-friends-stories-of/id1799338470"
+  },
+  {
+   "name": "The Eddie and Webby Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-eddie-and-webby-pickleball-podcast/id1392567934",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 131,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/48e1594/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Eddie and Webby; last release 2026-10-13",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-eddie-and-webby-pickleball-podcast/id1392567934"
+  },
+  {
+   "name": "Mental Pickleball Radio",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/mental-pickleball-radio/id1810789680",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 24,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.spreaker.com/show/6604802/episodes/feed",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Kevin Harrison; last release 2026-06-15",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/mental-pickleball-radio/id1810789680"
+  },
+  {
+   "name": "NML Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/nml-pickleball-podcast/id1698274836",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 11,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/e5ec15a4/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by NML Pickleball; last release 2023-11-23",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/nml-pickleball-podcast/id1698274836"
+  },
+  {
+   "name": "The Pickleball Connection",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-pickleball-connection/id1746806634",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 56,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://media.rss.com/pickleballconnection/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Selkirk Sport; last release 2026-01-21",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-pickleball-connection/id1746806634"
+  },
+  {
+   "name": "Pickleball Innovators",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-innovators/id1874395200",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 17,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.soundcloud.com/users/soundcloud:users:1450104518/sounds.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Pickleball Innovators; last release 2026-08-24",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-innovators/id1874395200"
+  },
+  {
+   "name": "Pickleball Legends",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-legends/id1843441915",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 27,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/109f20b84/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Pickleball Legends; last release 2026-09-30",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-legends/id1843441915"
+  },
+  {
+   "name": "44X20 Pickleball",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/44x20-pickleball/id6783247488",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 11,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://api.riverside.com/hosting/bLU8QKh8.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by 44X20 Productions; last release 2026-09-26",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/44x20-pickleball/id6783247488"
+  },
+  {
+   "name": "Alpha Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/alpha-pickleball-podcast/id1720452910",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 40,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/ee256568/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Alpha Pickleball; last release 2025-01-31",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/alpha-pickleball-podcast/id1720452910"
+  },
+  {
+   "name": "Pickleball Addiction",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-addiction/id1700686018",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 26,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.redcircle.com/025d6a23-2b78-423e-b28d-ed7bb11c122a",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Mark Mars; last release 2024-05-08",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-addiction/id1700686018"
+  },
+  {
+   "name": "The Pickleball Breakdown with Jilly B and Scott C",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-pickleball-breakdown-with-jilly-b-and-scott-c/id1763347026",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 14,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/eaeb4d54/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Jill Braverman; last release 2025-01-13",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-pickleball-breakdown-with-jilly-b-and-scott-c/id1763347026"
+  },
+  {
+   "name": "The Pickleball Talks",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-pickleball-talks/id1873136615",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 11,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.art19.com/the-pickleball-talks",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by The Pickleball Talks; last release 2026-09-08",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-pickleball-talks/id1873136615"
+  },
+  {
+   "name": "Frozen Dinks, Pickleball in Alaska",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/frozen-dinks-pickleball-in-alaska/id1883258671",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 13,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://api.riverside.fm/hosting/ISOa28za.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Peter; last release 2026-08-22",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/frozen-dinks-pickleball-in-alaska/id1883258671"
+  },
+  {
+   "name": "Pickleball Business Life",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-business-life/id6801243698",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 10,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2627675.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Rocket Rich and Pistol Pete; last release 2026-09-24",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-business-life/id6801243698"
+  },
+  {
+   "name": "The Future of Pickleball",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-future-of-pickleball/id1692602633",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 87,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://media.rss.com/future-of-pickleball/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Selkirk Sport; last release 2025-08-08",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-future-of-pickleball/id1692602633"
+  },
+  {
+   "name": "The Business of Pickleball - Pickleball Brief",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-business-of-pickleball-pickleball-brief/id1720593741",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 17,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.mypodops.com/rss/podcast-2131.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Pickleball Brief; last release 2025-02-12",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-business-of-pickleball-pickleball-brief/id1720593741"
+  },
+  {
+   "name": "Pickleball Physio",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-physio/id1640517863",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 35,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/b131b800/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Pickleball Physio; last release 2024-02-16",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-physio/id1640517863"
+  },
+  {
+   "name": "Pickleball & Partnership: On Transformation, Growth & the Game of Becoming",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-partnership-on-transformation-growth-the/id1775742795",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 44,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2417031.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Charlotte Jukes; last release 2026-08-21",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-partnership-on-transformation-growth-the/id1775742795"
+  },
+  {
+   "name": "Pickleball Today - The POD",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-today-the-pod/id1746535683",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 24,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feed.podbean.com/pickleballtoday/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Patrick Batty & Johan Friesen; last release 2025-05-13",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-today-the-pod/id1746535683"
+  },
+  {
+   "name": "Pickleball For All",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-for-all/id1859751791",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 16,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feed.podbean.com/pickleballforall/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by The Pickleball Factory; last release 2026-07-06",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-for-all/id1859751791"
+  },
+  {
+   "name": "Klyng on the Court: Cracking The Pickleball Code.",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/klyng-on-the-court-cracking-the-pickleball-code/id1811674778",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 24,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/1024f641c/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Andrew Gorman, Lily Brown (Klyng Pickleball); last release 2025-11-12",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/klyng-on-the-court-cracking-the-pickleball-code/id1811674778"
+  },
+  {
+   "name": "The Pickleball Show with CurtisReese -Discuss the fast growing sport of Pickleball!",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-pickleball-show-with-curtisreese-discuss-the/id1691667651",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 146,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/e381b42c/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by The Pickleball Show with Curtis Reese; last release 2026-10-10",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-pickleball-show-with-curtisreese-discuss-the/id1691667651"
+  },
+  {
+   "name": "The Stack",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-stack/id1710477569",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 48,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/e6c4ae14/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Performance Pickleball; last release 2025-07-09",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-stack/id1710477569"
+  },
+  {
+   "name": "Bite Size Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/bite-size-pickleball-podcast/id1694241191",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 98,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2209957.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Rick Cipes; last release 2026-01-25",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/bite-size-pickleball-podcast/id1694241191"
+  },
+  {
+   "name": "Dinks On Tap: The Happy Hour Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/dinks-on-tap-the-happy-hour-pickleball-podcast/id1776366798",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 56,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.megaphone.fm/GEMINIMEDIA9700919857",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Casie & Lauren; last release 2026-10-08",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/dinks-on-tap-the-happy-hour-pickleball-podcast/id1776366798"
+  },
+  {
+   "name": "Briones Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/briones-pickleball-podcast/id1669617402",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 107,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2126187.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Jordan Briones from Briones Pickleball; last release 2026-10-01",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/briones-pickleball-podcast/id1669617402"
+  },
+  {
+   "name": "That Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/that-pickleball-podcast/id6801576389",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 10,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2636296.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Tyler Coston; last release 2026-10-01",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/that-pickleball-podcast/id6801576389"
+  },
+  {
+   "name": "Matt's Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/matts-pickleball-podcast/id1812727671",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 29,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/1048ed884/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Matt's Pickleball; last release 2026-10-07",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/matts-pickleball-podcast/id1812727671"
+  },
+  {
+   "name": "Is This A Pickleball Podcast? w/ @MatthewKPickleball",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/is-this-a-pickleball-podcast-w-matthewkpickleball/id1800789060",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 75,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/101f2851c/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by @MatthewKPickleball; last release 2026-10-08",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/is-this-a-pickleball-podcast-w-matthewkpickleball/id1800789060"
+  },
+  {
+   "name": "All Drive No Drop Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/all-drive-no-drop-pickleball-podcast/id1777419595",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 92,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://media.rss.com/all-drive-no-drop-pickleball-podcast/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Jacob Hoisington; last release 2026-09-25",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/all-drive-no-drop-pickleball-podcast/id1777419595"
+  },
+  {
+   "name": "Keep It on the Court | Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/keep-it-on-the-court-pickleball-podcast/id1891828249",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 17,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.simplecast.com/mnW64Z_s",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Eddie and Amanda Romero; last release 2026-10-07",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/keep-it-on-the-court-pickleball-podcast/id1891828249"
+  },
+  {
+   "name": "Skinny Singles Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/skinny-singles-pickleball-podcast/id1826107054",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 41,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/10637308c/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Skinny Singles Pickleball Podcast; last release 2026-08-07",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/skinny-singles-pickleball-podcast/id1826107054"
+  },
+  {
+   "name": "Salty Pickles – A Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/salty-pickles-a-pickleball-podcast/id1830733753",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 24,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://media.rss.com/salty-pickles/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by co-hosts Alexis & Dieu; last release 2026-09-13",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/salty-pickles-a-pickleball-podcast/id1830733753"
+  },
+  {
+   "name": "Balls Deep | Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/balls-deep-pickleball-podcast/id1853087739",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 36,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/10a8693bc/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Ava Ignatowich and Camila Zilveti; last release 2026-06-03",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/balls-deep-pickleball-podcast/id1853087739"
+  },
+  {
+   "name": "Around the Pod | Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/around-the-pod-pickleball-podcast/id6790779923",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 10,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2630194.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Around the Pod; last release 2026-09-29",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/around-the-pod-pickleball-podcast/id6790779923"
+  },
+  {
+   "name": "Third Shot - A Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/third-shot-a-pickleball-podcast/id1652594018",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 100,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.thirdshotpodcast.com/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Third Shot; last release 2026-04-09",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/third-shot-a-pickleball-podcast/id1652594018"
+  },
+  {
+   "name": "Morgan Evans More or Less Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/morgan-evans-more-or-less-pickleball-podcast/id1435502555",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 55,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feed.podbean.com/selkirk/feed.xml",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Selkirk Sport; last release 2021-08-23",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/morgan-evans-more-or-less-pickleball-podcast/id1435502555"
+  },
+  {
+   "name": "The Profound Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-profound-pickleball-podcast/id1543649810",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 38,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/431f591c/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Stephen Rahn; last release 2025-11-19",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-profound-pickleball-podcast/id1543649810"
+  },
+  {
+   "name": "Blazing Paddles - A Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/blazing-paddles-a-pickleball-podcast/id1533600133",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 81,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/1290011.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by John & Karen Whitaker; last release 2025-06-11",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/blazing-paddles-a-pickleball-podcast/id1533600133"
+  },
+  {
+   "name": "Poachers Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/poachers-pickleball-podcast/id1830274459",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 16,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.spreaker.com/show/6698133/episodes/feed",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Matthew Liggett & Spencer Rodak; last release 2026-04-04",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/poachers-pickleball-podcast/id1830274459"
+  },
+  {
+   "name": "Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-podcast/id1676105838",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 10,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://www.spreaker.com/show/5806368/episodes/feed",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Sol Good Network; last release 2023-03-07",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-podcast/id1676105838"
+  },
+  {
+   "name": "Der Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/der-pickleball-podcast/id1726577583",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 12,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/efe5285c/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Piba Sports; last release 2025-07-10",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/der-pickleball-podcast/id1726577583"
+  },
+  {
+   "name": "20x44 Life: A Pickleball Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/20x44-life-a-pickleball-podcast/id1732140301",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 12,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2319530.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Brandon Contratto; last release 2024-10-08",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/20x44-life-a-pickleball-podcast/id1732140301"
+  },
+  {
+   "name": "The Pickleball Pursuit Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-pickleball-pursuit-podcast/id1749421226",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 84,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/f6fb5be8/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Pickleball Pursuit; last release 2026-09-30",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-pickleball-pursuit-podcast/id1749421226"
+  },
+  {
+   "name": "Pickleball Studio Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-studio-podcast/id1627542550",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 179,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/1997851.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Chris Olson & Aizec Olson; last release 2026-10-14",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-studio-podcast/id1627542550"
+  },
+  {
+   "name": "DUPR Brain Fitness Pickleball Performance Series Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/dupr-brain-fitness-pickleball-performance-series-podcast/id1896305819",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 24,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://api.substack.com/feed/podcast/8685961.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Dr. Gordon Jones; last release 2026-08-10",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/dupr-brain-fitness-pickleball-performance-series-podcast/id1896305819"
+  },
+  {
+   "name": "Pickleball Therapy",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/pickleball-therapy/id1523311733",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 362,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://feeds.transistor.fm/pickleball-therapy",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Tony Roig; last release 2026-10-02",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/pickleball-therapy/id1523311733"
+  },
+  {
+   "name": "Picklepreneurs - Pickleball Business Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/picklepreneurs-pickleball-business-podcast/id1725660722",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 35,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/f06867f8/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Simon Lovell; last release 2024-11-23",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/picklepreneurs-pickleball-business-podcast/id1725660722"
+  },
+  {
+   "name": "How you play the game. A podcast about pickleball and entrepreneurship.",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/how-you-play-the-game-a-podcast-about/id1689378490",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 30,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://rss.buzzsprout.com/2188121.rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Danielle French and Briar Jamieson; last release 2026-02-19",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/how-you-play-the-game-a-podcast-about/id1689378490"
+  },
+  {
+   "name": "The Pickleball Guru's Podcast",
+   "type": "podcast",
+   "url": "https://podcasts.apple.com/us/podcast/the-pickleball-gurus-podcast/id1399887843",
+   "audience": {
+    "value": "unknown",
+    "metric": "",
+    "source": "podcast platforms do not publish listener counts",
+    "episodes": 28,
+    "as_of": "2026-10-14"
+   },
+   "feed": {
+    "rss": "https://anchor.fm/s/44fdea0/podcast/rss",
+    "api": "iTunes Search API"
+   },
+   "scraping": {
+    "robots": "n/a",
+    "tos": "public podcast RSS; link to episodes only",
+    "allowed_method": "rss"
+   },
+   "note": "by Prem Carnot; Randy Mantiply; last release 2021-04-29",
+   "flag": "new",
+   "added": "2026-10-14",
+   "in_pipeline": false,
+   "status": "candidate",
+   "id": "podcast:https://podcasts.apple.com/us/podcast/the-pickleball-gurus-podcast/id1399887843"
+  }
+ ]
+}

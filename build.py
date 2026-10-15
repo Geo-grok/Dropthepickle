@@ -1,0 +1,258 @@
+#!/usr/bin/env python3
+"""Render data/*.json + config.json into a static site in dist/."""
+import json, pathlib, shutil, html, urllib.parse, datetime, re
+ROOT = pathlib.Path(__file__).parent; DIST = ROOT / "dist"
+C = json.loads((ROOT / "config.json").read_text())
+def D(n):
+    p = ROOT / "data" / n
+    return json.loads(p.read_text()) if p.exists() else {"items": []}
+e = lambda s: html.escape(str(s or ""), quote=True)
+NAV = [("index.html","Home"),("tournaments.html","Tournaments"),("reviews.html","Reviews"),("news.html","News"),
+       ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("paddles.html","Paddles"),("compare.html","Compare"),("deals.html","Deals"),("shop.html","Merch"),("community.html","Marketplace")]
+CSS = r"""
+:root{--navy:#0b1426;--navy2:#111d36;--navy3:#18284a;--neon:#c6f432;--neon2:#a8d61c;--warm:#ff7a45;--ink:#0d1526;--mut:#5d6b82;--bg:#f4f6fa;--card:#fff;--line:#e3e8f0;--r:18px;--sh:0 1px 2px rgba(11,20,38,.06),0 8px 24px rgba(11,20,38,.08);--sh2:0 2px 4px rgba(11,20,38,.08),0 18px 40px rgba(11,20,38,.16)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:#2453c7;text-underline-offset:3px}img{max-width:100%;display:block}
+h1,h2,h3,.display{font-family:Oswald,"Bebas Neue",Impact,sans-serif;letter-spacing:.01em;line-height:1.1;text-transform:uppercase}
+h1{font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 .6rem;font-weight:700}
+h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:2.4rem 0 1rem;font-weight:700;display:flex;align-items:center;gap:.6rem}
+h2::before{content:"";width:6px;height:1.1em;background:var(--neon);border-radius:3px;box-shadow:0 0 0 2px var(--navy) inset}
+h3{font-size:1.15rem;margin:.2rem 0 .4rem;font-weight:600;text-transform:none;font-family:Inter,system-ui,sans-serif;letter-spacing:-.01em;line-height:1.3}
+h3 a{color:inherit;text-decoration:none}h3 a:hover{color:#2453c7}
+.meta{color:var(--mut);font-size:.86rem}.note{font-size:.8rem;color:var(--mut)}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(11,20,38,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.bar{display:flex;align-items:center;gap:1rem;max-width:1200px;margin:auto;padding:.7rem 1.1rem}
+.logo{display:flex;align-items:center;gap:.55rem;color:#fff;text-decoration:none;font-family:Oswald,Impact,sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:.02em;text-transform:uppercase}
+.logo svg{width:34px;height:34px;flex:none;transition:transform .5s cubic-bezier(.2,.8,.2,1)}.logo:hover svg{transform:rotate(-20deg) scale(1.06)}
+.logo span{color:var(--neon)}
+.nav{display:flex;gap:.1rem;margin-left:auto;align-items:center;min-width:0;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}body{overflow-x:clip}
+.nav a{color:#c9d3e6;text-decoration:none;padding:.45rem .55rem;border-radius:10px;font-size:.88rem;font-weight:600;white-space:nowrap;transition:.2s}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.07)}.nav a.on{color:var(--navy);background:var(--neon)}
+.join{margin-left:.4rem}
+.burger{display:none;margin-left:auto;background:none;border:0;width:42px;height:42px;border-radius:10px;cursor:pointer;color:#fff}
+.burger span{display:block;width:22px;height:2px;background:#fff;margin:5px auto;border-radius:2px;transition:.3s}
+.navopen .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}.navopen .burger span:nth-child(2){opacity:0}.navopen .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:1320px){.burger{display:block}.join{display:none}
+ .nav{position:fixed;inset:62px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--navy);padding:.8rem 1rem 1.4rem;gap:.2rem;transform:translateY(-120%);transition:transform .35s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 40px rgba(0,0,0,.35);max-height:calc(100vh - 62px);overflow:auto}
+ .nav a{font-size:1.05rem;padding:.75rem 1rem}.navopen .nav{transform:none}}
+/* buttons, badges */
+.btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--neon);color:var(--navy);font-weight:800;padding:.8rem 1.25rem;border-radius:12px;text-decoration:none;border:0;cursor:pointer;font-size:.98rem;transition:transform .15s,box-shadow .2s,background .2s;box-shadow:0 6px 18px rgba(198,244,50,.28)}
+.btn:hover{transform:translateY(-2px);background:#d4ff45;box-shadow:0 10px 26px rgba(198,244,50,.4)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}.btn.ghost:hover{box-shadow:inset 0 0 0 2px var(--neon);color:var(--neon)}
+.btn.sm{padding:.45rem .85rem;font-size:.85rem;border-radius:10px}.btn.warm{background:var(--warm);color:#fff;box-shadow:0 6px 18px rgba(255,122,69,.3)}
+.tag,.badge{display:inline-flex;align-items:center;gap:.25rem;font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.22rem .55rem;border-radius:6px;background:#eef2f8;color:var(--navy3);vertical-align:middle}
+.b-sale{background:var(--warm);color:#fff}.b-drop{background:var(--neon);color:var(--navy)}.b-power{background:#ffe1d3;color:#b23d0c}.b-control{background:#dde8ff;color:#1d3f9a}.b-out{background:#eee;color:#777}.b-pub{background:var(--navy);color:var(--neon)}
+/* layout */
+main{max-width:1200px;margin:auto;padding:1.4rem 1.1rem 3rem}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+.card{position:relative;background:var(--card);border-radius:var(--r);padding:1.15rem;box-shadow:var(--sh);border:1px solid var(--line);transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s;overflow:hidden}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.card ul{padding-left:1.1rem;margin:.4rem 0}.card li{margin:.25rem 0}
+.disc{background:linear-gradient(90deg,#fff7e6,#fffdf5);border:1px solid #ffe0a8;padding:.7rem .9rem;border-radius:12px;font-size:.85rem;margin:.6rem 0}
+/* video cards */
+.vid{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;margin:-.2rem -.2rem .7rem}.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.thumb{position:relative;display:block;margin:-1.15rem -1.15rem .85rem;aspect-ratio:16/9;background:var(--navy) center/cover no-repeat;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.card:hover .thumb img{transform:scale(1.05)}
+.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,20,38,.55))}
+.play{position:absolute;z-index:2;left:50%;top:50%;width:58px;height:58px;margin:-29px;border-radius:50%;background:rgba(198,244,50,.95);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s}.card:hover .play{transform:scale(1.1)}
+.play::before{content:"";border-left:16px solid var(--navy);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.chan{position:absolute;z-index:2;left:.7rem;bottom:.6rem;color:#fff;font-size:.78rem;font-weight:700}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 85% -10%,rgba(198,244,50,.18),transparent 60%),radial-gradient(800px 400px at -10% 110%,rgba(255,122,69,.22),transparent 60%),linear-gradient(160deg,#0b1426 0%,#132550 100%);color:#fff;margin:0 0 0}
+.hero .court{position:absolute;inset:0;width:100%;height:100%;opacity:.16}
+.hero .in{position:relative;max-width:1200px;margin:auto;padding:clamp(3rem,9vw,6.5rem) 1.1rem clamp(3rem,8vw,5.5rem);display:grid;gap:2rem;grid-template-columns:1.25fr .9fr;align-items:center}
+.hero h1{font-size:clamp(2.7rem,8vw,5.6rem);line-height:.95;margin:.6rem 0 1rem;font-family:"Bebas Neue",Oswald,Impact,sans-serif;font-weight:400;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--neon);text-shadow:0 0 40px rgba(198,244,50,.35)}
+.hero p{color:#c9d3e6;font-size:clamp(1rem,2vw,1.18rem);max-width:560px;margin:0 0 1.6rem}
+.eyebrow{display:inline-flex;gap:.5rem;align-items:center;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--neon);background:rgba(198,244,50,.1);border:1px solid rgba(198,244,50,.3);padding:.35rem .7rem;border-radius:99px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 0 0 rgba(198,244,50,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(198,244,50,0)}100%{box-shadow:0 0 0 0 rgba(198,244,50,0)}}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem}
+.stats{display:flex;gap:1.6rem;margin-top:2rem;flex-wrap:wrap}.stats b{display:block;font-family:Oswald,sans-serif;font-size:1.9rem;color:#fff;line-height:1}.stats span{font-size:.78rem;color:#93a1bb;text-transform:uppercase;letter-spacing:.08em}
+.heroart{position:relative;justify-self:center;width:min(380px,80vw);aspect-ratio:1;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}
+@media(max-width:820px){.hero .in{grid-template-columns:1fr}.heroart{display:none}}
+.phero{background:linear-gradient(160deg,#0b1426,#162a57);color:#fff;border-radius:24px;padding:clamp(1.2rem,4vw,2.4rem);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1rem,4vw,2.5rem);align-items:center;position:relative;overflow:hidden;box-shadow:var(--sh2);margin:.4rem 0 1.4rem}
+.phero h1{color:#fff;margin-top:.3rem}.phero .meta{color:#a9b6cf}.phero .meta a{color:var(--neon)}
+.phero .img{background:radial-gradient(circle at 50% 40%,#fff,#e9eef7);border-radius:20px;aspect-ratio:1;display:grid;place-items:center;padding:1rem}
+.phero .img img{max-height:100%;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(0,0,0,.25))}
+.price{font-family:Oswald,sans-serif;font-size:2.4rem;font-weight:700;line-height:1;color:var(--neon)}.price s{font-size:1.1rem;color:#8796b3;margin-left:.4rem;font-weight:400}
+@media(max-width:720px){.phero{grid-template-columns:1fr}}
+.pagehead{background:linear-gradient(160deg,#0b1426,#162a57);color:#fff;border-radius:24px;padding:clamp(1.4rem,4vw,2.6rem);margin:.4rem 0 1.2rem;position:relative;overflow:hidden;box-shadow:var(--sh2)}
+.pagehead h1{color:#fff;margin:0 0 .5rem}.pagehead p,.pagehead .meta{color:#b5c1d8;margin:.3rem 0;max-width:820px}.pagehead a{color:var(--neon)}
+.pagehead::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(198,244,50,.35),transparent 70%)}
+/* paddle cards */
+.pcard{display:flex;flex-direction:column;padding:0}.pcard .pimg{background:radial-gradient(circle at 50% 35%,#fff,#eef2f8);aspect-ratio:4/3;display:grid;place-items:center;padding:1rem;position:relative}
+.pcard .pimg img{max-height:100%;object-fit:contain;transition:transform .4s;filter:drop-shadow(0 10px 14px rgba(0,0,0,.15))}.pcard:hover .pimg img{transform:scale(1.06) rotate(-3deg)}
+.pcard .badges{position:absolute;top:.7rem;left:.7rem;display:flex;gap:.3rem;flex-wrap:wrap}
+.pcard .body{padding:1rem 1.1rem 1.15rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.pcard .pp{font-family:Oswald,sans-serif;font-size:1.5rem;font-weight:700}.pcard .pp s{font-size:.95rem;color:var(--mut);font-weight:400;margin-left:.3rem}
+.pcard .brand{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.credit{font-size:.68rem;color:#94a0b5;position:absolute;right:.6rem;bottom:.4rem}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.3rem .2rem 1rem;scrollbar-width:thin}
+.rail>*{scroll-snap-align:start}
+@media(min-width:1100px){.rail{grid-auto-columns:calc(25% - .83rem)}}
+/* tables */
+.tbl{overflow-x:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--sh);background:#fff}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{padding:.75rem .9rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+tr:last-child td,tr:last-child th{border-bottom:0}thead th,tr:first-child th:not([scope]){background:var(--navy);color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-weight:500}
+tr:first-child th a{color:var(--neon)}tbody tr:hover{background:#f8faff}
+.vs td.win{background:linear-gradient(90deg,rgba(198,244,50,.25),rgba(198,244,50,.08));font-weight:700;position:relative}
+.vs td.win::after{content:"✓ edge";margin-left:.4rem;font-size:.66rem;font-weight:800;color:var(--navy);background:var(--neon);padding:.08rem .4rem;border-radius:5px;text-transform:uppercase}
+.vs th[scope=row]{background:#f4f6fa;color:var(--navy3);width:22%}
+.vshead{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;text-align:center}
+.vshead .vsimg{background:#fff;border-radius:18px;aspect-ratio:1;display:grid;place-items:center;padding:.8rem;max-width:220px;margin:auto}
+.vshead .vsimg img{max-height:100%;object-fit:contain}
+.vsbadge{font-family:"Bebas Neue",Oswald,sans-serif;font-size:2.4rem;width:68px;height:68px;border-radius:50%;background:var(--neon);color:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 6px rgba(198,244,50,.2)}
+.vshead h3{color:#fff;margin-top:.6rem}
+/* tournaments strip, news, sections */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:1rem;overflow-x:auto;padding-bottom:.6rem}
+.tcard{background:var(--navy2);color:#fff;border:1px solid rgba(255,255,255,.08)}.tcard h3{color:#fff}.tcard .meta{color:#a9b6cf}.tcard a{color:var(--neon)}
+.date{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:58px;height:62px;border-radius:12px;background:var(--neon);color:var(--navy);font-family:Oswald,sans-serif;line-height:1;float:right;margin:0 0 .4rem .6rem}.date b{font-size:1.5rem}.date small{font-size:.7rem;font-weight:700;text-transform:uppercase}
+.band{background:var(--navy);color:#fff;border-radius:26px;padding:clamp(1.4rem,4vw,2.6rem);margin:2.6rem 0 0;position:relative;overflow:hidden}
+.band h2{color:#fff;margin-top:0}.band p{color:#b5c1d8}.band .meta{color:#93a1bb}
+.dark{background:var(--navy);color:#fff;margin:2.4rem calc(50% - 50vw) 0;padding:1rem calc(50vw - 50% + 0px) 2.6rem}
+.dark h2{color:#fff}.dark .meta{color:#a9b6cf}
+.dark .in{max-width:1200px;margin:auto;padding:0 1.1rem}
+.newscard .pub{margin-bottom:.5rem}
+.seemore{font-weight:700;text-decoration:none;font-size:.92rem;margin-left:auto;font-family:Inter,sans-serif;text-transform:none;letter-spacing:0;color:#2453c7}.dark .seemore{color:var(--neon)}
+.pros{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.8rem}
+.pro{display:flex;gap:.8rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.8rem;box-shadow:var(--sh);transition:.2s}.pro:hover{transform:translateY(-3px)}
+.pro .av{width:44px;height:44px;flex:none;border-radius:50%;background:var(--navy);color:var(--neon);display:grid;place-items:center;font-family:Oswald,sans-serif;font-weight:700}
+.grid.proscons{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}.proscons .card:first-child{border-top:4px solid var(--neon)}.proscons .card:last-child{border-top:4px solid var(--warm)}
+/* forms */
+form{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
+input[type=email]{padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:1rem;flex:1;min-width:220px;max-width:380px}
+main input[type=email]{border-color:var(--line);background:#fff;color:var(--ink)}.band input[type=email]{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff}
+input::placeholder{color:#93a1bb}
+/* footer */
+footer{background:#070d1a;color:#93a1bb;padding:3rem 1.1rem 2rem;font-size:.88rem}
+.fin{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+footer h4{color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:0 0 .7rem;font-size:.95rem}
+footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer a:hover{color:var(--neon)}
+.legal{max-width:1200px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem}
+@media(max-width:760px){.fin{grid-template-columns:1fr 1fr}.fin>div:first-child{grid-column:1/-1}}
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.secs{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.secs a{text-decoration:none;color:inherit}
+.tbl table td a{font-weight:600}
+"""
+LOGO = '''<svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9ff5a"/><stop offset="1" stop-color="#9ccc12"/></linearGradient></defs><circle cx="32" cy="32" r="29" fill="url(#lg)"/><g fill="#0b1426" opacity=".9"><circle cx="22" cy="20" r="3.4"/><circle cx="38" cy="16" r="3"/><circle cx="46" cy="30" r="3.4"/><circle cx="18" cy="36" r="3"/><circle cx="32" cy="32" r="3.6"/><circle cx="40" cy="45" r="3.2"/><circle cx="25" cy="49" r="2.8"/></g><path d="M50 8c6 4 9 10 9 10" stroke="#ff7a45" stroke-width="4" stroke-linecap="round" fill="none"/></svg>'''
+FAVICON = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0b1426"/><circle cx="32" cy="32" r="22" fill="#c6f432"/><g fill="#0b1426"><circle cx="24" cy="24" r="3"/><circle cx="38" cy="22" r="2.6"/><circle cx="42" cy="35" r="3"/><circle cx="25" cy="38" r="2.6"/><circle cx="33" cy="31" r="3"/><circle cx="34" cy="44" r="2.4"/></g></svg>'''
+PADDLE_SVG = '''<svg viewBox="0 0 200 260" width="70%" aria-label="Paddle illustration"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18284a"/><stop offset="1" stop-color="#0b1426"/></linearGradient></defs><rect x="40" y="10" width="120" height="160" rx="52" fill="url(#pg)"/><rect x="48" y="18" width="104" height="144" rx="46" fill="none" stroke="#c6f432" stroke-width="3" opacity=".7"/><path d="M60 120 L140 60" stroke="#ff7a45" stroke-width="6" stroke-linecap="round" opacity=".85"/><rect x="88" y="168" width="24" height="80" rx="8" fill="#0b1426"/><rect x="88" y="190" width="24" height="6" fill="#c6f432"/><rect x="88" y="208" width="24" height="6" fill="#c6f432"/><circle cx="150" cy="40" r="16" fill="#c6f432"/></svg>'''
+COURT = '''<svg class="court" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#c6f432" stroke-width="3"><rect x="120" y="70" width="960" height="460"/><line x1="600" y1="70" x2="600" y2="530"/><line x1="460" y1="70" x2="460" y2="530"/><line x1="740" y1="70" x2="740" y2="530"/><line x1="120" y1="300" x2="460" y2="300"/><line x1="740" y1="300" x2="1080" y2="300"/></g><g stroke="#fff" stroke-width="2" stroke-dasharray="6 10" opacity=".6"><line x1="600" y1="40" x2="600" y2="560"/></g></svg>'''
+HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs><radialGradient id="ballg" cx=".35" cy=".3"><stop offset="0" stop-color="#eaff8a"/><stop offset=".6" stop-color="#c6f432"/><stop offset="1" stop-color="#8db511"/></radialGradient><linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a6b"/><stop offset="1" stop-color="#ff5f2e"/></linearGradient></defs><g transform="rotate(-24 200 200)"><rect x="110" y="40" width="170" height="220" rx="76" fill="url(#pad)"/><rect x="122" y="52" width="146" height="196" rx="66" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/><rect x="178" y="252" width="34" height="110" rx="12" fill="#0b1426"/><rect x="178" y="280" width="34" height="8" fill="#c6f432"/><rect x="178" y="304" width="34" height="8" fill="#c6f432"/></g><circle cx="300" cy="110" r="62" fill="url(#ballg)"/><g fill="#0b1426" opacity=".85"><circle cx="280" cy="85" r="7"/><circle cx="315" cy="78" r="6"/><circle cx="335" cy="110" r="7"/><circle cx="300" cy="112" r="7.5"/><circle cx="270" cy="120" r="6"/><circle cx="292" cy="145" r="6.5"/><circle cx="325" cy="140" r="5.5"/></g><g stroke="#c6f432" stroke-width="4" stroke-linecap="round" opacity=".5"><line x1="210" y1="150" x2="150" y2="170"/><line x1="220" y1="120" x2="170" y2="125"/></g></svg>'''
+
+FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("podcasts.html","Podcasts"),("creators.html","Creators")]),
+            ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
+            ("Company",[("about.html","About"),("disclosure.html","Affiliate disclosure"),("privacy.html","Privacy"),("community.html","Join the community")])]
+def pagehead(body):
+    m = re.match(r'(<h1>.*?</h1>)((?:<p class="(?:meta|disc)">.*?</p>)*)', body, re.S)
+    if not m: return body
+    parts = re.findall(r'<p class="(meta|disc)">(.*?)</p>', m.group(2), re.S)
+    head = m.group(1) + "".join(f'<p>{t}</p>' for k, t in parts if k == "meta")
+    disc = "".join(f'<p class="disc">{t}</p>' for k, t in parts if k == "disc")
+    return f'<section class="pagehead">{head}</section>{disc}' + body[m.end():]
+def page(fn, title, body, desc="", full=False):
+    nav = "".join(f'<a href="{h}" class="{"on" if h==fn else ""}">{t}</a>' for h, t in NAV)
+    n = C["SITE_NAME"]; i = len(n.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ")) or max((k for k, ch in enumerate(n) if ch.isupper()), default=0); brand = f'{e(n[:i])}<span>{e(n[i:])}</span>'
+    if not full: body = f"<main>{pagehead(body)}</main>"
+    cols = "".join(f'<div><h4>{h}</h4>{"".join(f"<a href={chr(34)}{u}{chr(34)}>{t}</a>" for u, t in ls)}</div>' for h, ls in FOOTCOLS)
+    doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{e(title)} · {e(n)}</title><meta name="description" content="{e(desc or C['TAGLINE'])}"><meta name="theme-color" content="#0b1426">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css"><link rel="canonical" href="{e(C["BASE_URL"].rstrip("/") + "/" + fn)}"></head>
+<body><header><div class="bar"><a class="logo" href="index.html" aria-label="{e(n)} home">{LOGO}<b>{brand}</b></a>
+<button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav">{nav}</nav><a class="btn sm join" href="community.html#signup">Join free</a></div></header>
+{body}
+<footer><div class="fin"><div><a class="logo" href="index.html">{LOGO}<b>{brand}</b></a><p>The all-in-one pickleball hub: tournaments, paddle reviews, deals, news and pro gear, refreshed daily from public sources.</p></div>{cols}</div>
+<div class="legal">© {datetime.date.today().year} {e(n)}. Headlines, videos, product images and event info belong to their publishers and makers and link to the original source. Some links are affiliate links; as an Amazon Associate we may earn from qualifying purchases. Last updated {datetime.datetime.now():%b %d, %Y}.</div></footer>
+<script>
+(()=>{{const b=document.querySelector('.burger');b.addEventListener('click',()=>{{const o=document.body.classList.toggle('navopen');b.setAttribute('aria-expanded',o)}});
+if('IntersectionObserver'in window){{const io=new IntersectionObserver(es=>es.forEach(x=>{{if(x.isIntersecting){{x.target.classList.add('in');io.unobserve(x.target)}}}}),{{rootMargin:'0px 0px -40px 0px'}});
+document.querySelectorAll('main .card,main .pro,.band').forEach(el=>{{el.classList.add('rv');io.observe(el)}})}}
+document.querySelectorAll('form[data-placeholder]').forEach(f=>f.addEventListener('submit',ev=>{{ev.preventDefault();f.innerHTML='<p><b>Thanks!</b> Signups open soon. Nothing was stored.</p>'}}))}})()
+</script></body></html>"""
+    (DIST / fn).write_text(doc)
+
+def buy(p):
+    dom = urllib.parse.urlparse(p["buy_url"]).netloc.replace("www.", "")
+    prm = C["BRAND_AFFILIATE_PARAMS"].get(dom, "")
+    url = p["buy_url"] + (("&" if "?" in p["buy_url"] else "?") + prm if prm else "")
+    out = f'<a href="{e(url)}" rel="sponsored nofollow noopener" target="_blank">{e(p["brand"])} store</a>'
+    tag = C.get("AMAZON_ASSOCIATES_TAG") or C.get("AFFILIATE_TAG")
+    if tag:
+        q = urllib.parse.quote_plus(f'{p["brand"]} {p["model"]} pickleball paddle')
+        out += f' · <a href="https://www.amazon.com/s?k={q}&tag={e(tag)}" rel="sponsored nofollow noopener" target="_blank">Amazon</a>'
+    return out
+
+def signup(src):
+    ep = C.get("SIGNUP_ENDPOINT")
+    attrs = f'action="{e(ep)}" method="post"' if ep else 'action="#signup" data-placeholder="1"'
+    return f'<form id="signup" {attrs}><input type="hidden" name="source" value="{src}"><input type="email" name="email" required placeholder="you@email.com" aria-label="Email"><button class="btn">Notify me</button></form><p class="note">We\'ll only email about launches. See our <a href="privacy.html">privacy policy</a>.</p>'
+
+def fmt(d):
+    try: return datetime.date.fromisoformat(d).strftime("%b %d, %Y")
+    except Exception: return e(d)
+
+def build():
+    if DIST.exists(): shutil.rmtree(DIST)
+    DIST.mkdir(); (DIST / "style.css").write_text(CSS); (DIST / "favicon.svg").write_text(FAVICON)
+    T, R, N, P = D("tournaments.json"), D("reviews.json"), D("news.json"), D("pros.json")
+    PD = json.loads((ROOT / "data/paddles.json").read_text())
+    def dbadge(d):
+        try: x = datetime.date.fromisoformat(d); return f'<span class="date"><b>{x.day}</b><small>{x:%b}</small></span>'
+        except Exception: return ""
+    tcard = lambda t: f'<div class="card tcard">{dbadge(t["start"])}<span class="tag b-pub">{e(t["source"])}</span><h3>{e(t["name"])}</h3><div class="meta">{fmt(t["start"])} – {fmt(t["end"])} · {e(t["location"])}</div><p><a href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a>{(' · <a href="'+e(t["tickets"])+'" target="_blank" rel="noopener">Tickets</a>') if t.get("tickets") else ""}</p></div>'
+    ncard = lambda n: f'<div class="card newscard"><div class="pub"><span class="tag b-pub">{e(n["source"])}</span></div><h3><a href="{e(n["link"])}" target="_blank" rel="noopener">{e(n["title"])}</a></h3><div class="meta">{e(n["summary"])}</div></div>'
+    def rcard(v, embed=True):
+        if not embed and v.get("video_id"):
+            return f'<div class="card"><a class="thumb" href="{e(v["link"])}" target="_blank" rel="noopener" aria-label="Watch on YouTube"><img loading="lazy" src="https://i.ytimg.com/vi/{e(v["video_id"])}/hqdefault.jpg" alt=""><span class="play"></span><span class="chan">{e(v["channel"])}</span></a><h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta">{fmt(v["date"])} · <a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a></div></div>'
+        em = f'<div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{e(v["video_id"])}" title="{e(v["title"])}" allowfullscreen></iframe></div>' if embed and v.get("video_id") else ""
+        return f'<div class="card">{em}<h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta"><a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a> · {fmt(v["date"])}</div></div>'
+    page("tournaments.html", "Tournaments", f'''<h1>Upcoming tournaments</h1><p class="meta">Pro events from the official <a href="https://www.ppatour.com/events/" target="_blank" rel="noopener">Carvana PPA Tour</a> event feed. Always confirm dates and sign up on the official page.</p>
+<div class="grid">{"".join(tcard(t) for t in T["items"]) or "<p>No events right now.</p>"}</div>
+<h2>Find amateur tournaments near you</h2><p>These directories host signups for local and regional events (including West Texas). We link to them instead of copying their listings:</p>
+<ul><li><a href="https://pickleballtournaments.com/" target="_blank" rel="noopener">PickleballTournaments.com</a></li><li><a href="https://www.pickleballbrackets.com/" target="_blank" rel="noopener">PickleballBrackets.com</a></li><li><a href="https://usapickleball.org/" target="_blank" rel="noopener">USA Pickleball</a> (sanctioned events)</li></ul>''')
+    page("reviews.html", "Paddle review roundup", f'<h1>Paddle review roundup</h1><p class="meta">The newest paddle videos from leading independent reviewers, pulled from their public YouTube feeds. All videos play on YouTube and belong to their creators. Go subscribe!</p><div class="grid">{"".join(rcard(v, False) for v in R["items"])}</div>')
+    page("news.html", "Pickleball news", f'<h1>Pickleball news</h1><p class="meta">Headlines from public RSS feeds: {", ".join(e(s) for s in C["NEWS_FEEDS"])}. Click through to read on the publisher\'s site.</p><div class="grid">{"".join(ncard(n) for n in N["items"])}</div>')
+    rows = "".join(f'<tr><td><a href="{e(p["profile"])}" target="_blank" rel="noopener"><b>{e(p["name"])}</b></a></td><td>{e(p["country"])}</td><td>{e(p["paddle"])}</td><td>{" ".join(f"<a href={chr(34)}{e(u)}{chr(34)} target=_blank rel=noopener>{k}</a>" for k,u in p["socials"].items())}</td></tr>' for p in P.get("pros", []))
+    page("pros.html", "Pro players", f'<h1>Top pro players</h1><p class="meta">Facts from each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Blank means the profile didn\'t list it.</p><div class="tbl"><table><tr><th>Player</th><th>Country</th><th>Paddle (per profile)</th><th>Socials</th></tr>{rows}</table></div>')
+    prow = "".join(f'<tr><td><b>{e(p["brand"])}</b><br>{e(p["model"])}</td><td>{e(p["weight"])}</td><td>{e(p["core"])}</td><td>{e(p["shape"])}</td><td>{"$" if p["currency"]=="USD" else "A$"}{p["price"]:.2f}</td><td>{buy(p)}</td></tr>' for p in PD["paddles"])
+    page("paddles.html", "Paddle database", f'<h1>Paddle database</h1><p class="disc">Some links are affiliate links. We may earn a commission at no extra cost to you. <a href="disclosure.html">Learn more</a>.</p><p class="meta">Specs and list prices come from each manufacturer\'s own product page (retrieved {e(PD["retrieved"])}). Blank = not clearly published by the maker. Six Zero lists prices in AUD.</p><div class="tbl"><table><tr><th>Paddle</th><th>Weight</th><th>Core</th><th>Shape</th><th>List price</th><th>Where to buy</th></tr>{prow}</table></div>')
+    page("shop.html", "Merch", f'<h1>Merch shop</h1><div class="card"><h3>Coming soon 👕</h3><p>Shirts, hats and gear for dinkers. Get notified when we launch.</p>{signup("merch")}</div>')
+    page("community.html", "Marketplace & forum", f'<h1>Marketplace & forum</h1><div class="grid"><div class="card"><h3>Used-paddle marketplace</h3><p>Buy and sell paddles and gear. Coming soon.</p></div><div class="card"><h3>Community forum</h3><p>Find partners, talk gear and swap tips. Coming soon.</p></div></div><h2>Be first in line</h2>{signup("community")}')
+    page("about.html", "About", f'<h1>About {e(C["SITE_NAME"])}</h1><p>{e(C["SITE_NAME"])} is an independent pickleball hub started by a player and fitness fan in Midland, Texas. We gather tournaments, reviews, news and gear specs from public sources into one fast page, and always link back to the original.</p><p>We aren\'t affiliated with the PPA Tour, MLP, USA Pickleball or any brand listed. Every headline, video and event belongs to its publisher. The site is refreshed automatically each day. Spot an error? Email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>')
+    page("disclosure.html", "Affiliate disclosure", f'<h1>Affiliate disclosure</h1><p>{e(C["SITE_NAME"])} is reader-supported. Some links on this site, especially "where to buy" links in the paddle database, are <b>affiliate links</b>. If you click one and buy something, we may earn a commission <b>at no extra cost to you</b>.</p><p>As an Amazon Associate, {e(C["SITE_NAME"])} earns from qualifying purchases. We may also take part in affiliate programs run by paddle brands and retailers.</p><p>Commissions never change which products we list or how we describe them. Specs come from manufacturers, and we don\'t accept payment for placement. Affiliate links are marked <code>rel="sponsored"</code>, and pages with them carry a notice near the top, in line with the U.S. FTC Endorsement Guides (16 CFR Part 255).</p>')
+    page("privacy.html", "Privacy policy", f'<h1>Privacy policy</h1><p class="meta">Effective {datetime.date.today():%B %d, %Y}</p><h2>What we collect</h2><p>If you join our email list, we collect your email address and the page you signed up from. We use it only to send launch and site updates, and you can unsubscribe at any time.</p><h2>Third parties</h2><p>Embedded YouTube videos use youtube-nocookie.com, but YouTube may still set cookies once you press play. Affiliate partners (such as Amazon) may use cookies to track referrals after you click a link. Our host may keep standard server logs.</p><h2>Not sold</h2><p>We do not sell your personal information.</p><h2>Contact</h2><p>To ask about or delete your data, email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>')
+    # Creators & Podcasts directories from the living source registry (links only)
+    SR = D("sources.json").get("sources", [])
+    groups = [("Gear & paddle reviewers", lambda s: "review" in s.get("subtype","")), ("Coaches & instruction", lambda s: "instruction" in s.get("subtype","")),
+              ("Pros", lambda s: s.get("subtype","").startswith("pro")), ("Media & entertainment", lambda s: s.get("subtype","") in ("media","entertainment","highlights","broadcast","podcast")),
+              ("Health, fitness & PT", lambda s: "health" in s.get("subtype","")), ("Tours, leagues & orgs", lambda s: s.get("subtype","") in ("tour","league","governing body","ratings","brand"))]
+    yts = [s for s in SR if s["type"] == "youtube" and s.get("flag") != "new"]
+    def ccard(s):
+        return f'<div class="card"><h3><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a></h3><div class="meta">YouTube · {e(s["audience"]["value"])} subscribers</div></div>'
+    used, csecs = set(), ""
+    for title, fn in groups:
+        items = [s for s in yts if fn(s) and s["id"] not in used]
+        used.update(s["id"] for s in items)
+        if items: csecs += f'<h2>{title}</h2><div class="grid">{"".join(ccard(s) for s in items)}</div>'
+    socials = [s for s in SR if s["type"] in ("x","instagram")]
+    srow = "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a> on {"X" if s["type"]=="x" else "Instagram"} ({e(s["audience"]["value"])} followers)</li>' for s in socials)
+    page("creators.html", "Pickleball creators directory", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>')
+    PC = D("podcasts.json")
+    shows = [s for s in SR if s["type"] == "podcast" and s.get("flag") != "new"]
+    latest = {}
+    for ep in PC.get("items", []): latest.setdefault(ep["show"], []).append(ep)
+    def pcard(s):
+        eps = "".join(f'<li><a href="{e(x["link"])}" target="_blank" rel="noopener">{e(x["title"])}</a> <span class="meta">{fmt(x["date"])}</span></li>' for x in latest.get(s["name"], [])[:2])
+        return f'<div class="card"><h3><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a></h3><div class="meta">{e(s["audience"].get("episodes",""))} episodes · <a href="{e(s["feed"]["rss"])}" target="_blank" rel="noopener">RSS</a></div>{f"<ul>{eps}</ul>" if eps else ""}</div>'
+    page("podcasts.html", "Pickleball podcasts", f'<h1>Pickleball podcasts</h1><p class="meta">Shows ordered by episode count, with their newest episodes pulled from each public podcast feed. Listen on the show\'s own page.</p><div class="grid">{"".join(pcard(s) for s in sorted(shows, key=lambda s: -(s["audience"].get("episodes") or 0)))}</div>')
+    import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
+    print("built", len(list(DIST.glob("*.html"))), "pages ->", DIST)
+build()

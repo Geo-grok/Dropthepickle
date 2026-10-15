@@ -1,0 +1,1042 @@
+{
+ "updated": "2026-10-14",
+ "notes": "No guessed emails: only public pages. 'likely' = an affiliate app script is installed site-wide but no public program page was found. Evidence comes from tour/governing-body partner pages and brand sites, checked on the date shown.",
+ "prospects": [
+  {
+   "name": "Selkirk Sport",
+   "category": "paddle brand",
+   "url": "https://www.selkirk.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "AvantLink (15%, 30-day cookie per program page snippet)",
+   "affiliate_url": "https://www.selkirk.com/pages/selkirk-affiliate-program",
+   "sponsorship_or_media_contact_url": "https://selkirk.com/pages/sponsorship",
+   "pickleball_ad_evidence": [
+    "Runs pro/college sponsorship pages",
+    "Hosts 3 podcasts (It Feels Right, Pickleball Connection, James Ignatowich Show)",
+    "IG 119K / X 9,387 followers"
+   ],
+   "priority": 1,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "JOOLA",
+   "category": "paddle/ball brand",
+   "url": "https://joola.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "Awin (Gen3 Marketing; 4% listed) + FlexOffers listing; BixGrow referral widget on site",
+   "affiliate_url": "https://ui.awin.com/merchant-profile/124160",
+   "sponsorship_or_media_contact_url": "https://joola.com/pages/facility-partnerships",
+   "pickleball_ad_evidence": [
+    "'JOOLA Official Ball of DUPR' logo on dupr.com/partners",
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)",
+    "Team JOOLA pro roster page"
+   ],
+   "priority": 1,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "CRBN Pickleball",
+   "category": "paddle brand",
+   "url": "https://crbnpickleball.com/",
+   "affiliate_program": "yes (ambassador/referral)",
+   "affiliate_network": "Social Snowball",
+   "affiliate_url": "https://crbnpickleball.com/pages/crbn-ambassador-program",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Produces the 'Pickleball Cheat Code' podcast",
+    "~1,000 pickleball mentions on homepage (core business)"
+   ],
+   "priority": 1,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Six Zero",
+   "category": "paddle brand",
+   "url": "https://sixzeropickleball.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "UpPromote app detected site-wide; no public affiliate page found",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://sixzeropickleball.com/pages/sponsored-coach-program",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)",
+    "Listed on dupr.com/partners (checked 2026-10-14)",
+    "Sponsored-coach program page"
+   ],
+   "priority": 1,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Engage Pickleball",
+   "category": "paddle brand",
+   "url": "https://engagepickleball.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "Affiliatly panel linked from site; AvantLink script detected",
+   "affiliate_url": "https://www.affiliatly.com/af-106821/affiliate.panel",
+   "sponsorship_or_media_contact_url": "https://engagepickleball.com/pages/ambassador",
+   "pickleball_ad_evidence": [
+    "Ambassador and sponsored-player pages"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Gearbox",
+   "category": "paddle brand",
+   "url": "https://gearboxsports.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "Refersion script detected; no public page found",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://gearboxsports.com/pages/contact",
+   "pickleball_ad_evidence": [
+    "Wholesale program page; heavy reviewer coverage (Pressure X reviews across 6+ channels)"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Onix (Pickleball Inc.)",
+   "category": "paddle/ball brand",
+   "url": "https://onixpickleball.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "ShareASale (+AvantLink mention)",
+   "affiliate_url": "https://onixpickleball.com/pages/become-an-onix-affiliate",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Team Onix sponsored-player page"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Franklin Sports",
+   "category": "paddle/ball brand",
+   "url": "https://www.franklinsports.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "site blocks bots (403); not verified",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Franklin X-40/X-44 balls are tournament staples (reviewed on Johnkew Pickleball 'Franklin X-44 vs LT Pro-48')"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Paddletek",
+   "category": "paddle brand",
+   "url": "https://paddletek.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "UpPromote app detected site-wide; no public page found",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://www.paddletek.com/pages/contact-us",
+   "pickleball_ad_evidence": [
+    "Team Paddletek sponsored pros page"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Holbrook Pickleball",
+   "category": "paddle brand",
+   "url": "https://holbrookpickleball.com/",
+   "affiliate_program": "yes (ambassador)",
+   "affiliate_network": "UpPromote / AvantLink scripts on sponsorship page",
+   "affiliate_url": "https://holbrookpickleball.com/pages/ambassadors",
+   "sponsorship_or_media_contact_url": "https://holbrookpickleball.com/pages/sponsorship",
+   "pickleball_ad_evidence": [
+    "Ambassador program + sponsored-pro application"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Luzz Pickleball",
+   "category": "paddle brand",
+   "url": "https://luzzpickleball.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "UpPromote",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://luzzpickleball.com/pages/sponsorship",
+   "pickleball_ad_evidence": [
+    "Team Luzz sponsorship page; heavy reviewer coverage (Inferno/Cannon)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Vatic Pro",
+   "category": "paddle brand",
+   "url": "https://vaticpro.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "UpPromote app detected",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Frequent reviewer coverage (V-Sol reviews on 5+ channels)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Proton",
+   "category": "paddle brand",
+   "url": "https://protonpickleball.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14) (also 'Proton Daytona Beach Open' title sponsor)",
+    "Listed on dupr.com/partners (checked 2026-10-14) ('Proton Tour')"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "11SIX24",
+   "category": "paddle brand",
+   "url": "https://11six24.com/",
+   "affiliate_program": "yes (ambassador)",
+   "affiliate_network": "UpPromote",
+   "affiliate_url": "https://11six24.com/pages/ambassador-program",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Ambassador program page"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Diadem",
+   "category": "paddle brand",
+   "url": "https://diademsports.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "UpPromote",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://diademsports.com/pages/team-diadem",
+   "pickleball_ad_evidence": [
+    "Team Diadem sponsored players page"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Electrum",
+   "category": "paddle brand",
+   "url": "https://electrumpickleball.com/",
+   "affiliate_program": "yes (ambassador)",
+   "affiliate_network": "Refersion",
+   "affiliate_url": "https://electrumpickleball.com/pages/ambassador-programs",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Ambassador programs page"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Pickleball Apes",
+   "category": "paddle brand",
+   "url": "https://pickleballapes.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "UpPromote",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://pickleballapes.com/pages/partners",
+   "pickleball_ad_evidence": [
+    "Partners page"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Wilson",
+   "category": "paddle brand",
+   "url": "https://www.wilson.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "Rakuten script detected; not verified",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://www.wilson.com/en-us/pages/contact",
+   "pickleball_ad_evidence": [
+    "Sells pickleball line (98 mentions on homepage)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Pickleball Central",
+   "category": "retailer",
+   "url": "https://pickleballcentral.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "Everflow (in-house)",
+   "affiliate_url": "https://pickleballcentral.com/affiliate/",
+   "sponsorship_or_media_contact_url": "https://pickleballcentral.com/tournament-sponsorship/",
+   "pickleball_ad_evidence": [
+    "Listed on dupr.com/partners (checked 2026-10-14)",
+    "Tournament sponsorship page",
+    "YouTube 27.6K subs (gear content)"
+   ],
+   "priority": 1,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Pickleball Superstore",
+   "category": "retailer",
+   "url": "https://pickleballsuperstore.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "UpPromote",
+   "affiliate_url": "https://pickleballsuperstore.com/pages/affiliate-program",
+   "sponsorship_or_media_contact_url": "https://pickleballsuperstore.com/pages/contact",
+   "pickleball_ad_evidence": [
+    "Sells AFPL team merch (pro-league tie-ins)"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Just Paddles",
+   "category": "retailer",
+   "url": "https://www.justpaddles.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "site blocks bots (403)",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Tranco #140,979 — one of the highest-traffic pickleball retailers"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Pickleball Warehouse / Total Pickleball",
+   "category": "retailer",
+   "url": "https://pickleballwarehouse.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "ShareASale script detected",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "DUPR partnership page (new_partnership_dupr.html)",
+    "YouTube 20.2K subs"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Rackets & Runners",
+   "category": "retailer",
+   "url": "https://www.youtube.com/@RacketsandRunnersPickleball",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Publishes paddle reviews (11.7K YouTube subs)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Athletic Propulsion Labs (APL)",
+   "category": "shoes/apparel",
+   "url": "https://www.athleticpropulsionlabs.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "Rakuten (per affiliates page)",
+   "affiliate_url": "https://www.athleticpropulsionlabs.com/pages/affiliates",
+   "sponsorship_or_media_contact_url": "https://www.athleticpropulsionlabs.com/pages/contact-us",
+   "pickleball_ad_evidence": [
+    "Pickleball shoe line (not verified on homepage)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Skechers",
+   "category": "shoes",
+   "url": "https://www.skechers.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14) (logo alt 'Sckecher')"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "K-Swiss",
+   "category": "shoes/apparel",
+   "url": "https://kswiss.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "UpPromote / Shopify Collabs detected",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://kswiss.com/pages/collab",
+   "pickleball_ad_evidence": [
+    "104 pickleball mentions on homepage"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Acacia",
+   "category": "shoes",
+   "url": "https://acaciasports.com/",
+   "affiliate_program": "yes (ambassador)",
+   "affiliate_network": "Buzzbassador",
+   "affiliate_url": "https://acaciasports.com/a/buzzbassador/ambassador-page",
+   "sponsorship_or_media_contact_url": "https://acaciasports.com/pages/wholesale-partnership",
+   "pickleball_ad_evidence": [
+    "Pickleball-specific shoe brand"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Joma",
+   "category": "apparel",
+   "url": "https://www.joma-sport.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Zyia Active",
+   "category": "apparel",
+   "url": "https://www.zyiaactive.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Life Time (LT Pro 48 ball)",
+   "category": "balls/facilities",
+   "url": "https://www.lifetime.life/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)",
+    "Listed on dupr.com/partners (checked 2026-10-14)",
+    "Official PPA & MLP ball per PickleballCentral video"
+   ],
+   "priority": 1,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Bloquv",
+   "category": "apparel/sun protection",
+   "url": "https://bloquv.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "Awin script detected",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://bloquv.com/pages/contact",
+   "pickleball_ad_evidence": [
+    "Team discount page"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Sport Court",
+   "category": "courts",
+   "url": "https://sportcourt.com/",
+   "affiliate_program": "no (B2B)",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://sportcourt.com/commercial/partnerships/",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "AT Sports Surfaces / Acrytech",
+   "category": "courts",
+   "url": "https://www.acrytech.com/",
+   "affiliate_program": "no (B2B)",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "C&D Pickleball Nets",
+   "category": "nets",
+   "url": "https://usapickleball.org/about-us/partners/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)",
+    "Listed on dupr.com/partners (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Centerline",
+   "category": "nets/court equipment",
+   "url": "https://www.centerlinesports.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)",
+    "Listed on dupr.com/partners (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Kitchen Blockers",
+   "category": "court equipment",
+   "url": "https://kitchenblockers.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)",
+    "Listed on dupr.com/partners (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Just Courts",
+   "category": "courts",
+   "url": "https://justcourts.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Lobster Sports",
+   "category": "ball machines",
+   "url": "https://www.lobstersports.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "GoAffPro script detected",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://www.lobstersports.com/pages/contact",
+   "pickleball_ad_evidence": [],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "DUPR",
+   "category": "app/ratings",
+   "url": "https://www.dupr.com/",
+   "affiliate_program": "n/a",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://www.dupr.com/partners",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)",
+    "Large partner program page"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "PlayTime Scheduler",
+   "category": "app",
+   "url": "https://playtimescheduler.com/",
+   "affiliate_program": "n/a",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://playtimescheduler.com/sponsor.php",
+   "pickleball_ad_evidence": [
+    "Sells sponsorships itself (sponsor.php)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "CourtReserve",
+   "category": "app (club software)",
+   "url": "https://courtreserve.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://courtreserve.com/contact-us/",
+   "pickleball_ad_evidence": [
+    "Listed on dupr.com/partners (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "PodPlay",
+   "category": "app (club tech)",
+   "url": "https://podplay.app/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "Awin script detected",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Publishes 'club owner's sponsorship playbook'"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "MATCHDAY App",
+   "category": "app",
+   "url": "https://www.ppatour.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Chicken N Pickle",
+   "category": "facility chain",
+   "url": "https://chickennpickle.com/",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://chickennpickle.com/community-engagement/",
+   "pickleball_ad_evidence": [
+    "Listed on dupr.com/partners (checked 2026-10-14)",
+    "Community partnerships/sponsorship page",
+    "Tranco #385,042"
+   ],
+   "priority": 1,
+   "notes": "Midland-adjacent Texas locations make it a natural local partner",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "The Picklr",
+   "category": "franchise",
+   "url": "https://thepicklr.com/",
+   "affiliate_program": "yes (club affiliate, B2B)",
+   "affiliate_network": "in-house",
+   "affiliate_url": "https://thepicklr.com/become-an-affiliate/",
+   "sponsorship_or_media_contact_url": "https://thepicklr.com/sponsorship/",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)",
+    "Sponsors page + sponsorship page"
+   ],
+   "priority": 1,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Dill Dinkers",
+   "category": "franchise",
+   "url": "https://dilldinkers.com/",
+   "affiliate_program": "n/a",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://dilldinkers.com/advertising/",
+   "pickleball_ad_evidence": [
+    "Has an advertising page (sells ads/sponsorship)"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Pickleball Kingdom",
+   "category": "franchise",
+   "url": "https://pickleballkingdom.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://pickleballkingdom.com/contact-us/",
+   "pickleball_ad_evidence": [
+    "305 pickleball mentions; franchise expanding"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Ace Pickleball Club",
+   "category": "franchise",
+   "url": "https://www.acepickleballclub.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://www.acepickleballclub.com/contact",
+   "pickleball_ad_evidence": [
+    "Listed on dupr.com/partners (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Life Time (clubs)",
+   "category": "facility chain",
+   "url": "https://www.lifetime.life/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)",
+    "Listed on dupr.com/partners (checked 2026-10-14)"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Hyperice",
+   "category": "recovery",
+   "url": "https://hyperice.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "Impact / Awin / Rakuten scripts detected",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://hyperice.com/pages/contact",
+   "pickleball_ad_evidence": [],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Therabody",
+   "category": "recovery",
+   "url": "https://therabody.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "Impact (per affiliates page)",
+   "affiliate_url": "https://therabody.com/pages/affiliates",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Bauerfeind",
+   "category": "bracing/PT",
+   "url": "https://www.bauerfeind.us/",
+   "affiliate_program": "yes",
+   "affiliate_network": "not stated on page",
+   "affiliate_url": "https://www.bauerfeind.us/affiliate-program/",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "12 pickleball mentions on homepage"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Zimmer Biomet",
+   "category": "orthopedics",
+   "url": "https://www.zimmerbiomet.com/",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)",
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)"
+   ],
+   "priority": 2,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Humana",
+   "category": "health insurance",
+   "url": "https://www.humana.com/",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Ensure Max Protein",
+   "category": "nutrition",
+   "url": "https://ensure.com/",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "TRZ Recovery",
+   "category": "recovery",
+   "url": "https://trzrecovery.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Omron",
+   "category": "health devices",
+   "url": "https://omronhealthcare.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "DePuy Synthes",
+   "category": "orthopedics",
+   "url": "https://www.jnjmedtech.com/en-US/companies/depuy-synthes",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Liquid I.V.",
+   "category": "hydration",
+   "url": "https://www.liquid-iv.com/",
+   "affiliate_program": "likely",
+   "affiliate_network": "Everflow script detected",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "https://www.liquid-iv.com/pages/contact-us",
+   "pickleball_ad_evidence": [],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "MOJO Energy Pouches",
+   "category": "energy",
+   "url": "https://www.ppatour.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14) (Virginia Beach Open title sponsor)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Carvana",
+   "category": "auto (non-endemic)",
+   "url": "https://www.carvana.com/",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "PPA Tour title sponsor ('Carvana PPA Tour')"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Holland America Line",
+   "category": "travel (non-endemic)",
+   "url": "https://www.hollandamerica.com/",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Logo on ppatour.com homepage partner strip (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Opendoor",
+   "category": "real estate (non-endemic)",
+   "url": "https://www.opendoor.com/",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Title sponsor: Opendoor Pickleball World Championships (ppatour.com)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "QVC",
+   "category": "retail (non-endemic)",
+   "url": "https://www.qvc.com/",
+   "affiliate_program": "no",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)"
+   ],
+   "priority": 4,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Tommy Bahama",
+   "category": "apparel (non-endemic)",
+   "url": "https://www.tommybahama.com/",
+   "affiliate_program": "unknown",
+   "affiliate_network": "",
+   "affiliate_url": "",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Listed on usapickleball.org/about-us/partners/ (checked 2026-10-14)"
+   ],
+   "priority": 3,
+   "notes": "",
+   "checked": "2026-10-14"
+  },
+  {
+   "name": "Amazon Associates",
+   "category": "affiliate program",
+   "url": "https://affiliate-program.amazon.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "Amazon Associates",
+   "affiliate_url": "https://affiliate-program.amazon.com/",
+   "sponsorship_or_media_contact_url": "",
+   "pickleball_ad_evidence": [
+    "Already wired in config.json (AMAZON_ASSOCIATES_TAG)"
+   ],
+   "priority": 1,
+   "notes": "",
+   "checked": "2026-10-14"
+  }
+ ],
+ "ad_networks": [
+  {
+   "network": "Google AdSense",
+   "minimum": "No traffic minimum; site must meet AdSense Program policies and have original content",
+   "source": "https://support.google.com/adsense/answer/9724",
+   "verified": "not re-fetched this session; long-standing published policy"
+  },
+  {
+   "network": "Journey by Mediavine",
+   "minimum": "1,000 sessions from Tier-1 countries (US, CA, UK, AU) within 30 days",
+   "source": "https://www.mediavine.com/application-requirements/",
+   "verified": "2026-10-14"
+  },
+  {
+   "network": "Mediavine (Official)",
+   "minimum": "$5,000+ annual ad revenue (no longer a sessions threshold)",
+   "source": "https://www.mediavine.com/application-requirements/",
+   "verified": "2026-10-14"
+  },
+  {
+   "network": "Raptive",
+   "minimum": "25,000 pageviews/month; 50% Tier-1 traffic if 25K–99,999 PV (40% at 100K+); domain ≥6 months old; GA set up",
+   "source": "https://help.raptive.com/hc/en-us/articles/360032840891-Who-is-eligible-for-Raptive",
+   "verified": "2026-10-14"
+  },
+  {
+   "network": "Ezoic",
+   "minimum": "250,000 monthly active users for new sites since Feb 18-19, 2026; smaller sites can apply to the Ezoic Incubator (20 sites selected/month). The old 'no minimum' rule no longer applies.",
+   "source": "https://www.ezoic.com/incubator ; https://support.ezoic.com/kb/article/getting-started-ezoics-requirements",
+   "verified": "2026-10-14"
+  }
+ ]
+}

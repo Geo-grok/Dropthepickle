@@ -1,0 +1,37 @@
+{
+  "SITE_NAME": "DropThePickle",
+  "TAGLINE": "Your all-in-one pickleball hub",
+  "BASE_URL": "https://dropthepickle.com",
+  "CONTACT_EMAIL": "hello@example.com",
+  "AFFILIATE_TAG": "",
+  "AMAZON_ASSOCIATES_TAG": "",
+  "BRAND_AFFILIATE_PARAMS": {
+    "joola.com": "",
+    "selkirk.com": "",
+    "crbnpickleball.com": "",
+    "sixzeropickleball.com": "",
+    "engagepickleball.com": "",
+    "gearboxsports.com": "",
+    "paddletek.com": "",
+    "luzzpickleball.com": ""
+  },
+  "SIGNUP_ENDPOINT": "",
+  "YOUTUBE_CHANNELS": {
+    "Pickleball Studio": "UCge5MvXGyRQPpFnxgRb_pXA",
+    "John Kew Pickleball": "UCIZfb6Kaorky0xrb_v7Yt4g",
+    "Pickleball Effect": "UC7uQuU1OFg0TFHMarvPoKAg",
+    "Zane Navratil Pickleball": "UCAszu64fi9oHIFpexKGGxlw",
+    "ThatPickleballGuy": "UCuHP7q94VYp-9W19pk8cjjw"
+  },
+  "NEWS_FEEDS": {
+    "The Dink": "https://www.thedinkpickleball.com/feed",
+    "Pickleball Union": "https://www.pickleballunion.com/feed",
+    "Major League Pickleball": "https://majorleaguepickleball.co/feed",
+    "The Kitchen Pickle": "https://thekitchenpickle.com/feed",
+    "Pickleball Kitchen": "https://www.pickleballkitchen.com/feed"
+  },
+  "TOURNAMENT_FEEDS": {
+    "Carvana PPA Tour": "https://www.ppatour.com/events.xml"
+  },
+  "PODCAST_FEEDS": {}
+}

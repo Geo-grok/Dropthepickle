@@ -1,0 +1,5 @@
+dist/
+screenshots/
+__pycache__/
+*.log
+.env

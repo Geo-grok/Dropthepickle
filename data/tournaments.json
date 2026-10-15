@@ -1,0 +1,134 @@
+{
+ "items": [
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Mojo Energy Pouches Virginia Beach Open",
+   "link": "https://www.ppatour.com/events/2026/virginia-beach-open/",
+   "start": "2026-10-12",
+   "end": "2026-10-18",
+   "location": "Virginia Beach, VA",
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-virginia-beach-176326"
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Opendoor Pickleball World Championships",
+   "link": "https://www.ppatour.com/events/2026/pickleball-world-championships/",
+   "start": "2026-11-02",
+   "end": "2026-11-08",
+   "location": "Brookhaven Country Club, Farmers Branch, TX",
+   "tickets": "https://www.tixr.com/groups/ppa/events/2026-world-pickleball-championships-166345"
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Proton Daytona Beach Open",
+   "link": "https://www.ppatour.com/events/2026/proton-daytona-beach-open/",
+   "start": "2026-11-16",
+   "end": "2026-11-22",
+   "location": "Pictona at Holly Hill, Holly Hill, FL",
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-daytona-beach-203020"
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Veolia Malibu Showcase",
+   "link": "https://www.ppatour.com/events/2026/veolia-malibu-cup/",
+   "start": "2026-12-14",
+   "end": "2026-12-20",
+   "location": "Pepperdine University, Malibu, CA",
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-malibu-176502"
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Carvana Pickleball Masters Powered by Invited",
+   "link": "https://www.ppatour.com/events/2027/carvana-pickleball-masters/",
+   "start": "2027-01-11",
+   "end": "2027-01-17",
+   "location": "Mission Hills Country Club, Rancho Mirage, CA",
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-palm-springs-204325"
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Minneapolis Indoor Open",
+   "link": "https://www.ppatour.com/events/2027/minneapolis-indoor-open/",
+   "start": "2027-01-18",
+   "end": "2027-01-24",
+   "location": "Life Time — Lakeville, Lakeville, MN",
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-minneapolis-206216"
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Cape Coral Open",
+   "link": "https://www.ppatour.com/events/2027/cape-coral-open/",
+   "start": "2027-02-01",
+   "end": "2027-02-07",
+   "location": "Cape Coral Racquet Club, Cape Coral, FL",
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-cape-coral-206222"
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Carvana Mesa Cup",
+   "link": "https://www.ppatour.com/events/2027/carvana-mesa-cup/",
+   "start": "2027-02-15",
+   "end": "2027-02-21",
+   "location": "Bell Bank Park, Mesa, AZ",
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-mesa-210307"
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Newport Beach Open",
+   "link": "https://www.ppatour.com/events/2027/newport-beach-open-2027-03-02/",
+   "start": "2027-03-02",
+   "end": "2027-03-07",
+   "location": "Tennis Club at Newport Beach, Newport Beach, CA",
+   "tickets": ""
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Greater Zion Cup",
+   "link": "https://www.ppatour.com/events/2027/greater-zion-cup-at-black-desert-resort/",
+   "start": "2027-03-22",
+   "end": "2027-03-28",
+   "location": "Black Desert Resort, St. George, UT",
+   "tickets": ""
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Sacramento Open",
+   "link": "https://www.ppatour.com/events/2027/sacramento-open/",
+   "start": "2027-04-05",
+   "end": "2027-04-11",
+   "location": "Life Time — Arden, Sacramento, CA",
+   "tickets": ""
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Cincinnati Open",
+   "link": "https://www.ppatour.com/events/2027/cincinnati-open/",
+   "start": "2027-04-12",
+   "end": "2027-04-18",
+   "location": "Cincinnati, OH",
+   "tickets": ""
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "Pickleball Players Championships",
+   "link": "https://www.ppatour.com/events/2027/atlanta-pickleball-championships/",
+   "start": "2027-04-26",
+   "end": "2027-05-02",
+   "location": "Life Time — Peachtree Corners, Atlanta, GA",
+   "tickets": ""
+  },
+  {
+   "source": "Carvana PPA Tour",
+   "name": "PPA Finals",
+   "link": "https://www.ppatour.com/events/2027/ppa-finals/",
+   "start": "2027-05-10",
+   "end": "2027-05-16",
+   "location": "Life Time — Rancho San Clemente, San Clemente, CA",
+   "tickets": ""
+  }
+ ],
+ "sources": {
+  "Carvana PPA Tour": "ok (14)"
+ },
+ "updated": "2026-10-15T07:20"
+}
