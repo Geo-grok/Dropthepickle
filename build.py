@@ -254,5 +254,7 @@ def build():
         return f'<div class="card"><h3><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a></h3><div class="meta">{e(s["audience"].get("episodes",""))} episodes · <a href="{e(s["feed"]["rss"])}" target="_blank" rel="noopener">RSS</a></div>{f"<ul>{eps}</ul>" if eps else ""}</div>'
     page("podcasts.html", "Pickleball podcasts", f'<h1>Pickleball podcasts</h1><p class="meta">Shows ordered by episode count, with their newest episodes pulled from each public podcast feed. Listen on the show\'s own page.</p><div class="grid">{"".join(pcard(s) for s in sorted(shows, key=lambda s: -(s["audience"].get("episodes") or 0)))}</div>')
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
+    page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
+<p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court.")
     print("built", len(list(DIST.glob("*.html"))), "pages ->", DIST)
 build()
