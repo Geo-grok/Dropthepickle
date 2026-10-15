@@ -2,7 +2,7 @@
 import pathlib,re,sys,requests,concurrent.futures as cf
 from bs4 import BeautifulSoup
 D=pathlib.Path(__file__).parent.parent/"dist"; bad=[]; ext=set()
-for f in D.glob("*.html"):
+for f in D.rglob("*.html"):
     s=BeautifulSoup(f.read_text(),"html.parser")
     for t,a in [("a","href"),("link","href"),("script","src"),("iframe","src"),("form","action")]:
         for el in s.find_all(t):
@@ -13,7 +13,11 @@ for f in D.glob("*.html"):
                 continue
             if u.startswith(("mailto:","#")): continue
             p=u.split("#")[0]
-            if p and not (D/p).exists(): bad.append((f.name,u))
+            if not p: continue
+            target = (D / p.lstrip("/")) if p.startswith("/") else (f.parent / p).resolve()
+            try: target.relative_to(D.resolve())
+            except ValueError: bad.append((f.name,u)); continue
+            if not target.exists(): bad.append((f.name,u))
 print("internal broken:",bad)
 H={"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 def chk(u):
