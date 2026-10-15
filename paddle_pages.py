@@ -190,21 +190,23 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     ct = [p for p in PP if "control" in p["model"].lower() or (cores(p) and max(cores(p)) >= 16 and re.search("hybrid", p["shape"], re.I))]
     lst("Best pickleball paddles for control", "best-paddles-for-control.html", "These are paddles their makers market for control, plus 16mm+ hybrids. Thicker cores are generally described as softer and more controlled. We sort by today's price.", sorted(ct, key=cur),
         lambda p: "Control-leaning spec: " + ", ".join(x for x in [p["core"], p["shape"]] if x) + ".")
+    def listed(p):
+        bits = []
+        if p.get("core"): bits.append(f"{p['core']} core")
+        if p.get("shape"): bits.append(f"{p['shape']} shape")
+        if p.get("weight"): bits.append(f"weight {p['weight']}")
+        return f"{p['brand']} lists " + ", ".join(bits) + "." if bits else f"{p['brand']} does not publish core, shape, or weight."
     mm16 = [p for p in PP if 16.0 in cores(p)]
-    lst("Best 16mm paddles", "best-16mm-paddles.html", f"Filter: the core field lists 16mm ({len(mm16)} paddles). Models that also list other thicknesses stay in. This is not a ranking of how those paddles play.", mm16,
-        lambda p: f"Core field: {p['core']}.")
+    lst("Best 16mm paddles", "best-16mm-paddles.html", f"Filter: the core field lists 16mm ({len(mm16)} paddles). Models that also list other thicknesses stay in. This is not a ranking of how those paddles play.", mm16, listed)
     elongated = [p for p in PP if "elongated" in (p.get("shape") or "").lower()]
-    lst("Best elongated paddles", "best-elongated-paddles.html", f"Filter: the shape field includes elongated ({len(elongated)} paddles). A blank shape is left out, even if another field mentions an elongated option. Not a ranking.", elongated,
-        lambda p: f"Shape field: {p['shape']}.")
+    lst("Best elongated paddles", "best-elongated-paddles.html", f"Filter: the shape field includes elongated ({len(elongated)} paddles). A blank shape is left out, even if another field mentions an elongated option. Not a ranking.", elongated, listed)
     tennis = [p for p in elongated if 16.0 in cores(p)]
-    lst("Best for tennis players", "best-paddles-for-tennis-players.html", f"Filter only: the shape field includes elongated and the core field lists 16mm ({len(tennis)} paddles). paddles.json has no tennis-player field, so this is not a playtest ranking and not a claim about who should buy them.", tennis,
-        lambda p: f"Shape: {p['shape']}. Core: {p['core']}.")
+    lst("Best for tennis players", "best-paddles-for-tennis-players.html", f"Filter only: the shape field includes elongated and the core field lists 16mm ({len(tennis)} paddles). paddles.json has no tennis-player field, so this is not a playtest ranking and not a claim about who should buy them.", tennis, listed)
     for brand in ("CRBN", "Engage", "Gearbox", "JOOLA", "Luzz", "Paddletek", "Selkirk", "Six Zero"):
         items = [p for p in PP if p["brand"] == brand]
         slugb = re.sub(r"[^a-z0-9]+", "-", brand.lower()).strip("-")
         aud = " Maker prices for this brand are in AUD." if items and items[0]["currency"] != "USD" else ""
-        lst(f"Best {brand} paddles", f"best-{slugb}-paddles.html", f"Filter: brand is {brand} ({len(items)} paddles in paddles.json).{aud} Not a ranking of {brand} models.", items,
-            lambda p, brand=brand: f"Brand field: {brand}.")
+        lst(f"Best {brand} paddles", f"best-{slugb}-paddles.html", f"Filter: brand is {brand} ({len(items)} paddles in paddles.json).{aud} Not a ranking of {brand} models.", items, listed)
     # hub
     page("compare.html", "Compare paddles", f'<h1>Compare paddles</h1><p class="meta">Head-to-head pages pair paddles that share a brand, or one elongated paddle from each of two brands. Best-of lists are spec filters. None of these pages is a performance ranking.</p><h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in vs_links)}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in list_links)}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
          "Same-category paddle comparisons and spec-filter lists from manufacturer specs and today's maker prices. No performance ranking.",
