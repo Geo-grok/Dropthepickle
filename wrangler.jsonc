@@ -1,8 +1,19 @@
 {
   "name": "dropthepickle",
+  "main": "src/worker.js",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
-  }
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dtp-subscribers",
+      // Fill this in with the id from `wrangler d1 create dtp-subscribers` before deploying.
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ]
 }

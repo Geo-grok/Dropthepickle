@@ -297,7 +297,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 <h2>Headlines <a class="seemore" href="news.html">All news →</a></h2><div class="grid">{"".join(ncard(n) for n in N.get("items", [])[:6])}</div>
 <h2>What the pros play <a class="seemore" href="pro-paddles.html">See all →</a></h2><div class="pros">{pt}</div>
 <h2>Find your paddle</h2><div class="grid secs">{"".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">Spec filter →</div></a>' for f, t in list_links)}</div>
-<section class="band" id="signup"><h2>Get the weekly drop</h2><p>The best paddle deals, new reviews and tournament news, once a week. No spam.</p>{signup("home")}</section>
+<section class="band"><h2>Get the weekly drop</h2><p>The best paddle deals, new reviews and tournament news, once a week. No spam.</p>{signup("home")}</section>
 </main>'''
     page("index.html", C["TAGLINE"], home,
          "Daily pickleball hub for maker paddle prices, pro tournament dates, links to creator videos, news headlines and the gear on PPA profiles.",

@@ -11,7 +11,7 @@ for f in D.rglob("*.html"):
             if u.startswith(("http://","https://")):
                 if "dropthepickle.com" not in u and u.rstrip("/") not in ("https://fonts.googleapis.com","https://fonts.gstatic.com"): ext.add(u)  # skip preconnect hosts  # own domain not live yet (canonical tags)
                 continue
-            if u.startswith(("mailto:","#")): continue
+            if u.startswith(("mailto:","#","/api/")): continue
             p=u.split("#")[0]
             if not p: continue
             target = (D / p.lstrip("/")) if p.startswith("/") else (f.parent / p).resolve()

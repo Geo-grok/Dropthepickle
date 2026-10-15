@@ -15,7 +15,7 @@
     "paddletek.com": "",
     "luzzpickleball.com": ""
   },
-  "SIGNUP_ENDPOINT": "",
+  "SIGNUP_ENDPOINT": "/api/signup",
   "YOUTUBE_CHANNELS": {
     "Pickleball Studio": "UCge5MvXGyRQPpFnxgRb_pXA",
     "John Kew Pickleball": "UCIZfb6Kaorky0xrb_v7Yt4g",

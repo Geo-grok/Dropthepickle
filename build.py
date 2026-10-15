@@ -123,7 +123,7 @@ tr:first-child th a{color:var(--neon)}tbody tr:hover{background:#f8faff}
 .pro .av{width:44px;height:44px;flex:none;border-radius:50%;background:var(--navy);color:var(--neon);display:grid;place-items:center;font-family:Oswald,sans-serif;font-weight:700}
 .grid.proscons{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}.proscons .card:first-child{border-top:4px solid var(--neon)}.proscons .card:last-child{border-top:4px solid var(--warm)}
 /* forms */
-form{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
+form{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0;position:relative}.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 input[type=email]{padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:1rem;flex:1;min-width:220px;max-width:380px}
 main input[type=email]{border-color:var(--line);background:#fff;color:var(--ink)}.band input[type=email]{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff}
 input::placeholder{color:#93a1bb}
@@ -284,7 +284,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 (()=>{{const b=document.querySelector('.burger');b.addEventListener('click',()=>{{const o=document.body.classList.toggle('navopen');b.setAttribute('aria-expanded',o)}});
 if('IntersectionObserver'in window){{const io=new IntersectionObserver(es=>es.forEach(x=>{{if(x.isIntersecting){{x.target.classList.add('in');io.unobserve(x.target)}}}}),{{rootMargin:'0px 0px -40px 0px'}});
 document.querySelectorAll('main .card,main .pro,.band').forEach(el=>{{el.classList.add('rv');io.observe(el)}})}}
-document.querySelectorAll('form[data-placeholder]').forEach(f=>f.addEventListener('submit',ev=>{{ev.preventDefault();f.innerHTML='<p><b>Thanks!</b> Signups open soon. Nothing was stored.</p>'}}))}})()
+document.querySelectorAll('form[action$="/api/signup"]').forEach(f=>f.addEventListener('submit',async ev=>{{ev.preventDefault();const btn=f.querySelector('button');if(btn)btn.disabled=true;let ok=false,msg="Thanks! You're on the list.";try{{const res=await fetch(f.action,{{method:'POST',body:new FormData(f),headers:{{Accept:'application/json'}}}});const data=await res.json().catch(()=>null);ok=!!(res.ok&&data&&data.ok);if(data&&data.message)msg=data.message;else if(!res.ok)msg='Something went wrong. Please try again.'}}catch(err){{msg='Could not reach the signup service. Please try again.'}}if(ok){{const p=document.createElement('p');p.textContent=msg;f.replaceWith(p)}}else{{if(btn)btn.disabled=false;let p=f.querySelector('.signup-msg');if(!p){{p=document.createElement('p');p.className='signup-msg meta';f.append(p)}}p.textContent=msg}}}}))}})()
 </script></body></html>"""
     dest = DIST / fn
     dest.parent.mkdir(parents=True, exist_ok=True)
@@ -303,9 +303,8 @@ def buy(p):
     return out
 
 def signup(src):
-    ep = C.get("SIGNUP_ENDPOINT")
-    attrs = f'action="{e(ep)}" method="post"' if ep else 'action="#signup" data-placeholder="1"'
-    return f'<form id="signup" {attrs}><input type="hidden" name="source" value="{src}"><input type="email" name="email" required placeholder="you@email.com" aria-label="Email"><button class="btn">Notify me</button></form><p class="note">We\'ll only email about launches. See our <a href="privacy.html">privacy policy</a>.</p>'
+    ep = C.get("SIGNUP_ENDPOINT") or "/api/signup"
+    return f'<form id="signup" action="{e(ep)}" method="post"><input type="hidden" name="source" value="{e(src)}"><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="email" name="email" required maxlength="254" placeholder="you@email.com" aria-label="Email"><button class="btn">Notify me</button></form><p class="note">We\'ll only email DropThePickle updates. See our <a href="privacy.html">privacy policy</a>.</p>'
 
 def fmt(d):
     try: return datetime.date.fromisoformat(d).strftime("%b %d, %Y")
@@ -388,9 +387,9 @@ def build():
          fresh={"email": C["CONTACT_EMAIL"]})
     page("disclosure.html", "Affiliate disclosure", f'<h1>Affiliate disclosure</h1><p>{e(C["SITE_NAME"])} is reader-supported. Some links on this site, especially "where to buy" links in the paddle database, are <b>affiliate links</b>. If you click an affiliate link and buy something, we may earn a commission <b>at no extra cost to you</b>.</p><p>As an Amazon Associate, {e(C["SITE_NAME"])} earns from qualifying purchases. We may also take part in affiliate programs run by paddle brands and retailers.</p><p>Sponsored placements are clearly labeled <b>Sponsored</b>.</p><p>Editorial specs are never paid. Commissions and sponsorships do not change which products we list or the manufacturer specs we show. Specs come from the maker pages recorded in our data. We don\'t accept payment to add or alter a spec. Affiliate links are marked <code>rel="sponsored"</code>, and pages with them carry a notice near the top, in line with the U.S. FTC Endorsement Guides (16 CFR Part 255).</p>',
          "Affiliate links may earn a commission. Sponsored placements are labeled Sponsored. Editorial specs are never paid.")
-    page("privacy.html", "Privacy policy", f'<h1>Privacy policy</h1><p class="meta">Effective October 15, 2026</p><h2>What we collect</h2><p>If you join our email list, we collect your email address and the page you signed up from. We use it only to send launch and site updates, and you can unsubscribe at any time.</p><h2>Third parties</h2><p>Embedded YouTube videos use youtube-nocookie.com, but YouTube may still set cookies once you press play. Affiliate partners (such as Amazon) may use cookies to track referrals after you click a link. Our host may keep standard server logs.</p><h2>Not sold</h2><p>We do not sell your personal information.</p><h2>Contact</h2><p>To ask about or delete your data, email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>',
-         "What DropThePickle collects if you join the email list, how YouTube and affiliate cookies work, and how to ask us to delete your data.",
-         fresh={"email": C["CONTACT_EMAIL"], "effective": "2026-10-15"})
+    page("privacy.html", "Privacy policy", f'<h1>Privacy policy</h1><p class="meta">Effective October 15, 2026</p><h2>What we collect</h2><p>If you join the email list, your email is stored securely and used only for DropThePickle updates. We also store the page you signed up from, the time you signed up, and the country our host reports for that request. Unsubscribe on request at <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p><h2>Third parties</h2><p>Embedded YouTube videos use youtube-nocookie.com, but YouTube may still set cookies once you press play. Affiliate partners (such as Amazon) may use cookies to track referrals after you click a link. Our host may keep standard server logs.</p><h2>Not sold</h2><p>We do not sell your personal information.</p><h2>Contact</h2><p>To ask about or delete your data, email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>',
+         "Emails on the DropThePickle list are stored securely and used only for site updates. Unsubscribe on request at geolobo@mail.grokbot.com.",
+         fresh={"email": C["CONTACT_EMAIL"], "effective": "2026-10-15", "list": "stored securely, DropThePickle updates only, unsubscribe on request"})
     # Creators & Podcasts directories from the living source registry (links only)
     SR = D("sources.json").get("sources", [])
     groups = [("Gear & paddle reviewers", lambda s: "review" in s.get("subtype","")), ("Coaches & instruction", lambda s: "instruction" in s.get("subtype","")),

@@ -1,1 +1,1 @@
-AFFILIATE_TAG / AMAZON_ASSOCIATES_TAG: Amazon tag (e.g. yourid-20). BRAND_AFFILIATE_PARAMS: query string per brand domain, e.g. 'ref=abc123'. SIGNUP_ENDPOINT: form POST URL (Buttondown/ConvertKit/Formspree).
+AFFILIATE_TAG / AMAZON_ASSOCIATES_TAG: Amazon tag (e.g. yourid-20). BRAND_AFFILIATE_PARAMS: query string per brand domain, e.g. 'ref=abc123'. SIGNUP_ENDPOINT: form POST URL. The site posts to /api/signup on the Worker.

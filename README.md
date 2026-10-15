@@ -9,7 +9,7 @@
 - `config.json`: SITE_NAME, AFFILIATE_TAG / AMAZON_ASSOCIATES_TAG, BRAND_AFFILIATE_PARAMS, SIGNUP_ENDPOINT, feed lists.
 
 Setup: `pip install -r requirements.txt`. Cron: `0 6 * * * cd /path/pickleball-hub && python3 update.py >> update.log 2>&1`
-Deploy: `npx wrangler deploy` publishes `dist/` as a Workers static-assets site (`wrangler.jsonc`; missing paths serve `dist/404.html`). Build command: `pip install -r requirements.txt && python3 update.py`.
+Deploy: `npx wrangler deploy` publishes `src/worker.js` with `dist/` as static assets (`wrangler.jsonc`; missing paths serve `dist/404.html`). `POST /api/signup` stores the address in the D1 database `dtp-subscribers` (binding `DB`). Fill in `database_id` first, then apply `migrations/0001_init.sql` with `npx wrangler d1 migrations apply dtp-subscribers`. Build command: `pip install -r requirements.txt && python3 update.py`.
 
 ## Sources, discovery & sponsors (added 2026-10-14)
 - `data/sources.json`: living registry of sources (audience + where the number came from, RSS/API, robots/ToS). Entries with `in_pipeline: true` are pulled by `update.py` on top of the config lists (YouTube review channels, news RSS, podcast RSS → `data/podcasts.json`).
