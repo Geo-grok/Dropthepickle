@@ -94,9 +94,10 @@ async function handleSignup(request, env) {
   const country = countryFrom(request);
 
   try {
+    // id is INTEGER PRIMARY KEY AUTOINCREMENT on subscribers. email is UNIQUE.
     await env.DB.prepare(
-      "INSERT INTO subscribers (email, source, created_at, country) VALUES (?, ?, ?, ?) ON CONFLICT(email) DO NOTHING"
-    ).bind(email, source, createdAt, country).run();
+      "INSERT INTO subscribers (email, source, country, created_at) VALUES (?, ?, ?, ?) ON CONFLICT(email) DO NOTHING"
+    ).bind(email, source, country, createdAt).run();
   } catch {
     return reply(request, false, "We couldn't save that just now. Please try again.", 500);
   }

@@ -12,8 +12,7 @@
     {
       "binding": "DB",
       "database_name": "dtp-subscribers",
-      // Fill this in with the id from `wrangler d1 create dtp-subscribers` before deploying.
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+      "database_id": "fddb64c4-6f12-4af0-b6ec-aeaf902a70f0"
     }
   ]
 }

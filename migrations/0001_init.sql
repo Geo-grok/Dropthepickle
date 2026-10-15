@@ -1,10 +1,10 @@
--- Subscribers for POST /api/signup. Apply with:
--- npx wrangler d1 migrations apply dtp-subscribers
--- Do not apply until the D1 database dtp-subscribers exists and database_id is set.
+-- Matches the live dtp-subscribers.subscribers table.
+-- id is assigned by SQLite. email is unique. created_at defaults to UTC if omitted.
 
-CREATE TABLE subscribers (
+CREATE TABLE IF NOT EXISTS subscribers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   email TEXT NOT NULL UNIQUE,
   source TEXT,
-  created_at TEXT NOT NULL,
-  country TEXT
+  country TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
