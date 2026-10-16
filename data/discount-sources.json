@@ -1,0 +1,66 @@
+{
+  "_note": "Seed list for scripts/refresh-codes. Each code is re-checked on its source page every run and dropped if it no longer appears there. Add codes only from a creator/brand page or a dated post (<90 days). Never invent codes.",
+  "shops": {
+    "Selkirk": "https://www.selkirk.com/", "CRBN": "https://crbnpickleball.com/", "Six Zero": "https://sixzeropickleball.com/",
+    "Gearbox": "https://gearboxsports.com/", "Engage": "https://engagepickleball.com/", "Franklin": "https://franklinsports.com/pickleball",
+    "Onix": "https://www.onixpickleball.com/", "Vatic Pro": "https://vaticpro.com/", "Bread & Butter": "https://breadandbutterpickleball.com/",
+    "HEAD": "https://www.head.com/en_US/pickleball", "Fromuth": "https://fromuthpickleball.com/", "JOOLA": "https://joola.com/",
+    "Paddletek": "https://paddletek.com/", "Pickleball Central": "https://pickleballcentral.com/"
+  },
+  "sources": [
+    {"name": "Pickleball Effect (Braydon Unsicker)", "url": "https://pickleballeffect.com/discounts/", "codes": [
+      {"brand": "Selkirk", "code": "INF-BRAYDONU", "discount": "Free gift card", "conditions": "Gift card with your purchase; no % off"},
+      {"brand": "CRBN", "code": "PBEFFECT", "discount": "10% off", "conditions": "All paddles and gear"},
+      {"brand": "Six Zero", "code": "PBEFFECT", "discount": "10% off", "conditions": "All paddles and gear"},
+      {"brand": "Gearbox", "code": "PBEFFECT", "discount": "10% off", "conditions": "Most paddles"},
+      {"brand": "Engage", "code": "PBEFFECT", "discount": "10% off", "conditions": "All paddles and gear"},
+      {"brand": "Franklin", "code": "PBEFFECT", "discount": "10% off", "conditions": "Paddles, balls and gear"},
+      {"brand": "Vatic Pro", "code": "PBEFFECT", "discount": "$10 off", "conditions": "All paddles"},
+      {"brand": "Bread & Butter", "code": "PBEFFECT", "discount": "10% off", "conditions": "Paddles and most gear"},
+      {"brand": "HEAD", "code": "PBEFFECT", "discount": "15% off", "conditions": "Paddles, shoes and gear"}]},
+    {"name": "John Kew Pickleball", "url": "https://www.johnkewpickleball.com/discount-codes", "codes": [
+      {"brand": "Selkirk", "code": "INF-JOHNKEW", "discount": "Free gift card", "conditions": "Gift card with purchase"},
+      {"brand": "CRBN", "code": "JOHNKEW", "discount": "10% off", "conditions": "Brand site checkout"},
+      {"brand": "Six Zero", "code": "JOHNKEW", "discount": "10% off", "conditions": "Brand site checkout"},
+      {"brand": "Engage", "code": "JOHNKEW", "discount": "10% off", "conditions": "Brand site checkout"},
+      {"brand": "Franklin", "code": "JOHNKEW", "discount": "10% off", "conditions": "Brand site checkout"},
+      {"brand": "Vatic Pro", "code": "JOHNKEW", "discount": "$10 off", "conditions": "Brand site checkout"},
+      {"brand": "Bread & Butter", "code": "JOHNKEW", "discount": "10% off", "conditions": "Brand site checkout"},
+      {"brand": "HEAD", "code": "JOHNKEW", "discount": "10% off", "conditions": "Brand site checkout"}]},
+    {"name": "BK Pickleball", "url": "https://www.bk-pickleball.com/discounts", "codes": [
+      {"brand": "Bread & Butter", "code": "BK15", "discount": "15% off", "conditions": "All products on the Bread & Butter site"},
+      {"brand": "CRBN", "code": "BK10", "discount": "10% off", "conditions": "All products on the CRBN site"},
+      {"brand": "Six Zero", "code": "BHARAT10", "discount": "10% off", "conditions": "All products on the Six Zero site"},
+      {"brand": "Gearbox", "code": "BKPB", "discount": "10% off", "conditions": "Select products"},
+      {"brand": "Vatic Pro", "code": "BK10", "discount": "10% off", "conditions": "All products on the Vatic Pro site"},
+      {"brand": "Selkirk", "code": "INF-BKPB", "discount": "Free gift card", "conditions": "Gift card on Selkirk and Selkirk Labs orders"}]},
+    {"name": "The Kitchen Pickleball", "url": "https://thekitchenpickle.com/discounts/", "codes": [
+      {"brand": "Franklin", "code": "KITCHEN", "discount": "15% off", "conditions": "All products"},
+      {"brand": "HEAD", "code": "KITCHEN", "discount": "15% off", "conditions": "All products"},
+      {"brand": "CRBN", "code": "KITCHEN", "discount": "10% off", "conditions": "All products"},
+      {"brand": "Engage", "code": "KITCHEN", "discount": "10% off", "conditions": "All products"},
+      {"brand": "Six Zero", "code": "KITCHEN", "discount": "10% off", "conditions": "All products"},
+      {"brand": "Bread & Butter", "code": "KITCHEN", "discount": "10% off", "conditions": "All products"},
+      {"brand": "Vatic Pro", "code": "KITCHEN", "discount": "$10 off", "conditions": "All products", "match": "Vatic"},
+      {"brand": "Gearbox", "code": "KITCHEN", "discount": "10% off", "conditions": "GX2 Power paddles only"},
+      {"brand": "Selkirk", "code": "INF-KITCHEN", "discount": "Future-purchase coupon", "conditions": "Coupon toward a future purchase"}]},
+    {"name": "Nico the Lefty", "url": "https://www.nicothelefty.com/deals", "codes": [
+      {"brand": "Six Zero", "code": "NICOTHELEFTY", "discount": "15% off", "conditions": "Brand site checkout"},
+      {"brand": "Onix", "code": "NICOTHELEFTY", "discount": "15% off", "conditions": "Paddles and Dura Fast-40 balls"},
+      {"brand": "Gearbox", "code": "NICOTHELEFTY", "discount": "10% off", "conditions": "Brand site checkout"},
+      {"brand": "Bread & Butter", "code": "NICOTHELEFTY", "discount": "10% off", "conditions": "Brand site checkout"},
+      {"brand": "Engage", "code": "NICOTHELEFTY", "discount": "10% off", "conditions": "Brand site checkout"},
+      {"brand": "Vatic Pro", "code": "NICOTHELEFTY", "discount": "$10 off", "conditions": "Brand site checkout"},
+      {"brand": "Selkirk", "code": "NICOTHELEFTY", "discount": "Free gift card", "conditions": "Gift card with purchase"}]},
+    {"name": "Regan Family Pickleball", "url": "https://reganfamilypickleball.com/gear/", "codes": [
+      {"brand": "Six Zero", "code": "REGAN6.0", "discount": "10% off", "conditions": "Paddles, bags and apparel"},
+      {"brand": "Vatic Pro", "code": "RFP", "discount": "$10 off", "conditions": "Paddles"}]},
+    {"name": "Powerhouse Pickle (Hannah)", "url": "https://www.powerhousepickle.com/sponsors", "codes": [
+      {"brand": "Fromuth", "code": "10Hannah", "discount": "10% off", "conditions": "Enter in 'Special Offer Codes'; sale/clearance and some brands excluded"}]}
+  ],
+  "no_code": {
+    "JOOLA": "Pickleball Effect (verified Sept 1, 2026) says JOOLA stopped running creator codes; coupon-site JOOLA codes we found had expired.",
+    "Paddletek": "Pickleball Effect (verified Sept 1, 2026) says Paddletek stopped running codes, so creator codes are left out until confirmed.",
+    "Pickleball Central": "Creator discounts apply through partner links, not codes."
+  }
+}

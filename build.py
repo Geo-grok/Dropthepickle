@@ -8,7 +8,7 @@ def D(n):
     return json.loads(p.read_text()) if p.exists() else {"items": []}
 e = lambda s: html.escape(str(s or ""), quote=True)
 NAV = [("index.html","Home"),("tournaments.html","Tournaments"),("reviews.html","Reviews"),("news.html","News"),
-       ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("paddles.html","Paddles"),("compare.html","Compare"),("deals.html","Deals"),("shop.html","Merch"),("community.html","Marketplace")]
+       ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("paddles.html","Paddles"),("compare.html","Compare"),("deals.html","Deals"),("discount-codes.html","Codes"),("shop.html","Merch"),("community.html","Marketplace")]
 CSS = r"""
 :root{--navy:#0b1426;--navy2:#111d36;--navy3:#18284a;--neon:#c6f432;--neon2:#a8d61c;--warm:#ff7a45;--ink:#0d1526;--mut:#5d6b82;--bg:#f4f6fa;--card:#fff;--line:#e3e8f0;--r:18px;--sh:0 1px 2px rgba(11,20,38,.06),0 8px 24px rgba(11,20,38,.08);--sh2:0 2px 4px rgba(11,20,38,.08),0 18px 40px rgba(11,20,38,.16)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
@@ -156,6 +156,14 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 .secs{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.secs a{text-decoration:none;color:inherit}
 .tbl table td a{font-weight:600}
+.codes-best{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 1rem}.codes-best a{background:var(--navy);color:var(--neon);text-decoration:none;font-weight:800;padding:.5rem .8rem;border-radius:99px;font-size:.92rem}
+.cbrand{margin-top:1.8rem}.ccard{display:flex;flex-direction:column;gap:.55rem}.ccard .cdisc{font-family:Anton,Impact,sans-serif;font-size:2rem;line-height:1;color:var(--navy);letter-spacing:.01em}
+.ccard .ccond{color:var(--mut);font-size:.95rem;margin:0}.crow{display:flex;gap:.5rem;align-items:stretch}
+.ccode{flex:1;min-width:0;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.35rem;font-weight:800;letter-spacing:.06em;background:var(--navy);color:var(--neon);border:2px dashed var(--neon);border-radius:12px;padding:.85rem .7rem;cursor:pointer;text-align:center;overflow-wrap:anywhere;min-height:56px}
+.ccopy{min-width:88px;min-height:56px;font-size:1rem}.ccopy.ok{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+.ccard .cshop{font-weight:800;color:var(--navy);font-size:1rem;padding:.35rem 0}.ccard .cmeta{font-size:.82rem;color:var(--mut)}.ccard .cmeta a{color:var(--mut)}
+.codewarn{background:#fff8e6;border:1px solid #f3d27a;border-radius:12px;padding:.8rem 1rem;color:#5a4300;font-size:.95rem}
+
 """
 def logo_html(rel):
     """Round Mic Drop avatar plus a live text wordmark. The wide logo image stays out of the header."""
@@ -168,7 +176,7 @@ HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs
 
 FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("podcasts.html","Podcasts"),("creators.html","Creators"),("creators/ryan-morneau.html","Ryan Morneau")]),
             ("Learn",[("guides/how-to-choose-a-paddle.html","Choose a paddle"),("guides/best-paddles-under-100.html","Under $100 guide"),("guides/pickleball-rules-for-beginners.html","Rules"),("guides/how-to-dink.html","How to dink"),("guides/paddle-weight-and-core.html","Weight and core")]),
-            ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("price-index.html","Price index"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
+            ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("discount-codes.html","Discount codes"),("price-index.html","Price index"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
             ("Company",[("about.html","About"),("disclosure.html","Affiliate disclosure"),("privacy.html","Privacy"),("community.html","Join the community")])]
 # Last content-change date per page. A date is recorded only when `fresh` differs from the hash stored in data/page_dates.json.
 _PREV, _NEXT, CATALOG = {}, {}, {}
@@ -257,7 +265,7 @@ def emit_crawl_files():
             "meta-externalagent", "FacebookBot", "cohere-ai", "Diffbot", "AI2Bot", "DuckAssistBot", "MistralAI-User"]
     (DIST / "robots.txt").write_text("\n".join(f"User-agent: {b}\nAllow: /\n" for b in bots) + f"\nSitemap: {base}/sitemap.xml\n")
     def bullet(p): return f"- [{p['title']}]({canon(p['fn'])}): {p['desc']}"
-    main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html"}
+    main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html", "discount-codes.html"}
     mains = [p for p in pages if p["fn"] in main_names]
     guides = [p for p in pages if p["fn"].startswith(("guides/", "creators/"))]
     paddles = [p for p in pages if p["fn"].startswith(("paddle-", "vs-", "best-"))]
@@ -445,6 +453,36 @@ def build():
          "Pickleball podcasts ordered by episode count, with the newest episodes pulled from each public show feed.",
          fresh={"shows": [(s["name"], s["url"], (s.get("audience") or {}).get("episodes")) for s in shows],
                 "episodes": [(ep.get("show"), ep.get("title"), ep.get("date"), ep.get("link")) for ep in PC.get("items", [])]})
+
+    # discount codes (data/discount-codes.json, refreshed by scripts/refresh-codes)
+    DC = D("discount-codes.json"); codes = DC.get("codes", [])
+    def slugb(b): return re.sub(r"[^a-z0-9]+", "-", b.lower()).strip("-")
+    def score(c):
+        m = re.search(r"(\d+)%", c["discount"]); n = re.search(r"\$(\d+)", c["discount"])
+        return int(m.group(1)) if m else (int(n.group(1)) / 2 if n else 1)
+    def ccard(c):
+        cd = e(c["code"])
+        exp = f' · Expires {fmt(c["expiry"])}' if c.get("expiry") else ""
+        sd = f' (page dated {e(c["source_date"])})' if c.get("source_date") else ""
+        return (f'<div class="card ccard"><div class="cdisc">{e(c["discount"])}</div><p class="ccond">{e(c["conditions"])}</p>'
+                f'<div class="crow"><button class="ccode" data-code="{cd}" aria-label="Copy code {cd}">{cd}</button><button class="btn ccopy" data-code="{cd}">Copy</button></div>'
+                f'<a class="cshop" href="{e(c["shop_url"])}" target="_blank" rel="noopener">Shop {e(c["brand"])} →</a>'
+                f'<div class="cmeta">Last checked {fmt(c.get("verified"))}{exp} · Source: <a href="{e(c["source_url"])}" target="_blank" rel="noopener">{e(c["source"])}</a>{sd}</div></div>')
+    brands = sorted({c["brand"] for c in codes}, key=str.lower)
+    best = {}
+    for c in codes:
+        if c["brand"] not in best or score(c) > score(best[c["brand"]]): best[c["brand"]] = c
+    jump = "".join(f'<a href="#{slugb(b)}">{e(b)} · {e(best[b]["discount"])}</a>' for b in brands)
+    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2>{e(b)} codes</h2><div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
+    nocode = "".join(f'<li><b>{e(b)}:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
+    copyjs = """<script>document.addEventListener('click',ev=>{const b=ev.target.closest('[data-code]');if(!b)return;const c=b.dataset.code,done=()=>{const k=b.parentNode.querySelector('.ccopy');if(k){k.textContent='Copied!';k.classList.add('ok');setTimeout(()=>{k.textContent='Copy';k.classList.remove('ok')},1800)}};if(navigator.clipboard)navigator.clipboard.writeText(c).then(done,done);else{const t=document.createElement('textarea');t.value=c;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();done()}});</script>"""
+    page("discount-codes.html", "Pickleball Discount Codes & Paddle Coupons (Updated Daily)",
+         f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
+         f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
+         f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a>.</p><h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
+         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="disclosure.html">Disclosure</a>.</p>{copyjs}',
+         f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
+         fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]})
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
