@@ -179,7 +179,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
              f"{title}. Spec filter only, from paddles.json. Not a scored ranking.",
              fresh=[fresh_p(p) for p in ordered], schema=[item_list(ordered)] if ordered else None); list_links.append((fn, title))
     u100 = sorted([p for p in usd if cur(p) <= 100], key=cur); near = sorted([p for p in usd if 100 < cur(p) <= 150], key=cur)
-    lst("Best paddles under $100", "best-paddles-under-100.html", f'Paddles in our database at <b>$100 or less</b> at today\'s maker price ({len(u100)} right now), followed by the closest picks up to $150. Our database is small and focused on major brands, so check back as we add budget models.', u100 + near,
+    lst("Best paddles under $100", "best-paddles-under-100.html", f'Paddles in our database at <b>$100 or less</b> at today\'s maker price ({len(u100)} right now), followed by the closest picks up to $150. Our database is small and focused on major brands, so check back as we add budget models. The <a href="guides/best-paddles-under-100.html">under-$100 guide</a> explains this filter in plain language.', u100 + near,
         lambda p: ("At or under $100 today." if cur(p) <= 100 else "Just over $100 today.") + " " + notes(p, ph(p))[0][0])
     beg = sorted([p for p in usd if cur(p) <= 200 and (cores(p) and max(cores(p)) >= 16 or re.search("hybrid|widebody|max", p["shape"], re.I))], key=cur)[:8]
     lst("Best pickleball paddles for beginners", "best-paddles-for-beginners.html", "Our beginner shortlist uses three spec rules: a price of $200 or less, plus a 16mm core option or a wider or hybrid face. Both are generally considered more forgiving. It's a starting point based on specs, not a test ranking.", beg,
@@ -288,9 +288,21 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     home = f'''<section class="hero">{X["COURT"]}<div class="in"><div><span class="eyebrow"><i></i>Updated daily</span>
 <h1>Play smarter.<br><em>Buy better.</em><br>Never miss a dink.</h1>
 <p>Paddle reviews from the best creators, daily price drops from maker sites, pro tournaments, news and the gear the pros actually use. All in one place.</p>
-<div class="ctas"><a class="btn" href="deals.html">See today's deals →</a><a class="btn ghost" href="compare.html">Compare paddles</a></div>
+<div class="ctas"><a class="btn" href="#start">Start here</a><a class="btn ghost" href="deals.html">See today's deals</a></div>
 <div class="stats"><div><b>{len(PP)}</b><span>Paddles tracked</span></div><div><b>{len(deals)}</b><span>Deals today</span></div><div><b>{len(R.get("items", []))}</b><span>New reviews</span></div><div><b>{len(T.get("items", []))}</b><span>Pro events</span></div></div></div>{X["HEROART"]}</div></section>
 <main>
+<h2 id="start">Start here</h2>
+<p class="meta">New to the sport, or shopping for a paddle? These guides use the USA Pickleball rulebook and the maker specs already on this site. No invented prices.</p>
+<div class="grid secs">
+<a class="card" href="guides/pickleball-rules-for-beginners.html"><h3>Rules for beginners</h3><div class="meta">Serve, kitchen, scoring →</div></a>
+<a class="card" href="guides/how-to-dink.html"><h3>How to dink</h3><div class="meta">The soft kitchen shot →</div></a>
+<a class="card" href="guides/how-to-choose-a-paddle.html"><h3>Choose a paddle</h3><div class="meta">Budget, shape, core, weight →</div></a>
+<a class="card" href="guides/paddle-weight-and-core.html"><h3>Weight and core</h3><div class="meta">Ounces and millimetres →</div></a>
+<a class="card" href="guides/best-paddles-under-100.html"><h3>Under $100</h3><div class="meta">Only today's maker prices →</div></a>
+<a class="card" href="price-index.html"><h3>Price index</h3><div class="meta">Every recorded maker price →</div></a>
+<a class="card" href="tournaments.html"><h3>Pro events</h3><div class="meta">Dates from the PPA feed →</div></a>
+</div>
+<div class="card spot"><a href="creators/ryan-morneau.html"><img src="https://i.ytimg.com/vi/Q7zUZLXK_gE/hqdefault.jpg" alt="The Most Important Singles Shots, a Pickleball Breakdowns clip"></a><div><span class="tag b-pub">Creator spotlight</span><h3><a href="creators/ryan-morneau.html">Ryan Morneau · Pickleball Breakdowns</a></h3><p>Match breakdowns and strategy tips. James Madison University reported him as the No. 1-ranked collegiate singles player.</p><p><a href="creators/ryan-morneau.html">Watch his latest clips</a></p></div></div>
 <h2>Today's deals <a class="seemore" href="deals.html">All deals →</a></h2><div class="rail">{"".join(pcard(p) for p in dl[:8])}</div>
 <h2>Latest reviews <a class="seemore" href="reviews.html">All reviews →</a></h2><div class="grid">{"".join(rcard(v, False) for v in R.get("items", [])[:6])}</div>
 <section class="dark"><div class="in"><h2>Up next on tour <a class="seemore" href="tournaments.html">Full schedule →</a></h2><div class="strip">{"".join(tcard(t) for t in T.get("items", [])[:6])}</div></div></section>
@@ -300,11 +312,14 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 <section class="band"><h2>Get the weekly drop</h2><p>The best paddle deals, new reviews and tournament news, once a week. No spam.</p>{signup("home")}</section>
 </main>'''
     page("index.html", C["TAGLINE"], home,
-         "Daily pickleball hub for maker paddle prices, pro tournament dates, links to creator videos, news headlines and the gear on PPA profiles.",
+         "Daily pickleball hub for maker paddle prices, beginner guides, pro tournament dates, links to creator videos, news headlines and the gear on PPA profiles.",
          full=True,
          fresh={"deals": [fresh_p(p) for p in dl[:8]],
+                "start": ["guides/pickleball-rules-for-beginners.html", "guides/how-to-dink.html", "guides/how-to-choose-a-paddle.html", "guides/paddle-weight-and-core.html", "guides/best-paddles-under-100.html", "price-index.html", "tournaments.html", "creators/ryan-morneau.html"],
                 "reviews": [(v.get("title"), v.get("date"), v.get("link")) for v in R.get("items", [])[:6]],
                 "news": [(n.get("title"), n.get("date"), n.get("link")) for n in N.get("items", [])[:6]],
                 "events": [(t.get("name"), t.get("start"), t.get("end"), t.get("location")) for t in T.get("items", [])[:6]],
                 "pros": [(x.get("name"), x.get("paddle")) for x in teaser]},
          schema=[item_list(dl[:8])] if dl else None)
+    import content_pages
+    content_pages.make(page, e, fmt, PP, cur, ph)

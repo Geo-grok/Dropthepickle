@@ -16,7 +16,7 @@ body{margin:0;font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-s
 a{color:#2453c7;text-underline-offset:3px}img{max-width:100%;height:auto;display:block}
 h1,h2,h3,.display{font-family:Oswald,"Bebas Neue",Impact,sans-serif;letter-spacing:.01em;line-height:1.1;text-transform:uppercase}
 h1{font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 .6rem;font-weight:700}
-h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:2.4rem 0 1rem;font-weight:700;display:flex;align-items:center;gap:.6rem}
+h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:2.4rem 0 1rem;font-weight:700;display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;scroll-margin-top:5rem}
 h2::before{content:"";width:6px;height:1.1em;background:var(--neon);border-radius:3px;box-shadow:0 0 0 2px var(--navy) inset}
 h3{font-size:1.15rem;margin:.2rem 0 .4rem;font-weight:600;text-transform:none;font-family:Inter,system-ui,sans-serif;letter-spacing:-.01em;line-height:1.3}
 h3 a{color:inherit;text-decoration:none}h3 a:hover{color:#2453c7}
@@ -113,7 +113,7 @@ tr:first-child th a{color:var(--neon)}tbody tr:hover{background:#f8faff}
 .date{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:58px;height:62px;border-radius:12px;background:var(--neon);color:var(--navy);font-family:Oswald,sans-serif;line-height:1;float:right;margin:0 0 .4rem .6rem}.date b{font-size:1.5rem}.date small{font-size:.7rem;font-weight:700;text-transform:uppercase}
 .band{background:var(--navy);color:#fff;border-radius:26px;padding:clamp(1.4rem,4vw,2.6rem);margin:2.6rem 0 0;position:relative;overflow:hidden}
 .band h2{color:#fff;margin-top:0}.band p{color:#b5c1d8}.band .meta{color:#93a1bb}
-.dark{background:var(--navy);color:#fff;margin:2.4rem calc(50% - 50vw) 0;padding:1rem calc(50vw - 50% + 0px) 2.6rem}
+.dark{background:var(--navy);color:#fff;margin:2.4rem -1.1rem 0;padding:1rem 1.1rem 2.6rem}
 .dark h2{color:#fff}.dark .meta{color:#a9b6cf}
 .dark .in{max-width:1200px;margin:auto;padding:0 1.1rem}
 .newscard .pub{margin-bottom:.5rem}
@@ -124,16 +124,24 @@ tr:first-child th a{color:var(--neon)}tbody tr:hover{background:#f8faff}
 .grid.proscons{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}.proscons .card:first-child{border-top:4px solid var(--neon)}.proscons .card:last-child{border-top:4px solid var(--warm)}
 /* forms */
 form{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0;position:relative}.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-input[type=email]{padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:1rem;flex:1;min-width:220px;max-width:380px}
+input[type=email]{padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:1rem;flex:1;min-width:min(220px,100%);max-width:380px}
 main input[type=email]{border-color:var(--line);background:#fff;color:var(--ink)}.band input[type=email]{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff}
 input::placeholder{color:#93a1bb}
 /* footer */
 footer{background:#070d1a;color:#93a1bb;padding:3rem 1.1rem 2rem;font-size:.88rem}
-.fin{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+.fin{max-width:1200px;margin:auto;display:grid;grid-template-columns:minmax(0,1.3fr) repeat(4,minmax(0,1fr));gap:1.4rem}
 footer h4{color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:0 0 .7rem;font-size:.95rem}
 footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer a:hover{color:var(--neon)}
 .legal{max-width:1200px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem}
-@media(max-width:760px){.fin{grid-template-columns:1fr 1fr}.fin>div:first-child{grid-column:1/-1}}
+@media(max-width:980px){.fin{grid-template-columns:1fr 1fr}.fin>div:first-child{grid-column:1/-1}}
+@media(max-width:520px){.tcard .date{float:none;margin:0 0 .6rem}.stats{gap:.75rem 1rem}.stats b{font-size:1.45rem}.hero h1{font-size:2.35rem}}
+.faq{background:#fff;border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;margin:.45rem 0;box-shadow:var(--sh)}.faq summary{font-weight:800;cursor:pointer}.faq p{margin:.45rem 0 0}
+.vgrid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr))}
+.vgrid .vid.short{padding-top:177.78%;margin:0 0 .7rem}
+.socials{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0 1.2rem}
+.spot{display:grid;gap:1rem;grid-template-columns:minmax(0,220px) minmax(0,1fr);align-items:center}
+@media(max-width:640px){.spot{grid-template-columns:1fr}}
+.spot img{width:100%;border-radius:14px;background:#0b1426}
 /* reveal */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
@@ -146,7 +154,8 @@ PADDLE_SVG = '''<svg viewBox="0 0 200 260" width="70%" aria-label="Paddle illust
 COURT = '''<svg class="court" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#c6f432" stroke-width="3"><rect x="120" y="70" width="960" height="460"/><line x1="600" y1="70" x2="600" y2="530"/><line x1="460" y1="70" x2="460" y2="530"/><line x1="740" y1="70" x2="740" y2="530"/><line x1="120" y1="300" x2="460" y2="300"/><line x1="740" y1="300" x2="1080" y2="300"/></g><g stroke="#fff" stroke-width="2" stroke-dasharray="6 10" opacity=".6"><line x1="600" y1="40" x2="600" y2="560"/></g></svg>'''
 HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs><radialGradient id="ballg" cx=".35" cy=".3"><stop offset="0" stop-color="#eaff8a"/><stop offset=".6" stop-color="#c6f432"/><stop offset="1" stop-color="#8db511"/></radialGradient><linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a6b"/><stop offset="1" stop-color="#ff5f2e"/></linearGradient></defs><g transform="rotate(-24 200 200)"><rect x="110" y="40" width="170" height="220" rx="76" fill="url(#pad)"/><rect x="122" y="52" width="146" height="196" rx="66" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/><rect x="178" y="252" width="34" height="110" rx="12" fill="#0b1426"/><rect x="178" y="280" width="34" height="8" fill="#c6f432"/><rect x="178" y="304" width="34" height="8" fill="#c6f432"/></g><circle cx="300" cy="110" r="62" fill="url(#ballg)"/><g fill="#0b1426" opacity=".85"><circle cx="280" cy="85" r="7"/><circle cx="315" cy="78" r="6"/><circle cx="335" cy="110" r="7"/><circle cx="300" cy="112" r="7.5"/><circle cx="270" cy="120" r="6"/><circle cx="292" cy="145" r="6.5"/><circle cx="325" cy="140" r="5.5"/></g><g stroke="#c6f432" stroke-width="4" stroke-linecap="round" opacity=".5"><line x1="210" y1="150" x2="150" y2="170"/><line x1="220" y1="120" x2="170" y2="125"/></g></svg>'''
 
-FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("podcasts.html","Podcasts"),("creators.html","Creators")]),
+FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("podcasts.html","Podcasts"),("creators.html","Creators"),("creators/ryan-morneau.html","Ryan Morneau")]),
+            ("Learn",[("guides/how-to-choose-a-paddle.html","Choose a paddle"),("guides/best-paddles-under-100.html","Under $100 guide"),("guides/pickleball-rules-for-beginners.html","Rules"),("guides/how-to-dink.html","How to dink"),("guides/paddle-weight-and-core.html","Weight and core")]),
             ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("price-index.html","Price index"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
             ("Company",[("about.html","About"),("disclosure.html","Affiliate disclosure"),("privacy.html","Privacy"),("community.html","Join the community")])]
 # Last content-change date per page. A date is recorded only when `fresh` differs from the hash stored in data/page_dates.json.
@@ -201,6 +210,8 @@ def crumbs_for(fn, title, url):
     if fn == "index.html": return [home]
     crumbs = [home]
     if fn.startswith("events/"): crumbs.append({"name": "Tournaments", "url": base + "tournaments.html"})
+    elif fn.startswith("guides/"): crumbs.append({"name": "Guides", "url": base + "guides/how-to-choose-a-paddle.html"})
+    elif fn.startswith("creators/"): crumbs.append({"name": "Creators", "url": base + "creators.html"})
     elif fn.startswith("paddle-") or fn == "price-index.html": crumbs.append({"name": "Paddles", "url": base + "paddles.html"})
     elif fn.startswith(("vs-", "best-")): crumbs.append({"name": "Compare", "url": base + "compare.html"})
     crumbs.append({"name": title, "url": url})
@@ -239,11 +250,12 @@ def emit_crawl_files():
     def bullet(p): return f"- [{p['title']}]({canon(p['fn'])}): {p['desc']}"
     main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html"}
     mains = [p for p in pages if p["fn"] in main_names]
+    guides = [p for p in pages if p["fn"].startswith(("guides/", "creators/"))]
     paddles = [p for p in pages if p["fn"].startswith(("paddle-", "vs-", "best-"))]
-    rest = [p for p in pages if p not in mains and p not in paddles]
+    rest = [p for p in pages if p not in mains and p not in paddles and p not in guides]
     llms = [f"# {C['SITE_NAME']}", "", f"> {C['TAGLINE']}", "",
-            f"{C['SITE_NAME']} is an independent pickleball hub. It lists pro tournament dates, manufacturer paddle specs, maker prices, news headlines, and links to creator videos and podcasts. Specs and prices come from the makers. This site does not publish its own ratings or reviews.",
-            "", "## Main", *[bullet(p) for p in mains], "", "## Paddles", *[bullet(p) for p in paddles], "", "## Optional", *[bullet(p) for p in rest], ""]
+            f"{C['SITE_NAME']} is an independent pickleball hub. It lists pro tournament dates, manufacturer paddle specs, maker prices, news headlines, beginner guides, and links to creator videos and podcasts. Specs and prices come from the makers. This site does not publish its own ratings or reviews.",
+            "", "## Main", *[bullet(p) for p in mains], "", "## Guides", *[bullet(p) for p in guides], "", "## Paddles", *[bullet(p) for p in paddles], "", "## Optional", *[bullet(p) for p in rest], ""]
     (DIST / "llms.txt").write_text("\n".join(llms))
 def pagehead(body):
     m = re.match(r'(<h1>.*?</h1>)((?:<p class="(?:meta|disc)">.*?</p>)*)', body, re.S)
@@ -407,10 +419,11 @@ def build():
         if items: csecs += f'<h2>{title}</h2><div class="grid">{"".join(ccard(s) for s in items)}</div>'
     socials = [s for s in SR if s["type"] in ("x","instagram")]
     srow = "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a> on {"X" if s["type"]=="x" else "Instagram"} ({e(s["audience"]["value"])} followers)</li>' for s in socials)
-    page("creators.html", "Pickleball creators directory", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>',
-         "A directory of pickleball YouTubers, coaches, reviewers and pros, with links out to their own channels.",
+    page("creators.html", "Pickleball creators directory", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p><div class="card spot"><a href="creators/ryan-morneau.html"><img src="https://i.ytimg.com/vi/Q7zUZLXK_gE/hqdefault.jpg" alt="The Most Important Singles Shots, a Pickleball Breakdowns clip"></a><div><span class="tag b-pub">Spotlight</span><h3><a href="creators/ryan-morneau.html">Ryan Morneau · Pickleball Breakdowns</a></h3><p>Match breakdowns and strategy tips. James Madison University reported him as the No. 1-ranked collegiate singles player. Six of his latest clips are embedded on his page.</p><p><a href="creators/ryan-morneau.html">Open the spotlight</a></p></div></div>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>',
+         "A directory of pickleball YouTubers, coaches, reviewers and pros, with a spotlight on Ryan Morneau's Pickleball Breakdowns channel.",
          fresh={"youtube": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in yts],
-                "social": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in socials]})
+                "social": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in socials],
+                "spotlight": "creators/ryan-morneau.html"})
     PC = D("podcasts.json")
     shows = [s for s in SR if s["type"] == "podcast" and s.get("flag") != "new"]
     latest = {}

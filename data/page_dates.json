@@ -68,7 +68,11 @@
   "updated": "2026-10-15"
  },
  "creators.html": {
-  "hash": "530b00e4232b8e12c3b0f2576afabca4d8db0d0555c31e04589ec5931fa63186",
+  "hash": "c106112f00fab25ba8b18c181655e51bcb652fc05373e321ab8c2b9cedf62d5f",
+  "updated": "2026-10-16"
+ },
+ "creators/ryan-morneau.html": {
+  "hash": "b3529838b566f91e4b859ecd6e02d97f091835274349ce3e02aa622768510e4a",
   "updated": null
  },
  "deals.html": {
@@ -131,9 +135,29 @@
   "hash": "0c53aece496f269581d3a8ab7b5b236572c7a0103c6363c50e79a9671883348d",
   "updated": null
  },
- "index.html": {
-  "hash": "0b20e1170d496ccd4400c592a01b3e34345ebf432135c124d8e57d42de0ec160",
+ "guides/best-paddles-under-100.html": {
+  "hash": "a3c12018f9429b543f12101829f9c44142a76bbd3a19399ea1a521e11ad148e0",
   "updated": null
+ },
+ "guides/how-to-choose-a-paddle.html": {
+  "hash": "795ee1c021e33ace140808c7255554e12ab65b58925edf5ff4f6f0860af6edee",
+  "updated": null
+ },
+ "guides/how-to-dink.html": {
+  "hash": "53e4312b81b3cfa40c91b830181accf8017d8574adb5dc5a0c4b92b14831b58c",
+  "updated": null
+ },
+ "guides/paddle-weight-and-core.html": {
+  "hash": "d6c17e48e21108c63cafa2726c6c8e9c0c19ba025e8c97bfe64d759e12be4e95",
+  "updated": null
+ },
+ "guides/pickleball-rules-for-beginners.html": {
+  "hash": "3cab259ac8e8915e6c99204c9eb01eef1a8f0bfcfa1460a74c24b847987ec71d",
+  "updated": null
+ },
+ "index.html": {
+  "hash": "82ff4e89149f5e7ba0fb249b6095a81b3759ef47785716fee0f8e1adf8a313cb",
+  "updated": "2026-10-16"
  },
  "news.html": {
   "hash": "3658f0d84396a43ea1a444e0070bc67f5ec5427fe8739bfdd394d46763e1c337",
