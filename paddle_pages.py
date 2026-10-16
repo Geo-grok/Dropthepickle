@@ -303,7 +303,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 <a class="card" href="tournaments.html"><h3>Pro events</h3><div class="meta">Dates from the PPA feed →</div></a>
 </div>
 <div class="card spot"><a href="creators/ryan-morneau.html"><img src="https://i.ytimg.com/vi/Q7zUZLXK_gE/hqdefault.jpg" alt="The Most Important Singles Shots, a Pickleball Breakdowns clip"></a><div><span class="tag b-pub">Creator spotlight</span><h3><a href="creators/ryan-morneau.html">Ryan Morneau · Pickleball Breakdowns</a></h3><p>Match breakdowns and strategy tips. James Madison University reported him as the No. 1-ranked collegiate singles player.</p><p><a href="creators/ryan-morneau.html">Watch his latest clips</a></p></div></div>
-<h2>Today's deals <a class="seemore" href="deals.html">All deals →</a></h2><div class="rail">{"".join(pcard(p) for p in dl[:8])}</div>
+<h2>Big Dill's Picks <a class="seemore" href="deals.html">All deals →</a></h2><div class="rail">{"".join(pcard(p) for p in dl[:8])}</div>
 <h2>Latest reviews <a class="seemore" href="reviews.html">All reviews →</a></h2><div class="grid">{"".join(rcard(v, False) for v in R.get("items", [])[:6])}</div>
 <section class="dark"><div class="in"><h2>Up next on tour <a class="seemore" href="tournaments.html">Full schedule →</a></h2><div class="strip">{"".join(tcard(t) for t in T.get("items", [])[:6])}</div></div></section>
 <h2>Headlines <a class="seemore" href="news.html">All news →</a></h2><div class="grid">{"".join(ncard(n) for n in N.get("items", [])[:6])}</div>
