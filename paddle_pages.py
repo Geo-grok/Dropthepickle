@@ -286,8 +286,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     pt = "".join(f'<a class="pro" href="pro-paddles.html" style="text-decoration:none;color:inherit"><span class="av">{e(av(x["name"]))}</span><span><b>{e(x["name"])}</b><br><span class="meta">{e(x["paddle"])}</span></span></a>' for x in teaser)
     dl = deals or sorted(PP, key=cur)[:6]
     home = f'''<section class="hero">{X["COURT"]}<div class="in"><div><span class="eyebrow"><i></i>Updated daily</span>
-<h1>Play smarter.<br><em>Buy better.</em><br>Never miss a dink.</h1>
-<p>Paddle reviews from the best creators, daily price drops from maker sites, pro tournaments, news and the gear the pros actually use. All in one place.</p>
+<h1>All Things<br><em>Pickleball</em></h1>
+<p>Free for everyone. News, paddles, prices, pros, tournaments, videos and guides, all in one place.</p>
 <div class="ctas"><a class="btn" href="#start">Start here</a><a class="btn ghost" href="deals.html">See today's deals</a></div>
 <div class="stats"><div><b>{len(PP)}</b><span>Paddles tracked</span></div><div><b>{len(deals)}</b><span>Deals today</span></div><div><b>{len(R.get("items", []))}</b><span>New reviews</span></div><div><b>{len(T.get("items", []))}</b><span>Pro events</span></div></div></div>{X["HEROART"]}</div></section>
 <main>
@@ -311,8 +311,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 <h2>Find your paddle</h2><div class="grid secs">{"".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">Spec filter →</div></a>' for f, t in list_links)}</div>
 <section class="band"><h2>Get the weekly drop</h2><p>The best paddle deals, new reviews and tournament news, once a week. No spam.</p>{signup("home")}</section>
 </main>'''
-    page("index.html", C["TAGLINE"], home,
-         "Daily pickleball hub for maker paddle prices, beginner guides, pro tournament dates, links to creator videos, news headlines and the gear on PPA profiles.",
+    page("index.html", "All things pickleball", home,
+         "All things pickleball, free for everyone. News, paddles, prices, pros, tournaments, videos and guides, all in one place.",
          full=True,
          fresh={"deals": [fresh_p(p) for p in dl[:8]],
                 "start": ["guides/pickleball-rules-for-beginners.html", "guides/how-to-dink.html", "guides/how-to-choose-a-paddle.html", "guides/paddle-weight-and-core.html", "guides/best-paddles-under-100.html", "price-index.html", "tournaments.html", "creators/ryan-morneau.html"],

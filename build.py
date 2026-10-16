@@ -254,7 +254,7 @@ def emit_crawl_files():
     paddles = [p for p in pages if p["fn"].startswith(("paddle-", "vs-", "best-"))]
     rest = [p for p in pages if p not in mains and p not in paddles and p not in guides]
     llms = [f"# {C['SITE_NAME']}", "", f"> {C['TAGLINE']}", "",
-            f"{C['SITE_NAME']} is an independent pickleball hub. It lists pro tournament dates, manufacturer paddle specs, maker prices, news headlines, beginner guides, and links to creator videos and podcasts. Specs and prices come from the makers. This site does not publish its own ratings or reviews.",
+            f"{C['SITE_NAME']} is all things pickleball, free for everyone: news, paddles, prices, pros, tournaments, videos and guides, all in one place. It lists pro tournament dates, manufacturer paddle specs, maker prices, news headlines, beginner guides, and links to creator videos and podcasts. Specs and prices come from the makers. This site does not publish its own ratings or reviews.",
             "", "## Main", *[bullet(p) for p in mains], "", "## Guides", *[bullet(p) for p in guides], "", "## Paddles", *[bullet(p) for p in paddles], "", "## Optional", *[bullet(p) for p in rest], ""]
     (DIST / "llms.txt").write_text("\n".join(llms))
 def pagehead(body):
