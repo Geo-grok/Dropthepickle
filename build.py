@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Render data/*.json + config.json into a static site in dist/."""
-import json, pathlib, shutil, html, urllib.parse, datetime, re, hashlib, struct, zlib
+import json, pathlib, shutil, html, urllib.parse, datetime, re, hashlib
 ROOT = pathlib.Path(__file__).parent; DIST = ROOT / "dist"
 C = json.loads((ROOT / "config.json").read_text())
 def D(n):
@@ -23,10 +23,10 @@ h3 a{color:inherit;text-decoration:none}h3 a:hover{color:#2453c7}
 .meta{color:var(--mut);font-size:.86rem}.note{font-size:.8rem;color:var(--mut)}
 /* header */
 header{position:sticky;top:0;z-index:50;background:rgba(11,20,38,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
-.bar{display:flex;align-items:center;gap:1rem;max-width:1200px;margin:auto;padding:.7rem 1.1rem}
-.logo{display:flex;align-items:center;gap:.55rem;color:#fff;text-decoration:none;font-family:Oswald,Impact,sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:.02em;text-transform:uppercase}
-.logo svg{width:34px;height:34px;flex:none;transition:transform .5s cubic-bezier(.2,.8,.2,1)}.logo:hover svg{transform:rotate(-20deg) scale(1.06)}
-.logo span{color:var(--neon)}
+.bar{display:flex;align-items:center;gap:.75rem;max-width:1200px;margin:auto;padding:.4rem 1.1rem}
+.logo{display:flex;align-items:center;text-decoration:none;line-height:0;flex:none}
+.logo picture{display:block;line-height:0}
+.logo img{height:56px;width:auto;max-width:none}
 .nav{display:flex;gap:.1rem;margin-left:auto;align-items:center;min-width:0;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}
 .nav a{color:#c9d3e6;text-decoration:none;padding:.45rem .55rem;border-radius:10px;font-size:.88rem;font-weight:600;white-space:nowrap;transition:.2s}
 .nav a:hover{color:#fff;background:rgba(255,255,255,.07)}.nav a.on{color:var(--navy);background:var(--neon)}
@@ -35,7 +35,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(11,20,38,.92);backdrop-f
 .burger span{display:block;width:22px;height:2px;background:#fff;margin:5px auto;border-radius:2px;transition:.3s}
 .navopen .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}.navopen .burger span:nth-child(2){opacity:0}.navopen .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 @media(max-width:1320px){.burger{display:block}.join{display:none}
- .nav{position:fixed;inset:62px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--navy);padding:.8rem 1rem 1.4rem;gap:.2rem;transform:translateY(-120%);transition:transform .35s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 40px rgba(0,0,0,.35);max-height:calc(100vh - 62px);overflow:auto}
+ .nav{position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--navy);padding:.8rem 1rem 1.4rem;gap:.2rem;transform:translateY(-120%);transition:transform .35s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 40px rgba(0,0,0,.35);max-height:calc(100vh - 72px);overflow:auto}
  .nav a{font-size:1.05rem;padding:.75rem 1rem}.navopen .nav{transform:none}}
 /* buttons, badges */
 .btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--neon);color:var(--navy);font-weight:800;padding:.8rem 1.25rem;border-radius:12px;text-decoration:none;border:0;cursor:pointer;font-size:.98rem;transition:transform .15s,box-shadow .2s,background .2s;box-shadow:0 6px 18px rgba(198,244,50,.28)}
@@ -134,7 +134,7 @@ footer h4{color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;lett
 footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer a:hover{color:var(--neon)}
 .legal{max-width:1200px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem}
 @media(max-width:980px){.fin{grid-template-columns:1fr 1fr}.fin>div:first-child{grid-column:1/-1}}
-@media(max-width:520px){.tcard .date{float:none;margin:0 0 .6rem}.stats{gap:.75rem 1rem}.stats b{font-size:1.45rem}.hero h1{font-size:2.35rem}}
+@media(max-width:520px){.tcard .date{float:none;margin:0 0 .6rem}.stats{gap:.75rem 1rem}.stats b{font-size:1.45rem}.hero h1{font-size:2.35rem}.logo img{height:48px}.nav{inset:64px 0 auto 0;max-height:calc(100vh - 64px)}}
 .faq{background:#fff;border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;margin:.45rem 0;box-shadow:var(--sh)}.faq summary{font-weight:800;cursor:pointer}.faq p{margin:.45rem 0 0}
 .vgrid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr))}
 .vgrid .vid.short{padding-top:177.78%;margin:0 0 .7rem}
@@ -148,8 +148,10 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .secs{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.secs a{text-decoration:none;color:inherit}
 .tbl table td a{font-weight:600}
 """
-LOGO = '''<svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9ff5a"/><stop offset="1" stop-color="#9ccc12"/></linearGradient></defs><circle cx="32" cy="32" r="29" fill="url(#lg)"/><g fill="#0b1426" opacity=".9"><circle cx="22" cy="20" r="3.4"/><circle cx="38" cy="16" r="3"/><circle cx="46" cy="30" r="3.4"/><circle cx="18" cy="36" r="3"/><circle cx="32" cy="32" r="3.6"/><circle cx="40" cy="45" r="3.2"/><circle cx="25" cy="49" r="2.8"/></g><path d="M50 8c6 4 9 10 9 10" stroke="#ff7a45" stroke-width="4" stroke-linecap="round" fill="none"/></svg>'''
-FAVICON = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0b1426"/><circle cx="32" cy="32" r="22" fill="#c6f432"/><g fill="#0b1426"><circle cx="24" cy="24" r="3"/><circle cx="38" cy="22" r="2.6"/><circle cx="42" cy="35" r="3"/><circle cx="25" cy="38" r="2.6"/><circle cx="33" cy="31" r="3"/><circle cx="34" cy="44" r="2.4"/></g></svg>'''
+def logo_html(rel):
+    """Mic Drop wordmark. WebP is the sized header asset; PNG is the fallback."""
+    return (f'<picture><source srcset="{rel("logo-full.webp")}" type="image/webp">'
+            f'<img src="{rel("logo-full.png")}" alt="Drop the Pickle" width="140" height="56"></picture>')
 PADDLE_SVG = '''<svg viewBox="0 0 200 260" width="70%" aria-label="Paddle illustration"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18284a"/><stop offset="1" stop-color="#0b1426"/></linearGradient></defs><rect x="40" y="10" width="120" height="160" rx="52" fill="url(#pg)"/><rect x="48" y="18" width="104" height="144" rx="46" fill="none" stroke="#c6f432" stroke-width="3" opacity=".7"/><path d="M60 120 L140 60" stroke="#ff7a45" stroke-width="6" stroke-linecap="round" opacity=".85"/><rect x="88" y="168" width="24" height="80" rx="8" fill="#0b1426"/><rect x="88" y="190" width="24" height="6" fill="#c6f432"/><rect x="88" y="208" width="24" height="6" fill="#c6f432"/><circle cx="150" cy="40" r="16" fill="#c6f432"/></svg>'''
 COURT = '''<svg class="court" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#c6f432" stroke-width="3"><rect x="120" y="70" width="960" height="460"/><line x1="600" y1="70" x2="600" y2="530"/><line x1="460" y1="70" x2="460" y2="530"/><line x1="740" y1="70" x2="740" y2="530"/><line x1="120" y1="300" x2="460" y2="300"/><line x1="740" y1="300" x2="1080" y2="300"/></g><g stroke="#fff" stroke-width="2" stroke-dasharray="6 10" opacity=".6"><line x1="600" y1="40" x2="600" y2="560"/></g></svg>'''
 HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs><radialGradient id="ballg" cx=".35" cy=".3"><stop offset="0" stop-color="#eaff8a"/><stop offset=".6" stop-color="#c6f432"/><stop offset="1" stop-color="#8db511"/></radialGradient><linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a6b"/><stop offset="1" stop-color="#ff5f2e"/></linearGradient></defs><g transform="rotate(-24 200 200)"><rect x="110" y="40" width="170" height="220" rx="76" fill="url(#pad)"/><rect x="122" y="52" width="146" height="196" rx="66" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/><rect x="178" y="252" width="34" height="110" rx="12" fill="#0b1426"/><rect x="178" y="280" width="34" height="8" fill="#c6f432"/><rect x="178" y="304" width="34" height="8" fill="#c6f432"/></g><circle cx="300" cy="110" r="62" fill="url(#ballg)"/><g fill="#0b1426" opacity=".85"><circle cx="280" cy="85" r="7"/><circle cx="315" cy="78" r="6"/><circle cx="335" cy="110" r="7"/><circle cx="300" cy="112" r="7.5"/><circle cx="270" cy="120" r="6"/><circle cx="292" cy="145" r="6.5"/><circle cx="325" cy="140" r="5.5"/></g><g stroke="#c6f432" stroke-width="4" stroke-linecap="round" opacity=".5"><line x1="210" y1="150" x2="150" y2="170"/><line x1="220" y1="120" x2="170" y2="125"/></g></svg>'''
@@ -182,28 +184,17 @@ def save_fresh():
         else: updated = None
         store[fn] = {"hash": h, "updated": updated}
     (ROOT / "data" / "page_dates.json").write_text(json.dumps(store, indent=1, sort_keys=True) + "\n")
-def write_og_png(path):
-    w, h, cx, cy, rad = 1200, 630, 600, 315, 168
-    holes = ((cx - 36, cy - 48, 16), (cx + 28, cy - 58, 14), (cx + 52, cy - 6, 16), (cx - 8, cy + 2, 18), (cx - 46, cy + 22, 14), (cx + 8, cy + 52, 15))
-    raw = bytearray(); rad2 = rad * rad
-    for y in range(h):
-        raw.append(0)
-        for x in range(w):
-            dx, dy = x - cx, y - cy
-            if dx * dx + dy * dy <= rad2:
-                r, g, b = 0xc6, 0xf4, 0x32
-                for hx, hy, hr in holes:
-                    ddx, ddy = x - hx, y - hy
-                    if ddx * ddx + ddy * ddy <= hr * hr:
-                        r, g, b = 0x0b, 0x14, 0x26
-                        break
-            else:
-                r, g, b = 0x0b, 0x14, 0x26
-            raw += bytes((r, g, b))
-    def chunk(tag, data):
-        return struct.pack(">I", len(data)) + tag + data + struct.pack(">I", zlib.crc32(tag + data) & 0xffffffff)
-    png = b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 2, 0, 0, 0)) + chunk(b"IDAT", zlib.compress(bytes(raw), 9)) + chunk(b"IEND", b"")
-    path.write_bytes(png)
+def publish_brand():
+    """Copy Mic Drop files into dist. Header logo and favicons are the generated sizes; originals stay under /brand/."""
+    brand = ROOT / "assets" / "brand"
+    web = ROOT / "assets"
+    (DIST / "brand").mkdir(parents=True, exist_ok=True)
+    for p in brand.iterdir():
+        if p.is_file(): shutil.copyfile(p, DIST / "brand" / p.name)
+    for name in ("icon-512.png", "og-1200x630.png", "dtp-avatar.png"):
+        shutil.copyfile(brand / name, DIST / name)
+    for name in ("logo-full.png", "logo-full.webp", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"):
+        shutil.copyfile(web / name, DIST / name)
 def crumbs_for(fn, title, url):
     base = C["BASE_URL"].rstrip("/") + "/"
     home = {"name": "Home", "url": base}
@@ -224,7 +215,7 @@ def ld_graph(title, desc, url, crumbs, updated, extra):
     if updated: web["dateModified"] = updated
     graph = [
         {"@type": "Organization", "@id": org, "name": C["SITE_NAME"], "url": base + "/", "email": C["CONTACT_EMAIL"],
-         "description": C["TAGLINE"], "logo": {"@type": "ImageObject", "url": base + "/og.png"}},
+         "description": C["TAGLINE"], "logo": {"@type": "ImageObject", "url": base + "/brand/logo-full.png", "width": 2000, "height": 800}},
         {"@type": "WebSite", "@id": site, "name": C["SITE_NAME"], "url": base + "/", "description": C["TAGLINE"],
          "publisher": {"@id": org}, "inLanguage": "en"},
         web,
@@ -268,12 +259,13 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
     prefix = "../" * fn.count("/")
     rel = lambda h: h if h.startswith(("http://", "https://", "mailto:", "#", "/")) else prefix + h
     nav = "".join(f'<a href="{rel(h)}" class="{"on" if h==fn else ""}">{t}</a>' for h, t in NAV)
-    n = C["SITE_NAME"]; i = len(n.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ")) or max((k for k, ch in enumerate(n) if ch.isupper()), default=0); brand = f'{e(n[:i])}<span>{e(n[i:])}</span>'
+    n = C["SITE_NAME"]
+    mark = logo_html(rel)
     doc_title = f"{title} · {n}"
     if not desc: desc = f"{title} on {n}: {C['TAGLINE']}."
     url = canon(fn)
     updated = note_fresh(fn, fresh)
-    img = image or (C["BASE_URL"].rstrip("/") + "/og.png")
+    img = C["BASE_URL"].rstrip("/") + "/og-1200x630.png"
     stamp = f'<p class="meta updated">Updated {fmt(updated)}</p>' if updated else ""
     if not full: body = f"<main>{pagehead(body)}{stamp}</main>"
     elif stamp: body = body.replace('<span class="eyebrow"><i></i>Updated daily</span>', f'<span class="eyebrow"><i></i>Updated daily</span>{stamp}', 1)
@@ -281,16 +273,16 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
     cols = "".join(f'<div><h4>{h}</h4>{"".join(f"<a href={chr(34)}{rel(u)}{chr(34)}>{t}</a>" for u, t in ls)}</div>' for h, ls in FOOTCOLS)
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(doc_title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1426">
-<meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}">
+<meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Drop the Pickle">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
-<link rel="icon" href="{rel("favicon.svg")}" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap">
 <link rel="stylesheet" href="{rel("style.css")}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="{rel("sitemap.xml")}">
 <script type="application/ld+json">{ld}</script></head>
-<body><header><div class="bar"><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{LOGO}<b>{brand}</b></a>
+<body><header><div class="bar"><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a>
 <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav">{nav}</nav><a class="btn sm join" href="{rel("community.html")}#signup">Join free</a></div></header>
 {body}
-<footer><div class="fin"><div><a class="logo" href="{rel("index.html")}">{LOGO}<b>{brand}</b></a><p>The all-in-one pickleball hub: tournaments, paddle reviews, deals, news and pro gear, refreshed daily from public sources.</p></div>{cols}</div>
+<footer><div class="fin"><div><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a><p>The all-in-one pickleball hub: tournaments, paddle reviews, deals, news and pro gear, refreshed daily from public sources.</p></div>{cols}</div>
 <div class="legal">© {datetime.date.today().year} {e(n)}. Headlines, videos, product images and event info belong to their publishers and makers and link to the original source. Some links are affiliate links; as an Amazon Associate we may earn from qualifying purchases.</div></footer>
 <script>
 (()=>{{const b=document.querySelector('.burger');b.addEventListener('click',()=>{{const o=document.body.classList.toggle('navopen');b.setAttribute('aria-expanded',o)}});
@@ -330,7 +322,7 @@ def build():
     try: _PREV = json.loads((ROOT / "data" / "page_dates.json").read_text())
     except Exception: _PREV = {}
     if DIST.exists(): shutil.rmtree(DIST)
-    DIST.mkdir(); (DIST / "style.css").write_text(CSS); (DIST / "favicon.svg").write_text(FAVICON); write_og_png(DIST / "og.png")
+    DIST.mkdir(); (DIST / "style.css").write_text(CSS); publish_brand()
     T, R, N, P = D("tournaments.json"), D("reviews.json"), D("news.json"), D("pros.json")
     PD = json.loads((ROOT / "data/paddles.json").read_text())
     def dbadge(d):
