@@ -23,10 +23,12 @@ h3 a{color:inherit;text-decoration:none}h3 a:hover{color:#2453c7}
 .meta{color:var(--mut);font-size:.86rem}.note{font-size:.8rem;color:var(--mut)}
 /* header */
 header{position:sticky;top:0;z-index:50;background:rgba(11,20,38,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
-.bar{display:flex;align-items:center;gap:.75rem;max-width:1200px;margin:auto;padding:.4rem 1.1rem}
-.logo{display:flex;align-items:center;text-decoration:none;line-height:0;flex:none}
-.logo picture{display:block;line-height:0}
-.logo img{height:56px;width:auto;max-width:none}
+.bar{display:flex;align-items:center;flex-wrap:nowrap;gap:.75rem;max-width:1200px;margin:auto;padding:.4rem 1.1rem}
+.logo{display:flex;align-items:center;gap:.45rem;text-decoration:none;line-height:1;flex:none;min-width:0;color:#fff}
+.logo picture{display:block;line-height:0;flex:none}
+.logo img{width:60px;height:60px;max-width:none;border-radius:50%;object-fit:cover;flex:none}
+.logo b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:32px;letter-spacing:.02em;color:#fff;white-space:nowrap;line-height:1}
+.logo b span{color:#7cff4f}
 .nav{display:flex;gap:.1rem;margin-left:auto;align-items:center;min-width:0;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}
 .nav a{color:#c9d3e6;text-decoration:none;padding:.45rem .55rem;border-radius:10px;font-size:.88rem;font-weight:600;white-space:nowrap;transition:.2s}
 .nav a:hover{color:#fff;background:rgba(255,255,255,.07)}.nav a.on{color:var(--navy);background:var(--neon)}
@@ -34,8 +36,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(11,20,38,.92);backdrop-f
 .burger{display:none;margin-left:auto;background:none;border:0;width:42px;height:42px;border-radius:10px;cursor:pointer;color:#fff}
 .burger span{display:block;width:22px;height:2px;background:#fff;margin:5px auto;border-radius:2px;transition:.3s}
 .navopen .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}.navopen .burger span:nth-child(2){opacity:0}.navopen .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:1320px){.burger{display:block}.join{display:none}
- .nav{position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--navy);padding:.8rem 1rem 1.4rem;gap:.2rem;transform:translateY(-120%);transition:transform .35s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 40px rgba(0,0,0,.35);max-height:calc(100vh - 72px);overflow:auto}
+@media(max-width:1320px){.burger{display:block;flex:none}.join{display:inline-flex;flex:none;white-space:nowrap}
+ .nav{position:fixed;inset:80px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--navy);padding:.8rem 1rem 1.4rem;gap:.2rem;transform:translateY(-120%);transition:transform .35s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 40px rgba(0,0,0,.35);max-height:calc(100vh - 80px);overflow:auto}
  .nav a{font-size:1.05rem;padding:.75rem 1rem}.navopen .nav{transform:none}}
 /* buttons, badges */
 .btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--neon);color:var(--navy);font-weight:800;padding:.8rem 1.25rem;border-radius:12px;text-decoration:none;border:0;cursor:pointer;font-size:.98rem;transition:transform .15s,box-shadow .2s,background .2s;box-shadow:0 6px 18px rgba(198,244,50,.28)}
@@ -134,7 +136,8 @@ footer h4{color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;lett
 footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer a:hover{color:var(--neon)}
 .legal{max-width:1200px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem}
 @media(max-width:980px){.fin{grid-template-columns:1fr 1fr}.fin>div:first-child{grid-column:1/-1}}
-@media(max-width:520px){.tcard .date{float:none;margin:0 0 .6rem}.stats{gap:.75rem 1rem}.stats b{font-size:1.45rem}.hero h1{font-size:2.35rem}.logo img{height:48px}.nav{inset:64px 0 auto 0;max-height:calc(100vh - 64px)}}
+@media(max-width:700px){.logo{gap:.32rem}.logo img{width:52px;height:52px}.logo b{font-size:26px}}
+@media(max-width:520px){.tcard .date{float:none;margin:0 0 .6rem}.stats{gap:.75rem 1rem}.stats b{font-size:1.45rem}.hero h1{font-size:2.35rem}.bar{padding:.3rem .5rem;gap:.35rem}.burger{width:36px}.btn.join{margin-left:.15rem;padding:.32rem .5rem;font-size:.74rem}.nav{inset:66px 0 auto 0;max-height:calc(100vh - 66px)}}
 .faq{background:#fff;border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;margin:.45rem 0;box-shadow:var(--sh)}.faq summary{font-weight:800;cursor:pointer}.faq p{margin:.45rem 0 0}
 .vgrid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr))}
 .vgrid .vid.short{padding-top:177.78%;margin:0 0 .7rem}
@@ -149,9 +152,10 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .tbl table td a{font-weight:600}
 """
 def logo_html(rel):
-    """Mic Drop wordmark. WebP is the sized header asset; PNG is the fallback."""
-    return (f'<picture><source srcset="{rel("logo-full.webp")}" type="image/webp">'
-            f'<img src="{rel("logo-full.png")}" alt="Drop the Pickle" width="140" height="56"></picture>')
+    """Round Mic Drop avatar plus a live text wordmark. The wide logo image stays out of the header."""
+    return (f'<picture><source srcset="{rel("avatar.webp")}" type="image/webp">'
+            f'<img src="{rel("avatar.png")}" alt="" width="60" height="60"></picture>'
+            f'<b>DROPTHE<span>PICKLE</span></b>')
 PADDLE_SVG = '''<svg viewBox="0 0 200 260" width="70%" aria-label="Paddle illustration"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18284a"/><stop offset="1" stop-color="#0b1426"/></linearGradient></defs><rect x="40" y="10" width="120" height="160" rx="52" fill="url(#pg)"/><rect x="48" y="18" width="104" height="144" rx="46" fill="none" stroke="#c6f432" stroke-width="3" opacity=".7"/><path d="M60 120 L140 60" stroke="#ff7a45" stroke-width="6" stroke-linecap="round" opacity=".85"/><rect x="88" y="168" width="24" height="80" rx="8" fill="#0b1426"/><rect x="88" y="190" width="24" height="6" fill="#c6f432"/><rect x="88" y="208" width="24" height="6" fill="#c6f432"/><circle cx="150" cy="40" r="16" fill="#c6f432"/></svg>'''
 COURT = '''<svg class="court" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#c6f432" stroke-width="3"><rect x="120" y="70" width="960" height="460"/><line x1="600" y1="70" x2="600" y2="530"/><line x1="460" y1="70" x2="460" y2="530"/><line x1="740" y1="70" x2="740" y2="530"/><line x1="120" y1="300" x2="460" y2="300"/><line x1="740" y1="300" x2="1080" y2="300"/></g><g stroke="#fff" stroke-width="2" stroke-dasharray="6 10" opacity=".6"><line x1="600" y1="40" x2="600" y2="560"/></g></svg>'''
 HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs><radialGradient id="ballg" cx=".35" cy=".3"><stop offset="0" stop-color="#eaff8a"/><stop offset=".6" stop-color="#c6f432"/><stop offset="1" stop-color="#8db511"/></radialGradient><linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a6b"/><stop offset="1" stop-color="#ff5f2e"/></linearGradient></defs><g transform="rotate(-24 200 200)"><rect x="110" y="40" width="170" height="220" rx="76" fill="url(#pad)"/><rect x="122" y="52" width="146" height="196" rx="66" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/><rect x="178" y="252" width="34" height="110" rx="12" fill="#0b1426"/><rect x="178" y="280" width="34" height="8" fill="#c6f432"/><rect x="178" y="304" width="34" height="8" fill="#c6f432"/></g><circle cx="300" cy="110" r="62" fill="url(#ballg)"/><g fill="#0b1426" opacity=".85"><circle cx="280" cy="85" r="7"/><circle cx="315" cy="78" r="6"/><circle cx="335" cy="110" r="7"/><circle cx="300" cy="112" r="7.5"/><circle cx="270" cy="120" r="6"/><circle cx="292" cy="145" r="6.5"/><circle cx="325" cy="140" r="5.5"/></g><g stroke="#c6f432" stroke-width="4" stroke-linecap="round" opacity=".5"><line x1="210" y1="150" x2="150" y2="170"/><line x1="220" y1="120" x2="170" y2="125"/></g></svg>'''
@@ -193,7 +197,7 @@ def publish_brand():
         if p.is_file(): shutil.copyfile(p, DIST / "brand" / p.name)
     for name in ("icon-512.png", "og-1200x630.png", "dtp-avatar.png"):
         shutil.copyfile(brand / name, DIST / name)
-    for name in ("logo-full.png", "logo-full.webp", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"):
+    for name in ("logo-full.png", "logo-full.webp", "avatar.png", "avatar.webp", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"):
         shutil.copyfile(web / name, DIST / name)
 def crumbs_for(fn, title, url):
     base = C["BASE_URL"].rstrip("/") + "/"
@@ -276,7 +280,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Drop the Pickle">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
 <link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap">
 <link rel="stylesheet" href="{rel("style.css")}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="{rel("sitemap.xml")}">
 <script type="application/ld+json">{ld}</script></head>
 <body><header><div class="bar"><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a>
