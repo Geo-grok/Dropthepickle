@@ -205,6 +205,14 @@ def publish_brand():
         shutil.copyfile(brand / name, DIST / name)
     for name in ("logo-full.png", "logo-full.webp", "avatar.png", "avatar.webp", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"):
         shutil.copyfile(web / name, DIST / name)
+def publish_media():
+    """Public video files. Not linked from any page."""
+    src = ROOT / "media"
+    if not src.is_dir(): return
+    dest = DIST / "media"
+    dest.mkdir(parents=True, exist_ok=True)
+    for p in src.iterdir():
+        if p.is_file(): shutil.copyfile(p, dest / p.name)
 def crumbs_for(fn, title, url):
     base = C["BASE_URL"].rstrip("/") + "/"
     home = {"name": "Home", "url": base}
@@ -332,7 +340,7 @@ def build():
     try: _PREV = json.loads((ROOT / "data" / "page_dates.json").read_text())
     except Exception: _PREV = {}
     if DIST.exists(): shutil.rmtree(DIST)
-    DIST.mkdir(); (DIST / "style.css").write_text(CSS); publish_brand()
+    DIST.mkdir(); (DIST / "style.css").write_text(CSS); publish_brand(); publish_media()
     T, R, N, P = D("tournaments.json"), D("reviews.json"), D("news.json"), D("pros.json")
     PD = json.loads((ROOT / "data/paddles.json").read_text())
     def dbadge(d):
