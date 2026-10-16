@@ -82,7 +82,7 @@ def make(page, e, fmt, PP, cur, ph):
               f'<a class="btn sm" href="{FB}" target="_blank" rel="noopener">Facebook</a>')
     spot = f'''<h1>Ryan Morneau</h1>
 <p class="meta">Pickleball Breakdowns · match breakdowns and strategy tips</p>
-<p>Pickleball Breakdowns is Ryan Morneau's channel. On the channel he says he watches how the best players in the world make decisions, then breaks that down so you can use it in your next match. <a href="{JMU}" target="_blank" rel="noopener">James Madison University</a> reported that he was the No. 1-ranked collegiate pickleball player in the United States, held that ranking for more than a year, and became the first collegiate singles national champion.</p>
+<p>Pickleball Breakdowns is Ryan Morneau's channel. On the channel he says he watches how the best players in the world make decisions, then breaks that down so you can use it in your next match. In his own channel bio, he calls himself the No. 1 collegiate singles player in the country when he graduated from James Madison University, and says he won a college national title along the way. <a href="{JMU}" target="_blank" rel="noopener">James Madison University</a> reported that he was the No. 1-ranked collegiate pickleball player in the United States, held that ranking for more than a year, and became the first collegiate singles national champion.</p>
 <p>The clips below are six of his latest uploads from the channel's public feed on October 16, 2026. A post from that feed titled "Test V44" is not included. The videos are his. We embed them here and link each one back to YouTube.</p>
 <div class="socials">{social}</div>
 <div class="vgrid">{clips}</div>
