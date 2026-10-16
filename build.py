@@ -42,7 +42,7 @@ header{position:sticky;top:0;z-index:50;background:#0b1630;border-bottom:1px sol
 /* always-visible primary tabs (pills) */
 .bar{min-height:60px;padding-top:0;padding-bottom:0}.logo img{width:40px;height:40px}
 .btn.join{white-space:nowrap;font-size:16px;font-weight:800;padding:10px 14px;flex:none}
-.tabs{display:flex;gap:8px;max-width:1200px;margin:auto;padding:4px 16px 12px;overflow-x:auto;scrollbar-width:none;background:#0b1630}.tabs::-webkit-scrollbar{display:none}
+.tabs{display:flex;gap:8px;max-width:1200px;margin:auto;padding:4px 16px 12px;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;background:#0b1630}.tabs::-webkit-scrollbar{display:none}
 .tabs a{flex:none;display:flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:999px;font:700 16px/1 Inter,system-ui,sans-serif;color:#e6ecf5;text-decoration:none;background:#16264a;white-space:nowrap}
 .tabs a:hover{background:#1f3360}.tabs a.on{background:#c6f432;color:#0b1630}
 /* homepage: navy frame, hero strip, Top 5 */
@@ -192,7 +192,7 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 
 """
 # Always-visible primary tabs (mobile-first). Codes uses the clean /discount-codes URL.
-TABS = [("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
+TABS = [("buzz.html","Buzz"),("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
 TAB_ON = {"/discount-codes": ("discount-codes.html",), "guides.html": ("guides.html", "guides/"), "paddles.html": ("paddles.html", "paddle-")}
 # Central outbound map for /go/<slug>. build() fills it; write_go_map() saves src/go-links.json for the Worker.
 GO = {}
@@ -373,6 +373,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <div class="legal">© {datetime.date.today().year} {e(n)}. Headlines, videos, product images and event info belong to their publishers and makers and link to the original source. Some links are affiliate links; as an Amazon Associate we may earn from qualifying purchases.</div></footer>
 <script>
 (()=>{{const b=document.querySelector('.burger');b.addEventListener('click',()=>{{const o=document.body.classList.toggle('navopen');b.setAttribute('aria-expanded',o)}});
+const tab=document.querySelector('.tabs a.on');if(tab)tab.scrollIntoView({{inline:'nearest',block:'nearest'}});
 if('IntersectionObserver'in window){{const io=new IntersectionObserver(es=>es.forEach(x=>{{if(x.isIntersecting){{x.target.classList.add('in');io.unobserve(x.target)}}}}),{{rootMargin:'0px 0px -40px 0px'}});
 document.querySelectorAll('main .card,main .pro,.band').forEach(el=>{{el.classList.add('rv');io.observe(el)}})}}
 document.querySelectorAll('form[action$="/api/signup"]').forEach(f=>f.addEventListener('submit',async ev=>{{ev.preventDefault();const btn=f.querySelector('button');if(btn)btn.disabled=true;let ok=false,msg="Thanks! You're on the list.";try{{const res=await fetch(f.action,{{method:'POST',body:new FormData(f),headers:{{Accept:'application/json'}}}});const data=await res.json().catch(()=>null);ok=!!(res.ok&&data&&data.ok);if(data&&data.message)msg=data.message;else if(!res.ok)msg='Something went wrong. Please try again.'}}catch(err){{msg='Could not reach the signup service. Please try again.'}}if(ok){{const p=document.createElement('p');p.textContent=msg;f.replaceWith(p)}}else{{if(btn)btn.disabled=false;let p=f.querySelector('.signup-msg');if(!p){{p=document.createElement('p');p.className='signup-msg meta';f.append(p)}}p.textContent=msg}}}}))}})()
