@@ -22,7 +22,7 @@ h3{font-size:1.15rem;margin:.2rem 0 .4rem;font-weight:600;text-transform:none;fo
 h3 a{color:inherit;text-decoration:none}h3 a:hover{color:#2453c7}
 .meta{color:var(--mut);font-size:.94rem}.note{font-size:.94rem;color:var(--mut)}
 /* header */
-header{position:sticky;top:0;z-index:50;background:rgba(11,20,38,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+header{position:sticky;top:0;z-index:50;background:#0b1630;border-bottom:1px solid rgba(255,255,255,.06)}
 .bar{display:flex;align-items:center;flex-wrap:nowrap;gap:.75rem;max-width:1200px;margin:auto;padding:.4rem 1.1rem}
 .logo{display:flex;align-items:center;gap:.45rem;text-decoration:none;line-height:1;flex:none;min-width:0;color:#fff}
 .logo picture{display:block;line-height:0;flex:none}
