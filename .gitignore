@@ -3,3 +3,5 @@ screenshots/
 __pycache__/
 *.log
 .env
+.wrangler/
+node_modules/

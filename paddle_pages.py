@@ -285,11 +285,18 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     def av(n): return "".join(w[0] for w in n.split()[:2]).upper()
     pt = "".join(f'<a class="pro" href="pro-paddles.html" style="text-decoration:none;color:inherit"><span class="av">{e(av(x["name"]))}</span><span><b>{e(x["name"])}</b><br><span class="meta">{e(x["paddle"])}</span></span></a>' for x in teaser)
     dl = deals or sorted(PP, key=cur)[:6]
-    home = f'''<section class="hero">{X["COURT"]}<div class="in"><div><span class="eyebrow"><i></i>Updated daily</span>
-<h1>All Things<br><em>Pickleball</em></h1>
-<p>Free for everyone. News, paddles, prices, pros, tournaments, videos and guides, all in one place.</p>
-<div class="ctas"><a class="btn" href="#start">Start here</a><a class="btn ghost" href="deals.html">See today's deals</a><a class="btn ghost" href="discount-codes.html">Discount codes</a></div>
-<div class="stats"><div><b>{len(PP)}</b><span>Paddles tracked</span></div><div><b>{len(deals)}</b><span>Deals today</span></div><div><b>{len(R.get("items", []))}</b><span>New reviews</span></div><div><b>{len(T.get("items", []))}</b><span>Pro events</span></div></div></div>{X["HEROART"]}</div></section>
+    def top5row(i, p):
+        h = ph(p); ref = h.get("compare_at") if h.get("sale") else h.get("previous"); pct = round(100 * (1 - cur(p) / ref)) if ref else 0
+        was = f'<s>{money(p, ref)}</s>' if ref and ref > cur(p) else ""
+        why = "price drop" if h.get("drop") else "on sale"
+        return (f'<li><a class="th" href="{slug(p)}" aria-label="{e(p["brand"])} {e(p["model"])}">{img(p)}<span class="rk">{i}</span></a><div class="bd">'
+                f'<h3><a href="{slug(p)}">{e(p["brand"])} {e(p["model"])}</a></h3>'
+                f'<p class="fr">{e(p["brand"])} store · {why} · checked {fmt(h.get("checked"))}</p>'
+                f'<div class="px">{money(p, cur(p))}{was}{f"<span class={chr(34)}off{chr(34)}>-{pct}%</span>" if pct > 0 else ""}</div>'
+                f'<a class="btn go" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Get deal →</a></div></li>')
+    top5 = (f'<h2 id="top5">Top 5 deals today <a class="seemore" href="deals.html">All →</a></h2><ol class="top5">{"".join(top5row(i, p) for i, p in enumerate(deals[:5], 1))}</ol><p class="more">Prices from makers\' own sites. Confirm at checkout. <a href="/discount-codes">Stack a discount code →</a></p>') if deals else ""
+    home = f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>{len(deals)} deals today. <em>Never miss a dink.</em></h1><p>All things pickleball, free. {len(PP)} paddles tracked daily.</p></div></div>
+{top5}</div></section>
 <main>
 <h2 id="start">Start here</h2>
 <p class="meta">New to the sport, or shopping for a paddle? These guides use the USA Pickleball rulebook and the maker specs already on this site. No invented prices.</p>
@@ -321,5 +328,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 "events": [(t.get("name"), t.get("start"), t.get("end"), t.get("location")) for t in T.get("items", [])[:6]],
                 "pros": [(x.get("name"), x.get("paddle")) for x in teaser]},
          schema=[item_list(dl[:8])] if dl else None)
+    gl = [("guides/how-to-choose-a-paddle.html","How to choose a paddle","Budget, shape, core, weight"),("guides/best-paddles-under-100.html","Best paddles under $100","Only today's maker prices"),("guides/pickleball-rules-for-beginners.html","Rules for beginners","Serve, kitchen, scoring"),("guides/how-to-dink.html","How to dink","The soft kitchen shot"),("guides/paddle-weight-and-core.html","Paddle weight and core","Ounces and millimetres"),("best-paddles-for-beginners.html","Best paddles for beginners","Spec filter"),("price-index.html","Paddle Price Index","Every recorded maker price")]
+    page("guides.html", "Pickleball guides", '<h1>Pickleball guides</h1><p class="meta">Plain-language guides for new players and paddle shoppers.</p><div class="grid secs">' + "".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">{e(d)} →</div></a>' for f, t, d in gl) + '</div>',
+         "Pickleball guides: choosing a paddle, paddles under $100, beginner rules, how to dink, and paddle weight and core.")
     import content_pages
     content_pages.make(page, e, fmt, PP, cur, ph)

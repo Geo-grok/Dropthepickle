@@ -1,9 +1,14 @@
-// Serves dist/ through env.ASSETS and stores email signups in D1 (binding DB).
+// Serves dist/ through env.ASSETS, stores email signups in D1 (binding DB),
+// and handles /go/<slug> outbound redirects (counted in D1 table go_clicks).
+import GO from "./go-links.json";
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/api/signup" && request.method === "POST") {
       return handleSignup(request, env);
+    }
+    if (url.pathname.startsWith("/go/")) {
+      return handleGo(request, env, ctx, url);
     }
     return env.ASSETS.fetch(request);
   },
@@ -103,4 +108,31 @@ async function handleSignup(request, env) {
   }
 
   return reply(request, true, "Thanks! You're on the list.", 200);
+}
+
+// Builds the destination from src/go-links.json, appending affiliate_tag (a query string) when set.
+export function goTarget(slug) {
+  const entry = GO.links && Object.prototype.hasOwnProperty.call(GO.links, slug) ? GO.links[slug] : null;
+  if (!entry || !/^https?:\/\//.test(entry.url)) return null;
+  const tag = String(entry.affiliate_tag || "").replace(/^[?&]/, "");
+  if (!tag) return entry.url;
+  return entry.url + (entry.url.includes("?") ? "&" : "?") + tag;
+}
+
+async function handleGo(request, env, ctx, url) {
+  const slug = decodeURIComponent(url.pathname.slice(4)).replace(/\/+$/, "").toLowerCase();
+  const target = /^[a-z0-9-]{1,80}$/.test(slug) ? goTarget(slug) : null;
+  if (!target) return Response.redirect(new URL("/deals", url).toString(), 302);
+  if (env.DB) {
+    let ref = null;
+    try { ref = new URL(request.headers.get("referer") || "").pathname.slice(0, 200); } catch {}
+    const write = env.DB.prepare(
+      "INSERT INTO go_clicks (slug, referer_path, country, created_at) VALUES (?, ?, ?, ?)"
+    ).bind(slug, ref, countryFrom(request), new Date().toISOString()).run().catch(() => {});
+    if (ctx && ctx.waitUntil) ctx.waitUntil(write); else await write;
+  }
+  return new Response(null, {
+    status: 302,
+    headers: { location: target, "cache-control": "no-store", "x-robots-tag": "noindex", "referrer-policy": "strict-origin-when-cross-origin" },
+  });
 }
