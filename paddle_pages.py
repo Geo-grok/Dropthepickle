@@ -298,6 +298,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     home = f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>{len(deals)} deals today. <em>Never miss a dink.</em></h1><p>All things pickleball, free. {len(PP)} paddles tracked daily.</p></div></div>
 {top5}</div></section>
 <main>
+{X.get("BUZZ_TEASER","")}
 <h2 id="start">Start here</h2>
 <p class="meta">New to the sport, or shopping for a paddle? These guides use the USA Pickleball rulebook and the maker specs already on this site. No invented prices.</p>
 <div class="grid secs">
@@ -322,6 +323,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
          "All things pickleball, free for everyone. News, paddles, prices, pros, tournaments, videos and guides, all in one place.",
          full=True,
          fresh={"deals": [fresh_p(p) for p in dl[:8]],
+                "buzz": [(b.get("title"), b.get("status")) for b in D("buzz.json").get("items", [])[:3]],
                 "start": ["guides/pickleball-rules-for-beginners.html", "guides/how-to-dink.html", "guides/how-to-choose-a-paddle.html", "guides/paddle-weight-and-core.html", "guides/best-paddles-under-100.html", "price-index.html", "tournaments.html", "creators/ryan-morneau.html"],
                 "reviews": [(v.get("title"), v.get("date"), v.get("link")) for v in R.get("items", [])[:6]],
                 "news": [(n.get("title"), n.get("date"), n.get("link")) for n in N.get("items", [])[:6]],

@@ -7,7 +7,7 @@ def D(n):
     p = ROOT / "data" / n
     return json.loads(p.read_text()) if p.exists() else {"items": []}
 e = lambda s: html.escape(str(s or ""), quote=True)
-NAV = [("index.html","Home"),("tournaments.html","Tournaments"),("reviews.html","Reviews"),
+NAV = [("index.html","Home"),("tournaments.html","Tournaments"),("reviews.html","Reviews"),("buzz.html","Buzz"),
        ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("compare.html","Compare"),("shop.html","Merch"),("community.html","Marketplace")]
 CSS = r"""
 :root{--navy:#0b1630;--navy2:#111d36;--navy3:#16264a;--neon:#c6f432;--neon2:#a8d61c;--warm:#ff7a45;--ink:#0d1526;--mut:#4a5878;--bg:#f4f6fa;--card:#fff;--line:#e3e8f0;--r:18px;--sh:0 1px 2px rgba(11,20,38,.06),0 8px 24px rgba(11,20,38,.08);--sh2:0 2px 4px rgba(11,20,38,.08),0 18px 40px rgba(11,20,38,.16)}
@@ -186,6 +186,9 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .ccopy{min-width:88px;min-height:56px;font-size:1rem}.ccopy.ok{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
 .ccard .cshop{font-weight:800;color:var(--navy);font-size:1rem;padding:.35rem 0}.ccard .cmeta{font-size:.94rem;color:var(--mut)}.ccard .cmeta a{color:var(--mut)}
 .codewarn{background:#fff8e6;border:1px solid #f3d27a;border-radius:12px;padding:.8rem 1rem;color:#5a4300;font-size:.95rem}
+.b-unconf{background:#ffe1d3;color:#b23d0c;border:1px solid #ff7a45}.b-conf{background:#e6f9c2;color:#3b5a00}
+.buzzcard .srcs{font-size:.94rem;margin:.5rem 0 0}.buzzcard .srcs a{margin-right:.6rem}
+.buzzx{margin:.6rem 0}.buzzx .twitter-tweet{margin:.5rem 0!important}
 
 """
 # Always-visible primary tabs (mobile-first). Codes uses the clean /discount-codes URL.
@@ -231,7 +234,7 @@ PADDLE_SVG = '''<svg viewBox="0 0 200 260" width="70%" aria-label="Paddle illust
 COURT = '''<svg class="court" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#c6f432" stroke-width="3"><rect x="120" y="70" width="960" height="460"/><line x1="600" y1="70" x2="600" y2="530"/><line x1="460" y1="70" x2="460" y2="530"/><line x1="740" y1="70" x2="740" y2="530"/><line x1="120" y1="300" x2="460" y2="300"/><line x1="740" y1="300" x2="1080" y2="300"/></g><g stroke="#fff" stroke-width="2" stroke-dasharray="6 10" opacity=".6"><line x1="600" y1="40" x2="600" y2="560"/></g></svg>'''
 HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs><radialGradient id="ballg" cx=".35" cy=".3"><stop offset="0" stop-color="#eaff8a"/><stop offset=".6" stop-color="#c6f432"/><stop offset="1" stop-color="#8db511"/></radialGradient><linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a6b"/><stop offset="1" stop-color="#ff5f2e"/></linearGradient></defs><g transform="rotate(-24 200 200)"><rect x="110" y="40" width="170" height="220" rx="76" fill="url(#pad)"/><rect x="122" y="52" width="146" height="196" rx="66" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/><rect x="178" y="252" width="34" height="110" rx="12" fill="#0b1426"/><rect x="178" y="280" width="34" height="8" fill="#c6f432"/><rect x="178" y="304" width="34" height="8" fill="#c6f432"/></g><circle cx="300" cy="110" r="62" fill="url(#ballg)"/><g fill="#0b1426" opacity=".85"><circle cx="280" cy="85" r="7"/><circle cx="315" cy="78" r="6"/><circle cx="335" cy="110" r="7"/><circle cx="300" cy="112" r="7.5"/><circle cx="270" cy="120" r="6"/><circle cx="292" cy="145" r="6.5"/><circle cx="325" cy="140" r="5.5"/></g><g stroke="#c6f432" stroke-width="4" stroke-linecap="round" opacity=".5"><line x1="210" y1="150" x2="150" y2="170"/><line x1="220" y1="120" x2="170" y2="125"/></g></svg>'''
 
-FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("podcasts.html","Podcasts"),("creators.html","Creators"),("creators/ryan-morneau.html","Ryan Morneau")]),
+FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("buzz.html","Buzz"),("podcasts.html","Podcasts"),("creators.html","Creators"),("creators/ryan-morneau.html","Ryan Morneau")]),
             ("Learn",[("guides/how-to-choose-a-paddle.html","Choose a paddle"),("guides/best-paddles-under-100.html","Under $100 guide"),("guides/pickleball-rules-for-beginners.html","Rules"),("guides/how-to-dink.html","How to dink"),("guides/paddle-weight-and-core.html","Weight and core")]),
             ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("discount-codes.html","Discount codes"),("price-index.html","Price index"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
             ("Company",[("about.html","About"),("disclosure.html","Affiliate disclosure"),("privacy.html","Privacy"),("community.html","Join the community")])]
@@ -322,7 +325,7 @@ def emit_crawl_files():
             "meta-externalagent", "FacebookBot", "cohere-ai", "Diffbot", "AI2Bot", "DuckAssistBot", "MistralAI-User"]
     (DIST / "robots.txt").write_text("\n".join(f"User-agent: {b}\nAllow: /\nDisallow: /go/\n" for b in bots) + f"\nSitemap: {base}/sitemap.xml\n")
     def bullet(p): return f"- [{p['title']}]({canon(p['fn'])}): {p['desc']}"
-    main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html", "discount-codes.html"}
+    main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "buzz.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html", "discount-codes.html"}
     mains = [p for p in pages if p["fn"] in main_names]
     guides = [p for p in pages if p["fn"].startswith(("guides/", "creators/"))]
     paddles = [p for p in pages if p["fn"].startswith(("paddle-", "vs-", "best-"))]
@@ -464,6 +467,19 @@ def build():
     page("news.html", "Pickleball news", f'<h1>Pickleball news</h1><p class="meta">Headlines from public RSS feeds: {", ".join(e(s) for s in C["NEWS_FEEDS"])}. Click through to read on the publisher\'s site.</p><div class="grid">{"".join(ncard(n) for n in N["items"])}</div>',
          "Pickleball headlines from The Dink, Pickleball Union, Major League Pickleball, The Kitchen Pickle and Pickleball Kitchen.",
          fresh=[{k: n.get(k) for k in ("source", "title", "link", "date")} for n in N["items"]])
+    # Pickleball Buzz (hand-curated data/buzz.json; update.py never writes it)
+    B = D("buzz.json")
+    def sbadge(b): return '<span class="tag b-unconf">⚠ Unconfirmed</span>' if b.get("status") != "confirmed" else '<span class="tag b-conf">Confirmed</span>'
+    def bcard(b, full=True):
+        srcs = " ".join(f'<a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a>' for s in b.get("sources", []))
+        emb = "".join(f'<blockquote class="twitter-tweet" data-dnt="true"><a href="{e(u)}">View post on X</a></blockquote>' for u in b.get("embeds", [])) if full else ""
+        tags = " ".join(f'<span class="tag">{e(t)}</span>' for t in b.get("tags", [])) if full else ""
+        return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)} {tags}</div><h3>{e(b["title"])}</h3><div class="meta">{fmt(b.get("date"))}</div><p>{e(b["summary"])}</p>'
+                f'<p class="srcs"><b>Sources:</b> {srcs}</p>{f"<div class={chr(34)}buzzx{chr(34)}>{emb}</div>" if emb else ""}</div>')
+    BUZZ_TEASER = (f'<h2>Pickleball Buzz <a class="seemore" href="buzz.html">All buzz →</a></h2><div class="grid">{"".join(bcard(b, False) for b in B.get("items", [])[:3])}</div>') if B.get("items") else ""
+    page("buzz.html", "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p><div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
+         "Pickleball Buzz: what the pickleball world is talking about, with confirmed stories and clearly labeled rumors, each linked to its sources.",
+         fresh={"updated": B.get("updated"), "items": [(b.get("title"), b.get("status"), b.get("date")) for b in B.get("items", [])]})
     rows = "".join(f'<tr><td><a href="{e(p["profile"])}" target="_blank" rel="noopener"><b>{e(p["name"])}</b></a></td><td>{e(p["country"])}</td><td>{e(p["paddle"])}</td><td>{" ".join(f"<a href={chr(34)}{e(u)}{chr(34)} target=_blank rel=noopener>{k}</a>" for k,u in p["socials"].items())}</td></tr>' for p in P.get("pros", []))
     page("pros.html", "Pro players", f'<h1>Top pro players</h1><p class="meta">Facts from each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Blank means the profile didn\'t list it.</p><div class="tbl"><table><tr><th>Player</th><th>Country</th><th>Paddle (per profile)</th><th>Socials</th></tr>{rows}</table></div>',
          "Country, paddle and social links for top pros, taken from each player's official PPA Tour profile.",
@@ -541,7 +557,7 @@ def build():
          f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="disclosure.html">Disclosure</a>.</p>{copyjs}',
          f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
          fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]})
-    import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
+    import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
     emit_crawl_files()

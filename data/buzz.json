@@ -1,0 +1,289 @@
+{
+ "updated": "2026-10-16T13:45-05:00",
+ "date": "2026-10-16",
+ "source_file": "dtp-newsroom/buzz-2026-10-16.json",
+ "note": "Hand-curated; not touched by update.py.",
+ "items": [
+  {
+   "title": "Screaming & taunting debate erupts after Maria Ford vs. Genie Bouchard (PPA Chicago Cup)",
+   "summary": "Maria Ford's near-constant screams in her Chicago Cup women's singles win over Genie Bouchard went viral (~500K views per Total Pro Sports), and Bouchard declined to tap paddles afterward. No penalty was issued; commentator Jim Kloss posted a draft anti-taunting/anti-screaming rule and Anna Bright, Kate Fahey and others weighed in, but there is NO official PPA rule change.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "The Kitchen",
+     "url": "https://thekitchenpickle.com/blogs/news/pro-pickleball-celebrations-taunting-genie-bouchard-maria-ford/"
+    },
+    {
+     "label": "Total Pro Sports",
+     "url": "https://www.totalprosports.com/tennis/genie-bouchard-pickleball-opponent-video/"
+    },
+    {
+     "label": "@TheKitchenPB on X",
+     "url": "https://x.com/TheKitchenPB/status/2111107557238685704"
+    },
+    {
+     "label": "@pickleball_jim on X",
+     "url": "https://x.com/pickleball_jim/status/2110412512478769280"
+    },
+    {
+     "label": "@Pickleball on X",
+     "url": "https://x.com/Pickleball/status/2110816793254097058"
+    }
+   ],
+   "embeds": [
+    "https://x.com/TheKitchenPB/status/2111107557238685704",
+    "https://x.com/pickleball_jim/status/2110412512478769280",
+    "https://x.com/Pickleball/status/2110816793254097058"
+   ],
+   "social_angle": "Poll: 'Scream or no scream?' carousel with both sides' quotes; clearly label the ban as a fan proposal, not PPA policy.",
+   "tags": [
+    "ppa",
+    "pro-tour",
+    "controversy"
+   ]
+  },
+  {
+   "title": "Anna Leigh Waters hits 200, then 202 PPA titles; 45th Triple Crown",
+   "summary": "Waters won her 200th career PPA title and a record 45th Triple Crown at the Veolia Chicago Cup (Oct 5-11); PPA says the sweep took her to 202 titles, most in tour history. Roscoe Bellamy upset top seed Chris Haworth 11-4, 11-5 for men's singles, and Staksrud/Patriquin took men's doubles.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2110074748613087434"
+    },
+    {
+     "label": "The Dink",
+     "url": "https://www.thedinkpickleball.com/anna-leigh-waters-makes-history-roscoe-bellamy-stuns-chris-haworth-at-ppa-chicago-cup/"
+    },
+    {
+     "label": "PPA Tour news",
+     "url": "https://www.ppatour.com/news/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2110074748613087434"
+   ],
+   "social_angle": "'202' milestone graphic + link to the DTP pros page for ALW.",
+   "tags": [
+    "ppa",
+    "anna-leigh-waters",
+    "results"
+   ]
+  },
+  {
+   "title": "ALW's Manila tour draws big crowds; return set for Dec. 9",
+   "summary": "Waters headlined the Franklin Asia Pickleball Showcase at SM Mall of Asia, and Filipino outlets covered big crowds and fan meet-and-greets. NewsWatch Plus PH reports she returns Dec. 9 for the IAM Worldwide Pickleball Showdown at Smart Araneta Coliseum.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "@ABSCBNNews on X",
+     "url": "https://x.com/ABSCBNNews/status/2110962691917697475"
+    },
+    {
+     "label": "@DYANCASTILLEJO on X",
+     "url": "https://x.com/DYANCASTILLEJO/status/2110337551521477070"
+    },
+    {
+     "label": "@newswatchplusph on X",
+     "url": "https://x.com/newswatchplusph/status/2110678651604009325"
+    }
+   ],
+   "embeds": [
+    "https://x.com/ABSCBNNews/status/2110962691917697475",
+    "https://x.com/DYANCASTILLEJO/status/2110337551521477070",
+    "https://x.com/newswatchplusph/status/2110678651604009325"
+   ],
+   "social_angle": "'Pickleball goes global' post: Asia buzz + the Guangzhou metro courts story (https://x.com/ChinaDaily/status/2110883428854042797).",
+   "tags": [
+    "anna-leigh-waters",
+    "international"
+   ]
+  },
+  {
+   "title": "The Picklr files Chapter 11",
+   "summary": "Indoor franchisor The Picklr filed for Chapter 11 late Oct. 9 to renegotiate lease guarantees on about 40 franchise locations, with $4.8M in DIP financing from Tom Neale's Dynamus Alliance. The CEO says no clubs close as a direct result, but he expects the company to shrink.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "Sports Business Journal",
+     "url": "https://www.sportsbusinessjournal.com/Articles/2026/10/10/the-picklr-files-for-bankruptcy/"
+    },
+    {
+     "label": "@stlouisbiz on X",
+     "url": "https://x.com/stlouisbiz/status/2110989173498794490"
+    }
+   ],
+   "embeds": [
+    "https://x.com/stlouisbiz/status/2110989173498794490"
+   ],
+   "social_angle": "Plain explainer, 'Is my Picklr closing?', facts only.",
+   "tags": [
+    "business",
+    "clubs"
+   ]
+  },
+  {
+   "title": "Club boom meets shakeout: 6 chains grew 145 -> 199 locations",
+   "summary": "The Dink, using Business of Pickleball data, reports six franchise chains grew from 145 to 199 locations between January and September, but September added only 70 net indoor courts (418 were added in June). Ace, Pickleball Kingdom and PickleRage all grew sharply.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "The Dink",
+     "url": "https://www.thedinkpickleball.com/pickleball-clubs-keep-opening-as-some-operators-struggle/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Data chart post: 'Where to play is growing, but slower.'",
+   "tags": [
+    "business",
+    "clubs",
+    "data"
+   ]
+  },
+  {
+   "title": "UPA-A president calls for one paddle certification standard",
+   "summary": "UPA-A President Jason Aspes is calling for USA Pickleball and UPA-A to merge their paddle approval into one list run by an independent technical committee. He also criticizes USA Pickleball's certification of OWL paddles, and those allegations have not been independently verified.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "The Dink",
+     "url": "https://www.thedinkpickleball.com/upa-a-president-calls-for-one-paddle-certification-standard/"
+    },
+    {
+     "label": "@Pickleball on X",
+     "url": "https://x.com/Pickleball/status/2111138906129224081"
+    }
+   ],
+   "embeds": [
+    "https://x.com/Pickleball/status/2111138906129224081"
+   ],
+   "social_angle": "Ties to DTP paddle DB: 'What does paddle approval mean for your paddle?' explainer.",
+   "tags": [
+    "paddles",
+    "equipment",
+    "governance"
+   ]
+  },
+  {
+   "title": "PPA Virginia Beach Open live: Sofia Sewing upsets No. 2 Buckner; Lea Jansen playing hurt",
+   "summary": "Sofia Sewing reached the women's singles quarterfinals with a three-game win over No. 2 seed Brooke Buckner. Pickleball.com reports Lea Jansen is still competing through a serious lower-body injury.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "PPA Tour news",
+     "url": "https://www.ppatour.com/news/"
+    },
+    {
+     "label": "@crackedsportss on X",
+     "url": "https://x.com/crackedsportss/status/2109813014178488498"
+    }
+   ],
+   "embeds": [
+    "https://x.com/crackedsportss/status/2109813014178488498"
+   ],
+   "social_angle": "Live-results card / 'Upset alert' story linking to the DTP tournaments page.",
+   "tags": [
+    "ppa",
+    "results",
+    "live"
+   ]
+  },
+  {
+   "title": "PPA heads Down Under: Australia Pickleball Cup + MLP Australia midseason",
+   "summary": "The PPA's Walker Australia Pickleball Cup in Brisbane is a 1,500-point event with a star-studded field. MLP Australia is at its halfway mark, with the Northern Crocs and The Coasters out in front. A clip of Christian Alshon's roar in front of a near-empty crowd is also going viral.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "@azetice on X",
+     "url": "https://x.com/azetice/status/2109798373641293918"
+    },
+    {
+     "label": "@toddeboss on X",
+     "url": "https://x.com/toddeboss/status/2109997419597332949"
+    },
+    {
+     "label": "@ChrisCaliSNS on X",
+     "url": "https://x.com/ChrisCaliSNS/status/2110896241811013643"
+    }
+   ],
+   "embeds": [
+    "https://x.com/azetice/status/2109798373641293918",
+    "https://x.com/toddeboss/status/2109997419597332949",
+    "https://x.com/ChrisCaliSNS/status/2110896241811013643"
+   ],
+   "social_angle": "Light, fun meme-adjacent post on the Alshon clip (don't mock players); share the schedule with time zones.",
+   "tags": [
+    "ppa",
+    "mlp",
+    "international"
+   ]
+  },
+  {
+   "title": "New PPA late start times divide fans",
+   "summary": "The PPA's later, night-session start times have frustrated some fans. Pickleball.com ran an Oct. 15 piece defending the change, and podcasts are debating it too.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "PPA Tour news",
+     "url": "https://www.ppatour.com/news/"
+    },
+    {
+     "label": "Spot Sports (video)",
+     "url": "https://www.spotsports.com/videos/x9jRVYkxbK"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Quick poll: 'Prime-time pickleball, yes or no?'",
+   "tags": [
+    "ppa",
+    "fans",
+    "scheduling"
+   ]
+  },
+  {
+   "title": "Ben Johns retirement / partnership-shakeup chatter",
+   "summary": "After a slow stretch (podcasters noted he went 0-3 in finals at Las Vegas), a Spot Sports podcast segment discussed 'Ben Johns retirement rumors & partnership chaos'. Johns and the PPA have made no announcement, and this sweep found no credible report.",
+   "status": "unconfirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "Spot Sports (video)",
+     "url": "https://www.spotsports.com/videos/x9jRVYkxbK"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Do NOT post as news. At most, an 'What's next for Ben Johns?' stats look, labeled speculation, or hold.",
+   "tags": [
+    "ben-johns",
+    "rumor"
+   ]
+  },
+  {
+   "title": "Life Time LT Classic amateur series kicks off today (Oct 16-18, San Clemente)",
+   "summary": "Life Time expanded the LT Classic into a quarterly amateur series with more than $20K in total prizes. Stops run in San Clemente, Peachtree Corners (GA), Chicago and Minneapolis through Oct-Nov.",
+   "status": "confirmed",
+   "date": "2026-10-16",
+   "sources": [
+    {
+     "label": "Life Time newsroom",
+     "url": "https://news.lifetime.life/2026-10-13-Life-Time-LT-Classic-National-Pickleball-Tournament-Returns-with-Most-Significant-Prize-Purse-Yet"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Amateur-focused 'Play where the pros play' calendar post.",
+   "tags": [
+    "amateur",
+    "tournaments"
+   ]
+  }
+ ]
+}
