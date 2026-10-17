@@ -1,9 +1,392 @@
 {
- "updated": "2026-10-16T13:45-05:00",
- "date": "2026-10-16",
- "source_file": "dtp-newsroom/buzz-2026-10-16.json",
+ "updated": "2026-10-17T06:40-05:00",
+ "date": "2026-10-17",
+ "source_file": "dtp-newsroom/buzz-2026-10-17.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "PPA Virginia Beach Open: No. 1 seeds fall on the way to Semifinal Saturday",
+   "summary": "Jaume Martinez Vich beat No. 1 seed Roscoe Bellamy 11-2, 11-7 to reach his first singles semifinal since 2025. No. 8 Max Freeman and Jonathan Truong took out No. 1 Klinger/Oncins 2-11, 11-6, 11-6, Layne Sleeth and Nico Acevedo upset No. 1 Pisnik/Khlif in mixed, and Sofia Sewing is into her first career PPA women's singles semifinal. Earlier in the week, Estee Widdershoven beat Genie Bouchard 11-5, 13-11 and Chao Yi Wang ended Maria Ford's run in the quarterfinals. The women's singles semifinalists are Kate Fahey, Chao Yi Wang, Sofia Sewing and Helena Jansen. In men's singles, PickleFitter lists Martinez Vich vs. Adam Harvey and Noe Khlif vs. John Lucian Goins. Semis air today on PickleballTV (11 a.m.-7 p.m. CT) and Tennis Channel (11 a.m.-2 p.m. CT), weather permitting.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111187520235229395"
+    },
+    {
+     "label": "Dinks & Volleys (Vich d. Bellamy)",
+     "url": "https://www.dinksandvolleys.com/pickleball/2026-10-16/vich-bellamy/"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111273119516393658"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111198252590895291"
+    },
+    {
+     "label": "Pickleball Surge (R16 recap)",
+     "url": "https://pickleballsurge.com/virginia-beach-open-2026-singles-round-of-16-sewing-buckner/"
+    },
+    {
+     "label": "PickleFitter (semifinal matchups)",
+     "url": "https://picklefitter.com/tour/this-week"
+    },
+    {
+     "label": "Times Now (semis preview)",
+     "url": "https://www.timesnownews.com/sports/pickleball/virginia-beach-open-semifinals-top-stars-absence-opens-door-for-breakthrough-runs-article-156355277"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111294084300320891"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2111187520235229395",
+    "https://x.com/PPAtour/status/2111273119516393658",
+    "https://x.com/PPAtour/status/2111294084300320891"
+   ],
+   "social_angle": "'Upset Saturday' bracket card: four first-time finalist chances (Sewing, Harvey, Khlif, Freeman). Post the CT watch times and link the DTP tournaments page.",
+   "tags": [
+    "ppa",
+    "results",
+    "live"
+   ]
+  },
+  {
+   "title": "Lea Jansen is playing on a broken patella; out about 3 months and has withdrawn from all remaining 2026 events",
+   "summary": "Pickleball.com reports that Jansen withdrew from singles and mixed at Virginia Beach because of a broken patella in her left leg, but kept playing women's doubles with Kate Fahey. According to The Dink's Erik Tice, she had played on the injured leg since May during the MLP season. She expects to miss about three months and has pulled out of every event for the rest of 2026. Fahey/Jansen then lost 11-7, 11-6 to Alix Truong/Layne Sleeth (per Dinks & Volleys). Jansen said 'there are a lot of things unknown in my career right now' and 'if this is the last time I go out, I'd like to do it with Kate.' She has not announced a retirement.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "Pickleball.com",
+     "url": "https://pickleball.com/news/lea-jansen-on-playing-through-pain-in-virginia-beach-if-this-is-the-last-time-i-go-out-id-like-to-do-it-with-kate"
+    },
+    {
+     "label": "Times Now",
+     "url": "https://www.timesnownews.com/sports/pickleball/lea-jansen-competes-through-broken-leg-at-virginia-beach-open-faces-uncertain-future-article-156350255"
+    },
+    {
+     "label": "Dinks & Volleys (event scores)",
+     "url": "https://www.dinksandvolleys.com/pickleball/ppa-mojo-energy-pouches-virginia-beach-open-2026/"
+    },
+    {
+     "label": "PickleballTV (YouTube match)",
+     "url": "https://www.youtube.com/watch?v=FnHyyake-os"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Respectful 'Get well, Lea' post featuring her quote. Do NOT frame it as a retirement.",
+   "tags": [
+    "ppa",
+    "injury",
+    "players"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy: local fallout and new filing details",
+   "summary": "Business Journals in Houston, Orlando, Seattle and Philadelphia, plus AL.com, the Daily Press and MONTCO.Today, ran local angles in the past day. Houston's angle is that the chain filed halfway through its expansion plans there. Per IAPPF, the parent entity's Aug. 31 balance sheet in the petition shows about $915K in assets, $2.39M in liabilities and seven disputed, contingent guaranty claims of about $783K. SBJ separately reported about $19M in total liabilities as of March, taken from the franchise disclosure document. A debtors' motion asks the court to push the deadline for filing schedules to Nov. 6. The Dink's PicklePod says courts are 'becoming commoditized' and the facility boom could face a 'reality check.' UNCONFIRMED: IAPPF cites unnamed sources who say the lease guarantees total in the millions.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "IAPPF",
+     "url": "https://iappf.org/breaking-picklr-files-for-chapter-11-announces-4-5m-investment-commitment-to-restructure/"
+    },
+    {
+     "label": "Sports Business Journal",
+     "url": "https://www.sportsbusinessjournal.com/Articles/2026/10/10/the-picklr-files-for-bankruptcy/"
+    },
+    {
+     "label": "Fox Business",
+     "url": "https://www.foxbusiness.com/lifestyle/pickleball-facility-franchisor-files-bankruptcy-founder-acknowledges-business-mistake-i-own-it"
+    },
+    {
+     "label": "Court filing (Omni)",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/575dcddb-bd82-426a-8ba4-273d7079d13f_12.pdf"
+    },
+    {
+     "label": "@HOUBizJournal on X",
+     "url": "https://x.com/HOUBizJournal/status/2111220702611227024"
+    },
+    {
+     "label": "@TheKitchenPB on X",
+     "url": "https://x.com/TheKitchenPB/status/2111184547291496500"
+    },
+    {
+     "label": "The Dink on Instagram",
+     "url": "https://www.instagram.com/p/Dej-0nUkbuz/"
+    },
+    {
+     "label": "r/Pickleball thread",
+     "url": "https://www.reddit.com/r/Pickleball/comments/1x7iu9l/burlington_ma_picklr_bankruptcy_and_new_indoor/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/TheKitchenPB/status/2111184547291496500",
+    "https://x.com/HOUBizJournal/status/2111220702611227024"
+   ],
+   "social_angle": "Follow-up explainer: 'What the Picklr filing actually says.' Petition numbers vs. the $19M figure, in plain terms. Keep the 'millions in guarantees' line labeled unconfirmed.",
+   "tags": [
+    "business",
+    "clubs"
+   ]
+  },
+  {
+   "title": "PPA Australia Pickleball Cup: Alshon reaches two finals as his social media manager's run ends",
+   "summary": "In Brisbane, Christian Alshon beat Tama Shimabukuro 11-4, 11-2 to reach the men's singles final, where he meets Hunter Johnson (11-9, 11-3 over Grayson Goldin). Alshon and Parris Todd also reached the mixed final with an 11-8, 11-9 win over Irvine/Patriquin. Gabe Tardio is in two finals: men's doubles with Hayden Patriquin and mixed with Black. Shimabukuro/JW Johnson made the men's doubles final, and Judit Castillo meets Andie Dikosavljevic for the women's singles title. Earlier, Benjamin Bramblett, Alshon's hitting partner and social media manager, filled in after Federico Staksrud's visa issues and reached the men's doubles quarterfinals with him; they lost there to Wall/Wild 11-6, 11-7.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "Dinks & Volleys (event scores)",
+     "url": "https://www.dinksandvolleys.com/pickleball/ppa-walker-australia-pickleball-cup-ppa1500-2026/"
+    },
+    {
+     "label": "Times Now (Bramblett)",
+     "url": "https://www.timesnownews.com/sports/pickleball/christian-alshons-social-media-manager-benjamin-bramblett-makes-surprise-impact-at-pickleball-cup-article-156350091"
+    },
+    {
+     "label": "PPA Tour Australia on Instagram",
+     "url": "https://www.instagram.com/p/DelptcxRyPY/"
+    },
+    {
+     "label": "@BayerRank on X",
+     "url": "https://x.com/BayerRank/status/2111387087853535312"
+    },
+    {
+     "label": "PPA Tour (YouTube semis stream)",
+     "url": "https://www.youtube.com/watch?v=bmMs3alOx98"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Feel-good story: 'From the social media desk to the PPA quarterfinals.' Bramblett's run makes a great carousel.",
+   "tags": [
+    "ppa",
+    "international",
+    "results"
+   ]
+  },
+  {
+   "title": "Worlds countdown: MLP Nations Cup promo push; Mark Wahlberg to headline celebrity showdown",
+   "summary": "MLP is pushing the inaugural MLP Nations Cup (Oct. 30-Nov. 1, Brookhaven Country Club, Farmers Branch, TX): eight regional teams play round robin, then a Sunday single-elimination bracket, to kick off the Opendoor Pickleball World Championships. The PPA says Mark Wahlberg will headline the MUNICIPAL Celebrity Pickleball Showdown on Thursday, Nov. 5 at 7 p.m. CT, live on Tennis Channel, with more participants to be announced. In the same window, USA Pickleball is promoting tickets and merch for its Oceanview National Championships (Oct. 31-Nov. 8, Barnes Tennis Center, San Diego).",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "@MajorLeaguePB on X",
+     "url": "https://x.com/MajorLeaguePB/status/2111180667128021367"
+    },
+    {
+     "label": "MLP (YouTube)",
+     "url": "https://www.youtube.com/watch?v=ucDh2dRLHSg"
+    },
+    {
+     "label": "MLP Nations Cup schedule",
+     "url": "https://majorleaguepickleball.co/news/match-schedule-for-mlp-nations-cup-released/"
+    },
+    {
+     "label": "PPA Tour (Wahlberg)",
+     "url": "https://www.ppatour.com/municipal-celebrity-pickleball-showdown-wahlberg/"
+    },
+    {
+     "label": "USA Pickleball (Nationals dates)",
+     "url": "https://usapickleball.org/usap-news/nationals/usa-pickleball-national-championships-return-to-barnes-tennis-center-in-2026/"
+    },
+    {
+     "label": "USA Pickleball on Instagram",
+     "url": "https://www.instagram.com/p/DekGHFSRYwy/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2111180667128021367"
+   ],
+   "social_angle": "'Your Worlds + Nationals calendar' graphic (Nations Cup, Worlds, Celebrity Showdown, Nationals) with CT times.",
+   "tags": [
+    "mlp",
+    "ppa",
+    "events"
+   ]
+  },
+  {
+   "title": "APP Louisville Open + free PickleY'all festival (Shaggy plays today)",
+   "summary": "The Humana APP Louisville Open runs through Sunday at the Kentucky International Convention Center. General admission is free, but you need to reserve a ticket. The mixed pro doubles gold medal match is Domenika Turkovic/Jay Devilliers vs. Roos Van Reek/Jack Munro. Saturday features pro women's and men's doubles (ESPN+ and YouTube). WLKY says the free PickleY'all festival wraps today with a free Shaggy concert at 3 p.m. CT (4 p.m. ET) on Market Street.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111228917793067368"
+    },
+    {
+     "label": "APP event page",
+     "url": "https://theapp.global/tour-schedule/2026-app-louisville"
+    },
+    {
+     "label": "WLKY",
+     "url": "https://www.wlky.com/article/pickleball-tournament-louisville-festival-downtown/74120049"
+    },
+    {
+     "label": "APPTV (YouTube, Munro/Van Reek)",
+     "url": "https://www.youtube.com/watch?v=mwmPHanV6ak"
+    }
+   ],
+   "embeds": [
+    "https://x.com/OfficialAPPTour/status/2111228917793067368"
+   ],
+   "social_angle": "Amateur/fan angle: 'Free pro pickleball + a Shaggy concert this weekend.' Good local-events content.",
+   "tags": [
+    "app",
+    "events",
+    "amateur"
+   ]
+  },
+  {
+   "title": "Selkirk launches the S2 Pro ball with a 1-year no-crack warranty",
+   "summary": "Selkirk published its S2 Pro introduction on Oct. 16. The ball has a patented 38-hole geodesic design with three hole sizes and a textured surface, plus what Selkirk calls an industry-first 1-Year No-Crack, Out-of-Round Warranty. It is the official ball of the APP Asia Tour. Selkirk's post also lays out the pro ball landscape: Life Time's LT Pro 48 is the official ball of the PPA and MLP, and the Franklin X-40 is the official ball of the APP U.S. Tour. Selkirk is running an Instagram giveaway (entries close 10/19).",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "Selkirk blog",
+     "url": "https://www.selkirk.com/blogs/paddles-and-product-education/introducing-the-s2-pro-the-best-pickleball-ball-for-ball-snobs"
+    },
+    {
+     "label": "Selkirk on Instagram",
+     "url": "https://www.instagram.com/p/DekvfRKtGA9/"
+    },
+    {
+     "label": "Selkirk on TikTok (teaser)",
+     "url": "https://www.tiktok.com/@selkirksport/video/7696185953139870989"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Which ball do the pros use?' explainer (LT Pro 48 vs X-40 vs S2 Pro). Strong gear SEO page.",
+   "tags": [
+    "equipment",
+    "balls"
+   ]
+  },
+  {
+   "title": "Paddle talk: foam paddles 'taking over,' plus RPM Jade and Gearbox Pressure X reviews",
+   "summary": "The Kitchen says full-foam paddles have taken a huge share of the market over the past two years and posted a top-10 foam list. It called the RPM Jade one of its favorites after 20-30 hours of play and named the 11SIX24 Jelly Bean 2 its No. 1 all-court paddle. JohnKew's new 'Gearbox Pressure X Review: These Paddles Feel Backwards' is also drawing views.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "@TheKitchenPB on X",
+     "url": "https://x.com/TheKitchenPB/status/2111158983327465752"
+    },
+    {
+     "label": "@TheKitchenPB on X",
+     "url": "https://x.com/TheKitchenPB/status/2111234483047350464"
+    },
+    {
+     "label": "@TheKitchenPB on X",
+     "url": "https://x.com/TheKitchenPB/status/2111172483776671889"
+    },
+    {
+     "label": "JohnKew Pickleball (YouTube)",
+     "url": "https://www.youtube.com/watch?v=eNRrrKuwoD8"
+    },
+    {
+     "label": "The Kitchen on TikTok",
+     "url": "https://www.tiktok.com/@thekitchenpickleball/video/7697329238919154957"
+    }
+   ],
+   "embeds": [
+    "https://x.com/TheKitchenPB/status/2111158983327465752"
+   ],
+   "social_angle": "Link the DTP paddle DB / compare pages: 'Foam vs. carbon: what changed in two years.'",
+   "tags": [
+    "paddles",
+    "equipment",
+    "reviews"
+   ]
+  },
+  {
+   "title": "Screaming debate, day 3: a Fahey 'academy' joke while Maria Ford's run ends",
+   "summary": "The celebration and screaming debate is still going. An Instagram post from @lethercook.pb tagging Kate Fahey jokingly invited fans to join a 'Strong Fierce Woman Academy' and nodded to the 'social media discourse.' Commentators are still weighing in, for example: 'is the celebration aimed at your partner or at your opponent?' On court, Maria Ford's Virginia Beach run ended in the women's singles quarterfinals against Chao Yi Wang. The PPA still has not announced any rule change.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "@lethercook.pb on Instagram",
+     "url": "https://www.instagram.com/p/DekQ_3KIUbC/"
+    },
+    {
+     "label": "@donniccolo on X",
+     "url": "https://x.com/donniccolo/status/2111253358254100629"
+    },
+    {
+     "label": "PPA Tour (YouTube, Wang vs. Ford)",
+     "url": "https://www.youtube.com/watch?v=jayebRfkd28"
+    }
+   ],
+   "embeds": [
+    "https://x.com/donniccolo/status/2111253358254100629"
+   ],
+   "social_angle": "Keep the poll alive with a lighter tone. Don't pile on any player.",
+   "tags": [
+    "ppa",
+    "controversy",
+    "fans"
+   ]
+  },
+  {
+   "title": "Staksrud on the $400K Fives trade (Pickleballers podcast)",
+   "summary": "On The Kitchen's Pickleballers podcast (S5 E2, Oct. 15) with Roscoe Bellamy and Jared Paul, Federico Staksrud discusses his late-deadline MLP trade from the Orlando Squeeze to the New Jersey 5s and the pressure of its $400K price tag. He also covers reuniting with Hayden Patriquin and why he calls Anna Leigh Waters the most competitive person he has ever met. He missed Brisbane this week because of visa issues, per Alshon.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "Pickleballers (YouTube episode)",
+     "url": "https://www.youtube.com/watch?v=OepwUOKagcs"
+    },
+    {
+     "label": "Times Now (visa note)",
+     "url": "https://www.timesnownews.com/sports/pickleball/christian-alshons-social-media-manager-benjamin-bramblett-makes-surprise-impact-at-pickleball-cup-article-156350091"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Quote card from the episode (pull quotes directly from the video, not paraphrased).",
+   "tags": [
+    "mlp",
+    "podcasts",
+    "players"
+   ]
+  },
+  {
+   "title": "Pickleball's Philippine moment continues: ALW's thank-you post; about 800 players at Bacolod's Benitez Million Cup",
+   "summary": "Anna Leigh Waters' 'The Philippines has my heart' Instagram post was the most-liked post in DTP's Instagram sweep (about 9K likes). The Daily Guardian reports that around 800 players converged on Bacolod City for the inaugural Benitez Million Pickleball Cup, a three-day event that combined competition, wellness and charity during the MassKara Festival.",
+   "status": "confirmed",
+   "date": "2026-10-17",
+   "sources": [
+    {
+     "label": "Anna Leigh Waters on Instagram",
+     "url": "https://www.instagram.com/p/DejzTrxm-fH/"
+    },
+    {
+     "label": "@dailyguardianph on X",
+     "url": "https://x.com/dailyguardianph/status/2111306209374396454"
+    },
+    {
+     "label": "Daily Guardian",
+     "url": "https://www.dailyguardian.com.ph/blog/where-pickleball-meets-purpose"
+    }
+   ],
+   "embeds": [
+    "https://x.com/dailyguardianph/status/2111306209374396454"
+   ],
+   "social_angle": "Global-growth roundup post (pairs with yesterday's Manila/Guangzhou items).",
+   "tags": [
+    "anna-leigh-waters",
+    "international"
+   ]
+  },
   {
    "title": "Screaming & taunting debate erupts after Maria Ford vs. Genie Bouchard (PPA Chicago Cup)",
    "summary": "Maria Ford's near-constant screams in her Chicago Cup women's singles win over Genie Bouchard went viral (~500K views per Total Pro Sports), and Bouchard declined to tap paddles afterward. No penalty was issued; commentator Jim Kloss posted a draft anti-taunting/anti-screaming rule and Anna Bright, Kate Fahey and others weighed in, but there is NO official PPA rule change.",
