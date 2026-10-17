@@ -1,7 +1,72 @@
 {
- "updated": "2026-10-16",
+ "updated": "2026-10-17",
  "method": "Each code was re-checked today on the creator or brand page listed as its source.",
  "codes": [
+  {
+   "brand": "11SIX24",
+   "code": "BK10",
+   "discount": "$10 off",
+   "conditions": "All products on the 11SIX24 site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://11six24.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "11SIX24",
+   "code": "KITCHEN",
+   "discount": "$10 off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://11six24.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "11SIX24",
+   "code": "NICOTHELEFTY",
+   "discount": "$10 off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://11six24.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Aireo",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.aireo-sports.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Aireo",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.aireo-sports.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
   {
    "brand": "Bread & Butter",
    "code": "BK15",
@@ -13,7 +78,7 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Bread & Butter",
@@ -26,7 +91,7 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Bread & Butter",
@@ -39,7 +104,7 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Bread & Butter",
@@ -52,7 +117,7 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Bread & Butter",
@@ -65,7 +130,33 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Chorus",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://choruspickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Chorus",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://choruspickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   },
   {
    "brand": "CRBN",
@@ -78,7 +169,7 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "CRBN",
@@ -91,7 +182,7 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "CRBN",
@@ -104,7 +195,7 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "CRBN",
@@ -117,7 +208,33 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "CRBN",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://crbnpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Diadem",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://diademsports.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   },
   {
    "brand": "Engage",
@@ -130,7 +247,7 @@
    "expiry": null,
    "shop_url": "https://engagepickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Engage",
@@ -143,7 +260,7 @@
    "expiry": null,
    "shop_url": "https://engagepickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Engage",
@@ -156,7 +273,7 @@
    "expiry": null,
    "shop_url": "https://engagepickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Engage",
@@ -169,7 +286,72 @@
    "expiry": null,
    "shop_url": "https://engagepickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Enhance",
+   "code": "KITCHEN",
+   "discount": "$20 off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://enhancepickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Enhance",
+   "code": "NICOTHELEFTY",
+   "discount": "$20 off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://enhancepickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Enhance",
+   "code": "BKPB",
+   "discount": "Free shipping",
+   "conditions": "Free shipping on the Enhance site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://enhancepickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Ethos",
+   "code": "BK20",
+   "discount": "20% off",
+   "conditions": "All products on the Ethos site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.ethospickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Flik",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://flikpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   },
   {
    "brand": "Franklin",
@@ -182,7 +364,7 @@
    "expiry": null,
    "shop_url": "https://franklinsports.com/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Franklin",
@@ -195,7 +377,7 @@
    "expiry": null,
    "shop_url": "https://franklinsports.com/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Franklin",
@@ -208,7 +390,33 @@
    "expiry": null,
    "shop_url": "https://franklinsports.com/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Friday",
+   "code": "KITCHEN",
+   "discount": "$10 off",
+   "conditions": "All paddles",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.fridaypickle.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Friday",
+   "code": "NICOTHELEFTY",
+   "discount": "$10 off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.fridaypickle.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   },
   {
    "brand": "Fromuth",
@@ -221,7 +429,7 @@
    "expiry": null,
    "shop_url": "https://fromuthpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Gearbox",
@@ -234,7 +442,7 @@
    "expiry": null,
    "shop_url": "https://gearboxsports.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Gearbox",
@@ -247,7 +455,7 @@
    "expiry": null,
    "shop_url": "https://gearboxsports.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Gearbox",
@@ -260,7 +468,7 @@
    "expiry": null,
    "shop_url": "https://gearboxsports.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Gearbox",
@@ -273,7 +481,46 @@
    "expiry": null,
    "shop_url": "https://gearboxsports.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Gherkin",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.gherkinusa.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "GRUVN",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the GRUVN site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://gruvn.co/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "GRUVN",
+   "code": "KITCHENPB",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://gruvn.co/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   },
   {
    "brand": "HEAD",
@@ -286,7 +533,7 @@
    "expiry": null,
    "shop_url": "https://www.head.com/en_US/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "HEAD",
@@ -299,7 +546,7 @@
    "expiry": null,
    "shop_url": "https://www.head.com/en_US/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "HEAD",
@@ -312,7 +559,189 @@
    "expiry": null,
    "shop_url": "https://www.head.com/en_US/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Holbrook",
+   "code": "BK15",
+   "discount": "15% off",
+   "conditions": "All products on the Holbrook site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://holbrookpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Holbrook",
+   "code": "KITCHEN",
+   "discount": "15% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://holbrookpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Honolulu",
+   "code": "BKPB",
+   "discount": "10% off",
+   "conditions": "All products on the Honolulu site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://808pickle.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Honolulu",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://808pickle.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Honolulu",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://808pickle.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "iPickl",
+   "code": "NICOTHELEFTY",
+   "discount": "20% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://ipickl.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Luzz",
+   "code": "BK15",
+   "discount": "15% off",
+   "conditions": "All products on the Luzz site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://luzzpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Luzz",
+   "code": "KITCHEN",
+   "discount": "15% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://luzzpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Luzz",
+   "code": "NICOTHELEFTY",
+   "discount": "15% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://luzzpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "MARK",
+   "code": "BKPB",
+   "discount": "10% off",
+   "conditions": "All products on the MARK site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://markpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Neonic",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the Neonic site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://neonicpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Neonic",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://neonicpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Neonic",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://neonicpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Nexus",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the Nexus site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.nexuspickleballusa.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   },
   {
    "brand": "Onix",
@@ -325,7 +754,163 @@
    "expiry": null,
    "shop_url": "https://www.onixpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Pickleball Apes",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the Pickleball Apes site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.pickleballapes.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Pickleball Apes",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.pickleballapes.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Pickleball Apes",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.pickleballapes.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Potenza",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the Potenza site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://potenzapickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Proton",
+   "code": "NICOTHELEFTY",
+   "discount": "20% off",
+   "conditions": "Paddles, not the Project Coyote",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://protonsports.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Proton",
+   "code": "KITCHEN",
+   "discount": "15% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://protonsports.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Robust",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the Robust site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.robustpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Ronbus",
+   "code": "BK20",
+   "discount": "$20 off",
+   "conditions": "All products on the Ronbus site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.ronbus.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Ronbus",
+   "code": "NICOTHELEFTY",
+   "discount": "$20 off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.ronbus.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "RPM",
+   "code": "BK15",
+   "discount": "15% off",
+   "conditions": "All products on the RPM site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://rpmpb.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "RPM",
+   "code": "KITCHEN",
+   "discount": "15% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://rpmpb.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "RPM",
+   "code": "NICOTHELEFTY",
+   "discount": "15% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://rpmpb.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   },
   {
    "brand": "Selkirk",
@@ -338,7 +923,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Selkirk",
@@ -351,7 +936,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Selkirk",
@@ -364,7 +949,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Selkirk",
@@ -377,7 +962,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Selkirk",
@@ -390,7 +975,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Six Zero",
@@ -403,7 +988,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Six Zero",
@@ -416,7 +1001,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Six Zero",
@@ -429,7 +1014,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Six Zero",
@@ -442,7 +1027,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Six Zero",
@@ -455,7 +1040,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Six Zero",
@@ -468,7 +1053,85 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Spartus",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the Spartus site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://gospartus.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Spartus",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://gospartus.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Speedup",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://speeduppickle.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Standout",
+   "code": "10BK",
+   "discount": "10% off",
+   "conditions": "All products on the Standout site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://standoutpickleball.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "The Rowdy Pickle",
+   "code": "BK10",
+   "discount": "15% off",
+   "conditions": "All products on The Rowdy Pickle site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://therowdypaddle.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Thrive",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://thrivepb.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   },
   {
    "brand": "Vatic Pro",
@@ -481,7 +1144,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Vatic Pro",
@@ -494,7 +1157,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Vatic Pro",
@@ -507,7 +1170,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Vatic Pro",
@@ -520,7 +1183,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Vatic Pro",
@@ -533,7 +1196,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
   },
   {
    "brand": "Vatic Pro",
@@ -546,7 +1209,72 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-16"
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Volair",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the Volair site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.volair.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Volair",
+   "code": "KITCHEN",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.volair.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Volair",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.volair.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Warping Point",
+   "code": "BK10",
+   "discount": "10% off",
+   "conditions": "All products on the Warping Point site",
+   "source": "BK Pickleball",
+   "source_url": "https://www.bk-pickleball.com/discounts",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://warpingpoint.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
+  },
+  {
+   "brand": "Warping Point",
+   "code": "THEKITCHENPICKLE",
+   "discount": "10% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://warpingpoint.com/",
+   "first_seen": "2026-10-17",
+   "verified": "2026-10-17"
   }
  ],
  "removed": [],

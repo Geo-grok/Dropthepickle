@@ -1,8 +1,24 @@
 {
  "_note": "slug -> destination. affiliate_tag is an optional query string (e.g. ref=dtp) the Worker appends. Leave empty until joined.",
  "links": {
+  "11six24-home": {
+   "url": "https://11six24.com/",
+   "affiliate_tag": ""
+  },
+  "808pickle-home": {
+   "url": "https://808pickle.com/",
+   "affiliate_tag": ""
+  },
+  "aireo-sports-home": {
+   "url": "https://www.aireo-sports.com/",
+   "affiliate_tag": ""
+  },
   "breadandbutterpickleball-home": {
    "url": "https://breadandbutterpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "choruspickleball-home": {
+   "url": "https://choruspickleball.com/",
    "affiliate_tag": ""
   },
   "crbnpickleball-crbn-1x-power-series-pickleball-paddle": {
@@ -25,6 +41,10 @@
    "url": "https://crbnpickleball.com/products/tfb1",
    "affiliate_tag": ""
   },
+  "diademsports-home": {
+   "url": "https://diademsports.com/",
+   "affiliate_tag": ""
+  },
   "engagepickleball-engage-axiom-elongated-pickleball-paddle": {
    "url": "https://engagepickleball.com/products/engage-axiom-elongated-pickleball-paddle",
    "affiliate_tag": ""
@@ -41,8 +61,24 @@
    "url": "https://engagepickleball.com/",
    "affiliate_tag": ""
   },
+  "enhancepickleball-home": {
+   "url": "https://enhancepickleball.com/",
+   "affiliate_tag": ""
+  },
+  "ethospickleball-home": {
+   "url": "https://www.ethospickleball.com/",
+   "affiliate_tag": ""
+  },
+  "flikpickleball-home": {
+   "url": "https://flikpickleball.com/",
+   "affiliate_tag": ""
+  },
   "franklinsports-pickleball": {
    "url": "https://franklinsports.com/pickleball",
+   "affiliate_tag": ""
+  },
+  "fridaypickle-home": {
+   "url": "https://www.fridaypickle.com/",
    "affiliate_tag": ""
   },
   "fromuthpickleball-home": {
@@ -65,8 +101,28 @@
    "url": "https://gearboxsports.com/products/pressurex-8e-pickleball-paddle",
    "affiliate_tag": ""
   },
+  "gherkinusa-home": {
+   "url": "https://www.gherkinusa.com/",
+   "affiliate_tag": ""
+  },
+  "gospartus-home": {
+   "url": "https://gospartus.com/",
+   "affiliate_tag": ""
+  },
+  "gruvn-home": {
+   "url": "https://gruvn.co/",
+   "affiliate_tag": ""
+  },
   "head-pickleball": {
    "url": "https://www.head.com/en_US/pickleball",
+   "affiliate_tag": ""
+  },
+  "holbrookpickleball-home": {
+   "url": "https://holbrookpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "ipickl-home": {
+   "url": "https://ipickl.com/",
    "affiliate_tag": ""
   },
   "joola-joola-hyperion-pro-v-pickleball-paddle": {
@@ -93,12 +149,28 @@
    "url": "https://joola.com/products/scorpeus-pro-v-pickleball-paddle",
    "affiliate_tag": ""
   },
+  "luzzpickleball-home": {
+   "url": "https://luzzpickleball.com/",
+   "affiliate_tag": ""
+  },
   "luzzpickleball-luzz-cannon-xpp-m1-paddle": {
    "url": "https://luzzpickleball.com/products/luzz-cannon-xpp-m1-paddle",
    "affiliate_tag": ""
   },
   "luzzpickleball-luzz-glider-2026": {
    "url": "https://luzzpickleball.com/products/luzz-glider-2026",
+   "affiliate_tag": ""
+  },
+  "markpickleball-home": {
+   "url": "https://markpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "neonicpickleball-home": {
+   "url": "https://neonicpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "nexuspickleballusa-home": {
+   "url": "https://www.nexuspickleballusa.com/",
    "affiliate_tag": ""
   },
   "onixpickleball-home": {
@@ -115,6 +187,30 @@
   },
   "paddletek-tempest-wave-pro-c": {
    "url": "https://paddletek.com/products/tempest-wave-pro-c",
+   "affiliate_tag": ""
+  },
+  "pickleballapes-home": {
+   "url": "https://www.pickleballapes.com/",
+   "affiliate_tag": ""
+  },
+  "potenzapickleball-home": {
+   "url": "https://potenzapickleball.com/",
+   "affiliate_tag": ""
+  },
+  "protonsports-home": {
+   "url": "https://protonsports.com/",
+   "affiliate_tag": ""
+  },
+  "robustpickleball-home": {
+   "url": "https://www.robustpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "ronbus-home": {
+   "url": "https://www.ronbus.com/",
+   "affiliate_tag": ""
+  },
+  "rpmpb-home": {
+   "url": "https://rpmpb.com/",
    "affiliate_tag": ""
   },
   "selkirk-home": {
@@ -161,8 +257,32 @@
    "url": "https://sixzeropickleball.com/products/ruby",
    "affiliate_tag": ""
   },
+  "speeduppickle-home": {
+   "url": "https://speeduppickle.com/",
+   "affiliate_tag": ""
+  },
+  "standoutpickleball-home": {
+   "url": "https://standoutpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "therowdypaddle-home": {
+   "url": "https://therowdypaddle.com/",
+   "affiliate_tag": ""
+  },
+  "thrivepb-home": {
+   "url": "https://thrivepb.com/",
+   "affiliate_tag": ""
+  },
   "vaticpro-home": {
    "url": "https://vaticpro.com/",
+   "affiliate_tag": ""
+  },
+  "volair-home": {
+   "url": "https://www.volair.com/",
+   "affiliate_tag": ""
+  },
+  "warpingpoint-home": {
+   "url": "https://warpingpoint.com/",
    "affiliate_tag": ""
   }
  }
