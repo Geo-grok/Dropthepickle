@@ -44,7 +44,38 @@
   "Speedup": "https://speeduppickle.com/",
   "Gherkin": "https://www.gherkinusa.com/",
   "Thrive": "https://thrivepb.com/",
-  "iPickl": "https://ipickl.com/"
+  "iPickl": "https://ipickl.com/",
+  "Babolat": "https://www.babolat.com/us/pickleball.html",
+  "Pakle": "https://paklepickleball.com/",
+  "Aiso": "https://aisopickleball.com/",
+  "Avoura": "https://avourapickleball.com/",
+  "Dymon": "https://dymon1.com/",
+  "Element 6": "https://e6pickleball.com/",
+  "F+B": "https://fandbsports.com/",
+  "Facolos": "https://facolospickleball.com/",
+  "Gamma": "https://gammasports.com/",
+  "Godfather": "https://godfatherpickleball.com/",
+  "Hudef": "https://hudefsport.com/",
+  "Maverix": "https://www.maverixpickleball.com/",
+  "NOX": "https://noxsportusa.com/",
+  "OM": "https://ompickleball.com/",
+  "Pickle Poppers": "https://www.pickle-poppers.com/",
+  "PICKLN": "https://pickln.com/",
+  "PIKKL": "https://pikkl.com/",
+  "ProDrive": "https://prodrivepickleball.com/",
+  "Reload": "https://www.reloadpickleball.com/",
+  "Revolin": "https://revolinpickleball.com/",
+  "Rokne": "https://roknepickleball.com/",
+  "Scoop": "https://scooppickleball.com/",
+  "Synergy": "https://synergypickleball.com/",
+  "Thompson": "https://thompsonpickleball.com/",
+  "Body Helix": "https://www.bodyhelix.com/",
+  "Foam Pickleball": "https://foampickleball.com/",
+  "JOYSENT": "https://www.joysentsport.com/",
+  "Vanwin": "https://vanwinsports.com/",
+  "Ram Sports": "https://ramsports.com/",
+  "ERNE": "https://ernepickleballmachine.com/",
+  "UDrippin": "https://www.udrippin.com/"
  },
  "sources": [
   {
@@ -104,6 +135,129 @@
      "code": "PBEFFECT",
      "discount": "15% off",
      "conditions": "Paddles, shoes and gear"
+    },
+    {
+     "brand": "11SIX24",
+     "code": "PBEFFECT",
+     "discount": "$10 off",
+     "conditions": "All paddles"
+    },
+    {
+     "brand": "Babolat",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Paddles, Jet Mach 4s and shoes"
+    },
+    {
+     "brand": "Chorus",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "All paddles and gear"
+    },
+    {
+     "brand": "Diadem",
+     "code": "PBEFFECT",
+     "discount": "15% off",
+     "conditions": "Paddles, shoes and bags"
+    },
+    {
+     "brand": "Enhance",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Paddles; free shipping on the Dink Master 3.0"
+    },
+    {
+     "brand": "Friday",
+     "code": "PBEFFECT",
+     "discount": "Up to 10% off",
+     "conditions": "Paddles and gear"
+    },
+    {
+     "brand": "GRUVN",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "All paddles and gear"
+    },
+    {
+     "brand": "Holbrook",
+     "code": "PBEFFECT",
+     "discount": "15% off",
+     "conditions": "All paddles and gear"
+    },
+    {
+     "brand": "Honolulu",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "All paddles",
+     "match": "Honolulu Pickleball"
+    },
+    {
+     "brand": "Luzz",
+     "code": "PBEFFECT",
+     "discount": "15% off",
+     "conditions": "All paddles and gear",
+     "match": "LUZZ Pickleball"
+    },
+    {
+     "brand": "MARK",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "All paddles and gear",
+     "match": "MARK Pickleball"
+    },
+    {
+     "brand": "Neonic",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "All paddles and gear"
+    },
+    {
+     "brand": "Pakle",
+     "code": "PBEFFECT",
+     "discount": "15% off",
+     "conditions": "All paddles"
+    },
+    {
+     "brand": "Pickleball Apes",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Paddles and gear"
+    },
+    {
+     "brand": "Proton",
+     "code": "PBEFFECT",
+     "discount": "15% off",
+     "conditions": "Paddles and gear"
+    },
+    {
+     "brand": "Ronbus",
+     "code": "PBEFFECT",
+     "discount": "$20 off",
+     "conditions": "All paddles"
+    },
+    {
+     "brand": "RPM",
+     "code": "PBEFFECT",
+     "discount": "15% off",
+     "conditions": "Paddles and gear"
+    },
+    {
+     "brand": "Spartus",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "All paddles"
+    },
+    {
+     "brand": "Thrive",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "All paddles and gear"
+    },
+    {
+     "brand": "Volair",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Paddles and gear"
     }
    ]
   },
@@ -155,6 +309,316 @@
     },
     {
      "brand": "HEAD",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "11SIX24",
+     "code": "JOHNKEW",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Aireo",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Aiso",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Avoura",
+     "code": "JOHNKEW",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Babolat",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Body Helix",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Chorus",
+     "code": "JOHNKEW",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Diadem",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Dymon",
+     "code": "JOHNKEW",
+     "discount": "20% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Element 6",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Enhance",
+     "code": "JOHNKEW",
+     "discount": "$20 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Ethos",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "F+B",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Facolos",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Flik",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout",
+     "match": "FLIK"
+    },
+    {
+     "brand": "Friday",
+     "code": "JOHNKEW",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Gamma",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Gherkin",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Godfather",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "GRUVN",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Holbrook",
+     "code": "JOHNKEW",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Honolulu",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout",
+     "match": "Honolulu Pickleball Co."
+    },
+    {
+     "brand": "Hudef",
+     "code": "JOHNKEW",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Luzz",
+     "code": "JOHNKEW",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "MARK",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout",
+     "match": "Mark"
+    },
+    {
+     "brand": "Maverix",
+     "code": "JOHNKEW",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Neonic",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Nexus",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "NOX",
+     "code": "JOHNKEW",
+     "discount": "25% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "OM",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Pakle",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout",
+     "match": "PAKLE"
+    },
+    {
+     "brand": "Pickle Poppers",
+     "code": "JOHNKEW",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Pickleball Apes",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "PICKLN",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "PIKKL",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "ProDrive",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Proton",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Reload",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Revolin",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Rokne",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Ronbus",
+     "code": "JOHNKEW",
+     "discount": "$20 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "RPM",
+     "code": "JOHNKEW",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Scoop",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Spartus",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Speedup",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Standout",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Synergy",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Thompson",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Thrive",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Volair",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Warping Point",
      "code": "JOHNKEW",
      "discount": "10% off",
      "conditions": "Brand site checkout"
@@ -502,6 +966,18 @@
      "code": "KITCHEN",
      "discount": "10% off",
      "conditions": "All products"
+    },
+    {
+     "brand": "ERNE",
+     "code": "KITCHEN",
+     "discount": "5% off",
+     "conditions": "All products"
+    },
+    {
+     "brand": "UDrippin",
+     "code": "KITCHEN",
+     "discount": "15% off",
+     "conditions": "All products"
     }
    ]
   },
@@ -645,6 +1121,49 @@
      "brand": "Volair",
      "code": "NICOTHELEFTY",
      "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Foam Pickleball",
+     "code": "NICOTHELEFTY",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Gherkin",
+     "code": "NICOTHELEFTY",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "JOYSENT",
+     "code": "NICOTHELEFTY",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "MARK",
+     "code": "NICOTHELEFTY",
+     "discount": "10% off",
+     "conditions": "Brand site checkout",
+     "match": "Mark Pickleball"
+    },
+    {
+     "brand": "Ram Sports",
+     "code": "NICOTHELEFTY",
+     "discount": "10% off",
+     "conditions": "Paddles"
+    },
+    {
+     "brand": "Speedup",
+     "code": "NICOTHELEFTY",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Vanwin",
+     "code": "NICOTHELEFTY",
+     "discount": "16% off",
      "conditions": "Brand site checkout"
     }
    ]

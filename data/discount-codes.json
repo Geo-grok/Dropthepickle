@@ -1,7 +1,33 @@
 {
- "updated": "2026-10-17",
+ "updated": "2026-10-18",
  "method": "Each code was re-checked today on the creator or brand page listed as its source.",
  "codes": [
+  {
+   "brand": "11SIX24",
+   "code": "PBEFFECT",
+   "discount": "$10 off",
+   "conditions": "All paddles",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://11six24.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "11SIX24",
+   "code": "JOHNKEW",
+   "discount": "$10 off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://11six24.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
   {
    "brand": "11SIX24",
    "code": "BK10",
@@ -13,7 +39,7 @@
    "expiry": null,
    "shop_url": "https://11six24.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "11SIX24",
@@ -26,7 +52,7 @@
    "expiry": null,
    "shop_url": "https://11six24.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "11SIX24",
@@ -39,7 +65,20 @@
    "expiry": null,
    "shop_url": "https://11six24.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Aireo",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.aireo-sports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Aireo",
@@ -52,7 +91,7 @@
    "expiry": null,
    "shop_url": "https://www.aireo-sports.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Aireo",
@@ -65,7 +104,72 @@
    "expiry": null,
    "shop_url": "https://www.aireo-sports.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Aiso",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://aisopickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Avoura",
+   "code": "JOHNKEW",
+   "discount": "$10 off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://avourapickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Babolat",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "Paddles, Jet Mach 4s and shoes",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://www.babolat.com/us/pickleball.html",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Babolat",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.babolat.com/us/pickleball.html",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Body Helix",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.bodyhelix.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Bread & Butter",
@@ -78,7 +182,7 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Bread & Butter",
@@ -91,7 +195,7 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Bread & Butter",
@@ -104,7 +208,7 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Bread & Butter",
@@ -117,7 +221,7 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Bread & Butter",
@@ -130,7 +234,20 @@
    "expiry": null,
    "shop_url": "https://breadandbutterpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Chorus",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "All paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://choruspickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Chorus",
@@ -143,7 +260,7 @@
    "expiry": null,
    "shop_url": "https://choruspickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Chorus",
@@ -156,7 +273,20 @@
    "expiry": null,
    "shop_url": "https://choruspickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Chorus",
+   "code": "JOHNKEW",
+   "discount": "$10 off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://choruspickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "CRBN",
@@ -169,7 +299,7 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "CRBN",
@@ -182,7 +312,7 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "CRBN",
@@ -195,7 +325,7 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "CRBN",
@@ -208,7 +338,7 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "CRBN",
@@ -221,7 +351,33 @@
    "expiry": null,
    "shop_url": "https://crbnpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Diadem",
+   "code": "PBEFFECT",
+   "discount": "15% off",
+   "conditions": "Paddles, shoes and bags",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://diademsports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Diadem",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://diademsports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Diadem",
@@ -234,7 +390,33 @@
    "expiry": null,
    "shop_url": "https://diademsports.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Dymon",
+   "code": "JOHNKEW",
+   "discount": "20% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://dymon1.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Element 6",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://e6pickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Engage",
@@ -247,7 +429,7 @@
    "expiry": null,
    "shop_url": "https://engagepickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Engage",
@@ -260,7 +442,7 @@
    "expiry": null,
    "shop_url": "https://engagepickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Engage",
@@ -273,7 +455,7 @@
    "expiry": null,
    "shop_url": "https://engagepickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Engage",
@@ -286,7 +468,33 @@
    "expiry": null,
    "shop_url": "https://engagepickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Enhance",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "Paddles; free shipping on the Dink Master 3.0",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://enhancepickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Enhance",
+   "code": "JOHNKEW",
+   "discount": "$20 off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://enhancepickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Enhance",
@@ -299,7 +507,7 @@
    "expiry": null,
    "shop_url": "https://enhancepickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Enhance",
@@ -312,7 +520,7 @@
    "expiry": null,
    "shop_url": "https://enhancepickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Enhance",
@@ -325,7 +533,20 @@
    "expiry": null,
    "shop_url": "https://enhancepickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "ERNE",
+   "code": "KITCHEN",
+   "discount": "5% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://ernepickleballmachine.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Ethos",
@@ -338,7 +559,59 @@
    "expiry": null,
    "shop_url": "https://www.ethospickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Ethos",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.ethospickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "F+B",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://fandbsports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Facolos",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://facolospickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Flik",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://flikpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Flik",
@@ -351,7 +624,20 @@
    "expiry": null,
    "shop_url": "https://flikpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Foam Pickleball",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://foampickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Franklin",
@@ -364,7 +650,7 @@
    "expiry": null,
    "shop_url": "https://franklinsports.com/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Franklin",
@@ -377,7 +663,7 @@
    "expiry": null,
    "shop_url": "https://franklinsports.com/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Franklin",
@@ -390,7 +676,33 @@
    "expiry": null,
    "shop_url": "https://franklinsports.com/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Friday",
+   "code": "PBEFFECT",
+   "discount": "Up to 10% off",
+   "conditions": "Paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://www.fridaypickle.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Friday",
+   "code": "JOHNKEW",
+   "discount": "$10 off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.fridaypickle.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Friday",
@@ -403,7 +715,7 @@
    "expiry": null,
    "shop_url": "https://www.fridaypickle.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Friday",
@@ -416,7 +728,7 @@
    "expiry": null,
    "shop_url": "https://www.fridaypickle.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Fromuth",
@@ -429,7 +741,20 @@
    "expiry": null,
    "shop_url": "https://fromuthpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Gamma",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://gammasports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Gearbox",
@@ -442,7 +767,7 @@
    "expiry": null,
    "shop_url": "https://gearboxsports.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Gearbox",
@@ -455,7 +780,7 @@
    "expiry": null,
    "shop_url": "https://gearboxsports.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Gearbox",
@@ -468,7 +793,7 @@
    "expiry": null,
    "shop_url": "https://gearboxsports.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Gearbox",
@@ -481,7 +806,20 @@
    "expiry": null,
    "shop_url": "https://gearboxsports.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Gherkin",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.gherkinusa.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Gherkin",
@@ -494,7 +832,59 @@
    "expiry": null,
    "shop_url": "https://www.gherkinusa.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Gherkin",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.gherkinusa.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Godfather",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://godfatherpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "GRUVN",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "All paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://gruvn.co/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "GRUVN",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://gruvn.co/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "GRUVN",
@@ -507,7 +897,7 @@
    "expiry": null,
    "shop_url": "https://gruvn.co/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "GRUVN",
@@ -520,7 +910,7 @@
    "expiry": null,
    "shop_url": "https://gruvn.co/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "HEAD",
@@ -533,7 +923,7 @@
    "expiry": null,
    "shop_url": "https://www.head.com/en_US/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "HEAD",
@@ -546,7 +936,7 @@
    "expiry": null,
    "shop_url": "https://www.head.com/en_US/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "HEAD",
@@ -559,7 +949,33 @@
    "expiry": null,
    "shop_url": "https://www.head.com/en_US/pickleball",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Holbrook",
+   "code": "PBEFFECT",
+   "discount": "15% off",
+   "conditions": "All paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://holbrookpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Holbrook",
+   "code": "JOHNKEW",
+   "discount": "15% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://holbrookpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Holbrook",
@@ -572,7 +988,7 @@
    "expiry": null,
    "shop_url": "https://holbrookpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Holbrook",
@@ -585,7 +1001,33 @@
    "expiry": null,
    "shop_url": "https://holbrookpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Honolulu",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "All paddles",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://808pickle.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Honolulu",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://808pickle.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Honolulu",
@@ -598,7 +1040,7 @@
    "expiry": null,
    "shop_url": "https://808pickle.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Honolulu",
@@ -611,7 +1053,7 @@
    "expiry": null,
    "shop_url": "https://808pickle.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Honolulu",
@@ -624,7 +1066,20 @@
    "expiry": null,
    "shop_url": "https://808pickle.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Hudef",
+   "code": "JOHNKEW",
+   "discount": "15% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://hudefsport.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "iPickl",
@@ -637,7 +1092,46 @@
    "expiry": null,
    "shop_url": "https://ipickl.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "JOYSENT",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.joysentsport.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Luzz",
+   "code": "PBEFFECT",
+   "discount": "15% off",
+   "conditions": "All paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://luzzpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Luzz",
+   "code": "JOHNKEW",
+   "discount": "15% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://luzzpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Luzz",
@@ -650,7 +1144,7 @@
    "expiry": null,
    "shop_url": "https://luzzpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Luzz",
@@ -663,7 +1157,7 @@
    "expiry": null,
    "shop_url": "https://luzzpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Luzz",
@@ -676,7 +1170,33 @@
    "expiry": null,
    "shop_url": "https://luzzpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "MARK",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "All paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://markpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "MARK",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://markpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "MARK",
@@ -689,7 +1209,59 @@
    "expiry": null,
    "shop_url": "https://markpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "MARK",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://markpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Maverix",
+   "code": "JOHNKEW",
+   "discount": "15% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.maverixpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Neonic",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "All paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://neonicpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Neonic",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://neonicpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Neonic",
@@ -702,7 +1274,7 @@
    "expiry": null,
    "shop_url": "https://neonicpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Neonic",
@@ -715,7 +1287,7 @@
    "expiry": null,
    "shop_url": "https://neonicpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Neonic",
@@ -728,7 +1300,20 @@
    "expiry": null,
    "shop_url": "https://neonicpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Nexus",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.nexuspickleballusa.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Nexus",
@@ -741,7 +1326,33 @@
    "expiry": null,
    "shop_url": "https://www.nexuspickleballusa.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "NOX",
+   "code": "JOHNKEW",
+   "discount": "25% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://noxsportusa.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "OM",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://ompickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Onix",
@@ -754,7 +1365,72 @@
    "expiry": null,
    "shop_url": "https://www.onixpickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Pakle",
+   "code": "PBEFFECT",
+   "discount": "15% off",
+   "conditions": "All paddles",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://paklepickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Pakle",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://paklepickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Pickle Poppers",
+   "code": "JOHNKEW",
+   "discount": "15% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.pickle-poppers.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Pickleball Apes",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "Paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://www.pickleballapes.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Pickleball Apes",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.pickleballapes.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Pickleball Apes",
@@ -767,7 +1443,7 @@
    "expiry": null,
    "shop_url": "https://www.pickleballapes.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Pickleball Apes",
@@ -780,7 +1456,7 @@
    "expiry": null,
    "shop_url": "https://www.pickleballapes.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Pickleball Apes",
@@ -793,7 +1469,33 @@
    "expiry": null,
    "shop_url": "https://www.pickleballapes.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "PICKLN",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://pickln.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "PIKKL",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://pikkl.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Potenza",
@@ -806,7 +1508,20 @@
    "expiry": null,
    "shop_url": "https://potenzapickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "ProDrive",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://prodrivepickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Proton",
@@ -819,7 +1534,20 @@
    "expiry": null,
    "shop_url": "https://protonsports.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Proton",
+   "code": "PBEFFECT",
+   "discount": "15% off",
+   "conditions": "Paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://protonsports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Proton",
@@ -832,7 +1560,59 @@
    "expiry": null,
    "shop_url": "https://protonsports.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Proton",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://protonsports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Ram Sports",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Paddles",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://ramsports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Reload",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.reloadpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Revolin",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://revolinpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Robust",
@@ -845,7 +1625,46 @@
    "expiry": null,
    "shop_url": "https://www.robustpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Rokne",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://roknepickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Ronbus",
+   "code": "PBEFFECT",
+   "discount": "$20 off",
+   "conditions": "All paddles",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://www.ronbus.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Ronbus",
+   "code": "JOHNKEW",
+   "discount": "$20 off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.ronbus.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Ronbus",
@@ -858,7 +1677,7 @@
    "expiry": null,
    "shop_url": "https://www.ronbus.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Ronbus",
@@ -871,7 +1690,33 @@
    "expiry": null,
    "shop_url": "https://www.ronbus.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "RPM",
+   "code": "PBEFFECT",
+   "discount": "15% off",
+   "conditions": "Paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://rpmpb.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "RPM",
+   "code": "JOHNKEW",
+   "discount": "15% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://rpmpb.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "RPM",
@@ -884,7 +1729,7 @@
    "expiry": null,
    "shop_url": "https://rpmpb.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "RPM",
@@ -897,7 +1742,7 @@
    "expiry": null,
    "shop_url": "https://rpmpb.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "RPM",
@@ -910,7 +1755,20 @@
    "expiry": null,
    "shop_url": "https://rpmpb.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Scoop",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://scooppickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Selkirk",
@@ -923,7 +1781,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Selkirk",
@@ -936,7 +1794,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Selkirk",
@@ -949,7 +1807,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Selkirk",
@@ -962,7 +1820,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Selkirk",
@@ -975,7 +1833,7 @@
    "expiry": null,
    "shop_url": "https://www.selkirk.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Six Zero",
@@ -988,7 +1846,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Six Zero",
@@ -1001,7 +1859,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Six Zero",
@@ -1014,7 +1872,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Six Zero",
@@ -1027,7 +1885,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Six Zero",
@@ -1040,7 +1898,7 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Six Zero",
@@ -1053,7 +1911,33 @@
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Spartus",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "All paddles",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://gospartus.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Spartus",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://gospartus.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Spartus",
@@ -1066,7 +1950,7 @@
    "expiry": null,
    "shop_url": "https://gospartus.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Spartus",
@@ -1079,7 +1963,20 @@
    "expiry": null,
    "shop_url": "https://gospartus.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Speedup",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://speeduppickle.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Speedup",
@@ -1092,7 +1989,33 @@
    "expiry": null,
    "shop_url": "https://speeduppickle.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Speedup",
+   "code": "NICOTHELEFTY",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://speeduppickle.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Standout",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://standoutpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Standout",
@@ -1105,7 +2028,20 @@
    "expiry": null,
    "shop_url": "https://standoutpickleball.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Synergy",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://synergypickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "The Rowdy Pickle",
@@ -1118,7 +2054,46 @@
    "expiry": null,
    "shop_url": "https://therowdypaddle.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Thompson",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://thompsonpickleball.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Thrive",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "All paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://thrivepb.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Thrive",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://thrivepb.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Thrive",
@@ -1131,7 +2106,33 @@
    "expiry": null,
    "shop_url": "https://thrivepb.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "UDrippin",
+   "code": "KITCHEN",
+   "discount": "15% off",
+   "conditions": "All products",
+   "source": "The Kitchen Pickleball",
+   "source_url": "https://thekitchenpickle.com/discounts/",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://www.udrippin.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Vanwin",
+   "code": "NICOTHELEFTY",
+   "discount": "16% off",
+   "conditions": "Brand site checkout",
+   "source": "Nico the Lefty",
+   "source_url": "https://www.nicothelefty.com/deals",
+   "source_date": null,
+   "expiry": null,
+   "shop_url": "https://vanwinsports.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Vatic Pro",
@@ -1144,7 +2145,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Vatic Pro",
@@ -1157,7 +2158,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Vatic Pro",
@@ -1170,7 +2171,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Vatic Pro",
@@ -1183,7 +2184,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Vatic Pro",
@@ -1196,7 +2197,7 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Vatic Pro",
@@ -1209,7 +2210,33 @@
    "expiry": null,
    "shop_url": "https://vaticpro.com/",
    "first_seen": "2026-10-16",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Volair",
+   "code": "PBEFFECT",
+   "discount": "10% off",
+   "conditions": "Paddles and gear",
+   "source": "Pickleball Effect (Braydon Unsicker)",
+   "source_url": "https://pickleballeffect.com/discounts/",
+   "source_date": "September 2026",
+   "expiry": null,
+   "shop_url": "https://www.volair.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Volair",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://www.volair.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Volair",
@@ -1222,7 +2249,7 @@
    "expiry": null,
    "shop_url": "https://www.volair.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Volair",
@@ -1235,7 +2262,7 @@
    "expiry": null,
    "shop_url": "https://www.volair.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Volair",
@@ -1248,7 +2275,20 @@
    "expiry": null,
    "shop_url": "https://www.volair.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
+  },
+  {
+   "brand": "Warping Point",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://warpingpoint.com/",
+   "first_seen": "2026-10-18",
+   "verified": "2026-10-18"
   },
   {
    "brand": "Warping Point",
@@ -1261,7 +2301,7 @@
    "expiry": null,
    "shop_url": "https://warpingpoint.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   },
   {
    "brand": "Warping Point",
@@ -1274,7 +2314,7 @@
    "expiry": null,
    "shop_url": "https://warpingpoint.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-17"
+   "verified": "2026-10-18"
   }
  ],
  "removed": [],
