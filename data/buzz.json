@@ -1,9 +1,333 @@
 {
- "updated": "2026-10-17T06:40-05:00",
- "date": "2026-10-17",
- "source_file": "dtp-newsroom/buzz-2026-10-17.json",
+ "updated": "2026-10-18T06:22-05:00",
+ "date": "2026-10-18",
+ "source_file": "dtp-newsroom/buzz-2026-10-18.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "PPA Virginia Beach: rain pushes semis past 8 p.m.; 18-year-old Goins meets Martinez Vich in today's final",
+   "summary": "Rain held up Saturday's play at the Mojo Energy Pouches Virginia Beach Open for about eight hours, per The Virginian-Pilot, so the singles and mixed doubles semifinals didn't start until after 8 p.m. ET. In men's singles, No. 5 John Lucian Goins (18, of Bradenton, Fla.) beat No. 2 Noe Khlif 13-11, 11-1 and will face No. 6 Jaume Martinez Vich, who beat No. 7 Adam Harvey 11-4, 11-6. In women's singles, top seed Kate Fahey reached the final on a walkover over No. 4 Chao Yi Wang. Her opponent is No. 21 Helena Jansen, who came back to beat No. 19 Sofia Sewing 12-14, 11-2, 11-9 for her first career semifinal win, per the PPA. The mixed final is Fahey/Eric Oncins (11-4, 11-6 over Daescu/Dizon) against Catherine Parenteau/Riley Newman (11-9, 4-11, 11-8 over Sleeth/Acevedo). Per the PPA, it's Parenteau/Newman's first mixed final together since 2024. The men's and women's doubles semifinals moved to 7 a.m. CT today. Finals start at 9 a.m. CT on PickleballTV, and Tennis Channel airs 9 a.m.-1 p.m. CT. All times depend on the weather.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "The Virginian-Pilot",
+     "url": "https://www.pilotonline.com/2026/10/18/18-year-old-floridian-to-meet-spaniard-in-mens-final-at-pickleball-virginia-beach/"
+    },
+    {
+     "label": "Dinks & Volleys (event scores)",
+     "url": "https://www.dinksandvolleys.com/pickleball/ppa-mojo-energy-pouches-virginia-beach-open-2026/"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111609784273391833"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111638189341651195"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111648390912327836"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111655706332156020"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111678795552100375"
+    },
+    {
+     "label": "PPA Tour (YouTube, Khlif vs. Goins)",
+     "url": "https://www.youtube.com/watch?v=w3R9HazQTE0"
+    },
+    {
+     "label": "The Kitchen (YouTube, upsets recap)",
+     "url": "https://www.youtube.com/watch?v=4UBJf61iZa0"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2111678795552100375",
+    "https://x.com/PPAtour/status/2111681430946541798",
+    "https://x.com/PPAtour/status/2111638189341651195"
+   ],
+   "social_angle": "'Teen vs. ex-tennis pro' final card: Goins (18) vs. Martinez Vich, plus Fahey's shot at a singles/mixed double. Post the CT times and update the DTP tournaments page right after the finals.",
+   "tags": [
+    "ppa",
+    "results",
+    "live"
+   ]
+  },
+  {
+   "title": "PPA Australia Pickleball Cup: Tardio and Black win two titles each; Alshon runner-up twice",
+   "summary": "Gabe Tardio and Tyra Black each won two titles on Championship Sunday in Brisbane. Black/Tardio beat Parris Todd/Christian Alshon 7-11, 11-6, 11-7 in mixed. Tardio/Hayden Patriquin beat Tama Shimabukuro/JW Johnson 3-11, 11-6, 11-7 in men's doubles. Black/Jorja Johnson beat Todd/Danni-Elle Townsend 11-5, 11-6 in women's doubles. Hunter Johnson came back to beat Alshon 8-11, 11-5, 11-8 for the men's singles title, Alshon's second runner-up finish of the day. Australia's Andie Dikosavljevic, the No. 7 seed, beat Judit Castillo 11-6, 11-6 for the women's singles title. BayerRank's prediction model had given her a 4% title chance.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "Dinks & Volleys (event scores)",
+     "url": "https://www.dinksandvolleys.com/pickleball/ppa-walker-australia-pickleball-cup-ppa1500-2026/"
+    },
+    {
+     "label": "Times Now",
+     "url": "https://www.timesnownews.com/sports/pickleball/australia-pickleball-cup-double-delight-for-gabe-tardio-tyra-black-christian-alshon-falls-short-twice-article-156360567"
+    },
+    {
+     "label": "PPA Tour (YouTube, finals stream)",
+     "url": "https://www.youtube.com/watch?v=srHkeOYYOf0"
+    },
+    {
+     "label": "PPA Tour Australia on Instagram",
+     "url": "https://www.instagram.com/p/Den_P8Ax5af/"
+    },
+    {
+     "label": "@BayerRank on X",
+     "url": "https://x.com/BayerRank/status/2111760690310775066"
+    },
+    {
+     "label": "@Pickleballnowin on X",
+     "url": "https://x.com/Pickleballnowin/status/2111722896796373259"
+    }
+   ],
+   "embeds": [
+    "https://x.com/BayerRank/status/2111760690310775066"
+   ],
+   "social_angle": "Results carousel: 'Two titles each for Tardio and Black,' plus a 'Home hero' slide for Dikosavljevic (No. 7 seed, given a 4% title chance by BayerRank).",
+   "tags": [
+    "ppa",
+    "international",
+    "results"
+   ]
+  },
+  {
+   "title": "Franklin Malaysia apologizes after fans say ALW's Kuala Lumpur showcase was oversold",
+   "summary": "Per the New Straits Times, Franklin Malaysia apologized to fans who went to the Anna Leigh Waters Asia Pro Showcase at 91 Pickleball, Hextar World @ Empire City in Kuala Lumpur. Fans had complained about overcrowding, long entry lines and too little seating, and some VIP package holders said they missed the merchandise and meet-and-greet they paid for, with some asking for full refunds. Franklin said: 'We acknowledge where we fell short, and we take responsibility for making things right.' It promised a dedicated channel for affected attendees but did not say when that channel would open or what the remedies would be. Meanwhile, a 'mother and daughter firefight' clip of Waters from the showcase is one of the top pickleball posts on Instagram today.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "New Straits Times",
+     "url": "https://www.nst.com.my/news/regional/2026/10/1557989/franklin-malaysia-apologises-after-fans-complain-overcrowding"
+    },
+    {
+     "label": "@NST_Online on X",
+     "url": "https://x.com/NST_Online/status/2111636787521053086"
+    },
+    {
+     "label": "@asiapickleballtv on Instagram",
+     "url": "https://www.instagram.com/p/DemS5DRTU6d/"
+    },
+    {
+     "label": "The Pickle Parlour (event listing)",
+     "url": "https://thepickleparlour.com/products/franklin-pickleball-asia-pro-showcase-3-x-anna-leigh-water"
+    }
+   ],
+   "embeds": [
+    "https://x.com/NST_Online/status/2111636787521053086"
+   ],
+   "social_angle": "Neutral fan-service explainer: 'Before you buy a pro meet-and-greet package: capacity, what's included, refund terms.' Don't pile on; Franklin has apologized.",
+   "tags": [
+    "anna-leigh-waters",
+    "international",
+    "events",
+    "fans"
+   ]
+  },
+  {
+   "title": "APP Louisville: Livornese Jr./Munro win again; Stewart/Oshiro take their first gold as a pair",
+   "summary": "At the Humana APP Louisville Open, Richard Livornese Jr. and Jack Munro beat Zack Marceau/Aidan Schenk 12-10, 11-2 for the men's pro doubles gold. The APP's preview said they came in with six straight men's pro doubles titles this season, which makes this seven. An APP social post put the streak at eight, so we are using the preview's count. Kat Stewart and Bobbi Oshiro won their first gold as a team, 11-2, 11-9 over Glauka Carvajal Lane/Domenika Turkovic. The bronzes went to Shelby Bates/Christine Maddox and Tanner Tomassi/Jay Devilliers. Earlier, No. 31 seeds Shay Hugo/Kevin Caufield upset the No. 2 seeds in the first round. Munro goes for another gold today in the mixed final with Roos Van Reek against Turkovic/Devilliers. The remaining bronze matches start at 10 a.m. CT. Also today: CBS Sports re-airs the APP Columbus Open at 3 p.m. CT.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111548617181757864"
+    },
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111555992395579838"
+    },
+    {
+     "label": "APP Louisville preview",
+     "url": "https://www.theapp.global/news/louisville-preview-2026"
+    },
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111574815257534510"
+    },
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111482823072686283"
+    },
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111626032499323274"
+    },
+    {
+     "label": "APPTV (YouTube, Van Reek/Munro to the final)",
+     "url": "https://www.youtube.com/watch?v=XeSrP8w-XeY"
+    }
+   ],
+   "embeds": [
+    "https://x.com/OfficialAPPTour/status/2111548617181757864",
+    "https://x.com/OfficialAPPTour/status/2111555992395579838"
+   ],
+   "social_angle": "'Can anyone beat Munro/Livornese?' streak graphic (use the APP preview count). Add a CT TV note for the CBS Sports replay.",
+   "tags": [
+    "app",
+    "results"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy: first-day court hearing set for Monday at 1:30 p.m. CT",
+   "summary": "A notice filed Oct. 16 in The Picklr's Chapter 11 (Subchapter V) case sets an emergency first-day hearing for Monday, Oct. 19 at 1:30 p.m. CT. It will be held by Webex before Judge Scott W. Everett of the U.S. Bankruptcy Court for the Northern District of Texas in Dallas. The court will take up five requests: jointly administering the Picklr, Inc. and Picklr Clubs Inc. cases, interim postpetition (DIP) financing, keeping the current cash-management system, paying prepetition wages and benefits, and getting more time to file schedules and financial statements. Business Journals coverage continued Saturday, repeating the roughly $19M in total liabilities first reported by SBJ.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "Court notice of hearing (Omni)",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/9933fcbf-119d-42dc-b070-fa12b1399715_13.pdf"
+    },
+    {
+     "label": "Picklr case page (Omni)",
+     "url": "https://cases.omniagentsolutions.com/?clientId=3812"
+    },
+    {
+     "label": "@StLouis_Inno on X",
+     "url": "https://x.com/StLouis_Inno/status/2111483657730826604"
+    },
+    {
+     "label": "Sports Business Journal",
+     "url": "https://www.sportsbusinessjournal.com/Articles/2026/10/10/the-picklr-files-for-bankruptcy/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Short 'What happens Monday in the Picklr case' explainer, with a promised follow-up after the hearing. Stick to the filings and don't speculate about closures.",
+   "tags": [
+    "business",
+    "clubs"
+   ]
+  },
+  {
+   "title": "Next up: PPA Tour Asia's Hong Kong Slam (Oct. 19-25), where seven players can complete the 'dragon' medal set",
+   "summary": "The Hang Seng Bank Hong Kong Slam (PPA Asia 1500) at Kai Tak Arena closes out the 2026 PPA Tour Asia season. This year, each medal is a piece of a 'dragon' set, and the head is only awarded in Hong Kong. Seven players arrive with the other two pieces and can complete the set by reaching a final: Tama Shimabukuro, Alix Truong, Sahra Dennehy, Danni-Elle Townsend, Hien Truong, Len Yang and Joey Wild. Shimabukuro (15) and Alix Truong could win an all-gold 'golden dragon' with a title. Christopher Haworth makes his Asia debut in mixed with Alix Truong, and Federico Staksrud teams with Townsend in mixed.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "PPA Tour Asia",
+     "url": "https://www.ppatour-asia.com/seven-stand-to-complete-the-dragon-in-hong-kong/"
+    },
+    {
+     "label": "Times Now",
+     "url": "https://www.timesnownews.com/sports/pickleball/seven-players-target-dragon-medal-glory-at-hong-kong-slam-article-156360854"
+    },
+    {
+     "label": "@Pickleballnowin on X",
+     "url": "https://x.com/Pickleballnowin/status/2111737372539052373"
+    },
+    {
+     "label": "JOOLA on Instagram",
+     "url": "https://www.instagram.com/p/DenSamkxbAd/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Chase the Dragon' explainer graphic: who needs what in Hong Kong. Good cross-promo while the U.S. tour heads into Worlds.",
+   "tags": [
+    "ppa",
+    "international",
+    "events"
+   ]
+  },
+  {
+   "title": "PicklePod clips: compassion vs. competition, 'guess the DUPR,' and why only about 1% of rated players are 5.0+",
+   "summary": "The Dink is pushing clips from its latest PicklePod, in which Zane Navratil and Nico (@NicoTheLefty) debate whether compassion has a place in pro pickleball, play 'guess the DUPR' from highlights, and compare 5.0 ratings across cities. The '1% are 5.0' line comes from DUPR data The Dink published Oct. 7. About 1% of global DUPR doubles players with a result in the past 12 months are rated 5.0 or higher, about 5% are 4.5+, about 16% are 4.0+, and the most common range is 3.0-3.499 (29%). The snapshot is as of Sept. 22.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "@Pickleball on X",
+     "url": "https://x.com/Pickleball/status/2111547825561428076"
+    },
+    {
+     "label": "@Pickleball on X",
+     "url": "https://x.com/Pickleball/status/2111477334997926331"
+    },
+    {
+     "label": "The Dink (YouTube, 'Only 1% of Pickleball Players Are 5.0')",
+     "url": "https://www.youtube.com/watch?v=ZNwJcuYFbNY"
+    },
+    {
+     "label": "The Dink (DUPR percentiles)",
+     "url": "https://www.thedinkpickleball.com/dupr-rating-percentiles-where-does-your-rating-rank/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/Pickleball/status/2111547825561428076",
+    "https://x.com/Pickleball/status/2111477334997926331"
+   ],
+   "social_angle": "Interactive post: 'Guess the DUPR' plus a percentile chart ('Are you top 16%?'). Link the DTP ratings explainer.",
+   "tags": [
+    "podcasts",
+    "data",
+    "amateur"
+   ]
+  },
+  {
+   "title": "Viral watch: The Kitchen's 'Brazilian youngens' clip takes off; ATEEZ members play pickleball",
+   "summary": "The Kitchen's clip of 'two Brazilian youngens masterfully controlling the hard court' had about 193K TikTok plays within hours of posting (Apify snapshot around 6:15 a.m. CT). It is also on X, Instagram, Facebook and YouTube Shorts. The Kitchen doesn't name the players, so we are not identifying them. Separately, X News reports that ATEEZ's Hongjoong posted photos from an indoor pickleball session with bandmates Yeosang and Yunho, and fans have been sharing them widely.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "The Kitchen on TikTok",
+     "url": "https://www.tiktok.com/@thekitchenpickleball/video/7697815298950417677"
+    },
+    {
+     "label": "@TheKitchenPB on X",
+     "url": "https://x.com/TheKitchenPB/status/2111629897370124328"
+    },
+    {
+     "label": "The Kitchen (YouTube Short)",
+     "url": "https://www.youtube.com/watch?v=wo806BOIWfw"
+    },
+    {
+     "label": "X News story (ATEEZ)",
+     "url": "https://x.com/i/trending/2111611564449309065"
+    }
+   ],
+   "embeds": [
+    "https://x.com/TheKitchenPB/status/2111629897370124328"
+   ],
+   "social_angle": "Embed The Kitchen's clip with a 'Name these players?' prompt (don't guess names). The K-pop crossover makes a light 'celebs who play' roundup.",
+   "tags": [
+    "fans",
+    "international"
+   ]
+  },
+  {
+   "title": "Courts watch: Fresno opens new pickleball courts at Roeding Park",
+   "summary": "Fresno Mayor Jerry Dyer and Councilmember Miguel Arias cut the ribbon Friday on new pickleball and multi-use courts at Roeding Park in West Central Fresno. The project turned existing tennis courts into spaces for pickleball, basketball and futsal, per FOX26/KMPH. Local outlets also covered a weekend of charity tournaments and other court openings.",
+   "status": "confirmed",
+   "date": "2026-10-18",
+   "sources": [
+    {
+     "label": "KMPH FOX26",
+     "url": "https://kmph.com/news/local/ribbon-cutting-marks-completion-of-new-pickleball-and-multi-use-courts-at-roeding-park"
+    },
+    {
+     "label": "ABC30 Fresno",
+     "url": "https://abc30.com/post/new-pickleball-courts-unveiled-fresnos-roeding-park/19948709/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Add to a 'New courts near you' map/roundup and invite readers to submit court openings.",
+   "tags": [
+    "clubs",
+    "amateur"
+   ]
+  },
   {
    "title": "PPA Virginia Beach Open: No. 1 seeds fall on the way to Semifinal Saturday",
    "summary": "Jaume Martinez Vich beat No. 1 seed Roscoe Bellamy 11-2, 11-7 to reach his first singles semifinal since 2025. No. 8 Max Freeman and Jonathan Truong took out No. 1 Klinger/Oncins 2-11, 11-6, 11-6, Layne Sleeth and Nico Acevedo upset No. 1 Pisnik/Khlif in mixed, and Sofia Sewing is into her first career PPA women's singles semifinal. Earlier in the week, Estee Widdershoven beat Genie Bouchard 11-5, 13-11 and Chao Yi Wang ended Maria Ford's run in the quarterfinals. The women's singles semifinalists are Kate Fahey, Chao Yi Wang, Sofia Sewing and Helena Jansen. In men's singles, PickleFitter lists Martinez Vich vs. Adam Harvey and Noe Khlif vs. John Lucian Goins. Semis air today on PickleballTV (11 a.m.-7 p.m. CT) and Tennis Channel (11 a.m.-2 p.m. CT), weather permitting.",
