@@ -12,10 +12,13 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 KEY = (ROOT / "data" / "indexnow-key.txt").read_text().strip()
 HOST = "dropthepickle.com"
 ENDPOINT = "https://api.indexnow.org/indexnow"
+# Cloudflare rejects the default Python user agent on the sitemap.
+UA = "DropThePickle-IndexNow/1.0 (+https://dropthepickle.com)"
 
 def urls_from(src):
     if src.startswith("http"):
-        xml = urllib.request.urlopen(src, timeout=30).read().decode("utf-8", "replace")
+        req = urllib.request.Request(src, headers={"User-Agent": UA, "Accept": "application/xml"})
+        xml = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
     else:
         xml = pathlib.Path(src).read_text()
     return re.findall(r"<loc>\s*([^<]+?)\s*</loc>", xml)
