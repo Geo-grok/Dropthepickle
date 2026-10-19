@@ -185,6 +185,20 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .ccode{flex:1;min-width:0;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.35rem;font-weight:800;letter-spacing:0;background:var(--navy);color:var(--neon);border:2px dashed var(--neon);border-radius:12px;padding:.85rem .7rem;cursor:pointer;text-align:center;overflow-wrap:anywhere;min-height:56px}
 .ccopy{min-width:88px;min-height:56px;font-size:1rem}.ccopy.ok{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
 .ccard .cshop{font-weight:800;color:var(--navy);font-size:1rem;padding:.35rem 0}.ccard .cmeta{font-size:.94rem;color:var(--mut)}.ccard .cmeta a{color:var(--mut)}
+/* discount-codes email nudge (mobile-first) */
+.nudge{background:#0b1630;border:1px solid #16264a;border-radius:16px;padding:18px 16px;margin:16px 0 20px;color:#e6ecf5;font-size:16px;line-height:1.5}
+.nudge h2{margin:0 0 6px;color:#fff;font-size:22px;line-height:1.2}.nudge h2::before{box-shadow:none}
+.nudge p{margin:0 0 12px;font-size:16px;color:#e6ecf5}
+.nudge form{display:flex;flex-direction:column;gap:10px;margin:0}.nudge form[hidden]{display:none}
+.nudge .nudge-in{display:block;font-family:inherit;width:100%;max-width:none;min-width:0;box-sizing:border-box;min-height:48px;padding:12px 14px;font-size:16px;border-radius:12px;border:2px solid #16264a;background:#fff;color:#0b1630}
+.nudge .nudge-in:focus{outline:3px solid #c6f432;outline-offset:2px}
+.nudge .nudge-btn{justify-content:center;font-family:inherit;min-height:48px;padding:12px 20px;font-size:17px;font-weight:800;background:#c6f432;color:#0b1630;border-radius:12px;box-shadow:none}
+.nudge .nudge-btn:disabled{opacity:.7;cursor:wait}
+.nudge .nudge-msg{margin:10px 0 0;font-size:16px;font-weight:700;min-height:0}.nudge .nudge-msg:empty{display:none}
+.nudge .nudge-msg.ok{color:#c6f432}.nudge .nudge-msg.err{color:#ffb4a8}
+.nudge .nudge-note{margin:10px 0 0;font-size:15px;color:#b8c4dc}.nudge .nudge-note a{color:#c6f432}
+.nudge .sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (min-width:560px){.nudge{padding:22px 24px}.nudge form{flex-direction:row}.nudge .nudge-in{flex:1}.nudge .nudge-btn{flex:none}}
 .codewarn{background:#fff8e6;border:1px solid #f3d27a;border-radius:12px;padding:.8rem 1rem;color:#5a4300;font-size:.95rem}
 .b-unconf{background:#ffe1d3;color:#b23d0c;border:1px solid #ff7a45}.b-conf{background:#e6f9c2;color:#3b5a00}
 .buzzcard .srcs{font-size:.94rem;margin:.5rem 0 0}.buzzcard .srcs a{margin-right:.6rem}
@@ -376,7 +390,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 const tab=document.querySelector('.tabs a.on');if(tab)tab.scrollIntoView({{inline:'nearest',block:'nearest'}});
 if('IntersectionObserver'in window){{const io=new IntersectionObserver(es=>es.forEach(x=>{{if(x.isIntersecting){{x.target.classList.add('in');io.unobserve(x.target)}}}}),{{rootMargin:'0px 0px -40px 0px'}});
 document.querySelectorAll('main .card,main .pro,.band').forEach(el=>{{el.classList.add('rv');io.observe(el)}})}}
-document.querySelectorAll('form[action$="/api/signup"]').forEach(f=>f.addEventListener('submit',async ev=>{{ev.preventDefault();const btn=f.querySelector('button');if(btn)btn.disabled=true;let ok=false,msg="Thanks! You're on the list.";try{{const res=await fetch(f.action,{{method:'POST',body:new FormData(f),headers:{{Accept:'application/json'}}}});const data=await res.json().catch(()=>null);ok=!!(res.ok&&data&&data.ok);if(data&&data.message)msg=data.message;else if(!res.ok)msg='Something went wrong. Please try again.'}}catch(err){{msg='Could not reach the signup service. Please try again.'}}if(ok){{const p=document.createElement('p');p.textContent=msg;f.replaceWith(p)}}else{{if(btn)btn.disabled=false;let p=f.querySelector('.signup-msg');if(!p){{p=document.createElement('p');p.className='signup-msg meta';f.append(p)}}p.textContent=msg}}}}))}})()
+document.querySelectorAll('form[action$="/api/signup"]:not(.nudge-form)').forEach(f=>f.addEventListener('submit',async ev=>{{ev.preventDefault();const btn=f.querySelector('button');if(btn)btn.disabled=true;let ok=false,msg="Thanks! You're on the list.";try{{const res=await fetch(f.action,{{method:'POST',body:new FormData(f),headers:{{Accept:'application/json'}}}});const data=await res.json().catch(()=>null);ok=!!(res.ok&&data&&data.ok);if(data&&data.message)msg=data.message;else if(!res.ok)msg='Something went wrong. Please try again.'}}catch(err){{msg='Could not reach the signup service. Please try again.'}}if(ok){{const p=document.createElement('p');p.textContent=msg;f.replaceWith(p)}}else{{if(btn)btn.disabled=false;let p=f.querySelector('.signup-msg');if(!p){{p=document.createElement('p');p.className='signup-msg meta';f.append(p)}}p.textContent=msg}}}}))}})()
 </script>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "8b857a29f29446008d526b7021a0eaa1"}}'></script>
 </body></html>"""
@@ -399,6 +413,19 @@ def buy(p):
 def signup(src):
     ep = C.get("SIGNUP_ENDPOINT") or "/api/signup"
     return f'<form id="signup" action="{e(ep)}" method="post"><input type="hidden" name="source" value="{e(src)}"><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="email" name="email" required maxlength="254" placeholder="you@email.com" aria-label="Email"><button class="btn">Notify me</button></form><p class="note">We\'ll only email DropThePickle updates. See our <a href="privacy.html">privacy policy</a>.</p>'
+
+def nudge(src, key, title="Get new codes first", blurb="New pickleball discount codes land here every day. Get them in your inbox before they expire. We only email when good new codes drop. No spam."):
+    """Email signup panel. Posts to the same endpoint and subscribers table as signup(); source tags where it came from."""
+    ep = C.get("SIGNUP_ENDPOINT") or "/api/signup"
+    return (f'<section class="nudge" aria-labelledby="nudge-{key}-h"><h2 id="nudge-{key}-h">{e(title)}</h2><p>{e(blurb)}</p>'
+            f'<form class="nudge-form" action="{e(ep)}" method="post" novalidate><input type="hidden" name="source" value="{e(src)}">'
+            f'<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">'
+            f'<label class="sr" for="nudge-{key}-email">Email address</label>'
+            f'<input class="nudge-in" id="nudge-{key}-email" type="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="you@email.com">'
+            f'<button class="btn nudge-btn" type="submit">Get new codes</button></form>'
+            f'<p class="nudge-msg" role="status" aria-live="polite"></p>'
+            f'<p class="nudge-note">We\'ll only email DropThePickle code alerts and updates. See our <a href="privacy.html">privacy policy</a>.</p></section>')
+NUDGEJS = """<script>document.querySelectorAll('form.nudge-form').forEach(f=>f.addEventListener('submit',async ev=>{ev.preventDefault();const box=f.closest('.nudge'),m=box.querySelector('.nudge-msg'),b=f.querySelector('button'),inp=f.querySelector('input[type=email]');const show=(ok,t)=>{m.textContent=t;m.className='nudge-msg '+(ok?'ok':'err')};if(!inp.value.trim()||!inp.checkValidity()){show(false,'Please enter a valid email address.');inp.focus();return}b.disabled=true;b.textContent='Sending…';let ok=false,msg='Something went wrong. Please try again.';try{const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});const d=await r.json().catch(()=>null);ok=!!(r.ok&&d&&d.ok);if(d&&d.message)msg=d.message}catch(err){msg='Could not reach the signup service. Please try again.'}if(ok){f.hidden=true;show(true,msg+' We’ll email you when new codes drop.')}else{b.disabled=false;b.textContent='Get new codes';show(false,msg)}}));</script>"""
 
 def fmt(d):
     try: return datetime.date.fromisoformat(d).strftime("%b %d, %Y")
@@ -553,9 +580,11 @@ def build():
     copyjs = """<script>document.addEventListener('click',ev=>{const b=ev.target.closest('[data-code]');if(!b)return;const c=b.dataset.code,done=()=>{const k=b.parentNode.querySelector('.ccopy');if(k){k.textContent='Copied!';k.classList.add('ok');setTimeout(()=>{k.textContent='Copy';k.classList.remove('ok')},1800)}};if(navigator.clipboard)navigator.clipboard.writeText(c).then(done,done);else{const t=document.createElement('textarea');t.value=c;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();done()}});</script>"""
     page("discount-codes.html", "Pickleball Discount Codes & Paddle Coupons (Updated Daily)",
          f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
+         f'{nudge("discount-codes", "top")}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
          f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a>.</p><h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
-         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="disclosure.html">Disclosure</a>.</p>{copyjs}',
+         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="disclosure.html">Disclosure</a>.</p>'
+         f'{nudge("discount-codes-bottom", "bottom", "Don\'t miss the next code", "We re-check creator and brand pages every day. Join the list and hear about new codes first.")}{copyjs}{NUDGEJS}',
          f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
          fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]})
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))

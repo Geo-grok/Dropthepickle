@@ -1,5 +1,6 @@
 // Serves dist/ through env.ASSETS, stores email signups in D1 (binding DB),
-// and handles /go/<slug> outbound redirects (counted in D1 table go_clicks).
+// and handles /go/<slug> outbound redirects (counted in D1 table go_clicks,
+// with user_agent and an is_bot flag; HEAD requests are redirected but not logged).
 import GO from "./go-links.json";
 export default {
   async fetch(request, env, ctx) {
@@ -155,16 +156,35 @@ export function goTarget(slug) {
   return entry.url + (entry.url.includes("?") ? "&" : "?") + tag;
 }
 
+// Likely non-human user agents: crawlers, link checkers, unfurl/preview fetchers, scripts, headless browsers.
+// In-app browsers (Facebook FBAN, Instagram, LinkedInApp, Pinterest app) are real people and are NOT matched.
+const BOT_UA = /bot\b|bot[\/;\-_ ]|crawl|spider|slurp|scrap|curl|wget|python|requests|aiohttp|httpx|go-http-client|okhttp|java\/|libwww|perl|ruby|php|node-fetch|axios|undici|got \(|postman|insomnia|headless|phantom|puppeteer|playwright|selenium|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|statuscake|preview|facebookexternalhit|facebookcatalog|meta-externalagent|facebot|slack-imgproxy|slackbot|twitterbot|discordbot|whatsapp|telegrambot|skypeuripreview|linkedinbot|pinterestbot|redditbot|embedly|quora link|vkshare|w3c_validator|validator|link ?check|linkcheck|checklink|xenu|screaming frog|ahrefs|semrush|mj12|dotbot|bingpreview|google-inspectiontool|feedfetcher|feed|rss|archive|wayback|httrack|scanner|nmap|masscan|zgrab|nikto|http-client|httpclient|fetch\b|^mozilla\/5\.0$/i;
+// A real browser UA starts with Mozilla/5.0 (...) and names a rendering engine.
+const BROWSER_UA = /^Mozilla\/5\.0 \(.+\) (AppleWebKit|Gecko|Chrome|Firefox|Safari)\b/i;
+
+// Returns 1 for likely bots, 0 for likely browser clicks. HEAD requests are handled (not logged) by the caller.
+export function isBot(request) {
+  if (request.method === "HEAD") return 1;
+  const ua = (request.headers.get("user-agent") || "").trim();
+  if (!ua) return 1;
+  if (BOT_UA.test(ua)) return 1;
+  if (!request.headers.get("referer") && !BROWSER_UA.test(ua)) return 1;
+  return 0;
+}
+
 async function handleGo(request, env, ctx, url) {
   const slug = decodeURIComponent(url.pathname.slice(4)).replace(/\/+$/, "").toLowerCase();
   const target = /^[a-z0-9-]{1,80}$/.test(slug) ? goTarget(slug) : null;
   if (!target) return Response.redirect(new URL("/deals", url).toString(), 302);
-  if (env.DB) {
+  // HEAD (link checkers, unfurlers) still gets the redirect but is never logged.
+  // Flagged GETs are logged with is_bot = 1 so nothing is lost; count real clicks with is_bot = 0.
+  if (env.DB && request.method !== "HEAD") {
     let ref = null;
     try { ref = new URL(request.headers.get("referer") || "").pathname.slice(0, 200); } catch {}
+    const ua = (request.headers.get("user-agent") || "").slice(0, 512) || null;
     const write = env.DB.prepare(
-      "INSERT INTO go_clicks (slug, referer_path, country, created_at) VALUES (?, ?, ?, ?)"
-    ).bind(slug, ref, countryFrom(request), new Date().toISOString()).run().catch(() => {});
+      "INSERT INTO go_clicks (slug, referer_path, country, created_at, user_agent, is_bot) VALUES (?, ?, ?, ?, ?, ?)"
+    ).bind(slug, ref, countryFrom(request), new Date().toISOString(), ua, isBot(request)).run().catch(() => {});
     if (ctx && ctx.waitUntil) ctx.waitUntil(write); else await write;
   }
   return new Response(null, {
