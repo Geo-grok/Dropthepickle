@@ -295,7 +295,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 f'<div class="px">{money(p, cur(p))}{was}{f"<span class={chr(34)}off{chr(34)}>-{pct}%</span>" if pct > 0 else ""}</div>'
                 f'<a class="btn go" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Get deal →</a></div></li>')
     top5 = (f'<h2 id="top5">Top 5 deals today <a class="seemore" href="deals.html">All →</a></h2><ol class="top5">{"".join(top5row(i, p) for i, p in enumerate(deals[:5], 1))}</ol><p class="more">Prices from makers\' own sites. Confirm at checkout. <a href="/discount-codes">Stack a discount code →</a></p>') if deals else ""
-    home = f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>{len(deals)} deals today. <em>Never miss a dink.</em></h1><p>All things pickleball, free. {len(PP)} paddles tracked daily.</p></div></div>
+    home = f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>ALL THINGS <em>PICKLEBALL</em></h1><p>Free for everyone. {len(deals)} deals today.</p></div></div>
 {top5}</div></section>
 <main>
 {X.get("BUZZ_TEASER","")}

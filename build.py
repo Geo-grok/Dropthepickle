@@ -47,7 +47,7 @@ header{position:sticky;top:0;z-index:50;background:#0b1630;border-bottom:1px sol
 .tabs a:hover{background:#1f3360}.tabs a.on{background:#c6f432;color:#0b1630}
 /* homepage: navy frame, hero strip, Top 5 */
 .topwrap{background:#0b1630;padding:16px 0 20px}.topwrap .in{max-width:760px;margin:auto}
-.hstrip{display:flex;gap:14px;align-items:center;margin:0 16px 16px;padding:16px;border-radius:16px;background:#16264a;max-height:150px;box-sizing:border-box;overflow:hidden}
+.hstrip{display:flex;gap:14px;align-items:center;margin:0 16px 16px;padding:16px;border-radius:16px;background:#16264a;box-sizing:border-box}
 .hstrip .dill{flex:none;width:76px;height:76px;border-radius:50%;background:#c6f432;display:grid;place-items:center;overflow:hidden}.hstrip .dill img{width:68px;height:68px;border-radius:50%}
 .hstrip h1{margin:0;font:800 22px/1.15 Inter,system-ui,sans-serif;color:#fff;letter-spacing:0;text-transform:none}.hstrip h1 em{font-style:normal;color:#c6f432}
 .hstrip p{margin:4px 0 0;color:#d5deeb;font-size:15px;line-height:1.3}.hstrip .eyebrow,.hstrip .updated{display:none}
