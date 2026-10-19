@@ -1,5 +1,5 @@
 {
- "_note": "Seed list for scripts/refresh-codes. Each code is re-checked on its source page every run and dropped if it no longer appears there. Add codes only from a creator/brand page or a dated post (<90 days). Never invent codes.",
+ "_note": "Seed list for scripts/refresh-codes. Each code is re-checked on its source page every run and dropped if it no longer appears there. Add codes only from a creator/brand page or a dated post (<90 days). Never invent codes. Do not add reganfamilypickleball.com: that page asks readers not to share its codes outside their community, and scripts/refresh-codes skips that host.",
  "shops": {
   "Selkirk": "https://www.selkirk.com/",
   "CRBN": "https://crbnpickleball.com/",
@@ -1389,63 +1389,6 @@
      "code": "NICOTHELEFTY",
      "discount": "15% off",
      "conditions": "Pickleball eyewear"
-    }
-   ]
-  },
-  {
-   "name": "Regan Family Pickleball",
-   "url": "https://reganfamilypickleball.com/gear/",
-   "codes": [
-    {
-     "brand": "Six Zero",
-     "code": "REGAN6.0",
-     "discount": "10% off",
-     "conditions": "Paddles, bags and apparel"
-    },
-    {
-     "brand": "Vatic Pro",
-     "code": "RFP",
-     "discount": "$10 off",
-     "conditions": "Paddles"
-    },
-    {
-     "brand": "Volair",
-     "code": "RFP",
-     "discount": "10% off",
-     "conditions": "Paddles"
-    },
-    {
-     "brand": "Friday",
-     "code": "RFP",
-     "discount": "$10 off",
-     "conditions": "Paddles"
-    },
-    {
-     "brand": "RPM",
-     "code": "15REGAN",
-     "discount": "15% off",
-     "conditions": "Full order",
-     "match": "RPM Pickleball"
-    },
-    {
-     "brand": "11SIX24",
-     "code": "RFP",
-     "discount": "10% off",
-     "conditions": "Paddles and bags",
-     "match": "11six24"
-    },
-    {
-     "brand": "Paddletek",
-     "code": "RFP",
-     "discount": "10% off",
-     "conditions": "Paddles and apparel"
-    },
-    {
-     "brand": "Honolulu",
-     "code": "RFP",
-     "discount": "10% off",
-     "conditions": "Paddles, balls and gear",
-     "match": "Honolulu Pickleball Co."
     }
    ]
   },

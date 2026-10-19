@@ -17,6 +17,13 @@ UA = "Mozilla/5.0 (compatible; DropThePickleBot/1.0; +https://dropthepickle.com/
 WINDOW = 450  # chars after a brand mention in which the code must appear
 LOOKBACK = 80  # some pages print the code immediately before the brand name
 MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
+# reganfamilypickleball.com/gear/ asks readers not to share its codes outside their community.
+# Skip that host even if it is added back to data/discount-sources.json.
+SKIP_HOSTS = ("reganfamilypickleball.com",)
+
+def skipped_source(url):
+    host = (urllib.parse.urlparse(url).hostname or "").lower()
+    return any(host == h or host.endswith("." + h) for h in SKIP_HOSTS)
 
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
@@ -66,6 +73,9 @@ def main():
     prev = {(c["brand"], c["code"], c["source_url"]): c for c in (json.loads(OUT.read_text()).get("codes", []) if OUT.exists() else [])}
     keep, removed, failed = [], [], []
     for s in S["sources"]:
+        if skipped_source(s["url"]):
+            print(f'  skipped {s["url"]}: source asks not to share codes outside their community')
+            continue
         text = None
         try: text = to_text(fetch(s["url"]))
         except Exception as ex:

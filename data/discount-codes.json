@@ -4,19 +4,6 @@
  "codes": [
   {
    "brand": "11SIX24",
-   "code": "RFP",
-   "discount": "10% off",
-   "conditions": "Paddles and bags",
-   "source": "Regan Family Pickleball",
-   "source_url": "https://reganfamilypickleball.com/gear/",
-   "source_date": null,
-   "expiry": null,
-   "shop_url": "https://11six24.com/",
-   "first_seen": "2026-10-19",
-   "verified": "2026-10-19"
-  },
-  {
-   "brand": "11SIX24",
    "code": "PBEFFECT",
    "discount": "$10 off",
    "conditions": "All paddles",
@@ -926,19 +913,6 @@
    "verified": "2026-10-19"
   },
   {
-   "brand": "Friday",
-   "code": "RFP",
-   "discount": "$10 off",
-   "conditions": "Paddles",
-   "source": "Regan Family Pickleball",
-   "source_url": "https://reganfamilypickleball.com/gear/",
-   "source_date": null,
-   "expiry": null,
-   "shop_url": "https://www.fridaypickle.com/",
-   "first_seen": "2026-10-19",
-   "verified": "2026-10-19"
-  },
-  {
    "brand": "Fromuth",
    "code": "10Hannah",
    "discount": "10% off",
@@ -1287,19 +1261,6 @@
    "expiry": null,
    "shop_url": "https://808pickle.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-19"
-  },
-  {
-   "brand": "Honolulu",
-   "code": "RFP",
-   "discount": "10% off",
-   "conditions": "Paddles, balls and gear",
-   "source": "Regan Family Pickleball",
-   "source_url": "https://reganfamilypickleball.com/gear/",
-   "source_date": null,
-   "expiry": null,
-   "shop_url": "https://808pickle.com/",
-   "first_seen": "2026-10-19",
    "verified": "2026-10-19"
   },
   {
@@ -1660,19 +1621,6 @@
    "conditions": "All products",
    "source": "The Kitchen Pickleball",
    "source_url": "https://thekitchenpickle.com/discounts/",
-   "source_date": null,
-   "expiry": null,
-   "shop_url": "https://www.paddletek.com/",
-   "first_seen": "2026-10-19",
-   "verified": "2026-10-19"
-  },
-  {
-   "brand": "Paddletek",
-   "code": "RFP",
-   "discount": "10% off",
-   "conditions": "Paddles and apparel",
-   "source": "Regan Family Pickleball",
-   "source_url": "https://reganfamilypickleball.com/gear/",
    "source_date": null,
    "expiry": null,
    "shop_url": "https://www.paddletek.com/",
@@ -2122,19 +2070,6 @@
    "verified": "2026-10-19"
   },
   {
-   "brand": "RPM",
-   "code": "15REGAN",
-   "discount": "15% off",
-   "conditions": "Full order",
-   "source": "Regan Family Pickleball",
-   "source_url": "https://reganfamilypickleball.com/gear/",
-   "source_date": null,
-   "expiry": null,
-   "shop_url": "https://rpmpb.com/",
-   "first_seen": "2026-10-19",
-   "verified": "2026-10-19"
-  },
-  {
    "brand": "Scoop",
    "code": "JOHNKEW",
    "discount": "10% off",
@@ -2271,19 +2206,6 @@
    "conditions": "All products",
    "source": "The Kitchen Pickleball",
    "source_url": "https://thekitchenpickle.com/discounts/",
-   "source_date": null,
-   "expiry": null,
-   "shop_url": "https://sixzeropickleball.com/",
-   "first_seen": "2026-10-16",
-   "verified": "2026-10-19"
-  },
-  {
-   "brand": "Six Zero",
-   "code": "REGAN6.0",
-   "discount": "10% off",
-   "conditions": "Paddles, bags and apparel",
-   "source": "Regan Family Pickleball",
-   "source_url": "https://reganfamilypickleball.com/gear/",
    "source_date": null,
    "expiry": null,
    "shop_url": "https://sixzeropickleball.com/",
@@ -2668,19 +2590,6 @@
    "verified": "2026-10-19"
   },
   {
-   "brand": "Vatic Pro",
-   "code": "RFP",
-   "discount": "$10 off",
-   "conditions": "Paddles",
-   "source": "Regan Family Pickleball",
-   "source_url": "https://reganfamilypickleball.com/gear/",
-   "source_date": null,
-   "expiry": null,
-   "shop_url": "https://vaticpro.com/",
-   "first_seen": "2026-10-16",
-   "verified": "2026-10-19"
-  },
-  {
    "brand": "Volair",
    "code": "PBEFFECT",
    "discount": "10% off",
@@ -2743,19 +2652,6 @@
    "expiry": null,
    "shop_url": "https://www.volair.com/",
    "first_seen": "2026-10-17",
-   "verified": "2026-10-19"
-  },
-  {
-   "brand": "Volair",
-   "code": "RFP",
-   "discount": "10% off",
-   "conditions": "Paddles",
-   "source": "Regan Family Pickleball",
-   "source_url": "https://reganfamilypickleball.com/gear/",
-   "source_date": null,
-   "expiry": null,
-   "shop_url": "https://www.volair.com/",
-   "first_seen": "2026-10-19",
    "verified": "2026-10-19"
   },
   {
