@@ -10,9 +10,45 @@ export default {
     if (url.pathname.startsWith("/go/")) {
       return handleGo(request, env, ctx, url);
     }
+    if (url.pathname.startsWith("/media/")) {
+      return handleMedia(request, env);
+    }
     return env.ASSETS.fetch(request);
   },
 };
+
+// Public video files copied from media/ into dist/media by build.py. Served from static assets
+// (content-type video/mp4, no redirect). If the asset layer answers a Range request with a full 200,
+// slice it here so players can seek. Files stay under the 25 MiB asset limit, so buffering is fine.
+async function handleMedia(request, env) {
+  const res = await env.ASSETS.fetch(request);
+  const range = request.headers.get("range");
+  if (res.status !== 200 || !range || !["GET", "HEAD"].includes(request.method)) {
+    if (res.status !== 200 || res.headers.has("accept-ranges")) return res;
+    const out = new Response(res.body, res);
+    out.headers.set("accept-ranges", "bytes");
+    return out;
+  }
+  const buf = await res.arrayBuffer();
+  const size = buf.byteLength;
+  const m = /^bytes=(\d*)-(\d*)$/.exec(range.trim());
+  let start, end;
+  if (m && (m[1] || m[2])) {
+    if (m[1]) { start = Number(m[1]); end = m[2] ? Math.min(Number(m[2]), size - 1) : size - 1; }
+    else { start = Math.max(size - Number(m[2]), 0); end = size - 1; }
+  }
+  const headers = new Headers(res.headers);
+  headers.set("accept-ranges", "bytes");
+  if (start === undefined || start >= size || start > end) {
+    headers.set("content-range", `bytes */${size}`);
+    headers.delete("content-length");
+    return new Response(null, { status: 416, headers });
+  }
+  headers.set("content-range", `bytes ${start}-${end}/${size}`);
+  headers.set("content-length", String(end - start + 1));
+  const body = request.method === "HEAD" ? null : buf.slice(start, end + 1);
+  return new Response(body, { status: 206, headers });
+}
 
 function wantsJson(request) {
   const accept = request.headers.get("accept") || "";
