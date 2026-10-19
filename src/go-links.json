@@ -5,6 +5,10 @@
    "url": "https://11six24.com/",
    "affiliate_tag": ""
   },
+  "4rthpickleball-home": {
+   "url": "https://www.4rthpickleball.com/",
+   "affiliate_tag": ""
+  },
   "808pickle-home": {
    "url": "https://808pickle.com/",
    "affiliate_tag": ""
@@ -25,12 +29,28 @@
    "url": "https://www.babolat.com/us/pickleball.html",
    "affiliate_tag": ""
   },
+  "blindedwear-home": {
+   "url": "https://blindedwear.com/",
+   "affiliate_tag": ""
+  },
+  "blumaka-home": {
+   "url": "https://blumaka.com/",
+   "affiliate_tag": ""
+  },
+  "bodhipickleball-home": {
+   "url": "https://bodhipickleball.com/",
+   "affiliate_tag": ""
+  },
   "bodyhelix-home": {
    "url": "https://www.bodyhelix.com/",
    "affiliate_tag": ""
   },
   "breadandbutterpickleball-home": {
    "url": "https://breadandbutterpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "centerlineathletics-home": {
+   "url": "https://centerlineathletics.com/",
    "affiliate_tag": ""
   },
   "choruspickleball-home": {
@@ -57,8 +77,20 @@
    "url": "https://crbnpickleball.com/products/tfb1",
    "affiliate_tag": ""
   },
+  "cuurt-home": {
+   "url": "https://www.cuurt.com/",
+   "affiliate_tag": ""
+  },
+  "daps-home": {
+   "url": "https://daps.fit/",
+   "affiliate_tag": ""
+  },
   "diademsports-home": {
    "url": "https://diademsports.com/",
+   "affiliate_tag": ""
+  },
+  "dominatorhoop-home": {
+   "url": "https://dominatorhoop.com/",
    "affiliate_tag": ""
   },
   "dymon1-home": {
@@ -67,6 +99,10 @@
   },
   "e6pickleball-home": {
    "url": "https://e6pickleball.com/",
+   "affiliate_tag": ""
+  },
+  "elevenzerosports-home": {
+   "url": "https://elevenzerosports.com/",
    "affiliate_tag": ""
   },
   "engagepickleball-engage-axiom-elongated-pickleball-paddle": {
@@ -111,6 +147,10 @@
   },
   "foampickleball-home": {
    "url": "https://foampickleball.com/",
+   "affiliate_tag": ""
+  },
+  "forwrd-home": {
+   "url": "https://forwrd.co/",
    "affiliate_tag": ""
   },
   "franklinsports-pickleball": {
@@ -201,8 +241,16 @@
    "url": "https://joola.com/products/scorpeus-pro-v-pickleball-paddle",
    "affiliate_tag": ""
   },
-  "joysentsport-home": {
-   "url": "https://www.joysentsport.com/",
+  "justpaddles-home": {
+   "url": "https://www.justpaddles.com/",
+   "affiliate_tag": ""
+  },
+  "leorever-home": {
+   "url": "https://leorever.com/",
+   "affiliate_tag": ""
+  },
+  "lightninglooppickleball-home": {
+   "url": "https://www.lightninglooppickleball.com/",
    "affiliate_tag": ""
   },
   "luzzpickleball-home": {
@@ -245,8 +293,16 @@
    "url": "https://www.onixpickleball.com/",
    "affiliate_tag": ""
   },
+  "ourstoryi-home": {
+   "url": "https://www.ourstoryi.com/",
+   "affiliate_tag": ""
+  },
   "paddletek-bantam-tko-c": {
    "url": "https://paddletek.com/products/bantam-tko-c",
+   "affiliate_tag": ""
+  },
+  "paddletek-home": {
+   "url": "https://www.paddletek.com/",
    "affiliate_tag": ""
   },
   "paddletek-honeyfoam-tko-x": {
@@ -269,12 +325,20 @@
    "url": "https://www.pickleballapes.com/",
    "affiliate_tag": ""
   },
+  "pickleballeffectshop-home": {
+   "url": "https://pickleballeffectshop.com/",
+   "affiliate_tag": ""
+  },
   "pickln-home": {
    "url": "https://pickln.com/",
    "affiliate_tag": ""
   },
   "pikkl-home": {
    "url": "https://pikkl.com/",
+   "affiliate_tag": ""
+  },
+  "pillapickleball-home": {
+   "url": "https://pillapickleball.com/",
    "affiliate_tag": ""
   },
   "potenzapickleball-home": {
@@ -295,6 +359,10 @@
   },
   "reloadpickleball-home": {
    "url": "https://www.reloadpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "resetpickleball-home": {
+   "url": "https://resetpickleball.shop/",
    "affiliate_tag": ""
   },
   "revolinpickleball-home": {
@@ -345,6 +413,10 @@
    "url": "https://selkirk.com/products/slk-halo-power-pickleball-paddle",
    "affiliate_tag": ""
   },
+  "shop-home": {
+   "url": "https://shop.hesacore.com/",
+   "affiliate_tag": ""
+  },
   "sixzeropickleball-black-opal-14mm": {
    "url": "https://sixzeropickleball.com/products/black-opal-14mm",
    "affiliate_tag": ""
@@ -365,16 +437,44 @@
    "url": "https://sixzeropickleball.com/products/ruby",
    "affiliate_tag": ""
   },
+  "slycesport-home": {
+   "url": "https://slycesport.com/",
+   "affiliate_tag": ""
+  },
   "speeduppickle-home": {
    "url": "https://speeduppickle.com/",
+   "affiliate_tag": ""
+  },
+  "sqairz-home": {
+   "url": "https://www.sqairz.com/",
+   "affiliate_tag": ""
+  },
+  "stackathletics-home": {
+   "url": "https://stackathletics.com/",
    "affiliate_tag": ""
   },
   "standoutpickleball-home": {
    "url": "https://standoutpickleball.com/",
    "affiliate_tag": ""
   },
+  "startpicklin-home": {
+   "url": "https://startpicklin.com/",
+   "affiliate_tag": ""
+  },
+  "striasport-home": {
+   "url": "https://striasport.com/",
+   "affiliate_tag": ""
+  },
+  "suay-home": {
+   "url": "https://suay.com/",
+   "affiliate_tag": ""
+  },
   "synergypickleball-home": {
    "url": "https://synergypickleball.com/",
+   "affiliate_tag": ""
+  },
+  "the-yobow-home": {
+   "url": "https://the-yobow.myshopify.com/",
    "affiliate_tag": ""
   },
   "therowdypaddle-home": {

@@ -15,6 +15,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT / "data/discount-sources.json", ROOT / "data/discount-codes.json"
 UA = "Mozilla/5.0 (compatible; DropThePickleBot/1.0; +https://dropthepickle.com/about.html)"
 WINDOW = 450  # chars after a brand mention in which the code must appear
+LOOKBACK = 80  # some pages print the code immediately before the brand name
 MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
 
 def fetch(url):
@@ -41,14 +42,15 @@ def norm(s): return re.sub(r"[^a-z0-9]", "", s.lower())
 
 def found(text, brand, code):
     t, b, c = text.lower(), brand.lower(), code.lower()
-    pat = re.compile(r"(?<![a-z0-9])" + re.escape(c) + r"(?![a-z0-9])")
+    # Hyphen is part of the token so NICOTHELEFTY does not match inside INF-NICOTHELEFTY.
+    pat = re.compile(r"(?<![a-z0-9-])" + re.escape(c) + r"(?![a-z0-9-])")
     for m in re.finditer(re.escape(b), t):
-        if pat.search(t, m.start(), m.end() + WINDOW): return True
+        if pat.search(t, max(0, m.start() - LOOKBACK), m.end() + WINDOW): return True
     # brand written without spaces (e.g. "SixZero")
     nb = norm(brand)
     if nb != b:
         for m in re.finditer(re.escape(nb), t):
-            if pat.search(t, m.start(), m.end() + WINDOW): return True
+            if pat.search(t, max(0, m.start() - LOOKBACK), m.end() + WINDOW): return True
     return False
 
 def source_date(text):

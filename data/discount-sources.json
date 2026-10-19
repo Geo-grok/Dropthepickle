@@ -13,7 +13,7 @@
   "HEAD": "https://www.head.com/en_US/pickleball",
   "Fromuth": "https://fromuthpickleball.com/",
   "JOOLA": "https://joola.com/",
-  "Paddletek": "https://paddletek.com/",
+  "Paddletek": "https://www.paddletek.com/",
   "Pickleball Central": "https://pickleballcentral.com/",
   "Ronbus": "https://www.ronbus.com/",
   "Volair": "https://www.volair.com/",
@@ -75,7 +75,32 @@
   "Vanwin": "https://vanwinsports.com/",
   "Ram Sports": "https://ramsports.com/",
   "ERNE": "https://ernepickleballmachine.com/",
-  "UDrippin": "https://www.udrippin.com/"
+  "UDrippin": "https://www.udrippin.com/",
+  "JustPaddles": "https://www.justpaddles.com/",
+  "Centerline Athletics": "https://centerlineathletics.com/",
+  "Slyce Sport": "https://slycesport.com/",
+  "4RTH": "https://www.4rthpickleball.com/",
+  "Blinded Wear": "https://blindedwear.com/",
+  "FORWRD": "https://forwrd.co/",
+  "Picklin": "https://startpicklin.com/",
+  "Pickleball Effect": "https://pickleballeffectshop.com/",
+  "DAPS": "https://daps.fit/",
+  "Dominator": "https://dominatorhoop.com/",
+  "Eleven Zero": "https://elevenzerosports.com/",
+  "CUURT": "https://www.cuurt.com/",
+  "SQAIRZ": "https://www.sqairz.com/",
+  "Stria Sport": "https://striasport.com/",
+  "Bodhi": "https://bodhipickleball.com/",
+  "Lightning Loop": "https://www.lightninglooppickleball.com/",
+  "Pilla": "https://pillapickleball.com/",
+  "Blumaka": "https://blumaka.com/",
+  "Hesacore": "https://shop.hesacore.com/",
+  "Leorever": "https://leorever.com/",
+  "Reset": "https://resetpickleball.shop/",
+  "Stack Athletics": "https://stackathletics.com/",
+  "Suay": "https://suay.com/",
+  "Storyi": "https://www.ourstoryi.com/",
+  "Yobow": "https://the-yobow.myshopify.com/"
  },
  "sources": [
   {
@@ -258,6 +283,75 @@
      "code": "PBEFFECT",
      "discount": "10% off",
      "conditions": "Paddles and gear"
+    },
+    {
+     "brand": "Blumaka",
+     "code": "PBEFFECT20",
+     "discount": "20% off",
+     "conditions": "NonSlip insoles"
+    },
+    {
+     "brand": "DAPS",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Court shoes"
+    },
+    {
+     "brand": "FORWRD",
+     "code": "PBEFFECT",
+     "discount": "Free shipping",
+     "conditions": "Free shipping and a free add-on on bags",
+     "match": "FORWRD Bags"
+    },
+    {
+     "brand": "Hesacore",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Grips",
+     "match": "Hesacore Grips"
+    },
+    {
+     "brand": "Leorever",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Compression gear"
+    },
+    {
+     "brand": "Reset",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Paddle cleaning spray"
+    },
+    {
+     "brand": "Slyce Sport",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Paddle weights and apparel"
+    },
+    {
+     "brand": "Stack Athletics",
+     "code": "PBEFFECT",
+     "discount": "15% off",
+     "conditions": "Apparel"
+    },
+    {
+     "brand": "Suay",
+     "code": "PBEFFECT",
+     "discount": "15% off",
+     "conditions": "Hats, new customers only"
+    },
+    {
+     "brand": "Storyi",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Arm sun sleeves",
+     "match": "Storyi Sun Sleeves"
+    },
+    {
+     "brand": "Yobow",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Massage guns and warm-up gear"
     }
    ]
   },
@@ -622,6 +716,12 @@
      "code": "JOHNKEW",
      "discount": "10% off",
      "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Paddletek",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
     }
    ]
   },
@@ -784,6 +884,63 @@
      "code": "BKPB",
      "discount": "Free shipping",
      "conditions": "Free shipping on the Enhance site"
+    },
+    {
+     "brand": "Paddletek",
+     "code": "BKPB",
+     "discount": "10% off",
+     "conditions": "All products on the Paddletek site"
+    },
+    {
+     "brand": "JustPaddles",
+     "code": "BK10",
+     "discount": "10% off",
+     "conditions": "Most products on the JustPaddles site"
+    },
+    {
+     "brand": "4RTH",
+     "code": "BK10",
+     "discount": "10% off",
+     "conditions": "Edge tape and products on the 4RTH site",
+     "match": "4RTH Pickleball"
+    },
+    {
+     "brand": "Centerline Athletics",
+     "code": "BK30",
+     "discount": "30% off",
+     "conditions": "All products on the Centerline site"
+    },
+    {
+     "brand": "Slyce Sport",
+     "code": "BK10",
+     "discount": "10% off",
+     "conditions": "All products on the Slyce Sport site"
+    },
+    {
+     "brand": "Blinded Wear",
+     "code": "BK10",
+     "discount": "10% off",
+     "conditions": "All products on the Blinded Wear site",
+     "match": "Blinded Wear Co."
+    },
+    {
+     "brand": "FORWRD",
+     "code": "BK10",
+     "discount": "10% off",
+     "conditions": "Bags and backpacks",
+     "match": "FORWRD Backpacks"
+    },
+    {
+     "brand": "Picklin",
+     "code": "BK_PICKLEBALL",
+     "discount": "10% off",
+     "conditions": "All products on the Picklin site"
+    },
+    {
+     "brand": "Pickleball Effect",
+     "code": "BK10",
+     "discount": "10% off",
+     "conditions": "Pickleball Effect shop products (tape, grips and accessories)"
     }
    ]
   },
@@ -978,6 +1135,30 @@
      "code": "KITCHEN",
      "discount": "15% off",
      "conditions": "All products"
+    },
+    {
+     "brand": "Paddletek",
+     "code": "KITCHEN",
+     "discount": "10% off",
+     "conditions": "All products"
+    },
+    {
+     "brand": "DAPS",
+     "code": "KITCHEN",
+     "discount": "15% off",
+     "conditions": "All products"
+    },
+    {
+     "brand": "Dominator",
+     "code": "KITCHEN",
+     "discount": "10% off",
+     "conditions": "Pickleball nets, hoops and court lights"
+    },
+    {
+     "brand": "FORWRD",
+     "code": "KITCHEN",
+     "discount": "10% off",
+     "conditions": "All products"
     }
    ]
   },
@@ -1023,7 +1204,7 @@
     },
     {
      "brand": "Selkirk",
-     "code": "NICOTHELEFTY",
+     "code": "INF-NICOTHELEFTY",
      "discount": "Free gift card",
      "conditions": "Gift card with purchase"
     },
@@ -1042,7 +1223,7 @@
     {
      "brand": "Chorus",
      "code": "NICOTHELEFTY",
-     "discount": "10% off",
+     "discount": "$10 off",
      "conditions": "Brand site checkout"
     },
     {
@@ -1136,12 +1317,6 @@
      "conditions": "Brand site checkout"
     },
     {
-     "brand": "JOYSENT",
-     "code": "NICOTHELEFTY",
-     "discount": "10% off",
-     "conditions": "Brand site checkout"
-    },
-    {
      "brand": "MARK",
      "code": "NICOTHELEFTY",
      "discount": "10% off",
@@ -1165,6 +1340,55 @@
      "code": "NICOTHELEFTY",
      "discount": "16% off",
      "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Eleven Zero",
+     "code": "NICOVALENCIA10",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "CUURT",
+     "code": "NICO14656",
+     "discount": "10% off",
+     "conditions": "Court shoes"
+    },
+    {
+     "brand": "SQAIRZ",
+     "code": "NICOTHELEFTY",
+     "discount": "$10 off",
+     "conditions": "Court shoes"
+    },
+    {
+     "brand": "Stria Sport",
+     "code": "NICOTHELEFTY",
+     "discount": "10% off",
+     "conditions": "Court shoes"
+    },
+    {
+     "brand": "Bodhi",
+     "code": "NICOTHELEFTY",
+     "discount": "15% off",
+     "conditions": "Overgrips"
+    },
+    {
+     "brand": "FORWRD",
+     "code": "NICOTHELEFTY",
+     "discount": "Free shipping",
+     "conditions": "Bags and backpacks",
+     "match": "Forwrd"
+    },
+    {
+     "brand": "Lightning Loop",
+     "code": "NICOTHELEFTY",
+     "discount": "10% off",
+     "conditions": "Paddle-speed training device"
+    },
+    {
+     "brand": "Pilla",
+     "code": "NICOTHELEFTY",
+     "discount": "15% off",
+     "conditions": "Pickleball eyewear"
     }
    ]
   },
@@ -1183,6 +1407,45 @@
      "code": "RFP",
      "discount": "$10 off",
      "conditions": "Paddles"
+    },
+    {
+     "brand": "Volair",
+     "code": "RFP",
+     "discount": "10% off",
+     "conditions": "Paddles"
+    },
+    {
+     "brand": "Friday",
+     "code": "RFP",
+     "discount": "$10 off",
+     "conditions": "Paddles"
+    },
+    {
+     "brand": "RPM",
+     "code": "15REGAN",
+     "discount": "15% off",
+     "conditions": "Full order",
+     "match": "RPM Pickleball"
+    },
+    {
+     "brand": "11SIX24",
+     "code": "RFP",
+     "discount": "10% off",
+     "conditions": "Paddles and bags",
+     "match": "11six24"
+    },
+    {
+     "brand": "Paddletek",
+     "code": "RFP",
+     "discount": "10% off",
+     "conditions": "Paddles and apparel"
+    },
+    {
+     "brand": "Honolulu",
+     "code": "RFP",
+     "discount": "10% off",
+     "conditions": "Paddles, balls and gear",
+     "match": "Honolulu Pickleball Co."
     }
    ]
   },
@@ -1201,7 +1464,6 @@
  ],
  "no_code": {
   "JOOLA": "Pickleball Effect (verified Sept 1, 2026) says JOOLA stopped running creator codes; coupon-site JOOLA codes we found had expired.",
-  "Paddletek": "Pickleball Effect (verified Sept 1, 2026) says Paddletek stopped running codes, so creator codes are left out until confirmed.",
   "Pickleball Central": "Creator discounts apply through partner links, not codes."
  }
 }
