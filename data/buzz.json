@@ -1,9 +1,287 @@
 {
- "updated": "2026-10-18T06:22-05:00",
- "date": "2026-10-18",
- "source_file": "dtp-newsroom/buzz-2026-10-18.json",
+ "updated": "2026-10-19T06:11-05:00",
+ "date": "2026-10-19",
+ "source_file": "dtp-newsroom/buzz-2026-10-19.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "PPA Virginia Beach: Fahey takes double gold a day before she turns 30; 18-year-old Goins wins men's singles",
+   "summary": "Championship Sunday at the Mojo Energy Pouches Virginia Beach Open delivered career firsts after Saturday's rain delay. Kate Fahey, a day before her 30th birthday, became the only player to leave with two golds: mixed with Eric Oncins (11-13, 11-4, 11-9 over Catherine Parenteau/Riley Newman after trailing 2-8 in the decider) for her first PPA doubles title, then women's singles 11-1, 11-9 over No. 21 Helena Jansen Fink. Top seeds Sofia Sewing and Parenteau won women's doubles 11-8, 11-6 over Alix Truong/Layne Sleeth after saving three match points in their early-morning semifinal; Sewing's first PPA title. Jaume Martinez Vich and Elliott Schupp (19) took men's doubles 11-4, 4-11, 11-4 over Noe Khlif/Newman for each player's first career PPA title. No. 5 John Lucian Goins (18, Bradenton, Fla.) closed the show 11-5, 11-3 over Martinez Vich in men's singles without dropping a game all week, his third career title and first since 2025. Scores corroborated by Daily Press, pickleball.com, Dinks & Volleys, and PPA social.",
+   "status": "confirmed",
+   "date": "2026-10-19",
+   "sources": [
+    {
+     "label": "Daily Press",
+     "url": "https://www.dailypress.com/2026/10/18/just-before-turning-30-fahey-takes-two-gold-medals-at-ppa-virginia-beach-open/"
+    },
+    {
+     "label": "pickleball.com (Championship Sunday recap)",
+     "url": "https://pickleball.com/news/championship-sunday-recap-fahey-takes-double-gold-as-sewing-schupp-and-martinez-vich-earn-first-career-titles"
+    },
+    {
+     "label": "Dinks & Volleys (event scores)",
+     "url": "https://www.dinksandvolleys.com/pickleball/ppa-mojo-energy-pouches-virginia-beach-open-2026/"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111961683799470226"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111946441627492665"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111943557955346926"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111924705825534144"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111879916073767158"
+    },
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2111865315915399305"
+    },
+    {
+     "label": "PickleballTV (YouTube, Goins vs. Martinez Vich)",
+     "url": "https://www.youtube.com/watch?v=GU5ZBiDlbbw"
+    },
+    {
+     "label": "PPA Tour on Instagram (Goins title)",
+     "url": "https://www.instagram.com/p/Dep-FPRmVzV/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2111961683799470226",
+    "https://x.com/PPAtour/status/2111946441627492665",
+    "https://x.com/PPAtour/status/2111924705825534144"
+   ],
+   "social_angle": "Birthday-eve double: Fahey mixed comeback + singles. Teen Goins tops Martinez Vich. First-title carousel for Sewing, Schupp, Martinez Vich. Update DTP tournaments page with champions.",
+   "tags": [
+    "ppa",
+    "results"
+   ]
+  },
+  {
+   "title": "APP Louisville: Munro doubles up again; Turkovic wins women's singles; Camron takes men's singles",
+   "summary": "At the inaugural Humana APP Louisville Open, Jack Munro won two doubles golds for the third time this season: mixed with Roos Van Reek 11-3, 11-5 over Domenika Turkovic/Jay Devilliers (their first APP U.S. gold as a pair), and men's doubles with Richard Livornese Jr. 12-10, 11-2 over Zack Marceau/Aidan Schenk for a seventh straight men's pro doubles title (APP recap). Bobbi Oshiro and Kat Stewart won their first women's doubles gold as a duo, 11-2, 11-9 over Glauka Carvajal Lane/Turkovic. Ronan Camron beat Dusty Boyer 11-9, 5-11, 11-8 for men's singles gold (his second of the year). Turkovic beat Stewart 9-11, 11-4, 11-7 for back-to-back women's singles golds and finished with one gold and two silvers. Bronzes included Devilliers/Tanner Tomassi (MD), Shelby Bates/Christine Maddox (WD), Stewart/Livornese Jr. (XD), Eduardo Irizarry (MS), and Oshiro (WS). APP says highlights will air later on ESPN2 and CBS Sports Network; next stop is the APP Arizona Open Nov. 12-15.",
+   "status": "confirmed",
+   "date": "2026-10-19",
+   "sources": [
+    {
+     "label": "APP Tour (Louisville recap)",
+     "url": "https://www.theapp.global/news/2026-louisville-recap"
+    },
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111896159136493824"
+    },
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111928815396036778"
+    },
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111927810788852073"
+    },
+    {
+     "label": "@OfficialAPPTour on X",
+     "url": "https://x.com/OfficialAPPTour/status/2111779353654648926"
+    },
+    {
+     "label": "APPTV (YouTube, Munro/Van Reek)",
+     "url": "https://www.youtube.com/watch?v=xj8CvikIO98"
+    },
+    {
+     "label": "APPTV (YouTube, women's singles final)",
+     "url": "https://www.youtube.com/watch?v=W89E_ADo9P4"
+    }
+   ],
+   "embeds": [
+    "https://x.com/OfficialAPPTour/status/2111896159136493824",
+    "https://x.com/OfficialAPPTour/status/2111927810788852073",
+    "https://x.com/OfficialAPPTour/status/2111779353654648926"
+   ],
+   "social_angle": "'Seven-straight' Munro/Livornese graphic + Munro/Van Reek first U.S. gold. Turkovic's three-medal day. Note upcoming ESPN2/CBS Sports Network highlight windows when APP posts times.",
+   "tags": [
+    "app",
+    "results"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy: first-day hearing is today at 1:30 p.m. CT (Webex)",
+   "summary": "The emergency first-day hearing in The Picklr's Chapter 11 (Subchapter V) cases remains set for Monday, Oct. 19 at 1:30 p.m. CT by Webex before Judge Scott W. Everett (U.S. Bankruptcy Court, Northern District of Texas, Dallas). On the docket: joint administration of Picklr, Inc. and Picklr Clubs Inc.; interim DIP financing; cash-management relief; authority to pay prepetition wages/benefits; and more time to file schedules. As of this morning's newsroom sweep (about 6:10 a.m. CT), no public order from today's hearing was yet on the Omni case site. Virginia Gazette recirculated the bankruptcy filing Sunday. Stick to filings until orders post.",
+   "status": "confirmed",
+   "date": "2026-10-19",
+   "sources": [
+    {
+     "label": "Court notice of hearing (Omni)",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/9933fcbf-119d-42dc-b070-fa12b1399715_13.pdf"
+    },
+    {
+     "label": "Picklr case calendar (Omni)",
+     "url": "https://cases.omniagentsolutions.com/calendar?clientId=3812&sd=10%2F19%2F2026"
+    },
+    {
+     "label": "Picklr case page (Omni)",
+     "url": "https://cases.omniagentsolutions.com/?clientId=3812"
+    },
+    {
+     "label": "@vagazette on X",
+     "url": "https://x.com/vagazette/status/2112035513137815852"
+    },
+    {
+     "label": "Sports Business Journal",
+     "url": "https://www.sportsbusinessjournal.com/Articles/2026/10/10/the-picklr-files-for-bankruptcy/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Same-day reminder post at ~1 p.m. CT: what the five motions ask for, Webex/public info line, promise a follow-up when orders appear. No speculation on club closures.",
+   "tags": [
+    "business",
+    "clubs"
+   ]
+  },
+  {
+   "title": "UPA-A's Aspes pushes one paddle certification with USA Pickleball; Times Now amplifies the essay",
+   "summary": "Times Now on Oct. 18 amplified UPA-A president Jason Aspes's Oct. 16 essay arguing that separate USA Pickleball and UPA-A paddle lists 'cost everyone.' Aspes proposes one approved list combining USA Pickleball's amateur/international reach with UPA-A's direct performance measurement, post-break-in testing, and independent labs, overseen by an independent technical committee with published methods/results/exceptions and no brand sponsorship ties. He criticizes aspects of OWL's USA Pickleball certification path and argues new-only testing can miss how paddles play after use. He also acknowledges UPA-A's own commercial ties to the pro leagues and says each side would have to give up control. Reddit's r/Pickleball had an 'USAP or UPA-A' thread Sunday. This is advocacy from UPA-A, not a deal between the two bodies.",
+   "status": "confirmed",
+   "date": "2026-10-19",
+   "sources": [
+    {
+     "label": "Times Now",
+     "url": "https://www.timesnownews.com/sports/pickleball/two-standards-cost-everyone-jason-aspes-urges-usa-pickleball-upa-a-to-unite-on-paddle-certification-article-156362336"
+    },
+    {
+     "label": "The Dink",
+     "url": "https://www.thedinkpickleball.com/upa-a-president-calls-for-one-paddle-certification-standard/"
+    },
+    {
+     "label": "UPA-A essay",
+     "url": "https://upaa.unitedpickleball.com/blog/how-usa-pickleball-quietly-lost-their-credibility/"
+    },
+    {
+     "label": "r/Pickleball (USAP or UPA-A)",
+     "url": "https://www.reddit.com/r/Pickleball/comments/1x9gc26/usap_or_upaa/"
+    },
+    {
+     "label": "@PickleballActu on X",
+     "url": "https://x.com/PickleballActu/status/2111837342843478135"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Neutral explainer: why two lists confuse rec players buying a paddle. Quote Aspes; note this is a proposal, not a merger. Invite readers which stamp they check before a tournament.",
+   "tags": [
+    "equipment",
+    "governance",
+    "paddles"
+   ]
+  },
+  {
+   "title": "PPA Tour Asia Hong Kong Slam opens (Oct. 19-25): welcome on site as the dragon chase begins",
+   "summary": "The Hang Seng Bank Hong Kong Slam (PPA Asia 1500) at Kai Tak Arena starts today and runs through Oct. 25, closing the 2026 PPA Tour Asia season. Hong Kong Tennis Association chair Michael Cheng posted a welcome to arriving players Sunday. As covered yesterday, seven players can complete the 'dragon' medal set by reaching a final (head awarded only in Hong Kong), including Tama Shimabukuro and Alix Truong chasing an all-gold set. Local English-language coverage (e.g. DotDotNews) framed the event as a US$1.1 million gathering of top players; treat prize-money figures as outlet-reported unless PPA Asia restates them.",
+   "status": "confirmed",
+   "date": "2026-10-19",
+   "sources": [
+    {
+     "label": "PPA Tour Asia (dragon explainer)",
+     "url": "https://www.ppatour-asia.com/seven-stand-to-complete-the-dragon-in-hong-kong/"
+    },
+    {
+     "label": "@MichaelHKCTA on X",
+     "url": "https://x.com/MichaelHKCTA/status/2111827721949151433"
+    },
+    {
+     "label": "@Pickleballnowin on X",
+     "url": "https://x.com/Pickleballnowin/status/2111737372539052373"
+    },
+    {
+     "label": "Times Now (dragon)",
+     "url": "https://www.timesnownews.com/sports/pickleball/seven-players-target-dragon-medal-glory-at-hong-kong-slam-article-156360854"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MichaelHKCTA/status/2111827721949151433"
+   ],
+   "social_angle": "'Day 1 in Hong Kong' graphic: who still needs the dragon head. Light cross-promo while U.S. tours reset after VB/Louisville.",
+   "tags": [
+    "ppa",
+    "international",
+    "events"
+   ]
+  },
+  {
+   "title": "Viral watch: Kitchen clips Jeremy Lin's pickleball game; Dink's Alshon-vs-Ben PicklePod clip leads TikTok",
+   "summary": "The Kitchen posted a clip captioned that the player 'played with Kobe AND is this good at pickleball,' mirrored on X, TikTok, and YouTube; The Kitchen's YouTube title names Jeremy Lin. Apify's morning TikTok snapshot showed roughly 1.9K plays on that Kitchen upload within hours (still early). Separately, The Dink's PicklePod clip in which Zane Navratil says Christian Alshon could eventually replace Ben Johns if he becomes the best player—and floats an ALW/Alshon pairing—had about 17.7K TikTok plays in the same snapshot, with a matching X post. Label the Alshon/Johns framing as podcast opinion, not a roster move.",
+   "status": "confirmed",
+   "date": "2026-10-19",
+   "sources": [
+    {
+     "label": "The Kitchen (YouTube, Jeremy Lin)",
+     "url": "https://www.youtube.com/watch?v=fvC1htgb0tc"
+    },
+    {
+     "label": "@TheKitchenPB on X",
+     "url": "https://x.com/TheKitchenPB/status/2112008084071547139"
+    },
+    {
+     "label": "The Kitchen on TikTok",
+     "url": "https://www.tiktok.com/@thekitchenpickleball/video/7698200958840376590"
+    },
+    {
+     "label": "The Dink on TikTok (Alshon/Ben)",
+     "url": "https://www.tiktok.com/@thedinkpickleball/video/7698161927675055373"
+    },
+    {
+     "label": "@Pickleball on X",
+     "url": "https://x.com/Pickleball/status/2111970590277968196"
+    },
+    {
+     "label": "The Dink (YouTube Short)",
+     "url": "https://www.youtube.com/watch?v=xhMEN8ZQI3M"
+    }
+   ],
+   "embeds": [
+    "https://x.com/TheKitchenPB/status/2112008084071547139",
+    "https://x.com/Pickleball/status/2111970590277968196"
+   ],
+   "social_angle": "Embed Kitchen's Lin clip (credit YT title for the name). Poll: could Alshon challenge Ben—and would you want ALW/Alshon mixed? Mark as pod speculation.",
+   "tags": [
+    "fans",
+    "podcasts",
+    "celebrities"
+   ]
+  },
+  {
+   "title": "Courts watch: Monticello (Bertram) outdoor complex opens; Palm Springs Demuth ribbon-cutting Oct. 21; Painesville plans Rec Park courts",
+   "summary": "Monticello Times (published Oct. 19) reports Monticello, Minn.'s first dedicated outdoor pickleball complex—eight courts at Bertram Chain of Lakes Regional Athletic Park—opened Oct. 6 after years of local advocacy; first-come, first-served at 10224 Briarwood Ave. NE, with lighting/signage still to come. Palm Springs' $5.1M Demuth Park expansion to 22 courts holds a grand opening celebration Wednesday, Oct. 21 at 4 p.m. local (7 p.m. CT) at 4365 E. Mesquite Ave., per Hoodline/KESQ/city materials. Separately, the News-Herald reports Painesville, Ohio, officials plan four pickleball courts at Kiwanis Recreation Park (old skate-park site), with an $80K Ohio LWCF grant application authorized Oct. 5 and a required city match; construction targeted for spring if funded.",
+   "status": "confirmed",
+   "date": "2026-10-19",
+   "sources": [
+    {
+     "label": "Monticello Times / hometownsource",
+     "url": "https://www.hometownsource.com/monticello_times/years-of-persistence-pay-off-as-bertram-pickleball-courts-open/article_73dbc609-7407-4db7-a27c-effb863fb5bd.html"
+    },
+    {
+     "label": "Hoodline (Palm Springs Demuth)",
+     "url": "https://hoodline.com/2026/10/palm-springs-nearly-doubles-pickleball-courts-with-5-1m-demuth-park-complex/"
+    },
+    {
+     "label": "News-Herald (Painesville)",
+     "url": "https://www.news-herald.com/2026/10/19/painesville-city-officials-plan-to-build-pickleball-courts-at-rec-park/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'New courts near you' trio: Bertram open now, Palm Springs opens Wed 10/21 (note CT), Painesville still in grant stage. Invite reader court submissions.",
+   "tags": [
+    "clubs",
+    "amateur"
+   ]
+  },
   {
    "title": "PPA Virginia Beach: rain pushes semis past 8 p.m.; 18-year-old Goins meets Martinez Vich in today's final",
    "summary": "Rain held up Saturday's play at the Mojo Energy Pouches Virginia Beach Open for about eight hours, per The Virginian-Pilot, so the singles and mixed doubles semifinals didn't start until after 8 p.m. ET. In men's singles, No. 5 John Lucian Goins (18, of Bradenton, Fla.) beat No. 2 Noe Khlif 13-11, 11-1 and will face No. 6 Jaume Martinez Vich, who beat No. 7 Adam Harvey 11-4, 11-6. In women's singles, top seed Kate Fahey reached the final on a walkover over No. 4 Chao Yi Wang. Her opponent is No. 21 Helena Jansen, who came back to beat No. 19 Sofia Sewing 12-14, 11-2, 11-9 for her first career semifinal win, per the PPA. The mixed final is Fahey/Eric Oncins (11-4, 11-6 over Daescu/Dizon) against Catherine Parenteau/Riley Newman (11-9, 4-11, 11-8 over Sleeth/Acevedo). Per the PPA, it's Parenteau/Newman's first mixed final together since 2024. The men's and women's doubles semifinals moved to 7 a.m. CT today. Finals start at 9 a.m. CT on PickleballTV, and Tennis Channel airs 9 a.m.-1 p.m. CT. All times depend on the weather.",
