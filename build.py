@@ -338,6 +338,11 @@ def emit_crawl_files():
             "Claude-SearchBot", "PerplexityBot", "Perplexity-User", "CCBot", "Bytespider", "Applebot-Extended", "Amazonbot",
             "meta-externalagent", "FacebookBot", "cohere-ai", "Diffbot", "AI2Bot", "DuckAssistBot", "MistralAI-User"]
     (DIST / "robots.txt").write_text("\n".join(f"User-agent: {b}\nAllow: /\nDisallow: /go/\n" for b in bots) + f"\nSitemap: {base}/sitemap.xml\n")
+    # IndexNow key file. The body is the key and nothing else, served at /<key>.txt.
+    key = (ROOT / "data" / "indexnow-key.txt").read_text().strip()
+    if not re.fullmatch(r"[0-9a-f]{32}", key):
+        raise SystemExit("data/indexnow-key.txt must be 32 lowercase hex characters")
+    (DIST / f"{key}.txt").write_text(key)
     def bullet(p): return f"- [{p['title']}]({canon(p['fn'])}): {p['desc']}"
     main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "buzz.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html", "discount-codes.html"}
     mains = [p for p in pages if p["fn"] in main_names]
