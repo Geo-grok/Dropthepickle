@@ -319,8 +319,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 <h2>Find your paddle</h2><div class="grid secs">{"".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">Spec filter →</div></a>' for f, t in list_links)}</div>
 <section class="band"><h2>Get the weekly drop</h2><p>The best paddle deals, new reviews and tournament news, once a week. No spam.</p>{signup("home")}</section>
 </main>'''
-    page("index.html", "All things pickleball", home,
-         "All things pickleball, free for everyone. News, paddles, prices, pros, tournaments, videos and guides, all in one place.",
+    page("index.html", "Pickleball news, paddle deals & prices", home,
+         "Daily pickleball news, verified paddle discount codes and dated price checks. All things pickleball, free for everyone.",
          full=True,
          fresh={"deals": [fresh_p(p) for p in dl[:8]],
                 "buzz": [(b.get("title"), b.get("status")) for b in D("buzz.json").get("items", [])[:3]],
