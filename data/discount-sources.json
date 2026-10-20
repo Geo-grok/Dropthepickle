@@ -100,7 +100,21 @@
   "Stack Athletics": "https://stackathletics.com/",
   "Suay": "https://suay.com/",
   "Storyi": "https://www.ourstoryi.com/",
-  "Yobow": "https://the-yobow.myshopify.com/"
+  "Yobow": "https://the-yobow.myshopify.com/",
+  "Ace": "https://acepickleball.co/",
+  "Komodo": "https://komodopickleball.com/",
+  "ProXR": "https://proxrpickleball.com/",
+  "Versix": "https://versixpickleball.com/",
+  "Sona Pickleball": "https://sonapickleball.com/",
+  "Jigsaw Health": "https://www.jigsawhealth.com/",
+  "Cyclotron": "https://cyclotronpickleball.com/",
+  "Grafton": "https://graftonpickleball.com/",
+  "Phantom": "https://www.phantompickleball.com/",
+  "Winners Edge": "https://wepickleball.com/",
+  "Brioti": "https://brioti.com/",
+  "Srikel": "https://srikel.com/",
+  "Core Pickleball": "https://coreathletics.com/",
+  "PekZen": "https://pekzen.com/"
  },
  "sources": [
   {
@@ -352,6 +366,12 @@
      "code": "PBEFFECT",
      "discount": "10% off",
      "conditions": "Massage guns and warm-up gear"
+    },
+    {
+     "brand": "Jigsaw Health",
+     "code": "PBEFFECT",
+     "discount": "10% off",
+     "conditions": "Electrolytes"
     }
    ]
   },
@@ -719,6 +739,30 @@
     },
     {
      "brand": "Paddletek",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Ace",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Komodo",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "ProXR",
+     "code": "JOHNKEW",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Versix",
      "code": "JOHNKEW",
      "discount": "10% off",
      "conditions": "Brand site checkout"
@@ -1389,6 +1433,18 @@
      "code": "NICOTHELEFTY",
      "discount": "15% off",
      "conditions": "Pickleball eyewear"
+    },
+    {
+     "brand": "Pakle",
+     "code": "NICOVALENCIA",
+     "discount": "15% off",
+     "conditions": "The Fuse and the Infinity"
+    },
+    {
+     "brand": "Sona Pickleball",
+     "code": "NICOTHELEFTY",
+     "discount": "15% off",
+     "conditions": "Paddle shop; JOOLA, Selkirk, CRBN and Six Zero"
     }
    ]
   },
@@ -1401,6 +1457,380 @@
      "code": "10Hannah",
      "discount": "10% off",
      "conditions": "Enter in 'Special Offer Codes'; sale/clearance and some brands excluded"
+    }
+   ]
+  },
+  {
+   "name": "Paddle Review Hub",
+   "url": "https://paddlereviewhub.com/deals",
+   "codes": [
+    {
+     "brand": "Honolulu",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "RPM",
+     "code": "PRH",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Bread & Butter",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Enhance",
+     "code": "PRH",
+     "discount": "$20 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Spartus",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Vatic Pro",
+     "code": "PRH",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Engage",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Luzz",
+     "code": "PRH",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Six Zero",
+     "code": "PRH10",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Friday",
+     "code": "PRH",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "11SIX24",
+     "code": "PRH",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Ronbus",
+     "code": "RCPRH",
+     "discount": "$20 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Pickle Poppers",
+     "code": "PRH",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Pakle",
+     "code": "PRH",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Aireo",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Cyclotron",
+     "code": "PRH",
+     "discount": "20% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Diadem",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Grafton",
+     "code": "PRH",
+     "discount": "20% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "GRUVN",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout",
+     "match": "GRÜVN"
+    },
+    {
+     "brand": "HEAD",
+     "code": "PRH15",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Hudef",
+     "code": "PRH",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "MARK",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Phantom",
+     "code": "PRH",
+     "discount": "20% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Proton",
+     "code": "PRH10",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Revolin",
+     "code": "PRH",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Thrive",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Volair",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Warping Point",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Slyce Sport",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Apparel and gear"
+    },
+    {
+     "brand": "Brioti",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Sunglasses"
+    },
+    {
+     "brand": "Winners Edge",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Court shoes"
+    },
+    {
+     "brand": "Stria Sport",
+     "code": "PRH",
+     "discount": "10% off",
+     "conditions": "Court shoes"
+    },
+    {
+     "brand": "Hesacore",
+     "code": "PRH10",
+     "discount": "10% off",
+     "conditions": "Grips"
+    },
+    {
+     "brand": "Srikel",
+     "code": "PRH",
+     "discount": "$20 off",
+     "conditions": "Nets, paddles and balls"
+    }
+   ]
+  },
+  {
+   "name": "BePickleBaller (Ben)",
+   "url": "https://bepickleballer.com/pickleball-paddle-discount-codes/",
+   "codes": [
+    {
+     "brand": "Selkirk",
+     "code": "INF-BALLER",
+     "discount": "Bonus bucks",
+     "conditions": "Future-purchase credit, about $10 to $200 by order size"
+    },
+    {
+     "brand": "RPM",
+     "code": "BePickleballer",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Engage",
+     "code": "BEN67536",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Pickleball Apes",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Ronbus",
+     "code": "PICKLEBALLER",
+     "discount": "$20 off",
+     "conditions": "Paddles"
+    },
+    {
+     "brand": "Friday",
+     "code": "BePickleBaller",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Chorus",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Element 6",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Vatic Pro",
+     "code": "BePickleBaller",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Warping Point",
+     "code": "BePickleBaller",
+     "discount": "25% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Holbrook",
+     "code": "BePickleBaller",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Enhance",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Bread & Butter",
+     "code": "BePickleBaller",
+     "discount": "15% off",
+     "conditions": "Brand site checkout",
+     "match": "Bread and Butter"
+    },
+    {
+     "brand": "Six Zero",
+     "code": "PICKLEBALLER10",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Volair",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Luzz",
+     "code": "BePickleBaller",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Franklin",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Core Pickleball",
+     "code": "BePickleBaller",
+     "discount": "15% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "MARK",
+     "code": "AMB-BEN",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "11SIX24",
+     "code": "BePickleballer",
+     "discount": "$10 off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "PekZen",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Spartus",
+     "code": "BePickleballer",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "Paddletek",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Brand site checkout"
+    },
+    {
+     "brand": "JustPaddles",
+     "code": "BePickleBaller",
+     "discount": "10% off",
+     "conditions": "Except Babolat, HEAD, JOOLA, Selkirk, and Warstic"
+    },
+    {
+     "brand": "ERNE",
+     "code": "BePickleballer",
+     "discount": "$100 off",
+     "conditions": "Ball machine; page says about $100 off"
+    },
+    {
+     "brand": "Srikel",
+     "code": "BePickleballer",
+     "discount": "$25 off",
+     "conditions": "Pickleball net"
     }
    ]
   }

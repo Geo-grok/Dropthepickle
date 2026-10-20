@@ -13,6 +13,10 @@
    "url": "https://808pickle.com/",
    "affiliate_tag": ""
   },
+  "acepickleball-home": {
+   "url": "https://acepickleball.co/",
+   "affiliate_tag": ""
+  },
   "aireo-sports-home": {
    "url": "https://www.aireo-sports.com/",
    "affiliate_tag": ""
@@ -49,12 +53,20 @@
    "url": "https://breadandbutterpickleball.com/",
    "affiliate_tag": ""
   },
+  "brioti-home": {
+   "url": "https://brioti.com/",
+   "affiliate_tag": ""
+  },
   "centerlineathletics-home": {
    "url": "https://centerlineathletics.com/",
    "affiliate_tag": ""
   },
   "choruspickleball-home": {
    "url": "https://choruspickleball.com/",
+   "affiliate_tag": ""
+  },
+  "coreathletics-home": {
+   "url": "https://coreathletics.com/",
    "affiliate_tag": ""
   },
   "crbnpickleball-crbn-1x-power-series-pickleball-paddle": {
@@ -79,6 +91,10 @@
   },
   "cuurt-home": {
    "url": "https://www.cuurt.com/",
+   "affiliate_tag": ""
+  },
+  "cyclotronpickleball-home": {
+   "url": "https://cyclotronpickleball.com/",
    "affiliate_tag": ""
   },
   "daps-home": {
@@ -197,6 +213,10 @@
    "url": "https://gospartus.com/",
    "affiliate_tag": ""
   },
+  "graftonpickleball-home": {
+   "url": "https://graftonpickleball.com/",
+   "affiliate_tag": ""
+  },
   "gruvn-home": {
    "url": "https://gruvn.co/",
    "affiliate_tag": ""
@@ -215,6 +235,10 @@
   },
   "ipickl-home": {
    "url": "https://ipickl.com/",
+   "affiliate_tag": ""
+  },
+  "jigsawhealth-home": {
+   "url": "https://www.jigsawhealth.com/",
    "affiliate_tag": ""
   },
   "joola-joola-hyperion-pro-v-pickleball-paddle": {
@@ -243,6 +267,10 @@
   },
   "justpaddles-home": {
    "url": "https://www.justpaddles.com/",
+   "affiliate_tag": ""
+  },
+  "komodopickleball-home": {
+   "url": "https://komodopickleball.com/",
    "affiliate_tag": ""
   },
   "leorever-home": {
@@ -317,6 +345,14 @@
    "url": "https://paklepickleball.com/",
    "affiliate_tag": ""
   },
+  "pekzen-home": {
+   "url": "https://pekzen.com/",
+   "affiliate_tag": ""
+  },
+  "phantompickleball-home": {
+   "url": "https://www.phantompickleball.com/",
+   "affiliate_tag": ""
+  },
   "pickle-poppers-home": {
    "url": "https://www.pickle-poppers.com/",
    "affiliate_tag": ""
@@ -351,6 +387,10 @@
   },
   "protonsports-home": {
    "url": "https://protonsports.com/",
+   "affiliate_tag": ""
+  },
+  "proxrpickleball-home": {
+   "url": "https://proxrpickleball.com/",
    "affiliate_tag": ""
   },
   "ramsports-home": {
@@ -441,12 +481,20 @@
    "url": "https://slycesport.com/",
    "affiliate_tag": ""
   },
+  "sonapickleball-home": {
+   "url": "https://sonapickleball.com/",
+   "affiliate_tag": ""
+  },
   "speeduppickle-home": {
    "url": "https://speeduppickle.com/",
    "affiliate_tag": ""
   },
   "sqairz-home": {
    "url": "https://www.sqairz.com/",
+   "affiliate_tag": ""
+  },
+  "srikel-home": {
+   "url": "https://srikel.com/",
    "affiliate_tag": ""
   },
   "stackathletics-home": {
@@ -501,12 +549,20 @@
    "url": "https://vaticpro.com/",
    "affiliate_tag": ""
   },
+  "versixpickleball-home": {
+   "url": "https://versixpickleball.com/",
+   "affiliate_tag": ""
+  },
   "volair-home": {
    "url": "https://www.volair.com/",
    "affiliate_tag": ""
   },
   "warpingpoint-home": {
    "url": "https://warpingpoint.com/",
+   "affiliate_tag": ""
+  },
+  "wepickleball-home": {
+   "url": "https://wepickleball.com/",
    "affiliate_tag": ""
   }
  }
