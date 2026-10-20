@@ -582,16 +582,28 @@ def build():
     jump = "".join(f'<a href="#{slugb(b)}">{e(b)} · {e(best[b]["discount"])}</a>' for b in brands)
     secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2>{e(b)} codes</h2><div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
     nocode = "".join(f'<li><b>{e(b)}:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
+    code_faq = [
+        ("How often are these codes checked?", "Every code is re-checked each day on the creator or brand page that publishes it."),
+        ("What happens to codes that expire?", "Codes that disappear get removed. Codes can also expire or change without notice, so check your cart total before you pay."),
+        ("Can I stack more than one code?", "Most brands allow one code per order, and sale prices often beat a code. Check your cart total before you pay."),
+        ("Where do these codes come from?", "Codes are published by the creators and brands linked on each card, and each card shows its source. We don't make up codes or post leaked ones."),
+    ]
+    faq_html = "<h2>Questions</h2>" + "".join(f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in code_faq)
+    code_ld = [{"@type": "ItemList", "name": "Best code per brand", "numberOfItems": len(brands), "itemListElement": [
+                   {"@type": "ListItem", "position": i, "name": f'{b} discount code: {best[b]["discount"]}', "url": canon("discount-codes.html") + "#" + slugb(b)}
+                   for i, b in enumerate(brands, 1)]},
+               {"@type": "FAQPage", "mainEntity": [
+                   {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in code_faq]}]
     copyjs = """<script>document.addEventListener('click',ev=>{const b=ev.target.closest('[data-code]');if(!b)return;const c=b.dataset.code,done=()=>{const k=b.parentNode.querySelector('.ccopy');if(k){k.textContent='Copied!';k.classList.add('ok');setTimeout(()=>{k.textContent='Copy';k.classList.remove('ok')},1800)}};if(navigator.clipboard)navigator.clipboard.writeText(c).then(done,done);else{const t=document.createElement('textarea');t.value=c;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();done()}});</script>"""
     page("discount-codes.html", "Pickleball Discount Codes & Paddle Coupons (Updated Daily)",
          f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
          f'{nudge("discount-codes", "top")}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
          f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p><h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
-         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="disclosure.html">Disclosure</a>.</p>'
+         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
          f'{nudge("discount-codes-bottom", "bottom", "Don\'t miss the next code", "We re-check creator and brand pages every day. Join the list and hear about new codes first.")}{copyjs}{NUDGEJS}',
          f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
-         fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]})
+         fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]}, schema=code_ld)
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")

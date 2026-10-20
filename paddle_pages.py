@@ -332,6 +332,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
          schema=[item_list(dl[:8])] if dl else None)
     gl = [("guides/how-to-choose-a-paddle.html","How to choose a paddle","Budget, shape, core, weight"),("guides/best-paddles-under-100.html","Best paddles under $100","Only today's maker prices"),("guides/pickleball-rules-for-beginners.html","Rules for beginners","Serve, kitchen, scoring"),("guides/how-to-dink.html","How to dink","The soft kitchen shot"),("guides/paddle-weight-and-core.html","Paddle weight and core","Ounces and millimetres"),("best-paddles-for-beginners.html","Best paddles for beginners","Spec filter"),("price-index.html","Paddle Price Index","Every recorded maker price")]
     page("guides.html", "Pickleball guides", '<h1>Pickleball guides</h1><p class="meta">Plain-language guides for new players and paddle shoppers.</p><div class="grid secs">' + "".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">{e(d)} →</div></a>' for f, t, d in gl) + '</div>',
-         "Pickleball guides: choosing a paddle, paddles under $100, beginner rules, how to dink, and paddle weight and core.")
+         "Pickleball guides: choosing a paddle, paddles under $100, beginner rules, how to dink, and paddle weight and core.",
+         schema=[{"@type": "ItemList", "name": "Pickleball guides", "numberOfItems": len(gl), "itemListElement": [
+             {"@type": "ListItem", "position": i, "name": t, "url": absu(f)} for i, (f, t, d) in enumerate(gl, 1)]}])
     import content_pages
     content_pages.make(page, e, fmt, PP, cur, ph)
