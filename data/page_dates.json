@@ -303,6 +303,10 @@
   "hash": "1e826239643ce77865b98afddfe8b21a1e8817e33e5380a69ed7a899ffcdd316",
   "updated": null
  },
+ "price-tracker.html": {
+  "hash": "242b882f18862d70614ba20ad7d1ad4252c5b8cd7cccc82028cef8d3c79ec4de",
+  "updated": null
+ },
  "privacy.html": {
   "hash": "476c2da24522f4949cdaa422935b31e375f1b6fa3d61909fbdec502765955355",
   "updated": "2026-10-15"
@@ -317,6 +321,10 @@
  },
  "reviews.html": {
   "hash": "d70f20d35bdd8dacc439763c6be553c5117ccc2f72427b1d694555f904e4df7e",
+  "updated": null
+ },
+ "science.html": {
+  "hash": "7001631c91bc072710ca681a449260e1a1556118e901a42ce98ffe999f014f24",
   "updated": null
  },
  "tournaments.html": {

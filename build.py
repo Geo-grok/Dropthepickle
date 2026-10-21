@@ -8,7 +8,7 @@ def D(n):
     return json.loads(p.read_text()) if p.exists() else {"items": []}
 e = lambda s: html.escape(str(s or ""), quote=True)
 NAV = [("index.html","Home"),("tournaments.html","Tournaments"),("reviews.html","Reviews"),("buzz.html","Buzz"),
-       ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("compare.html","Compare"),("shop.html","Merch"),("community.html","Marketplace")]
+       ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("compare.html","Compare"),("price-tracker.html","Price tracker"),("science.html","Science"),("shop.html","Merch"),("community.html","Marketplace")]
 CSS = r"""
 :root{--navy:#0b1630;--navy2:#111d36;--navy3:#16264a;--neon:#c6f432;--neon2:#a8d61c;--warm:#ff7a45;--ink:#0d1526;--mut:#4a5878;--bg:#f4f6fa;--card:#fff;--line:#e3e8f0;--r:18px;--sh:0 1px 2px rgba(11,20,38,.06),0 8px 24px rgba(11,20,38,.08);--sh2:0 2px 4px rgba(11,20,38,.08),0 18px 40px rgba(11,20,38,.16)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
@@ -204,6 +204,16 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .buzzcard .srcs{font-size:.94rem;margin:.5rem 0 0}.buzzcard .srcs a{margin-right:.6rem}
 .buzzx{margin:.6rem 0}.buzzx .twitter-tweet{margin:.5rem 0!important}
 
+.pt-grid{display:grid;gap:1rem;grid-template-columns:1fr}@media(min-width:720px){.pt-grid{grid-template-columns:1fr 1fr}}
+.ptcard{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:1.15rem;border-left:8px solid var(--neon);display:flex;flex-direction:column;gap:.5rem}
+.ptcard h3{font-size:1.3rem;margin:0;line-height:1.2}.ptcard .ptbrand{font-weight:800;color:var(--mut);font-size:1rem;text-transform:uppercase}
+.ptcard .ptprice{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}.ptcard .ptnow{font-family:Anton,Impact,sans-serif;font-size:2.3rem;color:var(--navy);line-height:1}
+.ptcard .ptlist{font-size:1.1rem;color:var(--mut);text-decoration:line-through}.ptcard .ptoff{background:var(--neon);color:var(--navy);font-weight:900;font-size:1.1rem;padding:.25rem .6rem;border-radius:8px}
+.ptcard .ptoff.zero{background:#eef2f8;color:var(--navy3)}.ptcard .ptstamp{font-size:1rem;font-weight:700;color:var(--navy3)}
+.ptcard .btn{justify-content:center;min-height:52px;font-size:1.1rem}.receipts{background:var(--navy);color:#fff;border-radius:var(--r);padding:1.2rem;margin:1.6rem 0;font-size:1.1rem}.receipts h2{color:#fff}.receipts a{color:var(--neon);font-weight:800}
+.sci-grid{display:grid;gap:1.4rem;grid-template-columns:1fr}@media(min-width:720px){.sci-grid{grid-template-columns:1fr 1fr}}
+.scicard{background:var(--navy);color:#fff;border-radius:var(--r);padding:1rem;box-shadow:var(--sh2)}.scicard video{width:100%;border-radius:12px;background:#000;display:block;max-height:80vh}
+.scicard h3{color:var(--neon);font-size:1.5rem;margin:.8rem 0 .3rem}.scicard p{font-size:1.1rem;margin:0;color:#dfe6f3}
 """
 # Always-visible primary tabs (mobile-first). Codes uses the clean /discount-codes URL.
 TABS = [("buzz.html","Buzz"),("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
@@ -249,8 +259,8 @@ COURT = '''<svg class="court" viewBox="0 0 1200 600" preserveAspectRatio="xMidYM
 HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs><radialGradient id="ballg" cx=".35" cy=".3"><stop offset="0" stop-color="#eaff8a"/><stop offset=".6" stop-color="#c6f432"/><stop offset="1" stop-color="#8db511"/></radialGradient><linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a6b"/><stop offset="1" stop-color="#ff5f2e"/></linearGradient></defs><g transform="rotate(-24 200 200)"><rect x="110" y="40" width="170" height="220" rx="76" fill="url(#pad)"/><rect x="122" y="52" width="146" height="196" rx="66" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/><rect x="178" y="252" width="34" height="110" rx="12" fill="#0b1426"/><rect x="178" y="280" width="34" height="8" fill="#c6f432"/><rect x="178" y="304" width="34" height="8" fill="#c6f432"/></g><circle cx="300" cy="110" r="62" fill="url(#ballg)"/><g fill="#0b1426" opacity=".85"><circle cx="280" cy="85" r="7"/><circle cx="315" cy="78" r="6"/><circle cx="335" cy="110" r="7"/><circle cx="300" cy="112" r="7.5"/><circle cx="270" cy="120" r="6"/><circle cx="292" cy="145" r="6.5"/><circle cx="325" cy="140" r="5.5"/></g><g stroke="#c6f432" stroke-width="4" stroke-linecap="round" opacity=".5"><line x1="210" y1="150" x2="150" y2="170"/><line x1="220" y1="120" x2="170" y2="125"/></g></svg>'''
 
 FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("buzz.html","Buzz"),("podcasts.html","Podcasts"),("creators.html","Creators"),("creators/ryan-morneau.html","Ryan Morneau")]),
-            ("Learn",[("guides/how-to-choose-a-paddle.html","Choose a paddle"),("guides/best-paddles-under-100.html","Under $100 guide"),("guides/pickleball-rules-for-beginners.html","Rules"),("guides/how-to-dink.html","How to dink"),("guides/paddle-weight-and-core.html","Weight and core")]),
-            ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("discount-codes.html","Discount codes"),("price-index.html","Price index"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
+            ("Learn",[("guides/how-to-choose-a-paddle.html","Choose a paddle"),("guides/best-paddles-under-100.html","Under $100 guide"),("guides/pickleball-rules-for-beginners.html","Rules"),("guides/how-to-dink.html","How to dink"),("guides/paddle-weight-and-core.html","Weight and core"),("science.html","Big Dill Science")]),
+            ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("discount-codes.html","Discount codes"),("price-index.html","Price index"),("price-tracker.html","Price tracker"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
             ("Company",[("about.html","About"),("disclosure.html","Affiliate disclosure"),("privacy.html","Privacy"),("community.html","Join the community")])]
 # Last content-change date per page. A date is recorded only when `fresh` differs from the hash stored in data/page_dates.json.
 _PREV, _NEXT, CATALOG = {}, {}, {}
@@ -344,7 +354,7 @@ def emit_crawl_files():
         raise SystemExit("data/indexnow-key.txt must be 32 lowercase hex characters")
     (DIST / f"{key}.txt").write_text(key)
     def bullet(p): return f"- [{p['title']}]({canon(p['fn'])}): {p['desc']}"
-    main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "buzz.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html", "discount-codes.html"}
+    main_names = {"index.html", "tournaments.html", "reviews.html", "news.html", "buzz.html", "pros.html", "pro-paddles.html", "creators.html", "podcasts.html", "paddles.html", "compare.html", "deals.html", "discount-codes.html", "price-tracker.html", "science.html"}
     mains = [p for p in pages if p["fn"] in main_names]
     guides = [p for p in pages if p["fn"].startswith(("guides/", "creators/"))]
     paddles = [p for p in pages if p["fn"].startswith(("paddle-", "vs-", "best-"))]
@@ -599,11 +609,45 @@ def build():
          f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
          f'{nudge("discount-codes", "top")}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
-         f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p><h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
+         f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a> or the <a href="price-tracker.html">Paddle Price Tracker</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p><h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
          f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
          f'{nudge("discount-codes-bottom", "bottom", "Don\'t miss the next code", "We re-check creator and brand pages every day. Join the list and hear about new codes first.")}{copyjs}{NUDGEJS}',
          f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
          fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]}, schema=code_ld)
+    # Paddle Price Tracker (data/price-tracker.json, verified on each retailer's own product page) + public JSON for Receipts content
+    PT = json.loads((ROOT / "data" / "price-tracker.json").read_text())
+    (DIST / "data").mkdir(exist_ok=True); shutil.copyfile(ROOT / "data" / "price-tracker.json", DIST / "data" / "price-tracker.json")
+    def ptday(d): return datetime.date.fromisoformat(d).strftime("%b %-d, %Y")
+    def money(v, cur): return (f"A${v:,.2f}" if cur == "AUD" else f"${v:,.2f}")
+    def ptcard(r):
+        slug = r["go"].rsplit("/", 1)[-1]
+        href = r["go"] if slug in json.loads(GO_FILE.read_text()).get("links", {}) else r["url"]
+        off = r.get("pct_off", 0)
+        lst = f'<span class="ptlist">{money(r["list_price"], r["currency"])}</span>' if r["list_price"] > r["current_price"] else ""
+        return (f'<article class="ptcard"><span class="ptbrand">{e(r["brand"])} · {e(r["retailer"])}</span><h3>{e(r["paddle"])}</h3>'
+                f'<div class="ptprice"><span class="ptnow">{money(r["current_price"], r["currency"])}</span>{lst}<span class="ptoff{"" if off else " zero"}">{f"{off}% off list" if off else "Full list price"}</span></div>'
+                f'<span class="ptstamp">✓ Checked {ptday(r["checked"])}{" · prices in AUD" if r["currency"] == "AUD" else ""}</span>'
+                f'<a class="btn" href="{e(href)}" rel="nofollow sponsored noopener" target="_blank">See it at {e(r["retailer"])} →</a></article>')
+    ptrows = sorted(PT["rows"], key=lambda r: -r.get("pct_off", 0))
+    page("price-tracker.html", "Paddle Price Tracker: Joola, Selkirk, CRBN, Six Zero prices checked",
+         f'<h1>Paddle Price Tracker</h1><p class="meta">{len(ptrows)} popular paddles. Every price was read on the brand\'s own product page on {ptday(PT["updated"])}. We list the lowest in-stock option. "% off list" compares to the crossed-out price the brand shows. No guesses: if we couldn\'t check it, it isn\'t here. Prices change fast, so confirm at checkout.</p>'
+         f'<p class="meta"><a href="deals.html"><b>Today\'s deals →</b></a> · <a href="discount-codes.html"><b>Stack a discount code →</b></a></p>'
+         f'<div class="pt-grid">{"".join(ptcard(r) for r in ptrows)}</div>'
+         f'<section class="receipts"><h2>From the Receipts series</h2><p>Big Dill keeps the receipts. When a Receipts post says a paddle is "on sale", these are the prices behind it, with the date we checked. Want the raw numbers? <a href="data/price-tracker.json">Download the price data (JSON)</a>.</p></section>'
+         f'<p class="disc">Links may be affiliate links. <a href="disclosure.html">Disclosure</a>.</p>',
+         f"Paddle Price Tracker: {len(ptrows)} Joola, Selkirk, CRBN, Six Zero and more paddle prices, checked on each brand's site {ptday(PT['updated'])}, with % off list.",
+         fresh={"pt": [(r["paddle"], r["current_price"], r["list_price"]) for r in ptrows]})
+    # Big Dill Science video hub (existing science explainers in media/)
+    SCI = [("physics-topspin", "Why topspin dips", "The physics of topspin: how spin bends the ball down so you can hit hard and still land it."),
+           ("physics-third-shot-drop", "The physics of the third shot drop", "Why a soft, high-arc third shot lands in the kitchen and buys you time to get to the net.")]
+    def scicard(slug, t, d):
+        poster = next((f"media/{slug}{x}" for x in (".jpg", ".png", ".webp") if (ROOT / "media" / f"{slug}{x}").exists()), "")
+        pa = f' poster="{poster}"' if poster else ""
+        return f'<article class="scicard"><video controls playsinline preload="metadata"{pa} src="media/{slug}.mp4"></video><h3>{e(t)}</h3><p>{e(d)}</p></article>'
+    page("science.html", "Big Dill Science: pickleball physics videos",
+         f'<h1>Big Dill Science</h1><p class="meta">Short videos that explain the physics behind the shots. Tap play. Sound on.</p><div class="sci-grid">{"".join(scicard(*v) for v in SCI if (ROOT / "media" / f"{v[0]}.mp4").exists())}</div>'
+         f'<p class="meta">Want to put it to work? Try <a href="guides/how-to-dink.html"><b>how to dink</b></a> or <a href="reviews.html"><b>paddle reviews</b></a>.</p>',
+         "Big Dill Science: short pickleball physics videos on topspin and the third shot drop.", fresh={"sci": SCI})
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
