@@ -298,13 +298,15 @@ def publish_brand():
     for name in ("logo-full.png", "logo-full.webp", "avatar.png", "avatar.webp", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"):
         shutil.copyfile(web / name, DIST / name)
 def publish_media():
-    """Public video files. Not linked from any page."""
+    """Public files under media/, including media/receipts/. Served at /media/<path>."""
     src = ROOT / "media"
     if not src.is_dir(): return
     dest = DIST / "media"
-    dest.mkdir(parents=True, exist_ok=True)
-    for p in src.iterdir():
-        if p.is_file(): shutil.copyfile(p, dest / p.name)
+    for p in src.rglob("*"):
+        if not p.is_file(): continue
+        out = dest / p.relative_to(src)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(p, out)
 def crumbs_for(fn, title, url):
     base = C["BASE_URL"].rstrip("/") + "/"
     home = {"name": "Home", "url": base}
