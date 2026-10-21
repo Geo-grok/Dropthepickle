@@ -30,7 +30,13 @@ GUIDES = [
     ("guides/pickleball-rules-for-beginners.html", "Pickleball rules for beginners"),
     ("guides/how-to-dink.html", "How to dink"),
     ("guides/paddle-weight-and-core.html", "Paddle weight and core"),
+    ("guides/is-my-paddle-dead.html", "Is my paddle dead? Core crush signs"),
+    ("guides/pickleball-rules-cheat-sheet-2026.html", "Pickleball rules cheat sheet 2026"),
+    ("guides/how-to-read-dupr-ratings.html", "How to read DUPR ratings"),
 ]
+RULES_CHANGES = "https://usapickleball.org/docs/rules/USAP-Rulebook-Change-Document.pdf"
+RULES_CHANGES_VIEW = "https://rules.usapickleball.org/view/rule-changes-view-all/"
+RULES_HUB = "https://usapickleball.org/rules/"
 
 
 def make(page, e, fmt, PP, cur, ph):
@@ -50,6 +56,14 @@ def make(page, e, fmt, PP, cur, ph):
         schema = {"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in pairs]}
         return f'<h2>Questions</h2>{body}', schema
+
+    def sources(items):
+        lis = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>{(" — " + e(n)) if n else ""}</li>' for t, u, n in items)
+        return f'<h2>Sources</h2><ul>{lis}</ul>'
+
+    def money_links():
+        return ('<p>Shopping for gear? Check today\'s <a href="../discount-codes.html">pickleball discount codes</a> '
+                'and the <a href="../deals.html">paddle deals</a> before you pay full price.</p>')
 
     def more(current):
         links = "".join(f'<li><a href="../{fn}">{e(title)}</a></li>' for fn, title in GUIDES if fn != current)
@@ -143,44 +157,72 @@ def make(page, e, fmt, PP, cur, ph):
          schema=[faq_ld])
 
     # ----- under $100 -----
-    def row(p, note):
+    def verified(p):
         h = ph(p)
-        sale = f' Sale, down from the maker\'s compare-at of {money(p, h["compare_at"])}.' if h.get("sale") and h.get("compare_at") else ""
-        spec = " · ".join(x for x in [p.get("core"), p.get("shape"), p.get("weight")] if x)
-        return f'<li>{alink(p)} — {money(p, cur(p))} today.{e(sale)} Published specs: {e(spec) or "the maker page does not list core, shape, and weight clearly"}. {note}</li>'
+        return (p["currency"] == "USD" and h.get("status") == "ok" and h.get("available") is True
+                and isinstance(h.get("current"), (int, float)) and bool(h.get("checked")))
+    ok_under = sorted([p for p in PP if verified(p) and ph(p)["current"] < 100], key=lambda p: (ph(p)["current"], p["brand"], p["model"]))
+    ok_near = sorted([p for p in PP if verified(p) and 100 <= ph(p)["current"] <= 150], key=lambda p: (ph(p)["current"], p["brand"], p["model"]))
+    aud = [p for p in PP if p["currency"] != "USD"]
+    unverified = [p for p in PP if p["currency"] == "USD" and not verified(p)]
 
-    if u100:
-        under_items = "".join(row(p, "This is the only USD paddle in our database at $100 or less right now." if len(u100) == 1 else "At or under $100 at today's maker price.") for p in u100)
-        under_lead = f"{len(u100)} USD paddle{'s' if len(u100) != 1 else ''} in our database {'are' if len(u100) != 1 else 'is'} at $100 or less at today's maker price."
+    def row(p):
+        h = ph(p)
+        spec = " · ".join(x for x in [p.get("core"), p.get("shape"), p.get("weight")] if x) or "not published by the maker"
+        sale = f' (maker compare-at {money(p, h["compare_at"])})' if h.get("sale") and h.get("compare_at") else ""
+        return f'<tr><th scope="row">{alink(p)}</th><td>{money(p, h["current"])}{e(sale)}</td><td>{e(fmt(h["checked"]))}</td><td>{e(spec)}</td></tr>'
+
+    def table(rows):
+        return ('<div class="tbl"><table><thead><tr><th>Paddle</th><th>Maker price</th><th>Price checked</th><th>Published specs</th></tr></thead><tbody>'
+                + "".join(row(p) for p in rows) + '</tbody></table></div>')
+
+    if ok_under:
+        under_table = table(ok_under)
+        under_lead = f"{len(ok_under)} paddle{'s' if len(ok_under) != 1 else ''} in our database {'have' if len(ok_under) != 1 else 'has'} a verified current maker price under $100."
     else:
-        under_items = "<li>None. No USD paddle in our database is at or under $100 at today's maker price.</li>"
-        under_lead = "No USD paddle in our database is at or under $100 at today's maker price."
-    near_items = "".join(row(p, "Over $100. Listed here only so you can see the next prices in the file, not because it made a $100 cutoff.") for p in near) or "<li>None at $150 or under either.</li>"
-    names = ", ".join(f"{p['brand']} {p['model']}" for p in u100) or "none"
+        under_table = "<p><b>None right now.</b> No paddle in our database has a verified current maker price under $100.</p>"
+        under_lead = "No paddle in our database has a verified current maker price under $100 right now."
+    near_table = table(ok_near) if ok_near else "<p>None.</p>"
+    at100 = [p for p in ok_near if ph(p)["current"] == 100]
+    at100_txt = "".join(f" The {p['brand']} {p['model']} is exactly {money(p, 100)}, which is not under $100, so it is excluded." for p in at100)
+    excl = [f"{p['brand']} {p['model']}: exactly {money(p, 100)} at the last check, not under $100." for p in at100]
+    if aud:
+        excl.append(f"{len(aud)} Six Zero paddle{'s are' if len(aud) != 1 else ' is'} priced in AUD on the maker's site. We do not convert currencies, so {'they are' if len(aud) != 1 else 'it is'} left out.")
+    if unverified:
+        excl.append(f"{len(unverified)} USD paddle{'s' if len(unverified) != 1 else ''} had no successful, in-stock price check, so {'they are' if len(unverified) != 1 else 'it is'} left out.")
+    names = ", ".join(f"{p['brand']} {p['model']}" for p in ok_under)
+    checked_dates = sorted({ph(p)["checked"] for p in PP if verified(p)})
+    last_check = fmt(checked_dates[-1]) if checked_dates else "not recorded"
     u100_faq = [
-        ("Which paddles are under $100?",
-         f"{under_lead} {names}. The list is alphabetical only when prices tie. It is not ordered by how the paddles play."),
-        ("Are the paddles between $100 and $150 included?",
-         "They are shown in a separate list and labeled as over $100. They are not called under-$100 paddles."),
-        ("Why is the list so short?",
-         "Our database is a small set of major-brand models with specs copied from the maker's page. It is not a catalog of every budget paddle for sale."),
+        ("Which pickleball paddles are under $100?",
+         under_lead + (f" They are: {names}." if ok_under else " The cheapest verified prices in our file are $100 or more, and they are shown in a separate table.")),
+        ("Where do these prices come from?",
+         f"Each price is the maker's own price from our daily check, saved with the date it was checked. The latest check date on this page is {last_check}. We do not invent street or coupon prices."),
+        ("Why is a $100.00 paddle not on the list?",
+         "This list only includes paddles priced under $100. A paddle at exactly $100.00 does not meet that rule, so it is shown in the $100 to $150 table instead."),
+        ("Is this a ranking of the best paddles?",
+         "No. Here, best means the paddle passed the price rule. We do not playtest or score power, control, or spin."),
     ]
     faq_html, faq_ld = faq(u100_faq)
-    under = f'''<h1>Best paddles under $100</h1>
-<p class="meta">From our paddle file only. Today's maker price, not a playtest and not a ranking.</p>
-<p>{under_lead} "Best" on this page means "matches the price filter," the same rule as the <a href="../best-paddles-under-100.html">under-$100 spec list</a>. We do not score power, control, or spin.</p>
-<h2>At or under $100</h2>
-<ul>{under_items}</ul>
-<h2>Just over $100, up to $150</h2>
-<p>These are still USD maker prices from the same file. They cost more than $100.</p>
-<ul>{near_items}</ul>
-<p>Six Zero prices are in AUD on the maker's site, so a Six Zero paddle is not converted into this dollar list. Check the <a href="../price-index.html">price index</a> if you want every recorded price, including AUD.</p>
+    under = f'''<h1>Best pickleball paddles under $100</h1>
+<p class="meta">Built from our own paddle file and dated maker price checks. Not a playtest and not a ranking.</p>
+<p>{under_lead} The rule is strict: the paddle needs a successful, in-stock price check on the maker's own page, in US dollars, and the current price must be below $100. Every price on this page shows the date it was checked.</p>
+<h2>Under $100 (verified)</h2>
+{under_table}
+<h2>Closest verified prices, $100 to $150</h2>
+<p>These paddles cost $100 or more, so they are <b>not</b> under-$100 picks. They are here so you can see where the cheapest verified prices actually sit.{e(at100_txt)}</p>
+{near_table}
+<h2>What we left out</h2>
+<ul>{"".join(f"<li>{e(x)}</li>" for x in excl) or "<li>Nothing else.</li>"}</ul>
+<p>Our database is a short list of major-brand models with specs copied from the maker. It is not a catalog of every budget paddle on the market. See every recorded price on the <a href="../price-index.html">price index</a>, or use the <a href="../best-paddles-under-100.html">under-$100 spec filter</a>. New to buying? Start with <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+{money_links()}
 {faq_html}
+{sources([(f"{p['brand']} {p['model']} (maker product page)", p["source_url"], f"price checked {fmt(ph(p)['checked'])}") for p in ok_under + ok_near])}
 {more("guides/best-paddles-under-100.html")}'''
-    page("guides/best-paddles-under-100.html", "Best paddles under $100", under,
-         "Which paddles in the DropThePickle database are at or under $100 at today's maker price, plus the next prices up to $150. Not a playtest ranking.",
-         fresh={"under": [(p["brand"], p["model"], cur(p)) for p in u100],
-                "near": [(p["brand"], p["model"], cur(p)) for p in near], "faq": u100_faq},
+    page("guides/best-paddles-under-100.html", "Best pickleball paddles under $100 (dated price checks)", under,
+         "Pickleball paddles with a verified maker price under $100, with the date of each price check. No invented prices and no playtest scores.",
+         fresh={"under": [(p["brand"], p["model"], ph(p)["current"], ph(p)["checked"]) for p in ok_under],
+                "near": [(p["brand"], p["model"], ph(p)["current"], ph(p)["checked"]) for p in ok_near], "faq": u100_faq},
          schema=[faq_ld])
 
     # ----- rules -----
@@ -294,4 +336,178 @@ def make(page, e, fmt, PP, cur, ph):
          fresh={"light": [light[2]["brand"], light[2]["model"], light[2]["weight"]],
                 "heavy": [(t[2]["brand"], t[2]["model"], t[2]["weight"]) for t in heavy_ties],
                 "cores": sorted(thick), "faq": wt_faq},
+         schema=[faq_ld])
+
+    # ----- is my paddle dead -----
+    SELKIRK = "https://www.selkirk.com/blogs/paddles-and-product-education/what-is-core-crushing-in-pickleball-everything-you-need-to-know"
+    SLABS = "https://www.selkirklabs.com/blogs/news/the-anatomy-of-pickleball-paddle-core-crushing-what-happens-beneath-the-surface"
+    PBSCI = "https://pickleballscience.org/thermoformed-paddle-delamination-revisited/"
+    DINK_CC = "https://www.thedinkpickleball.com/how-to-check-your-pickleball-paddle-for-core-crushing/"
+    USAP_FIELD = "https://usapickleball.org/usap-news/equipment-news/usa-pickleball-and-pickleball-instruments-to-launch-paddle-field-testing-program-at-golden-ticket-events/"
+    USAP_EQ = "https://equipment.usapickleball.org/"
+    dead_faq = [
+        ("What is core crush?",
+         "Core crush is when the honeycomb core inside a paddle collapses or breaks down, so the face no longer stays rigid. Selkirk says it can come from a manufacturing problem or from gradual wear after many hard hits."),
+        ("How do I test my paddle for core crush at home?",
+         "Use three quick checks. Tap the face with a knuckle or a hard plastic handle and listen for a dull thud instead of a crisp, even sound. Drop a ball on different spots and look for spots where it barely bounces. Press firmly with your thumbs in the center and listen for a crackle or crunch. Do not press near the edge guard, where foam can crunch on its own."),
+        ("Does a dead paddle hit softer or harder?",
+         "It can feel either way. Selkirk describes dead spots and lost power. The Dink says a crushed core can also get a stronger trampoline effect, which can push a paddle out of spec for sanctioned play."),
+        ("When should I replace my paddle?",
+         "Replace it when the tap, bounce, or crunch test finds a problem in the hitting area, or when you see cracks or face separation. As a rough guide, Selkirk says heavy competitive players often replace paddles every 3 to 6 months and recreational players can often go a year or longer."),
+        ("Is core crush covered by warranty?",
+         "Sometimes. Coverage depends on the maker's warranty terms. Record a short video of the tap and press tests before you contact the maker."),
+    ]
+    faq_html, faq_ld = faq(dead_faq)
+    dead = f'''<h1>Is my paddle dead? Core crush signs</h1>
+<p class="meta">Symptoms, three quick tests, and when to replace a pickleball paddle. Based on maker and USA Pickleball sources, not our own lab.</p>
+<p>A paddle that feels "dead" usually has a problem in the core, the honeycomb layer between the two faces. <a href="{SELKIRK}" target="_blank" rel="noopener">Selkirk</a> describes core crushing as the core collapsing so it no longer stays rigid, either from a manufacturing problem or from wear after many hard hits. It is different from delamination, where the face separates from the core, but the two can show similar signs.</p>
+<h2>Symptoms</h2>
+<ul>
+<li><b>Dull sound.</b> Hits sound flat or hollow, especially in the sweet spot.</li>
+<li><b>Dead spots.</b> The ball comes off some parts of the face with much less pop than others.</li>
+<li><b>Less power or more effort.</b> You swing harder for the same depth.</li>
+<li><b>A sudden "hot" feel.</b> <a href="{DINK_CC}" target="_blank" rel="noopener">The Dink</a> reports that a crushed core can also give a stronger trampoline effect, so a paddle can feel livelier as it fails.</li>
+<li><b>Visible wear.</b> Cracks near the edge, discoloration, or shiny worn patches, per Selkirk.</li>
+</ul>
+<h2>How to test it</h2>
+<ol>
+<li><b>Tap test.</b> Tap across the face with a knuckle or the hard plastic end of a screwdriver handle. <a href="{PBSCI}" target="_blank" rel="noopener">Pickleball Science</a> found that undamaged areas give a high "ping" and damaged areas give a low "thud."</li>
+<li><b>Bounce test.</b> Hold the paddle flat and drop a ball on different spots. A spot where the ball barely rebounds is likely a dead zone, per <a href="{SLABS}" target="_blank" rel="noopener">Selkirk LABS</a>.</li>
+<li><b>Press test.</b> Press firmly with your thumbs in the center or just above it. A crackle, crunch, or a face that gives inward points to a weakened core. Stay away from the edge guard, where foam can crunch normally.</li>
+</ol>
+<p>These are field checks, not a lab result. USA Pickleball runs its own <a href="{USAP_FIELD}" target="_blank" rel="noopener">paddle field-testing program at Golden Ticket events</a>, and approved models are listed in the <a href="{USAP_EQ}" target="_blank" rel="noopener">USA Pickleball equipment database</a>. If you play sanctioned events, a worn paddle could fail testing even if the model is approved.</p>
+<h2>When to replace it</h2>
+<ul>
+<li>Any of the three tests finds a problem in the hitting area.</li>
+<li>You see cracks, a split edge guard, or the face lifting.</li>
+<li>It has been heavy use for a long time. Selkirk's rough guide is every 3 to 6 months for heavy competitive players and a year or longer for recreational players.</li>
+</ul>
+<p>To make a paddle last longer, Selkirk advises keeping it out of hot cars and off wet courts. Before you buy a new one, read <a href="paddle-weight-and-core.html">paddle weight and core</a>, then compare <a href="best-paddles-under-100.html">dated prices under $100</a>.</p>
+{money_links()}
+{faq_html}
+{sources([("Selkirk: What is core crushing in pickleball?", SELKIRK, "manufacturer"),
+          ("Selkirk LABS: The anatomy of paddle core crushing", SLABS, "manufacturer"),
+          ("USA Pickleball: paddle field-testing program at Golden Ticket events", USAP_FIELD, "governing body"),
+          ("USA Pickleball approved equipment database", USAP_EQ, "governing body"),
+          ("Pickleball Science: Thermoformed paddle delamination revisited", PBSCI, "independent testing"),
+          ("The Dink: How to check your paddle for core crushing", DINK_CC, "")])}
+{more("guides/is-my-paddle-dead.html")}'''
+    page("guides/is-my-paddle-dead.html", "Is my pickleball paddle dead? Core crush signs and tests", dead,
+         "Core crush signs in a pickleball paddle: dull sound, dead spots, the tap, bounce and press tests, and when to replace it. Cited to Selkirk and USA Pickleball.",
+         fresh={"faq": dead_faq, "links": [SELKIRK, SLABS, USAP_FIELD, USAP_EQ, PBSCI, DINK_CC]},
+         schema=[faq_ld])
+
+    # ----- rules cheat sheet 2026 -----
+    cheat_faq = [
+        ("What rulebook is this cheat sheet based on?",
+         "The 2026 USA Pickleball Official Rulebook, plus the USA Pickleball 2026 Rulebook Change Document, published December 17, 2025. The rulebook wins if this page ever disagrees."),
+        ("Did rally scoring change in 2026?",
+         "Yes. Rally scoring is still a provisional option. In 2026 a point is scored by whoever wins each rally, including when the receiving side has game point. Under the 2025 rule, a receiver could not win the game on a rally."),
+        ("Can I put spin on the serve in 2026?",
+         "You may not manipulate the ball to add spin when you release it, except letting it roll off the paddle face. The 2026 rule adds that spin may be applied when the paddle contacts the ball."),
+        ("Is the two-bounce rule the same in 2026?",
+         "Yes. The serve and the return of serve must each bounce before being hit."),
+    ]
+    faq_html, faq_ld = faq(cheat_faq)
+    cheat = f'''<h1>Pickleball rules cheat sheet 2026</h1>
+<p class="meta">One-page summary of the 2026 USA Pickleball Official Rulebook, in our words, with the confirmed 2026 changes. The rulebook wins if we ever disagree.</p>
+<p>Source: the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball Official Rulebook</a> (PDF) and the <a href="{RULES_CHANGES}" target="_blank" rel="noopener">2026 Rulebook Change Document</a> (PDF, published December 17, 2025). The 2026 book was renumbered, so rule numbers below are the 2026 numbers.</p>
+<h2>The basics</h2>
+<ul>
+<li><b>Court:</b> 20 by 44 feet for singles and doubles, with a non-volley zone (the kitchen) on each side of the net.</li>
+<li><b>Serve:</b> diagonal, into the opposite service court, using a legal volley serve or drop serve.</li>
+<li><b>Two-bounce rule (10.A):</b> the serve and the return of serve must each bounce before being hit.</li>
+<li><b>Double bounce (10.B):</b> you must return the ball before its second bounce.</li>
+<li><b>Kitchen:</b> you may stand in it, but you may not volley while touching it. See the <a href="pickleball-rules-for-beginners.html">beginner rules guide</a> for the full kitchen walk-through.</li>
+<li><b>Standard scoring (4.A):</b> a point is scored by serving and winning the rally. A typical game is to 11, win by 2.</li>
+</ul>
+<h2>Volley serve (7.C)</h2>
+<ul>
+<li>The paddle must move in a <b>clear</b> upward arc when it contacts the ball (7.C.1).</li>
+<li>The highest point of the paddle head must <b>clearly</b> not be above the server's wrist joint at contact (7.C.2).</li>
+<li>The ball must <b>clearly</b> be no higher than the server's waist at contact (7.C.3).</li>
+</ul>
+<h2>Confirmed 2026 changes</h2>
+<p>Each item below is listed in the USA Pickleball 2026 Rulebook Change Document.</p>
+<ul>
+<li><b>Rally scoring game point (14.A.2, 15.C.2).</b> Rally scoring stays a provisional option. A point now goes to whoever wins each rally, including when the receiving side has game point. Tournament directors may not use rally scoring in double-elimination doubles events, 2026 Golden Ticket events, or the 2026 National Championships.</li>
+<li><b>"Clearly" added to the volley serve (7.C).</b> USA Pickleball says the word makes the rule stronger and more enforceable.</li>
+<li><b>Serve spin (7.B.2).</b> You still may not add spin when releasing the ball, except by letting it roll off the paddle face. The 2026 text adds that spin may be applied on contact with the paddle.</li>
+<li><b>Double hit (10.D).</b> A ball may be hit more than once in one continuous, single-direction stroke by one player. A non-continuous stroke, or both partners hitting the ball, is a fault.</li>
+<li><b>Out calls (8.F, 8.F.3).</b> Signal "out" by voice, hand signal, or both. If you return the ball, call it before the opponent hits it or before the ball becomes dead.</li>
+<li><b>Wrong score (6.F).</b> A player may stop a rally to fix the score before the return of serve. Stopping play to challenge a correct score is a fault.</li>
+<li><b>Spectators (8.J).</b> Spectators must not be consulted on any call. The old wording was "should not."</li>
+</ul>
+<p>The change document also lists other updates, including adaptive standing play, timeouts, ejections, and wheelchair rules. Read the full <a href="{RULES_CHANGES}" target="_blank" rel="noopener">change document</a> or USA Pickleball's <a href="{RULES_CHANGES_VIEW}" target="_blank" rel="noopener">rule change list</a> for every entry. Pro tours can publish their own deviations, so check the event's rules before you play it.</p>
+<p>Once the rules click, see <a href="how-to-dink.html">how to dink</a> and <a href="how-to-read-dupr-ratings.html">how to read DUPR ratings</a>.</p>
+{money_links()}
+{faq_html}
+{sources([("USA Pickleball 2026 Official Rulebook (PDF)", RULES, ""),
+          ("USA Pickleball 2026 Rulebook Change Document (PDF)", RULES_CHANGES, "published December 17, 2025"),
+          ("USA Pickleball rule changes, all entries", RULES_CHANGES_VIEW, ""),
+          ("USA Pickleball rules hub", RULES_HUB, "")])}
+{more("guides/pickleball-rules-cheat-sheet-2026.html")}'''
+    page("guides/pickleball-rules-cheat-sheet-2026.html", "Pickleball rules cheat sheet 2026 (USA Pickleball rulebook)", cheat,
+         "A one-page 2026 pickleball rules cheat sheet from the USA Pickleball Official Rulebook, with the confirmed 2026 changes to rally scoring, serves, double hits and out calls.",
+         fresh={"source": [RULES, RULES_CHANGES], "faq": cheat_faq},
+         schema=[faq_ld])
+
+    # ----- DUPR -----
+    DUPR_HOW = "https://www.dupr.com/how-it-works"
+    DUPR_CALC = "https://www.dupr.com/post/how-your-dupr-rating-is-calculated"
+    DUPR_ALGO = "https://www.dupr.com/post/dupr-algo-update-win-or-lose-your-rating-can-go-up"
+    DUPR_PCT = "https://www.dupr.com/post/dupr-rating-percentiles-see-how-your-rating-stacks-up-2"
+    DINK_PCT = "https://www.thedinkpickleball.com/dupr-rating-percentiles-where-does-your-rating-rank/"
+    PCT = [("3.0", "31st", "Top 69%"), ("3.5", "60th", "Top 40%"), ("4.0", "84th", "Top 16%"), ("4.5", "95th", "Top 5%"), ("5.0", "99th", "Top 1%")]
+    DIST_ROWS = [("2.000 to 2.499", "11%"), ("2.500 to 2.999", "20%"), ("3.000 to 3.499", "29%"), ("3.500 to 3.999", "24%"), ("4.000 to 4.499", "11%"), ("4.500 to 4.999", "4%"), ("5.000+", "1%")]
+    dupr_faq = [
+        ("What is the DUPR scale?",
+         "DUPR ratings run from 2.000 to 8.000. New players start as NR, meaning not rated, until they have enough results."),
+        ("Can my DUPR go up if I lose?",
+         "Yes. Since July 8, 2025, DUPR moves your rating on performance against the expected score. If you score more points than expected, your rating can go up even in a loss. If you score fewer, it can go down even in a win."),
+        ("What percentile is a 4.0 DUPR?",
+         "About the 84th percentile, so roughly the top 16% of active DUPR doubles players. That comes from a DUPR snapshot dated September 22, 2026, reported by DUPR and The Dink."),
+        ("What is the DUPR reliability score?",
+         "It is a 1 to 100% number on your profile that shows how much recent match data your rating is based on. A low score means the rating rests on old or thin data."),
+    ]
+    faq_html, faq_ld = faq(dupr_faq)
+    pct_rows = "".join(f'<tr><th scope="row">{r}</th><td>{p}</td><td>{t}</td></tr>' for r, p, t in PCT)
+    dist_rows = "".join(f'<tr><th scope="row">{r}</th><td>{s_}</td></tr>' for r, s_ in DIST_ROWS)
+    dupr = f'''<h1>How to read DUPR ratings</h1>
+<p class="meta">The DUPR scale, how a rating is calculated, and what percentile your number puts you in. From DUPR's own pages and The Dink.</p>
+<h2>The scale</h2>
+<p>According to <a href="{DUPR_HOW}" target="_blank" rel="noopener">DUPR</a>, every new player starts as <b>NR</b> (not rated), then gets a rating on a scale from <b>2.000 to 8.000</b>. You get separate ratings for singles, gender doubles, and mixed doubles, and players in the 50 to 65+ bracket also get an age-group rating.</p>
+<p>Your profile shows two numbers: the <b>DUPR rating</b> and a <b>reliability score</b> from 1 to 100%. A higher reliability score means the rating is more likely to reflect your current level. A low one means it rests on old or thin match data.</p>
+<h2>How a rating is calculated</h2>
+<p>DUPR lists four factors on its <a href="{DUPR_HOW}" target="_blank" rel="noopener">How it works</a> page and in its post <a href="{DUPR_CALC}" target="_blank" rel="noopener">How your DUPR rating is calculated</a>:</p>
+<ol>
+<li><b>Performance vs. expectation.</b> Every match has an expected score based on everyone's rating. Beat it and your rating can rise. Fall short and it can drop.</li>
+<li><b>Type of match.</b> Verified club, league, and tournament matches count more than self-posted rec games.</li>
+<li><b>Recency.</b> Recent matches count the most.</li>
+<li><b>Volume.</b> More matches make your rating more stable, so one result moves it less.</li>
+</ol>
+<p>In doubles, the team rating is the average of both players' ratings, and that drives the expected score. Since <a href="{DUPR_ALGO}" target="_blank" rel="noopener">DUPR's July 8, 2025 update</a>, a win does not guarantee a rise. DUPR's own example: a 3.5 expected to lose 5-11 to a 4.0 who instead loses 9-11 will see the rating go up.</p>
+<h2>What percentile is your DUPR?</h2>
+<p>DUPR shared a snapshot of doubles ratings dated September 22, 2026, covering players worldwide with at least one result in the previous 12 months. <a href="{DINK_PCT}" target="_blank" rel="noopener">The Dink</a> reported it on October 7, 2026, and DUPR published the same figures in <a href="{DUPR_PCT}" target="_blank" rel="noopener">its own post</a>. Percentages are rounded, so percentiles are approximate.</p>
+<div class="tbl"><table><thead><tr><th>DUPR rating</th><th>Percentile</th><th>Where that puts you</th></tr></thead><tbody>{pct_rows}</tbody></table></div>
+<div class="tbl"><table><thead><tr><th>Rating range</th><th>Share of active doubles players</th></tr></thead><tbody>{dist_rows}</tbody></table></div>
+<p>The biggest band is 3.000 to 3.499, and 53% of active players are somewhere in the 3s. The data covers active DUPR doubles players only, not singles and not everyone who plays.</p>
+<h2>Reading your own number</h2>
+<ul>
+<li>Check the reliability score first. A low score means the rating may not match how you play today.</li>
+<li>Compare like with like. Your singles and doubles ratings are separate.</li>
+<li>Log verified matches. Club, league, and tournament results count more than self-posted games.</li>
+</ul>
+<p>Need a rules refresher before a rated match? Use the <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>.</p>
+{money_links()}
+{faq_html}
+{sources([("DUPR: How it works", DUPR_HOW, ""),
+          ("DUPR: How your DUPR rating is calculated", DUPR_CALC, ""),
+          ("DUPR: Algo update, win or lose your rating can go up", DUPR_ALGO, "July 8, 2025"),
+          ("DUPR: DUPR rating percentiles", DUPR_PCT, "snapshot September 22, 2026"),
+          ("The Dink: DUPR rating percentiles, where does your rating rank?", DINK_PCT, "Thomas Shields, October 7, 2026")])}
+{more("guides/how-to-read-dupr-ratings.html")}'''
+    page("guides/how-to-read-dupr-ratings.html", "How to read DUPR ratings: scale, calculation and percentiles", dupr,
+         "How to read a DUPR rating: the 2.000 to 8.000 scale, the four factors in the calculation, the reliability score, and 2026 percentiles from DUPR and The Dink.",
+         fresh={"pct": PCT, "dist": DIST_ROWS, "faq": dupr_faq},
          schema=[faq_ld])
