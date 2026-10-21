@@ -312,6 +312,7 @@ def crumbs_for(fn, title, url):
     crumbs = [home]
     if fn.startswith("events/"): crumbs.append({"name": "Tournaments", "url": base + "tournaments.html"})
     elif fn.startswith("guides/"): crumbs.append({"name": "Guides", "url": base + "guides/how-to-choose-a-paddle.html"})
+    elif fn.startswith("articles/"): crumbs.append({"name": "News", "url": base + "news.html"})
     elif fn.startswith("creators/"): crumbs.append({"name": "Creators", "url": base + "creators.html"})
     elif fn.startswith("paddle-") or fn == "price-index.html": crumbs.append({"name": "Paddles", "url": base + "paddles.html"})
     elif fn.startswith(("vs-", "best-")): crumbs.append({"name": "Compare", "url": base + "compare.html"})
@@ -507,7 +508,18 @@ def build():
     page("reviews.html", "Paddle review roundup", f'<h1>Paddle review roundup</h1><p class="meta">The newest paddle videos from leading independent reviewers, pulled from their public YouTube feeds. All videos play on YouTube and belong to their creators. Go subscribe!</p><div class="grid">{"".join(rcard(v, False) for v in R["items"])}</div>',
          "Newest pickleball paddle videos from independent YouTube reviewers, with a link back to each creator's channel.",
          fresh=[{k: v.get(k) for k in ("channel", "title", "link", "date", "video_id")} for v in R["items"]])
-    page("news.html", "Pickleball news", f'<h1>Pickleball news</h1><p class="meta">Headlines from public RSS feeds: {", ".join(e(s) for s in C["NEWS_FEEDS"])}. Click through to read on the publisher\'s site.</p><div class="grid">{"".join(ncard(n) for n in N["items"])}</div>',
+    # Newsroom articles (hand-written data/articles.json; update.py never writes it). Every claim links to its source.
+    ART = D("articles.json").get("items", []) if (ROOT / "data" / "articles.json").exists() else []
+    for art in ART:
+        page(f"articles/{art['slug']}.html", art["title"],
+             f'<article><h1>{e(art["title"])}</h1><p class="meta">DropThePickle newsroom · {fmt(art["date"])} · Sources linked inline</p>{art["body"]}<p class="meta"><a href="../news.html">More pickleball news</a></p></article>',
+             art["desc"], fresh={k: art.get(k) for k in ("title", "date", "body")},
+             schema=[{"@type": "NewsArticle", "headline": art["title"], "datePublished": art["date"], "description": art["desc"],
+                      "url": canon(f"articles/{art['slug']}.html"), "publisher": {"@id": C["BASE_URL"].rstrip("/") + "/#organization"}}])
+    newsroom = (f'<h2>From the newsroom</h2><div class="grid">' + "".join(
+        f'<div class="card newscard"><div class="pub"><span class="tag b-pub">DropThePickle</span></div><h3><a href="articles/{e(a["slug"])}.html">{e(a["title"])}</a></h3><div class="meta">{e(a["desc"])}</div></div>'
+        for a in sorted(ART, key=lambda a: a["date"], reverse=True)) + '</div><h2>Headlines</h2>') if ART else ""
+    page("news.html", "Pickleball news", f'<h1>Pickleball news</h1><p class="meta">Headlines from public RSS feeds: {", ".join(e(s) for s in C["NEWS_FEEDS"])}. Click through to read on the publisher\'s site.</p>{newsroom}<div class="grid">{"".join(ncard(n) for n in N["items"])}</div>',
          "Pickleball headlines from The Dink, Pickleball Union, Major League Pickleball, The Kitchen Pickle and Pickleball Kitchen.",
          fresh=[{k: n.get(k) for k in ("source", "title", "link", "date")} for n in N["items"]])
     # Pickleball Buzz (hand-curated data/buzz.json; update.py never writes it)
