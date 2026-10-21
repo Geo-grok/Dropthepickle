@@ -1,9 +1,224 @@
 {
- "updated": "2026-10-20T06:20-05:00",
- "date": "2026-10-20",
- "source_file": "dtp-newsroom/buzz-2026-10-20.json",
+ "updated": "2026-10-21T06:09-05:00",
+ "date": "2026-10-21",
+ "source_file": "dtp-newsroom/buzz-2026-10-21.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "PPA Hong Kong Slam, Round of 32: Ben Johns/ALW and Johns/Tardio open with blowouts; Haworth knocks out Navratil; Francis Chi beats Dylan Frazier",
+   "summary": "The stars started play Wednesday local time (Tuesday night CT) at Kai Tak Arena. These results come from ThePickleHub's mirror of the official PPA scores feed as of about 5 a.m. CT, when 164 matches were final and four were live. Mixed: top seeds Ben Johns and Anna Leigh Waters beat Hannah Blatt and Grayson Goldin 11-3, 11-3. Anna Bright and Hayden Patriquin beat Zane Navratil and Katie Morris 11-0, 11-1, and Alix Truong and Christopher Haworth got past Andie Dikosavljevic and Joey Wild 11-6, 2-11, 11-9. Men's doubles: Johns and Gabriel Tardio beat Le Xuan Duc and Nguyen Huy 11-1, 11-4. Luc Pham and Will Mackinnon came from a game down to beat Harrison Brown and Grayson Goldin 9-11, 11-5, 11-6. Men's singles: No. 1 Haworth beat Navratil 11-3, 12-10, and home favorite Hong Kit Wong beat Eunggwon Kim (his doubles partner) 11-5, 11-5. The feed lists Francis Chi over Dylan Frazier with no score. Women's singles: Kiora Kunimoto beat Danni-Elle Townsend 11-4, 11-4, and No. 1 Kaitlyn Christian beat Tayah Cross 11-0, 11-1. Coming up in the women's doubles round of 16: Bright and Waters vs. Jamie Haas and Rika Fujiwara, and Sofia Sewing and Catherine Parenteau vs. Xiao Yi Wang-Beckvall and Aiko Yoshitomi. Off court, Wake Up Singapore (via Viory) reports that hundreds of fans packed Hong Kong's Olympian City mall Monday for a mixed exhibition with Johns and Bright.",
+   "status": "confirmed",
+   "date": "2026-10-21",
+   "sources": [
+    {
+     "label": "ThePickleHub (results mirror of official PPA feed)",
+     "url": "https://www.thepicklehub.net/blog/hong-kong-slam-2026-results"
+    },
+    {
+     "label": "Hong Kong Slam organizers (Round of 64 release)",
+     "url": "https://www.ppapickleballhk.com/en/category/latest-news-en/"
+    },
+    {
+     "label": "PPA Tour YouTube (Round of 32 live, Championship Court)",
+     "url": "https://www.youtube.com/watch?v=EWFit8Evid8"
+    },
+    {
+     "label": "PPA Tour Asia (event page)",
+     "url": "https://www.ppatour-asia.com/tournament/2026/hong-kong-slam/"
+    },
+    {
+     "label": "Wake Up Singapore (mall exhibition)",
+     "url": "https://wakeup.sg/pickleball-hong-kong-ben-johns/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Hong Kong Day 2' scoreboard card: the Ben/ALW and Ben/Tardio debuts, Haworth's win over Navratil, Chi over Frazier. Embed the official PPA live replay. Preview the Bright/Waters WD R16. Post match times in CT.",
+   "tags": [
+    "ppa",
+    "international",
+    "results"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy, day 11: cash-management order entered, DIP loan still pending; Fair Lawn stays open, Denver club paused, Greenwood (Ind.) presale starts today",
+   "summary": "On Oct. 20 the court entered Dkt. 38, which lets the debtors keep using their existing cash-management system, bank accounts and business forms and continue intercompany transactions. As of Dkt. 38 on the Omni Agent Solutions document list, no interim DIP financing order had been entered. Local fallout: the Bergen Record reports that the franchised Picklr in Fair Lawn, N.J., expects to stay open, and cites the filing's count of about 90 clubs (9 company-operated, 81 franchised) in 32 states. The Denver Business Journal (paywalled; preview only) reports that franchisee Colorado Pickleball ADA is trying to get out of its lease for the planned Cherry Creek South club (7475 E. Iliff Ave.) and says the problem is not related to the parent company's bankruptcy. The Picklr's own location page lists that club's opening as TBD. In Indiana, WTHR reports that local franchise group Pickle Indy plans a 12-court, 35,000-square-foot Picklr in Greenwood (8921 U.S. 31 S.) for late 2026. Founder-membership presales open today at noon local time, which is 11 a.m. CT. It would be the group's fourth Indy-area club, with a North Mass Ave. location targeted for 2027.",
+   "status": "confirmed",
+   "date": "2026-10-21",
+   "sources": [
+    {
+     "label": "Omni Agent Solutions (Picklr docket list, Dkt. 38)",
+     "url": "https://cases.omniagentsolutions.com/documents/index?clientid=3812&tagid=1282"
+    },
+    {
+     "label": "Bergen Record / NorthJersey.com (Fair Lawn)",
+     "url": "https://www.northjersey.com/story/news/bergen/fair-lawn/2026/10/21/the-picklr-bankruptcy-fair-lawn-nj-pickleball/92335121007/"
+    },
+    {
+     "label": "Denver Business Journal (Cherry Creek pause)",
+     "url": "https://www.bizjournals.com/denver/news/2026/10/20/colorado-pickleball-picklr-cherry-creek-location.html"
+    },
+    {
+     "label": "The Picklr Cherry Creek South page",
+     "url": "https://thepicklr.com/location/cherry-creek-south/"
+    },
+    {
+     "label": "WTHR (Greenwood, Ind.)",
+     "url": "https://www.wthr.com/article/sports/central-indiana-is-getting-another-popular-indoor-pickleball-club-location-indianapolis/531-7fbed1d0-f1ae-4a80-afc0-827923aaa524"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Split-screen explainer 'Is my Picklr closing?': franchised clubs are open and new ones are still selling memberships, while one unopened Denver site is paused. Keep the docket tracker going (DIP order still pending; claims due Dec. 18 and 21). Don't speculate about closures.",
+   "tags": [
+    "business",
+    "clubs"
+   ]
+  },
+  {
+   "title": "MLP Nations Cup roster change: Tama Shimabukuro replaces Hien Truong on Asia International",
+   "summary": "Major League Pickleball posted Tuesday that Tama Shimabukuro joins the Asia International squad for the first MLP Nations Cup, replacing Hien Truong. The event starts Friday, Oct. 30, ahead of the Opendoor Pickleball World Championships. Times Now lists the updated six: Shimabukuro, Rika Fujiwara, Lingwei Kong, Jimmy Liong, Jack Wong and Macy Ybañez. It also says the team is in Group B with Australia, Europe-East and Latin America, at Brookhaven Country Club (Farmers Branch, Texas) from Oct. 30 to Nov. 1. MLP gave no reason for the change, and Truong is still playing in Hong Kong this week (he won his round-of-32 singles and doubles matches). A separate MLP '10 days out' post says Australia and Asia Domestic play each other next weekend to open the event.",
+   "status": "confirmed",
+   "date": "2026-10-21",
+   "sources": [
+    {
+     "label": "@MajorLeaguePB on X",
+     "url": "https://x.com/MajorLeaguePB/status/2112544873421148591"
+    },
+    {
+     "label": "Times Now",
+     "url": "https://www.timesnownews.com/sports/pickleball/team-asia-international-rope-in-tama-shimabukuro-as-hien-truongs-replacement-for-mlp-nations-cup-article-156377068"
+    },
+    {
+     "label": "The Kitchen (Nations Cup rosters)",
+     "url": "https://thekitchenpickle.com/blogs/news/mlp-nations-cup-2026-rosters-captains-announced/"
+    },
+    {
+     "label": "@MajorLeaguePB on X",
+     "url": "https://x.com/MajorLeaguePB/status/2112580428741697560"
+    },
+    {
+     "label": "MLP Nations Cup tickets (Tixr)",
+     "url": "https://www.tixr.com/groups/ppa/events/2026-major-league-pickleball-nations-cup-198728"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2112544873421148591",
+    "https://x.com/MajorLeaguePB/status/2112580428741697560"
+   ],
+   "social_angle": "Quick roster-update card with the MLP post embedded. Teaser for the 'Nations Cup groups explained' page (Group B: Asia Intl, Australia, Europe-East, LatAm). Don't guess why Truong is out.",
+   "tags": [
+    "mlp",
+    "international",
+    "worlds"
+   ]
+  },
+  {
+   "title": "USA Pickleball Nationals (Oct. 31-Nov. 8, San Diego): free general admission, pro medal matches Nov. 7-8",
+   "summary": "USA Pickleball's release says the 2026 Oceanview USA Pickleball National Championships return to Barnes Tennis Center in San Diego from Oct. 31 to Nov. 8, with free general admission. Schedule: junior, collegiate and wheelchair play on the opening weekend (Oct. 31-Nov. 1); amateur divisions all nine days; Championship Court (presented by QVC) with premium seating Nov. 4-8; pro semifinals and medal matches Nov. 7-8. A 'Concert on the Court' with yacht-rock band Yachty Got Back on Nov. 3 benefits USA Pickleball Serves. The release says the 2025 event drew about 10,000 attendees, including more than 2,500 athletes from 47 states and 20 countries. Media credential applications are due Oct. 29. Note that Nationals overlaps the end of the MLP Nations Cup/Worlds week in Dallas.",
+   "status": "confirmed",
+   "date": "2026-10-21",
+   "sources": [
+    {
+     "label": "USA Pickleball release (EIN Presswire)",
+     "url": "https://www.einpresswire.com/article/951015988/national-titles-on-the-line-as-2026-oceanview-usa-pickleball-national-championships-return-to-san-diego"
+    },
+    {
+     "label": "USA Pickleball (daily schedule)",
+     "url": "https://usapickleball.org/usap-news/nationals/daily-competition-schedule-for-the-2026-oceanview-usa-pickleball-national-championships/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Big two weeks' calendar graphic: Nations Cup/Worlds in Dallas (Oct. 30+) and Nationals in San Diego (Oct. 31-Nov. 8, free GA). Good evergreen SEO page: 'how to watch/attend USA Pickleball Nationals 2026.'",
+   "tags": [
+    "usa-pickleball",
+    "amateur",
+    "events"
+   ]
+  },
+  {
+   "title": "Business of pickleball: RPM on pace for $31M in year one (Entrepreneur); JOOLA and RPO offer a $5,000 federation grant; Costa's 'quieter paddle'",
+   "summary": "Entrepreneur profiles RPM Pickleball, which four-time PPA champion James Ignatowich co-founded with childhood friend Marwan Abaza in September 2025 with no outside funding. The magazine says RPM is on pace for $31 million in annual sales, brought in $4.5 million last month and has sold '115,000+' paddles in 100 countries. (Some syndicated copies say 35,000; we use Entrepreneur's figure.) It also says RPM was backordered for about half its first year, and that Ignatowich is exploring a new training-tools company. At the Global Pickleball Summit in Hong Kong, JOOLA CEO Richard Lee announced a $5,000 'Growth Grant' from JOOLA and RPO for GPF and WPF member federations, for equipment, coach education and beginner clinics (Pickle361, Times Now). Eligibility details were to come at a federation session. Pickle361's account of the speech says divided governance (WPF vs. GPF, USA Pickleball vs. UPA-A paddle testing) is slowing the sport. MIT Technology Review profiles Costa Pickleball CEO Stanley Anderson, whose Las Vegas startup is developing a quieter paddle.",
+   "status": "confirmed",
+   "date": "2026-10-21",
+   "sources": [
+    {
+     "label": "Entrepreneur (RPM Pickleball)",
+     "url": "https://www.entrepreneur.com/building-a-business/these-childhood-friends-spotted-a-hole-in-the-pickleball-market-a-year-later-theyre-on-pace-for-31-million-in-sales"
+    },
+    {
+     "label": "Pickle361 (JOOLA/RPO grant)",
+     "url": "https://www.pickle361.com/blogs/news/joola-and-rpo-put-5-000-behind-gpf-and-wpf-federation-programs"
+    },
+    {
+     "label": "Times Now (JOOLA/RPO grant)",
+     "url": "https://www.timesnownews.com/sports/pickleball/joola-rpo-announce-5000-growth-grant-for-gpf-wpf-member-associations-article-156377995"
+    },
+    {
+     "label": "MIT Technology Review (Costa Pickleball)",
+     "url": "https://www.technologyreview.com/2026/10/20/1145287/taking-a-swing-at-a-pickleball-startup/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "RPM explainer: 'a pro-first paddle brand went from 0 to $31M pace in a year.' Link it to the RPM paddles in the DTP paddle database. Noise-complaint readers will like Costa's quiet-paddle angle. The grant is small ($5K), so frame it as a governance-unity signal, not a big funding story.",
+   "tags": [
+    "business",
+    "paddles",
+    "equipment"
+   ]
+  },
+  {
+   "title": "Pods: PicklePod asks 'Should Kate Fahey get a point penalty for screaming?'; Tony Roig's mailbag on stacking faults",
+   "summary": "In this week's PicklePod (The Dink), Zane Navratil and Nico cover overlapping tours in Australia and Hong Kong (Zane says players had to choose between a semifinal and making their next event), Sofia Sewing, Jaume Martinez Vich and Elliott Schupp, 'MLP needs a commissioner,' Jim Kloss's proposed yelling rule, AI line-call challenges and a segment titled 'Protesters at APP Louisville.' The episode notes give no details on that segment, so we haven't verified it. Kloss published his UPA anti-taunting proposal on pickleball.com Oct. 14: a warning first, then loss of a timeout or challenge, then a mark. We covered the screaming debate Oct. 16-17; this is the newest major podcast take. Pickleball Therapy's Mailbag #2 (Tony Roig) covers whether to keep blocking bangers, beating shake-and-bake, and whether serving or returning from the wrong side in a stack is a fault.",
+   "status": "confirmed",
+   "date": "2026-10-21",
+   "sources": [
+    {
+     "label": "PicklePod episode (Pickleball Radio)",
+     "url": "https://pickleballradio.com/podcast/picklepod/episode/should-kate-fahey-get-a-point-penalty-for-screaming"
+    },
+    {
+     "label": "pickleball.com (Kloss anti-taunting proposal)",
+     "url": "https://pickleball.com/news/the-time-has-come-for-ppa-to-adopt-an-anti-taunting-rule"
+    },
+    {
+     "label": "Pickleball Therapy Mailbag #2",
+     "url": "https://share.transistor.fm/s/557b2da7"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Poll: 'Point penalty for screaming: yes/no?' with a plain-English box on the Kloss proposal (warning, then timeout/challenge, then a mark). Rules explainer from the mailbag: 'Wrong side in a stack: is it a fault?'",
+   "tags": [
+    "podcasts",
+    "controversy",
+    "rules"
+   ]
+  },
+  {
+   "title": "Courts watch: Palm Springs' 22-court Demuth complex opens today; Calimesa keeps 6 a.m.-10 p.m. hours despite neighbor complaints",
+   "summary": "Palm Springs holds the grand opening of its $5.1 million, 22-court Demuth Park Pickleball Complex (4365 E. Mesquite Ave.) today at 4 p.m. PT, which is 6 p.m. CT. Patch and KESQ say the free event includes a ribbon-cutting, open play and demonstrations. In Calimesa, Calif., the city council voted unanimously Monday to make the Mountain View Park courts' 6 a.m.-10 p.m. hours permanent, with court lights going off at 9:30 p.m. A neighbor had complained about late-night noise and bottles thrown into her yard. The News Mirror reports staff had nine after-hours gate callouts, about 22.5 hours of overtime, under the old 9:45 p.m. light shutoff. Elsewhere: Thatcher, Ariz. is weighing courts vs. playground equipment, and Sinking Spring (Pa.) YMCA opens new tennis and pickleball courts Oct. 23.",
+   "status": "confirmed",
+   "date": "2026-10-21",
+   "sources": [
+    {
+     "label": "Patch (Demuth opens Wednesday)",
+     "url": "https://patch.com/california/palmsprings-ca/palm-springs-open-22-court-pickleball-complex-demuth-park-wednesday"
+    },
+    {
+     "label": "KESQ (Demuth grand opening)",
+     "url": "https://kesq.com/news/2026/10/20/palm-springs-to-celebrate-grand-opening-of-new-pickleball-complex-at-demuth-park/"
+    },
+    {
+     "label": "News Mirror (Calimesa)",
+     "url": "https://www.newsmirror.net/news/calimesa-pickleball-courts-stay-open-as-neighbors-seek-relief/article_f40b3579-a2bb-4805-b24f-7be1be976ed4.html"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'New courts near you' update: Demuth opens tonight (22 courts). Calimesa is a good 'noise vs. access' case study, paired with Costa's quiet-paddle story. Keep the neighbor's quote fair.",
+   "tags": [
+    "clubs",
+    "amateur",
+    "courts"
+   ]
+  },
   {
    "title": "The Picklr bankruptcy: judge enters first-day orders on joint administration, wages and schedules; DIP loan order still pending",
    "summary": "After Monday's first-day hearing before Judge Scott W. Everett (U.S. Bankruptcy Court, N.D. Texas, Dallas), the court entered three orders on Oct. 19: joint administration of Picklr, Inc. and Picklr Clubs Inc., with Picklr, Inc. (No. 26-34687) as the lead case (Dkt. 35); authority to pay prepetition wages and keep employee benefit programs running (Dkt. 36); and more time, to Nov. 6, for Picklr, Inc. to file its schedules and statement of financial affairs (Dkt. 37). As of the latest public docket entry we saw this morning (Dkt. 37), no interim DIP financing or cash-management order had been entered. The amended proposed interim DIP order (Dkt. 20) asks for a $4.365 million facility: $3.51 million in new-money loans (up to $900,000 during the interim period) plus an $850,000 roll-up of prepetition bridge loans. Bankruptcy Observer's docket review (AI-written, citing docket numbers) adds more. The franchisor, Picklr Franchise, Inc., did not file. The debtors say landlords sought to enforce 'nearly 40' corporate lease guarantees. Franchised clubs are run by about 77 franchisee groups. Claims are due Dec. 18 (Picklr, Inc.) and Dec. 21 (Picklr Clubs), and the 341 creditors' meeting is Nov. 18 at 8:30 a.m. CT by phone. No club-closure list has been filed.",
