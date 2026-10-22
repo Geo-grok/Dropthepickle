@@ -1,9 +1,230 @@
 {
- "updated": "2026-10-21T10:50-05:00",
- "date": "2026-10-21",
- "source_file": "dtp-newsroom/buzz-2026-10-21.json",
+ "updated": "2026-10-22T06:05-05:00",
+ "date": "2026-10-22",
+ "source_file": "dtp-newsroom/buzz-2026-10-22.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "PPA Hong Kong Slam, Round of 16: Christian Alshon gives walkovers in all three events; Ben/Tardio and Bright/ALW roll; Haworth and Hunter Johnson lose in men's doubles",
+   "summary": "Thursday (Hong Kong time) was round-of-16 day at Kai Tak Arena. The biggest story: Christian Alshon won all three of his matches Wednesday, then gave walkovers in all three of his round-of-16 matches. The official bracket records them as walkovers and gives no reason (ThePickleBase). Grayson Goldin advances in men's singles, Zane Navratil and George Wall in men's doubles (over Yuta Funemizu/Alshon, the No. 3 seeds), and Ting Chieh Wei and Hunter Johnson in mixed (over Parris Todd/Alshon). Scores from ThePickleHub's mirror of the official feed, as of about 5 a.m. CT: Ben Johns and Gabriel Tardio beat Luc Pham and Will Mackinnon 11-2, 11-5. Eric Oncins and Noe Khlif beat Hunter Johnson and Christopher Haworth 11-5, 11-1. Tama Shimabukuro and JW Johnson beat Casey Diamond and Tyson McGuffin 11-1, 11-3. Collin Johns and Len Yang got past home pair Eunggwon Kim and Hong Kit Wong 11-3, 8-11, 11-5. Women's doubles: Anna Bright and Anna Leigh Waters beat Jamie Haas and Rika Fujiwara 11-0, 11-3. Sahra Dennehy and Danni-Elle Townsend upset Allyce Jones and Kaitlyn Christian 11-7, 4-11, 11-6. Singles: Haworth beat Hien Truong 11-4, 11-3, Hunter Johnson beat McGuffin 11-8, 11-7, Shimabukuro beat Luc Pham 11-2, 11-2, and Federico Staksrud came back to beat Oncins 2-11, 11-4, 11-6. Christian beat Ho Tam 11-0, 11-3. Friday's women's singles quarterfinals: Christian vs. Judit Castillo, Yufei Long vs. Kiora Kunimoto, Chao Yi Wang vs. Andie Dikosavljevic, and Dennehy vs. Fujiwara. Haworth plays Khlif in the men's singles quarterfinals. Women's doubles quarterfinals include Bright/Waters vs. Dennehy/Townsend. Ben Johns/Waters vs. Alix Truong/Haworth (mixed round of 16) was still live when we checked.",
+   "status": "confirmed",
+   "date": "2026-10-22",
+   "sources": [
+    {
+     "label": "ThePickleHub (results mirror of official PPA feed)",
+     "url": "https://www.thepicklehub.net/blog/hong-kong-slam-2026-results"
+    },
+    {
+     "label": "ThePickleBase (Alshon walkovers, R32/R16 report)",
+     "url": "https://www.thepicklebase.com/ppa-tour-asia/hong-kong-slam-2026-round-of-32"
+    },
+    {
+     "label": "PPA Tour YouTube (Round of 16 live, Championship Court)",
+     "url": "https://www.youtube.com/watch?v=HGZefi-HGf4"
+    },
+    {
+     "label": "PPA Tour Asia (seeds)",
+     "url": "https://www.ppatour-asia.com/slam-seeds-are-in-and-the-stars-are-out-to-play/"
+    },
+    {
+     "label": "Pickleball News Asia (Day 2 recap)",
+     "url": "https://pickleballnewsasia.com/hang-seng-bank-hong-kong-slam-seeds-survive-world-no-1s-arrive-and-more/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Hong Kong Day 3' card: Alshon's triple walkover (just the facts, no reason given; don't speculate about injury), Haworth/Hunter Johnson's 11-5, 11-1 loss, and Bright/ALW's 11-0 opening game. Embed the official PPA R16 livestream and post Friday's QF times in CT.",
+   "tags": [
+    "ppa",
+    "international",
+    "results"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy: judge signs interim DIP order (up to $4.365M); final hearing Nov. 10 in Dallas",
+   "summary": "The DIP loan was the item we said was still pending yesterday. The bankruptcy court in the Northern District of Texas signed the interim DIP financing order on Oct. 21 (Dkt. 43 on the Omni Agent Solutions docket). It authorizes up to $4,365,000: $3.51 million in new-money term loans, of which up to $900,000 can be borrowed in the interim period, plus a roll-up of $850,000 in pre-petition bridge loans. Dynamus Alliance, LLC is the pre-petition bridge-loan agent. The loans get first-priority liens and superpriority administrative status, subject to a carve-out. The final DIP hearing is set for Nov. 10, 2026 at 2 p.m. CT, at 1100 Commerce St., Dallas. Objections are due Nov. 3. The order says that if no objections are filed, a final order may be entered without a hearing. Nothing in the order addresses club closures.",
+   "status": "confirmed",
+   "date": "2026-10-22",
+   "sources": [
+    {
+     "label": "Interim DIP Order, Dkt. 43 (Omni Agent Solutions PDF)",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/ffbf791d-f280-4b4f-ad4b-49a0ff5b6c87_43.pdf"
+    },
+    {
+     "label": "Omni Agent Solutions (Picklr docket list)",
+     "url": "https://cases.omniagentsolutions.com/documents/index?clientid=3812&tagid=1282"
+    },
+    {
+     "label": "Bankruptcy Observer (Picklr explainer)",
+     "url": "https://www.bankruptcyobserver.com/news/picklr-bankruptcy-landlords-franchisees-lease-guarantees"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Docket-tracker update: 'Picklr gets its bankruptcy loan.' Use a simple timeline graphic: Oct. 9 filing, Oct. 21 interim DIP order, Nov. 3 objection deadline, Nov. 10 final hearing, Dec. 18/21 claims bar dates. Stick to the docket.",
+   "tags": [
+    "business",
+    "clubs"
+   ]
+  },
+  {
+   "title": "Life Time puts DUPR ratings in its app nationwide, with rating-gated leagues and open play",
+   "summary": "Life Time (NYSE: LTH) announced Oct. 21 that members can now link their DUPR account to their Life Time member ID in the Life Time app and see their rating alongside court booking. The company also announced nationwide DUPR-based programming, including rating-gated leagues and DUPR-gated open play, plus leveled and all-level open play for members without a rating. The release says the rollout started this summer at select clubs and is now complete across Life Time's pickleball network. Quotes in the release come from Ryan Brister, Life Time's VP of racquet sports, and Tito Machado, CEO of DUPR. The release describes DUPR as the official rating system of MLP and the PPA.",
+   "status": "confirmed",
+   "date": "2026-10-22",
+   "sources": [
+    {
+     "label": "PR Newswire (Life Time release)",
+     "url": "https://www.prnewswire.com/news-releases/life-time-makes-it-easier-for-members-to-find-competitive-matches-with-dupr-in-app-integration-302915095.html"
+    },
+    {
+     "label": "Life Time Newsroom",
+     "url": "https://news.lifetime.life/2026-10-21-Life-Time-Makes-it-Easier-for-Members-to-Find-Competitive-Matches-with-DUPR-In-App-Integration"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Explainer: 'How to link DUPR in the Life Time app, and what DUPR-gated open play means for you.' Good evergreen SEO, and it ties into the DTP DUPR/ratings guide.",
+   "tags": [
+    "business",
+    "clubs",
+    "amateur",
+    "data"
+   ]
+  },
+  {
+   "title": "Screaming debate: Zane Navratil says players 'should be allowed to scream' and taunt",
+   "summary": "Times Now reports that Zane Navratil said on Instagram that players should be allowed to scream and to taunt 'if they want.' Quotes: 'Let players act how they want and then let public opinion sort it out,' and 'We aren't role models, we're entertainers.' He argues that fans' reaction is a better penalty than losing a timeout. He points to the NFL's taunting rule ('the fans hated it') and to the UFC's trash talk as an example of how drama drives attention. Times Now notes that Navratil was criticized for yelling at an opponent during the MLP playoffs and later regretted it. This is a direct counterpoint to Jim Kloss's UPA anti-taunting proposal (warning, then loss of a timeout or challenge, then a mark), which we covered Oct. 16-21.",
+   "status": "confirmed",
+   "date": "2026-10-22",
+   "sources": [
+    {
+     "label": "Times Now (Navratil on screaming)",
+     "url": "https://www.timesnownews.com/sports/pickleball/players-should-be-allowed-to-scream-zane-navratil-weighs-in-on-pro-pickleballs-screaming-taunting-debate-article-156383776"
+    },
+    {
+     "label": "pickleball.com (Kloss anti-taunting proposal)",
+     "url": "https://pickleball.com/news/the-time-has-come-for-ppa-to-adopt-an-anti-taunting-rule"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Two-sided poll: Navratil ('let public opinion sort it out') vs. Kloss (warning, then timeout/challenge, then a mark). Use his exact quotes only, and link Times Now. Don't embed or copy his Instagram media.",
+   "tags": [
+    "controversy",
+    "players",
+    "rules"
+   ]
+  },
+  {
+   "title": "Noise rules spread in Singapore: Sengkang bans pickleball on some courts and limits hours from Nov. 1; Chua Chu Kang runs a foam-ball-only trial",
+   "summary": "Mothership reports that Sengkang Town Council will ban pickleball from Nov. 1 on courts that are too close to residential blocks or that drew enough resident votes, citing MP Abdul Muhaimin's Oct. 21 Instagram post. Where pickleball is still allowed, play is limited to 10 a.m.-7:30 p.m. Banned courts will have their pickleball lines removed and signs posted. The council says residents voted these measures the most acceptable in a survey, and that it also considered distance to homes, sound frequency and site layout. Separately, Stomp reports that Chua Chu Kang Town Council is running a six-month 'use foam balls only' trial, started Oct. 1, at the court near Block 119A Plantation Crescent in Tengah. That court is open 9:30 a.m.-8 p.m. A council spokesperson confirmed on Oct. 22 that the trial is at that one court only, and said it will be evaluated before the council decides whether to continue. Mothership notes earlier steps: Holland-Bukit Panjang's 2025 ban, 9 a.m.-9 p.m. limits in some Ang Mo Kio estates, and Mountbatten's foam-ball sessions.",
+   "status": "confirmed",
+   "date": "2026-10-22",
+   "sources": [
+    {
+     "label": "Mothership (Sengkang)",
+     "url": "https://mothership.sg/2026/10/sengkang-tc-pickleball-ban/"
+    },
+    {
+     "label": "Stomp (Tengah foam-ball trial)",
+     "url": "https://www.stomp.sg/stomp-gets-things-done/tengah-resident-who-complained-about-pickleball-noise-3-times-says-thanks-foam-balls-only-trial"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Noise vs. access' roundup: Singapore's bans, time limits and foam-ball trials next to Calimesa's hours vote (Oct. 21) and Costa's quiet paddle. Useful for the 'quiet pickleball' explainer. Keep the tone neutral.",
+   "tags": [
+    "international",
+    "courts",
+    "amateur"
+   ]
+  },
+  {
+   "title": "New courts: Palm Springs' Demuth complex opens to ~300 players; Greensboro opens 12 free courts; Owensboro's 18-court Pickle Plex debuts ahead of the River City Open",
+   "summary": "The Palm Springs Post says an estimated 300 people came to Wednesday's opening of the $5.1 million, 22-court Demuth Park complex. The project was partly funded by $2 million in Measure J revenue and replaces the park's old 12-court setup, and the opening included an exhibition by the NPL champion Coachella Valley Scorpions. Greensboro, N.C. opened 12 new free public courts at Bryan Park. They were converted from an underused tennis complex with funding from the Joseph M. Bryan Foundation (WXLV/ABC45). In Owensboro, Ky., the Owensboro Times reports that well over 100 people turned out Wednesday as the 18-court Pickle Plex at Ben Hawes Park opened: 16 recreational courts and two championship courts, built by the city and the nearly 500-member River City Pickleball Club. The city committed up to $1 million as a 2-for-1 match. The complex hosts the River City Open Oct. 23-25.",
+   "status": "confirmed",
+   "date": "2026-10-22",
+   "sources": [
+    {
+     "label": "The Palm Springs Post (Demuth)",
+     "url": "https://thepalmspringspost.com/demuth-parks-long-awaited-pickleball-expansion-opens-in-palm-springs-nearly-doubling-court-capacity/"
+    },
+    {
+     "label": "WXLV/ABC45 (Greensboro Bryan Park)",
+     "url": "https://abc45.com/news/local/greensboro-opens-12-free-public-pickleball-courts-at-bryan-park"
+    },
+    {
+     "label": "Owensboro Times (Pickle Plex)",
+     "url": "https://www.owensborotimes.com/features/2026/10/pickle-plex-opens-at-ben-hawes-giving-owensboros-growing-pickleball-community-a-new-home/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'New courts near you' update. Add all three to the DTP courts finder. The Owensboro River City Open (Oct. 23-25) makes a nice weekend-events tie-in.",
+   "tags": [
+    "clubs",
+    "amateur",
+    "courts"
+   ]
+  },
+  {
+   "title": "Confirmed from our watch list: data-center protesters briefly stopped an APP Louisville mixed semifinal (Oct. 16)",
+   "summary": "On Oct. 21 we listed The Dink's PicklePod segment 'Protesters at APP Louisville' as unverified. WLKY (Louisville ABC affiliate) reported on Oct. 16 that protesters walked onto the court during a mixed-doubles semifinal at the Humana APP Louisville Open holding a sign that read 'STOP Steve Poe's Data Center.' WLKY says the protest organizers oppose the proposed Camp Ground Road data center. Play was suspended while players and officials left the court, then resumed after the protesters were removed. WLKY doesn't name the match or the players involved, and neither do we. The tournament results (Munro's double gold, Turkovic's singles win) were covered Oct. 18-19.",
+   "status": "confirmed",
+   "date": "2026-10-22",
+   "sources": [
+    {
+     "label": "WLKY (protest interrupts match)",
+     "url": "https://www.wlky.com/article/data-center-protestors-pickleball-tournament-louisville/74163892"
+    },
+    {
+     "label": "APP Tour (Louisville recap)",
+     "url": "https://www.theapp.global/news/2026-louisville-recap"
+    },
+    {
+     "label": "PicklePod episode (Pickleball Radio)",
+     "url": "https://pickleballradio.com/podcast/picklepod/episode/should-kate-fahey-get-a-point-penalty-for-screaming"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Short 'what happened in Louisville' note. Stick to WLKY's facts and don't name players or the match beyond 'a mixed-doubles semifinal.' Event security at pro events could be a future explainer.",
+   "tags": [
+    "app",
+    "events",
+    "controversy"
+   ]
+  },
+  {
+   "title": "Pods: Pickleball Studio says 'USAP needs to enforce the rules better for the paddle market'; Lacy Schneemann on Pickleballers",
+   "summary": "Pickleball Studio Podcast ep. 180 (Chris and Aizec Olson, Oct. 21) is titled 'USAP Needs to Enforce The Rules Better for the Paddle Market.' The episode notes link the OWL-approval story and a UPA-A article on governing bodies, and chapters cover new approvals (Sens Atra, Hybrid Loco 2) and 'Should bad batches be a real excuse for companies anymore.' Context: USA Pickleball's new direct spin-rate test (max 2,100 RPM) applies to paddles submitted from Oct. 1, 2026. Pickleball.com reported that USAP's CTO said the OWL's surface-roughness test was waived and its 2024 approval was provisional. UPA-A's Jason Aspes called for one certification standard on Oct. 16. On Pickleballers (S5 E3), Lacy Schneemann talks about leaving an engineering career for the pro tour. In the episode notes, she says she and Jack Sock beat Jorja and JW Johnson 6 and 6 in Mesa, and that days later she lost 11-0, 11-0 to Anna Leigh Waters and Anna Bright.",
+   "status": "confirmed",
+   "date": "2026-10-22",
+   "sources": [
+    {
+     "label": "Pickleball Studio Podcast ep. 180 (Buzzsprout)",
+     "url": "https://www.buzzsprout.com/1997851/episodes/19996939-180-usap-needs-to-enforce-the-rules-better-for-the-paddle-market.mp3"
+    },
+    {
+     "label": "USA Pickleball (spin-rate test timeline)",
+     "url": "https://usapickleball.org/usap-news/equipment-news/update-regarding-the-usa-pickleball-spin-rate-test-and-implementation-timeline/"
+    },
+    {
+     "label": "pickleball.com (OWL approval story)",
+     "url": "https://pickleball.com/news/how-the-owl-paddle-got-usap-approved-the-untold-story"
+    },
+    {
+     "label": "The Dink (Aspes: one certification standard)",
+     "url": "https://www.thedinkpickleball.com/upa-a-president-calls-for-one-paddle-certification-standard/"
+    },
+    {
+     "label": "Pickleballers podcast",
+     "url": "https://podcasters.spotify.com/pod/show/pickleballers"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Paddle-rules explainer: 'Is my paddle still legal after Oct. 1?' (Approval is model-specific, and older approvals stand under the rules in effect when they were certified.) Link the DTP paddle database. A Lacy Schneemann 'rocket scientist to pro' profile card works as a light second post.",
+   "tags": [
+    "podcasts",
+    "paddles",
+    "equipment",
+    "governance"
+   ]
+  },
   {
    "title": "PPA Hong Kong Slam, Round of 32: Ben Johns/ALW and Johns/Tardio open with blowouts; Haworth knocks out Navratil; Francis Chi beats Dylan Frazier",
    "summary": "The stars started play Wednesday local time (Tuesday night CT) at Kai Tak Arena. These results come from ThePickleHub's mirror of the official PPA scores feed as of about 5 a.m. CT, when 164 matches were final and four were live. Mixed: top seeds Ben Johns and Anna Leigh Waters beat Hannah Blatt and Grayson Goldin 11-3, 11-3. Anna Bright and Hayden Patriquin beat Zane Navratil and Katie Morris 11-0, 11-1, and Alix Truong and Christopher Haworth got past Andie Dikosavljevic and Joey Wild 11-6, 2-11, 11-9. Men's doubles: Johns and Gabriel Tardio beat Le Xuan Duc and Nguyen Huy 11-1, 11-4. Luc Pham and Will Mackinnon came from a game down to beat Harrison Brown and Grayson Goldin 9-11, 11-5, 11-6. Men's singles: No. 1 Haworth beat Navratil 11-3, 12-10, and home favorite Hong Kit Wong beat Eunggwon Kim (his doubles partner) 11-5, 11-5. The feed lists Francis Chi over Dylan Frazier with no score. Women's singles: Kiora Kunimoto beat Danni-Elle Townsend 11-4, 11-4, and No. 1 Kaitlyn Christian beat Tayah Cross 11-0, 11-1. Coming up in the women's doubles round of 16: Bright and Waters vs. Jamie Haas and Rika Fujiwara, and Sofia Sewing and Catherine Parenteau vs. Xiao Yi Wang-Beckvall and Aiko Yoshitomi. Off court, Wake Up Singapore (via Viory) reports that hundreds of fans packed Hong Kong's Olympian City mall Monday for a mixed exhibition with Johns and Bright.",
@@ -314,41 +535,6 @@
     "ppa",
     "international",
     "results"
-   ]
-  },
-  {
-   "title": "UNCONFIRMED: Commentators say an Owl AI overturn decided a Virginia Beach mixed quarterfinal; 'contracted players only' water sign also drawing fire",
-   "summary": "Zane Navratil's Virginia Beach/Australia recap on YouTube (about 31.7K views overnight) describes 'a match-altering Owl AI overturn in mixed that helped decide a 12–10 finish' and reacts to 'water for contracted players only' signage at the event. A Monday r/Pickleball post claims Mari Humberg and Augie Ge had match point against Andrei Daescu and Meghan Dizon, that 'the ball was out,' and that Owl AI called it in. The score is confirmed: Daescu/Dizon won the Oct. 16 quarterfinal 11-4, 8-11, 12-10 (Dinks & Volleys). This sweep found no PPA, Owl AI or player statement about the call, though. The 'ball was out' version is a fan and commentator claim, and the signage claim has no primary photo or statement here. Treat both as UNCONFIRMED. Zane's video title, 'Lea Jansen Might NEVER Play Again!', is framing too. Jansen has not announced a retirement. Her Oct. 15 quote was 'if this is the last time I go out, I'd like to do it with Kate,' and pickleball.com reported she expects to miss about three months.",
-   "status": "unconfirmed",
-   "date": "2026-10-20",
-   "sources": [
-    {
-     "label": "Zane Navratil (YouTube recap)",
-     "url": "https://www.youtube.com/watch?v=sgg48sVirNQ"
-    },
-    {
-     "label": "r/Pickleball (PPA Pros split up world wide)",
-     "url": "https://www.reddit.com/r/Pickleball/comments/1xabka1/ppa_pros_split_up_world_wide/"
-    },
-    {
-     "label": "Dinks & Volleys (QF score)",
-     "url": "https://www.dinksandvolleys.com/pickleball/2026-10-16/daescu-dizon-humberg-ge/"
-    },
-    {
-     "label": "PPA Tour (QF highlight reel)",
-     "url": "https://pickleballtelevision.com/channel/ppa-tour/video/dizondaescu-vs-humbergge-highlight-reel-mixed-doubles-qf-ppa-virginia-beach-open-2026"
-    },
-    {
-     "label": "pickleball.com (Jansen quote)",
-     "url": "https://pickleball.com/news/lea-jansen-on-playing-through-pain-in-virginia-beach-if-this-is-the-last-time-i-go-out-id-like-to-do-it-with-kate"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Explainer + poll: 'Should AI line calls be final?' Embed the official highlight reel and let readers judge, labeled UNCONFIRMED. Don't claim the ball was out. Ask PPA/Owl for comment before running a hard take.",
-   "tags": [
-    "ppa",
-    "controversy",
-    "rumor"
    ]
   },
   {
@@ -1729,24 +1915,6 @@
     "ppa",
     "fans",
     "scheduling"
-   ]
-  },
-  {
-   "title": "Ben Johns retirement / partnership-shakeup chatter",
-   "summary": "After a slow stretch (podcasters noted he went 0-3 in finals at Las Vegas), a Spot Sports podcast segment discussed 'Ben Johns retirement rumors & partnership chaos'. Johns and the PPA have made no announcement, and this sweep found no credible report.",
-   "status": "unconfirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "Spot Sports (video)",
-     "url": "https://www.spotsports.com/videos/x9jRVYkxbK"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Do NOT post as news. At most, an 'What's next for Ben Johns?' stats look, labeled speculation, or hold.",
-   "tags": [
-    "ben-johns",
-    "rumor"
    ]
   },
   {
