@@ -8,7 +8,7 @@ def D(n):
     return json.loads(p.read_text()) if p.exists() else {"items": []}
 e = lambda s: html.escape(str(s or ""), quote=True)
 NAV = [("index.html","Home"),("tournaments.html","Tournaments"),("reviews.html","Reviews"),("buzz.html","Buzz"),
-       ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("compare.html","Compare"),("price-tracker.html","Price tracker"),("science.html","Science"),("shop.html","Merch"),("community.html","Marketplace")]
+       ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("compare.html","Compare"),("paddle-quiz.html","Paddle quiz"),("price-tracker.html","Price tracker"),("science.html","Science"),("shop.html","Merch"),("community.html","Marketplace")]
 CSS = r"""
 :root{--navy:#0b1630;--navy2:#111d36;--navy3:#16264a;--neon:#c6f432;--neon2:#a8d61c;--warm:#ff7a45;--ink:#0d1526;--mut:#4a5878;--bg:#f4f6fa;--card:#fff;--line:#e3e8f0;--r:18px;--sh:0 1px 2px rgba(11,20,38,.06),0 8px 24px rgba(11,20,38,.08);--sh2:0 2px 4px rgba(11,20,38,.08),0 18px 40px rgba(11,20,38,.16)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
@@ -219,7 +219,7 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 TABS = [("buzz.html","Buzz"),("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
 TAB_ON = {"/discount-codes": ("discount-codes.html",), "guides.html": ("guides.html", "guides/"), "paddles.html": ("paddles.html", "paddle-")}
 # Extra /links buttons added by later features: dicts with cls, icon, title, sub, href and optional "at" (position).
-LINKS_EXTRA = []
+LINKS_EXTRA = [dict(at=1, cls="", icon="🎯", title="Find your paddle", sub="3-question paddle quiz", href="/paddle-quiz")]
 # Central outbound map for /go/<slug>. build() fills it; write_go_map() saves src/go-links.json for the Worker.
 GO = {}
 GO_FILE = pathlib.Path(__file__).parent / "src" / "go-links.json"
@@ -262,7 +262,7 @@ HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs
 
 FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Paddle reviews"),("news.html","News"),("buzz.html","Buzz"),("podcasts.html","Podcasts"),("creators.html","Creators"),("creators/ryan-morneau.html","Ryan Morneau")]),
             ("Learn",[("guides/how-to-choose-a-paddle.html","Choose a paddle"),("guides/best-paddles-under-100.html","Under $100 guide"),("guides/pickleball-rules-for-beginners.html","Rules"),("guides/how-to-dink.html","How to dink"),("guides/paddle-weight-and-core.html","Weight and core"),("guides/pickleball-rules-cheat-sheet-2026.html","2026 rules cheat sheet"),("guides/how-to-read-dupr-ratings.html","DUPR ratings"),("guides/is-my-paddle-dead.html","Core crush signs"),("science.html","Big Dill Science")]),
-            ("Gear",[("paddles.html","Paddle database"),("compare.html","Compare paddles"),("deals.html","Deals"),("discount-codes.html","Discount codes"),("price-index.html","Price index"),("price-tracker.html","Price tracker"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
+            ("Gear",[("paddles.html","Paddle database"),("paddle-quiz.html","Paddle quiz"),("compare.html","Compare paddles"),("deals.html","Deals"),("discount-codes.html","Discount codes"),("price-index.html","Price index"),("price-tracker.html","Price tracker"),("pro-paddles.html","Pro paddles"),("best-paddles-under-100.html","Under $100")]),
             ("Company",[("about.html","About"),("disclosure.html","Affiliate disclosure"),("privacy.html","Privacy"),("community.html","Join the community")])]
 # Last content-change date per page. A date is recorded only when `fresh` differs from the hash stored in data/page_dates.json.
 _PREV, _NEXT, CATALOG = {}, {}, {}
@@ -665,6 +665,8 @@ def build():
          f'<p class="meta">Want to put it to work? Try <a href="guides/how-to-dink.html"><b>how to dink</b></a> or <a href="reviews.html"><b>paddle reviews</b></a>.</p>',
          "Big Dill Science: short pickleball physics videos on topspin and the third shot drop.", fresh={"sci": SCI})
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
+    import paddle_quiz; QUIZ = paddle_quiz.make(page, e, fmt, D, PD, go_slug, paddle_pages.slug)
+    print(f"paddle quiz: {QUIZ['recommendable']} of {QUIZ['paddles']} paddles recommendable, {QUIZ['tracked']} with tracker prices")
     import links_page; links_page.make(C, e, canon, CATALOG, DIST, extra=LINKS_EXTRA)
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")

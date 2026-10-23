@@ -222,7 +222,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
          fresh=[fresh_p(p) for p in deals], schema=[item_list(deals)] if deals else None)
     # paddle database (re-rendered with links + badges)
     prow = "".join(f'<tr><td><a href="{slug(p)}"><b>{e(p["brand"])}</b><br>{e(p["model"])}</a> {badge(ph(p), p)}</td><td>{e(p["weight"])}</td><td>{e(p["core"])}</td><td>{e(p["shape"])}</td><td>{pricecell(p)}</td><td>{buy(p)}</td></tr>' for p in PP)
-    page("paddles.html", "Paddle database", f'<h1>Paddle database</h1>{DISC}<p class="meta">Specs and list prices come from each manufacturer\'s own product page (retrieved {e(PD["retrieved"])}). Prices are re-checked daily. Blank means the maker doesn\'t clearly publish it. Six Zero prices are in AUD. See <a href="deals.html">today\'s deals</a>, <a href="compare.html">compare paddles</a>, or the <a href="price-index.html">price index</a>.</p><div class="tbl"><table><tr><th>Paddle</th><th>Weight</th><th>Core</th><th>Shape</th><th>Price today</th><th>Where to buy</th></tr>{prow}</table></div>',
+    page("paddles.html", "Paddle database", f'<h1>Paddle database</h1>{DISC}<p><a class="btn" href="paddle-quiz.html" style="min-height:56px;font-size:1.1rem">🎯 Not sure? Take the 3-question paddle quiz →</a></p><p class="meta">Specs and list prices come from each manufacturer\'s own product page (retrieved {e(PD["retrieved"])}). Prices are re-checked daily. Blank means the maker doesn\'t clearly publish it. Six Zero prices are in AUD. See <a href="deals.html">today\'s deals</a>, <a href="compare.html">compare paddles</a>, or the <a href="price-index.html">price index</a>.</p><div class="tbl"><table><tr><th>Paddle</th><th>Weight</th><th>Core</th><th>Shape</th><th>Price today</th><th>Where to buy</th></tr>{prow}</table></div>',
          "Pickleball paddle specs, core thickness, shape and today's maker price, sourced from each brand's product page.",
          fresh=[fresh_p(p) for p in PP], schema=[item_list(PP)])
     import csv, io
@@ -316,7 +316,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 <section class="dark"><div class="in"><h2>Up next on tour <a class="seemore" href="tournaments.html">Full schedule →</a></h2><div class="strip">{"".join(tcard(t) for t in T.get("items", [])[:6])}</div></div></section>
 <h2>Headlines <a class="seemore" href="news.html">All news →</a></h2><div class="grid">{"".join(ncard(n) for n in N.get("items", [])[:6])}</div>
 <h2>What the pros play <a class="seemore" href="pro-paddles.html">See all →</a></h2><div class="pros">{pt}</div>
-<h2>Find your paddle</h2><div class="grid secs">{"".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">Spec filter →</div></a>' for f, t in list_links)}</div>
+<h2>Find your paddle</h2><div class="grid secs"><a class="card" href="paddle-quiz.html"><h3>🎯 Take the paddle quiz</h3><div class="meta">3 questions, 3 picks →</div></a>{"".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">Spec filter →</div></a>' for f, t in list_links)}</div>
 <section class="band"><h2>Get the weekly drop</h2><p>The best paddle deals, new reviews and tournament news, once a week. No spam.</p>{signup("home")}</section>
 </main>'''
     page("index.html", "Pickleball news, paddle deals & prices", home,

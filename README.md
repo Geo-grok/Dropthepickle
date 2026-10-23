@@ -16,6 +16,10 @@ Deploy: `npx wrangler deploy` publishes `src/worker.js` with `dist/` as static a
 - Every button carries `utm_source=<platform>&utm_medium=social&utm_campaign=bio`. The hrefs are baked in per page, and a tiny inline script swaps the source when the URL has `?src=tiktok|instagram` (or `?utm_source=`). So `/links?src=tiktok` works too.
 - "Latest video" is the newest `media/*.mp4` by git add date (falls back to `LATEST_VIDEO_FALLBACK` in a shallow checkout). Build fails if a bio page goes over 30KB. `/links` is in the sitemap and not in the nav; the platform copies are `noindex` with a canonical to `/links`.
 
+## Paddle quiz (`paddle_quiz.py`)
+- `/paddle-quiz`: 3 questions (level, budget, play style) → 3 picks. All 27 answer combos are scored at build time from `data/paddles.json` + `data/price_history.json`, `data/price-tracker.json`, `data/discount-codes.json` and the `/go/` map. The JSON is embedded in the page, and inline JS renders it. Answers live in the hash (`#skill=beginner&budget=100-200&style=all-court`) and also work as a query string.
+- Prices are shown only when the tracker has one (with its checked date). Everything else says "See price". Six Zero (AUD) is never converted. Paddles marked unavailable and not in the tracker are left out.
+
 ## Sources, discovery & sponsors (added 2026-10-14)
 - `data/sources.json`: living registry of sources (audience + where the number came from, RSS/API, robots/ToS). Entries with `in_pipeline: true` are pulled by `update.py` on top of the config lists (YouTube review channels, news RSS, podcast RSS → `data/podcasts.json`).
 - `scripts/discover_sources.py` (weekly): appends candidates flagged `"new"` (YouTube via API if `YT_API_KEY` is set, else r/Pickleball links via Arctic Shift + oEmbed; Google News RSS; iTunes podcast search). Review them, then set `in_pipeline`. Cron: `0 7 * * 1 cd /path && python3 scripts/discover_sources.py && python3 scripts/report_sources.py`
