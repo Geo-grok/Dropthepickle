@@ -451,7 +451,7 @@ if('IntersectionObserver'in window){{const io=new IntersectionObserver(es=>es.fo
 document.querySelectorAll('main .card,main .pro,.band').forEach(el=>{{el.classList.add('rv');io.observe(el)}})}}
 document.querySelectorAll('form[action$="/api/signup"]:not(.nudge-form)').forEach(f=>f.addEventListener('submit',async ev=>{{ev.preventDefault();const btn=f.querySelector('button');if(btn)btn.disabled=true;let ok=false,msg="Thanks! You're on the list.";try{{const res=await fetch(f.action,{{method:'POST',body:new FormData(f),headers:{{Accept:'application/json'}}}});const data=await res.json().catch(()=>null);ok=!!(res.ok&&data&&data.ok);if(data&&data.message)msg=data.message;else if(!res.ok)msg='Something went wrong. Please try again.'}}catch(err){{msg='Could not reach the signup service. Please try again.'}}if(ok){{const p=document.createElement('p');p.textContent=msg;f.replaceWith(p)}}else{{if(btn)btn.disabled=false;let p=f.querySelector('.signup-msg');if(!p){{p=document.createElement('p');p.className='signup-msg meta';f.append(p)}}p.textContent=msg}}}}))}})()
 </script>
-{'<script type="text/javascript" src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&amp;authResponse=eefce47bca8c97c10290569efaaf9a987fb9b899"></script>' if fn == "index.html" else ""}
+{'<script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=eefce47bca8c97c10290569efaaf9a987fb9b899"></script>' if fn == "index.html" else ""}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "8b857a29f29446008d526b7021a0eaa1"}}'></script>
 </body></html>"""
     dest = DIST / fn
