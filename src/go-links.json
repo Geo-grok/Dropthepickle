@@ -13,10 +13,6 @@
    "url": "https://808pickle.com/",
    "affiliate_tag": ""
   },
-  "acepickleball-home": {
-   "url": "https://acepickleball.co/",
-   "affiliate_tag": ""
-  },
   "aireo-sports-home": {
    "url": "https://www.aireo-sports.com/",
    "affiliate_tag": ""
@@ -41,16 +37,16 @@
    "url": "https://blumaka.com/",
    "affiliate_tag": ""
   },
-  "bodhipickleball-home": {
-   "url": "https://bodhipickleball.com/",
+  "bnbpickleball-home": {
+   "url": "https://www.bnbpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "bodhiperformance-home": {
+   "url": "https://bodhiperformance.com/",
    "affiliate_tag": ""
   },
   "bodyhelix-home": {
    "url": "https://www.bodyhelix.com/",
-   "affiliate_tag": ""
-  },
-  "breadandbutterpickleball-home": {
-   "url": "https://breadandbutterpickleball.com/",
    "affiliate_tag": ""
   },
   "brioti-home": {
@@ -173,10 +169,6 @@
    "url": "https://www.fridaypickle.com/",
    "affiliate_tag": ""
   },
-  "fromuthpickleball-home": {
-   "url": "https://fromuthpickleball.com/",
-   "affiliate_tag": ""
-  },
   "gammasports-home": {
    "url": "https://gammasports.com/",
    "affiliate_tag": ""
@@ -295,6 +287,10 @@
   },
   "maverixpickleball-home": {
    "url": "https://www.maverixpickleball.com/",
+   "affiliate_tag": ""
+  },
+  "midwestracquetsports-pickleball": {
+   "url": "https://www.midwestracquetsports.com/pickleball/",
    "affiliate_tag": ""
   },
   "neonicpickleball-home": {
@@ -517,12 +513,12 @@
    "url": "https://synergypickleball.com/",
    "affiliate_tag": ""
   },
-  "the-yobow-home": {
-   "url": "https://the-yobow.myshopify.com/",
-   "affiliate_tag": ""
-  },
   "therowdypaddle-home": {
    "url": "https://therowdypaddle.com/",
+   "affiliate_tag": ""
+  },
+  "theyobow-home": {
+   "url": "https://theyobow.com/",
    "affiliate_tag": ""
   },
   "thompsonpickleball-home": {
@@ -543,10 +539,6 @@
   },
   "vaticpro-home": {
    "url": "https://vaticpro.com/",
-   "affiliate_tag": ""
-  },
-  "versixpickleball-home": {
-   "url": "https://versixpickleball.com/",
    "affiliate_tag": ""
   },
   "volair-home": {
