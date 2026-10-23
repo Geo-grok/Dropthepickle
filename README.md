@@ -11,6 +11,11 @@
 Setup: `pip install -r requirements.txt`. Cron: `0 6 * * * cd /path/pickleball-hub && python3 update.py >> update.log 2>&1`
 Deploy: `npx wrangler deploy` publishes `src/worker.js` with `dist/` as static assets (`wrangler.jsonc`; missing paths serve `dist/404.html`). `POST /api/signup` stores the address in the D1 database `dtp-subscribers` (binding `DB`, id `fddb64c4-6f12-4af0-b6ec-aeaf902a70f0`). The `subscribers` table already exists. `migrations/0001_init.sql` matches it for a fresh database. Build command: `pip install -r requirements.txt && python3 update.py`.
 
+## Link in bio (`links_page.py`)
+- Bio URLs: TikTok `https://dropthepickle.com/links/tiktok`, Instagram `https://dropthepickle.com/links/instagram`. Generic: `https://dropthepickle.com/links` (utm_source=bio).
+- Every button carries `utm_source=<platform>&utm_medium=social&utm_campaign=bio`. The hrefs are baked in per page, and a tiny inline script swaps the source when the URL has `?src=tiktok|instagram` (or `?utm_source=`). So `/links?src=tiktok` works too.
+- "Latest video" is the newest `media/*.mp4` by git add date (falls back to `LATEST_VIDEO_FALLBACK` in a shallow checkout). Build fails if a bio page goes over 30KB. `/links` is in the sitemap and not in the nav; the platform copies are `noindex` with a canonical to `/links`.
+
 ## Sources, discovery & sponsors (added 2026-10-14)
 - `data/sources.json`: living registry of sources (audience + where the number came from, RSS/API, robots/ToS). Entries with `in_pipeline: true` are pulled by `update.py` on top of the config lists (YouTube review channels, news RSS, podcast RSS → `data/podcasts.json`).
 - `scripts/discover_sources.py` (weekly): appends candidates flagged `"new"` (YouTube via API if `YT_API_KEY` is set, else r/Pickleball links via Arctic Shift + oEmbed; Google News RSS; iTunes podcast search). Review them, then set `in_pipeline`. Cron: `0 7 * * 1 cd /path && python3 scripts/discover_sources.py && python3 scripts/report_sources.py`

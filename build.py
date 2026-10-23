@@ -218,6 +218,8 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 # Always-visible primary tabs (mobile-first). Codes uses the clean /discount-codes URL.
 TABS = [("buzz.html","Buzz"),("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
 TAB_ON = {"/discount-codes": ("discount-codes.html",), "guides.html": ("guides.html", "guides/"), "paddles.html": ("paddles.html", "paddle-")}
+# Extra /links buttons added by later features: dicts with cls, icon, title, sub, href and optional "at" (position).
+LINKS_EXTRA = []
 # Central outbound map for /go/<slug>. build() fills it; write_go_map() saves src/go-links.json for the Worker.
 GO = {}
 GO_FILE = pathlib.Path(__file__).parent / "src" / "go-links.json"
@@ -663,6 +665,7 @@ def build():
          f'<p class="meta">Want to put it to work? Try <a href="guides/how-to-dink.html"><b>how to dink</b></a> or <a href="reviews.html"><b>paddle reviews</b></a>.</p>',
          "Big Dill Science: short pickleball physics videos on topspin and the third shot drop.", fresh={"sci": SCI})
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
+    import links_page; links_page.make(C, e, canon, CATALOG, DIST, extra=LINKS_EXTRA)
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
     emit_crawl_files()
