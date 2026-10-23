@@ -80,6 +80,8 @@ def badge(ph, p=None):
     return b
 def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     X = X or {}
+    import own_codes; OWN = own_codes.own_codes(C)  # our own affiliate codes (config.json OWN_CODES)
+    def owncall(p, js=True): return own_codes.callout(e, OWN[p["brand"]], js=js) if p["brand"] in OWN else ""
     H = D("price_history.json").get("paddles", {})
     ph = lambda p: H.get(f'{p["brand"]} {p["model"]}', {})
     cur = lambda p: ph(p).get("current", p["price"])
@@ -92,9 +94,9 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         if u: return f'<img {load}src="{e(u + ("&" if "?" in u else "?") + f"width={w}")}" alt="{e(p["brand"])} {e(p["model"])} (image: {e(p["brand"])})">'
         return X.get("PADDLE_SVG", "")
     def credit(p): return f'<span class="credit">Image: {e(p["brand"])}</span>' if ph(p).get("image") else ""
-    def pcard(p, why=""):
+    def pcard(p, why="", own=False):
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
-        return f'<div class="card pcard"><a class="pimg" href="{slug(p)}">{img(p)}<span class="badges">{badge(h, p)}</span>{credit(p)}</a><div class="body"><span class="brand">{e(p["brand"])}</span><h3><a href="{slug(p)}">{e(p["model"])}</a></h3><div class="meta">{" · ".join(x for x in [p["core"], p["shape"], p["weight"]] if x)}</div><div class="pp">{money(p, cur(p))}{was}</div>{f"<p class={chr(34)}meta{chr(34)}>{e(why)}</p>" if why else ""}<div class="meta" style="margin-top:auto">{buy(p)}</div></div></div>' 
+        return f'<div class="card pcard"><a class="pimg" href="{slug(p)}">{img(p)}<span class="badges">{badge(h, p)}</span>{credit(p)}</a><div class="body"><span class="brand">{e(p["brand"])}</span><h3><a href="{slug(p)}">{e(p["model"])}</a></h3><div class="meta">{" · ".join(x for x in [p["core"], p["shape"], p["weight"]] if x)}</div><div class="pp">{money(p, cur(p))}{was}</div>{f"<p class={chr(34)}meta{chr(34)}>{e(why)}</p>" if why else ""}{owncall(p, js=False) if own else ""}<div class="meta" style="margin-top:auto">{buy(p)}</div></div></div>' 
     PP = PD["paddles"]; by = {p["model"]: p for p in PP}
     base = C["BASE_URL"].rstrip("/")
     def absu(fn): return base + "/" if fn == "index.html" else base + "/" + fn
@@ -138,7 +140,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         users = pro_users(p)
         pu = ("<h2>Pros who use it</h2><ul>" + "".join(f'<li><a href="{e(x["profile"])}" target="_blank" rel="noopener">{e(x["name"])}</a> ({e(x["paddle"])}, per PPA profile)</li>' for x in users) + "</ul>") if users else ""
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
-        hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p><div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div><p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
+        hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p><div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div>{owncall(p)}<p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
         page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}<p><a href="compare.html">Compare paddles →</a></p>',
              f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
              fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
@@ -246,9 +248,11 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     deals = sorted([p for p in PP if ph(p).get("drop") or ph(p).get("sale")], key=lambda p: -(1 - cur(p) / (ph(p).get("compare_at") or ph(p).get("previous") or cur(p))))
     def dcard(p):
         h = ph(p); ref = h.get("compare_at") if h.get("sale") else h.get("previous"); pct = round(100 * (1 - cur(p) / ref)) if ref else 0
-        return pcard(p, f"-{pct}% · " + ("Down from our last recorded price" if h.get("drop") else "vs. the maker's compare-at price") + f" · lowest we've seen {money(p, h.get('low', cur(p)))}")
+        return pcard(p, f"-{pct}% · " + ("Down from our last recorded price" if h.get("drop") else "vs. the maker's compare-at price") + f" · lowest we've seen {money(p, h.get('low', cur(p)))}", own=True)
     upd = D("price_history.json").get("updated", "")
-    page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Paddle deals</h1>{DISC}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p><p class="meta"><a href="discount-codes.html"><b>Stack a coupon: see current discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals at our last check. Check back later.</p>"}</div>',
+    # Our own codes stack with any deal below; one copy handler for the strip and any own-code brand cards.
+    OWNSTRIP = (("<h2>Stack our own code</h2>" + "".join(own_codes.callout(e, oc) for _b, oc in sorted(OWN.items()))) + own_codes.COPY_JS) if OWN else ""
+    page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Paddle deals</h1>{DISC}{OWNSTRIP}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p><p class="meta"><a href="discount-codes.html"><b>Stack a coupon: see current discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals at our last check. Check back later.</p>"}</div>',
          f"Pickleball paddle price drops and maker-site sales, checked on each brand's own page. {price_checked(upd, fmt, e, html=False)}",
          fresh=[fresh_p(p) for p in deals], schema=[item_list(deals)] if deals else None)
     # paddle database (re-rendered with links + badges)

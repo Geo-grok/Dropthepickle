@@ -15,6 +15,21 @@
     "paddletek.com": "",
     "luzzpickleball.com": ""
   },
+  "OWN_CODES": [
+    {
+      "brand": "Volair",
+      "code": "DROPTHEPICKLE",
+      "discount": "10% off",
+      "conditions": "Enter at checkout on volair.com",
+      "shop_url": "https://www.volair.com/",
+      "network": "Refersion",
+      "commission": "10% of the sale",
+      "pays_on": "code use only (links alone earn nothing)",
+      "approved": "2026-10-23",
+      "active": true,
+      "terms_note": "Volair terms: don't post the code on deal sites or Reddit. Our own site is fine."
+    }
+  ],
   "SIGNUP_ENDPOINT": "/api/signup",
   "YOUTUBE_CHANNELS": {
     "Pickleball Studio": "UCge5MvXGyRQPpFnxgRb_pXA",

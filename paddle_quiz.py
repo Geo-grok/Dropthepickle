@@ -17,7 +17,8 @@ def code_score(c):
 def bucket(v):
     return "u100" if v <= 100 else "100-200" if v <= 200 else "200plus"
 
-def make(page, e, fmt, D, PD, go_slug, paddle_slug):
+def make(page, e, fmt, D, PD, go_slug, paddle_slug, C=None):
+    import own_codes; OWN = own_codes.own_codes(C or {})  # our own affiliate codes win the code slot for their brand
     PT = D("price-tracker.json"); DC = D("discount-codes.json"); H = D("price_history.json").get("paddles", {})
     tracker = {norm(r["url"]): r for r in PT.get("rows", [])}
     tracker.update({r["go"].rsplit("/", 1)[-1]: r for r in PT.get("rows", []) if r.get("go")})
@@ -42,7 +43,9 @@ def make(page, e, fmt, D, PD, go_slug, paddle_slug):
             "core": p["core"], "shape": p["shape"], "weight": p["weight"],
             "power": "power" in m or p["model"] in POWER_MODELS, "control": "control" in m,
             "c": c, "s": s, "m": m,
-            "code": {k: code[k] for k in ("code", "discount", "conditions", "verified")} if code else None,
+            "code": ({"code": OWN[p["brand"]]["code"], "discount": OWN[p["brand"]]["discount"], "conditions": OWN[p["brand"]].get("conditions", ""),
+                      "own": 1, "earn": own_codes.earn_line(OWN[p["brand"]])} if p["brand"] in OWN else
+                     {k: code[k] for k in ("code", "discount", "conditions", "verified")} if code else None),
             "nocode": no_code.get(p["brand"], ""),
         })
 
@@ -135,7 +138,7 @@ const res=document.getElementById('qres'),list=document.getElementById('qlist'),
 function link(){return location.origin+location.pathname+'#'+K.map(k=>k+'='+A[k]).join('&')}
 function mark(){document.querySelectorAll('.qopt').forEach(b=>b.setAttribute('aria-pressed',A[b.dataset.q]===b.dataset.v?'true':'false'))}
 function card(i,why,n){const p=D.p[i];let price=p.price!=null?'<div class="qprice">'+M(p.price,p.cur)+'</div><div class="qstamp">✓ Checked '+day(p.checked)+' on '+esc(p.brand)+"'s site"+(p.cur==='AUD'?' · AUD':'')+'</div>':'<div class="qprice see">See price</div><div class="qstamp">Not in our price tracker yet. Tap through for today\'s price.</div>';
-let code=p.code?'<div class="qcode"><button class="ccode" data-code="'+esc(p.code.code)+'" aria-label="Copy code '+esc(p.code.code)+'">'+esc(p.code.code)+'</button><button class="btn ccopy" data-code="'+esc(p.code.code)+'">Copy</button></div><p class="qcmeta"><b>'+esc(p.code.discount)+'</b> · '+esc(p.code.conditions)+' · code checked '+day(p.code.verified)+'</p>':'<p class="qcmeta">No working '+esc(p.brand)+' code right now. <a href="/discount-codes">See all codes</a></p>';
+let code=p.code&&p.code.own?'<div class="owncode"><p class="owntag">★ Our own code</p><p class="ownhead">Use code <b>'+esc(p.code.code)+'</b> for '+esc(p.code.discount)+'</p><div class="qcode"><button class="ccode" data-code="'+esc(p.code.code)+'" aria-label="Copy code '+esc(p.code.code)+'">'+esc(p.code.code)+'</button><button class="btn ccopy" data-code="'+esc(p.code.code)+'">Copy</button></div><p class="owndisc"><b>Disclosure:</b> '+esc(p.code.earn)+' <a href="/disclosure">Details</a>.</p></div>':p.code?'<div class="qcode"><button class="ccode" data-code="'+esc(p.code.code)+'" aria-label="Copy code '+esc(p.code.code)+'">'+esc(p.code.code)+'</button><button class="btn ccopy" data-code="'+esc(p.code.code)+'">Copy</button></div><p class="qcmeta"><b>'+esc(p.code.discount)+'</b> · '+esc(p.code.conditions)+' · code checked '+day(p.code.verified)+'</p>':'<p class="qcmeta">No working '+esc(p.brand)+' code right now. <a href="/discount-codes">See all codes</a></p>';
 return '<article class="qpick"><span class="rk">Pick #'+n+'</span><h3><small>'+esc(p.brand)+'</small>'+esc(p.model)+'</h3>'+price+'<ul>'+why.map(w=>'<li>'+esc(w)+'</li>').join('')+'</ul>'+code+'<a class="btn qgo" href="'+esc(p.go)+'" rel="sponsored nofollow noopener" target="_blank">Shop '+esc(p.brand)+' →</a><a class="qspec" href="/'+esc(p.page.replace(/\.html$/,''))+'">Specs and reviews →</a></article>'}
 function show(scroll){mark();if(!K.every(k=>A[k])){res.hidden=true;return}const r=D.r[K.map(k=>A[k]).join('|')];if(!r)return;
 sum.textContent=L.skill[A.skill]+' · '+L.budget[A.budget]+' · '+L.style[A.style];list.innerHTML=r.map((x,j)=>card(x[0],x[1],j+1)).join('');res.hidden=false;
@@ -149,12 +152,14 @@ nb.addEventListener('click',()=>navigator.share({title:'My paddle picks from Big
 document.getElementById('qreset').addEventListener('click',()=>{K.forEach(k=>delete A[k]);res.hidden=true;msg.textContent='';history.replaceState(null,'',location.pathname+location.search);mark();document.getElementById('q-skill').scrollIntoView({behavior:'smooth'})});
 function load(){const h=new URLSearchParams(location.hash.slice(1)),q=new URLSearchParams(location.search);K.forEach(k=>{const v=h.get(k)||q.get(k);if(v&&L[k][v])A[k]=v});show(false)}
 window.addEventListener('hashchange',load);load()})()</script>""" % tuple(json.dumps({v: t for v, t, _ in o}) for o in (SKILLS, BUDGETS, STYLES))
+    ob = sorted({x['brand'] for x in paddles if x['brand'] in OWN})
+    OWNDISC = (' Codes marked "Our own code" (' + ', '.join(e(f'{b} {OWN[b]["code"]}') for b in ob) + ') earn DropThePickle a commission when used.') if ob else ''
     n_tracked = sum(1 for x in paddles if x["price"] is not None)
     body = (f'<h1>Find your paddle</h1><p class="meta">Three taps, three paddle picks. Prices come from our <a href="price-tracker.html">Paddle Price Tracker</a> with the date we checked. Codes come from our <a href="discount-codes.html">daily-checked discount codes</a>.</p>'
             f'{css}<div class="qintro"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="72" height="72"></picture><p>Big Dill picks from {len(paddles)} paddles in our database. Answer 3 questions.</p></div>'
             + qgroup("skill", "1. What's your level?", SKILLS) + qgroup("budget", "2. What's your budget?", BUDGETS) + qgroup("style", "3. How do you like to play?", STYLES)
             + f'<section id="qres" hidden aria-live="polite"><div class="qhead"><h2>Your 3 picks</h2><p id="qsum"></p></div><div id="qlist"></div>{shares}</section>'
-            f'<p class="disc">Picks are a spec match from maker data (core, shape, weight, how the maker markets it) and price. They are not lab or on-court test results. {n_tracked} of {len(paddles)} paddles have a verified tracker price; the rest say "See price". Budget fit uses the tracker price, or the maker list price (retrieved {e(PD.get("retrieved", ""))}) when we have no tracker price. Shop buttons may be affiliate links. <a href="disclosure.html">Disclosure</a>.</p>'
+            f'<p class="disc">Picks are a spec match from maker data (core, shape, weight, how the maker markets it) and price. They are not lab or on-court test results. {n_tracked} of {len(paddles)} paddles have a verified tracker price; the rest say "See price". Budget fit uses the tracker price, or the maker list price (retrieved {e(PD.get("retrieved", ""))}) when we have no tracker price. Shop buttons may be affiliate links.{OWNDISC} <a href="disclosure.html">Disclosure</a>.</p>'
             f'<p class="meta">Want to dig in? <a href="paddles.html">Paddle database</a> · <a href="compare.html">Compare paddles</a> · <a href="best-paddles-for-beginners.html">Best for beginners</a></p>'
             f'<script type="application/json" id="qdata">{blob}</script>{js}')
     page("paddle-quiz.html", "Find your paddle: 3-question pickleball paddle quiz", body,

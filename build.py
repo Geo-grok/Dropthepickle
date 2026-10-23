@@ -9,6 +9,8 @@ def D(n):
 e = lambda s: html.escape(str(s or ""), quote=True)
 NAV = [("index.html","Home"),("tournaments.html","Tournaments"),("reviews.html","Reviews"),("buzz.html","Buzz"),
        ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("compare.html","Compare"),("paddle-quiz.html","Paddle quiz"),("price-tracker.html","Price tracker"),("science.html","Science"),("shop.html","Merch"),("community.html","Marketplace")]
+import own_codes
+OWN = own_codes.own_codes(C)  # DropThePickle's own codes (config.json OWN_CODES); refresh-codes never touches config.json
 CSS = r"""
 :root{--navy:#0b1630;--navy2:#111d36;--navy3:#16264a;--neon:#c6f432;--neon2:#a8d61c;--warm:#ff7a45;--ink:#0d1526;--mut:#4a5878;--bg:#f4f6fa;--card:#fff;--line:#e3e8f0;--r:18px;--sh:0 1px 2px rgba(11,20,38,.06),0 8px 24px rgba(11,20,38,.08);--sh2:0 2px 4px rgba(11,20,38,.08),0 18px 40px rgba(11,20,38,.16)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
@@ -217,6 +219,9 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .sci-grid{display:grid;gap:1.4rem;grid-template-columns:1fr}@media(min-width:720px){.sci-grid{grid-template-columns:1fr 1fr}}
 .scicard{background:var(--navy);color:#fff;border-radius:var(--r);padding:1rem;box-shadow:var(--sh2)}.scicard video{width:100%;border-radius:12px;background:#000;display:block;max-height:80vh}
 .scicard h3{color:var(--neon);font-size:1.5rem;margin:.8rem 0 .3rem}.scicard p{font-size:1.1rem;margin:0;color:#dfe6f3}
+
+/* own affiliate code callout (own_codes.py) */
+.owncode{background:#f4ffd6;border:3px solid var(--navy);border-left:10px solid var(--neon);border-radius:16px;padding:14px 16px;margin:12px 0;display:flex;flex-direction:column;gap:.5rem;color:var(--navy)}.owncode .owntag{display:inline-block;align-self:flex-start;background:var(--navy);color:var(--neon);font-weight:900;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin:0}.owncode .ownhead{font-size:1.25rem;font-weight:800;margin:0;line-height:1.25}.owncode .cshop{font-weight:800;color:var(--navy)}.owncode .owndisc{font-size:.92rem;color:#3d4a63;margin:0}.owncode .owndisc a{color:inherit}
 """
 # Always-visible primary tabs (mobile-first). Codes uses the clean /discount-codes URL.
 TABS = [("buzz.html","Buzz"),("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
@@ -595,7 +600,7 @@ def build():
     page("about.html", "About", f'<h1>About {e(C["SITE_NAME"])}</h1><p>{e(C["SITE_NAME"])} is an independent pickleball hub started by a player and fitness fan in Midland, Texas. We gather tournaments, reviews, news and gear specs from public sources into one fast page, and always link back to the original.</p><p>We aren\'t affiliated with the PPA Tour, MLP, USA Pickleball or any brand listed. Every headline, video and event belongs to its publisher. The site is refreshed automatically each day. Spot an error? Email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p><section class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="88" height="88"></picture><div><h2>Meet Big Dill</h2><p>Big Dill is the Mic Drop pickle on the logo. He hangs around the deals, then gets out of the way. The site is still All Things Pickleball.</p></div></section>',
          "DropThePickle is an independent pickleball hub from Midland, Texas, linking tournaments, news and gear specs back to their sources.",
          fresh={"email": C["CONTACT_EMAIL"]})
-    page("disclosure.html", "Affiliate disclosure", f'<h1>Affiliate disclosure</h1><p>{e(C["SITE_NAME"])} is reader-supported. Some links on this site, especially "where to buy" links in the paddle database, are <b>affiliate links</b>. If you click an affiliate link and buy something, we may earn a commission <b>at no extra cost to you</b>.</p><p>As an Amazon Associate, {e(C["SITE_NAME"])} earns from qualifying purchases. We may also take part in affiliate programs run by paddle brands and retailers.</p><p>Sponsored placements are clearly labeled <b>Sponsored</b>.</p><p>Editorial specs are never paid. Commissions and sponsorships do not change which products we list or the manufacturer specs we show. Specs come from the maker pages recorded in our data. We don\'t accept payment to add or alter a spec. Affiliate links are marked <code>rel="sponsored"</code>, and pages with them carry a notice near the top, in line with the U.S. FTC Endorsement Guides (16 CFR Part 255).</p>',
+    page("disclosure.html", "Affiliate disclosure", f'<h1>Affiliate disclosure</h1><p>{e(C["SITE_NAME"])} is reader-supported. Some links on this site, especially "where to buy" links in the paddle database, are <b>affiliate links</b>. If you click an affiliate link and buy something, we may earn a commission <b>at no extra cost to you</b>.</p><p>As an Amazon Associate, {e(C["SITE_NAME"])} earns from qualifying purchases. We may also take part in affiliate programs run by paddle brands and retailers.</p>{"<p><b>Our own discount codes.</b> Some brands give us our own code. When you use one, you get the stated discount and we earn a commission on that sale, at no extra cost to you. Links to these brands don\'t earn anything by themselves: we only earn when the code is used. Current own codes: " + "; ".join(e(f'{o["brand"]}: {o["code"]} ({o["discount"]}, we earn {o.get("commission") or "a commission"})') for o in OWN.values()) + ". They are marked <b>Our own code</b> wherever they appear.</p>" if OWN else ""}<p>Sponsored placements are clearly labeled <b>Sponsored</b>.</p><p>Editorial specs are never paid. Commissions and sponsorships do not change which products we list or the manufacturer specs we show. Specs come from the maker pages recorded in our data. We don\'t accept payment to add or alter a spec. Affiliate links are marked <code>rel="sponsored"</code>, and pages with them carry a notice near the top, in line with the U.S. FTC Endorsement Guides (16 CFR Part 255).</p>',
          "Affiliate links may earn a commission. Sponsored placements are labeled Sponsored. Editorial specs are never paid.")
     page("privacy.html", "Privacy policy", f'<h1>Privacy policy</h1><p class="meta">Effective October 15, 2026</p><h2>What we collect</h2><p>If you join the email list, your email is stored securely and used only for DropThePickle updates. We also store the page you signed up from, the time you signed up, and the country our host reports for that request. Unsubscribe on request at <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p><h2>Third parties</h2><p>Embedded YouTube videos use youtube-nocookie.com, but YouTube may still set cookies once you press play. Affiliate partners (such as Amazon) may use cookies to track referrals after you click a link. Our host may keep standard server logs.</p><p>We use Cloudflare Web Analytics, which is privacy-friendly and cookieless.</p><h2>Not sold</h2><p>We do not sell your personal information.</p><h2>Contact</h2><p>To ask about or delete your data, email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p>',
          "Emails on the DropThePickle list are stored securely and used only for site updates. Unsubscribe on request at geolobo@mail.grokbot.com.",
@@ -639,8 +644,11 @@ def build():
     def earn_note(cs):
         # Must stay accurate: only claim no earnings while none of these shop links carries an approved affiliate param.
         if any(is_tagged(c.get("shop_url", "")) for c in cs):
-            return "DropThePickle may earn a commission when you use our Shop links, at no cost to you. We don\'t earn from the creators\' codes."
-        return "DropThePickle doesn\'t earn anything from these codes."
+            base = "DropThePickle may earn a commission when you use our Shop links, at no cost to you. We don\'t earn from the creators\' codes."
+        else: base = "DropThePickle doesn\'t earn anything from these creator codes."
+        own = [OWN[b] for b in sorted({c["brand"] for c in cs}) if b in OWN]
+        if own: base += " Exception: we earn a commission when you use our own " + " / ".join(f'{o["brand"]} code {o["code"]}' for o in own) + " (marked \u201cOur own code\u201d)."
+        return base
     def score(c):
         m = re.search(r"(\d+)%", c["discount"]); n = re.search(r"\$(\d+)", c["discount"])
         return int(m.group(1)) if m else (int(n.group(1)) / 2 if n else 1)
@@ -657,7 +665,7 @@ def build():
     for c in codes:
         if c["brand"] not in best or score(c) > score(best[c["brand"]]): best[c["brand"]] = c
     jump = "".join(f'<a href="#{slugb(b)}">{e(b)} · {e(best[b]["discount"])}</a>' for b in brands)
-    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2><div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
+    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2>{own_codes.callout(e, OWN[b]) if b in OWN else ""}<div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
     nocode = "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
     nocode += "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> The code we were tracking was no longer shown on its source page, so we removed it.</li>'
                       for b in sorted({r["brand"] for r in DC.get("removed", [])} - {c["brand"] for c in codes} - set(DC.get("no_code", {})), key=str.lower))
@@ -677,7 +685,7 @@ def build():
     page("discount-codes.html", "Pickleball Discount Codes & Paddle Coupons (Updated Daily)",
          f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
          f'{nudge("discount-codes", "top")}'
-         f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes)} <a href=disclosure.html>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) else ""}'
+         f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes)} <a href=disclosure.html>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) or OWN else ""}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
          f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a> or the <a href="price-tracker.html">Paddle Price Tracker</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p><h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
          f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(codes)} <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
@@ -719,7 +727,7 @@ def build():
          f'<p class="meta">Want to put it to work? Try <a href="guides/how-to-dink.html"><b>how to dink</b></a> or <a href="reviews.html"><b>paddle reviews</b></a>.</p>',
          "Big Dill Science: short pickleball physics videos on topspin and the third shot drop.", fresh={"sci": SCI})
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
-    import paddle_quiz; QUIZ = paddle_quiz.make(page, e, fmt, D, PD, go_slug, paddle_pages.slug)
+    import paddle_quiz; QUIZ = paddle_quiz.make(page, e, fmt, D, PD, go_slug, paddle_pages.slug, C=C)
     print(f"paddle quiz: {QUIZ['recommendable']} of {QUIZ['paddles']} paddles recommendable, {QUIZ['tracked']} with tracker prices")
     import links_page; links_page.make(C, e, canon, CATALOG, DIST, extra=LINKS_EXTRA)
     # Per-brand code pages: dist/discount-codes/<slug>.html, served at /discount-codes/<slug>. Built from data/discount-codes.json
@@ -781,7 +789,10 @@ def build():
             intro = (f'<p class="meta">{n} {b} {cw} published by {e(src_txt)}. Last checked {fmt(when)}: each code below was still shown on its source page. '
                      f'Offer {"type" if len(types) == 1 else "types"}: {e(", ".join(types).lower())}. We copy each code exactly as published and link to the page it came from.</p>')
             def brand_card(c): return ccard(c).replace('<div class="cdisc">', f'<div class="ctype meta">{e(otype(c["discount"]))}</div><div class="cdisc">', 1)
-            main = (f'<div class="grid">{"".join(brand_card(c) for c in bc)}</div>'
+            oc = OWN.get(b)
+            own_html = (f'<h2>Our featured {e(b)} code</h2>{own_codes.callout(e, oc, "../disclosure.html")}<h2>Creator codes</h2>') if oc else ""
+            if oc: faq_pairs.insert(1, (f"Does DropThePickle have its own {b} code?", f'Yes: {oc["code"]} ({oc["discount"]}). {own_codes.earn_line(oc)}'))
+            main = (f'{own_html}<div class="grid">{"".join(brand_card(c) for c in bc)}</div>'
                     f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order. Check your cart total before you pay.</p>')
             src_short = src_txt if len(srcs) <= 2 else f"{srcs[0]}, {srcs[1]} and {len(srcs) - 2} more"
             desc = (f'{b} discount codes: {n} working {cw} ({", ".join(dict.fromkeys(c["discount"] for c in bc))}) from {src_short}, last checked {fmt(when)}. Tap to copy, then shop {b}.')
