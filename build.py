@@ -247,12 +247,46 @@ def golinks(doc):
         if "dropthepickle.com" in url: return m.group(0)
         return f'<a {m.group(1)}href="/go/{go_slug(url)}"{m.group(3)}>'
     return GO_A.sub(sub, doc)
+# Deep-link templates may only point at these affiliate networks (keep in sync with AFF_HOSTS in src/worker.js).
+AFF_HOSTS = ("awin1.com", "avantlink.com", "shareasale.com")
+AFF_QS = re.compile(r"^[A-Za-z0-9_.~%+=&-]{1,200}$")
+def aff_value_ok(prm):
+    """True for a plain query string (ref=abc) or an https deep-link template on a known network containing {url}."""
+    if prm.startswith("https://"):
+        if prm.count("{url}") != 1: return False
+        h = urllib.parse.urlparse(prm.replace("{url}", "x")).hostname or ""
+        return any(h == d or h.endswith("." + d) for d in AFF_HOSTS)
+    return bool(AFF_QS.match(prm.lstrip("?&")))
+_AFF_WARNED = set()
+def aff_param(url):
+    """Approved brand affiliate query string from config BRAND_AFFILIATE_PARAMS, matched on the destination host (www. and subdomains allowed)."""
+    host = (urllib.parse.urlparse(url).hostname or "").lower().removeprefix("www.")
+    for dom, prm in (C.get("BRAND_AFFILIATE_PARAMS") or {}).items():
+        prm = (prm or "").strip()
+        if prm and (host == dom or host.endswith("." + dom)):
+            if not aff_value_ok(prm):
+                if dom not in _AFF_WARNED: _AFF_WARNED.add(dom); print(f"WARNING: ignoring BRAND_AFFILIATE_PARAMS[{dom!r}]: not a plain query string or a known-network https template with {{url}}")
+                return ""
+            return prm if prm.startswith("https://") else prm.lstrip("?&")
+    return ""
+# Hand-set per-slug tags already in src/go-links.json, keyed by destination URL, so disclosures/rel see them too.
+try: HAND_TAGS = {v["url"]: v.get("affiliate_tag", "") for v in json.loads(GO_FILE.read_text()).get("links", {}).values() if v.get("affiliate_tag")}
+except Exception: HAND_TAGS = {}
+def is_tagged(url):
+    """True when the /go/ redirect for this URL will carry an affiliate tag (config param or hand-set go-links tag)."""
+    return bool(aff_param(url) or HAND_TAGS.get(url))
 def write_go_map():
     old = {}
     if GO_FILE.exists():
         try: old = json.loads(GO_FILE.read_text()).get("links", {})
         except Exception: old = {}
-    links = {s: {"url": v["url"], "affiliate_tag": (old.get(s) or {}).get("affiliate_tag", "")} for s, v in sorted(GO.items())}
+    # config.json BRAND_AFFILIATE_PARAMS (approved programs) wins, so changing or clearing an ID there takes effect on
+    # the next build; otherwise keep any per-slug affiliate_tag set by hand in go-links.json.
+    def tag(s, v):
+        prm = aff_param(v["url"])
+        if prm: return prm if prm not in v["url"] else ""  # guard: never append a param the URL already has
+        return (old.get(s) or {}).get("affiliate_tag", "")
+    links = {s: {"url": v["url"], "affiliate_tag": tag(s, v)} for s, v in sorted(GO.items())}
     GO_FILE.write_text(json.dumps({"_note": "slug -> destination. affiliate_tag is an optional query string (e.g. ref=dtp) the Worker appends. Leave empty until joined.", "links": links}, indent=1) + "\n")
 def logo_html(rel):
     """Round Mic Drop avatar plus a live text wordmark. The wide logo image stays out of the header."""
@@ -425,9 +459,9 @@ document.querySelectorAll('form[action$="/api/signup"]:not(.nudge-form)').forEac
     CATALOG[fn] = {"fn": fn, "title": doc_title, "desc": desc, "updated": updated}
 
 def buy(p):
-    dom = urllib.parse.urlparse(p["buy_url"]).netloc.replace("www.", "")
-    prm = C["BRAND_AFFILIATE_PARAMS"].get(dom, "")
-    url = p["buy_url"] + (("&" if "?" in p["buy_url"] else "?") + prm if prm else "")
+    # Brand affiliate params are applied once, at the /go/ redirect (write_go_map -> go-links.json affiliate_tag),
+    # so query-string params and network deep-link templates both work and nothing is appended twice.
+    url = p["buy_url"]
     out = f'<a href="{e(url)}" rel="sponsored nofollow noopener" target="_blank">{e(p["brand"])} store</a>'
     tag = C.get("AMAZON_ASSOCIATES_TAG") or C.get("AFFILIATE_TAG")
     if tag:
@@ -597,7 +631,13 @@ def build():
 
     # discount codes (data/discount-codes.json, refreshed by scripts/refresh-codes)
     DC = D("discount-codes.json"); codes = DC.get("codes", [])
+    DS = D("discount-sources.json")  # shop URLs + dead_shops for brands with no working code
     def slugb(b): return re.sub(r"[^a-z0-9]+", "-", b.lower()).strip("-")
+    def earn_note(cs):
+        # Must stay accurate: only claim no earnings while none of these shop links carries an approved affiliate param.
+        if any(is_tagged(c.get("shop_url", "")) for c in cs):
+            return "DropThePickle may earn a commission when you use our Shop links, at no cost to you. We don\'t earn from the creators\' codes."
+        return "DropThePickle doesn\'t earn anything from these codes."
     def score(c):
         m = re.search(r"(\d+)%", c["discount"]); n = re.search(r"\$(\d+)", c["discount"])
         return int(m.group(1)) if m else (int(n.group(1)) / 2 if n else 1)
@@ -607,7 +647,7 @@ def build():
         sd = f' (page dated {e(c["source_date"])})' if c.get("source_date") else ""
         return (f'<div class="card ccard"><div class="cdisc">{e(c["discount"])}</div><p class="ccond">{e(c["conditions"])}</p>'
                 f'<div class="crow"><button class="ccode" data-code="{cd}" aria-label="Copy code {cd}">{cd}</button><button class="btn ccopy" data-code="{cd}">Copy</button></div>'
-                f'<a class="cshop" href="{e(c["shop_url"])}" target="_blank" rel="noopener">Shop {e(c["brand"])} →</a>'
+                f'<a class="cshop" href="{e(c["shop_url"])}" target="_blank" rel="{"sponsored nofollow noopener" if is_tagged(c["shop_url"]) else "nofollow noopener"}">Shop {e(c["brand"])} →</a>'
                 f'<div class="cmeta">Last checked {fmt(c.get("verified"))}{exp} · Source: <a href="{e(c["source_url"])}" target="_blank" rel="noopener">{e(c["source"])}</a>{sd}</div></div>')
     brands = sorted({c["brand"] for c in codes}, key=str.lower)
     best = {}
@@ -634,9 +674,10 @@ def build():
     page("discount-codes.html", "Pickleball Discount Codes & Paddle Coupons (Updated Daily)",
          f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
          f'{nudge("discount-codes", "top")}'
+         f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes)} <a href=disclosure.html>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) else ""}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
          f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a> or the <a href="price-tracker.html">Paddle Price Tracker</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p><h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
-         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
+         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(codes)} <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
          f'{nudge("discount-codes-bottom", "bottom", "Don\'t miss the next code", "We re-check creator and brand pages every day. Join the list and hear about new codes first.")}{copyjs}{NUDGEJS}',
          f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
          fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]}, schema=code_ld)
@@ -755,13 +796,17 @@ def build():
                 (f"How can I save on {b} instead?", "Check our deals page for price drops, and our full discount code list for other brands."),
             ]
             intro = f'<p class="meta">We don\'t list a working {e(b)} code right now (list updated {fmt(DC["updated"])}). {e(why)} We won\'t post made-up or expired codes.</p>'
-            main = f'<p><a class="btn" href="../deals.html">See today\'s paddle deals →</a> <a class="btn" href="/discount-codes">All discount codes →</a></p>'
+            # Tracked shop link for brands whose store is up (no link for stores listed under dead_shops in discount-sources.json).
+            shop = "" if b in DS.get("dead_shops", {}) else DS.get("shops", {}).get(b, "")
+            shop_a = f'<p><a class="cshop" href="{e(shop)}" target="_blank" rel="{"sponsored nofollow noopener" if is_tagged(shop) else "nofollow noopener"}">Shop {e(b)} →</a></p>' if shop else ""
+            if shop and is_tagged(shop): shop_a += '<p class="disc">DropThePickle may earn a commission if you buy through this link, at no cost to you. <a href="../disclosure.html">Disclosure</a>.</p>'
+            main = f'<p><a class="btn" href="../deals.html">See today\'s paddle deals →</a> <a class="btn" href="/discount-codes">All discount codes →</a></p>{shop_a}'
             desc = f"No working {b} discount code as of {fmt(DC['updated'])}. Why, plus paddle deals and working codes for other pickleball brands."
             extra = []
             fresh = {"none": why}
         faq_html = "<h2>Questions</h2>" + "".join(f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faq_pairs)
         extra.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq_pairs]})
-        disc = f'<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="../disclosure.html">Disclosure</a>.</p>' if bc else ""
+        disc = f'<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(bc)} <a href="../disclosure.html">Disclosure</a>.</p>' if bc else ""
         body = (f'<h1>{e(b)} discount codes</h1>{intro}{disc}'
                 f'{crumb_html}{main}{gear}'
                 f'<h2>More ways to save</h2><p><a href="/discount-codes">All pickleball discount codes</a> · <a href="../deals.html">Paddle deals</a> · <a href="../price-tracker.html">Paddle Price Tracker</a></p>'

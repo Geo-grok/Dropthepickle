@@ -148,11 +148,36 @@ async function handleSignup(request, env) {
 }
 
 // Builds the destination from src/go-links.json, appending affiliate_tag (a query string) when set.
+// Network deep links (AvantLink, Awin, ShareASale) can't be a query string on the brand URL, so an affiliate_tag
+// that is a full https:// URL containing {url} is used as a template, e.g.
+// "https://www.awin1.com/cread.php?awinmid=124160&awinaffid=<ID>&ued={url}" -> {url} = encoded destination.
+// Templates may only point at AFF_HOSTS (keep in sync with AFF_HOSTS in build.py); anything else falls back to
+// the plain destination, so a bad or tampered go-links.json entry can't turn /go/ into a redirect to an arbitrary host.
+export const AFF_HOSTS = ["awin1.com", "avantlink.com", "shareasale.com"];
+const AFF_QS = /^[A-Za-z0-9_.~%+=&-]{1,200}$/;
+function hostOk(host, list) {
+  host = String(host || "").toLowerCase();
+  return list.some((d) => host === d || host.endsWith("." + d));
+}
+function httpUrl(raw) {
+  try {
+    const u = new URL(raw);
+    return u.protocol === "https:" || u.protocol === "http:" ? u : null;
+  } catch { return null; }
+}
 export function goTarget(slug) {
   const entry = GO.links && Object.prototype.hasOwnProperty.call(GO.links, slug) ? GO.links[slug] : null;
-  if (!entry || !/^https?:\/\//.test(entry.url)) return null;
-  const tag = String(entry.affiliate_tag || "").replace(/^[?&]/, "");
-  if (!tag) return entry.url;
+  if (!entry || !/^https?:\/\//.test(entry.url) || !httpUrl(entry.url)) return null;
+  const raw = String(entry.affiliate_tag || "").trim();
+  if (/^https:\/\//i.test(raw)) {
+    // Deep-link template: exactly one {url}, https, known affiliate network host.
+    if (raw.split("{url}").length !== 2) return entry.url;
+    const t = httpUrl(raw.replace("{url}", "x"));
+    if (!t || t.protocol !== "https:" || !hostOk(t.hostname, AFF_HOSTS)) return entry.url;
+    return raw.replace("{url}", encodeURIComponent(entry.url));
+  }
+  const tag = raw.replace(/^[?&]/, "");
+  if (!tag || !AFF_QS.test(tag)) return entry.url;
   return entry.url + (entry.url.includes("?") ? "&" : "?") + tag;
 }
 
@@ -173,7 +198,8 @@ export function isBot(request) {
 }
 
 async function handleGo(request, env, ctx, url) {
-  const slug = decodeURIComponent(url.pathname.slice(4)).replace(/\/+$/, "").toLowerCase();
+  let slug = "";
+  try { slug = decodeURIComponent(url.pathname.slice(4)).replace(/\/+$/, "").toLowerCase(); } catch {}
   const target = /^[a-z0-9-]{1,80}$/.test(slug) ? goTarget(slug) : null;
   if (!target) return Response.redirect(new URL("/deals", url).toString(), 302);
   // HEAD (link checkers, unfurlers) still gets the redirect but is never logged.
