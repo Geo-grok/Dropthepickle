@@ -56,9 +56,12 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     ph = lambda p: H.get(f'{p["brand"]} {p["model"]}', {})
     cur = lambda p: ph(p).get("current", p["price"])
     pros = P.get("pros", [])
-    def img(p, cls=""):
+    def img(p, cls="", w=600, eager=False, hi=False):
+        # w: pixel width asked from the maker's Shopify CDN (sized to the slot, ~2.4x for phones).
+        # eager/hi: for above-the-fold images, skip lazy-loading so the main picture paints sooner (LCP).
         u = ph(p).get("image")
-        if u: return f'<img loading="lazy" src="{e(u + ("&" if "?" in u else "?") + "width=600")}" alt="{e(p["brand"])} {e(p["model"])} (image: {e(p["brand"])})">'
+        load = ('fetchpriority="high" ' if hi else "") + ("" if eager else 'loading="lazy" decoding="async" ')
+        if u: return f'<img {load}src="{e(u + ("&" if "?" in u else "?") + f"width={w}")}" alt="{e(p["brand"])} {e(p["model"])} (image: {e(p["brand"])})">'
         return X.get("PADDLE_SVG", "")
     def credit(p): return f'<span class="credit">Image: {e(p["brand"])}</span>' if ph(p).get("image") else ""
     def pcard(p, why=""):
@@ -107,7 +110,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         users = pro_users(p)
         pu = ("<h2>Pros who use it</h2><ul>" + "".join(f'<li><a href="{e(x["profile"])}" target="_blank" rel="noopener">{e(x["name"])}</a> ({e(x["paddle"])}, per PPA profile)</li>' for x in users) + "</ul>") if users else ""
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
-        hero = f'<section class="phero"><div class="img" style="position:relative">{img(p)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">Maker price checked {fmt(h.get("checked",""))}. Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p><div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div><p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
+        hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">Maker price checked {fmt(h.get("checked",""))}. Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p><div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div><p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
         page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}<p><a href="compare.html">Compare paddles →</a></p>',
              f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
              fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
@@ -289,7 +292,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         h = ph(p); ref = h.get("compare_at") if h.get("sale") else h.get("previous"); pct = round(100 * (1 - cur(p) / ref)) if ref else 0
         was = f'<s>{money(p, ref)}</s>' if ref and ref > cur(p) else ""
         why = "price drop" if h.get("drop") else "on sale"
-        return (f'<li><a class="th" href="{slug(p)}" aria-label="{e(p["brand"])} {e(p["model"])}">{img(p)}<span class="rk">{i}</span></a><div class="bd">'
+        return (f'<li><a class="th" href="{slug(p)}" aria-label="{e(p["brand"])} {e(p["model"])}">{img(p, w=200, eager=i <= 3)}<span class="rk">{i}</span></a><div class="bd">'
                 f'<h3><a href="{slug(p)}">{e(p["brand"])} {e(p["model"])}</a></h3>'
                 f'<p class="fr">{e(p["brand"])} store · {why} · checked {fmt(h.get("checked"))}</p>'
                 f'<div class="px">{money(p, cur(p))}{was}{f"<span class={chr(34)}off{chr(34)}>-{pct}%</span>" if pct > 0 else ""}</div>'
