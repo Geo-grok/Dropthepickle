@@ -180,7 +180,10 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .secs{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.secs a{text-decoration:none;color:inherit}
 .tbl table td a{font-weight:600}
 .codes-best{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 1rem}.codes-best a{background:var(--navy);color:var(--neon);text-decoration:none;font-weight:800;padding:.5rem .8rem;border-radius:99px;font-size:.94rem}
-.cbrand{margin-top:1.8rem}.ccard{display:flex;flex-direction:column;gap:.55rem}.ccard .cdisc{font-family:Anton,Impact,sans-serif;font-size:2rem;line-height:1;color:var(--navy);letter-spacing:.01em}
+.cbrand{margin-top:1.8rem}
+.cbrand h2 a{color:inherit;text-decoration:none}.cbrand h2 a:hover{text-decoration:underline}
+.crumbs{font-size:.9rem;margin:.4rem 0 1rem;color:#5b6475}.crumbs a{color:inherit}
+.ctype{font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}.ccard{display:flex;flex-direction:column;gap:.55rem}.ccard .cdisc{font-family:Anton,Impact,sans-serif;font-size:2rem;line-height:1;color:var(--navy);letter-spacing:.01em}
 .ccard .ccond{color:var(--mut);font-size:.95rem;margin:0}.crow{display:flex;gap:.5rem;align-items:stretch}
 .ccode{flex:1;min-width:0;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1.35rem;font-weight:800;letter-spacing:0;background:var(--navy);color:var(--neon);border:2px dashed var(--neon);border-radius:12px;padding:.85rem .7rem;cursor:pointer;text-align:center;overflow-wrap:anywhere;min-height:56px}
 .ccopy{min-width:88px;min-height:56px;font-size:1rem}.ccopy.ok{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
@@ -268,6 +271,7 @@ FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Padd
 _PREV, _NEXT, CATALOG = {}, {}, {}
 def canon(fn):
     base = C["BASE_URL"].rstrip("/")
+    if fn.startswith("discount-codes/"): return f"{base}/{fn[:-5]}"  # served extensionless by Cloudflare assets
     return base + "/" if fn == "index.html" else f"{base}/{fn}"
 def fingerprint(obj):
     return hashlib.sha256(json.dumps(obj, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()
@@ -363,10 +367,11 @@ def emit_crawl_files():
     mains = [p for p in pages if p["fn"] in main_names]
     guides = [p for p in pages if p["fn"].startswith(("guides/", "creators/"))]
     paddles = [p for p in pages if p["fn"].startswith(("paddle-", "vs-", "best-"))]
-    rest = [p for p in pages if p not in mains and p not in paddles and p not in guides]
+    codes = [p for p in pages if p["fn"].startswith("discount-codes/")]
+    rest = [p for p in pages if p not in mains and p not in paddles and p not in guides and p not in codes]
     llms = [f"# {C['SITE_NAME']}", "", f"> {C['TAGLINE']}", "",
             f"{C['SITE_NAME']} is all things pickleball, free for everyone: news, paddles, prices, pros, tournaments, videos and guides, all in one place. It lists pro tournament dates, manufacturer paddle specs, maker prices, news headlines, beginner guides, and links to creator videos and podcasts. Specs and prices come from the makers. This site does not publish its own ratings or reviews.",
-            "", "## Main", *[bullet(p) for p in mains], "", "## Guides", *[bullet(p) for p in guides], "", "## Paddles", *[bullet(p) for p in paddles], "", "## Optional", *[bullet(p) for p in rest], ""]
+            "", "## Main", *[bullet(p) for p in mains], "", "## Guides", *[bullet(p) for p in guides], "", "## Paddles", *[bullet(p) for p in paddles], "", "## Discount codes by brand", *[bullet(p) for p in codes], "", "## Optional", *[bullet(p) for p in rest], ""]
     (DIST / "llms.txt").write_text("\n".join(llms))
 def pagehead(body):
     m = re.match(r'(<h1>.*?</h1>)((?:<p class="(?:meta|disc)">.*?</p>)*)', body, re.S)
@@ -606,8 +611,10 @@ def build():
     for c in codes:
         if c["brand"] not in best or score(c) > score(best[c["brand"]]): best[c["brand"]] = c
     jump = "".join(f'<a href="#{slugb(b)}">{e(b)} · {e(best[b]["discount"])}</a>' for b in brands)
-    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2>{e(b)} codes</h2><div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
-    nocode = "".join(f'<li><b>{e(b)}:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
+    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2><div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
+    nocode = "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
+    nocode += "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> The code we were tracking was no longer shown on its source page, so we removed it.</li>'
+                      for b in sorted({r["brand"] for r in DC.get("removed", [])} - {c["brand"] for c in codes} - set(DC.get("no_code", {})), key=str.lower))
     code_faq = [
         ("How often are these codes checked?", "Every code is re-checked each day on the creator or brand page that publishes it."),
         ("What happens to codes that expire?", "Codes that disappear get removed. Codes can also expire or change without notice, so check your cart total before you pay."),
@@ -668,6 +675,95 @@ def build():
     import paddle_quiz; QUIZ = paddle_quiz.make(page, e, fmt, D, PD, go_slug, paddle_pages.slug)
     print(f"paddle quiz: {QUIZ['recommendable']} of {QUIZ['paddles']} paddles recommendable, {QUIZ['tracked']} with tracker prices")
     import links_page; links_page.make(C, e, canon, CATALOG, DIST, extra=LINKS_EXTRA)
+    # Per-brand code pages: dist/discount-codes/<slug>.html, served at /discount-codes/<slug>. Built from data/discount-codes.json
+    # on every build, so the daily refresh (scripts/refresh-codes --build, or update.py -> build.py) regenerates them.
+    # Brands with no working code (no_code notes, or every tracked code removed) get a page that says so and points to deals.
+    nc = DC.get("no_code", {})
+    zero = sorted((set(nc) | {r["brand"] for r in DC.get("removed", [])}) - set(brands), key=str.lower)
+    all_b = sorted(set(brands) | set(zero), key=str.lower)
+    by_src = {}
+    for c in codes: by_src.setdefault(c["source"], set()).add(c["brand"])
+    def otype(d):
+        d = d.lower()
+        if "%" in d: return "Percent off"
+        if "$" in d: return "Dollar amount off"
+        if "shipping" in d: return "Free shipping"
+        if "gift" in d: return "Gift card"
+        return "Store credit" if ("coupon" in d or "bucks" in d) else "Other"
+    def ttl(name): return re.sub(r" · " + re.escape(C["SITE_NAME"]) + "$", "", CATALOG[name]["title"])
+    def related(b):
+        srcs = {c["source"] for c in codes + DC.get("removed", []) if c["brand"] == b}
+        i = all_b.index(b)
+        share = sorted({x for s in srcs for x in by_src.get(s, ())} - {b}, key=lambda x: ((all_b.index(x) - i) % len(all_b), x.lower()))
+        near = [x for x in all_b[max(0, i - 2):i + 3] if x != b and x in brands]
+        out = []
+        for x in share[:3] + near:
+            if x not in out: out.append(x)
+        return out[:5]
+    for b in all_b:
+        s = slugb(b); fn = f"discount-codes/{s}.html"; url = canon(fn)
+        bc = sorted([c for c in codes if c["brand"] == b], key=lambda c: -score(c))
+        when = max([c["verified"] for c in bc if c.get("verified")] or [DC["updated"]])
+        month = datetime.date.fromisoformat(when).strftime("%b %Y")
+        bp = [p for p in PD["paddles"] if p["brand"].lower() == b.lower()]
+        stems = {paddle_pages.slug(p)[7:-5] for p in bp}
+        plinks = [(paddle_pages.slug(p), ttl(paddle_pages.slug(p))) for p in bp if paddle_pages.slug(p) in CATALOG]
+        vs = [(f, ttl(f)) for f in sorted(CATALOG) if f.startswith("vs-") and set(f[3:-5].split("-vs-")) & stems][:6]
+        bestf = f"best-{s}-paddles.html"
+        if bestf in CATALOG: plinks.insert(0, (bestf, ttl(bestf)))
+        gear = ""
+        def lis(xs): return "".join(f'<li><a href="../{f}">{e(t)}</a></li>' for f, t in xs)
+        if plinks: gear += f'<h2>{e(b)} paddles</h2><ul>{lis(plinks)}</ul>'
+        if vs: gear += f'<h2>{e(b)} paddle comparisons</h2><ul>{lis(vs)}</ul>'
+        rel_html = "".join(f'<a href="/discount-codes/{slugb(x)}">{e(x)} codes</a>' for x in related(b))
+        crumbs = [{"name": "Home", "url": C["BASE_URL"].rstrip("/") + "/"}, {"name": "Discount codes", "url": canon("discount-codes.html")}, {"name": f"{b} codes", "url": url}]
+        crumb_html = f'<nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="/discount-codes">Discount codes</a> › <span>{e(b)}</span></nav>'
+        if bc:
+            title = f"{b} discount codes & promo codes (verified {month})"
+            srcs = sorted({c["source"] for c in bc}, key=str.lower)
+            src_txt = srcs[0] if len(srcs) == 1 else ", ".join(srcs[:-1]) + " and " + srcs[-1]
+            n = len(bc); cw = "code" if n == 1 else "codes"
+            types = sorted({otype(c["discount"]) for c in bc})
+            listing = "; ".join(f'{c["code"]} ({c["discount"]}, {c["conditions"]})' for c in bc)
+            faq_pairs = [
+                (f"Is there a working {b} discount code?", f"As of {fmt(when)} we list {n} {b} {cw}: {listing}. {'It was' if n == 1 else 'Each was'} still shown on its source page when we last checked."),
+                (f"Where do these {b} codes come from?", f"They are published by {src_txt}. Each card links to the page where the code appears."),
+                (f"How current is this {b} code list?", f"Last checked {fmt(when)}. We re-check every code daily on the page that publishes it and remove codes that disappear. Codes can still expire or change without notice, so check your cart total before you pay."),
+                (f"Can I use more than one {b} code?", "Most brands allow one code per order, and sale prices often beat a code. Check your cart total before you pay."),
+            ]
+            intro = (f'<p class="meta">{n} {b} {cw} published by {e(src_txt)}. Last checked {fmt(when)}: each code below was still shown on its source page. '
+                     f'Offer {"type" if len(types) == 1 else "types"}: {e(", ".join(types).lower())}. We copy each code exactly as published and link to the page it came from.</p>')
+            def brand_card(c): return ccard(c).replace('<div class="cdisc">', f'<div class="ctype meta">{e(otype(c["discount"]))}</div><div class="cdisc">', 1)
+            main = (f'<div class="grid">{"".join(brand_card(c) for c in bc)}</div>'
+                    f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order. Check your cart total before you pay.</p>')
+            src_short = src_txt if len(srcs) <= 2 else f"{srcs[0]}, {srcs[1]} and {len(srcs) - 2} more"
+            desc = (f'{b} discount codes: {n} working {cw} ({", ".join(dict.fromkeys(c["discount"] for c in bc))}) from {src_short}, last checked {fmt(when)}. Tap to copy, then shop {b}.')
+            extra = [{"@type": "ItemList", "name": f"{b} discount codes", "numberOfItems": n, "itemListElement": [
+                        {"@type": "ListItem", "position": i, "item": {"@type": "Offer", "name": f'{b} code {c["code"]}: {c["discount"]}', "description": c["conditions"],
+                                                                      "url": c["shop_url"], "seller": {"@type": "Organization", "name": b}}}
+                        for i, c in enumerate(bc, 1)]}]
+            fresh = {"codes": [(c["code"], c["discount"], c["conditions"], c["source_url"], c.get("verified")) for c in bc]}
+        else:
+            month = datetime.date.fromisoformat(DC["updated"]).strftime("%b %Y")
+            title = f"{b} discount codes & promo codes (none working, {month})"
+            why = nc.get(b) or "The code we were tracking was no longer shown on its source page, so we removed it."
+            faq_pairs = [
+                (f"Is there a working {b} discount code?", f"Not in our list. As of {fmt(DC['updated'])} we list no working {b} code. {why}"),
+                (f"How can I save on {b} instead?", "Check our deals page for price drops, and our full discount code list for other brands."),
+            ]
+            intro = f'<p class="meta">We don\'t list a working {e(b)} code right now (list updated {fmt(DC["updated"])}). {e(why)} We won\'t post made-up or expired codes.</p>'
+            main = f'<p><a class="btn" href="../deals.html">See today\'s paddle deals →</a> <a class="btn" href="/discount-codes">All discount codes →</a></p>'
+            desc = f"No working {b} discount code as of {fmt(DC['updated'])}. Why, plus paddle deals and working codes for other pickleball brands."
+            extra = []
+            fresh = {"none": why}
+        faq_html = "<h2>Questions</h2>" + "".join(f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faq_pairs)
+        extra.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq_pairs]})
+        disc = f'<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. DropThePickle doesn\'t earn anything from these codes. <a href="../disclosure.html">Disclosure</a>.</p>' if bc else ""
+        body = (f'<h1>{e(b)} discount codes</h1>{intro}{disc}'
+                f'{crumb_html}{main}{gear}'
+                f'<h2>More ways to save</h2><p><a href="/discount-codes">All pickleball discount codes</a> · <a href="../deals.html">Paddle deals</a> · <a href="../price-tracker.html">Paddle Price Tracker</a></p>'
+                + (f'<h2>Related brands</h2><div class="codes-best">{rel_html}</div>' if rel_html else "") + faq_html + (copyjs if bc else ""))
+        page(fn, title, body, desc, fresh=fresh, schema=extra, crumbs=crumbs)
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
     emit_crawl_files()

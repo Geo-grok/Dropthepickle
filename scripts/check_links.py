@@ -17,7 +17,7 @@ for f in D.rglob("*.html"):
             target = (D / p.lstrip("/")) if p.startswith("/") else (f.parent / p).resolve()
             try: target.relative_to(D.resolve())
             except ValueError: bad.append((f.name,u)); continue
-            if not target.exists(): bad.append((f.name,u))
+            if not target.exists() and not target.with_name(target.name+".html").exists(): bad.append((f.name,u))  # Cloudflare assets serve /x as x.html
 print("internal broken:",bad)
 H={"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 def chk(u):
