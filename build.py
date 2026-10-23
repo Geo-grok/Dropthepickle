@@ -489,6 +489,7 @@ def build():
         em = f'<div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{e(v["video_id"])}" title="{e(v["title"])}" allowfullscreen></iframe></div>' if embed and v.get("video_id") else ""
         return f'<div class="card">{em}<h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta"><a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a> · {fmt(v["date"])}</div></div>'
     page("tournaments.html", "Tournaments", f'''<h1>Upcoming tournaments</h1><p class="meta">Pro events from the official <a href="https://www.ppatour.com/events/" target="_blank" rel="noopener">Carvana PPA Tour</a> event feed. Always confirm dates and sign up on the official page. Each card links to our event page, which only repeats fields from that feed.</p>
+<p>Going to Worlds? Read our <a href="events/ppa-worlds-2026.html">PPA Worlds 2026 guide</a> for dates, venue, parking and ticket prices.</p>
 <div class="grid">{"".join(tcard(t) for t in T["items"]) or "<p>No events right now.</p>"}</div>
 <h2>Find amateur tournaments near you</h2><p>These directories host signups for local and regional events (including West Texas). We link to them instead of copying their listings:</p>
 <ul><li><a href="https://pickleballtournaments.com/" target="_blank" rel="noopener">PickleballTournaments.com</a></li><li><a href="https://www.pickleballbrackets.com/" target="_blank" rel="noopener">PickleballBrackets.com</a></li><li><a href="https://usapickleball.org/" target="_blank" rel="noopener">USA Pickleball</a> (sanctioned events)</li></ul>''',
@@ -503,6 +504,8 @@ def build():
         if when or where: bits.append(f'<p>{when}{(" · " + where) if where else ""}</p>')
         if t.get("link"): bits.append(f'<p><a class="btn" href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a></p>')
         if t.get("tickets"): bits.append(f'<p><a href="{e(t["tickets"])}" target="_blank" rel="noopener">Tickets</a></p>')
+        if "World Championships" in t["name"] and (t.get("start") or "").startswith("2026"):
+            bits.append('<p><a href="ppa-worlds-2026.html">PPA Worlds 2026 guide: dates, venue, parking and ticket prices</a></p>')
         bits.append('<p><a href="../tournaments.html">All tournaments</a></p>')
         loc = t.get("location") or ""
         when_desc = " – ".join(t[k] for k in ("start", "end") if t.get(k))

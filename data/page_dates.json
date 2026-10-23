@@ -595,6 +595,10 @@
   "hash": "145e6fd2057216b739db4ab05e0ee9c9956fbe6412fa74ec1f92750a9229f233",
   "updated": null
  },
+ "events/ppa-worlds-2026.html": {
+  "hash": "258c0d86b34fe9df2a9496f0129bba219492735fce629449fd171066c234a975",
+  "updated": null
+ },
  "events/proton-daytona-beach-open.html": {
   "hash": "30d977f867605a8e3bd7511fa18fbc0a52651bbae30f3f1528055e6971c01adb",
   "updated": null
@@ -631,12 +635,20 @@
   "hash": "d6c17e48e21108c63cafa2726c6c8e9c0c19ba025e8c97bfe64d759e12be4e95",
   "updated": null
  },
+ "guides/pickleball-paddles-under-30.html": {
+  "hash": "12789f7bf6caa1fb64b30c221d7a71804240cccab1a447eace1f891f0d4287f1",
+  "updated": null
+ },
  "guides/pickleball-rules-cheat-sheet-2026.html": {
   "hash": "3bc3ba321d430d20c90dd7a8994dd307e2648d582c43e7c2345b04fbc5062f64",
   "updated": null
  },
  "guides/pickleball-rules-for-beginners.html": {
   "hash": "3cab259ac8e8915e6c99204c9eb01eef1a8f0bfcfa1460a74c24b847987ec71d",
+  "updated": null
+ },
+ "guides/six-zero-paddle-review.html": {
+  "hash": "7bd5a0f041348eb392faf60a3afbfe28d9bd45f306cd7b7efc39c958f0a8cae1",
   "updated": null
  },
  "index.html": {

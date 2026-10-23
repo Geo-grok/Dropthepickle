@@ -33,6 +33,8 @@ GUIDES = [
     ("guides/is-my-paddle-dead.html", "Is my paddle dead? Core crush signs"),
     ("guides/pickleball-rules-cheat-sheet-2026.html", "Pickleball rules cheat sheet 2026"),
     ("guides/how-to-read-dupr-ratings.html", "How to read DUPR ratings"),
+    ("guides/pickleball-paddles-under-30.html", "Pickleball paddles under $30"),
+    ("guides/six-zero-paddle-review.html", "Six Zero paddle lineup and prices"),
 ]
 RULES_CHANGES = "https://usapickleball.org/docs/rules/USAP-Rulebook-Change-Document.pdf"
 RULES_CHANGES_VIEW = "https://rules.usapickleball.org/view/rule-changes-view-all/"
@@ -67,7 +69,7 @@ def make(page, e, fmt, PP, cur, ph):
 
     def more(current):
         links = "".join(f'<li><a href="../{fn}">{e(title)}</a></li>' for fn, title in GUIDES if fn != current)
-        links += '<li><a href="../price-index.html">Paddle price index</a></li><li><a href="../tournaments.html">Pro events</a></li><li><a href="../creators/ryan-morneau.html">Ryan Morneau spotlight</a></li>'
+        links += '<li><a href="../price-index.html">Paddle price index</a></li><li><a href="../tournaments.html">Pro events</a></li><li><a href="../events/ppa-worlds-2026.html">PPA Worlds 2026 guide</a></li><li><a href="../creators/ryan-morneau.html">Ryan Morneau spotlight</a></li>'
         return f'<h2>Keep going</h2><ul>{links}</ul>'
 
     def embed(vid, title, short=True):
@@ -511,3 +513,193 @@ def make(page, e, fmt, PP, cur, ph):
          "How to read a DUPR rating: the 2.000 to 8.000 scale, the four factors in the calculation, the reliability score, and 2026 percentiles from DUPR and The Dink.",
          fresh={"pct": PCT, "dist": DIST_ROWS, "faq": dupr_faq},
          schema=[faq_ld])
+
+    # ----- Keyword pages, Oct 23, 2026 -----
+    # Every price, date and venue fact below was read on the linked page on CHECKED.
+    # Nothing here claims hands-on testing.
+    import json as _json, pathlib as _pl, datetime as _dt
+    CHECKED = "2026-10-23"
+    checked = _dt.date.fromisoformat(CHECKED).strftime("%B %-d, %Y")
+    ext = lambda u, t: f'<a href="{e(u)}" target="_blank" rel="noopener">{e(t)}</a>'
+
+    # ----- Paddles under $30 -----
+    SW_AMZ = "https://www.amazon.com/dp/B0GLYWT2VN"
+    SW_INV = "https://theinventory.com/smartway-pickleball-paddles-set-of-2-usapa-approved-fiberglass-rackets-56ce1dfb"
+    SW_INV_AUG = "https://theinventory.com/smartway-two-paddle-pickleball-set-deal"
+    usd_prices = sorted(cur(p) for p in usd)
+    cheapest = priced[0] if priced else None
+    u30_faq = [
+        ("Can you get a decent pickleball paddle for under $30?",
+         f"We found one listing we could confirm under $30 on {checked}: a Smartway set of 2 fiberglass paddles with 4 balls and a carry bag at $29.99 on Amazon, list price $36.99. That is a beginner set, not a performance paddle. We have not played with it."),
+        ("Is the Smartway 2-pack really $29.99?",
+         f"It was on {checked}, for the Frost Nova blue and white color on Amazon, sold by SMARTWAY SPORT and shipped by Amazon. The Inventory also reported it at $29.99, and at $29.96 on August 31, 2026. Amazon prices change often and can differ by color, so check the price before you buy."),
+        ("Why are there so few paddles on this page?",
+         "Because we only list prices we could confirm on the retailer's own page, with the date we checked. Plenty of cheap paddles exist, but we did not find other sub-$30 prices we could verify for this page."),
+        ("What is the cheapest paddle in the DropThePickle paddle list?",
+         (f"The cheapest US-dollar price in our paddle list is ${usd_prices[0]:,.2f}, so nothing in that list is under $30." if usd_prices else "Our paddle list has no US-dollar prices right now.")),
+    ]
+    u30_faq_html, u30_faq_ld = faq(u30_faq)
+    u30 = f'''<h1>Pickleball paddles under $30</h1>
+<p class="meta">Only prices we confirmed on the retailer's page, with the date. Checked {checked}. The evidence is thin: we confirmed one listing.</p>
+<h2>The short answer</h2>
+<p>Under $30 you are buying a <b>beginner set</b>, usually two fiberglass paddles with balls and a bag. On {checked} we could confirm one listing at that price on the retailer's own page. We have not played with it, and this is not a ranking.</p>
+<div class="tbl"><table><thead><tr><th>Listing</th><th>Price seen</th><th>What's included</th><th>Checked</th></tr></thead><tbody>
+<tr><th scope="row">{ext(SW_AMZ, "Smartway Pickleball Paddles Set of 2 (Amazon)")}</th><td>$29.99 (list $36.99), Frost Nova blue/white</td><td>2 fiberglass paddles, 4 balls, 1 carry bag</td><td>{checked}</td></tr>
+</tbody></table></div>
+<h2>What the listing says</h2>
+<ul>
+<li>Sold by SMARTWAY SPORT, ships from Amazon, 30-day returns.</li>
+<li>Fiberglass face and polypropylene honeycomb core, 16.53 x 7.67 inches, 4 1/4 inch grip.</li>
+<li>Weight: the listing says 8 oz in its bullet points and 7.5 oz in its spec table, so treat weight as approximate.</li>
+<li>Marketed as USAPA approved. Check the <a href="https://equipment.usapickleball.org/paddle-list/" target="_blank" rel="noopener">USA Pickleball approved paddle list</a> before using it in a sanctioned event.</li>
+<li>4.6 out of 5 stars from 29 ratings on Amazon on {checked}.</li>
+</ul>
+<p>The deal was reported by {ext(SW_INV, "The Inventory")} at $29.99. It also covered the same set at $29.96 on {ext(SW_INV_AUG, "August 31, 2026")}. Amazon prices move daily and can differ by color, so the price you see may not match.</p>
+<h2>Where the evidence is thin</h2>
+<p>One confirmed listing is not a market survey. We did not find other sub-$30 prices we could confirm on a retailer page for this update, so we left them out instead of guessing. {"Our own paddle list starts at $" + format(usd_prices[0], ",.2f") + " in US dollars" if usd_prices else "Our own paddle list has no US-dollar prices"}, so none of the paddles we track are under $30.</p>
+<p>If you can stretch your budget, the <a href="best-paddles-under-100.html">best paddles under $100</a> guide lists dated maker prices, and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a> explains what you give up at the low end.</p>
+{money_links()}
+{u30_faq_html}
+{sources([("Amazon: Smartway Pickleball Paddles Set of 2 (ASIN B0GLYWT2VN)", SW_AMZ, f"$29.99, list $36.99, checked {checked}"),
+          ("The Inventory: 2-Pack USAPA Pickleball Paddles Just $30 on Amazon", SW_INV, f"$29.99, seen {checked}"),
+          ("The Inventory: This $30 Two-Paddle Pickleball Set Is Perfect for Beginners", SW_INV_AUG, "$29.96, August 31, 2026"),
+          ("USA Pickleball approved paddle list", "https://equipment.usapickleball.org/paddle-list/", "")])}
+{more("guides/pickleball-paddles-under-30.html")}'''
+    page("guides/pickleball-paddles-under-30.html", "Pickleball paddles under $30: verified prices (Oct 2026)", u30,
+         f"Pickleball paddles under $30, with only retailer-confirmed prices: a Smartway 2-paddle set at $29.99 on Amazon, checked {checked}. What it includes and where the evidence is thin.",
+         fresh={"checked": CHECKED, "faq": u30_faq},
+         schema=[u30_faq_ld])
+
+    # ----- Six Zero lineup -----
+    SZ_US = "https://us.sixzeropickleball.com/collections/paddles"
+    SZ_LINEUP = [  # (model, US price as shown, note) from SZ_US on CHECKED
+        ("Coral 16mm", "$200.00", ""), ("Coral 16mm Lightweight", "$200.00", ""), ("Coral Pro 16mm", "from $220.00", ""),
+        ("Coral 'Rainbow' Edition 16mm", "$200.00", "edition"), ("Black Opal 14mm", "$220.00", ""),
+        ("Black Opal 14mm Elongated", "$180.00", ""), ("Black Opal 'Year of the Horse' Edition 14mm", "$220.00", "edition"),
+        ("Boulder Opal 14mm", "$220.00", ""), ("Ruby Pro 14mm", "$220.00", ""),
+        ("Ruby Pro 'Dick's Sporting Goods' Edition 14mm", "$225.00", "edition"),
+        ("Double Black Diamond \"Gold\" Limited Edition", "$180.00", "limited edition"),
+        ("Double Black Diamond Control", "no price shown", ""), ("Quartz", "out of stock", ""),
+    ]
+    sz_ours = [p for p in PP if p["brand"] == "Six Zero"]
+    try:
+        _dc = _json.loads((_pl.Path(__file__).parent / "data/discount-codes.json").read_text())
+        sz_codes = [c for c in _dc.get("codes", []) if c.get("brand") == "Six Zero"]
+    except Exception:
+        sz_codes = []
+    sz_last = max((c.get("verified") or "" for c in sz_codes), default="")
+    sz_code_line = (f"Our code tracker lists {len(sz_codes)} Six Zero code{'s' if len(sz_codes) != 1 else ''}, last checked {fmt(sz_last)}."
+                    if sz_codes else "Our code tracker has no working Six Zero code right now.")
+    def sz_row(p):
+        pr = money(p) if p.get("price") else "not listed"
+        return (f'<tr><th scope="row">{alink(p, p["model"])}</th><td>{e(p["core"]) or "not published"}</td>'
+                f'<td>{e(p["weight"]) or "not published"}</td><td>{e(p["shape"]) or "not published"}</td><td>{e(pr)}</td></tr>')
+    lineup_rows = "".join(f'<tr><th scope="row">{e(m)}</th><td>{e(pr)}</td><td>{e(n)}</td></tr>' for m, pr, n in SZ_LINEUP)
+    sz_faq = [
+        ("Did DropThePickle test Six Zero paddles?",
+         "No. This page is a lineup overview built from Six Zero's own US site and the specs in our paddle list. We have not playtested these paddles, so there are no performance scores here."),
+        ("How much do Six Zero paddles cost?",
+         f"On Six Zero's US site on {checked}, regular models were listed from $180.00 to $220.00, and a Dick's Sporting Goods edition of the Ruby Pro was $225.00. Prices can change."),
+        ("Which Six Zero paddles come in 14mm and 16mm?",
+         "On the US site, the Black Opal, Boulder Opal and Ruby Pro models are listed as 14mm, and the Coral models as 16mm."),
+        ("Is there a Six Zero discount code?", sz_code_line + " Codes are on our discount codes page with the date each was checked."),
+    ]
+    sz_faq_html, sz_faq_ld = faq(sz_faq)
+    sz = f'''<h1>Six Zero paddle review: the 2026 lineup, specs and prices</h1>
+<p class="meta">A lineup overview from Six Zero's US site and our paddle data, checked {checked}. Not a hands-on review: we have not playtested these paddles.</p>
+<h2>What this page is</h2>
+<p>People searching for a Six Zero paddle review usually want to know which models exist, how they differ, and what they cost. This page answers that from the maker's own listings. For opinions on how they play, watch the independent reviewers in our <a href="../reviews.html">paddle review roundup</a>.</p>
+<h2>The US lineup on {checked}</h2>
+<p>Prices as shown on {ext(SZ_US, "Six Zero's US paddle page")}, in US dollars.</p>
+<div class="tbl"><table><thead><tr><th>Model</th><th>US price shown</th><th>Note</th></tr></thead><tbody>{lineup_rows}</tbody></table></div>
+<p>The names carry the core thickness: the Coral models are 16mm, and the Black Opal, Boulder Opal and Ruby Pro are 14mm. Thicker cores are usually softer and more controlled, thinner cores more poppy; see <a href="paddle-weight-and-core.html">paddle weight and core</a>.</p>
+<h2>What Six Zero says about its build</h2>
+<ul>
+<li>Six Zero says its paddles use its own Carbon Fusion Edge Technology: foam injection, then a lightweight carbon seam that fuses the top and bottom faces.</li>
+<li>It describes the Ruby as having a 100% aramid fiber face with a textured 3K weave surface.</li>
+<li>It offers a 12-month structural warranty.</li>
+</ul>
+<p>Those are the maker's claims, not our measurements.</p>
+<h2>Specs in our paddle list</h2>
+<p>These four Six Zero paddles are in our paddle list, with specs and prices from Six Zero's Australian site, so the prices are in Australian dollars.</p>
+<div class="tbl"><table><thead><tr><th>Paddle</th><th>Core</th><th>Weight</th><th>Shape</th><th>Price</th></tr></thead><tbody>{"".join(sz_row(p) for p in sz_ours)}</tbody></table></div>
+<p>Compare them with other brands on <a href="../best-six-zero-paddles.html">best Six Zero paddles</a> or the <a href="../compare.html">compare page</a>.</p>
+<h2>Codes and deals</h2>
+<p>{e(sz_code_line)} See the <a href="../discount-codes.html">discount codes page</a> and today's <a href="../deals.html">paddle deals</a>.</p>
+{sz_faq_html}
+{sources([("Six Zero US: Pickleball Paddles", SZ_US, f"prices and model names, checked {checked}")] +
+         [(f"Six Zero: {p['model']}", p["source_url"], "AUD specs in our paddle list") for p in sz_ours])}
+{more("guides/six-zero-paddle-review.html")}'''
+    page("guides/six-zero-paddle-review.html", "Six Zero paddle review 2026: lineup, specs and prices", sz,
+         f"Six Zero paddle lineup for 2026: every model on Six Zero's US site with prices ($180 to $225) checked {checked}, specs from our paddle list, and Six Zero codes. Not a hands-on test.",
+         fresh={"checked": CHECKED, "lineup": SZ_LINEUP, "ours": [(p["model"], p.get("price"), p["currency"]) for p in sz_ours], "codes": len(sz_codes), "faq": sz_faq},
+         schema=[sz_faq_ld])
+
+    # ----- PPA Worlds 2026 -----
+    PPA_EV = "https://www.ppatour.com/events/2026/pickleball-world-championships/"
+    PPA_TODAY = "https://www.ppatour.com/events/2026/pickleball-world-championships/today/"
+    UP_HOME = "https://worlds.unitedpickleball.com/"
+    UP_SCHED = "https://worlds.unitedpickleball.com/schedule"
+    UP_TIX = "https://worlds.unitedpickleball.com/tickets"
+    FB_CITY = "https://discoverfarmersbranch.com/pickleball/"
+    WEEK = [("Fri Oct 30 – Sun Nov 1", "MLP Nations Cup, the official kickoff (eight international teams)", ""),
+            ("Mon Nov 2", "PPA pro qualifying", "11:00 AM"), ("Tue Nov 3", "Main draw, round of 64", "11:00 AM"),
+            ("Wed Nov 4", "Main draw, round of 32", "11:00 AM"), ("Thu Nov 5", "Main draw, round of 16", "11:00 AM"),
+            ("Fri Nov 6", "Quarterfinals", "11:00 AM"), ("Sat Nov 7", "Semifinals", "11:00 AM"),
+            ("Sun Nov 8", "Championship Sunday, finals", "10:00 AM")]
+    TIX = [("Grounds Pass (any day)", "$30.42"), ("Courtside Bleacher", "$46.66 – $92.03"), ("Courtside Chair", "$113.69 – $221.99"),
+           ("VIP", "$276.13 – $438.58"), ("Box Suite (daily)", "$3,254.23 – $9,751.90"), ("Weeklong Grounds Pass", "$113.69"),
+           ("MLP Nations Cup courtside", "$25.00 – $35.83"), ("MLP Nations Cup 3-day courtside", "$70.37")]
+    week_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(t) or "see schedule"}</td></tr>' for d, w, t in WEEK)
+    tix_rows = "".join(f'<tr><th scope="row">{e(k)}</th><td>{e(v)}</td></tr>' for k, v in TIX)
+    w_faq = [
+        ("When is PPA Worlds 2026?",
+         "The PPA Tour event, the Opendoor Pickleball World Championships, runs November 2 to 8, 2026. The wider Worlds week starts October 30 with the MLP Nations Cup, so United Pickleball lists Worlds as October 30 to November 8."),
+        ("Is PPA Worlds 2026 in Brookhaven or Farmers Branch?",
+         "Both are correct. The venue is Brookhaven Country Club, 3333 Golfing Green Drive, and it is in the city of Farmers Branch, Texas, in the Dallas area. Brookhaven is the club, not a separate city."),
+        ("How much are PPA Worlds 2026 tickets?",
+         "United Pickleball's ticket page, using Tixr data from October 11, 2026, lists a Grounds Pass at $30.42 any day, courtside bleachers from $46.66 to $92.03, and a weeklong grounds pass at $113.69, fees included. Tickets are sold on Tixr and prices change by day and demand."),
+        ("Where do I park for PPA Worlds 2026?",
+         "The PPA says all general parking is at Dallas College Brookhaven Campus, Lot P3, 3939 Valley View Lane, with free shuttles to the venue from October 30 to November 8. Overnight and RV parking is not allowed."),
+    ]
+    w_faq_html, w_faq_ld = faq(w_faq)
+    w_event = {"@type": "SportsEvent", "name": "Opendoor Pickleball World Championships 2026", "startDate": "2026-11-02", "endDate": "2026-11-08",
+               "url": PPA_EV, "organizer": {"@type": "Organization", "name": "Carvana PPA Tour"},
+               "location": {"@type": "Place", "name": "Brookhaven Country Club",
+                            "address": {"@type": "PostalAddress", "streetAddress": "3333 Golfing Green Dr", "addressLocality": "Farmers Branch",
+                                        "addressRegion": "TX", "postalCode": "75234", "addressCountry": "US"}},
+               "offers": {"@type": "Offer", "url": UP_TIX}}
+    worlds = f'''<h1>PPA Worlds 2026: dates, venue and tickets</h1>
+<p class="meta">The Opendoor Pickleball World Championships, from the official PPA Tour and United Pickleball pages. Checked {checked}. Confirm on the official pages before you travel.</p>
+<h2>Dates</h2>
+<p>The {ext(PPA_EV, "PPA Tour event page")} lists the <b>Opendoor Pickleball World Championships</b> for <b>November 2 to 8, 2026</b>. It is a PPA Major worth 3,000 ranking points, with a listed total payout of $1,648,641.</p>
+<p>The reported <b>October 30 to November 8</b> dates are for the whole Worlds week. {ext(UP_SCHED, "United Pickleball's schedule")} starts the week with the <b>MLP Nations Cup</b> on October 30 to November 1, the official kickoff, at the same venue. The PPA pro event itself starts November 2.</p>
+<div class="tbl"><table><thead><tr><th>Day</th><th>What's on</th><th>First serve</th></tr></thead><tbody>{week_rows}</tbody></table></div>
+<p>First-serve times are from the PPA's {ext(PPA_TODAY, "at the event page")}. Gate times had not been posted on {checked}.</p>
+<h2>Venue: Brookhaven Country Club, Farmers Branch</h2>
+<p>Both names are right. The venue is <b>Brookhaven Country Club</b>, 3333 Golfing Green Dr, <b>Farmers Branch, TX 75234</b>, in the Dallas area. Brookhaven is the club. Farmers Branch is the city. The PPA and the {ext(FB_CITY, "City of Farmers Branch")} both give that address.</p>
+<h2>Parking and getting there</h2>
+<ul>
+<li>All general parking is at <b>Dallas College Brookhaven Campus, Lot P3</b>, 3939 Valley View Lane, Farmers Branch, TX 75244. Free shuttles run to the venue from October 30 to November 8, about 6:30 AM to 11:00 PM.</li>
+<li>Rideshare pickup and drop-off is on Brookhaven Drive, just past Golfing Green Drive.</li>
+<li>Box Suite ticket holders get on-site parking. Overnight and RV parking is not allowed.</li>
+<li>The city has a resident-only parking permit rule on streets near the club from October 30 to November 8.</li>
+</ul>
+<h2>Tickets</h2>
+<p>Tickets are sold through Tixr. {ext(UP_TIX, "United Pickleball's ticket page")} lists these prices, including fees, using Tixr data from October 11, 2026. Prices vary by day and demand.</p>
+<div class="tbl"><table><thead><tr><th>Ticket</th><th>Price listed</th></tr></thead><tbody>{tix_rows}</tbody></table></div>
+<p>On that page, the weeklong courtside, chair, VIP and box suite passes were marked sold out. Our <a href="opendoor-pickleball-world-championships.html">event card</a> links to the official Tixr page.</p>
+<h2>Gear before you go</h2>
+{money_links()}
+{w_faq_html}
+{sources([("PPA Tour: Opendoor Pickleball World Championships 2026", PPA_EV, f"dates, payout, points, checked {checked}"),
+          ("PPA Tour: At the event", PPA_TODAY, f"schedule, address, parking, checked {checked}"),
+          ("United Pickleball: Pickleball Worlds 2026", UP_HOME, f"checked {checked}"),
+          ("United Pickleball: Week schedule", UP_SCHED, "October 30 to November 8"),
+          ("United Pickleball: Tickets", UP_TIX, "Tixr data from October 11, 2026"),
+          ("City of Farmers Branch: Pickleball", FB_CITY, "venue address, neighborhood parking")])}
+<p><a href="../tournaments.html">All tournaments</a></p>'''
+    page("events/ppa-worlds-2026.html", "PPA Worlds 2026: dates, venue and tickets (Farmers Branch, TX)", worlds,
+         "PPA Worlds 2026: the Opendoor Pickleball World Championships run Nov 2 to 8 at Brookhaven Country Club, Farmers Branch, TX, after the Oct 30 MLP Nations Cup kickoff. Schedule, parking and ticket prices.",
+         fresh={"checked": CHECKED, "week": WEEK, "tix": TIX, "faq": w_faq},
+         schema=[w_event, w_faq_ld])
