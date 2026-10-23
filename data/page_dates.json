@@ -16,7 +16,7 @@
   "updated": "2026-10-21"
  },
  "best-16mm-paddles.html": {
-  "hash": "1df180467debc6d4c585faa81010684ae1f0520090a281f4d90a6b9ea782e557",
+  "hash": "0c74181e485e8860ae1fa80d65a26d30d36a8f9957913a316ff84ccab1d6ec63",
   "updated": "2026-10-23"
  },
  "best-crbn-paddles.html": {
@@ -24,7 +24,7 @@
   "updated": null
  },
  "best-elongated-paddles.html": {
-  "hash": "9a5d01669b745d8cc1c0763bf2caee8030e5530fd043e7b1304d629af8ec293f",
+  "hash": "2c90122ae9991165d4930f07322768e8d6b00b48ad72f27d4383f180fe3a8869",
   "updated": "2026-10-23"
  },
  "best-engage-paddles.html": {
@@ -44,11 +44,11 @@
   "updated": "2026-10-23"
  },
  "best-paddles-for-beginners.html": {
-  "hash": "21cb4f0eb47f9868115f4f58c39c701742069fc5484c7e7aba69982be78dd355",
+  "hash": "9c2398a98b79db24b100d366b8c0469cc1891e7ef09c2b99cfa7f7fde4527a07",
   "updated": "2026-10-23"
  },
  "best-paddles-for-control.html": {
-  "hash": "97790d07b8b2ba22072fc3d5c79a9799a4342275a9a05f05e1985b2d59780393",
+  "hash": "24ce9cbb6223b52dfb30944c878864c46b60bac7592a1f6f72d4e5f0cde98bff",
   "updated": "2026-10-23"
  },
  "best-paddles-for-power.html": {
@@ -56,11 +56,11 @@
   "updated": "2026-10-23"
  },
  "best-paddles-for-tennis-players.html": {
-  "hash": "8498a7225d6ac89bbad6d304bd17e6a1b7c80c53576dd616436dbb1998076534",
+  "hash": "07369679d654181cf8f7e9ef35b9762e8eea00e0f702358a25040a0e0882cb01",
   "updated": "2026-10-23"
  },
  "best-paddles-under-100.html": {
-  "hash": "6b41075a398543ea8c1a64ec2b5f6c6c860d49e47ed997b0432f032022dec271",
+  "hash": "59cbb2a0a685bbec16f25ce361eba6ae4e5b026b6725376e5f821645573497b4",
   "updated": "2026-10-23"
  },
  "best-paddletek-paddles.html": {
@@ -80,8 +80,8 @@
   "updated": "2026-10-23"
  },
  "compare.html": {
-  "hash": "826bd780ec596ed8fad017d5bafcd15efa17290ebc3150264b68c1a69b86e082",
-  "updated": "2026-10-15"
+  "hash": "ebb3d839ec2c239441d4632f6efd85839d3306e1393a12128371ce2a02672762",
+  "updated": "2026-10-23"
  },
  "creators.html": {
   "hash": "c106112f00fab25ba8b18c181655e51bcb652fc05373e321ab8c2b9cedf62d5f",
@@ -92,7 +92,7 @@
   "updated": null
  },
  "deals.html": {
-  "hash": "662fd4b467485236f99324433face988c1f938d018aaf47f31e87212fb43405e",
+  "hash": "195b154acb947deabdb08fe7ce87ffc176424831c0382356e0e88ef6923dfb4e",
   "updated": "2026-10-23"
  },
  "discount-codes.html": {
@@ -612,11 +612,11 @@
   "updated": null
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "ffbd82e9de7990a7d0a3e8151112484dd3ae3613576c1ed2387e6a3e1e4f713f",
+  "hash": "e3dac80ade9021bbccee0c1377f23c358b56811bd96bf5c04132e487b898e37d",
   "updated": "2026-10-23"
  },
  "guides/how-to-choose-a-paddle.html": {
-  "hash": "f47f30fd8fad23687caacff90d818bd6ef42571fb403f67b45588c23b932d4a2",
+  "hash": "8704b8ef0ca137ad600dcbc451caed63816b91d1533f4c82e710011e94946fe9",
   "updated": "2026-10-23"
  },
  "guides/how-to-dink.html": {
@@ -636,8 +636,8 @@
   "updated": null
  },
  "guides/pickleball-paddles-under-30.html": {
-  "hash": "12789f7bf6caa1fb64b30c221d7a71804240cccab1a447eace1f891f0d4287f1",
-  "updated": null
+  "hash": "b1e22d107d307a904ebb3e227d41e67362809be3d6e1c3a99172015696c336e9",
+  "updated": "2026-10-23"
  },
  "guides/pickleball-rules-cheat-sheet-2026.html": {
   "hash": "3bc3ba321d430d20c90dd7a8994dd307e2648d582c43e7c2345b04fbc5062f64",
@@ -652,7 +652,7 @@
   "updated": null
  },
  "index.html": {
-  "hash": "496fa3c64ff1f2b2717daadd6ace89ca0cbe3123a02d7c7b5e7237391c1ec52d",
+  "hash": "1ec22968fcffdde23c698faed4ad3fa671af3202bd6b197ebb3552a499286f25",
   "updated": "2026-10-23"
  },
  "news.html": {
@@ -744,7 +744,7 @@
   "updated": null
  },
  "paddle-quiz.html": {
-  "hash": "b833069c39408ed6eaced4758eb6e2eb2b04508478a38a2a454f0620a33bebb5",
+  "hash": "3eb324b960f3c277f2546cd2a606fffa009d6763a1f9b95714b52dd7e7ea9912",
   "updated": "2026-10-23"
  },
  "paddle-selkirk-labs-project-boomstik.html": {
@@ -783,8 +783,52 @@
   "hash": "507c205405cca51a1dd38c0e3c02bdd5fd72f1e0df9e08ccea67df73601e8e48",
   "updated": null
  },
+ "paddle-volair-cmd-el-16mm.html": {
+  "hash": "778829094f590b2ef4a5468b3f481576ea1135a536dbf00f392cb4b07b29f5cb",
+  "updated": null
+ },
+ "paddle-volair-cmd-hyb-16mm-dylan-frazier.html": {
+  "hash": "01e825c5892ba5f653885dc930734ee104893fa2a9efc0138a38c9dea7fba691",
+  "updated": null
+ },
+ "paddle-volair-cmd-wb-16mm.html": {
+  "hash": "c710567464b9fd676ebad678a858de7b5b1a2b78bc4cd53191480988a6c9938f",
+  "updated": null
+ },
+ "paddle-volair-ctrl-1-forza.html": {
+  "hash": "46ab5456f637800ff86432e7be35c879af6edd83365252e8b49f9310a138c008",
+  "updated": null
+ },
+ "paddle-volair-ctrl-2-forza.html": {
+  "hash": "90a3bfbb09b71e4a69c7e410afc66e45a25dc98bfbaaf73fdbbfb86cd55cf0ea",
+  "updated": null
+ },
+ "paddle-volair-mach-1-forza.html": {
+  "hash": "5253aba1713d836a8526677fbe756754f80b5fccd7698063d7f7ac219fe4483a",
+  "updated": null
+ },
+ "paddle-volair-mach-2-forza.html": {
+  "hash": "4dca5b4566c52f7c29a326c951eeae7f56330783906c5ebed992586e8e212aa8",
+  "updated": null
+ },
+ "paddle-volair-mach-2.html": {
+  "hash": "8464d5437339c8be373508355b731195cc4da409ad9f9a048f976f5b0018915f",
+  "updated": null
+ },
+ "paddle-volair-pro-1.html": {
+  "hash": "668739267007240bf244d251fb8b6e159df1123d5bffa690418879a4eadd1da6",
+  "updated": null
+ },
+ "paddle-volair-pro-2.html": {
+  "hash": "3a8ff18529d74c91827da93cae1ec8395f3ab1c5f6275a24385a123efbe01744",
+  "updated": null
+ },
+ "paddle-volair-v-1f-xl-w-16mm.html": {
+  "hash": "65d202d4b5bdd5bf25489e5d2d9352589ffd8eb53f0e54c542bb8b51a5150174",
+  "updated": null
+ },
  "paddles.html": {
-  "hash": "d19539572c9ace9488fff74dd06f5154906d77d643ace88fc259df96b3089f00",
+  "hash": "908b4a304839fd7658f0d179023d82672a983cf1bc1e40e38bbd826607de2aec",
   "updated": "2026-10-23"
  },
  "podcasts.html": {
@@ -792,12 +836,12 @@
   "updated": null
  },
  "price-index.html": {
-  "hash": "323b7810c9a2431d5f28261cd52c8a8099855d347d996ed7e7a9b34c94fb56c3",
+  "hash": "2fdc72a97183eecfc0ddf1dee275cbbcf041a09fd42a939c245cf8ada21394b7",
   "updated": "2026-10-23"
  },
  "price-tracker.html": {
-  "hash": "242b882f18862d70614ba20ad7d1ad4252c5b8cd7cccc82028cef8d3c79ec4de",
-  "updated": null
+  "hash": "c6a2f07f82569fee8e6bf1b30c8b25b7167f45b98b1577a4722427e7e7eafb02",
+  "updated": "2026-10-23"
  },
  "privacy.html": {
   "hash": "476c2da24522f4949cdaa422935b31e375f1b6fa3d61909fbdec502765955355",
@@ -847,56 +891,12 @@
   "hash": "c7208daf16c3346674f28b166154dcf29b76105f7beb7143ccb33b9e5c3b6a01",
   "updated": null
  },
- "vs-crbn-crbn3-trufoam-waves-vs-engage-axiom-elongated-durable-grit.html": {
-  "hash": "3c4df619909352ec48af27387c0715021ca117140874c6a773d9ca6468e3834f",
-  "updated": null
- },
- "vs-crbn-crbn3-trufoam-waves-vs-gearbox-gbx-power-elongated-gen-3.html": {
-  "hash": "5f98dbc419c53fdbb709f503efc5c05e297a73b2f5e03232d799b4dacf473851",
-  "updated": "2026-10-23"
- },
- "vs-crbn-crbn3-trufoam-waves-vs-joola-hyperion-pro-v.html": {
-  "hash": "805ce0d0b46b62e056770f9e04b277fe9f599feb6e7fb90d7014d45999ac0533",
-  "updated": null
- },
- "vs-crbn-crbn3-trufoam-waves-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "87e0402e0b32aac491ba1ef5762230c804d27b917d7ba9a3069a96599fa4d172",
-  "updated": null
- },
- "vs-crbn-crbn3-trufoam-waves-vs-selkirk-labs-project-boomstik.html": {
-  "hash": "106fa01a5fb3ccbbe783bc754db0736c3a6d3970acf98603c3ebf6d7b575e062",
-  "updated": null
- },
- "vs-crbn-crbn3-trufoam-waves-vs-six-zero-coral-16mm.html": {
-  "hash": "d8fea0830bb94c1bd89c76128f91a31623987147345b5000dffe67a91f283981",
-  "updated": null
- },
  "vs-engage-axiom-elongated-durable-grit-vs-engage-pursuit-pro2-elongated-16mm.html": {
   "hash": "4ae9d3fdb8fd283d6f936854151bad885d75f02af86f43178c51b7e8d3637c62",
   "updated": null
  },
  "vs-engage-axiom-elongated-durable-grit-vs-engage-x2-elongated.html": {
   "hash": "303ea38f1d022a0cb2d8e3906bd4c4b918cabfebfc19d2781f1c99f4ae56bc1f",
-  "updated": null
- },
- "vs-engage-axiom-elongated-durable-grit-vs-gearbox-gbx-power-elongated-gen-3.html": {
-  "hash": "6eb2af6ea16a938664345eab701b0334a72697b5fccb33d7f87e7376a64e9bc8",
-  "updated": "2026-10-23"
- },
- "vs-engage-axiom-elongated-durable-grit-vs-joola-hyperion-pro-v.html": {
-  "hash": "0f2150de4028e9b07fe019f3a07d424cb0cc321ebda4f280208bbbe675a2d763",
-  "updated": null
- },
- "vs-engage-axiom-elongated-durable-grit-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "d540532a951c187d0405a7771b6dad5a1fc1917846a57431a27d6d0f0fed94bb",
-  "updated": null
- },
- "vs-engage-axiom-elongated-durable-grit-vs-selkirk-labs-project-boomstik.html": {
-  "hash": "987143586773104cf8c5cab8617edec91ad45bc6eebb6ad01041d2c2dc952305",
-  "updated": null
- },
- "vs-engage-axiom-elongated-durable-grit-vs-six-zero-coral-16mm.html": {
-  "hash": "7b2bc33944c58d6d0562e33dee0b3585b46e539fc572ee7ea72bc05db57abc5e",
   "updated": null
  },
  "vs-engage-pursuit-pro2-elongated-16mm-vs-engage-x2-elongated.html": {
@@ -909,22 +909,6 @@
  },
  "vs-gearbox-gbx-power-elongated-gen-3-vs-gearbox-pressure-x-8e.html": {
   "hash": "ccb07e13c512d8cedf9520085c6746b42e3a2a6b6d91ce3d0e613951ba65871c",
-  "updated": "2026-10-23"
- },
- "vs-gearbox-gbx-power-elongated-gen-3-vs-joola-hyperion-pro-v.html": {
-  "hash": "68b70a5210b74a35217ea37f758792e1c2881db87584ff80e94710f1411db73b",
-  "updated": "2026-10-23"
- },
- "vs-gearbox-gbx-power-elongated-gen-3-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "42050753f3ccd786600325223da620ffc7670f53411396ab61e25340d9b5b82a",
-  "updated": "2026-10-23"
- },
- "vs-gearbox-gbx-power-elongated-gen-3-vs-selkirk-labs-project-boomstik.html": {
-  "hash": "4c03319bae32073fe82c88d7e182ffae958c533d34127c808fda4eaaf913f283",
-  "updated": "2026-10-23"
- },
- "vs-gearbox-gbx-power-elongated-gen-3-vs-six-zero-coral-16mm.html": {
-  "hash": "f39db0eacdad6e8319ed444a5fd134cfcad148e0d97d625d42689aaf0a064b72",
   "updated": "2026-10-23"
  },
  "vs-gearbox-gx2-power-hybrid-vs-gearbox-pressure-x-8e.html": {
@@ -949,18 +933,6 @@
  },
  "vs-joola-hyperion-pro-v-vs-joola-scorpeus-pro-v.html": {
   "hash": "e7a910898fa7d2a974bb1646365cf7ab47b0e47b2ecda32774382ad993808ef4",
-  "updated": null
- },
- "vs-joola-hyperion-pro-v-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "a81d3cba17f939405e99cee99714b030d3a79f05b7824db81d9669073f8dc2b0",
-  "updated": null
- },
- "vs-joola-hyperion-pro-v-vs-selkirk-labs-project-boomstik.html": {
-  "hash": "1d0ced57ec1c4a33c0142fa6349618c4a1b35de98f6506520982628e2c08589b",
-  "updated": null
- },
- "vs-joola-hyperion-pro-v-vs-six-zero-coral-16mm.html": {
-  "hash": "0716b65bb6e4d1cf2e3ee30915a24f15fd669a6db585369c0ac9d10347bff8e0",
   "updated": null
  },
  "vs-joola-kosmos-pro-v-vs-joola-perseus-3s-dual-16mm.html": {
@@ -1019,14 +991,6 @@
   "hash": "7e0517b12f690ea4a9bf05731a4922267949b785a5d4fde1bb804b91e8b8d7d3",
   "updated": null
  },
- "vs-paddletek-honeyfoam-tko-x-vs-selkirk-labs-project-boomstik.html": {
-  "hash": "fe3d28e45dd545d61c892d5661992a34ff0ee35457c1e13d36fe3dde462d36a7",
-  "updated": null
- },
- "vs-paddletek-honeyfoam-tko-x-vs-six-zero-coral-16mm.html": {
-  "hash": "c0e6f8e1039f31eba406593fd7c5535b74efbe5a8335a1cc6cfc8378c7961ba1",
-  "updated": null
- },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-luxx-control-air-infinigrit.html": {
   "hash": "4860204d92a19acc6d6d9225b758a26a815cbaa25e5599ee45bb74332bf1397c",
   "updated": null
@@ -1041,10 +1005,6 @@
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-slk-halo-power.html": {
   "hash": "17ad22e54fef041ce35c36cab2bf0b92ebd50fbac9e8dfb9cf1b4c380f54d947",
-  "updated": null
- },
- "vs-selkirk-labs-project-boomstik-vs-six-zero-coral-16mm.html": {
-  "hash": "a190722f52404c5b8fc970bd2cea9c294ad1d2f720f62c63ab9d4bb24e134135",
   "updated": null
  },
  "vs-selkirk-luxx-control-air-infinigrit-vs-selkirk-omni.html": {
@@ -1093,6 +1053,98 @@
  },
  "vs-six-zero-double-black-diamond-control-vs-six-zero-ruby.html": {
   "hash": "b1ddf7bd4d9d7c4dea0462ab94f86692dde16a4a0a77ed151fbc082f74bd2c61",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-cmd-hyb-16mm-dylan-frazier.html": {
+  "hash": "6908919ba57b1874660537c91f87666843b4580dfe9cc118107983804e789e50",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-cmd-wb-16mm.html": {
+  "hash": "2893958177dd9d3f3d277b09f7a3dc8ff4db84d27f0ee95fb8bc677add14c515",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-ctrl-1-forza.html": {
+  "hash": "c911dbfa7d731c796bcd74f129e15215a6c3d9c41d88018e5c1f6deb06fa31eb",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-ctrl-2-forza.html": {
+  "hash": "0d888a2dc6df244267c75d2cf0a3c5ccd8636c1f196fccb43808e99989d31dad",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-mach-1-forza.html": {
+  "hash": "6e2528e019a7e0c8b0a9a080e30a05c81a0e8d8d80debe6f0f82041faef69cc2",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-mach-2-forza.html": {
+  "hash": "e805b272ae332043000388d0815ca540fdd78c2b13a2439796653bb516204c1a",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-mach-2.html": {
+  "hash": "66698a840b83be0392b4da4ac34e9979f7a8c0ab91e37202b0067c1ce7e7fe35",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-pro-1.html": {
+  "hash": "a96c2839760248e95a16d50e1e24ec675060f28cdc9029c612f73dd6dad73d08",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-pro-2.html": {
+  "hash": "ee8cab5e2f30637fbf31d45f463f1848ecb94feca0fa10b63342cc7ce06d2092",
+  "updated": null
+ },
+ "vs-volair-cmd-el-16mm-vs-volair-v-1f-xl-w-16mm.html": {
+  "hash": "4ee363174c478a82f30aa67a0dc075757a6916fd4b5f1cc7084309d623404d1a",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-cmd-wb-16mm.html": {
+  "hash": "c1e278ea65f0634c98a0bd132b7fac21ff99ab08e526ce8dfca7ab53a9eb01bb",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-1-forza.html": {
+  "hash": "53b8853871a11c50bc02cbcbebae94cdbf3c9f1bd0ba965469215920e480ceab",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-2-forza.html": {
+  "hash": "bbb0fc35ffc5236312c02f1be02d0d25209ffbd4e686bb62808290134ea3f71a",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-1-forza.html": {
+  "hash": "c13713ef91e99c0340e9cec7417b15bb671b4abb00430373eabf94ac6ca4576e",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2-forza.html": {
+  "hash": "ef50749518be645bc537a3a479770908f24e1c9b8923ccdf0f89ccfc69d567b3",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2.html": {
+  "hash": "0367958836f8d57b641b9926cec91cc1d3fc73e6019ac9a2883a873eca958f24",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-pro-1.html": {
+  "hash": "38a49a4654eb19a01741e8e81ed27ecdcdcaac97a1a4c0e1419c87f8fd7560be",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-pro-2.html": {
+  "hash": "406d2ed46956ef87849f72163131af8740c76204c9e244ed56b91d209aaf694b",
+  "updated": null
+ },
+ "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-v-1f-xl-w-16mm.html": {
+  "hash": "eba0a52af66744bd3d83fe71883052c6d899384b5aaa6dd3bef81d527f742905",
+  "updated": null
+ },
+ "vs-volair-cmd-wb-16mm-vs-volair-ctrl-1-forza.html": {
+  "hash": "40b08c98775bf2ba04236e5a31b3cdfcf12189e72b85c2a14bf5e100169d5eb0",
+  "updated": null
+ },
+ "vs-volair-cmd-wb-16mm-vs-volair-ctrl-2-forza.html": {
+  "hash": "5613cb3deeb80caa46c02f2d720a6d1a814717d9f82a2109f226e6b8351db2d8",
+  "updated": null
+ },
+ "vs-volair-cmd-wb-16mm-vs-volair-mach-1-forza.html": {
+  "hash": "78b820c929f4b1e8d10684c13f3023cb71a3ebc7820d1bbe2db9f64c3a7e1d31",
+  "updated": null
+ },
+ "vs-volair-cmd-wb-16mm-vs-volair-mach-2.html": {
+  "hash": "69eaf8ce8af758cfbca6e338c0e19af95f23f5c1253601b41f666baab9aa426f",
   "updated": null
  }
 }

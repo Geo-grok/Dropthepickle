@@ -81,7 +81,8 @@ def badge(ph, p=None):
 def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     X = X or {}
     import own_codes; OWN = own_codes.own_codes(C)  # our own affiliate codes (config.json OWN_CODES)
-    def owncall(p, js=True): return own_codes.callout(e, OWN[p["brand"]], js=js) if p["brand"] in OWN else ""
+    NOAPPLY = "Volair doesn't tag this paddle as included in its discounts, so the code may not apply to it. Check the total before you pay."
+    def owncall(p, js=True): return own_codes.callout(e, OWN[p["brand"]], js=js, note=NOAPPLY if p.get("code_excluded") else "") if p["brand"] in OWN else ""
     H = D("price_history.json").get("paddles", {})
     ph = lambda p: H.get(f'{p["brand"]} {p["model"]}', {})
     cur = lambda p: ph(p).get("current", p["price"])
@@ -132,7 +133,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         vs = videos(p, R)
         if not vs: return '<p class="meta">No matching reviewer videos in our feeds yet. They refresh daily.</p>'
         return "<ul>" + "".join(f'<li><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a> <span class="meta">({e(v["channel"])}, {fmt(v["date"])})</span></li>' for v in vs) + "</ul>"
-    def specs(p): return f'<table><tr><th scope="row">Weight</th><td>{e(p["weight"]) or "not published"}</td></tr><tr><th scope="row">Core</th><td>{e(p["core"]) or "not published"}</td></tr><tr><th scope="row">Shape</th><td>{e(p["shape"]) or "not published"}</td></tr><tr><th scope="row">List price</th><td>{money(p)}</td></tr><tr><th scope="row">Latest price</th><td>{pricecell(p)}</td></tr></table>'
+    EXTRA = [("face", "Face"), ("core_material", "Core material"), ("length", "Length"), ("width", "Width"), ("handle", "Handle"), ("grip", "Grip circumference"), ("swing_weight", "Swing weight"), ("twist_weight", "Twist weight"), ("note", "Note")]
+    def specs(p): return f'<table><tr><th scope="row">Weight</th><td>{e(p["weight"]) or "not published"}</td></tr><tr><th scope="row">Core</th><td>{e(p["core"]) or "not published"}</td></tr><tr><th scope="row">Shape</th><td>{e(p["shape"]) or "not published"}</td></tr>{"".join(f'<tr><th scope="row">{lab}</th><td>{e(p[k])}</td></tr>' for k, lab in EXTRA if p.get(k))}<tr><th scope="row">List price</th><td>{money(p)}</td></tr><tr><th scope="row">Latest price</th><td>{pricecell(p)}</td></tr></table>'
     def pc(p):
         a, b = notes(p, ph(p)); return f'<div class="grid proscons"><div class="card"><h3>👍 Pros</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in a)}</ul></div><div class="card"><h3>👎 Cons</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in b)}</ul></div></div>'
     # paddle detail pages
@@ -250,8 +252,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         h = ph(p); ref = h.get("compare_at") if h.get("sale") else h.get("previous"); pct = round(100 * (1 - cur(p) / ref)) if ref else 0
         return pcard(p, f"-{pct}% · " + ("Down from our last recorded price" if h.get("drop") else "vs. the maker's compare-at price") + f" · lowest we've seen {money(p, h.get('low', cur(p)))}", own=True)
     upd = D("price_history.json").get("updated", "")
-    # Our own codes stack with any deal below; one copy handler for the strip and any own-code brand cards.
-    OWNSTRIP = (("<h2>Stack our own code</h2>" + "".join(own_codes.callout(e, oc) for _b, oc in sorted(OWN.items()))) + own_codes.COPY_JS) if OWN else ""
+    # Our own codes (stacking with sales is unconfirmed); one copy handler for the strip and any own-code brand cards.
+    OWNSTRIP = (("<h2>Our own code</h2>" + "".join(own_codes.callout(e, oc) for _b, oc in sorted(OWN.items()))) + own_codes.COPY_JS) if OWN else ""
     page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Paddle deals</h1>{DISC}{OWNSTRIP}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p><p class="meta"><a href="discount-codes.html"><b>Stack a coupon: see current discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals at our last check. Check back later.</p>"}</div>',
          f"Pickleball paddle price drops and maker-site sales, checked on each brand's own page. {price_checked(upd, fmt, e, html=False)}",
          fresh=[fresh_p(p) for p in deals], schema=[item_list(deals)] if deals else None)

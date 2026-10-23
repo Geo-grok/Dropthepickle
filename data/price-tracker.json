@@ -1,7 +1,7 @@
 {
  "updated": "2026-10-21",
  "series": "Receipts",
- "note": "Prices read on 2026-10-21 from each brand's own product page (Shopify product data on the retailer's domain). Lowest in-stock variant price. list_price = the page's compare-at price, or the current price when none is shown. Six Zero prices are AUD.",
+ "note": "Prices read on 2026-10-21 from each brand's own product page (Shopify product data on the retailer's domain). Lowest in-stock variant price. list_price = the page's compare-at price, or the current price when none is shown. Six Zero prices are AUD. Volair rows were read on 2026-10-23.",
  "rows": [
   {
    "paddle": "JOOLA Perseus Pro V Pickleball Paddle",
@@ -170,6 +170,138 @@
    "url": "https://engagepickleball.com/products/engage-pursuit-pro2-elongated-16mm-pickleball-paddle",
    "go": "/go/engagepickleball-engage-pursuit-pro2-elongated-16mm-pickleba",
    "checked": "2026-10-21"
+  },
+  {
+   "paddle": "Volair Pro 1 Pickleball Paddle",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 69.99,
+   "list_price": 69.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/pro-1",
+   "go": "/go/volair-pro-1",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair Pro 2 Pickleball Paddle",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 69.99,
+   "list_price": 69.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/pro-2",
+   "go": "/go/volair-pro-2",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair Mach 1 Forza Pickleball Paddle",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 119.99,
+   "list_price": 119.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/forza-mach-1-pickleball-paddle",
+   "go": "/go/volair-forza-mach-1-pickleball-paddle",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair Mach 2 Forza Pickleball Paddle",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 119.99,
+   "list_price": 119.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/mach-2-forza-pickleball-paddle",
+   "go": "/go/volair-mach-2-forza-pickleball-paddle",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair CTRL 1 16mm Forza Pickleball Paddle",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 139.99,
+   "list_price": 139.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/ctrl-1-forza-pickleball-paddle",
+   "go": "/go/volair-ctrl-1-forza-pickleball-paddle",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair CTRL 2 Forza 16mm Pickleball Paddle",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 139.99,
+   "list_price": 139.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/ctrl-2-forza-pickleball-paddle",
+   "go": "/go/volair-ctrl-2-forza-pickleball-paddle",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair V.1F/ XL-W 16mm Pickleball Paddle",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 49.99,
+   "list_price": 139.99,
+   "currency": "USD",
+   "pct_off": 64,
+   "url": "https://volair.com/products/v-1f-xl-w-paddle",
+   "go": "/go/volair-v-1f-xl-w-paddle",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair CMD EL Pickleball Paddle 16mm",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 179.99,
+   "list_price": 179.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/cmd-el-pickleball-paddle-16mm",
+   "go": "/go/volair-cmd-el-pickleball-paddle-16mm",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair CMD WB Pickleball Paddle 16mm",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 179.99,
+   "list_price": 179.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/cmd-wb-pickleball-paddle-16mm",
+   "go": "/go/volair-cmd-wb-pickleball-paddle-16mm",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair CMD HYB Pickleball Paddle 16mm — Dylan Frazier",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 179.99,
+   "list_price": 179.99,
+   "currency": "USD",
+   "pct_off": 0,
+   "url": "https://volair.com/products/volair-cmd-hyb-pickleball-paddle-16mm-dylan-frazier",
+   "go": "/go/volair-volair-cmd-hyb-pickleball-paddle-16mm-dylan-frazier",
+   "checked": "2026-10-23"
+  },
+  {
+   "paddle": "Volair Mach 2 Pickleball Paddle",
+   "brand": "Volair",
+   "retailer": "volair.com",
+   "current_price": 69.99,
+   "list_price": 89.99,
+   "currency": "USD",
+   "pct_off": 22,
+   "url": "https://volair.com/products/mach-2-pickleball-paddle",
+   "go": "/go/volair-mach-2-pickleball-paddle",
+   "checked": "2026-10-23"
   }
  ]
 }

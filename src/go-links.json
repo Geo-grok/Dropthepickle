@@ -561,8 +561,52 @@
    "url": "https://versixpickleball.com/",
    "affiliate_tag": ""
   },
+  "volair-cmd-el-pickleball-paddle-16mm": {
+   "url": "https://volair.com/products/cmd-el-pickleball-paddle-16mm",
+   "affiliate_tag": ""
+  },
+  "volair-cmd-wb-pickleball-paddle-16mm": {
+   "url": "https://volair.com/products/cmd-wb-pickleball-paddle-16mm",
+   "affiliate_tag": ""
+  },
+  "volair-ctrl-1-forza-pickleball-paddle": {
+   "url": "https://volair.com/products/ctrl-1-forza-pickleball-paddle",
+   "affiliate_tag": ""
+  },
+  "volair-ctrl-2-forza-pickleball-paddle": {
+   "url": "https://volair.com/products/ctrl-2-forza-pickleball-paddle",
+   "affiliate_tag": ""
+  },
+  "volair-forza-mach-1-pickleball-paddle": {
+   "url": "https://volair.com/products/forza-mach-1-pickleball-paddle",
+   "affiliate_tag": ""
+  },
   "volair-home": {
    "url": "https://www.volair.com/",
+   "affiliate_tag": ""
+  },
+  "volair-mach-2-forza-pickleball-paddle": {
+   "url": "https://volair.com/products/mach-2-forza-pickleball-paddle",
+   "affiliate_tag": ""
+  },
+  "volair-mach-2-pickleball-paddle": {
+   "url": "https://volair.com/products/mach-2-pickleball-paddle",
+   "affiliate_tag": ""
+  },
+  "volair-pro-1": {
+   "url": "https://volair.com/products/pro-1",
+   "affiliate_tag": ""
+  },
+  "volair-pro-2": {
+   "url": "https://volair.com/products/pro-2",
+   "affiliate_tag": ""
+  },
+  "volair-v-1f-xl-w-paddle": {
+   "url": "https://volair.com/products/v-1f-xl-w-paddle",
+   "affiliate_tag": ""
+  },
+  "volair-volair-cmd-hyb-pickleball-paddle-16mm-dylan-frazier": {
+   "url": "https://volair.com/products/volair-cmd-hyb-pickleball-paddle-16mm-dylan-frazier",
    "affiliate_tag": ""
   },
   "warpingpoint-home": {
