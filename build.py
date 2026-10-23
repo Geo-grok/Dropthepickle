@@ -431,6 +431,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
     elif stamp: body = body.replace('<span class="eyebrow"><i></i>Updated daily</span>', f'<span class="eyebrow"><i></i>Updated daily</span>{stamp}', 1)
     ld = json.dumps(ld_graph(doc_title, desc, url, crumbs or crumbs_for(fn, title, url), updated, schema), ensure_ascii=False).replace("<", "\\u003c")
     cols = "".join(f'<div><h4>{h}</h4>{"".join(f"<a href={chr(34)}{rel(u)}{chr(34)}>{t}</a>" for u, t in ls)}</div>' for h, ls in FOOTCOLS)
+    fjs = __import__("paddle_pages").FRESHJS if 'class="pchk"' in body else ""  # browser-side price-freshness check
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(doc_title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1426">
 <meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Drop the Pickle">
@@ -442,6 +443,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <body><header><div class="bar"><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a>
 <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav">{nav}</nav><a class="btn sm join" href="{rel("community.html")}#signup">Join free</a></div><nav class="tabs" aria-label="Main sections">{tabs}</nav></header>
 {body}
+{fjs}
 <footer><div class="fin"><div><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a><p>The all-in-one pickleball hub: tournaments, paddle reviews, deals, news and pro gear, refreshed daily from public sources.</p></div>{cols}</div>
 <div class="legal">© {datetime.date.today().year} {e(n)}. Headlines, videos, product images and event info belong to their publishers and makers and link to the original source. Some links are affiliate links; as an Amazon Associate we may earn from qualifying purchases.</div></footer>
 <script>
@@ -699,7 +701,7 @@ def build():
     ptrows = sorted(PT["rows"], key=lambda r: -r.get("pct_off", 0))
     page("price-tracker.html", "Paddle Price Tracker: Joola, Selkirk, CRBN, Six Zero prices checked",
          f'<h1>Paddle Price Tracker</h1><p class="meta">{len(ptrows)} popular paddles. Every price was read on the brand\'s own product page on {ptday(PT["updated"])}. We list the lowest in-stock option. "% off list" compares to the crossed-out price the brand shows. No guesses: if we couldn\'t check it, it isn\'t here. Prices change fast, so confirm at checkout.</p>'
-         f'<p class="meta"><a href="deals.html"><b>Today\'s deals →</b></a> · <a href="discount-codes.html"><b>Stack a discount code →</b></a></p>'
+         f'<p class="meta"><a href="deals.html"><b>Paddle deals →</b></a> · <a href="discount-codes.html"><b>Stack a discount code →</b></a></p>'
          f'<div class="pt-grid">{"".join(ptcard(r) for r in ptrows)}</div>'
          f'<section class="receipts"><h2>From the Receipts series</h2><p>Big Dill keeps the receipts. When a Receipts post says a paddle is "on sale", these are the prices behind it, with the date we checked. Want the raw numbers? <a href="data/price-tracker.json">Download the price data (JSON)</a>.</p></section>'
          f'<p class="disc">Links may be affiliate links. <a href="disclosure.html">Disclosure</a>.</p>',
@@ -801,7 +803,7 @@ def build():
             shop = "" if b in DS.get("dead_shops", {}) else DS.get("shops", {}).get(b, "")
             shop_a = f'<p><a class="cshop" href="{e(shop)}" target="_blank" rel="{"sponsored nofollow noopener" if is_tagged(shop) else "nofollow noopener"}">Shop {e(b)} →</a></p>' if shop else ""
             if shop and is_tagged(shop): shop_a += '<p class="disc">DropThePickle may earn a commission if you buy through this link, at no cost to you. <a href="../disclosure.html">Disclosure</a>.</p>'
-            main = f'<p><a class="btn" href="../deals.html">See today\'s paddle deals →</a> <a class="btn" href="/discount-codes">All discount codes →</a></p>{shop_a}'
+            main = f'<p><a class="btn" href="../deals.html">See current paddle deals →</a> <a class="btn" href="/discount-codes">All discount codes →</a></p>{shop_a}'
             desc = f"No working {b} discount code as of {fmt(DC['updated'])}. Why, plus paddle deals and working codes for other pickleball brands."
             extra = []
             fresh = {"none": why}

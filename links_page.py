@@ -63,7 +63,7 @@ def make(C, e, canon, CATALOG, DIST, extra=None):
     if vid: buttons.append(("hot", "▶", "Latest video", nice(vid), f"/media/{vid}.mp4"))
     buttons += [("", "🏷", "Discount codes", "Working paddle codes, checked daily", "/discount-codes"),
                 ("", "🔥", "Pickleball Buzz", "What everyone is talking about", "/buzz"),
-                ("", "💸", "Top deals", "Today's paddle price drops", "/deals"),
+                ("", "💸", "Top deals", "Paddle price drops", "/deals"),
                 ("", "📉", "Price tracker", "Real prices with the date we checked", "/price-tracker")]
     for b in (extra or []): buttons.insert(b.pop("at", len(buttons)), (b["cls"], b["icon"], b["title"], b["sub"], b["href"]))
     n = C["SITE_NAME"]; base = C["BASE_URL"].rstrip("/")

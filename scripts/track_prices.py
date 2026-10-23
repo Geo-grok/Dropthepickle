@@ -3,7 +3,7 @@
 only where robots.txt allows. Appends to data/price_history.json and flags drops.
  - drop: today's price is lower than the last different price we recorded
  - sale: maker shows a compare-at (was) price higher than today's price
-Usage: python3 scripts/track_prices.py   (update.py runs it; the daily GitHub Action commits the result)"""
+Usage: python3 scripts/track_prices.py   (update.py runs it; the daily GitHub Action commits the result to main, and the site shows it after the next manual wrangler deploy)"""
 import json, pathlib, datetime, urllib.parse as up, urllib.robotparser as rp
 import requests
 R = pathlib.Path(__file__).parent.parent
@@ -43,6 +43,6 @@ for p in PD["paddles"]:
         ok += 1
     except Exception as ex:
         rec["status"] = f"failed: {str(ex)[:80]}"; failed += 1
-hist["updated"] = TODAY
+if ok: hist["updated"] = TODAY  # the site's "Prices last checked" date: only move it when at least one price was verified
 HF.write_text(json.dumps(hist, indent=1, ensure_ascii=False))
 print(f"prices: {ok} ok, {skipped} skipped by robots, {failed} failed; drops: {sum(v.get('drop',False) for v in hist['paddles'].values())}, on sale: {sum(v.get('sale',False) for v in hist['paddles'].values())}")

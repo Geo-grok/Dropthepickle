@@ -132,7 +132,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("What should a beginner decide first?",
          "Start with budget, then shape, then core thickness, then weight. Those are the fields the makers publish on the paddles in our database."),
         ("Does DropThePickle rank the best paddle?",
-         "No. These pages filter published specs and today's maker prices. They are not a playtest and not a rating."),
+         "No. These pages filter published specs and the latest checked maker prices. They are not a playtest and not a rating."),
         ("Where are the prices from?",
          "Each price is the maker's own price from our latest check of the maker page, in the currency on that maker's page. We do not invent a street price."),
     ]
@@ -141,7 +141,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p class="meta">A beginner and intermediate walkthrough using the specs and maker prices already in our database. Not a ranking.</p>
 <p>You do not need a pro's paddle to start. You do need to know which published number you are buying. Work through budget, shape, core, and weight, then open the paddle page and read the maker's specs.</p>
 <h2>1. Set a budget</h2>
-<p>In our database the lowest USD maker price today is {money(lo, cur(lo))} for the {alink(lo)}, and the highest is {money(hi, cur(hi))} for the {alink(hi)}. Six Zero models are listed in AUD, so they are not in that dollar range. The <a href="../price-index.html">price index</a> tracks every recorded maker price. If you want to stay at $100, use the <a href="best-paddles-under-100.html">under-$100 guide</a>, which only includes paddles whose current maker price is actually at or under $100.</p>
+<p>In our database the lowest USD maker price at our latest check is {money(lo, cur(lo))} for the {alink(lo)}, and the highest is {money(hi, cur(hi))} for the {alink(hi)}. Six Zero models are listed in AUD, so they are not in that dollar range. The <a href="../price-index.html">price index</a> tracks every recorded maker price. If you want to stay at $100, use the <a href="best-paddles-under-100.html">under-$100 guide</a>, which only includes paddles whose current maker price is actually at or under $100.</p>
 <h2>2. Pick a shape</h2>
 <p>An elongated face is longer and usually narrower. On our spec pages we describe that as extra reach, with less room on the sides when you miss the middle. A wider face, including shapes makers call Max, Widebody, or Hybrid, gives more side-to-side area. The <a href="../best-elongated-paddles.html">elongated filter</a> lists every paddle whose shape field includes elongated. Two real examples: the {alink(perseus)} is listed as elongated, and the {alink(halo)} is listed as Max or XL.</p>
 <h2>3. Pick a core thickness</h2>
@@ -149,7 +149,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>4. Check the weight</h2>
 <p>Makers that publish a weight in our files land between {light[0]:.1f} oz ({alink(light[2])}) and {heavy[1]:.1f} oz ({alink(heavy[2])}{", maker price in AUD" if heavy[2]["currency"] != "USD" else ""}). Lighter published weights are easier to swing at the kitchen. Heavier published weights put more mass behind the ball and can feel slower in a fast exchange. Some makers leave weight blank. If it is blank on the paddle page, we do not guess it.</p>
 <h2>5. Read one spec page before you buy</h2>
-<p>Open the <a href="../paddles.html">paddle database</a> or <a href="../compare.html">compare two paddles</a> from the same brand. Each paddle page repeats the maker's core, shape, weight, and today's price, and links to the maker's product page.</p>
+<p>Open the <a href="../paddles.html">paddle database</a> or <a href="../compare.html">compare two paddles</a> from the same brand. Each paddle page repeats the maker's core, shape, weight, and latest checked price, and links to the maker's product page.</p>
 {faq_html}
 {more("guides/how-to-choose-a-paddle.html")}'''
     page("guides/how-to-choose-a-paddle.html", "How to choose a pickleball paddle", choose,
@@ -625,7 +625,7 @@ def make(page, e, fmt, PP, cur, ph):
 <div class="tbl"><table><thead><tr><th>Paddle</th><th>Core</th><th>Weight</th><th>Shape</th><th>Price</th></tr></thead><tbody>{"".join(sz_row(p) for p in sz_ours)}</tbody></table></div>
 <p>Compare them with other brands on <a href="../best-six-zero-paddles.html">best Six Zero paddles</a> or the <a href="../compare.html">compare page</a>.</p>
 <h2>Codes and deals</h2>
-<p>{e(sz_code_line)} See the <a href="../discount-codes.html">discount codes page</a> and today's <a href="../deals.html">paddle deals</a>.</p>
+<p>{e(sz_code_line)} See the <a href="../discount-codes.html">discount codes page</a> and current <a href="../deals.html">paddle deals</a>.</p>
 {sz_faq_html}
 {sources([("Six Zero US: Pickleball Paddles", SZ_US, f"prices and model names, checked {checked}")] +
          [(f"Six Zero: {p['model']}", p["source_url"], "AUD specs in our paddle list") for p in sz_ours])}

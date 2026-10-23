@@ -1,8 +1,14 @@
-# Daily data refresh. Runs update.py (feeds + scripts/track_prices.py maker-price check + build), then commits the
-# refreshed data/ files back to main. The site itself is deployed by Cloudflare Workers Builds on every push to main
-# (build: `python3 update.py --no-fetch`, deploy: `npx wrangler deploy`), so committing the data is what publishes it.
-# (Previously this job deployed to GitHub Pages, which is not enabled for this repo, so every run failed and the
-# refreshed prices were thrown away with the runner.)
+# Daily data refresh (about 6 AM CT). Runs update.py: feeds + scripts/track_prices.py (maker-price check) + build.
+# It then commits the refreshed data/ files to main. That's all it does.
+#
+# It does NOT publish the site. Nothing deploys on push: production is updated only when someone deploys main by
+# hand with `npx wrangler deploy` (currently a daily publish around 9 AM CT). Until that deploy happens, the live
+# pages keep the previous price date. The pages handle that themselves: "(checked recently)" disappears in the
+# visitor's browser once the date is more than 2 days old, and "Prices may have changed since then." appears after 7.
+#
+# The push needs the workflow's GITHUB_TOKEN to have write access (Settings > Actions > General > Workflow
+# permissions: "Read and write permissions", and not capped to read-only by an org policy). If it can't push, the
+# job fails with a clear ::error instead of passing silently.
 name: daily
 on: {schedule: [{cron: "0 11 * * *"}], workflow_dispatch: {}}
 permissions: {contents: write}
@@ -14,13 +20,34 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install -r requirements.txt && python3 update.py
-      - name: Commit refreshed data
+      - name: Refresh data (feeds, maker prices) and build
+        run: pip install -r requirements.txt && python3 update.py
+      - name: Commit refreshed data to main
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/price_history.json data/news.json data/reviews.json data/podcasts.json data/tournaments.json data/page_dates.json
-          if git diff --cached --quiet; then echo "No data changes"; exit 0; fi
+          if git diff --cached --quiet; then echo "No data changes to commit."; exit 0; fi
           git commit -m "Daily data refresh $(date -u +%F)"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          if ! git pull --rebase origin main 2>pull.err; then
+            cat pull.err
+            echo "::error title=Daily data refresh not saved::Could not rebase onto origin/main. Refreshed data was NOT saved to main; the site will keep showing the old price date."
+            exit 1
+          fi
+          if ! git push origin HEAD:main 2>push.err; then
+            cat push.err
+            echo "::error title=Daily data refresh not saved::git push to main failed (see output above). If it says 403 / 'Permission to ... denied to github-actions[bot]', set Settings > Actions > General > Workflow permissions to 'Read and write permissions' (and check any org policy). Refreshed data was NOT saved to main; the site will keep showing the old price date."
+            exit 1
+          fi
+          echo "Pushed $(git rev-parse --short HEAD) to main. Reminder: the live site only changes after a manual 'npx wrangler deploy' of main." | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Check the price check actually ran today
+        shell: bash
+        run: |
+          u=$(python3 -c "import json;print(json.load(open('data/price_history.json')).get('updated',''))")
+          if [ "$u" != "$(date -u +%F)" ]; then
+            echo "::error title=Prices not refreshed::data/price_history.json 'updated' is '$u', not today ($(date -u +%F)). scripts/track_prices.py verified no prices this run."
+            exit 1
+          fi
+          echo "price_history.json updated $u"
