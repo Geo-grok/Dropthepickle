@@ -5,7 +5,7 @@
 - `python3 scripts/fetch_pros.py`: refresh pro facts from official PPA profiles (run weekly or monthly).
 - `data/paddles.json`: hand-verified manufacturer specs. Edit it to add paddles (and include the source URL).
 - `python3 scripts/check_links.py`: checks internal and external links. `scripts/screenshots.py`: takes 390px screenshots (needs a server on :8765 and `pip install playwright`).
-- `scripts/track_prices.py`: daily maker-price check (robots-respecting) → `data/price_history.json`; run by `update.py`.
+- `scripts/track_prices.py`: maker-price check (robots-respecting) → `data/price_history.json`; run by `update.py`. The site only shows what is committed: the `daily` GitHub Action (`.github/workflows/daily.yml`) runs `update.py` and commits the refreshed `data/` files, and the Cloudflare build (`update.py --no-fetch`) does not fetch prices. Price pages say "Prices last checked <date>" from `price_history.json` and add "(checked recently)" only while that date is 2 or fewer days old.
 - `config.json`: SITE_NAME, AFFILIATE_TAG / AMAZON_ASSOCIATES_TAG, BRAND_AFFILIATE_PARAMS, SIGNUP_ENDPOINT, feed lists.
 
 Setup: `pip install -r requirements.txt`. Cron: `0 6 * * * cd /path/pickleball-hub && python3 update.py >> update.log 2>&1`

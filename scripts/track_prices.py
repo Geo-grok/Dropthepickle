@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Daily price tracker: reads each paddle's price from its maker's own product page (Shopify product JSON at <url>.js),
+"""Price tracker: reads each paddle's price from its maker's own product page (Shopify product JSON at <url>.js),
 only where robots.txt allows. Appends to data/price_history.json and flags drops.
  - drop: today's price is lower than the last different price we recorded
  - sale: maker shows a compare-at (was) price higher than today's price
-Usage: python3 scripts/track_prices.py   (update.py runs it daily)"""
+Usage: python3 scripts/track_prices.py   (update.py runs it; the daily GitHub Action commits the result)"""
 import json, pathlib, datetime, urllib.parse as up, urllib.robotparser as rp
 import requests
 R = pathlib.Path(__file__).parent.parent

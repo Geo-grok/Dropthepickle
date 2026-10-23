@@ -134,7 +134,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("Does DropThePickle rank the best paddle?",
          "No. These pages filter published specs and today's maker prices. They are not a playtest and not a rating."),
         ("Where are the prices from?",
-         "Each price is the maker's own price from our daily check, in the currency on that maker's page. We do not invent a street price."),
+         "Each price is the maker's own price from our latest check of the maker page, in the currency on that maker's page. We do not invent a street price."),
     ]
     faq_html, faq_ld = faq(choose_faq)
     choose = f'''<h1>How to choose a pickleball paddle</h1>
@@ -199,7 +199,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("Which pickleball paddles are under $100?",
          under_lead + (f" They are: {names}." if ok_under else " The cheapest verified prices in our file are $100 or more, and they are shown in a separate table.")),
         ("Where do these prices come from?",
-         f"Each price is the maker's own price from our daily check, saved with the date it was checked. The latest check date on this page is {last_check}. We do not invent street or coupon prices."),
+         f"Each price is the maker's own price from our latest check of the maker page, saved with the date it was checked. The latest check date on this page is {last_check}. We do not invent street or coupon prices."),
         ("Why is a $100.00 paddle not on the list?",
          "This list only includes paddles priced under $100. A paddle at exactly $100.00 does not meet that rule, so it is shown in the $100 to $150 table instead."),
         ("Is this a ranking of the best paddles?",

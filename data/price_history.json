@@ -15,12 +15,18 @@
      "price": 299.95,
      "compare_at": 299.95,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 299.95,
+     "compare_at": 299.95,
+     "available": true
     }
    ],
    "current": 299.95,
    "compare_at": 299.95,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 299.95,
    "drop": false,
@@ -43,12 +49,18 @@
      "price": 299.95,
      "compare_at": 299.95,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 299.95,
+     "compare_at": 299.95,
+     "available": true
     }
    ],
    "current": 299.95,
    "compare_at": 299.95,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 299.95,
    "drop": false,
@@ -71,12 +83,18 @@
      "price": 299.95,
      "compare_at": 299.95,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 299.95,
+     "compare_at": 299.95,
+     "available": true
     }
    ],
    "current": 299.95,
    "compare_at": 299.95,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 299.95,
    "drop": false,
@@ -99,12 +117,18 @@
      "price": 299.95,
      "compare_at": 299.95,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 299.95,
+     "compare_at": 299.95,
+     "available": true
     }
    ],
    "current": 299.95,
    "compare_at": 299.95,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 299.95,
    "drop": false,
@@ -127,12 +151,18 @@
      "price": 299.95,
      "compare_at": 299.95,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 299.95,
+     "compare_at": 299.95,
+     "available": true
     }
    ],
    "current": 299.95,
    "compare_at": 299.95,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 299.95,
    "drop": false,
@@ -155,12 +185,18 @@
      "price": 200.0,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 200.0,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 200.0,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 200.0,
    "drop": false,
@@ -183,12 +219,18 @@
      "price": 300.0,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 300.0,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 300.0,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 300.0,
    "drop": false,
@@ -211,12 +253,18 @@
      "price": 200.0,
      "compare_at": 280.0,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 200.0,
+     "compare_at": 280.0,
+     "available": true
     }
    ],
    "current": 200.0,
    "compare_at": 280.0,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 200.0,
    "drop": false,
@@ -239,12 +287,18 @@
      "price": 333.0,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 333.0,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 333.0,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 333.0,
    "drop": false,
@@ -267,12 +321,18 @@
      "price": 100.0,
      "compare_at": 150.0,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 100.0,
+     "compare_at": 150.0,
+     "available": true
     }
    ],
    "current": 100.0,
    "compare_at": 150.0,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 100.0,
    "drop": false,
@@ -295,12 +355,18 @@
      "price": 199.99,
      "compare_at": 279.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 199.99,
+     "compare_at": 279.99,
+     "available": true
     }
    ],
    "current": 199.99,
    "compare_at": 279.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 199.99,
    "drop": false,
@@ -323,12 +389,18 @@
      "price": 199.99,
      "compare_at": 279.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 199.99,
+     "compare_at": 279.99,
+     "available": true
     }
    ],
    "current": 199.99,
    "compare_at": 279.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 199.99,
    "drop": false,
@@ -351,12 +423,18 @@
      "price": 229.99,
      "compare_at": 279.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 229.99,
+     "compare_at": 279.99,
+     "available": true
     }
    ],
    "current": 229.99,
    "compare_at": 279.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 229.99,
    "drop": false,
@@ -379,12 +457,18 @@
      "price": 149.99,
      "compare_at": 229.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 149.99,
+     "compare_at": 229.99,
+     "available": true
     }
    ],
    "current": 149.99,
    "compare_at": 229.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 149.99,
    "drop": false,
@@ -407,12 +491,18 @@
      "price": 225.0,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 225.0,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 225.0,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 225.0,
    "drop": false,
@@ -435,12 +525,18 @@
      "price": 300.0,
      "compare_at": null,
      "available": false
+    },
+    {
+     "date": "2026-10-23",
+     "price": 300.0,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 300.0,
    "compare_at": null,
-   "available": false,
-   "checked": "2026-10-15",
+   "available": true,
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 300.0,
    "drop": false,
@@ -463,12 +559,18 @@
      "price": 275.0,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 275.0,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 275.0,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 275.0,
    "drop": false,
@@ -491,12 +593,18 @@
      "price": 250.0,
      "compare_at": null,
      "available": false
+    },
+    {
+     "date": "2026-10-23",
+     "price": 250.0,
+     "compare_at": null,
+     "available": false
     }
    ],
    "current": 250.0,
    "compare_at": null,
    "available": false,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 250.0,
    "drop": false,
@@ -519,12 +627,18 @@
      "price": 129.99,
      "compare_at": 129.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 129.99,
+     "compare_at": 129.99,
+     "available": true
     }
    ],
    "current": 129.99,
    "compare_at": 129.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 129.99,
    "drop": false,
@@ -547,12 +661,18 @@
      "price": 199.99,
      "compare_at": 199.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 199.99,
+     "compare_at": 199.99,
+     "available": true
     }
    ],
    "current": 199.99,
    "compare_at": 199.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 199.99,
    "drop": false,
@@ -575,12 +695,18 @@
      "price": 259.99,
      "compare_at": 259.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 259.99,
+     "compare_at": 259.99,
+     "available": true
     }
    ],
    "current": 259.99,
    "compare_at": 259.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 259.99,
    "drop": false,
@@ -603,12 +729,18 @@
      "price": 279.99,
      "compare_at": 279.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 279.99,
+     "compare_at": 279.99,
+     "available": true
     }
    ],
    "current": 279.99,
    "compare_at": 279.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 279.99,
    "drop": false,
@@ -631,12 +763,18 @@
      "price": 279.99,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 279.99,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 279.99,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 279.99,
    "drop": false,
@@ -659,16 +797,22 @@
      "price": 129.99,
      "compare_at": 179.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 179.99,
+     "compare_at": 179.99,
+     "available": true
     }
    ],
-   "current": 129.99,
+   "current": 179.99,
    "compare_at": 179.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 129.99,
    "drop": false,
-   "sale": true,
+   "sale": false,
    "low": 129.99,
    "image": "https://cdn.shopify.com/s/files/1/0648/4761/0072/files/1PGBXEP3-1_Gearbox_GBX-Power_Elongated_Blue-Green-16mm-1.jpg?v=1770438120"
   },
@@ -687,12 +831,18 @@
      "price": 199.99,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 199.99,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 199.99,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 199.99,
    "drop": false,
@@ -715,12 +865,18 @@
      "price": 149.99,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 149.99,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 149.99,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 149.99,
    "drop": false,
@@ -743,12 +899,18 @@
      "price": 199.99,
      "compare_at": 249.99,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 199.99,
+     "compare_at": 249.99,
+     "available": true
     }
    ],
    "current": 199.99,
    "compare_at": 249.99,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 199.99,
    "drop": false,
@@ -771,12 +933,18 @@
      "price": 179.0,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 179.0,
+     "compare_at": null,
+     "available": true
     }
    ],
    "current": 179.0,
    "compare_at": null,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 179.0,
    "drop": false,
@@ -799,16 +967,22 @@
      "price": 119.0,
      "compare_at": null,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 119.0,
+     "compare_at": 129.0,
+     "available": true
     }
    ],
    "current": 119.0,
-   "compare_at": null,
+   "compare_at": 129.0,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 119.0,
    "drop": false,
-   "sale": false,
+   "sale": true,
    "low": 119.0,
    "image": "https://cdn.shopify.com/s/files/1/0659/0772/0365/files/1_1_496b8e50-798f-4187-9266-c2e095179e16.jpg?v=1779432216"
   },
@@ -827,12 +1001,18 @@
      "price": 199.95,
      "compare_at": 199.95,
      "available": true
+    },
+    {
+     "date": "2026-10-23",
+     "price": 199.95,
+     "compare_at": 199.95,
+     "available": true
     }
    ],
    "current": 199.95,
    "compare_at": 199.95,
    "available": true,
-   "checked": "2026-10-15",
+   "checked": "2026-10-23",
    "status": "ok",
    "previous": 199.95,
    "drop": false,
@@ -841,5 +1021,5 @@
    "image": "https://cdn.shopify.com/s/files/1/0685/6943/2278/files/3_0051_2R1A6092-93_6657000a-447e-4c94-9c41-094771baf777.jpg?v=1788368011"
   }
  },
- "updated": "2026-10-15"
+ "updated": "2026-10-23"
 }

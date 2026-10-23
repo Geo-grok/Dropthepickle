@@ -20,6 +20,21 @@ def videos(p, R):
 def money(p, amt=None):
     a = p["price"] if amt is None else amt
     return ("$" if p["currency"] == "USD" else "A$") + f"{a:,.2f}"
+FRESH_DAYS = 2  # say "checked recently" only when the newest price check is this many days old or less
+FRESHJS = "<script>document.querySelectorAll('.pfresh').forEach(function(s){var d=new Date(s.getAttribute('data-checked')+'T12:00:00');if(isNaN(d)||(Date.now()-d)/864e5>FRESH_DAYS+0.5)s.remove()})</script>".replace("FRESH_DAYS", str(FRESH_DAYS))
+def price_age(iso):
+    import datetime
+    try: return (datetime.date.today() - datetime.date.fromisoformat(iso[:10])).days
+    except Exception: return None
+def price_checked(iso, fmt, e, html=True):
+    """'Prices last checked <date>.' plus a soft 'checked recently' note only while the data is <= FRESH_DAYS old.
+    The note is decided at build time and removed again in the browser (FRESHJS) once the date goes stale, so a page
+    that isn't rebuilt never keeps claiming freshness."""
+    if not iso: return "Price check date not recorded."
+    age = price_age(iso)
+    if not html: return f"Prices last checked {fmt(iso)}."
+    soft = f'<span class="pfresh" data-checked="{e(iso[:10])}"> (checked recently)</span>' if age is not None and 0 <= age <= FRESH_DAYS else ""
+    return f'Prices last checked <time datetime="{e(iso[:10])}">{fmt(iso)}</time>{soft}.'
 def notes(p, ph):
     """Spec-based pros/cons in our own words. General characteristics only; no performance claims."""
     pro, con = [], []
@@ -91,7 +106,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             {"@type": "ListItem", "position": i, "name": f'{p["brand"]} {p["model"]}', "url": absu(slug(p)), "item": product_node(p)}
             for i, p in enumerate(ps, 1)]}
     DISC = '<p class="disc">Some links are affiliate links. We may earn a commission at no extra cost to you. <a href="disclosure.html">Learn more</a>.</p>'
-    SRC = f'<p class="meta">Specs and list prices come from the maker\'s own product page (retrieved {e(PD["retrieved"])}). Today\'s price comes from our daily check of the maker page. Pros and cons are our own notes based on published specs. They are not lab or on-court test results.</p>'
+    SRC = f'<p class="meta">Specs and list prices come from the maker\'s own product page (retrieved {e(PD["retrieved"])}). The current price comes from our latest check of the maker page (date shown above). Pros and cons are our own notes based on published specs. They are not lab or on-court test results.</p>'
     def pro_users(p):
         ks = keys(p); return [x for x in pros if x.get("paddle") and x["paddle"].lower().startswith(p["brand"].lower().split()[0]) and ks and any(re.search(k, x["paddle"], re.I) for k in ks)]
     def pricecell(p):
@@ -220,13 +235,13 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         h = ph(p); ref = h.get("compare_at") if h.get("sale") else h.get("previous"); pct = round(100 * (1 - cur(p) / ref)) if ref else 0
         return pcard(p, f"-{pct}% · " + ("Down from our last recorded price" if h.get("drop") else "vs. the maker's compare-at price") + f" · lowest we've seen {money(p, h.get('low', cur(p)))}")
     upd = D("price_history.json").get("updated", "")
-    page("deals.html", "Pickleball paddle deals & price drops (updated daily)", f'<h1>Paddle deals</h1>{DISC}<p class="meta">Every day we check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Last check: {fmt(upd)}. Prices can change at any time, so confirm at checkout.</p><p class="meta"><a href="discount-codes.html"><b>Stack a coupon: see today\'s discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals right now. Check back tomorrow.</p>"}</div>',
-         "Today's pickleball paddle price drops and maker-site sales. Prices are checked on each brand's own page.",
+    page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Paddle deals</h1>{DISC}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p><p class="meta"><a href="discount-codes.html"><b>Stack a coupon: see today\'s discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals right now. Check back later.</p>"}</div>{FRESHJS}',
+         f"Pickleball paddle price drops and maker-site sales, checked on each brand's own page. {price_checked(upd, fmt, e, html=False)}",
          fresh=[fresh_p(p) for p in deals], schema=[item_list(deals)] if deals else None)
     # paddle database (re-rendered with links + badges)
     prow = "".join(f'<tr><td><a href="{slug(p)}"><b>{e(p["brand"])}</b><br>{e(p["model"])}</a> {badge(ph(p), p)}</td><td>{e(p["weight"])}</td><td>{e(p["core"])}</td><td>{e(p["shape"])}</td><td>{pricecell(p)}</td><td>{buy(p)}</td></tr>' for p in PP)
-    page("paddles.html", "Paddle database", f'<h1>Paddle database</h1>{DISC}<p><a class="btn" href="paddle-quiz.html" style="min-height:56px;font-size:1.1rem">🎯 Not sure? Take the 3-question paddle quiz →</a></p><p class="meta">Specs and list prices come from each manufacturer\'s own product page (retrieved {e(PD["retrieved"])}). Prices are re-checked daily. Blank means the maker doesn\'t clearly publish it. Six Zero prices are in AUD. See <a href="deals.html">today\'s deals</a>, <a href="compare.html">compare paddles</a>, or the <a href="price-index.html">price index</a>.</p><div class="tbl"><table><tr><th>Paddle</th><th>Weight</th><th>Core</th><th>Shape</th><th>Price today</th><th>Where to buy</th></tr>{prow}</table></div>',
-         "Pickleball paddle specs, core thickness, shape and today's maker price, sourced from each brand's product page.",
+    page("paddles.html", "Paddle database", f'<h1>Paddle database</h1>{DISC}<p><a class="btn" href="paddle-quiz.html" style="min-height:56px;font-size:1.1rem">🎯 Not sure? Take the 3-question paddle quiz →</a></p><p class="meta">Specs and list prices come from each manufacturer\'s own product page (retrieved {e(PD["retrieved"])}). {price_checked(upd, fmt, e)} Blank means the maker doesn\'t clearly publish it. Six Zero prices are in AUD. See <a href="deals.html">current deals</a>, <a href="compare.html">compare paddles</a>, or the <a href="price-index.html">price index</a>.</p><div class="tbl"><table><tr><th>Paddle</th><th>Weight</th><th>Core</th><th>Shape</th><th>Latest price</th><th>Where to buy</th></tr>{prow}</table></div>{FRESHJS}',
+         f"Pickleball paddle specs, core thickness, shape and the latest maker price, sourced from each brand's product page. {price_checked(upd, fmt, e, html=False)}",
          fresh=[fresh_p(p) for p in PP], schema=[item_list(PP)])
     import csv, io
     hist = D("price_history.json"); rows_h = hist.get("paddles", {})
@@ -297,8 +312,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 f'<p class="fr">{e(p["brand"])} store · {why} · checked {fmt(h.get("checked"))}</p>'
                 f'<div class="px">{money(p, cur(p))}{was}{f"<span class={chr(34)}off{chr(34)}>-{pct}%</span>" if pct > 0 else ""}</div>'
                 f'<a class="btn go" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Get deal →</a></div></li>')
-    top5 = (f'<h2 id="top5">Top 5 deals today <a class="seemore" href="deals.html">All →</a></h2><ol class="top5">{"".join(top5row(i, p) for i, p in enumerate(deals[:5], 1))}</ol><p class="more">Prices from makers\' own sites. Confirm at checkout. <a href="/discount-codes">Stack a discount code →</a></p>') if deals else ""
-    home = f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>ALL THINGS <em>PICKLEBALL</em></h1><p>Free for everyone. {len(deals)} deals today.</p></div></div>
+    top5 = (f'<h2 id="top5">Top 5 paddle deals <a class="seemore" href="deals.html">All →</a></h2><ol class="top5">{"".join(top5row(i, p) for i, p in enumerate(deals[:5], 1))}</ol><p class="more">Prices from makers\' own sites. {price_checked(upd, fmt, e)} Confirm at checkout. <a href="/discount-codes">Stack a discount code →</a></p>{FRESHJS}') if deals else ""
+    home = f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>ALL THINGS <em>PICKLEBALL</em></h1><p>Free for everyone. {len(deals)} paddle deals, prices checked {fmt(upd)}.</p></div></div>
 {top5}</div></section>
 <main>
 {X.get("BUZZ_TEASER","")}

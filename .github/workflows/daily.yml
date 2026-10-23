@@ -1,15 +1,26 @@
-# Copy to .github/workflows/daily.yml to rebuild daily on GitHub Pages
+# Daily data refresh. Runs update.py (feeds + scripts/track_prices.py maker-price check + build), then commits the
+# refreshed data/ files back to main. The site itself is deployed by Cloudflare Workers Builds on every push to main
+# (build: `python3 update.py --no-fetch`, deploy: `npx wrangler deploy`), so committing the data is what publishes it.
+# (Previously this job deployed to GitHub Pages, which is not enabled for this repo, so every run failed and the
+# refreshed prices were thrown away with the runner.)
 name: daily
 on: {schedule: [{cron: "0 11 * * *"}], workflow_dispatch: {}}
-permissions: {contents: read, pages: write, id-token: write}
+permissions: {contents: write}
+concurrency: {group: daily-refresh, cancel-in-progress: false}
 jobs:
-  build:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt && python3 update.py
-      - uses: actions/upload-pages-artifact@v3
-        with: {path: dist}
-      - uses: actions/deploy-pages@v4
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/price_history.json data/news.json data/reviews.json data/podcasts.json data/tournaments.json data/page_dates.json
+          if git diff --cached --quiet; then echo "No data changes"; exit 0; fi
+          git commit -m "Daily data refresh $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
