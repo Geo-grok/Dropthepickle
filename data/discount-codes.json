@@ -107,19 +107,6 @@
    "verified": "2026-10-23"
   },
   {
-   "brand": "Ace",
-   "code": "JOHNKEW",
-   "discount": "10% off",
-   "conditions": "Brand site checkout",
-   "source": "John Kew Pickleball",
-   "source_url": "https://www.johnkewpickleball.com/discount-codes",
-   "source_date": "August 2026",
-   "expiry": null,
-   "shop_url": "https://acepickleball.co/",
-   "first_seen": "2026-10-20",
-   "verified": "2026-10-23"
-  },
-  {
    "brand": "Aireo",
    "code": "JOHNKEW",
    "discount": "10% off",
@@ -258,7 +245,7 @@
    "source_url": "https://www.nicothelefty.com/deals",
    "source_date": null,
    "expiry": null,
-   "shop_url": "https://bodhipickleball.com/",
+   "shop_url": "https://bodhiperformance.com/",
    "first_seen": "2026-10-19",
    "verified": "2026-10-23"
   },
@@ -284,7 +271,7 @@
    "source_url": "https://www.bk-pickleball.com/discounts",
    "source_date": null,
    "expiry": null,
-   "shop_url": "https://breadandbutterpickleball.com/",
+   "shop_url": "https://www.bnbpickleball.com/",
    "first_seen": "2026-10-16",
    "verified": "2026-10-23"
   },
@@ -297,7 +284,7 @@
    "source_url": "https://bepickleballer.com/pickleball-paddle-discount-codes/",
    "source_date": null,
    "expiry": null,
-   "shop_url": "https://breadandbutterpickleball.com/",
+   "shop_url": "https://www.bnbpickleball.com/",
    "first_seen": "2026-10-20",
    "verified": "2026-10-23"
   },
@@ -310,7 +297,7 @@
    "source_url": "https://pickleballeffect.com/discounts/",
    "source_date": "September 2026",
    "expiry": null,
-   "shop_url": "https://breadandbutterpickleball.com/",
+   "shop_url": "https://www.bnbpickleball.com/",
    "first_seen": "2026-10-16",
    "verified": "2026-10-23"
   },
@@ -323,7 +310,7 @@
    "source_url": "https://www.johnkewpickleball.com/discount-codes",
    "source_date": "August 2026",
    "expiry": null,
-   "shop_url": "https://breadandbutterpickleball.com/",
+   "shop_url": "https://www.bnbpickleball.com/",
    "first_seen": "2026-10-16",
    "verified": "2026-10-23"
   },
@@ -336,7 +323,7 @@
    "source_url": "https://thekitchenpickle.com/discounts/",
    "source_date": null,
    "expiry": null,
-   "shop_url": "https://breadandbutterpickleball.com/",
+   "shop_url": "https://www.bnbpickleball.com/",
    "first_seen": "2026-10-16",
    "verified": "2026-10-23"
   },
@@ -349,7 +336,7 @@
    "source_url": "https://www.nicothelefty.com/deals",
    "source_date": null,
    "expiry": null,
-   "shop_url": "https://breadandbutterpickleball.com/",
+   "shop_url": "https://www.bnbpickleball.com/",
    "first_seen": "2026-10-16",
    "verified": "2026-10-23"
   },
@@ -362,7 +349,7 @@
    "source_url": "https://paddlereviewhub.com/deals",
    "source_date": null,
    "expiry": null,
-   "shop_url": "https://breadandbutterpickleball.com/",
+   "shop_url": "https://www.bnbpickleball.com/",
    "first_seen": "2026-10-20",
    "verified": "2026-10-23"
   },
@@ -1168,7 +1155,7 @@
    "source_url": "https://www.powerhousepickle.com/sponsors",
    "source_date": null,
    "expiry": null,
-   "shop_url": "https://fromuthpickleball.com/",
+   "shop_url": "https://www.midwestracquetsports.com/pickleball/",
    "first_seen": "2026-10-16",
    "verified": "2026-10-23"
   },
@@ -3357,19 +3344,6 @@
    "verified": "2026-10-23"
   },
   {
-   "brand": "Versix",
-   "code": "JOHNKEW",
-   "discount": "10% off",
-   "conditions": "Brand site checkout",
-   "source": "John Kew Pickleball",
-   "source_url": "https://www.johnkewpickleball.com/discount-codes",
-   "source_date": "August 2026",
-   "expiry": null,
-   "shop_url": "https://versixpickleball.com/",
-   "first_seen": "2026-10-20",
-   "verified": "2026-10-23"
-  },
-  {
    "brand": "Volair",
    "code": "PBEFFECT",
    "discount": "10% off",
@@ -3547,7 +3521,7 @@
    "source_url": "https://pickleballeffect.com/discounts/",
    "source_date": "September 2026",
    "expiry": null,
-   "shop_url": "https://the-yobow.myshopify.com/",
+   "shop_url": "https://theyobow.com/",
    "first_seen": "2026-10-19",
    "verified": "2026-10-23"
   }
@@ -3578,11 +3552,39 @@
    "shop_url": "https://paklepickleball.com/",
    "first_seen": "2026-10-23",
    "reason": "no longer shown on source page"
+  },
+  {
+   "brand": "Ace",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://acepickleball.co/",
+   "first_seen": "2026-10-20",
+   "reason": "brand store shows 'Store unavailable' (HTTP 402) on 2026-10-23"
+  },
+  {
+   "brand": "Versix",
+   "code": "JOHNKEW",
+   "discount": "10% off",
+   "conditions": "Brand site checkout",
+   "source": "John Kew Pickleball",
+   "source_url": "https://www.johnkewpickleball.com/discount-codes",
+   "source_date": "August 2026",
+   "expiry": null,
+   "shop_url": "https://versixpickleball.com/",
+   "first_seen": "2026-10-20",
+   "reason": "brand site versixpickleball.com unreachable (TLS failure / HTTP 500) on 2026-10-23"
   }
  ],
  "no_code": {
   "JOOLA": "Pickleball Effect (verified Sept 1, 2026) says JOOLA stopped running creator codes; coupon-site JOOLA codes we found had expired.",
-  "Pickleball Central": "Creator discounts apply through partner links, not codes."
+  "Pickleball Central": "Creator discounts apply through partner links, not codes.",
+  "Ace": "Ace Pickleball's store (acepickleball.co) showed “Store unavailable” on Oct 23, 2026, so John Kew's JOHNKEW code can't be used there right now. We'll add a code back if the store reopens.",
+  "Versix": "Versix's site (versixpickleball.com) didn't load on Oct 23, 2026, so John Kew's JOHNKEW code can't be used right now. We'll add a code back if the site comes back."
  },
  "fetch_errors": []
 }

@@ -9,9 +9,9 @@
   "Franklin": "https://franklinsports.com/pickleball",
   "Onix": "https://www.onixpickleball.com/",
   "Vatic Pro": "https://vaticpro.com/",
-  "Bread & Butter": "https://breadandbutterpickleball.com/",
+  "Bread & Butter": "https://www.bnbpickleball.com/",
   "HEAD": "https://www.head.com/en_US/pickleball",
-  "Fromuth": "https://fromuthpickleball.com/",
+  "Fromuth": "https://www.midwestracquetsports.com/pickleball/",
   "JOOLA": "https://joola.com/",
   "Paddletek": "https://www.paddletek.com/",
   "Pickleball Central": "https://pickleballcentral.com/",
@@ -90,7 +90,7 @@
   "CUURT": "https://www.cuurt.com/",
   "SQAIRZ": "https://www.sqairz.com/",
   "Stria Sport": "https://striasport.com/",
-  "Bodhi": "https://bodhipickleball.com/",
+  "Bodhi": "https://bodhiperformance.com/",
   "Lightning Loop": "https://www.lightninglooppickleball.com/",
   "Pilla": "https://pillapickleball.com/",
   "Blumaka": "https://blumaka.com/",
@@ -100,7 +100,7 @@
   "Stack Athletics": "https://stackathletics.com/",
   "Suay": "https://suay.com/",
   "Storyi": "https://www.ourstoryi.com/",
-  "Yobow": "https://the-yobow.myshopify.com/",
+  "Yobow": "https://theyobow.com/",
   "Ace": "https://acepickleball.co/",
   "Komodo": "https://komodopickleball.com/",
   "ProXR": "https://proxrpickleball.com/",
@@ -479,7 +479,8 @@
      "brand": "Dymon",
      "code": "JOHNKEW",
      "discount": "20% off",
-     "conditions": "Brand site checkout"
+     "conditions": "Brand site checkout",
+     "review": "2026-10-23 audit: dymon1.com loads but shows no store or checkout, so this code may not be usable. Flagged for a human check, not removed. Not read by refresh-codes or build.py."
     },
     {
      "brand": "Element 6",
@@ -744,12 +745,6 @@
      "conditions": "Brand site checkout"
     },
     {
-     "brand": "Ace",
-     "code": "JOHNKEW",
-     "discount": "10% off",
-     "conditions": "Brand site checkout"
-    },
-    {
      "brand": "Komodo",
      "code": "JOHNKEW",
      "discount": "10% off",
@@ -757,12 +752,6 @@
     },
     {
      "brand": "ProXR",
-     "code": "JOHNKEW",
-     "discount": "10% off",
-     "conditions": "Brand site checkout"
-    },
-    {
-     "brand": "Versix",
      "code": "JOHNKEW",
      "discount": "10% off",
      "conditions": "Brand site checkout"
@@ -1837,6 +1826,8 @@
  ],
  "no_code": {
   "JOOLA": "Pickleball Effect (verified Sept 1, 2026) says JOOLA stopped running creator codes; coupon-site JOOLA codes we found had expired.",
-  "Pickleball Central": "Creator discounts apply through partner links, not codes."
+  "Pickleball Central": "Creator discounts apply through partner links, not codes.",
+  "Ace": "Ace Pickleball's store (acepickleball.co) showed “Store unavailable” on Oct 23, 2026, so John Kew's JOHNKEW code can't be used there right now. We'll add a code back if the store reopens.",
+  "Versix": "Versix's site (versixpickleball.com) didn't load on Oct 23, 2026, so John Kew's JOHNKEW code can't be used right now. We'll add a code back if the site comes back."
  }
 }
