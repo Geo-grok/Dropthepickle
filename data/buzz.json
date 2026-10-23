@@ -1,9 +1,194 @@
 {
- "updated": "2026-10-22T06:05-05:00",
- "date": "2026-10-22",
- "source_file": "dtp-newsroom/buzz-2026-10-22.json",
+ "updated": "2026-10-23T06:13-05:00",
+ "date": "2026-10-23",
+ "source_file": "dtp-newsroom/buzz-2026-10-23.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "PPA Hong Kong Slam quarterfinals: both top women's singles seeds fall, Ben Johns beats brother Collin, and Ben/ALW win 11-1, 11-0",
+   "summary": "Friday (Hong Kong time) was quarterfinal day at Kai Tak Arena. Women's singles lost its top two seeds: Judit Castillo beat No. 1 Kaitlyn Christian 11-9, 5-11, 12-10, and Andie Dikosavljevic beat No. 2 Chao Yi Wang 11-8, 11-6. Kiora Kunimoto beat Yufei Long 8-11, 11-6, 11-3 and Sahra Dennehy beat Rika Fujiwara 11-6, 8-11, 11-3. Men's singles: Federico Staksrud survived home favorite Hong Kit (Jack) Wong 8-11, 11-9, 12-10. Wong, the last Hong Kong player left, had match point at 10-9 in the decider (The Standard). Noe Khlif beat Christopher Haworth 13-11, 11-3, Hunter Johnson beat Connor Garnett 11-9, 11-4, and Tama Shimabukuro beat Grayson Goldin 11-9, 8-11, 11-6. Men's doubles: Ben Johns and Gabriel Tardio beat Collin Johns and Len Yang 11-3, 11-3. Also through: Staksrud/Patriquin, Garnett/Frazier and Shimabukuro/JW Johnson. Women's doubles: Bright/Waters, Sewing/Parenteau, Rohrabacher/Todd and Jorja Johnson/Tyra Hurricane Black. Mixed: Ben Johns and Anna Leigh Waters beat Jonathan Truong and Jessie Irvine 11-1, 11-0. Also through: Bright/Patriquin, Jorja/JW Johnson and Ting Chieh Wei/Hunter Johnson, who beat Christian/Frazier 5-11, 11-5, 11-9. Semifinals per the official feed: women's singles Dikosavljevic vs. Dennehy and Castillo vs. Kunimoto; men's singles Khlif vs. Shimabukuro and Staksrud vs. Hunter Johnson; men's doubles Ben Johns/Tardio vs. Shimabukuro/JW Johnson and Staksrud/Patriquin vs. Garnett/Frazier; women's doubles Bright/Waters vs. Sewing/Parenteau and Black/Jorja Johnson vs. Rohrabacher/Todd; mixed Bright/Patriquin vs. Jorja/JW Johnson.",
+   "status": "confirmed",
+   "date": "2026-10-23",
+   "sources": [
+    {
+     "label": "@PPAtour: Castillo d. No. 1 Christian",
+     "url": "https://x.com/PPAtour/status/2113470549250765200"
+    },
+    {
+     "label": "@PPAtour: Dikosavljevic d. No. 2 Wang",
+     "url": "https://x.com/PPAtour/status/2113470809553469807"
+    },
+    {
+     "label": "@PPAtour: Staksrud d. Wong",
+     "url": "https://x.com/PPAtour/status/2113509294448464238"
+    },
+    {
+     "label": "@PPAtour: Ben Johns/Tardio d. Collin Johns/Yang",
+     "url": "https://x.com/PPAtour/status/2113553615277228397"
+    },
+    {
+     "label": "@PPAtour: ALW/Ben Johns 11-1, 11-0",
+     "url": "https://x.com/PPAtour/status/2113573768643641759"
+    },
+    {
+     "label": "@PPAtour: Wei/Hunter Johnson d. Christian/Frazier",
+     "url": "https://x.com/PPAtour/status/2113585326132170900"
+    },
+    {
+     "label": "ThePickleHub (results mirror of official PPA feed)",
+     "url": "https://www.thepicklehub.net/blog/hong-kong-slam-2026-results"
+    },
+    {
+     "label": "The Standard (HK): Jack Wong falls just short",
+     "url": "https://www.thestandard.com.hk/sports-updates/article/346348/Jack-Wong-Hong-kit-falls-just-short-against-world-No-5-at-Hong-Kong-Slam"
+    },
+    {
+     "label": "PPA Tour Asia event page",
+     "url": "https://www.ppatour-asia.com/tournament/2026/hong-kong-slam/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2113470549250765200",
+    "https://x.com/PPAtour/status/2113553615277228397",
+    "https://x.com/PPAtour/status/2113573768643641759",
+    "https://x.com/PPAtour/status/2113509294448464238"
+   ],
+   "social_angle": "'Upset Friday in Hong Kong' card: both top women's singles seeds out, Ben over Collin, and the 11-1, 11-0 mixed score. Embed the official @PPAtour posts and tag the PPA Tour. Wong's match-point near-miss is the feel-good local angle.",
+   "tags": [
+    "ppa",
+    "pro-tour",
+    "results",
+    "international",
+    "anna-leigh-waters",
+    "players"
+   ]
+  },
+  {
+   "title": "JOOLA becomes DUPR's title sponsor ('DUPR powered by JOOLA'), with a $30 JOOLA gift card for DUPR+ members",
+   "summary": "DUPR announced on Oct. 22 that JOOLA is its title sponsor, and the rating platform will be branded 'DUPR powered by JOOLA.' As part of the deal, DUPR+ members in eligible countries get a $30 JOOLA gift card. DUPR+ costs $19.99 a year, so the card is worth more than the membership. The deal adds to JOOLA's existing DUPR ties: the JOOLA HC-40 is already the Official Ball of DUPR for DUPR-operated and sanctioned play, including Minor League Pickleball and College Pickleball, and JOOLA is title sponsor of the DUPR College Pickleball Tour. The release quotes DUPR CEO Tito Machado and JOOLA President and CEO Richard Lee.",
+   "status": "confirmed",
+   "date": "2026-10-23",
+   "sources": [
+    {
+     "label": "DUPR announcement",
+     "url": "https://www.dupr.com/post/joola-named-title-sponsor-of-dupr-introducing-dupr-powered-by-joola"
+    },
+    {
+     "label": "PR Newswire release",
+     "url": "https://www.prnewswire.com/news-releases/joola-named-title-sponsor-of-dupr-introducing-dupr-powered-by-joola-302917205.html"
+    },
+    {
+     "label": "JOOLA blog",
+     "url": "https://joola.com/blogs/blog/joola-named-title-sponsor-of-dupr-introducing-dupr-powered-by-joola"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Explainer: 'Your DUPR rating now has a title sponsor.' The hook is the $30 gift card against a $19.99 DUPR+ year. Tag DUPR and JOOLA. Keep it factual; it's their deal, not DTP's.",
+   "tags": [
+    "business",
+    "data",
+    "equipment",
+    "amateur"
+   ]
+  },
+  {
+   "title": "Noise rules: Sengkang names its 9 pickleball courts (from Nov. 1), and South Pasadena keeps courts open until 10 p.m.",
+   "summary": "Singapore: from Nov. 1, Sengkang Town Council will allow pickleball at only nine approved courts, from 10 a.m. to 7:30 p.m. Pickleball will be banned at other courts that are too close to homes or where enough residents voted for a ban. The approved sites are Anchorvale Vista (near Blocks 310B and 312A), Aspella (275B), Compassvale North Gate (262C), Rivervale Gardens (120D), Rivervale Bank (121B), Rivervale View (161), Rivervale Shores (175) and Rivervale Haven (197). The council's Oct. 8 survey of 2,092 residents found 55.1% negatively affected, mostly by ball-impact noise. The Straits Times added the court list on Oct. 23. California: after almost two hours of public comment on Oct. 21, the South Pasadena City Council voted 3-1 to keep the Orange Grove and Garfield Park courts open until 10 p.m., rejecting a 9 p.m. recommendation. Opening time moves from 5 a.m. to 7 a.m. The council also approved, 4-0, one reservable court per park (up to 60 minutes) and permits for groups of 25+, leagues and other organized play. The rules are a six-month pilot that starts after the courts are resurfaced.",
+   "status": "confirmed",
+   "date": "2026-10-23",
+   "sources": [
+    {
+     "label": "The Straits Times",
+     "url": "https://www.straitstimes.com/singapore/pickleball-to-be-limited-to-9-courts-under-sengkang-town-council-after-residents-survey"
+    },
+    {
+     "label": "Sengkang Town Council release",
+     "url": "https://www.sktc.sg/Latest-News/New-pickleball-measures"
+    },
+    {
+     "label": "Mothership",
+     "url": "https://mothership.sg/2026/10/sengkang-tc-pickleball-ban/"
+    },
+    {
+     "label": "The South Pasadenan",
+     "url": "https://southpasadenan.com/3-hour-city-council-meeting-mostly-about-pickleball-court-use-squabble-80000000-project-other-important-news/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Noise wars' roundup: one city cuts play to nine courts, another keeps the lights on until 10. Ask the community: what's fair? Pairs naturally with quiet-ball and sound-dampening content.",
+   "tags": [
+    "courts",
+    "governance",
+    "international",
+    "amateur"
+   ]
+  },
+  {
+   "title": "New courts: a closed east Cobb Walmart becomes The Pickle Pad (12 courts), and Arlington, Tenn., adds 12 pickleball courts",
+   "summary": "Cobb County, Ga.: commissioners voted 4-0 this week to allow an indoor sports facility in the former Walmart Neighborhood Market at the Olde Mill Shopping Center (Roswell and Old Canton roads). It will become a franchise of The Pickle Pad and Crave Social Eatery, with 12 pickleball courts, four golf simulators, games and a bar. Owner Jay Mathis told East Cobb News he's aiming to open by January and plans three more metro Atlanta locations. This confirms the item we flagged as unverified on Oct. 22. Arlington, Tenn.: the town is adding 12 pickleball courts and two tennis courts to its tennis center, per Action News 5.",
+   "status": "confirmed",
+   "date": "2026-10-23",
+   "sources": [
+    {
+     "label": "WSB-TV",
+     "url": "https://www.wsbtv.com/news/local/cobb-county/former-walmart-location-set-become-pickleball-venue/TQJNAXLRQFF5NNH2EX2IYQJUII/"
+    },
+    {
+     "label": "East Cobb News",
+     "url": "https://eastcobbnews.com/indoor-sports-facility-okd-at-former-walmart-grocery-site/"
+    },
+    {
+     "label": "Action News 5 (Arlington)",
+     "url": "https://www.actionnews5.com/2026/10/22/arlington-add-12-pickleball-tennis-courts-tennis-center/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Big-box to pickleball' is a fun visual angle: a grocery store becoming 12 courts. Good for a short local-growth post.",
+   "tags": [
+    "courts",
+    "clubs",
+    "business"
+   ]
+  },
+  {
+   "title": "Worlds countdown: Opendoor Pickleball World Championships Oct. 30-Nov. 8 in Farmers Branch, and MLP says Bright and Ben Johns will represent the USA at the Nations Cup",
+   "summary": "The PPA is promoting the Opendoor Pickleball World Championships, Oct. 30-Nov. 8 at Brookhaven Country Club in Farmers Branch, Texas. MLP's '8 days out' post for the inaugural MLP Nations Cup (Oct. 30-Nov. 1, also at Brookhaven) features Anna Bright and Ben Johns representing the USA. A separate MLP post spotlights Sahra Dennehy on Australia's squad. Also from the PPA: Virginia Beach produced three first-time champions (Jaume Martinez Vich, Elliott Schupp and Sofia Sewing), and Hayden Patriquin is Rate's September Player of the Month.",
+   "status": "confirmed",
+   "date": "2026-10-23",
+   "sources": [
+    {
+     "label": "@PPAtour on X",
+     "url": "https://x.com/PPAtour/status/2113460466697777493"
+    },
+    {
+     "label": "@MajorLeaguePB on X",
+     "url": "https://x.com/MajorLeaguePB/status/2113345895756423642"
+    },
+    {
+     "label": "@MajorLeaguePB: Dennehy, Team Australia",
+     "url": "https://x.com/MajorLeaguePB/status/2113360995095920935"
+    },
+    {
+     "label": "@PPAtour: Virginia Beach first-time champions",
+     "url": "https://x.com/PPAtour/status/2113321222419464278"
+    },
+    {
+     "label": "@PPAtour: Patriquin, Player of the Month",
+     "url": "https://x.com/PPAtour/status/2113328223010570525"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2113345895756423642",
+    "https://x.com/PPAtour/status/2113460466697777493"
+   ],
+   "social_angle": "One-week-out countdown post: dates, venue and the Bright/Ben Johns USA angle. Tag MLP and the PPA Tour. Save the full schedule explainer for early next week.",
+   "tags": [
+    "worlds",
+    "mlp",
+    "ppa",
+    "events"
+   ]
+  },
   {
    "title": "PPA Hong Kong Slam, Round of 16: Christian Alshon gives walkovers in all three events; Ben/Tardio and Bright/ALW roll; Haworth and Hunter Johnson lose in men's doubles",
    "summary": "Thursday (Hong Kong time) was round-of-16 day at Kai Tak Arena. The biggest story: Christian Alshon won all three of his matches Wednesday, then gave walkovers in all three of his round-of-16 matches. The official bracket records them as walkovers and gives no reason (ThePickleBase). Grayson Goldin advances in men's singles, Zane Navratil and George Wall in men's doubles (over Yuta Funemizu/Alshon, the No. 3 seeds), and Ting Chieh Wei and Hunter Johnson in mixed (over Parris Todd/Alshon). Scores from ThePickleHub's mirror of the official feed, as of about 5 a.m. CT: Ben Johns and Gabriel Tardio beat Luc Pham and Will Mackinnon 11-2, 11-5. Eric Oncins and Noe Khlif beat Hunter Johnson and Christopher Haworth 11-5, 11-1. Tama Shimabukuro and JW Johnson beat Casey Diamond and Tyson McGuffin 11-1, 11-3. Collin Johns and Len Yang got past home pair Eunggwon Kim and Hong Kit Wong 11-3, 8-11, 11-5. Women's doubles: Anna Bright and Anna Leigh Waters beat Jamie Haas and Rika Fujiwara 11-0, 11-3. Sahra Dennehy and Danni-Elle Townsend upset Allyce Jones and Kaitlyn Christian 11-7, 4-11, 11-6. Singles: Haworth beat Hien Truong 11-4, 11-3, Hunter Johnson beat McGuffin 11-8, 11-7, Shimabukuro beat Luc Pham 11-2, 11-2, and Federico Staksrud came back to beat Oncins 2-11, 11-4, 11-6. Christian beat Ho Tam 11-0, 11-3. Friday's women's singles quarterfinals: Christian vs. Judit Castillo, Yufei Long vs. Kiora Kunimoto, Chao Yi Wang vs. Andie Dikosavljevic, and Dennehy vs. Fujiwara. Haworth plays Khlif in the men's singles quarterfinals. Women's doubles quarterfinals include Bright/Waters vs. Dennehy/Townsend. Ben Johns/Waters vs. Alix Truong/Haworth (mixed round of 16) was still live when we checked.",
