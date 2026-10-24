@@ -1,9 +1,187 @@
 {
- "updated": "2026-10-23T06:13-05:00",
- "date": "2026-10-23",
- "source_file": "dtp-newsroom/buzz-2026-10-23.json",
+ "updated": "2026-10-24T06:10-05:00",
+ "date": "2026-10-24",
+ "source_file": "dtp-newsroom/buzz-2026-10-24.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "PPA Hong Kong Slam semifinals: Waters/Ben Johns vs. Bright/Patriquin set for the mixed final; Hunter Johnson comes back on Staksrud; Dikosavljevic and Castillo reach the women's singles final",
+   "summary": "Saturday (Hong Kong time) was semifinal day at the PPA Hong Kong Slam. Women's singles: Andie Dikosavljevic beat Sahra Dennehy 11-1, 11-3, and Judit Castillo beat Kiora Kunimoto 11-8, 11-7. The two players who knocked out the top two seeds in the quarterfinals now meet in the final. Men's singles: Hunter Johnson came back to beat Federico Staksrud 3-11, 11-8, 11-5, and Tama Shimabukuro beat Noe Khlif 11-8, 11-2. Final: Shimabukuro vs. Hunter Johnson. Men's doubles: Ben Johns and Gabriel Tardio beat Shimabukuro and JW Johnson 11-7, 11-6, and Staksrud and Hayden Patriquin beat Connor Garnett and Dylan Frazier 11-9, 11-1. Final: Johns/Tardio vs. Staksrud/Patriquin. Women's doubles: Anna Bright and Anna Leigh Waters beat Sofia Sewing and Catherine Parenteau 11-4, 11-0, and Jorja Johnson and Tyra Hurricane Black beat Rohrabacher/Todd 4-11, 11-9, 11-2. Final: Bright/Waters vs. Black/Jorja Johnson. Mixed: Ben Johns and Waters beat Ting Chieh Wei and Hunter Johnson 11-0, 11-1, and Bright and Patriquin beat Jorja and JW Johnson 11-2, 9-11, 11-9. Final: Waters/Ben Johns vs. Bright/Patriquin. Championship Sunday is Oct. 25 Hong Kong time, which is Saturday night CT. Hong Kong is 13 hours ahead. The official feed lists the finals as scheduled but gives no match times, so check the PPA Tour for start times. Off-court moments from the PPA: Patriquin gave his paddle to a young fan, and Ben Johns thanked the crowd in Cantonese.",
+   "status": "confirmed",
+   "date": "2026-10-24",
+   "sources": [
+    {
+     "label": "@PPAtour: Dikosavljevic d. Dennehy",
+     "url": "https://x.com/PPAtour/status/2113808276756267008"
+    },
+    {
+     "label": "@PPAtour: Hunter Johnson d. Staksrud",
+     "url": "https://x.com/PPAtour/status/2113851298541977955"
+    },
+    {
+     "label": "@PPAtour: Hunter Johnson clip",
+     "url": "https://x.com/PPAtour/status/2113851582508933609"
+    },
+    {
+     "label": "@PPAtour: Ben Johns/Tardio d. Shimabukuro/JW Johnson",
+     "url": "https://x.com/PPAtour/status/2113916531125957100"
+    },
+    {
+     "label": "@PPAtour: Staksrud/Patriquin d. Garnett/Frazier",
+     "url": "https://x.com/PPAtour/status/2113931878331781141"
+    },
+    {
+     "label": "@PPAtour: Bright/Waters d. Sewing/Parenteau",
+     "url": "https://x.com/PPAtour/status/2113877590956036341"
+    },
+    {
+     "label": "@PPAtour: Jorja Johnson/Black d. Rohrabacher/Todd",
+     "url": "https://x.com/PPAtour/status/2113876982131822787"
+    },
+    {
+     "label": "@PPAtour: Ben Johns/Waters d. Wei/Hunter Johnson",
+     "url": "https://x.com/PPAtour/status/2113931128482459857"
+    },
+    {
+     "label": "@PPAtour: Bright/Patriquin d. Jorja/JW Johnson",
+     "url": "https://x.com/PPAtour/status/2113944679137923166"
+    },
+    {
+     "label": "@PPAtour: Patriquin gives paddle to a fan",
+     "url": "https://x.com/PPAtour/status/2113931627520835790"
+    },
+    {
+     "label": "@PPAtour: Ben Johns thanks fans in Cantonese",
+     "url": "https://x.com/PPAtour/status/2113909092544565684"
+    },
+    {
+     "label": "ThePickleHub (results mirror of official PPA feed)",
+     "url": "https://www.thepicklehub.net/blog/hong-kong-slam-2026-results"
+    },
+    {
+     "label": "PPA Tour Asia event page",
+     "url": "https://www.ppatour-asia.com/tournament/2026/hong-kong-slam/"
+    },
+    {
+     "label": "PPA Tour YouTube: semifinals stream",
+     "url": "https://www.youtube.com/watch?v=ArM7xn-tTJk"
+    },
+    {
+     "label": "PPA Tour YouTube: semifinals stream 2",
+     "url": "https://www.youtube.com/watch?v=EEmIRkQIfYY"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2113944679137923166",
+    "https://x.com/PPAtour/status/2113851298541977955",
+    "https://x.com/PPAtour/status/2113931128482459857",
+    "https://x.com/PPAtour/status/2113931627520835790"
+   ],
+   "social_angle": "'Finals are set' card with all five matchups. Lead with the mixed final, Waters/Ben Johns vs. Bright/Patriquin, since Bright and Patriquin needed 11-9 in game three. Post Saturday evening CT before finals start. Embed the official @PPAtour posts and tag the PPA Tour. Patriquin's paddle gift is the feel-good clip.",
+   "tags": [
+    "ppa",
+    "pro-tour",
+    "results",
+    "international",
+    "anna-leigh-waters",
+    "players"
+   ]
+  },
+  {
+   "title": "Beyond The Bounce signs Zane Navratil for original programming and adds Jason Aspes, Adam Ryan, Jorja Johnson, JW Johnson and Dekel Bar as owner-advisors",
+   "summary": "Beyond The Bounce, a pickleball social platform, announced on Oct. 23 that pro Zane Navratil will develop exclusive original programming for it. The company also added owner-advisors: Jason Aspes (president of the UPA-A and co-founder of The Kitchen), Adam Ryan, Jorja Johnson, JW Johnson and Dekel Bar. The release says the platform is live, with iOS and Android apps coming soon. It quotes Navratil and APCM executives Mookie McDevitt (EVP) and Joe Sexton (President). The release also mentions a 'limited investment opportunity'. That's the company's own pitch, not something DTP endorses.",
+   "status": "confirmed",
+   "date": "2026-10-24",
+   "sources": [
+    {
+     "label": "PR Newswire release",
+     "url": "https://www.prnewswire.com/news-releases/beyond-the-bounce-announces-original-programming-with-zane-navratil-and-expands-ownership--advisory-team-302918325.html"
+    },
+    {
+     "label": "Beyond The Bounce advisors page",
+     "url": "https://www.beyondthebounce.com/advisors"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Media and business note: 'Zane Navratil gets his own show.' Fits with his screaming-debate comments from Oct. 19. Keep it factual, and don't amplify the investment pitch.",
+   "tags": [
+    "business",
+    "media",
+    "players"
+   ]
+  },
+  {
+   "title": "'Charlie's Angels': Tucson pickleball partners use CPR and an AED to save a 72-year-old player at Udall Park",
+   "summary": "In late September, Charlie, a 72-year-old player, collapsed during a game at Udall Park in Tucson. KGUN spells his last name Corley and KOLD spells it Corle. Fellow players stepped in. Retired ER physician Dr. Ron Widman started CPR. KGUN says nurse Margy Eller helped, and KOLD adds that an off-duty Tucson paramedic and two retired nurses joined in. The AED delivered two shocks, and Charlie is back playing pickleball. Carondelet held a ceremony on Friday, Oct. 23, to honor the rescuers, with CPR demonstrations. Udall players will be offered CPR training.",
+   "status": "confirmed",
+   "date": "2026-10-24",
+   "sources": [
+    {
+     "label": "KOLD",
+     "url": "https://www.kold.com/2026/10/23/bystanders-save-pickleball-players-life-with-cpr-aed-udall-park/"
+    },
+    {
+     "label": "KGUN 9",
+     "url": "https://www.kgun9.com/sports/local-sports/pickleball-partners-become-charlies-angels-after-saving-72-year-olds-life-on-the-court"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Community and safety post: 'Does your court have an AED?' Link both local reports. Use it to encourage CPR training and AED checks at clubs.",
+   "tags": [
+    "community",
+    "health",
+    "amateur",
+    "courts"
+   ]
+  },
+  {
+   "title": "New courts: Chatham-Kent opens 10 courts at St. Clair College Community Park, and Chatham Borough, N.J., approves 4 pickleball courts at the Minisink Club despite noise worries",
+   "summary": "Chatham-Kent, Ont.: St. Clair College Community Park on Bear Line Road opened on Friday, Oct. 23, with 10 pickleball courts (the most in Chatham-Kent) and a new playground. CK News Today quotes Ann Balkwill of the CK Pickleball Club and CAO Michael Duben. Chatham Borough, N.J.: on Oct. 20, the Zoning Board voted 5-1 to let the Minisink Club at 1 Princeton St. replace two Har-Tru tennis courts with four pickleball courts. Neighbors had raised noise concerns during the long-debated application (New Jersey Hills).",
+   "status": "confirmed",
+   "date": "2026-10-24",
+   "sources": [
+    {
+     "label": "CK News Today",
+     "url": "https://cknxnewstoday.ca/chatham/news/2026/10/23/new-pickleball-courts-playground-open-at-chatham-community-park"
+    },
+    {
+     "label": "New Jersey Hills (Chatham Courier)",
+     "url": "https://www.newjerseyhills.com/chatham_courier/news/pickleball-courts-coming-to-minisink-club-as-chatham-approves-long-debated-project/article_371421d7-fa39-4aa1-8590-296a78c2c6cc.html"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Two Chathams, one week' local-growth post: one opens 10 courts, the other approves 4 after a noise fight. Fits the running noise-rules thread.",
+   "tags": [
+    "courts",
+    "governance",
+    "international",
+    "amateur"
+   ]
+  },
+  {
+   "title": "USA Pickleball names eight APP Tour events as 2027 Golden Ticket National Qualifiers, starting with the APP Arizona Open (Nov. 12-15)",
+   "summary": "USA Pickleball has named eight APP Tour events as official Golden Ticket National Qualifiers for the 2027 Oceanview USA Pickleball National Championships. Gold medalists in qualifying divisions earn Priority Registration for Nationals, and all players can earn Tiered Point System (TPS) points. The events: APP Arizona Open (Nov. 12-15, 2026, Mesa), APP Tour Championships (Dec. 3-6, 2026, The FORT, Fort Lauderdale), Boca Raton Open (Jan. 21-24, 2027), Palm Beaches Open (Feb. 18-21), Seattle Open (Apr. 1-4), Sacramento Open (Apr. 29-May 2), Southern California Open (June 3-6, Seal Beach) and Detroit Open (July 22-25, Novi). Registration is open for USA Pickleball's own Golden Tickets in Glendale, Ariz. (Jan. 12-17, 2027; closes Jan. 4) and Las Vegas (Feb. 23-28, 2027; closes Feb. 15).",
+   "status": "confirmed",
+   "date": "2026-10-24",
+   "sources": [
+    {
+     "label": "USA Pickleball release",
+     "url": "https://usapickleball.org/usap-news/usa-pickleball-announces-eight-app-tour-events-as-2027-golden-ticket-national-qualifiers/"
+    },
+    {
+     "label": "USA Pickleball Golden Ticket hub",
+     "url": "https://usapickleball.org/goldenticket/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Amateur explainer: 'How to earn a Golden Ticket to 2027 Nationals' with the eight-event calendar. Evergreen SEO page potential. Tag USA Pickleball and the APP.",
+   "tags": [
+    "amateur",
+    "events",
+    "usa-pickleball",
+    "app"
+   ]
+  },
   {
    "title": "PPA Hong Kong Slam quarterfinals: both top women's singles seeds fall, Ben Johns beats brother Collin, and Ben/ALW win 11-1, 11-0",
    "summary": "Friday (Hong Kong time) was quarterfinal day at Kai Tak Arena. Women's singles lost its top two seeds: Judit Castillo beat No. 1 Kaitlyn Christian 11-9, 5-11, 12-10, and Andie Dikosavljevic beat No. 2 Chao Yi Wang 11-8, 11-6. Kiora Kunimoto beat Yufei Long 8-11, 11-6, 11-3 and Sahra Dennehy beat Rika Fujiwara 11-6, 8-11, 11-3. Men's singles: Federico Staksrud survived home favorite Hong Kit (Jack) Wong 8-11, 11-9, 12-10. Wong, the last Hong Kong player left, had match point at 10-9 in the decider (The Standard). Noe Khlif beat Christopher Haworth 13-11, 11-3, Hunter Johnson beat Connor Garnett 11-9, 11-4, and Tama Shimabukuro beat Grayson Goldin 11-9, 8-11, 11-6. Men's doubles: Ben Johns and Gabriel Tardio beat Collin Johns and Len Yang 11-3, 11-3. Also through: Staksrud/Patriquin, Garnett/Frazier and Shimabukuro/JW Johnson. Women's doubles: Bright/Waters, Sewing/Parenteau, Rohrabacher/Todd and Jorja Johnson/Tyra Hurricane Black. Mixed: Ben Johns and Anna Leigh Waters beat Jonathan Truong and Jessie Irvine 11-1, 11-0. Also through: Bright/Patriquin, Jorja/JW Johnson and Ting Chieh Wei/Hunter Johnson, who beat Christian/Frazier 5-11, 11-5, 11-9. Semifinals per the official feed: women's singles Dikosavljevic vs. Dennehy and Castillo vs. Kunimoto; men's singles Khlif vs. Shimabukuro and Staksrud vs. Hunter Johnson; men's doubles Ben Johns/Tardio vs. Shimabukuro/JW Johnson and Staksrud/Patriquin vs. Garnett/Frazier; women's doubles Bright/Waters vs. Sewing/Parenteau and Black/Jorja Johnson vs. Rohrabacher/Todd; mixed Bright/Patriquin vs. Jorja/JW Johnson.",
