@@ -223,6 +223,7 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 /* own affiliate code callout (own_codes.py) */
 .owncode{background:#f4ffd6;border:3px solid var(--navy);border-left:10px solid var(--neon);border-radius:16px;padding:14px 16px;margin:12px 0;display:flex;flex-direction:column;gap:.5rem;color:var(--navy)}.owncode .owntag{display:inline-block;align-self:flex-start;background:var(--navy);color:var(--neon);font-weight:900;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin:0}.owncode .ownhead{font-size:1.25rem;font-weight:800;margin:0;line-height:1.25}.owncode .cshop{font-weight:800;color:var(--navy)}.owncode .ownhow{font-size:1.05rem;margin:0}.owncode .ccode{white-space:nowrap;font-size:clamp(1rem,5.2vw,1.5rem);padding-left:.6rem;padding-right:.6rem}.owncode .ownnote{font-size:1.05rem;margin:0;background:#fff3c4;border-radius:10px;padding:8px 10px}.owncode .owndisc{font-size:.92rem;color:#3d4a63;margin:0}.owncode .owndisc a{color:inherit}
 """
+import volair_page; CSS += volair_page.CSS  # dedicated /discount-codes/volair page
 # Always-visible primary tabs (mobile-first). Codes uses the clean /discount-codes URL.
 TABS = [("buzz.html","Buzz"),("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
 TAB_ON = {"/discount-codes": ("discount-codes.html",), "guides.html": ("guides.html", "guides/"), "paddles.html": ("paddles.html", "paddle-")}
@@ -665,7 +666,7 @@ def build():
     for c in codes:
         if c["brand"] not in best or score(c) > score(best[c["brand"]]): best[c["brand"]] = c
     jump = "".join(f'<a href="#{slugb(b)}">{e(b)} · {e(best[b]["discount"])}</a>' for b in brands)
-    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2>{own_codes.callout(e, OWN[b]) if b in OWN else ""}<div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
+    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2>{own_codes.callout(e, OWN[b]) if b in OWN else ""}{f'<p><a class="btn" href="/discount-codes/{slugb(b)}">{e(b)} promo code: how to use it + lineup →</a></p>' if b == "Volair" else ""}<div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
     nocode = "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
     nocode += "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> The code we were tracking was no longer shown on its source page, so we removed it.</li>'
                       for b in sorted({r["brand"] for r in DC.get("removed", [])} - {c["brand"] for c in codes} - set(DC.get("no_code", {})), key=str.lower))
@@ -773,6 +774,12 @@ def build():
         rel_html = "".join(f'<a href="/discount-codes/{slugb(x)}">{e(x)} codes</a>' for x in related(b))
         crumbs = [{"name": "Home", "url": C["BASE_URL"].rstrip("/") + "/"}, {"name": "Discount codes", "url": canon("discount-codes.html")}, {"name": f"{b} codes", "url": url}]
         crumb_html = f'<nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="/discount-codes">Discount codes</a> › <span>{e(b)}</span></nav>'
+        if b == "Volair":  # dedicated promo-code page (volair_page.py) instead of the generic brand page
+            import volair_page
+            def vcard(c): return ccard(c).replace('<div class="cdisc">', f'<div class="ctype meta">{e(otype(c["discount"]))}</div><div class="cdisc">', 1)
+            volair_page.make(page, e, fmt, C, OWN, PD, D("price_history.json").get("paddles", {}), go_slug, paddle_pages.slug, "".join(vcard(c) for c in bc), copyjs, crumbs, crumb_html, canon,
+                             {"codes": [(c["code"], c["discount"], c["conditions"], c["source_url"], c.get("verified")) for c in bc], "own": (OWN.get(b) or {}).get("code")})
+            continue
         if bc:
             title = f"{b} discount codes & promo codes (verified {month})"
             srcs = sorted({c["source"] for c in bc}, key=str.lower)

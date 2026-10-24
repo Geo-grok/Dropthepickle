@@ -14,6 +14,11 @@ export default {
     if (url.pathname.startsWith("/media/")) {
       return handleMedia(request, env);
     }
+    // /discount-codes/Volair etc.: brand pages are lowercase slugs, so send case variants to the real page instead of a 404.
+    if (url.pathname.startsWith("/discount-codes/") && url.pathname !== url.pathname.toLowerCase()) {
+      url.pathname = url.pathname.toLowerCase();
+      return Response.redirect(url.toString(), 301);
+    }
     return env.ASSETS.fetch(request);
   },
 };
