@@ -28,7 +28,8 @@
       "approved": "2026-10-23",
       "active": true,
       "terms_note": "Volair terms: don't post the code on deal sites or Reddit. Our own site is fine.",
-      "how": "Type DROPTHEPICKLE in the discount code box at checkout on volair.com and tap Apply. Volair doesn't publish whether it combines with sale prices or other codes, so check the total before you pay."
+      "how": "Type DROPTHEPICKLE in the discount code box at checkout on volair.com and tap Apply. Volair doesn't publish whether it combines with sale prices or other codes, so check the total before you pay.",
+      "page": "/discount-codes/volair"
     }
   ],
   "SIGNUP_ENDPOINT": "/api/signup",

@@ -82,7 +82,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     X = X or {}
     import own_codes; OWN = own_codes.own_codes(C)  # our own affiliate codes (config.json OWN_CODES)
     NOAPPLY = "Volair doesn't tag this paddle as included in its discounts, so the code may not apply to it. Check the total before you pay."
-    def owncall(p, js=True): return own_codes.callout(e, OWN[p["brand"]], js=js, note=NOAPPLY if p.get("code_excluded") else "") if p["brand"] in OWN else ""
+    def owncall(p, js=True): return own_codes.callout(e, OWN[p["brand"]], js=js, note=NOAPPLY if p.get("code_excluded") else "", details=True) if p["brand"] in OWN else ""
     H = D("price_history.json").get("paddles", {})
     ph = lambda p: H.get(f'{p["brand"]} {p["model"]}', {})
     cur = lambda p: ph(p).get("current", p["price"])
@@ -202,6 +202,9 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         body = f'{vh}{DISC}{SRC}<p class="meta">Same-category pair ({"; ".join(same) or "shared spec fields"}). Highlighted cells are the lower maker price or more listed core thicknesses. That is not a performance ranking.</p><h2>Specs side by side</h2><div class="tbl vs"><table><tr><th></th><th><a href="{slug(A)}">{e(A["model"])}</a></th><th><a href="{slug(B)}">{e(B["model"])}</a></th></tr>{rows}</table></div><h2>Differences in the published specs</h2><ul>{"".join(f"<li>{e(x)}</li>" for x in diff) or "<li>The published spec fields shown here match.</li>"}</ul>'
         for p in (A, B): body += f'<h2>{e(p["model"])}: notes from the specs</h2>{pc(p)}<h3>Reviewer videos</h3>{vlist(p)}'
         body += '<p class="meta">These notes restate published specs. They are not lab or on-court test results.</p>'
+        for ob in dict.fromkeys(x["brand"] for x in (A, B) if x["brand"] in OWN):  # our own code for a brand in this pair, once per brand
+            ex = [x["model"] for x in (A, B) if x["brand"] == ob and x.get("code_excluded")]
+            body += f'<h2>{e(ob)} promo code</h2>' + own_codes.callout(e, OWN[ob], js=True, note=(f"{ex[0]}: " + NOAPPLY) if ex else "", details=True)
         page(fn, t, body, f"{t}: maker specs and latest checked prices for a same-category pair. No score or rating from us.",
              fresh=[fresh_p(A), fresh_p(B)], schema=[item_list([A, B])]); vs_links.append((fn, t))
     # best-of lists
@@ -253,7 +256,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         return pcard(p, f"-{pct}% · " + ("Down from our last recorded price" if h.get("drop") else "vs. the maker's compare-at price") + f" · lowest we've seen {money(p, h.get('low', cur(p)))}", own=True)
     upd = D("price_history.json").get("updated", "")
     # Our own codes (stacking with sales is unconfirmed); one copy handler for the strip and any own-code brand cards.
-    OWNSTRIP = (("<h2>Our own code</h2>" + "".join(own_codes.callout(e, oc) for _b, oc in sorted(OWN.items()))) + own_codes.COPY_JS) if OWN else ""
+    OWNSTRIP = (("<h2>Our own code</h2>" + "".join(own_codes.callout(e, oc, details=True) for _b, oc in sorted(OWN.items()))) + own_codes.COPY_JS) if OWN else ""
     page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Paddle deals</h1>{DISC}{OWNSTRIP}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p><p class="meta"><a href="discount-codes.html"><b>Stack a coupon: see current discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals at our last check. Check back later.</p>"}</div>',
          f"Pickleball paddle price drops and maker-site sales, checked on each brand's own page. {price_checked(upd, fmt, e, html=False)}",
          fresh=[fresh_p(p) for p in deals], schema=[item_list(deals)] if deals else None)
