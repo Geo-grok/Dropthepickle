@@ -16,24 +16,24 @@
   "updated": "2026-10-21"
  },
  "best-16mm-paddles.html": {
-  "hash": "0c74181e485e8860ae1fa80d65a26d30d36a8f9957913a316ff84ccab1d6ec63",
-  "updated": "2026-10-23"
+  "hash": "0fd52b6e1b46705a091a776aabe4918381d764584387be5a1c3313d5751d1e0d",
+  "updated": "2026-10-24"
  },
  "best-crbn-paddles.html": {
   "hash": "1fbe8b1301e5d4ff094bf0286695d5f06ca13e0989890a26e3e815b090fced3f",
   "updated": null
  },
  "best-elongated-paddles.html": {
-  "hash": "2c90122ae9991165d4930f07322768e8d6b00b48ad72f27d4383f180fe3a8869",
-  "updated": "2026-10-23"
+  "hash": "72abafc34276606b59a781de128f765da222645dc8111442793a411cc06b5f6d",
+  "updated": "2026-10-24"
  },
  "best-engage-paddles.html": {
   "hash": "2c149178deadbb28e7fe41c3455189555297f2f33610ceb7ad2124f17982ab04",
   "updated": null
  },
  "best-gearbox-paddles.html": {
-  "hash": "6cca4d52de36f41f13095d680a77f9466dd8183b23d9aa50a0c34370c00a26f9",
-  "updated": "2026-10-23"
+  "hash": "67fd91b6c9944b037e05e1577d4666a14174a03f2629f47b8821a2f496646e94",
+  "updated": "2026-10-24"
  },
  "best-joola-paddles.html": {
   "hash": "d63f82e8ea690efef96147e6cfd793ae3e7240fb7c0f11d56871c4c2464f13a9",
@@ -44,28 +44,28 @@
   "updated": "2026-10-23"
  },
  "best-paddles-for-beginners.html": {
-  "hash": "9c2398a98b79db24b100d366b8c0469cc1891e7ef09c2b99cfa7f7fde4527a07",
-  "updated": "2026-10-23"
+  "hash": "cbed0df71de3391312ca1d4c370d9069b57646f3fbbc2b0f256463b9394dbc45",
+  "updated": "2026-10-24"
  },
  "best-paddles-for-control.html": {
-  "hash": "24ce9cbb6223b52dfb30944c878864c46b60bac7592a1f6f72d4e5f0cde98bff",
-  "updated": "2026-10-23"
+  "hash": "2e274a113e398a4c80b384868357aebb8f6d356ad3e1ea8ebcc8e9dbcd801ab4",
+  "updated": "2026-10-24"
  },
  "best-paddles-for-power.html": {
-  "hash": "abc919b06ddaed3da8bdc99aa55fff6dab018989966fefe2bb6e2f19c765f0ba",
-  "updated": "2026-10-23"
+  "hash": "cbbd23a86d8c2ef6d68eac7e6426437c4898b568f41df836af15320e5509b32d",
+  "updated": "2026-10-24"
  },
  "best-paddles-for-tennis-players.html": {
-  "hash": "07369679d654181cf8f7e9ef35b9762e8eea00e0f702358a25040a0e0882cb01",
-  "updated": "2026-10-23"
+  "hash": "2640cfc99f272228e2c3f41543136d1a9c6a22a93f761e15c48633c483042bb5",
+  "updated": "2026-10-24"
  },
  "best-paddles-under-100.html": {
-  "hash": "59cbb2a0a685bbec16f25ce361eba6ae4e5b026b6725376e5f821645573497b4",
-  "updated": "2026-10-23"
+  "hash": "eb60df0726b53ce5cd9004c8924d957456db2fd9aa825d2ff3bff0ce6a0e24b9",
+  "updated": "2026-10-24"
  },
  "best-paddletek-paddles.html": {
-  "hash": "dacb17888311366e666be9696e2f40bbc03de19ee80b6aee94bd0065869ad632",
-  "updated": null
+  "hash": "06e8dc49b6426a65b017e0db8799a590bf338d60b3d9cb80c7b067d1ccaad433",
+  "updated": "2026-10-24"
  },
  "best-selkirk-paddles.html": {
   "hash": "e23de58ba90ccfc77abd78ae612dc1439e95bd83b20e345b304036508b4bf200",
@@ -92,8 +92,8 @@
   "updated": null
  },
  "deals.html": {
-  "hash": "195b154acb947deabdb08fe7ce87ffc176424831c0382356e0e88ef6923dfb4e",
-  "updated": "2026-10-23"
+  "hash": "962b0e9cc54eac127060bf06f06f08f93c6009591e3e67245fdb018a30b98141",
+  "updated": "2026-10-24"
  },
  "discount-codes.html": {
   "hash": "33e76993f26ca5761031ddc9719be1ca7d4669a2cc7ad4a385c0a73e55a55942",
@@ -552,44 +552,40 @@
   "updated": null
  },
  "events/cape-coral-open.html": {
-  "hash": "411f93026ee5465958546123cd8136202da782a945013812b529fffaedf2575c",
-  "updated": null
+  "hash": "f30703b210961ec4440c286cb371a0d2c2bfdd9d50f5a7b1dd02bec99b7d6313",
+  "updated": "2026-10-24"
  },
  "events/carvana-mesa-cup.html": {
-  "hash": "a4a4d2cbe4e92d92fa1f9f8e7f025ab66759152f575809e348a2f73ba31c9f31",
-  "updated": null
+  "hash": "3fd288585b95137dd9fcd5f67c9a2118c846776113a1286a1ebc621e56c77271",
+  "updated": "2026-10-24"
  },
  "events/carvana-pickleball-masters-powered-by-invited.html": {
-  "hash": "78902f5293ec57bf5d33144da57a3385a41fbbf99da7857047f273902893bf0b",
-  "updated": null
+  "hash": "c165e5ad99605e7362f4b925fb796ee26cf770eee0470e69d175013d6f3a14ca",
+  "updated": "2026-10-24"
  },
  "events/cincinnati-open.html": {
   "hash": "819ea636b1905875e350e2deb93ea3ecea75a290ce3e8f565da49b214cd8c2a8",
   "updated": null
  },
  "events/greater-zion-cup.html": {
-  "hash": "3f958e23637407db3c7d2f3ed65fe05be057704f250d371f401e3f5c92876710",
-  "updated": null
+  "hash": "73fbf90c3744eaa847c8f3b271ed4f1850a7ff9496883944abf7c007712d751e",
+  "updated": "2026-10-24"
  },
  "events/minneapolis-indoor-open.html": {
-  "hash": "08da3ef5e13e2f37757a46530efecaf5cccb04f9326a782cf55c73b199f53041",
-  "updated": null
- },
- "events/mojo-energy-pouches-virginia-beach-open.html": {
-  "hash": "91aa9cfb5613e5a3f16b19fae2206c78000855cf96fda0ddaf91678237ef1e75",
-  "updated": null
+  "hash": "8976670dda956de8455cedf6533953568bced0ba1f06b82093ac8fc769620b3c",
+  "updated": "2026-10-24"
  },
  "events/newport-beach-open.html": {
-  "hash": "87560da66648a01b35809eb35453c2581f9afd0612ec85b5ca1122da0b0eaca3",
-  "updated": null
+  "hash": "bd62d020ee671a1042fd8feebd7eba422f2f4765c6ebce00e6745e82904566a8",
+  "updated": "2026-10-24"
  },
  "events/opendoor-pickleball-world-championships.html": {
-  "hash": "a11f1012681e0031efb1944afd08348df58ef9641d49632e4a674fb66e9d1b84",
-  "updated": null
+  "hash": "1410efdafb274853e69b186e1a57f822558f4e089e6548331d2c898b6363bbeb",
+  "updated": "2026-10-24"
  },
  "events/pickleball-players-championships.html": {
-  "hash": "e09fa6fc30b72f46ea94fce971f9e365b99799c67d2caace1593ea09da51c748",
-  "updated": null
+  "hash": "6705998aedb9ac4dd9dda8c331334b446d8a0c4cb3eb47947ab6057326db2661",
+  "updated": "2026-10-24"
  },
  "events/ppa-finals.html": {
   "hash": "145e6fd2057216b739db4ab05e0ee9c9956fbe6412fa74ec1f92750a9229f233",
@@ -600,20 +596,20 @@
   "updated": null
  },
  "events/proton-daytona-beach-open.html": {
-  "hash": "30d977f867605a8e3bd7511fa18fbc0a52651bbae30f3f1528055e6971c01adb",
-  "updated": null
+  "hash": "a42bd0f7febc4f0600ef3a6f3479500e41c72b470c0a408c524558912e71674f",
+  "updated": "2026-10-24"
  },
  "events/sacramento-open.html": {
   "hash": "6fbe29023c41abd81cec8d8a55a36396d0272e763fce4e402607c51077f6015e",
   "updated": null
  },
  "events/veolia-malibu-showcase.html": {
-  "hash": "0c53aece496f269581d3a8ab7b5b236572c7a0103c6363c50e79a9671883348d",
-  "updated": null
+  "hash": "8f287e4ff3ab49909f2a62fe5fa03d847ca6f608d1077eb007d965b8810fc0bf",
+  "updated": "2026-10-24"
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "e3dac80ade9021bbccee0c1377f23c358b56811bd96bf5c04132e487b898e37d",
-  "updated": "2026-10-23"
+  "hash": "9e07ce3128b84afbf9b3880a877fc031711208402a2b0883a772b05bb8b253a2",
+  "updated": "2026-10-24"
  },
  "guides/how-to-choose-a-paddle.html": {
   "hash": "8704b8ef0ca137ad600dcbc451caed63816b91d1533f4c82e710011e94946fe9",
@@ -652,12 +648,12 @@
   "updated": null
  },
  "index.html": {
-  "hash": "61e7f56097978533ff6aa0d294ecfdb37b541c81ec5ee83c29ed8abf1d2040e4",
+  "hash": "9749c59cfbbe27f68a6935940036d20c595e3bcf7c8bd3bffc1393b90fc62589",
   "updated": "2026-10-24"
  },
  "news.html": {
-  "hash": "3658f0d84396a43ea1a444e0070bc67f5ec5427fe8739bfdd394d46763e1c337",
-  "updated": null
+  "hash": "bbdc4142061dac67f20e7a1cc3f32ffd43fa5a51e6516aa8cc901f2ac7484f61",
+  "updated": "2026-10-24"
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
   "hash": "dc9f574209e8c863d95e7ae37e241d4b079958ca7bd42d9080d413718476a708",
@@ -688,8 +684,8 @@
   "updated": null
  },
  "paddle-gearbox-gbx-power-elongated-gen-3.html": {
-  "hash": "165aa01d382e312bd47f0aeebddea870177914861a269ba57d96ae2c261072f7",
-  "updated": "2026-10-23"
+  "hash": "e54bb278a3c2f78cb3b3eff1a7b67877b00b57a5af6514a36339d1f197c82b4c",
+  "updated": "2026-10-24"
  },
  "paddle-gearbox-gx2-power-hybrid.html": {
   "hash": "a599d884f6b51c9c7f108334d873606206327c279e20f19f4d836b5fc3a73886",
@@ -736,8 +732,8 @@
   "updated": null
  },
  "paddle-paddletek-honeyfoam-tko-x.html": {
-  "hash": "0b7f838b620a81622377e70e19a52328e22217c7c4842b03d8dd751f1106167e",
-  "updated": null
+  "hash": "413f7c6bd5eba155f10ee00ecab620b270a2b9736664c68165b70a4fcf7b76fc",
+  "updated": "2026-10-24"
  },
  "paddle-paddletek-tempest-wave-pro-c.html": {
   "hash": "7d67a768de8f6862ee2269d5281e17b7de643d896d2d48436ae2b72a022ce0e8",
@@ -784,60 +780,60 @@
   "updated": null
  },
  "paddle-volair-cmd-el-16mm.html": {
-  "hash": "778829094f590b2ef4a5468b3f481576ea1135a536dbf00f392cb4b07b29f5cb",
-  "updated": null
+  "hash": "2d66784af3c70450bb8412365e5671cf3a9967b5c798d3fed3e4bb91480bf987",
+  "updated": "2026-10-24"
  },
  "paddle-volair-cmd-hyb-16mm-dylan-frazier.html": {
-  "hash": "01e825c5892ba5f653885dc930734ee104893fa2a9efc0138a38c9dea7fba691",
-  "updated": null
+  "hash": "4eec18b672d3c31bba965b13ffed0d5dcd8b10ef686bdd7a67c9721c58b47930",
+  "updated": "2026-10-24"
  },
  "paddle-volair-cmd-wb-16mm.html": {
-  "hash": "c710567464b9fd676ebad678a858de7b5b1a2b78bc4cd53191480988a6c9938f",
-  "updated": null
+  "hash": "95f7dc792687ef8d75fd0be0fe0398ecc51852b0e97790662ebcafe9e779b1f6",
+  "updated": "2026-10-24"
  },
  "paddle-volair-ctrl-1-forza.html": {
-  "hash": "46ab5456f637800ff86432e7be35c879af6edd83365252e8b49f9310a138c008",
-  "updated": null
+  "hash": "ac894074ba2e7f99d6481d5d877c92d889d90a766a36adb6807da59bab0222d9",
+  "updated": "2026-10-24"
  },
  "paddle-volair-ctrl-2-forza.html": {
-  "hash": "90a3bfbb09b71e4a69c7e410afc66e45a25dc98bfbaaf73fdbbfb86cd55cf0ea",
-  "updated": null
+  "hash": "a66b8e98b0d570f0d15970e0ddf5d44b8eea023810628d719cd2bb9698b077b1",
+  "updated": "2026-10-24"
  },
  "paddle-volair-mach-1-forza.html": {
-  "hash": "5253aba1713d836a8526677fbe756754f80b5fccd7698063d7f7ac219fe4483a",
-  "updated": null
+  "hash": "2b6fa5f3af9f483a92c6acd7dc38dc14cce20679602947db1382e11c375d0ab3",
+  "updated": "2026-10-24"
  },
  "paddle-volair-mach-2-forza.html": {
-  "hash": "4dca5b4566c52f7c29a326c951eeae7f56330783906c5ebed992586e8e212aa8",
-  "updated": null
+  "hash": "593c30bab2bf4e96124c106fce17fa3c7e23d95eff54cb2124c776473e45dfc0",
+  "updated": "2026-10-24"
  },
  "paddle-volair-mach-2.html": {
-  "hash": "8464d5437339c8be373508355b731195cc4da409ad9f9a048f976f5b0018915f",
-  "updated": null
+  "hash": "c141593e1d95b54521746ab12d51653b83d5e61c31b157b60819dbeff8c9dae1",
+  "updated": "2026-10-24"
  },
  "paddle-volair-pro-1.html": {
-  "hash": "668739267007240bf244d251fb8b6e159df1123d5bffa690418879a4eadd1da6",
-  "updated": null
+  "hash": "3806a993c2ce462b573a3b0a0d66409ff6595e919df59ea357826c33694e47ad",
+  "updated": "2026-10-24"
  },
  "paddle-volair-pro-2.html": {
-  "hash": "3a8ff18529d74c91827da93cae1ec8395f3ab1c5f6275a24385a123efbe01744",
-  "updated": null
+  "hash": "2ae4d89e2dead4056d8cc50459ee1688b52acacaedc4ecdd5b827e1029bfe90c",
+  "updated": "2026-10-24"
  },
  "paddle-volair-v-1f-xl-w-16mm.html": {
-  "hash": "65d202d4b5bdd5bf25489e5d2d9352589ffd8eb53f0e54c542bb8b51a5150174",
-  "updated": null
+  "hash": "06a7b6bd8823e296e23001225845b8e77314a4159c492a2b56e9309f18981c51",
+  "updated": "2026-10-24"
  },
  "paddles.html": {
-  "hash": "908b4a304839fd7658f0d179023d82672a983cf1bc1e40e38bbd826607de2aec",
-  "updated": "2026-10-23"
+  "hash": "f1ff2c734222f45225993003df9952bfc3f85226297a4a82abaff67c8f5bb299",
+  "updated": "2026-10-24"
  },
  "podcasts.html": {
-  "hash": "7bcc8b9014253fde25244c4caf0d6935d06313427201709b1b132ca0576bdd9c",
-  "updated": null
+  "hash": "6d4b5cd670a5e10412ce3f931b806827d4a02eb135e78ccc23408bc649185f25",
+  "updated": "2026-10-24"
  },
  "price-index.html": {
-  "hash": "2fdc72a97183eecfc0ddf1dee275cbbcf041a09fd42a939c245cf8ada21394b7",
-  "updated": "2026-10-23"
+  "hash": "171c86cb5350f10ba7e1d02e79d2fb971363f6e9ba42bbf28140169e92e95a61",
+  "updated": "2026-10-24"
  },
  "price-tracker.html": {
   "hash": "c6a2f07f82569fee8e6bf1b30c8b25b7167f45b98b1577a4722427e7e7eafb02",
@@ -856,16 +852,16 @@
   "updated": null
  },
  "reviews.html": {
-  "hash": "d70f20d35bdd8dacc439763c6be553c5117ccc2f72427b1d694555f904e4df7e",
-  "updated": null
+  "hash": "5db35d0c0c5621db7a6e3600fb38affa73345bcb8358fd32e8e14690e691a984",
+  "updated": "2026-10-24"
  },
  "science.html": {
   "hash": "7001631c91bc072710ca681a449260e1a1556118e901a42ce98ffe999f014f24",
   "updated": null
  },
  "tournaments.html": {
-  "hash": "2b9acc46ebc52ec7f40230363d8facc05bfdefaf39c2770f7abc9d686f47525d",
-  "updated": null
+  "hash": "637a63b272d27acf665c06b82c257782ac8bcaac4761f5807b2c08e1220c1d08",
+  "updated": "2026-10-24"
  },
  "vs-crbn-crbn1-trufoam-barrage-vs-crbn-crbn1-trufoam-genesis.html": {
   "hash": "a616a9c5d26cb0cd389a6505131b52e498f182d2fc3efc7c56d061e1196028bc",
@@ -904,12 +900,12 @@
   "updated": null
  },
  "vs-gearbox-gbx-power-elongated-gen-3-vs-gearbox-gx2-power-hybrid.html": {
-  "hash": "4c202070c5eed2bef5a5ed02f342150b299ff72b92717bde87c2663c9c64f339",
-  "updated": "2026-10-23"
+  "hash": "19498d93a57a20a0f6e9fea2ed58c5cb56685165811de4dec1f98eb76695d000",
+  "updated": "2026-10-24"
  },
  "vs-gearbox-gbx-power-elongated-gen-3-vs-gearbox-pressure-x-8e.html": {
-  "hash": "ccb07e13c512d8cedf9520085c6746b42e3a2a6b6d91ce3d0e613951ba65871c",
-  "updated": "2026-10-23"
+  "hash": "952f4b949574355bbade205e916852dac8c3a36ae370c99be8370db0f74f23a6",
+  "updated": "2026-10-24"
  },
  "vs-gearbox-gx2-power-hybrid-vs-gearbox-pressure-x-8e.html": {
   "hash": "88bd19d3ea8e6df495eb5ac02f8e97c5657971d19af5b42860842dc2c14c85ff",
@@ -980,16 +976,16 @@
   "updated": "2026-10-23"
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "fba7990c55e94cfa4e3abe7ea8a0e3aa33ef910c9b9d3dc1cba19c573bc4fcae",
-  "updated": null
+  "hash": "89b9d5661da34ce675e3ee09ef8b4b9f6471efe46249b60d96734261d03c158d",
+  "updated": "2026-10-24"
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-tempest-wave-pro-c.html": {
   "hash": "0aa3e93c2ac5facdb23ca061be9aff8903e8e59086d0a9747917ed6064ebc6f1",
   "updated": null
  },
  "vs-paddletek-honeyfoam-tko-x-vs-paddletek-tempest-wave-pro-c.html": {
-  "hash": "7e0517b12f690ea4a9bf05731a4922267949b785a5d4fde1bb804b91e8b8d7d3",
-  "updated": null
+  "hash": "bfdd6c3387c4a05015ea9c3a29e8bfb841e816edd67c07d91258506a3b93af4c",
+  "updated": "2026-10-24"
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-luxx-control-air-infinigrit.html": {
   "hash": "4860204d92a19acc6d6d9225b758a26a815cbaa25e5599ee45bb74332bf1397c",
@@ -1056,95 +1052,95 @@
   "updated": null
  },
  "vs-volair-cmd-el-16mm-vs-volair-cmd-hyb-16mm-dylan-frazier.html": {
-  "hash": "6908919ba57b1874660537c91f87666843b4580dfe9cc118107983804e789e50",
-  "updated": null
+  "hash": "00999be7c1bdd10c9f333dd1428b422bba78cb4123d75056b49812e5b55c8234",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-cmd-wb-16mm.html": {
-  "hash": "2893958177dd9d3f3d277b09f7a3dc8ff4db84d27f0ee95fb8bc677add14c515",
-  "updated": null
+  "hash": "272396997cab67b21c737ebc19a6b52ae1c7c95bf310d3db481ebfea471f1967",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-ctrl-1-forza.html": {
-  "hash": "c911dbfa7d731c796bcd74f129e15215a6c3d9c41d88018e5c1f6deb06fa31eb",
-  "updated": null
+  "hash": "2f28c28621cd40610a3c34826b1f976bd504d2ade8d6f073a7c38bb5181d298e",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-ctrl-2-forza.html": {
-  "hash": "0d888a2dc6df244267c75d2cf0a3c5ccd8636c1f196fccb43808e99989d31dad",
-  "updated": null
+  "hash": "bfb024a005e743347b7d2a56bff9e3c2e7427d6c7042dceaa144f06b9c59d1c0",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-1-forza.html": {
-  "hash": "6e2528e019a7e0c8b0a9a080e30a05c81a0e8d8d80debe6f0f82041faef69cc2",
-  "updated": null
+  "hash": "9a9821910903518744e0a878903943be92e6aa610fbcca1e3248a03614a2340d",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-2-forza.html": {
-  "hash": "e805b272ae332043000388d0815ca540fdd78c2b13a2439796653bb516204c1a",
-  "updated": null
+  "hash": "bf4d1ee27d09c970814d90e832b4708d9e13f9f5e541b222a389ba4a6a2a2896",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-2.html": {
-  "hash": "66698a840b83be0392b4da4ac34e9979f7a8c0ab91e37202b0067c1ce7e7fe35",
-  "updated": null
+  "hash": "d4e5f40bd7350e2662e6a10f3d380f37644463467e20f70f46c6e6074c248995",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-pro-1.html": {
-  "hash": "a96c2839760248e95a16d50e1e24ec675060f28cdc9029c612f73dd6dad73d08",
-  "updated": null
+  "hash": "02cadb8cbc3437dc01cb4ee5198febc98e37ea06252fa7b82413934838843acc",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-pro-2.html": {
-  "hash": "ee8cab5e2f30637fbf31d45f463f1848ecb94feca0fa10b63342cc7ce06d2092",
-  "updated": null
+  "hash": "366d9e3334021ac7a4de31dd0cc9eb72f1f11ba3db32a18537723462553a32cb",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-el-16mm-vs-volair-v-1f-xl-w-16mm.html": {
-  "hash": "4ee363174c478a82f30aa67a0dc075757a6916fd4b5f1cc7084309d623404d1a",
-  "updated": null
+  "hash": "d33abf6dde056be9fe380826fa944a5745c2947968f0e6b9d401bbe830ecaed7",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-cmd-wb-16mm.html": {
-  "hash": "c1e278ea65f0634c98a0bd132b7fac21ff99ab08e526ce8dfca7ab53a9eb01bb",
-  "updated": null
+  "hash": "fe6881f7244f7d5d660a004863c492f65e094d1a74a45c9899e9b7569c74aa11",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-1-forza.html": {
-  "hash": "53b8853871a11c50bc02cbcbebae94cdbf3c9f1bd0ba965469215920e480ceab",
-  "updated": null
+  "hash": "98b57cd9cd79dee4a3e41129c467c56bcab4ac881df9e2b3ce6ab4624c288b5f",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-2-forza.html": {
-  "hash": "bbb0fc35ffc5236312c02f1be02d0d25209ffbd4e686bb62808290134ea3f71a",
-  "updated": null
+  "hash": "b8dbd5da013f1aee6781b746e38306cdcb9e2a287416db2d8b95d66762a732de",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-1-forza.html": {
-  "hash": "c13713ef91e99c0340e9cec7417b15bb671b4abb00430373eabf94ac6ca4576e",
-  "updated": null
+  "hash": "802acd3bcc655e3dc1502e7fb0637a3d0985edff4b48b27f240db4a5b09ec83a",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2-forza.html": {
-  "hash": "ef50749518be645bc537a3a479770908f24e1c9b8923ccdf0f89ccfc69d567b3",
-  "updated": null
+  "hash": "1fe0c7787c6444592826f50c67a38db52d7621a499a373b14f10b6e970dbf0cd",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2.html": {
-  "hash": "0367958836f8d57b641b9926cec91cc1d3fc73e6019ac9a2883a873eca958f24",
-  "updated": null
+  "hash": "a3e11c65613535f293d0ae2674d4cf9b11134cb670705e3909acf52411e1d2e2",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-pro-1.html": {
-  "hash": "38a49a4654eb19a01741e8e81ed27ecdcdcaac97a1a4c0e1419c87f8fd7560be",
-  "updated": null
+  "hash": "5603990976dd356ec72b267365c3ec8a36fcceb5d52dee9af04ad26925ce0a4b",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-pro-2.html": {
-  "hash": "406d2ed46956ef87849f72163131af8740c76204c9e244ed56b91d209aaf694b",
-  "updated": null
+  "hash": "9bc1250439c546a8e674404029f4465856cfd2d634f0f8ace35e88e43cf9f0e5",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-v-1f-xl-w-16mm.html": {
-  "hash": "eba0a52af66744bd3d83fe71883052c6d899384b5aaa6dd3bef81d527f742905",
-  "updated": null
+  "hash": "6eb332c89ae7fe0824a9a782380881bfd353f62f7b8247eea5db2fac6d638e0a",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-wb-16mm-vs-volair-ctrl-1-forza.html": {
-  "hash": "40b08c98775bf2ba04236e5a31b3cdfcf12189e72b85c2a14bf5e100169d5eb0",
-  "updated": null
+  "hash": "6fc27c1201672600a607c4cafe9d7ca01b38380a8689567f58bbf7dd7a3e8ad3",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-wb-16mm-vs-volair-ctrl-2-forza.html": {
-  "hash": "5613cb3deeb80caa46c02f2d720a6d1a814717d9f82a2109f226e6b8351db2d8",
-  "updated": null
+  "hash": "2028379a84a863524a3f08d8013706fff5e430a483ae8c2c46289755209149de",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-wb-16mm-vs-volair-mach-1-forza.html": {
-  "hash": "78b820c929f4b1e8d10684c13f3023cb71a3ebc7820d1bbe2db9f64c3a7e1d31",
-  "updated": null
+  "hash": "2fb8a4314a3a41d777f9b405d8f49e29fad0a0ae7a94828e8347c18193992e0f",
+  "updated": "2026-10-24"
  },
  "vs-volair-cmd-wb-16mm-vs-volair-mach-2.html": {
-  "hash": "69eaf8ce8af758cfbca6e338c0e19af95f23f5c1253601b41f666baab9aa426f",
-  "updated": null
+  "hash": "f8168ea97457bab9b8470b6251c300fb2204fcb9837ac31b4031a3880b642a5a",
+  "updated": "2026-10-24"
  }
 }

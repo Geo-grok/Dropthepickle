@@ -2,20 +2,11 @@
  "items": [
   {
    "source": "Carvana PPA Tour",
-   "name": "Mojo Energy Pouches Virginia Beach Open",
-   "link": "https://www.ppatour.com/events/2026/virginia-beach-open/",
-   "start": "2026-10-12",
-   "end": "2026-10-18",
-   "location": "Virginia Beach, VA",
-   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-virginia-beach-176326"
-  },
-  {
-   "source": "Carvana PPA Tour",
    "name": "Opendoor Pickleball World Championships",
    "link": "https://www.ppatour.com/events/2026/pickleball-world-championships/",
    "start": "2026-11-02",
    "end": "2026-11-08",
-   "location": "Brookhaven Country Club, Farmers Branch, TX",
+   "location": "Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, TX 75234",
    "tickets": "https://www.tixr.com/groups/ppa/events/2026-world-pickleball-championships-166345"
   },
   {
@@ -24,7 +15,7 @@
    "link": "https://www.ppatour.com/events/2026/proton-daytona-beach-open/",
    "start": "2026-11-16",
    "end": "2026-11-22",
-   "location": "Pictona at Holly Hill, Holly Hill, FL",
+   "location": "Pictona at Holly Hill, 1060 Ridgewood Ave, Holly Hill, FL 32117",
    "tickets": "https://www.tixr.com/groups/ppa/events/ppa-daytona-beach-203020"
   },
   {
@@ -33,7 +24,7 @@
    "link": "https://www.ppatour.com/events/2026/veolia-malibu-cup/",
    "start": "2026-12-14",
    "end": "2026-12-20",
-   "location": "Pepperdine University, Malibu, CA",
+   "location": "Pepperdine University, 24255 Pacific Coast Hwy, Malibu, CA 90263",
    "tickets": "https://www.tixr.com/groups/ppa/events/ppa-malibu-176502"
   },
   {
@@ -42,7 +33,7 @@
    "link": "https://www.ppatour.com/events/2027/carvana-pickleball-masters/",
    "start": "2027-01-11",
    "end": "2027-01-17",
-   "location": "Mission Hills Country Club, Rancho Mirage, CA",
+   "location": "Mission Hills Country Club, 34600 Mission Hills Dr, Rancho Mirage, CA 92270",
    "tickets": "https://www.tixr.com/groups/ppa/events/ppa-palm-springs-204325"
   },
   {
@@ -51,7 +42,7 @@
    "link": "https://www.ppatour.com/events/2027/minneapolis-indoor-open/",
    "start": "2027-01-18",
    "end": "2027-01-24",
-   "location": "Life Time — Lakeville, Lakeville, MN",
+   "location": "Life Time — Lakeville, 18425 Dodd Blvd, Lakeville, MN 55044",
    "tickets": "https://www.tixr.com/groups/ppa/events/ppa-minneapolis-206216"
   },
   {
@@ -60,7 +51,7 @@
    "link": "https://www.ppatour.com/events/2027/cape-coral-open/",
    "start": "2027-02-01",
    "end": "2027-02-07",
-   "location": "Cape Coral Racquet Club, Cape Coral, FL",
+   "location": "The Courts, Cape Coral, 420 SW 2nd Ave, Cape Coral, FL 33991",
    "tickets": "https://www.tixr.com/groups/ppa/events/ppa-cape-coral-206222"
   },
   {
@@ -69,7 +60,7 @@
    "link": "https://www.ppatour.com/events/2027/carvana-mesa-cup/",
    "start": "2027-02-15",
    "end": "2027-02-21",
-   "location": "Bell Bank Park, Mesa, AZ",
+   "location": "Bell Bank Park, Mesa, AZ 85212",
    "tickets": "https://www.tixr.com/groups/ppa/events/ppa-mesa-210307"
   },
   {
@@ -78,7 +69,7 @@
    "link": "https://www.ppatour.com/events/2027/newport-beach-open-2027-03-02/",
    "start": "2027-03-02",
    "end": "2027-03-07",
-   "location": "Tennis Club at Newport Beach, Newport Beach, CA",
+   "location": "Tennis Club at Newport Beach, 11 Clubhouse Dr, Newport Beach, CA 92660",
    "tickets": ""
   },
   {
@@ -87,7 +78,7 @@
    "link": "https://www.ppatour.com/events/2027/greater-zion-cup-at-black-desert-resort/",
    "start": "2027-03-22",
    "end": "2027-03-28",
-   "location": "Black Desert Resort, St. George, UT",
+   "location": "Black Desert Resort, 1500 E Black Desert Dr, Ivins, UT 84738",
    "tickets": ""
   },
   {
@@ -114,7 +105,7 @@
    "link": "https://www.ppatour.com/events/2027/atlanta-pickleball-championships/",
    "start": "2027-04-26",
    "end": "2027-05-02",
-   "location": "Life Time — Peachtree Corners, Atlanta, GA",
+   "location": "Life Time — Peachtree Corners, 6350 Courtside Dr NW, Peachtree Corners, GA 30092",
    "tickets": ""
   },
   {
@@ -128,7 +119,7 @@
   }
  ],
  "sources": {
-  "Carvana PPA Tour": "ok (14)"
+  "Carvana PPA Tour": "ok (13)"
  },
- "updated": "2026-10-15T07:20"
+ "updated": "2026-10-24T11:23"
 }
