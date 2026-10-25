@@ -1,9 +1,177 @@
 {
- "updated": "2026-10-24T06:10-05:00",
- "date": "2026-10-24",
- "source_file": "dtp-newsroom/buzz-2026-10-24.json",
+ "updated": "2026-10-25T06:06-05:00",
+ "date": "2026-10-25",
+ "source_file": "dtp-newsroom/buzz-2026-10-25.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "Hong Kong Slam champions: Waters wins two golds, Johns/Waters take mixed, Staksrud/Patriquin win men's doubles, Hunter Johnson and Andie Dikosavljevic win singles",
+   "summary": "Championship Sunday at the PPA Hang Seng Bank Hong Kong Slam (Kai Tak Arena), the final 2026 PPA Tour Asia stop. Mixed doubles: Anna Leigh Waters and Ben Johns beat Anna Bright and Hayden Patriquin 11-4, 11-3. Women's doubles: Waters and Bright beat Tyra Hurricane Black and Jorja Johnson 11-6, 11-4, so Waters leaves Hong Kong with two golds. Men's doubles: Federico Staksrud and Hayden Patriquin beat Ben Johns and Gabe Tardio 11-6, 11-8. Men's singles: Hunter Johnson beat Tama Shimabukuro 11-4, 6-11, 11-7, a title the PPA called back-to-back. Women's singles: Andie Dikosavljevic beat Judit Castillo 11-1, 11-5 for back-to-back golds, after also beating Castillo in last week's Australian Pickleball Cup final, per PPA Tour Asia.",
+   "status": "confirmed",
+   "date": "2026-10-25",
+   "sources": [
+    {
+     "label": "@PPAtour: Waters/Johns win mixed",
+     "url": "https://x.com/PPAtour/status/2114311979632328886"
+    },
+    {
+     "label": "@PPAtour: Waters and Johns mixed final clip",
+     "url": "https://x.com/PPAtour/status/2114312171244982392"
+    },
+    {
+     "label": "@PPAtour: Waters/Bright win women's doubles",
+     "url": "https://x.com/PPAtour/status/2114242121351774490"
+    },
+    {
+     "label": "@PPAtour: Waters/Bright celebration",
+     "url": "https://x.com/PPAtour/status/2114245943130251732"
+    },
+    {
+     "label": "@PPAtour: Staksrud/Patriquin win men's doubles",
+     "url": "https://x.com/PPAtour/status/2114285168848429169"
+    },
+    {
+     "label": "@PPAtour: men's doubles clip",
+     "url": "https://x.com/PPAtour/status/2114285704599519459"
+    },
+    {
+     "label": "@PPAtour: Hunter Johnson wins men's singles",
+     "url": "https://x.com/PPAtour/status/2114285419537842275"
+    },
+    {
+     "label": "@PPAtour: Hunter Johnson back-to-back",
+     "url": "https://x.com/PPAtour/status/2114295772028051746"
+    },
+    {
+     "label": "@PPAtour: Dikosavljevic wins women's singles",
+     "url": "https://x.com/PPAtour/status/2114259989552316919"
+    },
+    {
+     "label": "@PPAtour: Dikosavljevic clip",
+     "url": "https://x.com/PPAtour/status/2114260541883482359"
+    },
+    {
+     "label": "PPA Tour Asia: finals preview",
+     "url": "https://www.ppatour-asia.com/finals-locked-a-shootout-a-dragon-and-a-rematch/"
+    },
+    {
+     "label": "PPA Tour Asia: Hong Kong Slam event page",
+     "url": "https://www.ppatour-asia.com/tournament/2026/hong-kong-slam/"
+    },
+    {
+     "label": "PPA Tour YouTube: Championship Sunday stream",
+     "url": "https://www.youtube.com/watch?v=Fjg5ZkhAsRY"
+    },
+    {
+     "label": "Barstool Sports: Patriquin no-look behind-the-back winner",
+     "url": "https://www.barstoolsports.com/blog/3579762/it-doesnt-get-more-showtime-in-pickleball-than-this-no-look-behind-the-back"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2114311979632328886",
+    "https://x.com/PPAtour/status/2114242121351774490",
+    "https://x.com/PPAtour/status/2114285168848429169",
+    "https://x.com/PPAtour/status/2114295772028051746",
+    "https://x.com/PPAtour/status/2114259989552316919"
+   ],
+   "social_angle": "Champions card for all five events, led by Anna Leigh Waters' double gold and the Waters/Johns mixed win over Bright/Patriquin. Tag the PPA Tour; embed the official result posts.",
+   "tags": [
+    "PPA Tour",
+    "Hong Kong Slam",
+    "Anna Leigh Waters",
+    "Ben Johns",
+    "Results"
+   ]
+  },
+  {
+   "title": "PPA Tour Asia reveals its first four 2027 stops: Bangkok, Manila, Penang and Ho Chi Minh City",
+   "summary": "PPA Tour Asia announced the first four stops of 2027, all PPA Asia 500 events: the Bangkok Open (Jan. 27-31, the tour's Thailand debut), the Manila Open (Feb. 24-28, its Philippines debut), the Penang Open (Mar. 16-20, Malaysia's fifth event) and the Ho Chi Minh City Open (Mar. 31-Apr. 4, Vietnam's fifth). They come ahead of the PPA Finals at Life Time Rancho San Clemente in California, May 10-16, where the top 8 men and women in the World Pickleball Rankings qualify.",
+   "status": "confirmed",
+   "date": "2026-10-25",
+   "sources": [
+    {
+     "label": "PPA Tour Asia: first four stops of 2027",
+     "url": "https://www.ppatour-asia.com/ppa-tour-asia-reveals-first-four-stops-of-2027/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "A simple 2027 Asia calendar graphic with the four cities and dates, noting the Thailand and Philippines debuts. Tag the PPA Tour.",
+   "tags": [
+    "PPA Tour Asia",
+    "2027 schedule",
+    "Thailand",
+    "Philippines",
+    "Malaysia",
+    "Vietnam"
+   ]
+  },
+  {
+   "title": "Pickle Money Ball's Fort Lauderdale regional draws 550+ players for a $625,000 prize pool",
+   "summary": "Pickle Money Ball's East Coast Regional at The Fort in Fort Lauderdale drew more than 550 players competing for a $625,000 total prize pool, The Kitchen reports. Every division pays out equally, and the top 16 are paid. In the men's 5.0+ final, Ryan Fu and Callan Dawson beat Robert Slutsky and Jayden Broderick 5-11, 11-6, 11-6 ($2,000 each). In women's doubles, Katerina Stewart and Megan Fudge beat Shelby Bates and Vivian Glozman 11-6, 13-11. Pickle Money Ball's 2027 National Championship is in Las Vegas, July 26-30, with a $1M+ guarantee.",
+   "status": "confirmed",
+   "date": "2026-10-25",
+   "sources": [
+    {
+     "label": "The Kitchen: Pickle Money Ball 2026 Fort Lauderdale",
+     "url": "https://thekitchenpickle.com/blogs/news/pickle-money-ball-2026-fort-lauderdale-event/"
+    },
+    {
+     "label": "Pickle Money Ball: about and 2027 nationals",
+     "url": "https://picklemoneyball.com/about"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Amateur prize money is real: 550+ players, $625K, equal payouts in every division. Tag The Kitchen.",
+   "tags": [
+    "Pickle Money Ball",
+    "Amateur",
+    "Prize money",
+    "Florida"
+   ]
+  },
+  {
+   "title": "Stockton, Calif. opens 10 new permanent pickleball courts at Fritz Grupe Park",
+   "summary": "Stockton held a ribbon cutting on Oct. 24 for 10 new permanent pickleball courts at Fritz Grupe Park (5818 Cumberland Place), built in place of tennis courts. Councilmember Michael Blower hit the first ball, and Public Works director Peni Basalusalu spoke at the event, according to the Stockton Record.",
+   "status": "confirmed",
+   "date": "2026-10-25",
+   "sources": [
+    {
+     "label": "Stockton Record: courts dedicated at Grupe Park (photos)",
+     "url": "https://www.recordnet.com/picture-gallery/news/local/2026/10/24/new-pickleball-courts-dedicated-at-grupe-park/92418722007/"
+    },
+    {
+     "label": "City of Stockton: Grupe Park pickleball courts project",
+     "url": "https://www.stocktonca.gov/services/public_works/projects___studies/grupe_park_pickleball_courts.php"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "New-courts roundup item: tennis-to-pickleball conversions keep coming. Good for a 'courts near you' post.",
+   "tags": [
+    "Courts",
+    "California",
+    "Tennis conversion"
+   ]
+  },
+  {
+   "title": "Japan's pickleball boom outpaces courts: some venues have stopped taking new pickleball bookings",
+   "summary": "The Asahi Shimbun reports that the Pickleball Japan Federation, set up in April, keeps getting requests for dedicated courts, and some venues have stopped accepting new pickleball reservations. The PPA Asia 500 Sansan Tokyo Open in Tachikawa in July drew 750 players.",
+   "status": "confirmed",
+   "date": "2026-10-25",
+   "sources": [
+    {
+     "label": "Asahi Shimbun: Japan pickleball court shortage",
+     "url": "https://www.asahi.com/ajw/articles/16967964"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Global growth angle that pairs with the 2027 PPA Asia calendar: demand in Asia is ahead of the courts.",
+   "tags": [
+    "Japan",
+    "Growth",
+    "Courts",
+    "International"
+   ]
+  },
   {
    "title": "PPA Hong Kong Slam semifinals: Waters/Ben Johns vs. Bright/Patriquin set for the mixed final; Hunter Johnson comes back on Staksrud; Dikosavljevic and Castillo reach the women's singles final",
    "summary": "Saturday (Hong Kong time) was semifinal day at the PPA Hong Kong Slam. Women's singles: Andie Dikosavljevic beat Sahra Dennehy 11-1, 11-3, and Judit Castillo beat Kiora Kunimoto 11-8, 11-7. The two players who knocked out the top two seeds in the quarterfinals now meet in the final. Men's singles: Hunter Johnson came back to beat Federico Staksrud 3-11, 11-8, 11-5, and Tama Shimabukuro beat Noe Khlif 11-8, 11-2. Final: Shimabukuro vs. Hunter Johnson. Men's doubles: Ben Johns and Gabriel Tardio beat Shimabukuro and JW Johnson 11-7, 11-6, and Staksrud and Hayden Patriquin beat Connor Garnett and Dylan Frazier 11-9, 11-1. Final: Johns/Tardio vs. Staksrud/Patriquin. Women's doubles: Anna Bright and Anna Leigh Waters beat Sofia Sewing and Catherine Parenteau 11-4, 11-0, and Jorja Johnson and Tyra Hurricane Black beat Rohrabacher/Todd 4-11, 11-9, 11-2. Final: Bright/Waters vs. Black/Jorja Johnson. Mixed: Ben Johns and Waters beat Ting Chieh Wei and Hunter Johnson 11-0, 11-1, and Bright and Patriquin beat Jorja and JW Johnson 11-2, 9-11, 11-9. Final: Waters/Ben Johns vs. Bright/Patriquin. Championship Sunday is Oct. 25 Hong Kong time, which is Saturday night CT. Hong Kong is 13 hours ahead. The official feed lists the finals as scheduled but gives no match times, so check the PPA Tour for start times. Off-court moments from the PPA: Patriquin gave his paddle to a young fan, and Ben Johns thanked the crowd in Cantonese.",
