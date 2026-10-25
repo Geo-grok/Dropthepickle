@@ -611,6 +611,10 @@
   "hash": "b99150eb3aaf47b09a377a8b2961185a67462c7273825453d8ba868d11c1e736",
   "updated": "2026-10-25"
  },
+ "guides/best-volair-paddles.html": {
+  "hash": "ce07e1aac179850bd1f562980f8b933f764941b294c6b38b4d64a9c04c3fd1ce",
+  "updated": null
+ },
  "guides/how-to-choose-a-paddle.html": {
   "hash": "8704b8ef0ca137ad600dcbc451caed63816b91d1533f4c82e710011e94946fe9",
   "updated": "2026-10-23"
@@ -1142,5 +1146,9 @@
  "vs-volair-cmd-wb-16mm-vs-volair-mach-2.html": {
   "hash": "f8168ea97457bab9b8470b6251c300fb2204fcb9837ac31b4031a3880b642a5a",
   "updated": "2026-10-24"
+ },
+ "vs-volair-mach-2-forza-vs-volair-pro-1.html": {
+  "hash": "c274a94be9387fd2264f23e0bc304ce6b75644ab4ab81cbeb2338d4293983885",
+  "updated": null
  }
 }

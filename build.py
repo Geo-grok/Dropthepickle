@@ -779,6 +779,8 @@ def build():
             def vcard(c): return ccard(c).replace('<div class="cdisc">', f'<div class="ctype meta">{e(otype(c["discount"]))}</div><div class="cdisc">', 1)
             volair_page.make(page, e, fmt, C, OWN, PD, D("price_history.json").get("paddles", {}), go_slug, paddle_pages.slug, "".join(vcard(c) for c in bc), copyjs, crumbs, crumb_html, canon,
                              {"codes": [(c["code"], c["discount"], c["conditions"], c["source_url"], c.get("verified")) for c in bc], "own": (OWN.get(b) or {}).get("code")})
+            import volair_guides  # Volair gap pages: best-by-player-type guide + Mach 2 Forza vs Pro 1
+            volair_guides.make(page, e, fmt, OWN, PD, D("price_history.json").get("paddles", {}), paddle_pages.slug)
             continue
         if bc:
             title = f"{b} discount codes & promo codes (verified {month})"
