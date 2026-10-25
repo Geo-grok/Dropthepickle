@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Selkirk Omni Paddle Review | Match Play",
+   "link": "https://www.youtube.com/watch?v=OrUk1nheRrI",
+   "video_id": "OrUk1nheRrI",
+   "date": "2026-10-24"
+  },
+  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "Volair CMD Review: Built for Dylan Frazier. Right for You?",
@@ -131,7 +139,7 @@
   {
    "channel": "All Drive No Drop Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "The New Most Powerful Paddle in Pickleball? CPX Hyper +, RPM Jade, B&B Loco 2, Luzz Cannon XPP",
+   "title": "CPX Hyper +, RPM Jade, B&B Loco 2, Luzz Cannon XPP",
    "link": "https://www.youtube.com/watch?v=HMR0WXzLdsI",
    "video_id": "HMR0WXzLdsI",
    "date": "2026-10-19"
@@ -174,14 +182,6 @@
    "title": "The Two I Can’t Put Down | Best Pickleball Paddles 2026",
    "link": "https://www.youtube.com/watch?v=w3iiWIzcg34",
    "video_id": "w3iiWIzcg34",
-   "date": "2026-10-18"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Ultre Jelly Bean 2 Paddle Review",
-   "link": "https://www.youtube.com/watch?v=HOpxVI1SBBM",
-   "video_id": "HOpxVI1SBBM",
    "date": "2026-10-18"
   },
   {
@@ -483,6 +483,14 @@
  ],
  "all_items": [
   {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Selkirk Omni Paddle Review | Match Play",
+   "link": "https://www.youtube.com/watch?v=OrUk1nheRrI",
+   "video_id": "OrUk1nheRrI",
+   "date": "2026-10-24"
+  },
+  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "Volair CMD Review: Built for Dylan Frazier. Right for You?",
@@ -613,7 +621,7 @@
   {
    "channel": "All Drive No Drop Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "The New Most Powerful Paddle in Pickleball? CPX Hyper +, RPM Jade, B&B Loco 2, Luzz Cannon XPP",
+   "title": "CPX Hyper +, RPM Jade, B&B Loco 2, Luzz Cannon XPP",
    "link": "https://www.youtube.com/watch?v=HMR0WXzLdsI",
    "video_id": "HMR0WXzLdsI",
    "date": "2026-10-19"
@@ -1583,10 +1591,10 @@
   "Tickle My Pickleball": "ok (3)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
-  "Pickleball Playbook Paddles": "ok (14)",
+  "Pickleball Playbook Paddles": "ok (15)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-10-24T11:23"
+ "updated": "2026-10-25T11:24"
 }

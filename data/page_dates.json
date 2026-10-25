@@ -16,16 +16,16 @@
   "updated": "2026-10-21"
  },
  "best-16mm-paddles.html": {
-  "hash": "0fd52b6e1b46705a091a776aabe4918381d764584387be5a1c3313d5751d1e0d",
-  "updated": "2026-10-24"
+  "hash": "4142dacaeadb6b8d22044c33d877739a6b43e4e8cf16ad1c38f35c118dfb65a4",
+  "updated": "2026-10-25"
  },
  "best-crbn-paddles.html": {
   "hash": "1fbe8b1301e5d4ff094bf0286695d5f06ca13e0989890a26e3e815b090fced3f",
   "updated": null
  },
  "best-elongated-paddles.html": {
-  "hash": "72abafc34276606b59a781de128f765da222645dc8111442793a411cc06b5f6d",
-  "updated": "2026-10-24"
+  "hash": "3b507ca6c769fb778fbff0f2d3dea2a57829e0c08256b89116602df09d173e90",
+  "updated": "2026-10-25"
  },
  "best-engage-paddles.html": {
   "hash": "2c149178deadbb28e7fe41c3455189555297f2f33610ceb7ad2124f17982ab04",
@@ -44,8 +44,8 @@
   "updated": "2026-10-23"
  },
  "best-paddles-for-beginners.html": {
-  "hash": "cbed0df71de3391312ca1d4c370d9069b57646f3fbbc2b0f256463b9394dbc45",
-  "updated": "2026-10-24"
+  "hash": "dbf6b0918d0ed776204c68adbc3872e47387ce0f9bb82bde960f2cd7284d3bc2",
+  "updated": "2026-10-25"
  },
  "best-paddles-for-control.html": {
   "hash": "2e274a113e398a4c80b384868357aebb8f6d356ad3e1ea8ebcc8e9dbcd801ab4",
@@ -56,16 +56,16 @@
   "updated": "2026-10-24"
  },
  "best-paddles-for-tennis-players.html": {
-  "hash": "2640cfc99f272228e2c3f41543136d1a9c6a22a93f761e15c48633c483042bb5",
-  "updated": "2026-10-24"
+  "hash": "2661b8d235e1cfa3b2aeb9ff351d0e2c3195b89d27ebe8ff3b4c7efed4ff221d",
+  "updated": "2026-10-25"
  },
  "best-paddles-under-100.html": {
-  "hash": "eb60df0726b53ce5cd9004c8924d957456db2fd9aa825d2ff3bff0ce6a0e24b9",
-  "updated": "2026-10-24"
+  "hash": "5b424c7891d2003e112ffb101d24ee0a19f10fe1c74f1efc40914f0860a6cfb0",
+  "updated": "2026-10-25"
  },
  "best-paddletek-paddles.html": {
-  "hash": "06e8dc49b6426a65b017e0db8799a590bf338d60b3d9cb80c7b067d1ccaad433",
-  "updated": "2026-10-24"
+  "hash": "24b9a0060f35ac26d4ce084309142105a8371a27affec0307f738b8436e3a7bc",
+  "updated": "2026-10-25"
  },
  "best-selkirk-paddles.html": {
   "hash": "e23de58ba90ccfc77abd78ae612dc1439e95bd83b20e345b304036508b4bf200",
@@ -92,8 +92,8 @@
   "updated": null
  },
  "deals.html": {
-  "hash": "962b0e9cc54eac127060bf06f06f08f93c6009591e3e67245fdb018a30b98141",
-  "updated": "2026-10-24"
+  "hash": "0a667975451eb24ca136e1ce9c5776769bbcd76b72e84f76771f538734ad50ac",
+  "updated": "2026-10-25"
  },
  "discount-codes.html": {
   "hash": "33e76993f26ca5761031ddc9719be1ca7d4669a2cc7ad4a385c0a73e55a55942",
@@ -608,8 +608,8 @@
   "updated": "2026-10-24"
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "9e07ce3128b84afbf9b3880a877fc031711208402a2b0883a772b05bb8b253a2",
-  "updated": "2026-10-24"
+  "hash": "b99150eb3aaf47b09a377a8b2961185a67462c7273825453d8ba868d11c1e736",
+  "updated": "2026-10-25"
  },
  "guides/how-to-choose-a-paddle.html": {
   "hash": "8704b8ef0ca137ad600dcbc451caed63816b91d1533f4c82e710011e94946fe9",
@@ -648,12 +648,12 @@
   "updated": "2026-10-24"
  },
  "index.html": {
-  "hash": "d58a0f9d848263abf9dc1511e0695affd229fcb79a2da65f3e1b94507e9bdd25",
+  "hash": "c1ed3da31ed6033fa0868bcc8ffd7761dd07c22d76a10f28b9af5ebcf0320096",
   "updated": "2026-10-25"
  },
  "news.html": {
-  "hash": "bbdc4142061dac67f20e7a1cc3f32ffd43fa5a51e6516aa8cc901f2ac7484f61",
-  "updated": "2026-10-24"
+  "hash": "bfebdbd72d28105a74dffd86c88b95ced6e207a539de17f6096572b0092582bd",
+  "updated": "2026-10-25"
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
   "hash": "dc9f574209e8c863d95e7ae37e241d4b079958ca7bd42d9080d413718476a708",
@@ -732,8 +732,8 @@
   "updated": null
  },
  "paddle-paddletek-honeyfoam-tko-x.html": {
-  "hash": "413f7c6bd5eba155f10ee00ecab620b270a2b9736664c68165b70a4fcf7b76fc",
-  "updated": "2026-10-24"
+  "hash": "adb8ed36aa622b48bacf04d76e50a522c83a7eab2d71b92970a49be8da129e73",
+  "updated": "2026-10-25"
  },
  "paddle-paddletek-tempest-wave-pro-c.html": {
   "hash": "7d67a768de8f6862ee2269d5281e17b7de643d896d2d48436ae2b72a022ce0e8",
@@ -824,16 +824,16 @@
   "updated": "2026-10-24"
  },
  "paddles.html": {
-  "hash": "f1ff2c734222f45225993003df9952bfc3f85226297a4a82abaff67c8f5bb299",
-  "updated": "2026-10-24"
+  "hash": "b867401a25b33fa772c4f1c3efddca32ce88c08d12c9553499c655b4ce440129",
+  "updated": "2026-10-25"
  },
  "podcasts.html": {
   "hash": "6d4b5cd670a5e10412ce3f931b806827d4a02eb135e78ccc23408bc649185f25",
   "updated": "2026-10-24"
  },
  "price-index.html": {
-  "hash": "171c86cb5350f10ba7e1d02e79d2fb971363f6e9ba42bbf28140169e92e95a61",
-  "updated": "2026-10-24"
+  "hash": "3899e25cb9fd0639952749cb9aeca48de458e55b7cbb7b352f76e0ae57f2a07b",
+  "updated": "2026-10-25"
  },
  "price-tracker.html": {
   "hash": "c6a2f07f82569fee8e6bf1b30c8b25b7167f45b98b1577a4722427e7e7eafb02",
@@ -852,8 +852,8 @@
   "updated": null
  },
  "reviews.html": {
-  "hash": "5db35d0c0c5621db7a6e3600fb38affa73345bcb8358fd32e8e14690e691a984",
-  "updated": "2026-10-24"
+  "hash": "b86c0fd647e87315211467ccc55a266e67f14cd8130f73f413457353aec5f455",
+  "updated": "2026-10-25"
  },
  "science.html": {
   "hash": "7001631c91bc072710ca681a449260e1a1556118e901a42ce98ffe999f014f24",
@@ -976,16 +976,16 @@
   "updated": "2026-10-23"
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "89b9d5661da34ce675e3ee09ef8b4b9f6471efe46249b60d96734261d03c158d",
-  "updated": "2026-10-24"
+  "hash": "518f4b31dc628896b1825fc91e45d6341daa4820f2aa7928faaeac21bca1e89b",
+  "updated": "2026-10-25"
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-tempest-wave-pro-c.html": {
   "hash": "0aa3e93c2ac5facdb23ca061be9aff8903e8e59086d0a9747917ed6064ebc6f1",
   "updated": null
  },
  "vs-paddletek-honeyfoam-tko-x-vs-paddletek-tempest-wave-pro-c.html": {
-  "hash": "bfdd6c3387c4a05015ea9c3a29e8bfb841e816edd67c07d91258506a3b93af4c",
-  "updated": "2026-10-24"
+  "hash": "4f60ea7784be73121569514057f7e6cd8131a4f387b3af46c7d7ee4853eb184b",
+  "updated": "2026-10-25"
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-luxx-control-air-infinigrit.html": {
   "hash": "4860204d92a19acc6d6d9225b758a26a815cbaa25e5599ee45bb74332bf1397c",
