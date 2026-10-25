@@ -41,25 +41,33 @@ def make(page, e, fmt, C, OWN, PD, H, go_slug, paddle_slug, cards, copyjs, crumb
     lineup = (f'<h2>The Volair lineup</h2><p class="meta">Prices and specs from volair.com{", checked " + fmt(checked) if checked else ""}. Prices change, so confirm on Volair before you buy.</p>'
               f'<div class="vline">{"".join(row(p) for p in sorted(pp, key=lambda p: (p["price"], p["model"])))}</div>') if pp else ""
     how = (oc or {}).get("how") or "Type the code in the discount code box at checkout on volair.com and tap Apply."
+    popular = " · ".join('<a href="../' + paddle_slug(p) + '">' + e(p["model"]) + '</a>' for p in pp if p["model"] in ("Mach 1 Forza", "Mach 2 Forza", "Pro 1", "CTRL 2 Forza", "CMD EL 16mm"))
+    intro = (e(oc["code"]) + " is our own Volair code. It takes " + e(oc["discount"]) + " at checkout on volair.com.") if oc else ""
+    prices = [cur(p).get("current", p["price"]) for p in pp]
+    rng = f"{usd(min(prices))} to {usd(max(prices))}" if prices else ""
+    # FAQ questions follow real Google autocomplete phrasings (promo code, discount code, first order, paddle price, model names)
     faq = [
-        ("How do I use the Volair promo code?", f"Add your paddle to the cart on volair.com and go to checkout. {how}"),
-        ("How much is the Volair paddle discount?", f"{oc['code']} takes {oc['discount']} at checkout on volair.com." if oc else "See the codes on this page."),
-        ("Does the code work on every Volair paddle?", "Not always. Volair's ambassador program page says licensed paddles are excluded. Volair also doesn't tag the V.1F as included in its discounts, so the code may not apply to it. If the discount doesn't show at checkout, that item is excluded."),
-        ("Can I combine it with a sale price or another code?", "Volair doesn't publish whether codes combine with sale prices or with each other. Check your cart total at checkout before you pay."),
+        ("What is the Volair promo code?", f"Our Volair promo code is {oc['code']}. It takes {oc['discount']} at checkout on volair.com." if oc else "See the codes on this page."),
+        ("How do I use the Volair discount code?", f"Add your paddle to the cart on volair.com and go to checkout. {how}"),
+        ("Does the Volair discount code work on a first order?", "Volair doesn't publish a first-order-only rule for this code. Enter it at checkout; if it applies, you'll see the discount in your total before you pay."),
+        ("Does the code work on the Mach 2 Forza, Pro 1 and other Volair paddles?", "Usually, but not on everything. Volair's ambassador page says licensed paddles are excluded, and its licensed art editions (such as the Keith Haring Mach 2 Forza) say promo codes don't apply. Volair also doesn't tag the V.1F as included in its discounts. If the discount doesn't show at checkout, that item is excluded."),
+        ("How much do Volair paddles cost?", f"The Volair paddles we track run {rng} at our last check of volair.com{', ' + fmt(checked) if checked else ''}, before the code. Prices change, so confirm on Volair." if rng else "See volair.com for current prices."),
         ("Does DropThePickle earn money from this code?", own_codes.earn_line(oc) if oc else "Some codes on this page are affiliate codes."),
     ]
     faq_html = "<h2>Volair promo code FAQ</h2>" + "".join(f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faq)
+    h1d, h1c = (e(oc["discount"]), e(oc["code"])) if oc else ("10% off", "our code")
     lead = own_codes.callout(e, oc, "../disclosure.html", note=NOAPPLY) if oc else ""
-    body = (f'{crumb_html}<section class="vhero"><h1>Volair promo code &amp; paddle discount: <em>10% off</em></h1>'
-            f'<p>Use our code at checkout on volair.com. Here\'s how it works, what it may not cover, and the current Volair paddles.</p>{lead}</section>'
-            f'<p class="meta">Exclusions: per <a href="{AMBASSADOR}" target="_blank" rel="noopener">Volair\'s ambassador page</a>, licensed paddles are excluded. Volair doesn\'t publish whether codes stack.</p>'
+    body = (f'{crumb_html}<section class="vhero"><h1>Volair Promo Code: <em>{h1d}</em> with {h1c}</h1>'
+            f'<p>{intro} Below: how to apply it, what it may not cover, and current Volair paddle prices and specs.</p>{lead}</section>'
+            + (f'<p class="meta">Popular Volair models: {popular}</p>' if popular else "")
+            + f'<p class="meta">Exclusions: per <a href="{AMBASSADOR}" target="_blank" rel="noopener">Volair\'s ambassador page</a>, licensed paddles are excluded. Volair doesn\'t publish whether codes stack.</p>'
             f'<div class="vnext"><a class="btn" href="../paddle-quiz.html">Not sure which Volair? Take the paddle quiz →</a><a class="btn ghost" href="/discount-codes">All discount codes →</a></div>'
             f'{lineup}{faq_html}'
             + (f'<h2>Other Volair codes we track</h2><p class="meta">Published by creators; each card links to its source. Many are affiliate codes, so the creator may earn a commission.</p><div class="grid">{cards}</div>' if cards else "")
             + f'<p class="meta"><a href="/discount-codes">All pickleball discount codes</a> · <a href="../paddle-quiz.html">Paddle quiz</a> · <a href="../deals.html">Paddle deals</a> · <a href="../disclosure.html">Disclosure</a></p>'
             + copyjs + own_codes.COPY_JS)
-    title = "Volair Promo Code & Paddle Discount: 10% Off (DROPTHEPICKLE)" if oc else "Volair promo codes & paddle discounts"
-    desc = ("Volair promo code DROPTHEPICKLE takes 10% off at checkout on volair.com. Volair paddle discount details, exclusions, "
-            "how to apply it, and current Volair paddles with prices and specs.")
+    title = f"Volair Promo Code: {oc['discount'].replace(' off', ' Off')} with {oc['code']} ({__import__('datetime').date.today().year})" if oc else "Volair promo codes & paddle discounts · DropThePickle"
+    desc = (f"Volair promo code {oc['code']}: {oc['discount']} at checkout on volair.com. How to use it, exclusions, and Mach, Pro and CMD paddle prices." if oc
+            else "Volair promo codes and paddle discounts, with how to use them and current Volair paddles.")
     schema = [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]
-    page(fn, title, body, desc, fresh=fresh, schema=schema, crumbs=crumbs)
+    page(fn, title, body, desc, fresh=fresh, schema=schema, crumbs=crumbs, raw_title=True)

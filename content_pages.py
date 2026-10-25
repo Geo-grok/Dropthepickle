@@ -208,6 +208,7 @@ def make(page, e, fmt, PP, cur, ph):
     faq_html, faq_ld = faq(u100_faq)
     under = f'''<h1>Best pickleball paddles under $100</h1>
 <p class="meta">Built from our own paddle file and dated maker price checks. Not a playtest and not a ranking.</p>
+{__import__("own_codes").volair_link(__import__("own_codes").own_codes(__import__("json").load(open(__import__("pathlib").Path(__file__).with_name("config.json")))), "Shopping Volair?")}
 <p>{under_lead} The rule is strict: the paddle needs a successful, in-stock price check on the maker's own page, in US dollars, and the current price must be below $100. Every price on this page shows the date it was checked.</p>
 <h2>Under $100 (verified)</h2>
 {under_table}

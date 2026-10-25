@@ -53,3 +53,11 @@ def callout(e, oc, disclosure_href="disclosure.html", shop=True, js=False, note=
             f'<div class="crow"><button class="ccode" data-code="{cd}" aria-label="Copy code {cd}">{cd}</button><button class="btn ccopy" data-code="{cd}">Copy</button></div>'
             f'{how}{warn}{det}{shop_a}<p class="owndisc"><b>Disclosure:</b> {e(earn_line(oc))} <a href="{e(disclosure_href)}">Details</a>.</p></div>'
             + (COPY_JS if js else ""))
+
+
+def volair_link(OWN, lead="Shopping Volair?"):
+    """Natural-anchor internal link to the Volair promo-code page (only when our Volair code is live)."""
+    oc = OWN.get("Volair") if OWN else None
+    if not oc or not oc.get("page"): return ""
+    return (f'<p class="meta vlink">{lead} Our <a href="{oc["page"]}"><b>Volair promo code</b></a> '
+            f'({oc["code"]}) takes {oc["discount"]} at checkout on volair.com.</p>')

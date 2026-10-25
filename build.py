@@ -420,14 +420,14 @@ def pagehead(body):
     head = m.group(1) + "".join(f'<p>{t}</p>' for k, t in parts if k == "meta")
     disc = "".join(f'<p class="disc">{t}</p>' for k, t in parts if k == "disc")
     return f'<section class="pagehead">{head}</section>{disc}' + body[m.end():]
-def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumbs=None, image=None):
+def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumbs=None, image=None, raw_title=False):
     prefix = "../" * fn.count("/")
     rel = lambda h: h if h.startswith(("http://", "https://", "mailto:", "#", "/")) else prefix + h
     nav = "".join(f'<a href="{rel(h)}" class="{"on" if h==fn else ""}">{t}</a>' for h, t in NAV)
     tabs = "".join(f'<a href="{rel(h)}"{" class=" + chr(34) + "on" + chr(34) + " aria-current=" + chr(34) + "page" + chr(34) if any(fn.startswith(x) for x in TAB_ON.get(h, (h,))) else ""}>{t}</a>' for h, t in TABS)
     n = C["SITE_NAME"]
     mark = logo_html(rel)
-    doc_title = f"{title} · {n}"
+    doc_title = title if raw_title else f"{title} · {n}"  # raw_title: title already fits ~60 chars, skip site suffix
     if not desc: desc = f"{title} on {n}: {C['TAGLINE']}."
     url = canon(fn)
     updated = note_fresh(fn, fresh)
@@ -710,7 +710,7 @@ def build():
     ptrows = sorted(PT["rows"], key=lambda r: -r.get("pct_off", 0))
     page("price-tracker.html", "Paddle Price Tracker: Joola, Selkirk, CRBN, Six Zero prices checked",
          f'<h1>Paddle Price Tracker</h1><p class="meta">{len(ptrows)} popular paddles. Every price was read on the brand\'s own product page on {ptday(PT["updated"])}. We list the lowest in-stock option. "% off list" compares to the crossed-out price the brand shows. No guesses: if we couldn\'t check it, it isn\'t here. Prices change fast, so confirm at checkout.</p>'
-         f'<p class="meta"><a href="deals.html"><b>Paddle deals →</b></a> · <a href="discount-codes.html"><b>Stack a discount code →</b></a></p>'
+         f'<p class="meta"><a href="deals.html"><b>Paddle deals →</b></a> · <a href="discount-codes.html"><b>Stack a discount code →</b></a></p>{own_codes.volair_link(OWN, "Pricing a Volair?")}'
          f'<div class="pt-grid">{"".join(ptcard(r) for r in ptrows)}</div>'
          f'<section class="receipts"><h2>From the Receipts series</h2><p>Big Dill keeps the receipts. When a Receipts post says a paddle is "on sale", these are the prices behind it, with the date we checked. Want the raw numbers? <a href="data/price-tracker.json">Download the price data (JSON)</a>.</p></section>'
          f'<p class="disc">Links may be affiliate links. <a href="disclosure.html">Disclosure</a>.</p>',
