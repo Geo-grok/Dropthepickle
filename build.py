@@ -107,6 +107,7 @@ main{max-width:1200px;margin:auto;padding:1.4rem 1.1rem 3rem}
 .phero .img img{width:100%;height:100%;max-width:100%;max-height:100%;min-width:0;min-height:0;object-fit:contain;transform:none;filter:drop-shadow(0 18px 24px rgba(0,0,0,.25))}
 .price{font-family:Oswald,sans-serif;font-size:2.4rem;font-weight:700;line-height:1;color:var(--neon)}.price s{font-size:1.1rem;color:#8796b3;margin-left:.4rem;font-weight:400}
 @media(max-width:720px){.phero{grid-template-columns:1fr}}
+.saverow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.saverow a{flex:1 1 120px;display:flex;align-items:center;justify-content:center;min-height:52px;padding:10px 8px;border-radius:14px;background:#16264a;color:#fff;font:800 17px/1.2 Inter,system-ui,sans-serif;text-decoration:none;text-align:center;box-shadow:inset 0 0 0 2px #c6f432}.saverow a.hot{flex-basis:100%;background:#c6f432;color:#0b1630}.saverow a:hover{background:#1f3360}.saverow a.hot:hover{background:#d6ff4a}
 .pagehead{background:linear-gradient(160deg,#0b1426,#162a57);color:#fff;border-radius:24px;padding:clamp(1.4rem,4vw,2.6rem);margin:.4rem 0 1.2rem;position:relative;overflow:hidden;box-shadow:var(--sh2)}
 .pagehead h1{color:#fff;margin:0 0 .5rem}.pagehead p,.pagehead .meta{color:#b5c1d8;margin:.3rem 0;max-width:820px}.pagehead a{color:var(--neon)}
 .pagehead::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(198,244,50,.35),transparent 70%)}

@@ -137,12 +137,21 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     def specs(p): return f'<table><tr><th scope="row">Weight</th><td>{e(p["weight"]) or "not published"}</td></tr><tr><th scope="row">Core</th><td>{e(p["core"]) or "not published"}</td></tr><tr><th scope="row">Shape</th><td>{e(p["shape"]) or "not published"}</td></tr>{"".join(f'<tr><th scope="row">{lab}</th><td>{e(p[k])}</td></tr>' for k, lab in EXTRA if p.get(k))}<tr><th scope="row">List price</th><td>{money(p)}</td></tr><tr><th scope="row">Latest price</th><td>{pricecell(p)}</td></tr></table>'
     def pc(p):
         a, b = notes(p, ph(p)); return f'<div class="grid proscons"><div class="card"><h3>👍 Pros</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in a)}</ul></div><div class="card"><h3>👎 Cons</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in b)}</ul></div></div>'
+    # Thumb-friendly "save money" row on every paddle page (social visitors land here on phones):
+    # the brand's codes page (count from data/discount-codes.json), the price tracker and today's deals.
+    DCODES = D("discount-codes.json").get("codes", [])
+    ncodes = {}
+    for c in DCODES: ncodes[c["brand"]] = ncodes.get(c["brand"], 0) + 1
+    def saverow(p):
+        b = p["brand"]; n = ncodes.get(b, 0); s = re.sub(r"[^a-z0-9]+", "-", b.lower()).strip("-")
+        code = "" if b in OWN else (f'<a class="hot" href="/discount-codes/{s}">🏷️ {n} {e(b)} code{"s" if n != 1 else ""}</a>' if n else '<a class="hot" href="/discount-codes">🏷️ Discount codes</a>')
+        return f'<nav class="saverow" aria-label="Ways to save">{code}<a href="price-tracker.html">📉 Price tracker</a><a href="deals.html">🔥 Deals</a></nav>'
     # paddle detail pages
     for p in PP:
         users = pro_users(p)
         pu = ("<h2>Pros who use it</h2><ul>" + "".join(f'<li><a href="{e(x["profile"])}" target="_blank" rel="noopener">{e(x["name"])}</a> ({e(x["paddle"])}, per PPA profile)</li>' for x in users) + "</ul>") if users else ""
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
-        hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p><div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div>{owncall(p)}<p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
+        hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p><div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div>{saverow(p)}{owncall(p)}<p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
         page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}<p><a href="compare.html">Compare paddles →</a></p>',
              f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
              fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
