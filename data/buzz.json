@@ -1,9 +1,148 @@
 {
- "updated": "2026-10-25T06:06-05:00",
- "date": "2026-10-25",
- "source_file": "dtp-newsroom/buzz-2026-10-25.json",
+ "updated": "2026-10-26T06:09-05:00",
+ "date": "2026-10-26",
+ "source_file": "dtp-newsroom/buzz-2026-10-26.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "MLP Nations Cup week: full rosters, format and how to watch (Oct. 30-Nov. 1, Farmers Branch, Texas)",
+   "summary": "The inaugural MLP Nations Cup starts Friday at Brookhaven Country Club in Farmers Branch, Texas, as the kickoff to the 2026 Opendoor Pickleball World Championships, which begin Nov. 2 at the same venue. Eight regional teams and 48 pros play the MLP coed team format in two groups of four: Group A is the United States, Canada, Europe-West and Asia Domestic; Group B is Australia, Latin America, Europe-East and Asia International. Each team plays three round-robin matches Friday and Saturday, and the top two in each group cross over into Sunday's semifinals and final. Team USA (captain Johnny Goldberg) is Anna Bright, Tyra Black, Kate Fahey, Ben Johns, CJ Klinger and Will Howells. All matches stream on PickleballTV, with coverage from 10 a.m. CT each day and the championship at 2 p.m. CT Sunday, per The Dink.",
+   "status": "confirmed",
+   "date": "2026-10-26",
+   "sources": [
+    {
+     "label": "The Dink: MLP Nations Cup 2026 preview (rosters, format, schedule)",
+     "url": "https://www.thedinkpickleball.com/mlp-nations-cup-2026-tournament-preview-everything-you-need-to-know/"
+    },
+    {
+     "label": "Pickleball Worlds: MLP Nations Cup official page",
+     "url": "https://worlds.unitedpickleball.com/nations-cup"
+    },
+    {
+     "label": "@MajorLeaguePB: Truong and Wei ready for Asia Domestic, 5 days out",
+     "url": "https://x.com/MajorLeaguePB/status/2114511093473108035"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2114511093473108035"
+   ],
+   "social_angle": "Nations Cup cheat sheet: groups, Team USA roster and a 'how to watch' card with CT times. Tag MLP.",
+   "tags": [
+    "MLP",
+    "Nations Cup",
+    "Worlds",
+    "Team USA",
+    "How to watch"
+   ]
+  },
+  {
+   "title": "Last call: Minor League Pickleball registration at the Nations Cup closes tonight, Oct. 26, at 7:15 p.m.",
+   "summary": "Minor League Pickleball (MiLP), the amateur event that runs alongside the MLP Nations Cup on the same grounds and dates (Oct. 30-Nov. 1, Brookhaven Country Club, 3334 Golfing Green Drive, Farmers Branch, Texas), closes registration on Oct. 26 at 7:15 p.m., per the official Worlds site. Entry is $120 per player and is open to amateurs with a DUPR rating.",
+   "status": "confirmed",
+   "date": "2026-10-26",
+   "sources": [
+    {
+     "label": "Pickleball Worlds: Nations Cup page with MiLP details",
+     "url": "https://worlds.unitedpickleball.com/nations-cup"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Same-day service post: 'Want to play at Nations Cup week? MiLP sign-ups close tonight.' Post early in the day.",
+   "tags": [
+    "MiLP",
+    "Amateur",
+    "Nations Cup",
+    "DUPR",
+    "Deadline"
+   ]
+  },
+  {
+   "title": "APP Next Kansas City: Tristan Dussault and Averry Chew take the titles",
+   "summary": "The APP Tour's junior APP Next stop in Kansas City wrapped up Sunday. Tristan Dussault won, ahead of Ben Slive, Jae Centonze, Dylan Lewis and Dy Mackonner, and Averry Chew won, ahead of Mary Monson, Stevi Petropouleas, Eden Malloy and Ziva Lawson, according to the APP Tour. The APP also posted its U12 and U14 winners.",
+   "status": "confirmed",
+   "date": "2026-10-26",
+   "sources": [
+    {
+     "label": "@OfficialAPPTour: Tristan Dussault wins",
+     "url": "https://x.com/OfficialAPPTour/status/2114404531031146790"
+    },
+    {
+     "label": "@OfficialAPPTour: Averry Chew wins",
+     "url": "https://x.com/OfficialAPPTour/status/2114407445883650332"
+    },
+    {
+     "label": "@OfficialAPPTour: U12 and U14 winners",
+     "url": "https://x.com/OfficialAPPTour/status/2114417932151259591"
+    },
+    {
+     "label": "APPTV YouTube: Tristan Dussault wins APP Next Kansas City",
+     "url": "https://www.youtube.com/shorts/haTDnXo_R6I"
+    }
+   ],
+   "embeds": [
+    "https://x.com/OfficialAPPTour/status/2114404531031146790",
+    "https://x.com/OfficialAPPTour/status/2114407445883650332"
+   ],
+   "social_angle": "Junior pipeline shout-out: the next wave is already winning. Tag the APP Tour.",
+   "tags": [
+    "APP Tour",
+    "APP Next",
+    "Juniors",
+    "Kansas City",
+    "Results"
+   ]
+  },
+  {
+   "title": "Brentwood, Calif. will close the Creekside Park pickleball courts on Nov. 2 after a noise fight; parking-lot courts open Nov. 3",
+   "summary": "The City of Brentwood says the Creekside Park pickleball courts close Monday, Nov. 2, and temporary courts at the Sunset Sports Complex on Elkins Way open Tuesday, Nov. 3, at 7 a.m. The City Council voted 5-0 on Oct. 19 to go ahead once the temporary courts were ready, after more than an hour of heated comment from players and neighbors, The Press reports. The resolution also reserves $1,726,871 for future capital projects and asks residents within 1,000 feet of Creekside for input on a study of the courts' future use, including noise and parking. Players questioned the safety of courts on an asphalt parking lot, according to Contra Costa News.",
+   "status": "confirmed",
+   "date": "2026-10-26",
+   "sources": [
+    {
+     "label": "City of Brentwood: Pickleball Court Update",
+     "url": "https://pubt.io/view/C3212675A99EB23EAC928C6D262CBA6E3E8B7E58"
+    },
+    {
+     "label": "Contra Costa News: Brentwood moves forward with Creekside closure",
+     "url": "https://contracosta.news/2026/10/25/despite-opposition-brentwood-moves-forward-with-closure-of-creekside-park-pickleball-courts/"
+    },
+    {
+     "label": "The Press: council votes to close pickleball courts",
+     "url": "https://www.thepress.net/news/a-really-challenging-decision---brentwood-city-council-votes-to-close-pickleball-courts/article_9c4577a5-a325-4efc-958f-0ddd65aa7711.html"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Noise-war tracker: another city closes courts over neighbor complaints. Good for a 'how to keep your courts' (quiet paddles, hours, sound walls) post.",
+   "tags": [
+    "Noise",
+    "Courts",
+    "California",
+    "Local government"
+   ]
+  },
+  {
+   "title": "Moab, Utah opens 8 lighted pickleball courts at the Old Spanish Trail Arena",
+   "summary": "Grand County opened eight lighted pickleball courts and an 11,000-square-foot playground at the Old Spanish Trail Arena (3641 S. Highway 191) with a ribbon cutting on Oct. 23, the Moab Sun News reports. The courts are open 7 a.m. to 10:30 p.m., weather permitting, on a first-come, first-served basis, and games go to 11 when people are waiting. The project came after the city dropped a 2022 plan for courts at Old City Park when neighbors objected and costs climbed, and it was partly paid for by a Land and Water Conservation Fund matching grant.",
+   "status": "confirmed",
+   "date": "2026-10-26",
+   "sources": [
+    {
+     "label": "Moab Sun News: courts and playground open, hours and rules",
+     "url": "https://moabsunnews.com/2026/10/25/moab-pickleball-courts-playground-open-old-spanish-trail-arena/"
+    },
+    {
+     "label": "Grand County: OSTA pickleball court rules (PDF)",
+     "url": "https://moabsunnews.com/wp-content/uploads/2026/10/osta-pickleball-court-rules-2026.pdf"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Courts-near-you item, and a nice contrast with Brentwood: Moab put its courts away from homes after neighbors pushed back.",
+   "tags": [
+    "Courts",
+    "Utah",
+    "New courts"
+   ]
+  },
   {
    "title": "Hong Kong Slam champions: Waters wins two golds, Johns/Waters take mixed, Staksrud/Patriquin win men's doubles, Hunter Johnson and Andie Dikosavljevic win singles",
    "summary": "Championship Sunday at the PPA Hang Seng Bank Hong Kong Slam (Kai Tak Arena), the final 2026 PPA Tour Asia stop. Mixed doubles: Anna Leigh Waters and Ben Johns beat Anna Bright and Hayden Patriquin 11-4, 11-3. Women's doubles: Waters and Bright beat Tyra Hurricane Black and Jorja Johnson 11-6, 11-4, so Waters leaves Hong Kong with two golds. Men's doubles: Federico Staksrud and Hayden Patriquin beat Ben Johns and Gabe Tardio 11-6, 11-8. Men's singles: Hunter Johnson beat Tama Shimabukuro 11-4, 6-11, 11-7, a title the PPA called back-to-back. Women's singles: Andie Dikosavljevic beat Judit Castillo 11-1, 11-5 for back-to-back golds, after also beating Castillo in last week's Australian Pickleball Cup final, per PPA Tour Asia.",
