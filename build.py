@@ -191,13 +191,13 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .ccopy{min-width:88px;min-height:56px;font-size:1rem}.ccopy.ok{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
 .ccard .cshop{font-weight:800;color:var(--navy);font-size:1rem;padding:.35rem 0}.ccard .cmeta{font-size:.94rem;color:var(--mut)}.ccard .cmeta a{color:var(--mut)}
 /* discount-codes email nudge (mobile-first) */
-.nudge{background:#0b1630;border:1px solid #16264a;border-radius:16px;padding:18px 16px;margin:16px 0 20px;color:#e6ecf5;font-size:16px;line-height:1.5}
-.nudge h2{margin:0 0 6px;color:#fff;font-size:22px;line-height:1.2}.nudge h2::before{box-shadow:none}
-.nudge p{margin:0 0 12px;font-size:16px;color:#e6ecf5}
+.nudge{background:#0b1630;border:2px solid #c6f432;border-radius:18px;padding:22px 18px;margin:18px 0 24px;color:#e6ecf5;font-size:16px;line-height:1.5}
+.nudge h2{margin:0 0 8px;color:#fff;font-size:26px;line-height:1.15}.nudge h2::before{box-shadow:none}
+.nudge p{margin:0 0 14px;font-size:17px;color:#e6ecf5}
 .nudge form{display:flex;flex-direction:column;gap:10px;margin:0}.nudge form[hidden]{display:none}
-.nudge .nudge-in{display:block;font-family:inherit;width:100%;max-width:none;min-width:0;box-sizing:border-box;min-height:48px;padding:12px 14px;font-size:16px;border-radius:12px;border:2px solid #16264a;background:#fff;color:#0b1630}
+.nudge .nudge-in{display:block;font-family:inherit;width:100%;max-width:none;min-width:0;box-sizing:border-box;min-height:56px;padding:14px 16px;font-size:18px;border-radius:12px;border:2px solid #16264a;background:#fff;color:#0b1630}
 .nudge .nudge-in:focus{outline:3px solid #c6f432;outline-offset:2px}
-.nudge .nudge-btn{justify-content:center;font-family:inherit;min-height:48px;padding:12px 20px;font-size:17px;font-weight:800;background:#c6f432;color:#0b1630;border-radius:12px;box-shadow:none}
+.nudge .nudge-btn{justify-content:center;font-family:inherit;min-height:56px;padding:14px 20px;font-size:19px;font-weight:800;background:#c6f432;color:#0b1630;border-radius:12px;box-shadow:none}
 .nudge .nudge-btn:disabled{opacity:.7;cursor:wait}
 .nudge .nudge-msg{margin:10px 0 0;font-size:16px;font-weight:700;min-height:0}.nudge .nudge-msg:empty{display:none}
 .nudge .nudge-msg.ok{color:#c6f432}.nudge .nudge-msg.err{color:#ffb4a8}
@@ -493,6 +493,9 @@ def nudge(src, key, title="Get new codes first", blurb="New pickleball discount 
             f'<button class="btn nudge-btn" type="submit">Get new codes</button></form>'
             f'<p class="nudge-msg" role="status" aria-live="polite"></p>'
             f'<p class="nudge-note">We\'ll only email DropThePickle code alerts and updates. See our <a href="privacy.html">privacy policy</a>.</p></section>')
+SIGNUP_TITLE = "Get new codes and price drops by email"
+SIGNUP_BLURB = ("We check brand and creator pages every day for new pickleball discount codes and paddle price drops. "
+                "Join the list and we'll email you when good new ones land. No spam, and we never sell your email.")
 NUDGEJS = """<script>document.querySelectorAll('form.nudge-form').forEach(f=>f.addEventListener('submit',async ev=>{ev.preventDefault();const box=f.closest('.nudge'),m=box.querySelector('.nudge-msg'),b=f.querySelector('button'),inp=f.querySelector('input[type=email]');const show=(ok,t)=>{m.textContent=t;m.className='nudge-msg '+(ok?'ok':'err')};if(!inp.value.trim()||!inp.checkValidity()){show(false,'Please enter a valid email address.');inp.focus();return}b.disabled=true;b.textContent='Sending…';let ok=false,msg='Something went wrong. Please try again.';try{const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});const d=await r.json().catch(()=>null);ok=!!(r.ok&&d&&d.ok);if(d&&d.message)msg=d.message}catch(err){msg='Could not reach the signup service. Please try again.'}if(ok){f.hidden=true;show(true,msg+' We’ll email you when new codes drop.')}else{b.disabled=false;b.textContent='Get new codes';show(false,msg)}}));</script>"""
 
 def fmt(d):
@@ -587,7 +590,7 @@ def build():
         return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)} {tags}</div><h3>{e(b["title"])}</h3><div class="meta">{fmt(b.get("date"))}</div><p>{e(b["summary"])}</p>'
                 f'<p class="srcs"><b>Sources:</b> {srcs}</p>{f"<div class={chr(34)}buzzx{chr(34)}>{emb}</div>" if emb else ""}</div>')
     BUZZ_TEASER = (f'<h2>Pickleball Buzz <a class="seemore" href="buzz.html">All buzz →</a></h2><div class="grid">{"".join(bcard(b, False) for b in B.get("items", [])[:3])}</div>') if B.get("items") else ""
-    page("buzz.html", "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p><div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
+    page("buzz.html", "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p>{nudge("buzz", "buzz", SIGNUP_TITLE, SIGNUP_BLURB)}<div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div>{nudge("buzz-bottom", "buzzb", "Like the buzz? Get codes by email", SIGNUP_BLURB)}{NUDGEJS}<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
          "Pickleball Buzz: what the pickleball world is talking about, with confirmed stories and clearly labeled rumors, each linked to its sources.",
          fresh={"updated": B.get("updated"), "items": [(b.get("title"), b.get("status"), b.get("date")) for b in B.get("items", [])]})
     rows = "".join(f'<tr><td><a href="{e(p["profile"])}" target="_blank" rel="noopener"><b>{e(p["name"])}</b></a></td><td>{e(p["country"])}</td><td>{e(p["paddle"])}</td><td>{" ".join(f"<a href={chr(34)}{e(u)}{chr(34)} target=_blank rel=noopener>{k}</a>" for k,u in p["socials"].items())}</td></tr>' for p in P.get("pros", []))
@@ -727,7 +730,7 @@ def build():
          f'<h1>Big Dill Science</h1><p class="meta">Short videos that explain the physics behind the shots. Tap play. Sound on.</p><div class="sci-grid">{"".join(scicard(*v) for v in SCI if (ROOT / "media" / f"{v[0]}.mp4").exists())}</div>'
          f'<p class="meta">Want to put it to work? Try <a href="guides/how-to-dink.html"><b>how to dink</b></a> or <a href="reviews.html"><b>paddle reviews</b></a>.</p>',
          "Big Dill Science: short pickleball physics videos on topspin and the third shot drop.", fresh={"sci": SCI})
-    import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
+    import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, nudge=nudge, NUDGEJS=NUDGEJS, SIGNUP_TITLE=SIGNUP_TITLE, SIGNUP_BLURB=SIGNUP_BLURB, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
     import paddle_quiz; QUIZ = paddle_quiz.make(page, e, fmt, D, PD, go_slug, paddle_pages.slug, C=C)
     print(f"paddle quiz: {QUIZ['recommendable']} of {QUIZ['paddles']} paddles recommendable, {QUIZ['tracked']} with tracker prices")
     import links_page; links_page.make(C, e, canon, CATALOG, DIST, extra=LINKS_EXTRA)

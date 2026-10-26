@@ -194,12 +194,61 @@ const BROWSER_UA = /^Mozilla\/5\.0 \(.+\) (AppleWebKit|Gecko|Chrome|Firefox|Safa
 
 // Returns 1 for likely bots, 0 for likely browser clicks. HEAD requests are handled (not logged) by the caller.
 export function isBot(request) {
-  if (request.method === "HEAD") return 1;
+  return botReasons(request).length ? 1 : 0;
+}
+
+// iOS 13 shipped in 2019; current traffic claiming it (often a frozen "iPhone OS 13_2_3" string with no referer)
+// is overwhelmingly scripted. Matches iPhone/iPad/iPod "OS 13_x like Mac OS X".
+const OLD_IOS_UA = /\b(?:iPhone|iPad|iPod)\b.*\bOS 13_\d+(?:_\d+)? like Mac OS X/i;
+
+// Burst labelling: many /go/ clicks from one country in a short window. Countries that produced
+// scripted-looking bursts in go_clicks (SG, BR, IN, GB) get a tighter threshold. Keep in sync with
+// migrations/0004_go_clicks_bot_reason.sql (view go_clicks_classified).
+const BURST_WINDOW_MIN = 10;
+const BURST_WATCH = ["SG", "BR", "IN", "GB"];
+const BURST_WATCH_MIN = 3;
+const BURST_ANY_MIN = 10;
+export function burstThreshold(country) {
+  return BURST_WATCH.includes(String(country || "").toUpperCase()) ? BURST_WATCH_MIN : BURST_ANY_MIN;
+}
+
+// Header-only reasons (no DB lookup). Each entry is a short label stored comma-joined in go_clicks.bot_reason.
+export function botReasons(request) {
+  const out = [];
+  if (request.method === "HEAD") out.push("head");
   const ua = (request.headers.get("user-agent") || "").trim();
-  if (!ua) return 1;
-  if (BOT_UA.test(ua)) return 1;
-  if (!request.headers.get("referer") && !BROWSER_UA.test(ua)) return 1;
-  return 0;
+  if (!ua) out.push("no_ua");
+  else {
+    if (BOT_UA.test(ua)) out.push("ua_bot");
+    if (OLD_IOS_UA.test(ua)) out.push("ios13");
+  }
+  const referer = request.headers.get("referer");
+  if (!referer) {
+    out.push("no_referer");
+    if (ua && !BROWSER_UA.test(ua) && !out.includes("ua_bot")) out.push("ua_not_browser");
+  }
+  return out;
+}
+
+// Labels and logs one click. Never throws and never changes the redirect: labelling only.
+async function logClick(env, request, slug, ref) {
+  try {
+    const country = countryFrom(request);
+    const now = Date.now();
+    const reasons = botReasons(request);
+    if (ref === null && !reasons.includes("no_referer")) reasons.push("no_referer"); // unparsable referer
+    if (country) {
+      const since = new Date(now - BURST_WINDOW_MIN * 60000).toISOString();
+      const row = await env.DB.prepare(
+        "SELECT COUNT(*) AS n FROM go_clicks WHERE country = ? AND created_at >= ?"
+      ).bind(country, since).first();
+      if (row && Number(row.n) + 1 >= burstThreshold(country)) reasons.push("burst");
+    }
+    const ua = (request.headers.get("user-agent") || "").slice(0, 512) || null;
+    await env.DB.prepare(
+      "INSERT INTO go_clicks (slug, referer_path, country, created_at, user_agent, is_bot, bot_reason) VALUES (?, ?, ?, ?, ?, ?, ?)"
+    ).bind(slug, ref, country, new Date(now).toISOString(), ua, reasons.length ? 1 : 0, reasons.join(",") || null).run();
+  } catch {}
 }
 
 async function handleGo(request, env, ctx, url) {
@@ -208,14 +257,12 @@ async function handleGo(request, env, ctx, url) {
   const target = /^[a-z0-9-]{1,80}$/.test(slug) ? goTarget(slug) : null;
   if (!target) return Response.redirect(new URL("/deals", url).toString(), 302);
   // HEAD (link checkers, unfurlers) still gets the redirect but is never logged.
-  // Flagged GETs are logged with is_bot = 1 so nothing is lost; count real clicks with is_bot = 0.
+  // Flagged GETs are logged with is_bot = 1 and bot_reason so nothing is lost; count real clicks with is_bot = 0.
+  // Labelling never blocks or alters the redirect.
   if (env.DB && request.method !== "HEAD") {
     let ref = null;
     try { ref = new URL(request.headers.get("referer") || "").pathname.slice(0, 200); } catch {}
-    const ua = (request.headers.get("user-agent") || "").slice(0, 512) || null;
-    const write = env.DB.prepare(
-      "INSERT INTO go_clicks (slug, referer_path, country, created_at, user_agent, is_bot) VALUES (?, ?, ?, ?, ?, ?)"
-    ).bind(slug, ref, countryFrom(request), new Date().toISOString(), ua, isBot(request)).run().catch(() => {});
+    const write = logClick(env, request, slug, ref);
     if (ctx && ctx.waitUntil) ctx.waitUntil(write); else await write;
   }
   return new Response(null, {

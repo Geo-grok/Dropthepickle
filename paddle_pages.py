@@ -321,6 +321,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 
     # ---------- home ----------
     T, N, tcard, ncard, rcard, signup = X["T"], X["N"], X["tcard"], X["ncard"], X["rcard"], X["signup"]
+    nudge, NUDGEJS, ST, SB = X["nudge"], X["NUDGEJS"], X["SIGNUP_TITLE"], X["SIGNUP_BLURB"]
     teaser = [x for x in pros if x.get("paddle")][:8]
     def av(n): return "".join(w[0] for w in n.split()[:2]).upper()
     pt = "".join(f'<a class="pro" href="pro-paddles.html" style="text-decoration:none;color:inherit"><span class="av">{e(av(x["name"]))}</span><span><b>{e(x["name"])}</b><br><span class="meta">{e(x["paddle"])}</span></span></a>' for x in teaser)
@@ -338,6 +339,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     home = f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>ALL THINGS <em>PICKLEBALL</em></h1><p>Free for everyone. {len(deals)} paddle deals, prices checked {fmt(upd)}.</p></div></div>
 {top5}</div></section>
 <main>
+{nudge("home", "home", ST, SB)}
 {X.get("BUZZ_TEASER","")}
 <h2 id="start">Start here</h2>
 <p class="meta">New to the sport, or shopping for a paddle? These guides use the USA Pickleball rulebook and the maker specs already on this site. No invented prices.</p>
@@ -357,7 +359,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
 <h2>Headlines <a class="seemore" href="news.html">All news →</a></h2><div class="grid">{"".join(ncard(n) for n in N.get("items", [])[:6])}</div>
 <h2>What the pros play <a class="seemore" href="pro-paddles.html">See all →</a></h2><div class="pros">{pt}</div>
 <h2>Find your paddle</h2><div class="grid secs"><a class="card" href="paddle-quiz.html"><h3>🎯 Take the paddle quiz</h3><div class="meta">3 questions, 3 picks →</div></a>{"".join(f'<a class="card" href="{f}"><h3>{e(t)}</h3><div class="meta">Spec filter →</div></a>' for f, t in list_links)}</div>
-<section class="band"><h2>Get the weekly drop</h2><p>The best paddle deals, new reviews and tournament news, once a week. No spam.</p>{signup("home")}</section>
+{nudge("home-bottom", "homeb", "Don't miss the next code", "New codes and price drops show up most days. Join the list and we'll email you when good ones land. Unsubscribe any time by emailing us.")}{NUDGEJS}
 </main>'''
     page("index.html", "Pickleball news, paddle deals & prices", home,
          "Daily pickleball news, verified paddle discount codes and dated price checks. All things pickleball, free for everyone.",
