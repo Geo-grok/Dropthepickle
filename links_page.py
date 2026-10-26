@@ -78,7 +78,8 @@ def make(C, e, canon, CATALOG, DIST, extra=None):
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1630">{robots}
 <meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{pre}favicon.ico" sizes="48x48"><link rel="apple-touch-icon" href="{pre}apple-touch-icon.png"><link rel="canonical" href="{e(url)}">
-<style>{CSS}</style></head>
+<style>{CSS}</style>
+<script async src="https://aromatic-caribou-889.convex.site/api/a/am_WGwXq9YSwrdbKKse"></script></head>
 <body data-src="{src}"><main class="w"><header class="hd"><a class="av" href="{e(utm('/', src))}" data-utm aria-label="{e(n)} home"><picture><source srcset="{pre}avatar.webp" type="image/webp"><img src="{pre}avatar.png" alt="Big Dill, the DropThePickle mascot" width="100" height="100"></picture></a>
 <a class="wm" href="{e(utm('/', src))}" data-utm>DROPTHE<span>PICKLE</span></a><p class="tg">All things pickleball. Free.</p></header>
 <nav aria-label="Links">{btns}</nav>

@@ -445,7 +445,8 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap">
 <link rel="stylesheet" href="{rel("style.css")}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="{rel("sitemap.xml")}">
-<script type="application/ld+json">{ld}</script></head>
+<script type="application/ld+json">{ld}</script>
+<script async src="https://aromatic-caribou-889.convex.site/api/a/am_WGwXq9YSwrdbKKse"></script></head>
 <body><header><div class="bar"><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a>
 <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav">{nav}</nav><a class="btn sm join" href="{rel("community.html")}#signup">Join free</a></div><nav class="tabs" aria-label="Main sections">{tabs}</nav></header>
 {body}
