@@ -16,8 +16,8 @@
   "updated": "2026-10-21"
  },
  "best-16mm-paddles.html": {
-  "hash": "4142dacaeadb6b8d22044c33d877739a6b43e4e8cf16ad1c38f35c118dfb65a4",
-  "updated": "2026-10-25"
+  "hash": "4176b129445b404a21a12d156b550acc003f412f35ba9462f69f7b8e7088e563",
+  "updated": "2026-10-26"
  },
  "best-crbn-paddles.html": {
   "hash": "1fbe8b1301e5d4ff094bf0286695d5f06ca13e0989890a26e3e815b090fced3f",
@@ -40,28 +40,28 @@
   "updated": null
  },
  "best-luzz-paddles.html": {
-  "hash": "9b9d08048384eb072654ef26ce9a0e9f37bcc72df19db29bfb62b9e05e1d4047",
-  "updated": "2026-10-23"
+  "hash": "2f4f2c93028e2a70a55ef90ab785e58b1dffcb860bf0f874e2607a52a6dea34f",
+  "updated": "2026-10-26"
  },
  "best-paddles-for-beginners.html": {
-  "hash": "dbf6b0918d0ed776204c68adbc3872e47387ce0f9bb82bde960f2cd7284d3bc2",
-  "updated": "2026-10-25"
+  "hash": "eb3343b31f879a42fb1dfaec2b9f753cbceb9c4ddedf501d22d8e90f5deb3797",
+  "updated": "2026-10-26"
  },
  "best-paddles-for-control.html": {
-  "hash": "2e274a113e398a4c80b384868357aebb8f6d356ad3e1ea8ebcc8e9dbcd801ab4",
-  "updated": "2026-10-24"
+  "hash": "a1f0d16c4efaadaba0af5ba4abd26c422544855884b4fe33c5b8ef64845fbc67",
+  "updated": "2026-10-26"
  },
  "best-paddles-for-power.html": {
-  "hash": "cbbd23a86d8c2ef6d68eac7e6426437c4898b568f41df836af15320e5509b32d",
-  "updated": "2026-10-24"
+  "hash": "9ab1f9a0f0a1b6db1ac9d949bf7b72bd1a711732c043376e7bb85f0f07ac7cd7",
+  "updated": "2026-10-26"
  },
  "best-paddles-for-tennis-players.html": {
   "hash": "2661b8d235e1cfa3b2aeb9ff351d0e2c3195b89d27ebe8ff3b4c7efed4ff221d",
   "updated": "2026-10-25"
  },
  "best-paddles-under-100.html": {
-  "hash": "5b424c7891d2003e112ffb101d24ee0a19f10fe1c74f1efc40914f0860a6cfb0",
-  "updated": "2026-10-25"
+  "hash": "11a558493b930f5bdb50053e1d090040b534743d536e0615cb0493a847efd192",
+  "updated": "2026-10-26"
  },
  "best-paddletek-paddles.html": {
   "hash": "24b9a0060f35ac26d4ce084309142105a8371a27affec0307f738b8436e3a7bc",
@@ -92,8 +92,8 @@
   "updated": null
  },
  "deals.html": {
-  "hash": "0a667975451eb24ca136e1ce9c5776769bbcd76b72e84f76771f538734ad50ac",
-  "updated": "2026-10-25"
+  "hash": "213b14459720848e79b62d638d9beb44a4022a8ab71bc3fc43536a266a2da596",
+  "updated": "2026-10-26"
  },
  "discount-codes.html": {
   "hash": "33e76993f26ca5761031ddc9719be1ca7d4669a2cc7ad4a385c0a73e55a55942",
@@ -608,8 +608,8 @@
   "updated": "2026-10-24"
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "b99150eb3aaf47b09a377a8b2961185a67462c7273825453d8ba868d11c1e736",
-  "updated": "2026-10-25"
+  "hash": "c829f5c6258690163382a1cf46c120a6f8d0c7ed223eaf455b0aaf1a54c9b133",
+  "updated": "2026-10-26"
  },
  "guides/best-volair-paddles.html": {
   "hash": "ce07e1aac179850bd1f562980f8b933f764941b294c6b38b4d64a9c04c3fd1ce",
@@ -652,12 +652,12 @@
   "updated": "2026-10-25"
  },
  "index.html": {
-  "hash": "355c70cbac71f4c28de14ba8852dd77320db521ff9fdc3137da8ea0456fbb622",
+  "hash": "c2a087618ef7f369e0a6a0a5383b7c44875c471fb5a0de09cff9d936b22c08d8",
   "updated": "2026-10-26"
  },
  "news.html": {
-  "hash": "bfebdbd72d28105a74dffd86c88b95ced6e207a539de17f6096572b0092582bd",
-  "updated": "2026-10-25"
+  "hash": "b34017111d6b09f2c08efaef5b218578c6502f540845ae99bb63eeeffde8eb24",
+  "updated": "2026-10-26"
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
   "hash": "dc9f574209e8c863d95e7ae37e241d4b079958ca7bd42d9080d413718476a708",
@@ -724,12 +724,12 @@
   "updated": null
  },
  "paddle-luzz-cannon-xpp-m1.html": {
-  "hash": "a8a1e4724190cf986a370c262a6ab67d16ad154d346686086cbc00fd898f0e66",
-  "updated": null
+  "hash": "ba88417a1a36e15f29d67317a4859a0331a0d0fcd8dc63523fbb14a47cd35ae9",
+  "updated": "2026-10-26"
  },
  "paddle-luzz-glider-2026-hybrid.html": {
-  "hash": "f2ca1441ffba97f35f2c2783660cbc5934a0cf52965052ebe72b4ae1d90f7694",
-  "updated": "2026-10-23"
+  "hash": "b8c3b672a312367f24941e6b6d58427ac5d547c4c0a0814d9c52e6dffe1b3b87",
+  "updated": "2026-10-26"
  },
  "paddle-paddletek-bantam-tko-c.html": {
   "hash": "4f612147b674a79d08e5a9f3a3372c3bd6092352bd0f421a955cc03476f57bd1",
@@ -828,16 +828,16 @@
   "updated": "2026-10-24"
  },
  "paddles.html": {
-  "hash": "b867401a25b33fa772c4f1c3efddca32ce88c08d12c9553499c655b4ce440129",
-  "updated": "2026-10-25"
+  "hash": "e40c19260703b28e98c886034db814d3e939b74c53a091e87bffe78f03a797b6",
+  "updated": "2026-10-26"
  },
  "podcasts.html": {
-  "hash": "6d4b5cd670a5e10412ce3f931b806827d4a02eb135e78ccc23408bc649185f25",
-  "updated": "2026-10-24"
+  "hash": "bb4b3ed46943ac842873b28c102f96e72ff0d226edd6a3a199cc416090ebdb82",
+  "updated": "2026-10-26"
  },
  "price-index.html": {
-  "hash": "3899e25cb9fd0639952749cb9aeca48de458e55b7cbb7b352f76e0ae57f2a07b",
-  "updated": "2026-10-25"
+  "hash": "a325e7c96a206cc23f18d69b0a8a5035214ee71b1d6ece6119437580da047a8e",
+  "updated": "2026-10-26"
  },
  "price-tracker.html": {
   "hash": "c6a2f07f82569fee8e6bf1b30c8b25b7167f45b98b1577a4722427e7e7eafb02",
@@ -856,8 +856,8 @@
   "updated": null
  },
  "reviews.html": {
-  "hash": "b86c0fd647e87315211467ccc55a266e67f14cd8130f73f413457353aec5f455",
-  "updated": "2026-10-25"
+  "hash": "ed6be8b79057dc214081f0a9d4673f3ade156c9c8ee9a3430f58e96f5d771604",
+  "updated": "2026-10-26"
  },
  "science.html": {
   "hash": "7001631c91bc072710ca681a449260e1a1556118e901a42ce98ffe999f014f24",
@@ -976,8 +976,8 @@
   "updated": null
  },
  "vs-luzz-cannon-xpp-m1-vs-luzz-glider-2026-hybrid.html": {
-  "hash": "9b9d08048384eb072654ef26ce9a0e9f37bcc72df19db29bfb62b9e05e1d4047",
-  "updated": "2026-10-23"
+  "hash": "2f4f2c93028e2a70a55ef90ab785e58b1dffcb860bf0f874e2607a52a6dea34f",
+  "updated": "2026-10-26"
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-honeyfoam-tko-x.html": {
   "hash": "518f4b31dc628896b1825fc91e45d6341daa4820f2aa7928faaeac21bca1e89b",

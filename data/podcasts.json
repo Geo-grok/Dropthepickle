@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "show": "The World Pickleball Podcast",
+   "title": "Three Months of Pickleball: World Cup, English Open, PPA Australia & Europe, Rome Open | World Pickleball Podcast",
+   "link": "https://worldpickleballpodcast.alitu.com/episode/1eb1a059-47db-4454-8875-945d1c58918f",
+   "date": "2026-10-26"
+  },
+  {
    "show": "Pickleballers (Jared Paul & Roscoe Bellamy)",
    "title": "Lacy Schneemann: She Quit Rocket Science for Pro Pickleball. Was It Worth It? | S5 E3",
    "link": "https://podcasters.spotify.com/pod/show/pickleballers",
@@ -131,12 +137,6 @@
    "title": "How Do Pro Pickleball Players Make Money? Shane Dunn on the Business Behind the Tour",
    "link": "https://worldpickleballpodcast.alitu.com/episode/816efdb3-5725-47dc-a560-b7cb25b307a5",
    "date": "2026-09-05"
-  },
-  {
-   "show": "The World Pickleball Podcast",
-   "title": "Why Your Pickleball Grip Fails When You Sweat, with Sahara Dry CEO Rob McEvoy",
-   "link": "https://worldpickleballpodcast.alitu.com/episode/f84d8a8c-cc54-407a-b4f4-a9cb03b13435",
-   "date": "2026-09-04"
   },
   {
    "show": "Pickleball Tips - 4.0 To Pro",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-10-25T11:24"
+ "updated": "2026-10-26T11:38"
 }

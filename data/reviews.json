@@ -145,14 +145,6 @@
    "date": "2026-10-19"
   },
   {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "ALL the RPM DIESEL Details | Plus, can James Ignatowich & I Squash Our BEEF?!? | Special Interview",
-   "link": "https://www.youtube.com/watch?v=AKsDyFOFxjI",
-   "video_id": "AKsDyFOFxjI",
-   "date": "2026-10-19"
-  },
-  {
    "channel": "Pickleball Playbook Paddles",
    "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
    "title": "Pickleball Apes Zen S+ Paddle Review",
@@ -479,6 +471,14 @@
    "link": "https://www.youtube.com/watch?v=zkScWko2G9A",
    "video_id": "zkScWko2G9A",
    "date": "2026-09-30"
+  },
+  {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "Volair CMD HYB Paddle Review | On court drill & play test",
+   "link": "https://www.youtube.com/watch?v=cvp0RCVGrzs",
+   "video_id": "cvp0RCVGrzs",
+   "date": "2026-09-29"
   }
  ],
  "all_items": [
@@ -624,14 +624,6 @@
    "title": "CPX Hyper +, RPM Jade, B&B Loco 2, Luzz Cannon XPP",
    "link": "https://www.youtube.com/watch?v=HMR0WXzLdsI",
    "video_id": "HMR0WXzLdsI",
-   "date": "2026-10-19"
-  },
-  {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "ALL the RPM DIESEL Details | Plus, can James Ignatowich & I Squash Our BEEF?!? | Special Interview",
-   "link": "https://www.youtube.com/watch?v=AKsDyFOFxjI",
-   "video_id": "AKsDyFOFxjI",
    "date": "2026-10-19"
   },
   {
@@ -1587,7 +1579,7 @@
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (6)",
   "All Drive No Drop Pickleball": "ok (8)",
-  "Matthew K Pickleball": "ok (2)",
+  "Matthew K Pickleball": "ok (1)",
   "Tickle My Pickleball": "ok (3)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
@@ -1596,5 +1588,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-10-25T11:24"
+ "updated": "2026-10-26T11:38"
 }
