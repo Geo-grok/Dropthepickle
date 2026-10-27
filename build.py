@@ -3,6 +3,9 @@
 import json, pathlib, shutil, html, urllib.parse, datetime, re, hashlib
 ROOT = pathlib.Path(__file__).parent; DIST = ROOT / "dist"
 C = json.loads((ROOT / "config.json").read_text())
+# Google Fonts: loaded non-blocking (preload + media="print" swap, <noscript> fallback); display=swap shows fallback text at once.
+GFONTS = "https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap"
+
 def D(n):
     p = ROOT / "data" / n
     return json.loads(p.read_text()) if p.exists() else {"items": []}
@@ -58,7 +61,7 @@ header{position:sticky;top:0;z-index:50;background:#0b1630;border-bottom:1px sol
 .top5{list-style:none;margin:0;padding:0}
 .top5 li{display:flex;gap:14px;padding:14px;margin:0 16px 12px;background:#fff;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .top5 .th{flex:none;position:relative;width:84px;height:84px;border-radius:12px;background:#e8edf6;overflow:hidden;display:grid;place-items:center}.top5 .th img,.top5 .th svg{width:100%;height:100%;object-fit:cover}
-.top5 .rk{position:absolute;top:4px;left:4px;min-width:26px;height:26px;border-radius:999px;background:#0b1630;color:#c6f432;display:grid;place-items:center;font:800 15px/1 Inter,sans-serif}
+.top5 .rk{position:absolute;top:4px;left:4px;min-width:26px;height:26px;border-radius:999px;background:#0b1630;color:#c6f432;display:grid;place-items:center;font:800 15px/1 Inter,system-ui,sans-serif}
 .top5 .bd{min-width:0;flex:1}.top5 h3{margin:0 0 4px;font:800 18px/1.25 Inter,system-ui,sans-serif;color:#0b1630}.top5 h3 a{color:#0b1630;text-decoration:none}
 .top5 .fr{font-size:15px;color:#4a5878;margin:0 0 6px}
 .top5 .px{font-size:20px;font-weight:800;color:#0b1630;display:flex;flex-wrap:wrap;align-items:center;gap:6px}.top5 .px s{color:#6b7a99;font-weight:600;font-size:16px}
@@ -98,7 +101,7 @@ main{max-width:1200px;margin:auto;padding:1.4rem 1.1rem 3rem}
 .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 0 0 rgba(198,244,50,.6);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(198,244,50,0)}100%{box-shadow:0 0 0 0 rgba(198,244,50,0)}}
 .ctas{display:flex;flex-wrap:wrap;gap:.7rem}
-.stats{display:flex;gap:1.6rem;margin-top:2rem;flex-wrap:wrap}.stats b{display:block;font-family:Oswald,sans-serif;font-size:1.9rem;color:#fff;line-height:1}.stats span{font-size:.94rem;color:#d5deeb;text-transform:uppercase;letter-spacing:0}
+.stats{display:flex;gap:1.6rem;margin-top:2rem;flex-wrap:wrap}.stats b{display:block;font-family:Oswald,"Arial Narrow",Arial,sans-serif;font-size:1.9rem;color:#fff;line-height:1}.stats span{font-size:.94rem;color:#d5deeb;text-transform:uppercase;letter-spacing:0}
 .heroart{position:relative;justify-self:center;width:min(380px,80vw);aspect-ratio:1;animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}
 @media(max-width:820px){.hero .in{grid-template-columns:1fr}.heroart{display:none}}
@@ -106,7 +109,7 @@ main{max-width:1200px;margin:auto;padding:1.4rem 1.1rem 3rem}
 .phero h1{color:#fff;margin-top:.3rem}.phero .meta{color:#a9b6cf}.phero .meta a{color:var(--neon)}
 .phero .img{background:radial-gradient(circle at 50% 40%,#fff,#e9eef7);border-radius:20px;aspect-ratio:1;display:grid;place-items:center;padding:1rem;overflow:hidden;min-width:0;max-width:100%}
 .phero .img img{width:100%;height:100%;max-width:100%;max-height:100%;min-width:0;min-height:0;object-fit:contain;transform:none;filter:drop-shadow(0 18px 24px rgba(0,0,0,.25))}
-.price{font-family:Oswald,sans-serif;font-size:2.4rem;font-weight:700;line-height:1;color:var(--neon)}.price s{font-size:1.1rem;color:#8796b3;margin-left:.4rem;font-weight:400}
+.price{font-family:Oswald,"Arial Narrow",Arial,sans-serif;font-size:2.4rem;font-weight:700;line-height:1;color:var(--neon)}.price s{font-size:1.1rem;color:#8796b3;margin-left:.4rem;font-weight:400}
 @media(max-width:720px){.phero{grid-template-columns:1fr}}
 .saverow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.saverow a{flex:1 1 120px;display:flex;align-items:center;justify-content:center;min-height:52px;padding:10px 8px;border-radius:14px;background:#16264a;color:#fff;font:800 17px/1.2 Inter,system-ui,sans-serif;text-decoration:none;text-align:center;box-shadow:inset 0 0 0 2px #c6f432}.saverow a.hot{flex-basis:100%;background:#c6f432;color:#0b1630}.saverow a:hover{background:#1f3360}.saverow a.hot:hover{background:#d6ff4a}
 .pagehead{background:linear-gradient(160deg,#0b1426,#162a57);color:#fff;border-radius:24px;padding:clamp(1.4rem,4vw,2.6rem);margin:.4rem 0 1.2rem;position:relative;overflow:hidden;box-shadow:var(--sh2)}
@@ -117,7 +120,7 @@ main{max-width:1200px;margin:auto;padding:1.4rem 1.1rem 3rem}
 .pcard .pimg img{width:100%;height:100%;max-width:100%;max-height:100%;min-width:0;min-height:0;object-fit:contain;transform:none;filter:drop-shadow(0 10px 14px rgba(0,0,0,.15))}
 .pcard .badges{position:absolute;top:.7rem;left:.7rem;display:flex;gap:.3rem;flex-wrap:wrap}
 .pcard .body{padding:1rem 1.1rem 1.15rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
-.pcard .pp{font-family:Oswald,sans-serif;font-size:1.5rem;font-weight:700}.pcard .pp s{font-size:.95rem;color:var(--mut);font-weight:400;margin-left:.3rem}
+.pcard .pp{font-family:Oswald,"Arial Narrow",Arial,sans-serif;font-size:1.5rem;font-weight:700}.pcard .pp s{font-size:.95rem;color:var(--mut);font-weight:400;margin-left:.3rem}
 .pcard .brand{font-size:.94rem;font-weight:800;letter-spacing:0;text-transform:uppercase;color:var(--mut)}
 .credit{font-size:.94rem;color:#94a0b5;position:absolute;right:.6rem;bottom:.4rem}
 .rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.3rem .2rem 1rem;scrollbar-width:thin}
@@ -126,7 +129,7 @@ main{max-width:1200px;margin:auto;padding:1.4rem 1.1rem 3rem}
 /* tables */
 .tbl{overflow-x:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--sh);background:#fff}
 table{width:100%;border-collapse:collapse;font-size:.94rem}th,td{padding:.75rem .9rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-tr:last-child td,tr:last-child th{border-bottom:0}thead th,tr:first-child th:not([scope]){background:var(--navy);color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:0;font-weight:500}
+tr:last-child td,tr:last-child th{border-bottom:0}thead th,tr:first-child th:not([scope]){background:var(--navy);color:#fff;font-family:Oswald,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:0;font-weight:500}
 tr:first-child th a{color:var(--neon)}tbody tr:hover{background:#f8faff}
 .vs td.win{background:linear-gradient(90deg,rgba(198,244,50,.25),rgba(198,244,50,.08));font-weight:700;position:relative}
 .vs td.win::after{content:"✓ edge";margin-left:.4rem;font-size:.94rem;font-weight:800;color:var(--navy);background:var(--neon);padding:.08rem .4rem;border-radius:5px;text-transform:uppercase}
@@ -139,17 +142,17 @@ tr:first-child th a{color:var(--neon)}tbody tr:hover{background:#f8faff}
 /* tournaments strip, news, sections */
 .strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:1rem;overflow-x:auto;padding-bottom:.6rem}
 .tcard{background:var(--navy2);color:#fff;border:1px solid rgba(255,255,255,.08)}.tcard h3{color:#fff}.tcard .meta{color:#a9b6cf}.tcard a{color:var(--neon)}
-.date{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:58px;height:62px;border-radius:12px;background:var(--neon);color:var(--navy);font-family:Oswald,sans-serif;line-height:1;float:right;margin:0 0 .4rem .6rem}.date b{font-size:1.5rem}.date small{font-size:.94rem;font-weight:700;text-transform:uppercase}
+.date{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:58px;height:62px;border-radius:12px;background:var(--neon);color:var(--navy);font-family:Oswald,"Arial Narrow",Arial,sans-serif;line-height:1;float:right;margin:0 0 .4rem .6rem}.date b{font-size:1.5rem}.date small{font-size:.94rem;font-weight:700;text-transform:uppercase}
 .band{background:var(--navy);color:#fff;border-radius:26px;padding:clamp(1.4rem,4vw,2.6rem);margin:2.6rem 0 0;position:relative;overflow:hidden}
 .band h2{color:#fff;margin-top:0}.band p{color:#b5c1d8}.band .meta{color:#d5deeb}
 .dark{background:var(--navy);color:#fff;margin:2.4rem -1.1rem 0;padding:1rem 1.1rem 2.6rem}
 .dark h2{color:#fff}.dark .meta{color:#a9b6cf}
 .dark .in{max-width:1200px;margin:auto;padding:0 1.1rem}
 .newscard .pub{margin-bottom:.5rem}
-.seemore{font-weight:700;text-decoration:none;font-size:.94rem;margin-left:auto;font-family:Inter,sans-serif;text-transform:none;letter-spacing:0;color:#2453c7}.dark .seemore{color:var(--neon)}
+.seemore{font-weight:700;text-decoration:none;font-size:.94rem;margin-left:auto;font-family:Inter,system-ui,sans-serif;text-transform:none;letter-spacing:0;color:#2453c7}.dark .seemore{color:var(--neon)}
 .pros{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.8rem}
 .pro{display:flex;gap:.8rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.8rem;box-shadow:var(--sh);transition:.2s}.pro:hover{transform:translateY(-3px)}
-.pro .av{width:44px;height:44px;flex:none;border-radius:50%;background:var(--navy);color:var(--neon);display:grid;place-items:center;font-family:Oswald,sans-serif;font-weight:700}
+.pro .av{width:44px;height:44px;flex:none;border-radius:50%;background:var(--navy);color:var(--neon);display:grid;place-items:center;font-family:Oswald,"Arial Narrow",Arial,sans-serif;font-weight:700}
 .grid.proscons{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}.proscons .card:first-child{border-top:4px solid var(--neon)}.proscons .card:last-child{border-top:4px solid var(--warm)}
 /* forms */
 form{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0;position:relative}.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -159,7 +162,7 @@ input::placeholder{color:#d5deeb}
 /* footer */
 footer{background:#070d1a;color:#d5deeb;padding:3rem 1.1rem 2rem;font-size:.94rem}
 .fin{max-width:1200px;margin:auto;display:grid;grid-template-columns:minmax(0,1.3fr) repeat(4,minmax(0,1fr));gap:1.4rem}
-footer h4{color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:0;margin:0 0 .7rem;font-size:.95rem}
+footer h4{color:#fff;font-family:Oswald,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:0;margin:0 0 .7rem;font-size:.95rem}
 footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer a:hover{color:var(--neon)}
 .legal{max-width:1200px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.08);font-size:.94rem}
 @media(max-width:980px){.fin{grid-template-columns:1fr 1fr}.fin>div:first-child{grid-column:1/-1}}
@@ -443,7 +446,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Drop the Pickle">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
 <link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap">
+<link rel="preload" as="style" href="{GFONTS}"><link rel="stylesheet" href="{GFONTS}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="{GFONTS}"></noscript>
 <link rel="stylesheet" href="{rel("style.css")}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <script type="application/ld+json">{ld}</script>
 <script async src="https://aromatic-caribou-889.convex.site/api/a/am_WGwXq9YSwrdbKKse"></script></head>
