@@ -2,8 +2,26 @@
  "items": [
   {
    "show": "The World Pickleball Podcast",
+   "title": "Bamboo vs Carbon: Ben Tinkler-Davies on Kinova & the Swift Paddle",
+   "link": "https://worldpickleballpodcast.alitu.com/episode/22acb933-3806-4ac1-90ec-60bcedb0aa82",
+   "date": "2026-10-27"
+  },
+  {
+   "show": "The World Pickleball Podcast",
    "title": "Three Months of Pickleball: World Cup, English Open, PPA Australia & Europe, Rome Open | World Pickleball Podcast",
    "link": "https://worldpickleballpodcast.alitu.com/episode/1eb1a059-47db-4454-8875-945d1c58918f",
+   "date": "2026-10-26"
+  },
+  {
+   "show": "Cracked Paddles Podcast",
+   "title": "Elliot Schupp Reveals the Secrets Behind His Rapid Rise",
+   "link": "https://bleav.com/shows/cracked-paddles-podcast-pickleball-podcast/?post_type=gp_podcast_episode&p=74",
+   "date": "2026-10-26"
+  },
+  {
+   "show": "This is Pickleball",
+   "title": "Why Blaine Hovenier Chose Pickleball Over Investment Banking",
+   "link": "https://267631d5-5c65-4806-932e-f15ff1927658.libsyn.com/why-blaine-hovenier-chose-pickleball-over-investment-banking",
    "date": "2026-10-26"
   },
   {
@@ -115,28 +133,10 @@
    "date": "2026-09-19"
   },
   {
-   "show": "This is Pickleball",
-   "title": "Ben Shelton's WILD US Open Run",
-   "link": "https://267631d5-5c65-4806-932e-f15ff1927658.libsyn.com/ben-sheltons-wild-us-open-run",
-   "date": "2026-09-18"
-  },
-  {
    "show": "The World Pickleball Podcast",
    "title": "Bruno Faletto: From Chilean Tennis Prospect to PPA Pickleball Pro",
    "link": "https://worldpickleballpodcast.alitu.com/episode/5de89e18-7a14-47dc-b8f1-65b7e6629a63",
    "date": "2026-09-10"
-  },
-  {
-   "show": "Cracked Paddles Podcast",
-   "title": "Beating Connor Garnett, PPA Nationals, and 4.5 Pickleball Mistakes",
-   "link": "https://bleav.com/shows/cracked-paddles-podcast-pickleball-podcast/episodes/beating-connor-garnett-ppa-nationals-and-4-5-pickleball-mistakes/",
-   "date": "2026-09-08"
-  },
-  {
-   "show": "The World Pickleball Podcast",
-   "title": "How Do Pro Pickleball Players Make Money? Shane Dunn on the Business Behind the Tour",
-   "link": "https://worldpickleballpodcast.alitu.com/episode/816efdb3-5725-47dc-a560-b7cb25b307a5",
-   "date": "2026-09-05"
   },
   {
    "show": "Pickleball Tips - 4.0 To Pro",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-10-26T11:38"
+ "updated": "2026-10-27T11:33"
 }

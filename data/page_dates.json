@@ -16,16 +16,16 @@
   "updated": "2026-10-21"
  },
  "best-16mm-paddles.html": {
-  "hash": "4176b129445b404a21a12d156b550acc003f412f35ba9462f69f7b8e7088e563",
-  "updated": "2026-10-26"
+  "hash": "6b79ad0b1b048abc90dae8b96137264e053c1374c2b90ce68236034197f12324",
+  "updated": "2026-10-27"
  },
  "best-crbn-paddles.html": {
   "hash": "1fbe8b1301e5d4ff094bf0286695d5f06ca13e0989890a26e3e815b090fced3f",
   "updated": null
  },
  "best-elongated-paddles.html": {
-  "hash": "3b507ca6c769fb778fbff0f2d3dea2a57829e0c08256b89116602df09d173e90",
-  "updated": "2026-10-25"
+  "hash": "3bac7a3418eb973487dbf7db21fb2e568fda3d47af466d404bd89108346aeddd",
+  "updated": "2026-10-27"
  },
  "best-engage-paddles.html": {
   "hash": "2c149178deadbb28e7fe41c3455189555297f2f33610ceb7ad2124f17982ab04",
@@ -48,16 +48,16 @@
   "updated": "2026-10-26"
  },
  "best-paddles-for-control.html": {
-  "hash": "a1f0d16c4efaadaba0af5ba4abd26c422544855884b4fe33c5b8ef64845fbc67",
-  "updated": "2026-10-26"
+  "hash": "6a3cfa069d579ce533cbedfde05a25c4f2a7123aa2ecc4336de09ca9a2b7f54a",
+  "updated": "2026-10-27"
  },
  "best-paddles-for-power.html": {
   "hash": "9ab1f9a0f0a1b6db1ac9d949bf7b72bd1a711732c043376e7bb85f0f07ac7cd7",
   "updated": "2026-10-26"
  },
  "best-paddles-for-tennis-players.html": {
-  "hash": "2661b8d235e1cfa3b2aeb9ff351d0e2c3195b89d27ebe8ff3b4c7efed4ff221d",
-  "updated": "2026-10-25"
+  "hash": "fc8658e38a2a78e5f58cf13d5b0d1dfc4c02a99bc02238d798b7fbaa2d334cf6",
+  "updated": "2026-10-27"
  },
  "best-paddles-under-100.html": {
   "hash": "11a558493b930f5bdb50053e1d090040b534743d536e0615cb0493a847efd192",
@@ -72,8 +72,8 @@
   "updated": null
  },
  "best-six-zero-paddles.html": {
-  "hash": "586b5a81c5b30db05a0d08533ab7fe3f5c03b031b4c2c9deb942f0be26e1172f",
-  "updated": "2026-10-23"
+  "hash": "b3546bb7504202bba2ad12daa9c5ed53281b4c8b1010d3e98a068a094f7cb769",
+  "updated": "2026-10-27"
  },
  "buzz.html": {
   "hash": "51158bc6e8aacd5dcf5d470680f7561ad7bc0c988a28f0b7540bdc5614fa6e6d",
@@ -612,8 +612,8 @@
   "updated": "2026-10-24"
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "c829f5c6258690163382a1cf46c120a6f8d0c7ed223eaf455b0aaf1a54c9b133",
-  "updated": "2026-10-26"
+  "hash": "82ee362221b416e7fb011525f8872a985da54c52cd9e8fc226c91763848f4baf",
+  "updated": "2026-10-27"
  },
  "guides/best-volair-paddles.html": {
   "hash": "ce07e1aac179850bd1f562980f8b933f764941b294c6b38b4d64a9c04c3fd1ce",
@@ -656,12 +656,12 @@
   "updated": "2026-10-26"
  },
  "index.html": {
-  "hash": "336186f9cf548d2e41887756ba9d18c2378655a8aa28969373b59c95e61282cc",
+  "hash": "abffd9eeb5b75c6ca05f5c17ca1ec6c5597f962a328f39f78d8793a6eaf7fe88",
   "updated": "2026-10-27"
  },
  "news.html": {
-  "hash": "b34017111d6b09f2c08efaef5b218578c6502f540845ae99bb63eeeffde8eb24",
-  "updated": "2026-10-26"
+  "hash": "134369042cd082d925684974a6730200bd2116a71cac2e45bd4644b3d945fdd4",
+  "updated": "2026-10-27"
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
   "hash": "dc9f574209e8c863d95e7ae37e241d4b079958ca7bd42d9080d413718476a708",
@@ -776,12 +776,12 @@
   "updated": "2026-10-23"
  },
  "paddle-six-zero-coral-16mm.html": {
-  "hash": "5f8640a12ca4563b03e9d77e54e3721494487c4f6841b34215366398e764ebaa",
-  "updated": null
+  "hash": "378baf39128f54696029e0c569425cb8ab032294351d432775b2033d86fc783a",
+  "updated": "2026-10-27"
  },
  "paddle-six-zero-double-black-diamond-control.html": {
-  "hash": "b2c0b1026890e141b39655e77c4afafbcaae9513c6fa23b4df1af68d1596c734",
-  "updated": null
+  "hash": "a904c5e8c6b1aa30dc859d7ce79ab4890b6ba277c748b6e6d66b006ff2ac1887",
+  "updated": "2026-10-27"
  },
  "paddle-six-zero-ruby.html": {
   "hash": "507c205405cca51a1dd38c0e3c02bdd5fd72f1e0df9e08ccea67df73601e8e48",
@@ -832,16 +832,16 @@
   "updated": "2026-10-24"
  },
  "paddles.html": {
-  "hash": "e40c19260703b28e98c886034db814d3e939b74c53a091e87bffe78f03a797b6",
-  "updated": "2026-10-26"
+  "hash": "f05adb2d8ec1b3c8a57c1679c54df00adc4266299bce7b56175c8e30538174ab",
+  "updated": "2026-10-27"
  },
  "podcasts.html": {
-  "hash": "bb4b3ed46943ac842873b28c102f96e72ff0d226edd6a3a199cc416090ebdb82",
-  "updated": "2026-10-26"
+  "hash": "36306300708cf9d71d566ec33d6b681f7d5097dcdf0c0426382439038552ed08",
+  "updated": "2026-10-27"
  },
  "price-index.html": {
-  "hash": "a325e7c96a206cc23f18d69b0a8a5035214ee71b1d6ece6119437580da047a8e",
-  "updated": "2026-10-26"
+  "hash": "9a2d64e9e2af7583278a367504823229ab0856d601b9022ff2cd0a70288e05e4",
+  "updated": "2026-10-27"
  },
  "price-tracker.html": {
   "hash": "c6a2f07f82569fee8e6bf1b30c8b25b7167f45b98b1577a4722427e7e7eafb02",
@@ -860,8 +860,8 @@
   "updated": null
  },
  "reviews.html": {
-  "hash": "ed6be8b79057dc214081f0a9d4673f3ade156c9c8ee9a3430f58e96f5d771604",
-  "updated": "2026-10-26"
+  "hash": "647d028c19a5d17a0bc747c420c43d16352b864193142a1379d08d6c81aa85f0",
+  "updated": "2026-10-27"
  },
  "science.html": {
   "hash": "7001631c91bc072710ca681a449260e1a1556118e901a42ce98ffe999f014f24",
@@ -1036,28 +1036,28 @@
   "updated": null
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-coral-16mm.html": {
-  "hash": "7ca7884e5006444118309cfab03bc5202f4a8d496cb773813717b9fb14f8daf2",
-  "updated": "2026-10-23"
+  "hash": "0d6782509a831b1e537015ae9aa816b820df6b8d592bd7556cbd500ea3343135",
+  "updated": "2026-10-27"
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-double-black-diamond-control.html": {
-  "hash": "4f7c1336d94874f7cab4d16b2e9fcc1cd23889efe6212d65bec5794f170effaf",
-  "updated": "2026-10-23"
+  "hash": "1f2c2f0e8db53e6ee78c3aaf8f9284caf35b862f1e02a9f4ea37afe0da51745a",
+  "updated": "2026-10-27"
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-ruby.html": {
   "hash": "6f1ce80dfbee2e99cef9b40319fe205e475b3f1e769a1fe25289ff924ea47a76",
   "updated": "2026-10-23"
  },
  "vs-six-zero-coral-16mm-vs-six-zero-double-black-diamond-control.html": {
-  "hash": "8e39cbd84c5eea3e7f4cfc5cd65f19852bd583edf38c7204b16ad19e2fa4b32a",
-  "updated": null
+  "hash": "b99bb9bce50d9d74e130b29219b8811390d57bd10d240dbe298e50b36e1bf726",
+  "updated": "2026-10-27"
  },
  "vs-six-zero-coral-16mm-vs-six-zero-ruby.html": {
-  "hash": "818c97bf8d3929444181a2911a1e9053644e0d074631d8432c867ec7b724cc1d",
-  "updated": null
+  "hash": "7e60492f4afc940a537582320f55e5609e595b3f3b280a58023d08889369b432",
+  "updated": "2026-10-27"
  },
  "vs-six-zero-double-black-diamond-control-vs-six-zero-ruby.html": {
-  "hash": "b1ddf7bd4d9d7c4dea0462ab94f86692dde16a4a0a77ed151fbc082f74bd2c61",
-  "updated": null
+  "hash": "cbd8ec400f930f19597580bf98000faa343798bf6ffbef6250fdfdab3ce10ce3",
+  "updated": "2026-10-27"
  },
  "vs-volair-cmd-el-16mm-vs-volair-cmd-hyb-16mm-dylan-frazier.html": {
   "hash": "00999be7c1bdd10c9f333dd1428b422bba78cb4123d75056b49812e5b55c8234",
