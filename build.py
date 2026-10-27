@@ -10,6 +10,7 @@ e = lambda s: html.escape(str(s or ""), quote=True)
 NAV = [("index.html","Home"),("tournaments.html","Tournaments"),("reviews.html","Reviews"),("buzz.html","Buzz"),
        ("pros.html","Pros"),("pro-paddles.html","Pro paddles"),("creators.html","Creators"),("podcasts.html","Podcasts"),("compare.html","Compare"),("paddle-quiz.html","Paddle quiz"),("price-tracker.html","Price tracker"),("science.html","Science"),("shop.html","Merch"),("community.html","Marketplace")]
 import own_codes
+import urls  # extensionless canonical/sitemap/href helpers
 OWN = own_codes.own_codes(C)  # DropThePickle's own codes (config.json OWN_CODES); refresh-codes never touches config.json
 CSS = r"""
 :root{--navy:#0b1630;--navy2:#111d36;--navy3:#16264a;--neon:#c6f432;--neon2:#a8d61c;--warm:#ff7a45;--ink:#0d1526;--mut:#4a5878;--bg:#f4f6fa;--card:#fff;--line:#e3e8f0;--r:18px;--sh:0 1px 2px rgba(11,20,38,.06),0 8px 24px rgba(11,20,38,.08);--sh2:0 2px 4px rgba(11,20,38,.08),0 18px 40px rgba(11,20,38,.16)}
@@ -310,10 +311,8 @@ FOOTCOLS = [("Explore",[("tournaments.html","Tournaments"),("reviews.html","Padd
             ("Company",[("about.html","About"),("disclosure.html","Affiliate disclosure"),("privacy.html","Privacy"),("community.html","Join the community")])]
 # Last content-change date per page. A date is recorded only when `fresh` differs from the hash stored in data/page_dates.json.
 _PREV, _NEXT, CATALOG = {}, {}, {}
-def canon(fn):
-    base = C["BASE_URL"].rstrip("/")
-    if fn.startswith("discount-codes/"): return f"{base}/{fn[:-5]}"  # served extensionless by Cloudflare assets
-    return base + "/" if fn == "index.html" else f"{base}/{fn}"
+def canon(fn): return urls.canon(C["BASE_URL"], fn)
+clean_hrefs = lambda doc: urls.clean_hrefs(C["BASE_URL"], doc)
 def fingerprint(obj):
     return hashlib.sha256(json.dumps(obj, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()
 def note_fresh(fn, payload):
@@ -359,12 +358,12 @@ def crumbs_for(fn, title, url):
     home = {"name": "Home", "url": base}
     if fn == "index.html": return [home]
     crumbs = [home]
-    if fn.startswith("events/"): crumbs.append({"name": "Tournaments", "url": base + "tournaments.html"})
-    elif fn.startswith("guides/"): crumbs.append({"name": "Guides", "url": base + "guides/how-to-choose-a-paddle.html"})
-    elif fn.startswith("articles/"): crumbs.append({"name": "News", "url": base + "news.html"})
-    elif fn.startswith("creators/"): crumbs.append({"name": "Creators", "url": base + "creators.html"})
-    elif fn.startswith("paddle-") or fn == "price-index.html": crumbs.append({"name": "Paddles", "url": base + "paddles.html"})
-    elif fn.startswith(("vs-", "best-")): crumbs.append({"name": "Compare", "url": base + "compare.html"})
+    if fn.startswith("events/"): crumbs.append({"name": "Tournaments", "url": canon("tournaments.html")})
+    elif fn.startswith("guides/"): crumbs.append({"name": "Guides", "url": canon("guides/how-to-choose-a-paddle.html")})
+    elif fn.startswith("articles/"): crumbs.append({"name": "News", "url": canon("news.html")})
+    elif fn.startswith("creators/"): crumbs.append({"name": "Creators", "url": canon("creators.html")})
+    elif fn.startswith("paddle-") or fn == "price-index.html": crumbs.append({"name": "Paddles", "url": canon("paddles.html")})
+    elif fn.startswith(("vs-", "best-")): crumbs.append({"name": "Compare", "url": canon("compare.html")})
     crumbs.append({"name": title, "url": url})
     return crumbs
 def ld_graph(title, desc, url, crumbs, updated, extra):
@@ -445,7 +444,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
 <link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap">
-<link rel="stylesheet" href="{rel("style.css")}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="{rel("sitemap.xml")}">
+<link rel="stylesheet" href="{rel("style.css")}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <script type="application/ld+json">{ld}</script>
 <script async src="https://aromatic-caribou-889.convex.site/api/a/am_WGwXq9YSwrdbKKse"></script></head>
 <body><header><div class="bar"><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a>
@@ -466,7 +465,7 @@ document.querySelectorAll('form[action$="/api/signup"]:not(.nudge-form)').forEac
 </body></html>"""
     dest = DIST / fn
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(golinks(doc))
+    dest.write_text(clean_hrefs(golinks(doc)))
     CATALOG[fn] = {"fn": fn, "title": doc_title, "desc": desc, "updated": updated}
 
 def buy(p):
@@ -691,7 +690,7 @@ def build():
     page("discount-codes.html", "Pickleball Discount Codes & Paddle Coupons (Updated Daily)",
          f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
          f'{nudge("discount-codes", "top")}'
-         f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes)} <a href=disclosure.html>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) or OWN else ""}'
+         f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes)} <a href=/disclosure>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) or OWN else ""}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
          f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a> or the <a href="price-tracker.html">Paddle Price Tracker</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p><h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
          f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(codes)} <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'

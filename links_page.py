@@ -2,6 +2,7 @@
 Minimal on purpose: no site nav, no web fonts, one small avatar, inline CSS, a few lines of vanilla JS.
 Every internal link gets utm_source=<platform>&utm_medium=social&utm_campaign=bio. The hrefs are baked in at
 build time (so they work without JS), and the inline script swaps utm_source when the page URL has ?src= or ?utm_source=."""
+import urls
 import json, pathlib, re, subprocess, urllib.parse
 ROOT = pathlib.Path(__file__).parent
 # Used only when git history can't tell which video is newest (for example a depth-1 CI checkout where every file shares one commit).
@@ -87,7 +88,7 @@ def make(C, e, canon, CATALOG, DIST, extra=None):
 {JS % alias_js}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "8b857a29f29446008d526b7021a0eaa1"}}'></script>
 </body></html>"""
-        out = DIST / fn; out.parent.mkdir(parents=True, exist_ok=True); out.write_text(doc)
+        out = DIST / fn; out.parent.mkdir(parents=True, exist_ok=True); out.write_text(urls.clean_hrefs(C["BASE_URL"], doc))
         return len(doc.encode())
     sizes = {"links.html": render("links.html", "bio", "")}
     for p in PLATFORMS:

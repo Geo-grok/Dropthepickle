@@ -1,5 +1,6 @@
 """Paddle detail, comparison, best-of, deals and pro-paddle pages. Specs/prices come only from data/paddles.json
 (maker pages) and data/price_history.json (maker-page price checks). Pros/cons are our own spec-based notes, never test results."""
+import urls
 import re, json, pathlib
 ROOT = pathlib.Path(__file__).parent
 def slug(p): return "paddle-" + re.sub(r"[^a-z0-9]+", "-", f'{p["brand"]} {p["model"]}'.lower().replace("¹","1").replace("³","3")).strip("-") + ".html"
@@ -100,7 +101,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         return f'<div class="card pcard"><a class="pimg" href="{slug(p)}">{img(p)}<span class="badges">{badge(h, p)}</span>{credit(p)}</a><div class="body"><span class="brand">{e(p["brand"])}</span><h3><a href="{slug(p)}">{e(p["model"])}</a></h3><div class="meta">{" · ".join(x for x in [p["core"], p["shape"], p["weight"]] if x)}</div><div class="pp">{money(p, cur(p))}{was}</div>{f"<p class={chr(34)}meta{chr(34)}>{e(why)}</p>" if why else ""}{owncall(p, js=False) if own else ""}<div class="meta" style="margin-top:auto">{buy(p)}</div></div></div>' 
     PP = PD["paddles"]; by = {p["model"]: p for p in PP}
     base = C["BASE_URL"].rstrip("/")
-    def absu(fn): return base + "/" if fn == "index.html" else base + "/" + fn
+    def absu(fn): return urls.canon(base, fn)
     def fresh_p(p):
         h = ph(p)
         return {"brand": p["brand"], "model": p["model"], "weight": p["weight"], "core": p["core"], "shape": p["shape"],
