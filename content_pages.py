@@ -69,7 +69,7 @@ def make(page, e, fmt, PP, cur, ph):
 
     def more(current):
         links = "".join(f'<li><a href="../{fn}">{e(title)}</a></li>' for fn, title in GUIDES if fn != current)
-        links += '<li><a href="../price-index.html">Paddle price index</a></li><li><a href="../tournaments.html">Pro events</a></li><li><a href="../events/ppa-worlds-2026.html">PPA Worlds 2026 guide</a></li><li><a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026: how to watch</a></li><li><a href="../creators/ryan-morneau.html">Ryan Morneau spotlight</a></li>'
+        links += '<li><a href="../price-index.html">Paddle price index</a></li><li><a href="../tournaments.html">Pro events</a></li><li><a href="../events/ppa-worlds-2026.html">PPA Worlds 2026 guide</a></li><li><a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026: how to watch</a></li><li><a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026: schedule and how to watch</a></li><li><a href="../creators/ryan-morneau.html">Ryan Morneau spotlight</a></li>'
         return f'<h2>Keep going</h2><ul>{links}</ul>'
 
     def embed(vid, title, short=True):
@@ -772,3 +772,81 @@ def make(page, e, fmt, PP, cur, ph):
          "How to watch the MLP Nations Cup 2026 (Oct 30 to Nov 1, Farmers Branch, TX): PickleballTV times in CT and ET, all 8 team rosters including Team USA, groups and format.",
          fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "tv": NC_TV, "faq": nc_faq},
          schema=[nc_event, nc_faq_ld])
+    # USA Pickleball Nationals page. Every fact below was read on the official Nationals pages on UN_CHECKED.
+    UN_CHECKED = "2026-10-27"
+    un_checked = _dt.date.fromisoformat(UN_CHECKED).strftime("%B %-d, %Y")
+    UN_HOME = "https://usapickleballnationals.com/"
+    UN_TIX = "https://usapickleballnationals.com/tickets/"
+    UN_SCHED = "https://usapickleballnationals.com/schedule/"
+    UN_LIVE = "https://usapickleballnationals.com/livestream/"
+    UN_FAQ = "https://usapickleballnationals.com/faqs/"
+    UN_NEWS = "https://usapickleball.org/usap-news/nationals/usa-pickleball-national-championships-return-to-barnes-tennis-center-in-2026/"
+    UN_DAYS = [
+        ("Sat Oct 31", "Junior boys' and girls' doubles, APP Selkirk U.S. Collegiate Series Championships, wheelchair coed doubles, mixed doubles 65-85+"),
+        ("Sun Nov 1", "Junior mixed doubles and singles, Collegiate Series Championships, wheelchair coed singles, men's doubles 65-80+, women's singles 65-80+"),
+        ("Mon Nov 2", "Wheelchair hybrid doubles, men's singles 65-80+, women's doubles 65-80+"),
+        ("Tue Nov 3", "Mixed doubles 50-64; Concert on the Court, 4:30 to 7:30 PM (separate ticket)"),
+        ("Wed Nov 4", "Men's doubles 50-64, women's singles 50-64; pro mixed doubles, men's doubles and men's singles round of 32"),
+        ("Thu Nov 5", "Men's singles 50-64, women's doubles 50-64; pro round of 16 in all five pro events"),
+        ("Fri Nov 6", "Mixed doubles 19-49"),
+        ("Sat Nov 7", "Women's singles 19-49, men's doubles 19-49; Champion and Masters pro doubles; pro men's doubles and men's singles semifinals"),
+        ("Sun Nov 8", "Women's doubles 19-49, men's singles 19-49; Masters pro singles; gold and bronze medal matches in all five pro events"),
+    ]
+    UN_TIX_ROWS = [
+        ("General Admission", "Free", "Every day, Oct 31 to Nov 8. Open Championship Court seating through Nov 3, then bleachers only from Nov 4."),
+        ("Championship Court presented by QVC", "$20 Wednesday, $49 Thursday to Sunday", "Reserved Championship Court seating, Nov 4 to Nov 8"),
+        ("VIP", "$139", "Reserved VIP seating on Championship Court, VIP Lounge, lite bites, four drink tickets"),
+        ("Concert on the Court (Tue Nov 3)", "$10 GA, $60 VIP Experience", "Event entry only, not full-day Nationals admission"),
+        ("On-site parking", "$50 per day", "Limited, no reentry, no RVs"),
+        ("Off-site shuttle", "Free parking, $10 per group per day", "Lot just east of SeaWorld; shuttles about every 15 minutes from 6 AM"),
+    ]
+    un_day_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td></tr>' for d, w in UN_DAYS)
+    un_tix_rows = "".join(f'<tr><th scope="row">{e(t)}</th><td>{e(p)}</td><td>{e(n)}</td></tr>' for t, p, n in UN_TIX_ROWS)
+    un_faq = [
+        ("When and where are the 2026 USA Pickleball National Championships?",
+         "October 31 to November 8, 2026, at Barnes Tennis Center, 4490 West Point Loma Blvd., San Diego, California. USA Pickleball calls it the 2026 Oceanview USA Pickleball National Championships."),
+        ("How can I watch USA Pickleball Nationals 2026 online?",
+         "The official Nationals site says every match is livestreamed and recorded by VS Sports, so you can watch live or rewatch match recordings."),
+        ("Is it free to watch Nationals in person?",
+         "Yes. General Admission is free every day, but every non-player needs a single-day ticket for each day. Reserved Championship Court seats cost $20 on Wednesday and $49 Thursday to Sunday, and VIP is $139."),
+        ("When are the pro medal matches at Nationals 2026?",
+         "The official schedule lists pro men's doubles and men's singles semifinals on Saturday, November 7, and gold and bronze medal matches in pro mixed, men's and women's doubles and singles on Sunday, November 8."),
+        ("Where do I park for Nationals?",
+         "On-site parking at Barnes Tennis Center is $50 per day with no reentry. Or park free at the off-site lot just east of SeaWorld and ride the shuttle for $10 per group per day. All point-of-sale locations at the event are cashless."),
+    ]
+    un_faq_html, un_faq_ld = faq(un_faq)
+    un_event = {"@type": "SportsEvent", "name": "2026 Oceanview USA Pickleball National Championships",
+                "startDate": "2026-10-31", "endDate": "2026-11-08", "url": UN_HOME,
+                "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled",
+                "organizer": {"@type": "Organization", "name": "USA Pickleball", "url": "https://usapickleball.org/"},
+                "location": {"@type": "Place", "name": "Barnes Tennis Center",
+                             "address": {"@type": "PostalAddress", "streetAddress": "4490 W Point Loma Blvd", "addressLocality": "San Diego", "addressRegion": "CA", "postalCode": "92107", "addressCountry": "US"}},
+                "offers": {"@type": "Offer", "url": UN_TIX, "price": "0", "priceCurrency": "USD", "name": "General Admission"}}
+    nationals = f'''<h1>USA Pickleball Nationals 2026: schedule, tickets and how to watch</h1>
+<p class="meta">From the official USA Pickleball Nationals site. Checked {un_checked}. Match times, courts and brackets come out closer to play, so confirm on the official pages.</p>
+<h2>The basics</h2>
+<p>The <b>2026 Oceanview USA Pickleball National Championships</b> run <b>Saturday, October 31 to Sunday, November 8</b> at <b>Barnes Tennis Center in San Diego</b>, the second straight year there, per {ext(UN_NEWS, "USA Pickleball")}. Play is spread across 54 courts, with junior, collegiate, amateur, wheelchair and pro divisions. Amateur players qualify through Golden Ticket tournaments and USA Pickleball's Tiered Point System.</p>
+<h2>How to watch online</h2>
+<p>The {ext(UN_LIVE, "official livestream page")} says every match is livestreamed and recorded by <b>VS Sports</b>, so you can follow players live or catch up on recordings later. Individual match times are posted through Pickleball Den closer to play, per the {ext(UN_FAQ, "Nationals FAQ")}.</p>
+<p>Same week, different event: the Opendoor Pickleball World Championships run November 2 to 8 in Farmers Branch, Texas. See our <a href="ppa-worlds-2026.html">PPA Worlds 2026 guide</a> and <a href="mlp-nations-cup-2026.html">MLP Nations Cup 2026 how to watch</a>.</p>
+<h2>Day-by-day schedule</h2>
+<p>Divisions by day from the {ext(UN_SCHED, "official schedule")}:</p>
+<div class="tbl"><table><thead><tr><th>Day</th><th>Who plays</th></tr></thead><tbody>{un_day_rows}</tbody></table></div>
+<h2>Tickets and parking</h2>
+<p>Prices from the {ext(UN_TIX, "official tickets page")}. Every non-player needs a single-day ticket for each day, children 5 and under get in free, all sales are final, and no outside food or drink is allowed except water. Players get venue access on the days they compete.</p>
+<div class="tbl"><table><thead><tr><th>Ticket</th><th>Price</th><th>What you get</th></tr></thead><tbody>{un_tix_rows}</tbody></table></div>
+<p>The event is cashless, including parking, the box office and concessions. Groups of 30 or more and military visitors can email tickets@usapickleball.org about discounts.</p>
+<h2>Gear before you go</h2>
+{money_links()}
+{un_faq_html}
+{sources([("USA Pickleball Nationals", UN_HOME, f"dates, venue, qualifying, checked {un_checked}"),
+          ("Nationals schedule", UN_SCHED, f"divisions by day, checked {un_checked}"),
+          ("Nationals tickets", UN_TIX, f"ticket prices, parking, shuttle, checked {un_checked}"),
+          ("Nationals livestream", UN_LIVE, "VS Sports livestream and recordings"),
+          ("Nationals FAQs", UN_FAQ, "courts, match times, cashless venue"),
+          ("USA Pickleball: Nationals return to Barnes Tennis Center in 2026", UN_NEWS, "venue announcement")])}
+<p><a href="../tournaments.html">All tournaments</a> · <a href="ppa-worlds-2026.html">PPA Worlds 2026</a> · <a href="mlp-nations-cup-2026.html">MLP Nations Cup 2026</a></p>'''
+    page("events/usa-pickleball-nationals-2026.html", "USA Pickleball Nationals 2026: schedule, tickets and how to watch", nationals,
+         "USA Pickleball Nationals 2026 runs Oct 31 to Nov 8 at Barnes Tennis Center, San Diego: VS Sports livestream, day-by-day schedule, pro medal matches, free GA tickets and parking.",
+         fresh={"checked": UN_CHECKED, "days": UN_DAYS, "tix": UN_TIX_ROWS, "faq": un_faq},
+         schema=[un_event, un_faq_ld])
