@@ -1,9 +1,154 @@
 {
- "updated": "2026-10-26T06:09-05:00",
- "date": "2026-10-26",
- "source_file": "dtp-newsroom/buzz-2026-10-26.json",
+ "updated": "2026-10-27T06:13-05:00",
+ "date": "2026-10-27",
+ "source_file": "dtp-newsroom/buzz-2026-10-27.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "Nations Cup countdown: Inside MLP breaks down all 8 rosters ahead of Friday's start in Farmers Branch, Texas",
+   "summary": "Major League Pickleball's new Inside MLP episode has Will Daughton and Dave Fleming going through all eight MLP Nations Cup rosters, the team captains and their teams to watch, per MLP's YouTube description. MLP also kept its countdown going on X, with Mari Humberg and Nico Acevedo ready to represent Latin America and the Europe-East roster (Tina Pisnik, Andrei Daescu, Lina Padegimaite, Daria Walczak, Arwid Dahlin and Ivan Jakovljevic, captain Caleb Garrard). The inaugural Nations Cup starts Friday, Oct. 30, at Brookhaven Country Club and kicks off the 2026 Opendoor Pickleball World Championships. (Full format, groups and how to watch are in our Oct. 26 Buzz.)",
+   "status": "confirmed",
+   "date": "2026-10-27",
+   "sources": [
+    {
+     "label": "MLP YouTube: Inside MLP, 2026 Nations Cup Edition",
+     "url": "https://www.youtube.com/watch?v=908Yv2BNJ4g"
+    },
+    {
+     "label": "@MajorLeaguePB: Daughton and Fleming break down all 8 rosters",
+     "url": "https://x.com/MajorLeaguePB/status/2114825765443252460"
+    },
+    {
+     "label": "@MajorLeaguePB: Humberg and Acevedo for Latin America, 4 days out",
+     "url": "https://x.com/MajorLeaguePB/status/2114820620642877928"
+    },
+    {
+     "label": "@MajorLeaguePB: Europe-East roster",
+     "url": "https://x.com/MajorLeaguePB/status/2114741341053718707"
+    },
+    {
+     "label": "The Dink: Nations Cup preview (format, schedule)",
+     "url": "https://www.thedinkpickleball.com/mlp-nations-cup-2026-tournament-preview-everything-you-need-to-know/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2114825765443252460",
+    "https://x.com/MajorLeaguePB/status/2114820620642877928"
+   ],
+   "social_angle": "Preview post: 'Who wins the first Nations Cup?' Link the Inside MLP episode and ask followers for their pick. Tag MLP.",
+   "tags": [
+    "MLP",
+    "Nations Cup",
+    "Worlds",
+    "Preview",
+    "Rosters"
+   ]
+  },
+  {
+   "title": "Noise fights: Charleston cuts its Parkshore Park plan to 2 unlit courts; West U, Texas ends pickleball on 2 Wier Park courts after a sound study",
+   "summary": "The City of Charleston now plans just two pickleball courts at Parkshore Park in West Ashley, down from an original plan for 12 lighted courts and a later plan for four, The Post and Courier reports. The updated plan, shown at the Oct. 22 recreation committee meeting, drops the lights, moves the courts 30 feet farther from homes and limits the courts to eight people at a time; the city is also considering acoustic fencing and a vegetative barrier and will do a sound study, with no timeline set. In West University Place, Texas, pickleball on two of Wier Park's western courts ended Oct. 23 on the Parks and Recreation Board's recommendation, after a city acoustical study found pickleball impact sounds 'stand out more' than tennis or basketball, Community Impact reports. The city found sound barriers unfeasible and said quiet equipment does not perform like standard gear; the board takes up next steps on Nov. 4, and the closed courts will be re-striped for tennis.",
+   "status": "confirmed",
+   "date": "2026-10-27",
+   "sources": [
+    {
+     "label": "The Post and Courier: Charleston adjusts Parkshore Park pickleball plans",
+     "url": "https://www.postandcourier.com/charleston_sc/charleston-parkshore-park-pickleball/article_e225e781-ea5f-4582-a848-a2f745d28dd0.html"
+    },
+    {
+     "label": "Community Impact: West U discontinues pickleball on two Wier Park courts",
+     "url": "https://communityimpact.com/bellaire-meyerland-west-university/government/west-u-to-continue-talks-of-modified-pickleball-park-rules-amid-discontinued-usage-at-wier-park/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Noise-war tracker, part 2 (after Brentwood): what cities are actually doing (fewer courts, no lights, quiet gear after 8 p.m., sound studies). Good hook for a quiet-paddle guide.",
+   "tags": [
+    "Noise",
+    "Courts",
+    "Local government",
+    "South Carolina",
+    "Texas"
+   ]
+  },
+  {
+   "title": "Anna Bright in Manila: 'International pickleball needs to be in the Philippines'",
+   "summary": "Anna Bright met Filipino players and fans at the SM Mall of Asia Music Hall in Pasay City on Tuesday, Oct. 27, in an SM Active event, Manila Standard reports. At a press conference there, Bright said she would love to see more international tournaments and more homegrown Filipino talent in the Philippines: '100%. I think international pickleball needs to be in the Philippines,' she told Fastbreak. Bright is also on Team USA's roster for the MLP Nations Cup, which starts Friday in Texas.",
+   "status": "confirmed",
+   "date": "2026-10-27",
+   "sources": [
+    {
+     "label": "Fastbreak: Anna Bright hopes for more international tourneys in the PH",
+     "url": "https://fastbreak.com.ph/us-player-anna-bright-hopes-for-more-international-pickleball-tourneys-in-the-ph/sports-galore/"
+    },
+    {
+     "label": "@mnlstandardph: SM Active puts pickleball in the spotlight with Anna Bright",
+     "url": "https://x.com/mnlstandardph/status/2115009114611065006"
+    },
+    {
+     "label": "The Dink: Nations Cup preview (Team USA roster)",
+     "url": "https://www.thedinkpickleball.com/mlp-nations-cup-2026-tournament-preview-everything-you-need-to-know/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/mnlstandardph/status/2115009114611065006"
+   ],
+   "social_angle": "Quote card with Bright's '100%' line; Philippines pickleball keeps growing (ALW was in Manila Oct. 16). Ties into her Nations Cup run Friday.",
+   "tags": [
+    "Anna Bright",
+    "Philippines",
+    "Asia",
+    "Pros"
+   ]
+  },
+  {
+   "title": "CityPickle's Paddletek One Point Slam: one rally per match, $5,000 to the winners, and a 2027 road tour planned",
+   "summary": "CityPickle and Paddletek ran the first Paddletek One Point Slam at CityPickle Times Square, a single-elimination amateur doubles event where every match is one rally, inspired by the Australian Open's one-point exhibition. PodPlay's recap says 44 doubles teams entered on Saturday, Oct. 17, and Mia Yu and Sheridan Kim, who signed up that morning, won the $5,000 check; a replay review overturned one contested finish when it showed a foot in the kitchen. Teams with more Paddletek paddles won the coin toss automatically. PodPlay says it plans to take the One Point Slam to more clubs in 2027, and CityPickle's release says its Boca Raton, Fla. club opens this fall and a 60,000-square-foot, 11-court CityPickle Brooklyn Bridge, DUMBO club opens in early spring.",
+   "status": "confirmed",
+   "date": "2026-10-27",
+   "sources": [
+    {
+     "label": "GlobeNewswire: CityPickle and Paddletek bring the One Point Slam to NYC",
+     "url": "https://www.globenewswire.com/news-release/2026/10/26/3388159/0/en/citypickle-and-paddletek-bring-high-stakes-one-point-slam-to-new-york-city-awarding-5-000-grand-prize.html"
+    },
+    {
+     "label": "PodPlay: One Point, $5,000 (recap and video)",
+     "url": "https://podplay.app/blog/one-point-slam-programming-that-tells-a-story"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Fun format post: 'Would you play one point for $5,000?' Easy engagement question; good for rec players.",
+   "tags": [
+    "Amateur",
+    "Events",
+    "New York",
+    "CityPickle",
+    "Paddletek",
+    "Formats"
+   ]
+  },
+  {
+   "title": "Courts watch: The Yards adds 9 covered courts in Ponte Vedra Beach ($1.5M); Upper Dublin, Pa. opens 4 courts at Twining Valley Park",
+   "summary": "The Yards, a semi-private club at Sawgrass Players Club in Ponte Vedra Beach, Fla., finished a $1.5 million renovation of its Pickle Garden in September, adding nine covered, open-air courts with a steel roof and overhead fans next to its three uncovered courts, according to a Jacksonville Business Journal feature. Upper Dublin Township, Pa. cut the ribbon on four new pickleball courts at Twining Valley Park on Monday, Oct. 26; the Pennsylvania Department of Conservation and Natural Resources paid for half the project, Wiss Now reports.",
+   "status": "confirmed",
+   "date": "2026-10-27",
+   "sources": [
+    {
+     "label": "Jacksonville Business Journal: The Yards' $1.5M pickleball transformation",
+     "url": "https://www.bizjournals.com/jacksonville/news/2026/10/26/yards-pickleball-transformation-ponte-vedra-beach.html"
+    },
+    {
+     "label": "Wiss Now: Upper Dublin opens new courts at Twining Valley Park",
+     "url": "https://wissnow.com/news/upper-dublin-township-opens-new-pickleball-courts-at-twining-valley-park/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Courts-near-you item; covered outdoor courts as the Florida answer to rain and heat.",
+   "tags": [
+    "Courts",
+    "Florida",
+    "Pennsylvania",
+    "New courts"
+   ]
+  },
   {
    "title": "MLP Nations Cup week: full rosters, format and how to watch (Oct. 30-Nov. 1, Farmers Branch, Texas)",
    "summary": "The inaugural MLP Nations Cup starts Friday at Brookhaven Country Club in Farmers Branch, Texas, as the kickoff to the 2026 Opendoor Pickleball World Championships, which begin Nov. 2 at the same venue. Eight regional teams and 48 pros play the MLP coed team format in two groups of four: Group A is the United States, Canada, Europe-West and Asia Domestic; Group B is Australia, Latin America, Europe-East and Asia International. Each team plays three round-robin matches Friday and Saturday, and the top two in each group cross over into Sunday's semifinals and final. Team USA (captain Johnny Goldberg) is Anna Bright, Tyra Black, Kate Fahey, Ben Johns, CJ Klinger and Will Howells. All matches stream on PickleballTV, with coverage from 10 a.m. CT each day and the championship at 2 p.m. CT Sunday, per The Dink.",
