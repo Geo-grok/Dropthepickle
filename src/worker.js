@@ -232,23 +232,46 @@ export function botReasons(request) {
 
 // Labels and logs one click. Never throws and never changes the redirect: labelling only.
 async function logClick(env, request, slug, ref) {
+  let country = null, ua = null, reasons = [];
+  const now = Date.now();
   try {
-    const country = countryFrom(request);
-    const now = Date.now();
-    const reasons = botReasons(request);
+    country = countryFrom(request);
+    ua = (request.headers.get("user-agent") || "").slice(0, 512) || null;
+    reasons = botReasons(request);
     if (ref === null && !reasons.includes("no_referer")) reasons.push("no_referer"); // unparsable referer
-    if (country) {
+  } catch (e) {
+    console.error("go_clicks: classify failed", slug, e && e.message);
+  }
+  // The burst lookup is best-effort: if it fails, the click is still inserted.
+  if (country) {
+    try {
       const since = new Date(now - BURST_WINDOW_MIN * 60000).toISOString();
       const row = await env.DB.prepare(
         "SELECT COUNT(*) AS n FROM go_clicks WHERE country = ? AND created_at >= ?"
       ).bind(country, since).first();
       if (row && Number(row.n) + 1 >= burstThreshold(country)) reasons.push("burst");
+    } catch (e) {
+      console.error("go_clicks: burst query failed", slug, country, e && e.message);
     }
-    const ua = (request.headers.get("user-agent") || "").slice(0, 512) || null;
+  }
+  const at = new Date(now).toISOString();
+  const isBotFlag = reasons.length ? 1 : 0;
+  try {
     await env.DB.prepare(
       "INSERT INTO go_clicks (slug, referer_path, country, created_at, user_agent, is_bot, bot_reason) VALUES (?, ?, ?, ?, ?, ?, ?)"
-    ).bind(slug, ref, country, new Date(now).toISOString(), ua, reasons.length ? 1 : 0, reasons.join(",") || null).run();
-  } catch {}
+    ).bind(slug, ref, country, at, ua, isBotFlag, reasons.join(",") || null).run();
+    return;
+  } catch (e) {
+    console.error("go_clicks: insert with bot_reason failed, falling back to the old insert. Has migration 0004 run?", slug, e && e.message);
+  }
+  try {
+    // Pre-0004 schema (no bot_reason column): keep the click; is_bot still records the flag.
+    await env.DB.prepare(
+      "INSERT INTO go_clicks (slug, referer_path, country, created_at, user_agent, is_bot) VALUES (?, ?, ?, ?, ?, ?)"
+    ).bind(slug, ref, country, at, ua, isBotFlag).run();
+  } catch (e) {
+    console.error("go_clicks: CLICK LOST, fallback insert failed too", slug, e && e.message);
+  }
 }
 
 async function handleGo(request, env, ctx, url) {
