@@ -35,6 +35,7 @@ GUIDES = [
     ("guides/how-to-read-dupr-ratings.html", "How to read DUPR ratings"),
     ("guides/pickleball-paddles-under-30.html", "Pickleball paddles under $30"),
     ("guides/six-zero-paddle-review.html", "Six Zero paddle lineup and prices"),
+    ("guides/indoor-vs-outdoor-pickleball-balls.html", "Indoor vs outdoor pickleball balls"),
 ]
 RULES_CHANGES = "https://usapickleball.org/docs/rules/USAP-Rulebook-Change-Document.pdf"
 RULES_CHANGES_VIEW = "https://rules.usapickleball.org/view/rule-changes-view-all/"
@@ -635,6 +636,99 @@ def make(page, e, fmt, PP, cur, ph):
          f"Six Zero paddle lineup for 2026: every model on Six Zero's US site with prices ($180 to $225) checked {checked}, specs from our paddle list, and Six Zero codes. Not a hands-on test.",
          fresh={"checked": CHECKED, "lineup": SZ_LINEUP, "ours": [(p["model"], p.get("price"), p["currency"]) for p in sz_ours], "codes": len(sz_codes), "faq": sz_faq},
          schema=[sz_faq_ld])
+
+    # ----- Indoor vs outdoor pickleball balls (Oct 28, 2026) -----
+    # Every spec below was read on the linked page on Oct 28, 2026. No prices, no playtest claims.
+    B_ESM = "https://equipment.usapickleball.org/docs/Equipment-Standards-Manual.pdf"
+    B_LIST = "https://equipment.usapickleball.org/view/ball-list/"
+    B_X40 = "https://franklinsports.com/x-40-outdoor-pickleball-packs"
+    B_X26 = "https://franklinsports.com/x-26-indoor-pickleball-packs"
+    B_LT_PPA = "https://www.ppatour.com/lt-pro-48-pickleball-named-official-ball-of-carvana-ppa-tour/"
+    B_LT_MLP = "https://www.prnewswire.com/news-releases/life-times-lt-pro-48-pickleball-named-official-ball-of-major-league-pickleball-2026-season-kicks-off-in-dallas-may-22-302757035.html"
+    B_LT_SPEC = "https://pickleballcentral.com/life-time-lt-pro-48-pickleball/"
+    B_APP = "https://stories.franklinsports.com/franklin-x40-named-official-ball-of-app-tour"
+    B_PPA_BLOG = "https://www.ppatour.com/ppa-blog/how-to-pick-the-perfect-pickleball/"
+    BALL_SPEC = [
+        ("Diameter", "2.87 to 2.97 in (7.29 to 7.54 cm), out-of-round no more than +/-0.020 in", "2.D.3"),
+        ("Weight", "0.78 to 0.935 oz (22.1 to 26.5 g)", "2.D.4"),
+        ("Bounce", "30 to 34 in (76.2 to 86.4 cm) to the top of the ball, dropped from 78 in (198.1 cm) onto a granite plate at 70°F +/- 5°F", "2.D.5"),
+        ("Compression", "Average under 43 lbf (ASTM F1888-09 test)", "2.D.6"),
+        ("Hardness", "40 to 50 Durometer D, recorded for data only and no longer a pass/fail requirement", "2.D.7"),
+        ("Holes", "26 to 40 circular holes", "2.D.8"),
+        ("Surface", "Smooth, no texturing, one uniform color; a slight seam ridge is allowed", "2.D.1"),
+    ]
+    BALLS = [
+        ("Franklin X-26", "26", "Two-piece", "Indoor", "Franklin: approved for indoor tournament play by USA Pickleball", B_X26),
+        ("Franklin X-40", "40", "One-piece polyethylene, machine-drilled holes", "Outdoor", "Franklin: official ball of the US Open Pickleball Championships and of USA Pickleball", B_X40),
+        ("Life Time LT Pro 48", "48", "Two-piece, injection molded; 26 g, 2.9 in", "Indoor and outdoor (seller)", "Official ball of the PPA Tour (since Aug. 2025) and MLP (2026 season)", B_LT_SPEC),
+    ]
+    ball_faq = [
+        ("What is the difference between indoor and outdoor pickleball balls?",
+         "Hole size and count. The 2026 USA Pickleball rulebook says the ball with larger holes is customarily used indoors and the ball with smaller holes is customarily used outdoors. Franklin's X-26 indoor ball has 26 holes and its X-40 outdoor ball has 40."),
+        ("Can you use an outdoor pickleball indoors?",
+         "Yes. Rule 3.C.1 of the 2026 USA Pickleball rulebook says all approved balls are acceptable for indoor or outdoor play. Indoor and outdoor are customary uses, not a rule."),
+        ("How many holes does a pickleball have?",
+         "USA Pickleball's Equipment Standards Manual (Rev. 3.0, January 2025) calls for 26 to 40 circular holes. Franklin's X-26 has 26 and its X-40 has 40. Life Time's LT Pro 48, the PPA Tour and MLP ball, has 48."),
+        ("What ball do the pros use?",
+         "The PPA Tour named the Life Time LT Pro 48 its exclusive ball on August 1, 2025, and Major League Pickleball named it its official ball on April 29, 2026. Franklin says its X-40 is the official ball of the US Open Pickleball Championships, and the APP Tour named the X-40 its exclusive ball in March 2024."),
+        ("What are the official pickleball ball size and weight?",
+         "USA Pickleball's Equipment Standards Manual sets a diameter of 2.87 to 2.97 inches, a weight of 0.78 to 0.935 ounces (22.1 to 26.5 grams), and a bounce of 30 to 34 inches when dropped from 78 inches onto granite."),
+        ("Which ball do I need for a USA Pickleball sanctioned tournament?",
+         "Whatever the tournament director picks. Under the Equipment Standards Manual (2.D.2), the director chooses the tournament ball, and it must be on USA Pickleball's approved ball list."),
+    ]
+    ball_faq_html, ball_faq_ld = faq(ball_faq)
+    spec_rows = "".join(f'<tr><th scope="row">{e(k)}</th><td>{e(v)}</td><td>{e(r)}</td></tr>' for k, v, r in BALL_SPEC)
+    ball_rows = "".join(f'<tr><th scope="row"><a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a></th><td>{e(h)}</td><td>{e(c)}</td><td>{e(use)}</td><td>{e(note)}</td></tr>' for n, h, c, use, note, u in BALLS)
+    balls = f'''<h1>Indoor vs outdoor pickleball balls</h1>
+<p class="meta">What actually separates an indoor ball from an outdoor ball, the official USA Pickleball specs, and which balls the pro tours use. From the 2026 USA Pickleball rulebook, the Equipment Standards Manual and the makers' own pages, read October 28, 2026.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>Indoor balls have fewer, larger holes.</b> Franklin's <a href="{B_X26}" target="_blank" rel="noopener">X-26</a> indoor ball has 26.</li>
+<li><b>Outdoor balls have more, smaller holes.</b> Franklin's <a href="{B_X40}" target="_blank" rel="noopener">X-40</a> outdoor ball has 40.</li>
+<li><b>Either one is legal on either surface.</b> Rule 3.C.1 of the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball rulebook</a> says all approved balls are acceptable for indoor or outdoor play. The rulebook's Figure 3-2 only says the larger-hole ball is <i>customarily</i> used indoors and the smaller-hole ball outdoors.</li>
+</ul>
+<h2>Official ball specs</h2>
+<p>The 2026 rulebook (Rule 3.C) covers the basics: one uniform color, a maker's name or logo on the ball, and a smooth, untextured surface. The numbers live in USA Pickleball's <a href="{B_ESM}" target="_blank" rel="noopener">Equipment Standards Manual</a> (Revision 3.0, January 2025), section 2.D:</p>
+<div class="tbl"><table><thead><tr><th>Spec</th><th>Requirement</th><th>ESM rule</th></tr></thead><tbody>{spec_rows}</tbody></table></div>
+<p>Under 2.D.2, the tournament director chooses the ball for a sanctioned event, and it must be on USA Pickleball's <a href="{B_LIST}" target="_blank" rel="noopener">approved ball list</a>. That list labels each ball <b>Out</b> (outdoor), <b>Ind</b> (indoor) or <b>I/O</b> (both). The newest listings we saw on October 28, 2026 were dated October 22, 2026, including the AMP Easy Rally 40 and Drip (Out) and the GUNICA G-Pro1 and MINGLR MX40 (I/O).</p>
+<h2>Three balls, side by side</h2>
+<p>Facts as each maker or seller publishes them. We have not lab-tested or play-tested these balls.</p>
+<div class="tbl"><table><thead><tr><th>Ball</th><th>Holes</th><th>Construction</th><th>Made for</th><th>Notable</th></tr></thead><tbody>{ball_rows}</tbody></table></div>
+<p>The LT Pro 48 has more holes than the 26-to-40 range in the Equipment Standards Manual's ball section. If you are entering a USA Pickleball sanctioned tournament, use the ball the tournament director names from the approved list.</p>
+<h2>What ball do the pros use?</h2>
+<ul>
+<li><b>PPA Tour:</b> the <a href="{B_LT_PPA}" target="_blank" rel="noopener">PPA announced on August 1, 2025</a> that the Life Time LT Pro 48 would be the exclusive ball of all its tournaments and events, starting in Bristol, Tenn. The announcement says the ball has symmetrically spaced holes with chamfered edges to reduce cracking.</li>
+<li><b>Major League Pickleball:</b> <a href="{B_LT_MLP}" target="_blank" rel="noopener">Life Time and MLP named the LT Pro 48 MLP's official ball on April 29, 2026</a>, ahead of the 2026 season.</li>
+<li><b>US Open and USA Pickleball:</b> <a href="{B_X40}" target="_blank" rel="noopener">Franklin says</a> the X-40 was chosen as the official ball of the US Open Pickleball Championships and of USA Pickleball.</li>
+<li><b>APP Tour:</b> the APP named the Franklin X-40 the <a href="{B_APP}" target="_blank" rel="noopener">exclusive ball of the APP Tour and APP Next Gen Series</a> in March 2024.</li>
+</ul>
+<p>Watching the pros this fall? See the <a href="../events/ppa-worlds-2026.html">PPA Worlds 2026 guide</a> and <a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026</a>.</p>
+<h2>How to pick one</h2>
+<ul>
+<li><b>Gym floor or indoor court:</b> a larger-hole indoor ball is the customary choice. The PPA Tour's <a href="{B_PPA_BLOG}" target="_blank" rel="noopener">ball guide</a> (January 2024) says the Jugs indoor ball's wider holes mean less skipping on a gym floor, but notes that ball is not USA Pickleball approved; it points indoor tournament players to the approved Onix Pure 2.</li>
+<li><b>Concrete or asphalt outdoors:</b> a 40-hole outdoor ball is the customary choice. Franklin describes the X-40's one-piece polyethylene build as made to resist denting and cracking on outdoor courts.</li>
+<li><b>Want to practice with the tour ball:</b> the PPA Tour and MLP use the LT Pro 48.</li>
+<li><b>Playing a sanctioned event:</b> check the event's named ball, then confirm it on the <a href="{B_LIST}" target="_blank" rel="noopener">USA Pickleball ball list</a>.</li>
+<li><b>New player:</b> the same PPA guide calls the Onix Dura Fast 40 a "fast" ball that is not ideal for beginners or indoor surfaces.</li>
+</ul>
+<p>Buying balls with a new paddle? Check <a href="../discount-codes/franklin.html">Franklin discount codes</a> and <a href="../discount-codes/onix.html">Onix discount codes</a>.</p>
+{money_links()}
+{ball_faq_html}
+{sources([("USA Pickleball: 2026 Official Rulebook", RULES, "Rule 3.C and Figure 3-2"),
+          ("USA Pickleball: Equipment Standards Manual", B_ESM, "Revision 3.0, January 2025, section 2.D"),
+          ("USA Pickleball: Approved ball list", B_LIST, "read October 28, 2026"),
+          ("Franklin Sports: X-40 Outdoor Pickleballs", B_X40, "read October 28, 2026"),
+          ("Franklin Sports: X-26 Indoor Pickleballs", B_X26, "read October 28, 2026"),
+          ("PPA Tour: LT Pro 48 named official ball of the Carvana PPA Tour", B_LT_PPA, "August 1, 2025"),
+          ("Life Time via PR Newswire: LT Pro 48 named official ball of Major League Pickleball", B_LT_MLP, "April 29, 2026"),
+          ("Pickleball Central: Life Time LT Pro 48 specifications", B_LT_SPEC, "read October 28, 2026"),
+          ("Franklin Sports: X-40 named official ball of APP Tour", B_APP, "March 19, 2024"),
+          ("PPA Tour: How to pick the perfect pickleball", B_PPA_BLOG, "Andrew Gilman, January 25, 2024")])}
+{more("guides/indoor-vs-outdoor-pickleball-balls.html")}'''
+    page("guides/indoor-vs-outdoor-pickleball-balls.html", "Indoor vs outdoor pickleball balls: holes, specs and pro balls (2026)", balls,
+         "Indoor vs outdoor pickleball balls: 26 vs 40 holes, official USA Pickleball size, weight and bounce specs, and the balls the PPA Tour, MLP and US Open use.",
+         fresh={"spec": BALL_SPEC, "balls": BALLS, "faq": ball_faq},
+         schema=[ball_faq_ld])
 
     # ----- PPA Worlds 2026 -----
     PPA_EV = "https://www.ppatour.com/events/2026/pickleball-world-championships/"
