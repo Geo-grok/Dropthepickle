@@ -1,7 +1,9 @@
 """Check internal links/assets in dist/ and that external links resolve."""
 import pathlib,re,sys,requests,concurrent.futures as cf
 from bs4 import BeautifulSoup
-D=pathlib.Path(__file__).parent.parent/"dist"; bad=[]; ext=set()
+import json
+D=(pathlib.Path(__file__).parent.parent/"dist").resolve(); bad=[]; ext=set()  # resolve so root-relative links pass relative_to()
+GO=json.loads((D.parent/"src"/"go-links.json").read_text()).get("links",{})  # /go/<slug> is served by the Worker, not dist/
 for f in D.rglob("*.html"):
     s=BeautifulSoup(f.read_text(),"html.parser")
     for t,a in [("a","href"),("link","href"),("script","src"),("iframe","src"),("form","action")]:
@@ -12,8 +14,11 @@ for f in D.rglob("*.html"):
                 if "dropthepickle.com" not in u and u.rstrip("/") not in ("https://fonts.googleapis.com","https://fonts.gstatic.com"): ext.add(u)  # skip preconnect hosts  # own domain not live yet (canonical tags)
                 continue
             if u.startswith(("mailto:","#","/api/")): continue
-            p=u.split("#")[0]
+            p=u.split("#")[0].split("?")[0]
             if not p: continue
+            if p.startswith("/go/"):
+                if p[4:].strip("/") not in GO: bad.append((f.name,u))
+                continue
             target = (D / p.lstrip("/")) if p.startswith("/") else (f.parent / p).resolve()
             try: target.relative_to(D.resolve())
             except ValueError: bad.append((f.name,u)); continue

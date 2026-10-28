@@ -25,6 +25,8 @@ def clean_hrefs(base, doc):
         if "/go/" in path: return m.group(0)
         if path.startswith(("http://", "https://")):
             out = canon(base, re.sub(r"^https?://(?:www\.)?dropthepickle\.com/", "", path + suf))
+        elif suf == "index.html" and path and not path.endswith("/"):
+            out = path + "index"  # e.g. price-index.html -> price-index (not a directory index)
         elif suf == "index.html":
             out = path or "./"
         else:
