@@ -2,6 +2,24 @@
  "items": [
   {
    "show": "The World Pickleball Podcast",
+   "title": "English Nationals 2026 Preview: Seeds, Dark Horses & a 16-1 Bet",
+   "link": "https://worldpickleballpodcast.alitu.com/episode/e4540043-2a1c-44f5-aeca-7155ab64f195",
+   "date": "2026-10-28"
+  },
+  {
+   "show": "PicklePod (The Dink)",
+   "title": "JW Johnson Passed Ben Johns on DUPR. Here's How.",
+   "link": "https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
+   "date": "2026-10-27"
+  },
+  {
+   "show": "Pickleball Effect: The Podcast",
+   "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
+   "link": "https://podcasters.spotify.com/pod/show/braydon-unsicker/episodes/RPM-Jade--Luzz-Cannon-XPP-First-Impressions--EP-146-e3r6jct",
+   "date": "2026-10-27"
+  },
+  {
+   "show": "The World Pickleball Podcast",
    "title": "Bamboo vs Carbon: Ben Tinkler-Davies on Kinova & the Swift Paddle",
    "link": "https://worldpickleballpodcast.alitu.com/episode/22acb933-3806-4ac1-90ec-60bcedb0aa82",
    "date": "2026-10-27"
@@ -91,18 +109,6 @@
    "date": "2026-10-08"
   },
   {
-   "show": "PicklePod (The Dink)",
-   "title": "Anna Bright Joins PicklePod: Why She Challenged at 11-0, 10-0",
-   "link": "https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
-   "date": "2026-10-06"
-  },
-  {
-   "show": "Pickleball Effect: The Podcast",
-   "title": "We Tested If Paddles Are Getting Faster + Anna Leigh’s Lob Serve Explained | EP 143",
-   "link": "https://podcasters.spotify.com/pod/show/braydon-unsicker/episodes/We-Tested-If-Paddles-Are-Getting-Faster--Anna-Leighs-Lob-Serve-Explained--EP-143-e3pvm1v",
-   "date": "2026-10-06"
-  },
-  {
    "show": "Everything But The Kitchen Dink",
    "title": "Episode 149: The Party's Over!",
    "link": "https://podcasters.spotify.com/pod/show/ebtkd/episodes/Episode-149-The-Partys-Over-e3prr5f",
@@ -131,12 +137,6 @@
    "title": "Episode 148: No More Excuses",
    "link": "https://podcasters.spotify.com/pod/show/ebtkd/episodes/Episode-148-No-More-Excuses-e3p2lb5",
    "date": "2026-09-19"
-  },
-  {
-   "show": "The World Pickleball Podcast",
-   "title": "Bruno Faletto: From Chilean Tennis Prospect to PPA Pickleball Pro",
-   "link": "https://worldpickleballpodcast.alitu.com/episode/5de89e18-7a14-47dc-b8f1-65b7e6629a63",
-   "date": "2026-09-10"
   },
   {
    "show": "Pickleball Tips - 4.0 To Pro",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-10-27T11:33"
+ "updated": "2026-10-28T11:38"
 }
