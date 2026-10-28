@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Render data/*.json + config.json into a static site in dist/."""
-import json, pathlib, shutil, html, urllib.parse, datetime, re, hashlib
+import json, pathlib, shutil, html, urllib.parse, datetime, re, hashlib, os
+from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).parent; DIST = ROOT / "dist"
 C = json.loads((ROOT / "config.json").read_text())
 # Google Fonts: loaded non-blocking (preload + media="print" swap, <noscript> fallback); display=swap shows fallback text at once.
@@ -229,6 +230,22 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .owncode{background:#f4ffd6;border:3px solid var(--navy);border-left:10px solid var(--neon);border-radius:16px;padding:14px 16px;margin:12px 0;display:flex;flex-direction:column;gap:.5rem;color:var(--navy)}.owncode .owntag{display:inline-block;align-self:flex-start;background:var(--navy);color:var(--neon);font-weight:900;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin:0}.owncode .ownhead{font-size:1.25rem;font-weight:800;margin:0;line-height:1.25}.owncode .cshop{font-weight:800;color:var(--navy)}.owncode .ownhow{font-size:1.05rem;margin:0}.owncode .owndet{align-self:stretch;text-align:center;min-height:48px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;line-height:1.25;padding:.7rem 1rem}.owncode .ccode{white-space:nowrap;font-size:clamp(1rem,5.2vw,1.5rem);padding-left:.6rem;padding-right:.6rem}.owncode .ownnote{font-size:1.05rem;margin:0;background:#fff3c4;border-radius:10px;padding:8px 10px}.owncode .owndisc{font-size:.92rem;color:#3d4a63;margin:0}.owncode .owndisc a{color:inherit}
 """
 import volair_page; CSS += volair_page.CSS  # dedicated /discount-codes/volair page
+CSS += """
+.evwk{background:#0b1426;border-bottom:2px solid #c6f432;color:#fff;contain:layout}
+.evwk[hidden]{display:none}
+.evwk-in{max-width:1100px;margin:0 auto;padding:8px 12px;display:grid;gap:6px}
+.evwk-h{margin:0;font:700 13px/18px Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#c6f432;height:18px}
+.evwk-evs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.evwk-evs.n2{grid-template-columns:repeat(2,minmax(0,1fr))}.evwk-evs.n1{grid-template-columns:1fr}
+.evwk-ev{display:flex;flex-direction:column;justify-content:center;height:52px;min-width:0;padding:0 8px;border:1px solid #c6f432;border-radius:10px;color:#fff;text-decoration:none;background:#13213d}
+.evwk-ev b{font:700 15px/20px Inter,system-ui,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evwk-ev span{font:600 14px/18px Inter,system-ui,sans-serif;color:#c6f432;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evwk-code>span{overflow:hidden;text-overflow:ellipsis}
+.evwk-code{display:flex;align-items:center;justify-content:center;height:44px;padding:0 10px;border-radius:10px;background:#c6f432;color:#0b1426;font:700 16px/20px Inter,system-ui,sans-serif;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evwk-ev:focus-visible,.evwk-code:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media(min-width:760px){.evwk-in{grid-template-columns:auto 1fr auto;align-items:center;gap:12px}.evwk-ev{flex-direction:row;gap:8px;align-items:center;justify-content:flex-start;height:44px}}
+"""
+
 # Always-visible primary tabs (mobile-first). Codes uses the clean /discount-codes URL.
 TABS = [("buzz.html","Buzz"),("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
 TAB_ON = {"/discount-codes": ("discount-codes.html",), "guides.html": ("guides.html", "guides/"), "paddles.html": ("paddles.html", "paddle-")}
@@ -452,7 +469,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <script async src="https://aromatic-caribou-889.convex.site/api/a/am_WGwXq9YSwrdbKKse"></script></head>
 <body><header><div class="bar"><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a>
 <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav">{nav}</nav><a class="btn sm join" href="{rel("community.html")}#signup">Join free</a></div><nav class="tabs" aria-label="Main sections">{tabs}</nav></header>
-{body}
+{EVWK_MARK if evwk_page(fn) else ""}{body}
 {fjs}
 <footer><div class="fin"><div><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a><p>The all-in-one pickleball hub: tournaments, paddle reviews, deals, news and pro gear, refreshed daily from public sources.</p></div>{cols}</div>
 <div class="legal">© {datetime.date.today().year} {e(n)}. Headlines, videos, product images and event info belong to their publishers and makers and link to the original source. Some links are affiliate links; as an Amazon Associate we may earn from qualifying purchases.</div></footer>
@@ -505,6 +522,39 @@ NUDGEJS = """<script>document.querySelectorAll('form.nudge-form').forEach(f=>f.a
 def fmt(d):
     try: return datetime.date.fromisoformat(d).strftime("%b %d, %Y")
     except Exception: return e(d)
+
+# ---- Event week strip (homepage, paddle pages, guides). Shown only through EVWK_END (CT). ----
+EVWK_END = datetime.date(2026, 11, 8)
+EVWK_MARK = "<!--EVWK-->"
+EVWK_EVENTS = [("events/mlp-nations-cup-2026.html", "Nations Cup", "Oct 30–Nov 1"),
+               ("events/usa-pickleball-nationals-2026.html", "Nationals", "Oct 31–Nov 8"),
+               ("events/ppa-worlds-2026.html", "PPA Worlds", "Nov 2–8")]
+def evwk_page(fn):
+    return fn == "index.html" or fn.startswith("guides/") or (fn.startswith("paddle-") and "/" not in fn)
+def evwk_build_date():
+    v = os.environ.get("DTP_BUILD_DATE")  # override for testing, YYYY-MM-DD
+    return datetime.date.fromisoformat(v) if v else datetime.datetime.now(ZoneInfo("America/Chicago")).date()
+def evwk_html():
+    """Strip HTML, or "" if past EVWK_END or no linked event page exists in dist."""
+    if evwk_build_date() > EVWK_END: return ""
+    have = [ev for ev in EVWK_EVENTS if (DIST / ev[0]).is_file()]
+    for ev in EVWK_EVENTS:
+        if ev not in have: print(f"WARNING event-week: {ev[0]} missing from the build, not linked")
+    if not have: return ""
+    vol = OWN.get("Volair")  # active codes only; line drops if the code is retired
+    links = "".join(f'<a class="evwk-ev" href="/{fn[:-5]}" aria-label="{e(t)} {e(d)}"><b>{e(t)}</b><span>{e(d)}</span></a>' for fn, t, d in have)
+    code = (f'<a class="evwk-code" href="{e(vol["page"])}"><span>Volair code <b>{e(vol["code"])}</b>: {e(vol["discount"])}</span></a>' if vol else "")
+    # Pages only rebuild on deploy, so also hide client-side once Nov 8 is over in Central Time (Nov 9 00:00 CST = 06:00 UTC).
+    js = '<script>if(Date.now()>=Date.UTC(2026,10,9,6))document.getElementById("evwk").hidden=true</script>'
+    return (f'<aside class="evwk" id="evwk" aria-label="Event week"><div class="evwk-in"><p class="evwk-h">Event week</p>'
+            f'<div class="evwk-evs n{len(have)}">{links}</div>{code}</div></aside>{js}')
+def evwk_apply():
+    strip = evwk_html(); n = 0
+    for f in DIST.rglob("*.html"):
+        t = f.read_text()
+        if EVWK_MARK in t:
+            f.write_text(t.replace(EVWK_MARK, strip)); n += 1
+    print(f"event-week strip: {'rendered' if strip else 'hidden'} on {n} pages")
 
 def build():
     global _PREV, _NEXT, CATALOG
@@ -844,6 +894,7 @@ def build():
         page(fn, title, body, desc, fresh=fresh, schema=extra, crumbs=crumbs)
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
+    evwk_apply()
     emit_crawl_files()
     print("built", len(list(DIST.rglob("*.html"))), "pages ->", DIST)
 build()
