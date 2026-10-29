@@ -4,6 +4,7 @@ Prices, specs, and video IDs come from data files or his public YouTube feed.
 Rule statements follow the USA Pickleball rulebook. Nothing here is a playtest ranking.
 """
 from paddle_pages import slug, weights, cores, money
+import gift_pages
 
 # Newest uploads on https://www.youtube.com/@pickleball_breakdowns as of 2026-10-16.
 # A post titled "Test V44" from that same feed is left out.
@@ -835,6 +836,7 @@ def make(page, e, fmt, PP, cur, ph):
           ("APP: Detroit Open preview", WT_APP_DET, "ESPN+, APPTV on YouTube, ESPN2 and CBS Sports Network, August 19, 2026"),
           ("APP: Championship Sunday from Overland Park", WT_APP_OP, "APPTV, ESPN+ and ESPN2, September 20, 2026"),
           ("USA Pickleball Nationals: Livestream", WT_UN_LIVE, "VS Sports livestream and recordings")])}
+{gift_pages.holiday_note("watch")}
 {more("guides/how-to-watch-pro-pickleball.html")}'''
     page("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball: TV channels, PickleballTV and streaming (2026)", watch,
          "How to watch pro pickleball in 2026: PickleballTV free channel vs $5.99 app, PPA and MLP on Tennis Channel, FS1 and CBS, APP on ESPN+, plus PPA Worlds windows.",

@@ -17,6 +17,22 @@ BF_WATCH = [("Selkirk", "https://www.selkirk.com/collections/black-friday-deals"
             ("Volair", "https://volair.com/collections/sale", "Volair's sale page shows no Black Friday dates."),
             ("CRBN", "https://crbnpickleball.com/", "CRBN's most recent Black Friday page we found is for 2025. No 2026 sale published.")]
 
+# Contextual holiday callout for high-traffic pages (paddle reviews, code pages, Buzz, how-to-watch).
+# Absolute extensionless hrefs (urls.clean_path), so it works at any directory depth. Max two holiday links per box.
+from urls import clean_path
+GIFT_URL, BF_URL = "/" + clean_path(GIFT_FN), "/" + clean_path(BF_FN)
+CSS = (".holi{background:#fff;border:2px solid var(--line);border-left:8px solid var(--neon);border-radius:16px;padding:12px 14px;margin:14px 0}"
+       ".holi p{margin:0 0 .4rem;font-size:1.02rem}.holi .holia{display:inline-flex;align-items:center;min-height:44px;padding:.5rem .2rem;margin-right:1rem;font-weight:800;color:var(--navy)}")
+HOLI = {
+    "paddle": ("Buying a paddle as a gift?", [(GIFT_URL, "See our 2026 gift guide by budget →"), (BF_URL, "Tracking Black Friday paddle sales →")]),
+    "codes": ("Waiting for Black Friday paddle sales?", [(BF_URL, "Our hub tracks which paddle brands have announced 2026 sales →")]),
+    "buzz": ("Shopping for a pickleball player?", [(GIFT_URL, "Paddle gifts by budget: 2026 gift guide →"), (BF_URL, "Black Friday paddle deals hub →")]),
+    "watch": ("Got a pickleball fan on your gift list?", [(GIFT_URL, "See our 2026 paddle gift guide by budget →")]),
+}
+def holiday_note(kind):
+    lead, links = HOLI[kind]
+    return f'<aside class="holi" aria-label="Holiday paddle deals"><p><b>{lead}</b></p>' + "".join(f'<a class="holia" href="{u}">{t}</a>' for u, t in links) + "</aside>"
+
 def _slugb(b): return re.sub(r"[^a-z0-9]+", "-", b.lower()).strip("-")
 
 def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):

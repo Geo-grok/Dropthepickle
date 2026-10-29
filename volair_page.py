@@ -5,7 +5,7 @@ own_codes.callout), then a short lineup from data/paddles.json, an honest how-to
 Stacking: Volair doesn't publish whether codes combine with sales or other codes, so we never claim they do.
 Exclusions: Volair's ambassador page says licensed paddles are excluded; the V.1F isn't tagged as included in discounts.
 """
-import own_codes
+import own_codes, gift_pages
 
 AMBASSADOR = "https://volair.com/pages/ambassador"
 NOAPPLY = "Volair doesn't tag the V.1F paddle as included in its discounts, so the code may not apply to it. Check the total before you pay."
@@ -62,7 +62,7 @@ def make(page, e, fmt, C, OWN, PD, H, go_slug, paddle_slug, cards, copyjs, crumb
             + (f'<p class="meta">Popular Volair models: {popular}</p>' if popular else "")
             + f'<p class="meta">Exclusions: per <a href="{AMBASSADOR}" target="_blank" rel="noopener">Volair\'s ambassador page</a>, licensed paddles are excluded. Volair doesn\'t publish whether codes stack.</p>'
             f'<div class="vnext"><a class="btn" href="../paddle-quiz.html">Not sure which Volair? Take the paddle quiz →</a><a class="btn ghost" href="/discount-codes">All discount codes →</a></div>'
-            f'<p class="meta">Choosing a model? See the <a href="../guides/best-volair-paddles.html">best Volair paddle by player type</a> or <a href="../vs-volair-mach-2-forza-vs-volair-pro-1.html">Mach 2 Forza vs Pro 1</a>.</p>{lineup}{faq_html}'
+            f'<p class="meta">Choosing a model? See the <a href="../guides/best-volair-paddles.html">best Volair paddle by player type</a> or <a href="../vs-volair-mach-2-forza-vs-volair-pro-1.html">Mach 2 Forza vs Pro 1</a>.</p>{lineup}{gift_pages.holiday_note("codes")}{faq_html}'
             + (f'<h2>Other Volair codes we track</h2><p class="meta">Published by creators; each card links to its source. Many are affiliate codes, so the creator may earn a commission.</p><div class="grid">{cards}</div>' if cards else "")
             + f'<p class="meta"><a href="/discount-codes">All pickleball discount codes</a> · <a href="../paddle-quiz.html">Paddle quiz</a> · <a href="../deals.html">Paddle deals</a> · <a href="../disclosure.html">Disclosure</a></p>'
             + copyjs + own_codes.COPY_JS)

@@ -80,6 +80,7 @@ def badge(ph, p=None):
     if ph.get("available") is False: b += '<span class="tag b-out">Unavailable</span>'
     return b
 def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
+    import gift_pages  # holiday callout (lazy: gift_pages imports paddle_pages)
     X = X or {}
     import own_codes; OWN = own_codes.own_codes(C)  # our own affiliate codes (config.json OWN_CODES)
     NOAPPLY = "Volair doesn't tag this paddle as included in its discounts, so the code may not apply to it. Check the total before you pay."
@@ -153,7 +154,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         pu = ("<h2>Pros who use it</h2><ul>" + "".join(f'<li><a href="{e(x["profile"])}" target="_blank" rel="noopener">{e(x["name"])}</a> ({e(x["paddle"])}, per PPA profile)</li>' for x in users) + "</ul>") if users else ""
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
         hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p><div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div>{saverow(p)}{owncall(p)}<p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
-        page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}<p><a href="compare.html">Compare paddles →</a></p>',
+        page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}{gift_pages.holiday_note("paddle")}<p><a href="compare.html">Compare paddles →</a></p>',
              f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
              fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
     # comparisons: same brand, plus one cross-brand pair per brand combo that shares an elongated shape
