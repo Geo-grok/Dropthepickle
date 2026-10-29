@@ -37,6 +37,7 @@ GUIDES = [
     ("guides/six-zero-paddle-review.html", "Six Zero paddle lineup and prices"),
     ("guides/indoor-vs-outdoor-pickleball-balls.html", "Indoor vs outdoor pickleball balls"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
+    ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
 RULES_CHANGES = "https://usapickleball.org/docs/rules/USAP-Rulebook-Change-Document.pdf"
 RULES_CHANGES_VIEW = "https://rules.usapickleball.org/view/rule-changes-view-all/"
