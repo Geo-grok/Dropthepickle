@@ -169,6 +169,8 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 @media(max-width:980px){.fin{grid-template-columns:1fr 1fr}.fin>div:first-child{grid-column:1/-1}}
 @media(max-width:700px){.logo{gap:.32rem}.logo img{width:52px;height:52px}.logo b{font-size:26px}}
 @media(max-width:520px){.tcard .date{float:none;margin:0 0 .6rem}.stats{gap:.75rem 1rem}.stats b{font-size:1.45rem}.hero h1{font-size:2.35rem}.bar{padding:.3rem .5rem;gap:.35rem}.burger{width:36px}.btn.join{margin-left:.15rem}.nav{inset:66px 0 auto 0;max-height:calc(100vh - 66px)}}
+/* mobile: bigger footer text + thumb-size tap targets (footer links, Join, menu) */
+@media(max-width:720px){footer,.legal{font-size:1rem}footer h4{font-size:1.05rem}footer a:not(.logo){display:flex;align-items:center;min-height:44px;margin:0;font-size:1rem}.btn.sm.join{min-height:44px;font-size:1rem;padding:.5rem .75rem}.burger{width:44px;height:44px}}
 .faq{background:#fff;border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;margin:.45rem 0;box-shadow:var(--sh)}.faq summary{font-weight:800;cursor:pointer}.faq p{margin:.45rem 0 0}
 .vgrid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr))}
 .vgrid .vid.short{padding-top:177.78%;margin:0 0 .7rem}
