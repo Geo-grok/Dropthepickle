@@ -2,6 +2,18 @@
  "items": [
   {
    "show": "The World Pickleball Podcast",
+   "title": "Pickleball Politics: Leon Stango on Venezuela & One World Federation",
+   "link": "https://worldpickleballpodcast.alitu.com/episode/1c5687bc-0b4f-4a8e-944f-3afe6cba4542",
+   "date": "2026-10-29"
+  },
+  {
+   "show": "Pickleballers (Jared Paul & Roscoe Bellamy)",
+   "title": "Steve Aoki: Why the World’s Biggest DJ Is Obsessed With Pickleball | S5 E4",
+   "link": "https://podcasters.spotify.com/pod/show/pickleballers",
+   "date": "2026-10-29"
+  },
+  {
+   "show": "The World Pickleball Podcast",
    "title": "English Nationals 2026 Preview: Seeds, Dark Horses & a 16-1 Bet",
    "link": "https://worldpickleballpodcast.alitu.com/episode/e4540043-2a1c-44f5-aeca-7155ab64f195",
    "date": "2026-10-28"
@@ -23,12 +35,6 @@
    "title": "Bamboo vs Carbon: Ben Tinkler-Davies on Kinova & the Swift Paddle",
    "link": "https://worldpickleballpodcast.alitu.com/episode/22acb933-3806-4ac1-90ec-60bcedb0aa82",
    "date": "2026-10-27"
-  },
-  {
-   "show": "The World Pickleball Podcast",
-   "title": "Three Months of Pickleball: World Cup, English Open, PPA Australia & Europe, Rome Open | World Pickleball Podcast",
-   "link": "https://worldpickleballpodcast.alitu.com/episode/1eb1a059-47db-4454-8875-945d1c58918f",
-   "date": "2026-10-26"
   },
   {
    "show": "Cracked Paddles Podcast",
@@ -95,12 +101,6 @@
    "title": "The Top 10 States for 5.0 Pickleball Players",
    "link": "https://267631d5-5c65-4806-932e-f15ff1927658.libsyn.com/the-top-10-states-for-50-pickleball-players",
    "date": "2026-10-13"
-  },
-  {
-   "show": "Pickleballers (Jared Paul & Roscoe Bellamy)",
-   "title": "Gabe Tardio: Playing With Ben Johns, Handling Pressure, and Becoming a Star | S5 E1",
-   "link": "https://podcasters.spotify.com/pod/show/pickleballers",
-   "date": "2026-10-08"
   },
   {
    "show": "Cracked Paddles Podcast",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-10-28T11:38"
+ "updated": "2026-10-29T11:39"
 }

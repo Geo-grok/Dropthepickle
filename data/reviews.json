@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "channel": "Pickleball Studio",
+   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
+   "title": "OWL Paddle Hits 2800 RPM, New Hybrid Pressure X, & Jade 16mm vs 14mm",
+   "link": "https://www.youtube.com/watch?v=QwfGfy9QahI",
+   "video_id": "QwfGfy9QahI",
+   "date": "2026-10-28"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Holbrook Fuze Vantagrit Review & Drilling Test",
+   "link": "https://www.youtube.com/watch?v=STrZyMZkT14",
+   "video_id": "STrZyMZkT14",
+   "date": "2026-10-28"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "NEW Paddle Haul: Gearbox Pressure X, Friday Durable Grit, Volair CMD, Enhance MPP AG & More",
+   "link": "https://www.youtube.com/watch?v=0XBaAdRugCo",
+   "video_id": "0XBaAdRugCo",
+   "date": "2026-10-28"
+  },
+  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
@@ -57,14 +81,6 @@
    "date": "2026-10-23"
   },
   {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "RPM Jade REAL TALK! | Are there BETTER MPP options from Pakle, SpeedUp & LUZZ?",
-   "link": "https://www.youtube.com/watch?v=wGg93z09KkM",
-   "video_id": "wGg93z09KkM",
-   "date": "2026-10-23"
-  },
-  {
    "channel": "Pickleball Playbook Paddles",
    "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
    "title": "Pakle Fuse Paddle Review | Match Play",
@@ -118,14 +134,6 @@
    "title": "RPM Jade vs Bread & Butter Loco 2: Which One We’d Play",
    "link": "https://www.youtube.com/watch?v=2YNVW8u97o8",
    "video_id": "2YNVW8u97o8",
-   "date": "2026-10-21"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "11six24 Ultré Power 2 Paddle Review",
-   "link": "https://www.youtube.com/watch?v=eSpkPKCWgpI",
-   "video_id": "eSpkPKCWgpI",
    "date": "2026-10-21"
   },
   {
@@ -361,14 +369,6 @@
    "date": "2026-10-07"
   },
   {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Arronax Review: Thunder 10 vs KVL004 — Is the Kevlar Gen 4 Worth $90 More?",
-   "link": "https://www.youtube.com/watch?v=bi4_GXJe82Y",
-   "video_id": "bi4_GXJe82Y",
-   "date": "2026-10-07"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "We Tested If Paddles Are Getting Faster + Anna Leigh’s Lob Serve Explained | EP 143",
@@ -449,14 +449,6 @@
    "date": "2026-10-01"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "Thoughts on the new Joola Power FX, Sens Atra, & What Makes a Good Indoor Facility?",
-   "link": "https://www.youtube.com/watch?v=89ljhAr3NZA",
-   "video_id": "89ljhAr3NZA",
-   "date": "2026-09-30"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Honolulu J2CR vs J3CR vs J6CR on court paddle review & drill test",
@@ -479,9 +471,41 @@
    "link": "https://www.youtube.com/watch?v=cvp0RCVGrzs",
    "video_id": "cvp0RCVGrzs",
    "date": "2026-09-29"
+  },
+  {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "5 Best Pickleball Paddles in 2026",
+   "link": "https://www.youtube.com/watch?v=unpK-G5-aqw",
+   "video_id": "unpK-G5-aqw",
+   "date": "2026-09-26"
   }
  ],
  "all_items": [
+  {
+   "channel": "Pickleball Studio",
+   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
+   "title": "OWL Paddle Hits 2800 RPM, New Hybrid Pressure X, & Jade 16mm vs 14mm",
+   "link": "https://www.youtube.com/watch?v=QwfGfy9QahI",
+   "video_id": "QwfGfy9QahI",
+   "date": "2026-10-28"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Holbrook Fuze Vantagrit Review & Drilling Test",
+   "link": "https://www.youtube.com/watch?v=STrZyMZkT14",
+   "video_id": "STrZyMZkT14",
+   "date": "2026-10-28"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "NEW Paddle Haul: Gearbox Pressure X, Friday Durable Grit, Volair CMD, Enhance MPP AG & More",
+   "link": "https://www.youtube.com/watch?v=0XBaAdRugCo",
+   "video_id": "0XBaAdRugCo",
+   "date": "2026-10-28"
+  },
   {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
@@ -536,14 +560,6 @@
    "title": "The BEST Pickleball Tips I’ve Learned From 5 Years of Coaching",
    "link": "https://www.youtube.com/watch?v=aoAVYfoNLZE",
    "video_id": "aoAVYfoNLZE",
-   "date": "2026-10-23"
-  },
-  {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "RPM Jade REAL TALK! | Are there BETTER MPP options from Pakle, SpeedUp & LUZZ?",
-   "link": "https://www.youtube.com/watch?v=wGg93z09KkM",
-   "video_id": "wGg93z09KkM",
    "date": "2026-10-23"
   },
   {
@@ -867,14 +883,6 @@
    "date": "2026-10-10"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Enhance Turbo MPP Armorgrit Review: Game Play Analysis",
-   "link": "https://www.youtube.com/watch?v=pB6c2YBK6mo",
-   "video_id": "pB6c2YBK6mo",
-   "date": "2026-10-10"
-  },
-  {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
    "title": "RPM Jade 14mm Elongated First Impressions | Answering Your Questions",
@@ -1083,14 +1091,6 @@
    "date": "2026-09-26"
   },
   {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Gen 3 or Gen 4? Proton Coyote, Engage Axiom & X3, CPX, RPM Jade & Diesel — Honest Thoughts",
-   "link": "https://www.youtube.com/watch?v=qXky2N2AhXI",
-   "video_id": "qXky2N2AhXI",
-   "date": "2026-09-22"
-  },
-  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "Franklin X-44 vs LT Pro-48: The Lab Result We Did Not Expect | KewCast 123",
@@ -1129,14 +1129,6 @@
    "link": "https://www.youtube.com/watch?v=HxQACyA1oO8",
    "video_id": "HxQACyA1oO8",
    "date": "2026-09-14"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "The Mark Unmarked Came Out of NOWHERE 🤯 + RPM Diesel vs Scorpeus Size Test & Dad Gum Legend Unboxing",
-   "link": "https://www.youtube.com/watch?v=7a8yqZqej-I",
-   "video_id": "7a8yqZqej-I",
-   "date": "2026-09-13"
   },
   {
    "channel": "Pickleball Blast",
@@ -1548,7 +1540,7 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (6)",
+  "Pickleball Studio": "ok (7)",
   "John Kew Pickleball": "ok (9)",
   "Pickleball Effect": "ok (6)",
   "Zane Navratil Pickleball": "ok (0)",
@@ -1563,14 +1555,14 @@
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (5)",
   "All Drive No Drop Pickleball": "ok (8)",
-  "Matthew K Pickleball": "ok (2)",
+  "Matthew K Pickleball": "ok (1)",
   "Tickle My Pickleball": "ok (3)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
   "Pickleball Playbook Paddles": "ok (15)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
-  "Pickleball Advocate": "ok (11)"
+  "Pickleball Advocate": "ok (10)"
  },
- "updated": "2026-10-28T11:38"
+ "updated": "2026-10-29T11:39"
 }
