@@ -1,7 +1,7 @@
 {
- "updated": "2026-10-21",
+ "updated": "2026-10-29",
  "series": "Receipts",
- "note": "Prices read on 2026-10-21 from each brand's own product page (Shopify product data on the retailer's domain). Lowest in-stock variant price. list_price = the page's compare-at price, or the current price when none is shown. Six Zero prices are AUD. Volair rows were read on 2026-10-23.",
+ "note": "Each row's price comes from the newest check of the brand's own product page recorded in price_history.json (Shopify product data on the retailer's domain); 'checked' is that check's date and 'updated' is the oldest row's date. Lowest in-stock variant price. list_price = the page's compare-at price, or the current price when none is shown. Six Zero prices are AUD.",
  "rows": [
   {
    "paddle": "JOOLA Perseus Pro V Pickleball Paddle",
@@ -13,7 +13,7 @@
    "pct_off": 0,
    "url": "https://joola.com/products/joola-perseus-pro-v-pickleball-paddle",
    "go": "/go/joola-joola-perseus-pro-v-pickleball-paddle",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "JOOLA Hyperion Pro V Pickleball Paddle",
@@ -25,7 +25,7 @@
    "pct_off": 0,
    "url": "https://joola.com/products/joola-hyperion-pro-v-pickleball-paddle",
    "go": "/go/joola-joola-hyperion-pro-v-pickleball-paddle",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "JOOLA Perseus 3S Dual 16mm Pickleball Paddle",
@@ -37,7 +37,7 @@
    "pct_off": 0,
    "url": "https://joola.com/products/joola-perseus-3s-dual-16mm-pickleball-paddle",
    "go": "/go/joola-joola-perseus-3s-dual-16mm-pickleball-paddle",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Selkirk LUXX Control Air with InfiniGrit®",
@@ -49,7 +49,7 @@
    "pct_off": 29,
    "url": "https://selkirk.com/products/luxx-control-air-with-infinigrit",
    "go": "/go/selkirk-luxx-control-air-with-infinigrit",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "SLK HALO Power",
@@ -61,7 +61,7 @@
    "pct_off": 33,
    "url": "https://selkirk.com/products/slk-halo-power-pickleball-paddle",
    "go": "/go/selkirk-slk-halo-power-pickleball-paddle",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Selkirk OMNI Pickleball Paddle",
@@ -73,7 +73,7 @@
    "pct_off": 0,
    "url": "https://selkirk.com/products/selkirk-omni-pickleball-paddle",
    "go": "/go/selkirk-selkirk-omni-pickleball-paddle",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "CRBN¹ X Series",
@@ -85,7 +85,7 @@
    "pct_off": 35,
    "url": "https://crbnpickleball.com/products/crbn-1x-power-series-pickleball-paddle",
    "go": "/go/crbnpickleball-crbn-1x-power-series-pickleball-paddle",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "CRBN¹ TruFoam Genesis (Elongated, Long Handle)",
@@ -97,7 +97,7 @@
    "pct_off": 29,
    "url": "https://crbnpickleball.com/products/crbn-pickleball-trufoam-genesis-paddle-1",
    "go": "/go/crbnpickleball-crbn-pickleball-trufoam-genesis-paddle-1",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "CRBN³ TruFoam Waves (Elongated)",
@@ -109,7 +109,7 @@
    "pct_off": 29,
    "url": "https://crbnpickleball.com/products/crbn-trufoam-waves-tfw3",
    "go": "/go/crbnpickleball-crbn-trufoam-waves-tfw3",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Double Black Diamond Control",
@@ -121,7 +121,7 @@
    "pct_off": 0,
    "url": "https://sixzeropickleball.com/products/double-black-diamond",
    "go": "/go/sixzeropickleball-double-black-diamond",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Black Opal 14mm",
@@ -133,7 +133,7 @@
    "pct_off": 0,
    "url": "https://sixzeropickleball.com/products/black-opal-14mm",
    "go": "/go/sixzeropickleball-black-opal-14mm",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Coral 16mm",
@@ -145,19 +145,19 @@
    "pct_off": 0,
    "url": "https://sixzeropickleball.com/products/coral-16mm",
    "go": "/go/sixzeropickleball-coral-16mm",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Honeyfoam™ TKO-X",
    "brand": "Paddletek",
    "retailer": "paddletek.com",
-   "current_price": 199.99,
+   "current_price": 99.99,
    "list_price": 249.99,
    "currency": "USD",
-   "pct_off": 20,
+   "pct_off": 60,
    "url": "https://paddletek.com/products/honeyfoam-tko-x",
    "go": "/go/paddletek-honeyfoam-tko-x",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Engage Pursuit Pro2 Elongated 16mm Pickleball Paddle",
@@ -169,7 +169,7 @@
    "pct_off": 0,
    "url": "https://engagepickleball.com/products/engage-pursuit-pro2-elongated-16mm-pickleball-paddle",
    "go": "/go/engagepickleball-engage-pursuit-pro2-elongated-16mm-pickleba",
-   "checked": "2026-10-21"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair Pro 1 Pickleball Paddle",
@@ -181,7 +181,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/pro-1",
    "go": "/go/volair-pro-1",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair Pro 2 Pickleball Paddle",
@@ -193,7 +193,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/pro-2",
    "go": "/go/volair-pro-2",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair Mach 1 Forza Pickleball Paddle",
@@ -205,7 +205,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/forza-mach-1-pickleball-paddle",
    "go": "/go/volair-forza-mach-1-pickleball-paddle",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair Mach 2 Forza Pickleball Paddle",
@@ -217,7 +217,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/mach-2-forza-pickleball-paddle",
    "go": "/go/volair-mach-2-forza-pickleball-paddle",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair CTRL 1 16mm Forza Pickleball Paddle",
@@ -229,7 +229,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/ctrl-1-forza-pickleball-paddle",
    "go": "/go/volair-ctrl-1-forza-pickleball-paddle",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair CTRL 2 Forza 16mm Pickleball Paddle",
@@ -241,7 +241,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/ctrl-2-forza-pickleball-paddle",
    "go": "/go/volair-ctrl-2-forza-pickleball-paddle",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair V.1F/ XL-W 16mm Pickleball Paddle",
@@ -253,7 +253,7 @@
    "pct_off": 64,
    "url": "https://volair.com/products/v-1f-xl-w-paddle",
    "go": "/go/volair-v-1f-xl-w-paddle",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair CMD EL Pickleball Paddle 16mm",
@@ -265,7 +265,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/cmd-el-pickleball-paddle-16mm",
    "go": "/go/volair-cmd-el-pickleball-paddle-16mm",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair CMD WB Pickleball Paddle 16mm",
@@ -277,7 +277,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/cmd-wb-pickleball-paddle-16mm",
    "go": "/go/volair-cmd-wb-pickleball-paddle-16mm",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair CMD HYB Pickleball Paddle 16mm — Dylan Frazier",
@@ -289,7 +289,7 @@
    "pct_off": 0,
    "url": "https://volair.com/products/volair-cmd-hyb-pickleball-paddle-16mm-dylan-frazier",
    "go": "/go/volair-volair-cmd-hyb-pickleball-paddle-16mm-dylan-frazier",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   },
   {
    "paddle": "Volair Mach 2 Pickleball Paddle",
@@ -301,7 +301,7 @@
    "pct_off": 22,
    "url": "https://volair.com/products/mach-2-pickleball-paddle",
    "go": "/go/volair-mach-2-pickleball-paddle",
-   "checked": "2026-10-23"
+   "checked": "2026-10-29"
   }
  ]
 }

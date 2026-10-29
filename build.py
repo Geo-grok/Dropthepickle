@@ -754,6 +754,11 @@ def build():
          fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]}, schema=code_ld)
     # Paddle Price Tracker (data/price-tracker.json, verified on each retailer's own product page) + public JSON for Receipts content
     PT = json.loads((ROOT / "data" / "price-tracker.json").read_text())
+    try:  # the tracker should match the newest verified checks in price_history.json (scripts/sync_tracker.py)
+        import importlib.util as _iu; _sp = _iu.spec_from_file_location("sync_tracker", ROOT / "scripts" / "sync_tracker.py"); _st = _iu.module_from_spec(_sp); _sp.loader.exec_module(_st)
+        _chg, _ = _st.sync(json.loads(json.dumps(PT)), D("price_history.json"))
+        if _chg: print(f"WARNING price-tracker.json is behind price_history.json ({len(_chg)} prices): run python3 scripts/sync_tracker.py")
+    except Exception as ex: print("WARNING tracker sync check failed:", ex)
     (DIST / "data").mkdir(exist_ok=True); shutil.copyfile(ROOT / "data" / "price-tracker.json", DIST / "data" / "price-tracker.json")
     def ptday(d): return datetime.date.fromisoformat(d).strftime("%b %-d, %Y")
     def money(v, cur): return (f"A${v:,.2f}" if cur == "AUD" else f"${v:,.2f}")
@@ -768,7 +773,7 @@ def build():
                 f'<a class="btn" href="{e(href)}" rel="nofollow sponsored noopener" target="_blank">See it at {e(r["retailer"])} →</a></article>')
     ptrows = sorted(PT["rows"], key=lambda r: -r.get("pct_off", 0))
     page("price-tracker.html", "Paddle Price Tracker: Joola, Selkirk, CRBN, Six Zero prices checked",
-         f'<h1>Paddle Price Tracker</h1><p class="meta">{len(ptrows)} popular paddles. Every price was read on the brand\'s own product page on {ptday(PT["updated"])}. We list the lowest in-stock option. "% off list" compares to the crossed-out price the brand shows. No guesses: if we couldn\'t check it, it isn\'t here. Prices change fast, so confirm at checkout.</p>'
+         f'<h1>Paddle Price Tracker</h1><p class="meta">{len(ptrows)} popular paddles. Every price was read on the brand\'s own product page{" on " + ptday(PT["updated"]) if all(r["checked"] == PT["updated"] for r in PT["rows"]) else ", on the date shown on each card (oldest " + ptday(PT["updated"]) + ")"}. We list the lowest in-stock option. "% off list" compares to the crossed-out price the brand shows. No guesses: if we couldn\'t check it, it isn\'t here. Prices change fast, so confirm at checkout.</p>'
          f'<p class="meta"><a href="deals.html"><b>Paddle deals →</b></a> · <a href="discount-codes.html"><b>Stack a discount code →</b></a></p>{own_codes.volair_link(OWN, "Pricing a Volair?")}'
          f'<div class="pt-grid">{"".join(ptcard(r) for r in ptrows)}</div>'
          f'<section class="receipts"><h2>From the Receipts series</h2><p>Big Dill keeps the receipts. When a Receipts post says a paddle is "on sale", these are the prices behind it, with the date we checked. Want the raw numbers? <a href="data/price-tracker.json">Download the price data (JSON)</a>.</p></section>'

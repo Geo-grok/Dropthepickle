@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Price tracker: reads each paddle's price from its maker's own product page (Shopify product JSON at <url>.js),
-only where robots.txt allows. Appends to data/price_history.json and flags drops.
+only where robots.txt allows. Appends to data/price_history.json and flags drops,
+then syncs data/price-tracker.json from it (scripts/sync_tracker.py).
  - drop: today's price is lower than the last different price we recorded
  - sale: maker shows a compare-at (was) price higher than today's price
 Usage: python3 scripts/track_prices.py   (update.py runs it; the daily GitHub Action commits the result to main, and the site shows it after the next manual wrangler deploy)"""
@@ -46,3 +47,5 @@ for p in PD["paddles"]:
 if ok: hist["updated"] = TODAY  # the site's "Prices last checked" date: only move it when at least one price was verified
 HF.write_text(json.dumps(hist, indent=1, ensure_ascii=False))
 print(f"prices: {ok} ok, {skipped} skipped by robots, {failed} failed; drops: {sum(v.get('drop',False) for v in hist['paddles'].values())}, on sale: {sum(v.get('sale',False) for v in hist['paddles'].values())}")
+# Keep data/price-tracker.json in step with what was just verified (same step, same run; see sync_tracker.py).
+import sys; sys.path.insert(0, str(R / "scripts")); import sync_tracker; sync_tracker.main()
