@@ -22,7 +22,7 @@ BF_WATCH = [("Selkirk", "https://www.selkirk.com/collections/black-friday-deals"
 from urls import clean_path
 GIFT_URL, BF_URL = "/" + clean_path(GIFT_FN), "/" + clean_path(BF_FN)
 CSS = (".holi{background:#fff;border:2px solid var(--line);border-left:8px solid var(--neon);border-radius:16px;padding:12px 14px;margin:14px 0}"
-       ".holi p{margin:0 0 .4rem;font-size:1.02rem}.holi .holia{display:inline-flex;align-items:center;min-height:44px;padding:.5rem .2rem;margin-right:1rem;font-weight:800;color:var(--navy)}")
+       ".xnote{display:block;margin-top:.25rem;color:#7a4b00}.holi p{margin:0 0 .4rem;font-size:1.02rem}.holi .holia{display:inline-flex;align-items:center;min-height:44px;padding:.5rem .2rem;margin-right:1rem;font-weight:800;color:var(--navy)}")
 HOLI = {
     "paddle": ("Buying a paddle as a gift?", [(GIFT_URL, "See our 2026 gift guide by budget →"), (BF_URL, "Tracking Black Friday paddle sales →")]),
     "codes": ("Waiting for Black Friday paddle sales?", [(BF_URL, "Our hub tracks which paddle brands have announced 2026 sales →")]),
@@ -41,12 +41,16 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
     usd = [p for p in PP if p["currency"] == "USD" and ph(p).get("available") is not False]
     usd.sort(key=lambda p: (cur(p), p["brand"], p["model"]))
     aud = [p for p in PP if p["currency"] != "USD"]
+    def xnote(p, html=True):  # data-driven: paddles.json "code_excluded" (same wording as paddle pages' NOAPPLY)
+        if not (p.get("code_excluded") and p["brand"] in OWN): return ""
+        t = f"Volair doesn't tag this paddle as included in its discounts, so {OWN[p['brand']]['code']} may not apply to it. Check the total before you pay."
+        return f'<br><span class="meta xnote">{e(t)}</span>' if html else " " + t
     def chk(p): return ph(p).get("checked") or ""
     def stamp(p, pre=""): return price_checked(chk(p), fmt, e, label="Checked")
     def row(p, pre=""):
         h = ph(p); was = f' <s class="meta">{money(p, h["compare_at"])}</s>' if h.get("sale") and h.get("compare_at") else ""
         spec = " · ".join(x for x in [p["core"], p["shape"]] if x) or "specs not published"
-        return (f'<tr><td><a href="{pre}{slug(p)}"><b>{e(p["brand"])}</b> {e(p["model"])}</a><br><span class="meta">{e(spec)}</span></td>'
+        return (f'<tr><td><a href="{pre}{slug(p)}"><b>{e(p["brand"])}</b> {e(p["model"])}</a><br><span class="meta">{e(spec)}</span>{xnote(p)}</td>'
                 f'<td><b>{money(p, cur(p))}</b>{was}<br><span class="meta">{stamp(p)}</span></td><td>{buy(p)}</td></tr>')
     def table(ps, pre=""):
         return ('<div class="tbl"><table><tr><th>Gift</th><th>Maker price</th><th>Where to buy</th></tr>'
@@ -102,7 +106,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
     pick_lis = "".join(f'<li><a href="{h}">{e(t)}</a></li>' for h, t in picks)
     gqa = [
         ("What is a good pickleball gift under $25?", f"Accessories: we list {len(G25)} items from ${G25[0]['price_usd']:.2f} to ${G25[-1]['price_usd']:.2f}, including overgrips, edge guard tape, paddle covers, balls and a CRBN eGift card, each priced on the brand's own store (checked {fmt(max(g['date_checked'] for g in G25))})."),
-        ("What is a good pickleball gift for a beginner?", "A paddle that fits our beginner rule: $200 or less with a 16mm core option or a wider face." + (f" The lowest-priced one in our data is the {lo['brand']} {lo['model']} at {money(lo, cur(lo))} (checked {fmt(chk(lo))})." if lo else "")),
+        ("What is a good pickleball gift for a beginner?", "A paddle that fits our beginner rule: $200 or less with a 16mm core option or a wider face." + (f" The lowest-priced one in our data is the {lo['brand']} {lo['model']} at {money(lo, cur(lo))} (checked {fmt(chk(lo))}).{xnote(lo, False)}" if lo else "")),
         ("How much should I spend on a pickleball paddle gift?", f"The paddles we track run {money(usd[0], cur(usd[0]))} to {money(usd[-1], cur(usd[-1]))} at the maker's site. {len(t2) + len(t3)} of them are $100 or less." if usd else "See our paddle database for current prices."),
         ("Are these prices current?", f"Each price was read on the maker's own product page on the date shown next to it (latest check {fmt(last)}). Prices change, so confirm at checkout."),
         ("Is there a discount code I can use?", (f"Yes for Volair: our code {vol['code']} takes {vol['discount']} at checkout on volair.com. " if vol else "") + "Other brands' codes are on our discount codes page, re-checked daily."),
@@ -141,7 +145,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
     sale = [p for p in usd if ph(p).get("sale") or ph(p).get("drop")]
     def lowrow(p):
         h = ph(p); low = h.get("low")
-        return (f'<tr><td><a href="../{slug(p)}"><b>{e(p["brand"])}</b> {e(p["model"])}</a></td><td><b>{money(p, cur(p))}</b>'
+        return (f'<tr><td><a href="../{slug(p)}"><b>{e(p["brand"])}</b> {e(p["model"])}</a>{xnote(p)}</td><td><b>{money(p, cur(p))}</b>'
                 + (f' <s class="meta">{money(p, h["compare_at"])}</s>' if h.get("sale") and h.get("compare_at") else "")
                 + f'<br><span class="meta">{stamp(p)}</span></td><td>{money(p, low) if low else "not recorded"}</td><td>{buy(p)}</td></tr>')
     lowtbl = ('<div class="tbl"><table><tr><th>Paddle</th><th>Price now</th><th>Lowest we\'ve recorded</th><th>Where to buy</th></tr>'
