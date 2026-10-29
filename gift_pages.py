@@ -62,10 +62,21 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
     DISC = '<p class="disc">Some links are affiliate links. We may earn a commission at no extra cost to you. <a href="../disclosure.html">Learn more</a>.</p>'
 
     # ---------------- Gift guide ----------------
-    if t1: s1 = table(t1, "../")
-    else: s1 = ('<p>None yet. No paddle or item in our price data is under $25 right now, and we don\'t list prices we haven\'t checked. '
-                'The cheapest thing we have confirmed on a retailer page is a 2-paddle beginner set in our <a href="pickleball-paddles-under-30.html">paddles under $30</a> guide. '
-                'A gift that costs nothing extra: send them our <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a> with a card.</p>')
+    # Under-$25 non-paddle gifts: data/gift-under-25.json (each price read on the brand's own product page, date per item).
+    G25 = json.loads((pathlib.Path(__file__).parent / "data/gift-under-25.json").read_text())["items"]
+    G25 = sorted(G25, key=lambda g: (g["price_usd"], g["brand"], g["name"]))
+    def g25row(g):
+        own = g["brand"] in OWN and g.get("dtp_code")
+        rel = "sponsored noopener" if own else "noopener"
+        note = f'<br><span class="meta">{e(g["price_note"])}</span>' if g.get("price_note") else ""
+        code = f'<br><span class="meta">Code {e(OWN[g["brand"]]["code"])}: {e(OWN[g["brand"]]["discount"])}</span>' if own else ""
+        return (f'<tr><td><b>{e(g["name"])}</b><br><span class="meta">{e(g["brand"])} · {e(g["category"])}. {e(g["blurb"])}</span></td>'
+                f'<td><b>${g["price_usd"]:.2f}</b>{note}<br><span class="meta">{price_checked(g["date_checked"], fmt, e, label="Checked")}</span>{code}</td>'
+                f'<td><a href="{e(g["product_url"])}" target="_blank" rel="{rel}">{e(g["brand"])} store</a></td></tr>')
+    s1 = ('<p>Small gifts and stocking stuffers, each priced on the brand\'s own store on the date shown (before shipping and tax). '
+          + (f'The Volair items take our code {e(vol["code"])} for {e(vol["discount"])}. ' if vol else "")
+          + 'Want a paddle near this price? See our <a href="pickleball-paddles-under-30.html">paddles under $30</a> guide.</p>'
+          '<div class="tbl"><table><tr><th>Gift</th><th>Brand price</th><th>Where to buy</th></tr>' + "".join(g25row(g) for g in G25) + "</table></div>")
     thin3 = f'<p class="meta">Only {len(t3)} paddle{"s" if len(t3) != 1 else ""} in our data sit in this range, so it\'s a short list.</p>' if len(t3) < 3 else ""
     picks = [("../best-paddles-for-beginners.html", "Best paddles for beginners"), ("../best-paddles-for-power.html", "Best paddles for power"),
              ("../best-paddles-for-control.html", "Best paddles for control"), ("../best-paddles-for-tennis-players.html", "Best paddles for tennis players"),
@@ -74,7 +85,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
              ("pickleball-paddles-under-30.html", "Pickleball paddles under $30")]
     pick_lis = "".join(f'<li><a href="{h}">{e(t)}</a></li>' for h, t in picks)
     gqa = [
-        ("What is a good pickleball gift under $25?", "We don't have a verified price on any item under $25 right now, so we don't recommend one. The cheapest item we've confirmed is a 2-paddle beginner set in our paddles under $30 guide."),
+        ("What is a good pickleball gift under $25?", f"Accessories: we list {len(G25)} items from ${G25[0]['price_usd']:.2f} to ${G25[-1]['price_usd']:.2f}, including overgrips, edge guard tape, paddle covers, balls and a CRBN eGift card, each priced on the brand's own store (checked {fmt(max(g['date_checked'] for g in G25))})."),
         ("What is a good pickleball gift for a beginner?", "A paddle that fits our beginner rule: $200 or less with a 16mm core option or a wider face." + (f" The lowest-priced one in our data is the {lo['brand']} {lo['model']} at {money(lo, cur(lo))} (checked {fmt(chk(lo))})." if lo else "")),
         ("How much should I spend on a pickleball paddle gift?", f"The paddles we track run {money(usd[0], cur(usd[0]))} to {money(usd[-1], cur(usd[-1]))} at the maker's site. {len(t2) + len(t3)} of them are $100 or less." if usd else "See our paddle database for current prices."),
         ("Are these prices current?", f"Each price was read on the maker's own product page on the date shown next to it (latest check {fmt(last)}). Prices change, so confirm at checkout."),
@@ -96,7 +107,16 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
              f'<h2>Save with codes</h2><p>Codes can stack on a gift budget. See every code on our <a href="/discount-codes">pickleball discount codes</a> page, re-checked daily. For the brands in this guide:</p><ul>{code_lis}</ul>{vcall}'
              f'{faq(gqa)}'
              f'<p class="meta">More: <a href="../deals.html">Deals</a> · <a href="../price-tracker.html">Price tracker</a> · <a href="../price-index.html">Price index</a> · <a href="../paddle-quiz.html">Paddle quiz</a> · <a href="../disclosure.html">Disclosure</a></p>')
-    gdesc = f"Pickleball gifts by budget for 2026: $25-75, $75-100 and $100+ paddles with dated maker prices, beginner picks, and verified discount codes."
+    gdesc = "Pickleball gifts by budget for 2026: stocking stuffers under $25, paddles from $49.99 to $100+, beginner picks, dated prices and verified codes."
+    def item_list(ps, _il=item_list):  # gift-guide list also carries the under-$25 accessories
+        d = _il(ps)
+        if ps is listed:
+            extra = [{"@type": "ListItem", "position": 0, "name": g["name"], "url": g["product_url"], "item": {"@type": "Product", "name": g["name"], "brand": {"@type": "Brand", "name": g["brand"]},
+                      "offers": {"@type": "Offer", "price": f'{g["price_usd"]:.2f}', "priceCurrency": "USD", "url": g["product_url"]}}} for g in G25]
+            els = extra + d["itemListElement"]
+            for i, x in enumerate(els, 1): x["position"] = i
+            d = {**d, "numberOfItems": len(els), "itemListElement": els}
+        return d
     page(GIFT_FN, "Pickleball Gift Guide 2026: Gifts by Budget", gbody, gdesc[:155],
          fresh={"items": [(p["brand"], p["model"], cur(p), chk(p)) for p in listed + beg], "faq": gqa},
          schema=[{**item_list(listed), "name": "Pickleball Gift Guide 2026"}, faq_ld(gqa)], raw_title=True)
