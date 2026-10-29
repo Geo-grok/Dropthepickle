@@ -267,7 +267,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     upd = D("price_history.json").get("updated", "")
     # Our own codes (stacking with sales is unconfirmed); one copy handler for the strip and any own-code brand cards.
     OWNSTRIP = (("<h2>Our own code</h2>" + "".join(own_codes.callout(e, oc, details=True) for _b, oc in sorted(OWN.items()))) + own_codes.COPY_JS) if OWN else ""
-    page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Paddle deals</h1>{DISC}{own_codes.volair_link(OWN)}{OWNSTRIP}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p><p class="meta"><a href="discount-codes.html"><b>Stack a coupon: see current discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · <a href="guides/pickleball-gift-guide-2026.html"><b>Pickleball gift guide 2026 →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals at our last check. Check back later.</p>"}</div>',
+    page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Paddle deals</h1>{DISC}{own_codes.volair_link(OWN)}{OWNSTRIP}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p><p class="meta"><a href="discount-codes.html"><b>Stack a coupon: see current discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · <a href="guides/pickleball-gift-guide-2026.html"><b>Pickleball gift guide 2026 →</b></a> · <a href="deals/black-friday-pickleball-deals-2026.html"><b>Black Friday 2026 deals hub →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals at our last check. Check back later.</p>"}</div>',
          f"Pickleball paddle price drops and maker-site sales, checked on each brand's own page. {price_checked(upd, fmt, e, html=False)}",
          fresh=[fresh_p(p) for p in deals], schema=[item_list(deals)] if deals else None)
     # paddle database (re-rendered with links + badges)
@@ -389,5 +389,5 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
              {"@type": "ListItem", "position": i, "name": t, "url": absu(f)} for i, (f, t, d) in enumerate(gl, 1)]}])
     import content_pages
     content_pages.make(page, e, fmt, PP, cur, ph)
-    import gift_pages  # gift guide 2026
+    import gift_pages  # gift guide 2026 + Black Friday 2026 hub
     gift_pages.make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu)
