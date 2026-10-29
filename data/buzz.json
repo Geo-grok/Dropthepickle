@@ -1,9 +1,181 @@
 {
- "updated": "2026-10-28T06:11-05:00",
- "date": "2026-10-28",
- "source_file": "dtp-newsroom/buzz-2026-10-28.json",
+ "updated": "2026-10-29T06:08-05:00",
+ "date": "2026-10-29",
+ "source_file": "dtp-newsroom/buzz-2026-10-29.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "Houston Hammers join Major League Pickleball as the 21st team for 2027",
+   "summary": "Major League Pickleball announced the Houston Hammers as its 21st team, starting in the 2027 season, with an ownership group led by Hugh Zhang. Per MLP, the Hammers will host a 2027 league event in the Houston market, keep their CSP Champion senior team, and field a Jr. Hammers team in Jr. MLP. MLP also cited 2026 records: 733,000 CBS viewers for the Aug. 30 New York City Finals and 146,000 on FS1, PickleballTV minutes watched up 32%, attendance up 69% and ticket revenue up 87%. Details on how the Hammers will acquire players, the draft date and the 2027 schedule are due in the next few weeks.",
+   "status": "confirmed",
+   "date": "2026-10-29",
+   "sources": [
+    {
+     "label": "MLP: Houston Hammers to join Major League Pickleball as 21st team for 2027 season",
+     "url": "https://majorleaguepickleball.co/news/houston-hammers-to-join-major-league-pickleball-as-21st-team-for-2027-season/"
+    },
+    {
+     "label": "The Dink: Houston Hammers join MLP as 21st team in 2027",
+     "url": "https://www.thedinkpickleball.com/houston-hammers-join-mlp-as-21st-team-in-2027/"
+    },
+    {
+     "label": "@MajorLeaguePB: the announcement post",
+     "url": "https://x.com/MajorLeaguePB/status/2115473667752857656"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2115473667752857656"
+   ],
+   "social_angle": "Expansion hook: 'Who should the Hammers build around?' and a 'Houston gets a team' local angle. Embed MLP's post and tag MLP.",
+   "tags": [
+    "MLP",
+    "Expansion",
+    "Houston",
+    "2027"
+   ]
+  },
+  {
+   "title": "MLP Nations Cup starts Friday at Brookhaven: 8 regional teams, final on Sunday",
+   "summary": "The inaugural MLP Nations Cup runs Friday, Oct. 30 to Sunday, Nov. 1 at Brookhaven Country Club in Farmers Branch, Texas, kicking off Worlds week. Eight regional teams play in two groups: Group A is Asia Domestic, Europe West, Canada and USA, and Group B is Asia International, Australia, Europe East and Latin America. Round-robin play is Friday and Saturday, and the top two in each group advance to Sunday's semifinals and final. MLP says every match streams on PickleballTV, with tickets on Tixr. Forbes' preview picks Team USA as the favorite.",
+   "status": "confirmed",
+   "date": "2026-10-29",
+   "sources": [
+    {
+     "label": "MLP: Match schedule for MLP Nations Cup released",
+     "url": "https://majorleaguepickleball.co/news/match-schedule-for-mlp-nations-cup-released/"
+    },
+    {
+     "label": "The Kitchen: Nations Cup rosters and schedule",
+     "url": "https://thekitchenpickle.com/blogs/news/major-league-pickleball-nations-cup-2026-rosters-format-schedule/"
+    },
+    {
+     "label": "Forbes: Inaugural Major League Nations Cup kicks off PPA Worlds week in Dallas",
+     "url": "https://www.forbes.com/sites/toddboss/2026/10/28/inaugural-major-league-nations-cup-kicks-off-the-big-professional-pickleball-association-worlds-week-in-dallas/"
+    },
+    {
+     "label": "The Dink: MLP Nations Cup 2026 preview",
+     "url": "https://www.thedinkpickleball.com/mlp-nations-cup-2026-tournament-preview-everything-you-need-to-know/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2115503361529373026"
+   ],
+   "social_angle": "'Starts tomorrow' post with the two groups and a 'Who wins it?' poll. Tag MLP.",
+   "tags": [
+    "MLP",
+    "Nations Cup",
+    "International",
+    "How to watch"
+   ]
+  },
+  {
+   "title": "Worlds update: pro qualifying now starts Monday, Nov. 2 at 8 a.m. CT, and a food drive runs all week",
+   "summary": "The PPA Tour added Monday, Nov. 2 pro qualifying at 8 a.m. CT to the Opendoor Pickleball World Championships schedule, with Tuesday through Saturday starting at 11 a.m. CT and Championship Sunday at 10 a.m. CT, per its official X post. That updates our Oct. 28 note that pro rounds start Tuesday. The PPA is also running a food drive with the North Texas Food Bank from Monday, Nov. 2 through Thursday, Nov. 5 at the Pickleball Boulevard entrance near the ticketing booth: bring non-perishable or canned food, or give online by QR code. Per the PPA, donors of $5 or more get a 10% Pickleball Central discount on site, and donations over $50 enter a raffle for a prize pack worth up to $75 (winner contacted Saturday, Nov. 7). Tickets start at $25.",
+   "status": "confirmed",
+   "date": "2026-10-29",
+   "sources": [
+    {
+     "label": "@PPAtour: updated Worlds pro schedule",
+     "url": "https://x.com/PPAtour/status/2115563515494924594"
+    },
+    {
+     "label": "PPA Tour: Worlds partners with the North Texas Food Bank",
+     "url": "https://www.ppatour.com/opendoor-pickleball-world-championships-partners-with-north-texas-food-bank/"
+    },
+    {
+     "label": "PPA Tour: Worlds 2026 event page",
+     "url": "https://www.ppatour.com/events/2026/pickleball-world-championships/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2115563515494924594"
+   ],
+   "social_angle": "Useful 'going to Worlds?' post: Monday 8 a.m. CT start plus 'bring a can, get 10% off.' Tag the PPA Tour.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "Schedule",
+    "Charity",
+    "Dallas"
+   ]
+  },
+  {
+   "title": "Boca Raton HOA sued by its former racquet sports director; his lawyer points to a board member's pickleball team placement",
+   "summary": "William Ljungstrom, the former racquet sports director at Lotus Palm in Boca Raton, sued the HOA, GRS Community Management and three board members on Sept. 14, alleging defamation, tortious interference, civil theft and breach of contract, and seeks $129,191, the Palm Beach Post and Boca Post report. He was fired Aug. 11; the HOA said he kept part of $50,000 meant for a pickleball pro. His lawyer, Matthew Nelles, says one factor was that Ljungstrom placed board member Jeffrey Spitzer on a lower-level pickleball team. The HOA's attorney said they will respond in court filings. These are allegations in a civil case, not findings.",
+   "status": "confirmed",
+   "date": "2026-10-29",
+   "sources": [
+    {
+     "label": "Palm Beach Post: Lotus Palm dispute highlights lucrative racquet sports business",
+     "url": "https://www.palmbeachpost.com/story/news/local/boca/2026/10/28/lotus-palm-dispute-highlights-lucrative-racquet-sports-business/92468634007/"
+    },
+    {
+     "label": "Boca Post: Lotus Palm HOA faces defamation lawsuit from former racquet sports director",
+     "url": "https://bocapost.com/boca-raton-news/boca-raton-lotus-palm-hoa-faces-defamation-lawsuit-from-former-racquet-sports-director/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Light 'HOA pickleball drama' item; stick to the reported facts and say these are allegations. No naming jokes about individuals.",
+   "tags": [
+    "Florida",
+    "Lawsuit",
+    "HOA",
+    "Community"
+   ]
+  },
+  {
+   "title": "Florida man arrested after a pickleball format dispute; Spruce Creek brawl case ends in a plea",
+   "summary": "A 73-year-old Ave Maria, Fla. man was arrested Oct. 21 on a battery charge tied to an Oct. 3 dispute over an event's format at the Oasis Club, according to a Collier County Sheriff's Office report cited by Gulf Coast News and The Kitchen; the report involves a slow cooker. He has only been charged. The Kitchen also reports that Anthony Sapienza, from February's Spruce Creek pickleball brawl, was adjudicated guilty of misdemeanor battery on Oct. 15 under a plea deal, citing the Daytona Beach News-Journal.",
+   "status": "confirmed",
+   "date": "2026-10-29",
+   "sources": [
+    {
+     "label": "Gulf Coast News: Ave Maria pickleball dispute leads to battery arrest",
+     "url": "https://www.gulfcoastnewsnow.com/article/ave-maria-pickleball-dispute-slow-cooker-battery-arrest/74270396"
+    },
+    {
+     "label": "The Kitchen: Florida man arrested after pickleball format dispute escalates",
+     "url": "https://thekitchenpickle.com/blogs/news/florida-man-arrested-after-pickleball-format-dispute-escalates-to-slow-cooker/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Weird-news item. Keep it factual, don't name the Ave Maria man, and don't treat The Kitchen's jokes as facts.",
+   "tags": [
+    "Florida",
+    "Police",
+    "Weird news",
+    "Community"
+   ]
+  },
+  {
+   "title": "Courts watch: Champaign doubles to 16 courts this Saturday; Lewes, Del. indoor complex opposition softens",
+   "summary": "Champaign, Ill.'s John Street pickleball complex at 2203 W. John St. grows from 8 to 16 courts and is expected to open Saturday, Oct. 31, the News-Gazette reports. The roughly $2.2 million phase adds shade over four courts, restrooms and parking, with a grand opening Nov. 14 from 10 a.m. to noon, per WCIA. In Delaware, neighbor opposition to the Dave Marshall Tennis & Pickleball expansion near Lewes softened at the Oct. 27 Sussex County Council hearing after negotiations, Spotlight Delaware reports. Proposed conditions include indoor-only pickleball, 15 tournaments a year and limited hours; the project has a $1 million state Sports Tourism grant and plans 5 indoor courts. A final vote is likely Nov. 17.",
+   "status": "confirmed",
+   "date": "2026-10-29",
+   "sources": [
+    {
+     "label": "News-Gazette: New John Street pickleball courts likely to open this weekend",
+     "url": "https://www.news-gazette.com/news/local/community-events/new-john-street-pickleball-courts-likely-to-open-this-weekend/article_27b9ded3-ca3a-4b09-bfaf-098c7d69a9f9.html"
+    },
+    {
+     "label": "WCIA: Champaign pickleball venue doubling in size through $2M expansion",
+     "url": "https://www.wcia.com/news/champaign-county/champaign-pickleball-court-venue-doubling-in-size-through-2m-expansion/"
+    },
+    {
+     "label": "Spotlight Delaware: Neighbor opposition to Lewes pickleball complex softens",
+     "url": "https://spotlightdelaware.org/2026/10/29/neighbor-opposition-to-lewes-pickleball-complex-softens-following-negotiations/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Courts-near-you post; Lewes is a good 'noise fight that got negotiated' counterexample.",
+   "tags": [
+    "Courts",
+    "Illinois",
+    "Delaware",
+    "New courts",
+    "Noise"
+   ]
+  },
   {
    "title": "Worlds storylines: Anna Leigh Waters unbeaten in 2026 singles and women's doubles, Ben Johns seeded 19th in singles, Mark Wahlberg headlines Thursday's pro-am",
    "summary": "The PPA Tour's storylines for the Opendoor Pickleball World Championships (Nov. 2-8, Brookhaven Country Club, Farmers Branch, Texas) say every top-ranked pro is in the draws, winners get 3,000 points, and all three doubles finals are best of five on Championship Sunday. Anna Leigh Waters has not lost a singles or women's doubles match in 2026 and, per the PPA, hasn't lost a singles match in 888 days. Top singles seeds are Waters, Fahey, Christian and Buckner for the women and Chris Haworth, Federico Staksrud, Hunter Johnson and Christian Alshon for the men; Ben Johns is the No. 19 seed and opens against Brandon French in the round of 64. Waters/Johns are the top mixed seeds, and Bright/Waters top women's doubles. The PPA says over 3,200 players are entered and the event page lists a $1,648,641 total payout. Pro rounds start Tuesday, Nov. 3, on PickleballTV at 11 a.m. CT (10 a.m. CT on Sunday), and Mark Wahlberg headlines the MUNICIPAL Celebrity Pickleball Showdown on Thursday, Nov. 5, at 7 p.m. CT on Tennis Channel.",
