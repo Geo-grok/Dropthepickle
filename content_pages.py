@@ -73,7 +73,7 @@ def make(page, e, fmt, PP, cur, ph):
 
     def more(current):
         links = "".join(f'<li><a href="../{fn}">{e(title)}</a></li>' for fn, title in GUIDES if fn != current)
-        links += '<li><a href="../price-index.html">Paddle price index</a></li><li><a href="../tournaments.html">Pro events</a></li><li><a href="../events/ppa-worlds-2026.html">PPA Worlds 2026 guide</a></li><li><a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026: how to watch</a></li><li><a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026: schedule and how to watch</a></li><li><a href="../creators/ryan-morneau.html">Ryan Morneau spotlight</a></li>'
+        links += '<li><a href="../price-index.html">Paddle price index</a></li><li><a href="../tournaments.html">Pro events</a></li><li><a href="../events/opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide</a></li><li><a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026: how to watch</a></li><li><a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026: schedule and how to watch</a></li><li><a href="../creators/ryan-morneau.html">Ryan Morneau spotlight</a></li>'
         return f'<h2>Keep going</h2><ul>{links}</ul>'
 
     def embed(vid, title, short=True):
@@ -705,7 +705,7 @@ def make(page, e, fmt, PP, cur, ph):
 <li><b>US Open and USA Pickleball:</b> <a href="{B_X40}" target="_blank" rel="noopener">Franklin says</a> the X-40 was chosen as the official ball of the US Open Pickleball Championships and of USA Pickleball.</li>
 <li><b>APP Tour:</b> the APP named the Franklin X-40 the <a href="{B_APP}" target="_blank" rel="noopener">exclusive ball of the APP Tour and APP Next Gen Series</a> in March 2024.</li>
 </ul>
-<p>Watching the pros this fall? See the <a href="../events/ppa-worlds-2026.html">PPA Worlds 2026 guide</a> and <a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026</a>.</p>
+<p>Watching the pros this fall? See the <a href="../events/opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide</a> and <a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026</a>.</p>
 <h2>How to pick one</h2>
 <ul>
 <li><b>Gym floor or indoor court:</b> a larger-hole indoor ball is the customary choice. The PPA Tour's <a href="{B_PPA_BLOG}" target="_blank" rel="noopener">ball guide</a> (January 2024) says the Jugs indoor ball's wider holes mean less skipping on a gym floor, but notes that ball is not USA Pickleball approved; it points indoor tournament players to the approved Onix Pure 2.</li>
@@ -811,7 +811,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>This week: Nations Cup, Nationals and PPA Worlds</h2>
 <p>Three big events overlap. Nations Cup times are converted from the {ext(WT_PPA, "PPA's watch page")} (listed in ET). PPA Worlds times are from {ext(WT_UP_PRO, "United Pickleball")} (listed in CT), which says windows can move. All times CT.</p>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Event</th><th>Where to watch</th><th>Window (CT)</th></tr></thead><tbody>{wt_week_rows}</tbody></table></div>
-<p>PPA pro qualifying on Monday, November 2 had no stream window on the PPA's schedule when we checked. For tickets, parking and rosters, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026</a>, <a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026</a> and <a href="../events/ppa-worlds-2026.html">PPA Worlds 2026</a> guides.</p>
+<p>PPA pro qualifying on Monday, November 2 had no stream window on the PPA's schedule when we checked. For tickets, parking and rosters, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026</a>, <a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026</a> and <a href="../events/opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> guides.</p>
 <p>For the full Worlds day-by-day schedule, ticket prices and entrants, see <a href="../events/opendoor-pickleball-world-championships.html">Pickleball World Championships 2026: schedule, TV and tickets</a>.</p>
 <h2>Coming up after Worlds</h2>
 <div class="tbl"><table><thead><tr><th>Dates</th><th>Event</th><th>Coverage listed</th></tr></thead><tbody>{wt_next_rows}</tbody></table></div>
@@ -851,69 +851,7 @@ def make(page, e, fmt, PP, cur, ph):
     UP_SCHED = "https://worlds.unitedpickleball.com/schedule"
     UP_TIX = "https://worlds.unitedpickleball.com/tickets"
     FB_CITY = "https://discoverfarmersbranch.com/pickleball/"
-    WEEK = [("Fri Oct 30 – Sun Nov 1", "MLP Nations Cup, the official kickoff (eight international teams)", ""),
-            ("Mon Nov 2", "PPA pro qualifying", "11:00 AM"), ("Tue Nov 3", "Main draw, round of 64", "11:00 AM"),
-            ("Wed Nov 4", "Main draw, round of 32", "11:00 AM"), ("Thu Nov 5", "Main draw, round of 16", "11:00 AM"),
-            ("Fri Nov 6", "Quarterfinals", "11:00 AM"), ("Sat Nov 7", "Semifinals", "11:00 AM"),
-            ("Sun Nov 8", "Championship Sunday, finals", "10:00 AM")]
-    TIX = [("Grounds Pass (any day)", "$30.42"), ("Courtside Bleacher", "$46.66 – $92.03"), ("Courtside Chair", "$113.69 – $221.99"),
-           ("VIP", "$276.13 – $438.58"), ("Box Suite (daily)", "$3,254.23 – $9,751.90"), ("Weeklong Grounds Pass", "$113.69"),
-           ("MLP Nations Cup courtside", "$25.00 – $35.83"), ("MLP Nations Cup 3-day courtside", "$70.37")]
-    week_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(t) or "see schedule"}</td></tr>' for d, w, t in WEEK)
-    tix_rows = "".join(f'<tr><th scope="row">{e(k)}</th><td>{e(v)}</td></tr>' for k, v in TIX)
-    w_faq = [
-        ("When is PPA Worlds 2026?",
-         "The PPA Tour event, the Opendoor Pickleball World Championships, runs November 2 to 8, 2026. The wider Worlds week starts October 30 with the MLP Nations Cup, so United Pickleball lists Worlds as October 30 to November 8."),
-        ("Is PPA Worlds 2026 in Brookhaven or Farmers Branch?",
-         "Both are correct. The venue is Brookhaven Country Club, 3333 Golfing Green Drive, and it is in the city of Farmers Branch, Texas, in the Dallas area. Brookhaven is the club, not a separate city."),
-        ("How much are PPA Worlds 2026 tickets?",
-         "United Pickleball's ticket page, using Tixr data from October 11, 2026, lists a Grounds Pass at $30.42 any day, courtside bleachers from $46.66 to $92.03, and a weeklong grounds pass at $113.69, fees included. Tickets are sold on Tixr and prices change by day and demand."),
-        ("Where do I park for PPA Worlds 2026?",
-         "The PPA says all general parking is at Dallas College Brookhaven Campus, Lot P3, 3939 Valley View Lane, with free shuttles to the venue from October 30 to November 8. Overnight and RV parking is not allowed."),
-    ]
-    w_faq_html, w_faq_ld = faq(w_faq)
-    w_event = {"@type": "SportsEvent", "name": "Opendoor Pickleball World Championships 2026", "startDate": "2026-11-02", "endDate": "2026-11-08",
-               "url": PPA_EV, "organizer": {"@type": "Organization", "name": "Carvana PPA Tour"},
-               "location": {"@type": "Place", "name": "Brookhaven Country Club",
-                            "address": {"@type": "PostalAddress", "streetAddress": "3333 Golfing Green Dr", "addressLocality": "Farmers Branch",
-                                        "addressRegion": "TX", "postalCode": "75234", "addressCountry": "US"}},
-               "offers": {"@type": "Offer", "url": UP_TIX}}
-    worlds = f'''<h1>PPA Worlds 2026: dates, venue and tickets</h1>
-<p class="meta">The Opendoor Pickleball World Championships, from the official PPA Tour and United Pickleball pages. Checked {checked}. Confirm on the official pages before you travel.</p>
-<h2>Dates</h2>
-<p>The {ext(PPA_EV, "PPA Tour event page")} lists the <b>Opendoor Pickleball World Championships</b> for <b>November 2 to 8, 2026</b>. It is a PPA Major worth 3,000 ranking points, with a listed total payout of $1,648,641.</p>
-<p>The reported <b>October 30 to November 8</b> dates are for the whole Worlds week. {ext(UP_SCHED, "United Pickleball's schedule")} starts the week with the <b>MLP Nations Cup</b> on October 30 to November 1, the official kickoff, at the same venue. The PPA pro event itself starts November 2.</p>
-<div class="tbl"><table><thead><tr><th>Day</th><th>What's on</th><th>First serve</th></tr></thead><tbody>{week_rows}</tbody></table></div>
-<p>First-serve times are from the PPA's {ext(PPA_TODAY, "at the event page")}. Gate times had not been posted on {checked}.</p>
-<h2>Venue: Brookhaven Country Club, Farmers Branch</h2>
-<p>Both names are right. The venue is <b>Brookhaven Country Club</b>, 3333 Golfing Green Dr, <b>Farmers Branch, TX 75234</b>, in the Dallas area. Brookhaven is the club. Farmers Branch is the city. The PPA and the {ext(FB_CITY, "City of Farmers Branch")} both give that address.</p>
-<h2>Parking and getting there</h2>
-<ul>
-<li>All general parking is at <b>Dallas College Brookhaven Campus, Lot P3</b>, 3939 Valley View Lane, Farmers Branch, TX 75244. Free shuttles run to the venue from October 30 to November 8, about 6:30 AM to 11:00 PM.</li>
-<li>Rideshare pickup and drop-off is on Brookhaven Drive, just past Golfing Green Drive.</li>
-<li>Box Suite ticket holders get on-site parking. Overnight and RV parking is not allowed.</li>
-<li>The city has a resident-only parking permit rule on streets near the club from October 30 to November 8.</li>
-</ul>
-<h2>Tickets</h2>
-<p>Tickets are sold through Tixr. {ext(UP_TIX, "United Pickleball's ticket page")} lists these prices, including fees, using Tixr data from October 11, 2026. Prices vary by day and demand.</p>
-<div class="tbl"><table><thead><tr><th>Ticket</th><th>Price listed</th></tr></thead><tbody>{tix_rows}</tbody></table></div>
-<p>On that page, the weeklong courtside, chair, VIP and box suite passes were marked sold out. Our <a href="opendoor-pickleball-world-championships.html">Worlds 2026 schedule, TV and tickets page</a> has the day-by-day schedule in CT.</p>
-<h2>Gear before you go</h2>
-{money_links()}
-{w_faq_html}
-{sources([("PPA Tour: Opendoor Pickleball World Championships 2026", PPA_EV, f"dates, payout, points, checked {checked}"),
-          ("PPA Tour: At the event", PPA_TODAY, f"schedule, address, parking, checked {checked}"),
-          ("United Pickleball: Pickleball Worlds 2026", UP_HOME, f"checked {checked}"),
-          ("United Pickleball: Week schedule", UP_SCHED, "October 30 to November 8"),
-          ("United Pickleball: Tickets", UP_TIX, "Tixr data from October 11, 2026"),
-          ("City of Farmers Branch: Pickleball", FB_CITY, "venue address, neighborhood parking")])}
-<p>Watching the kickoff? See the <a href="mlp-nations-cup-2026.html">MLP Nations Cup 2026 teams and how to watch</a>.</p>
-<p>Watching from home? Worlds is on PickleballTV every day of the main draw, with the Celebrity Pro-Am on Tennis Channel. See <a href="../guides/how-to-watch-pro-pickleball.html">how to watch pro pickleball</a> for windows and PickleballTV free vs paid.</p>
-<p><a href="../tournaments.html">All tournaments</a></p>'''
-    page("events/ppa-worlds-2026.html", "PPA Worlds 2026: dates, venue and tickets (Farmers Branch, TX)", worlds,
-         "PPA Worlds 2026: the Opendoor Pickleball World Championships run Nov 2 to 8 at Brookhaven Country Club, Farmers Branch, TX, after the Oct 30 MLP Nations Cup kickoff. Schedule, parking and ticket prices.",
-         fresh={"checked": CHECKED, "week": WEEK, "tix": TIX, "faq": w_faq},
-         schema=[w_event, w_faq_ld])
+    # /events/ppa-worlds-2026 merged into OW_FN; 301 in src/worker.js (WORLDS_301).
     # ----- Opendoor Pickleball World Championships 2026: full search-answer page (refresh of the event card) -----
     # Every fact read on the linked official pages (plus the cited Kitchen schedule) on OW_CHECKED. Times CT (UTC-6 after DST ends Nov 1).
     from urls import clean_path as _cp
@@ -952,7 +890,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("Is the main draw November 2 to 8 or November 3 to 8?",
          "Both dates appear because they describe different things. November 2 to 8 is the whole PPA event, including Monday qualifying. The main draw starts with the round of 64 on Tuesday, November 3 and ends November 8."),
         ("Where is PPA Worlds 2026?",
-         "Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, TX 75234, in the Dallas area. General parking is at Dallas College Brookhaven Campus, Lot P3, 3939 Valley View Lane, with free shuttles to the venue."),
+         "Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, TX 75234, in the Dallas area. Brookhaven is the club and Farmers Branch is the city, so both names are correct. General parking is at Dallas College Brookhaven Campus, Lot P3, 3939 Valley View Lane, with free shuttles to the venue."),
         ("How can I watch PPA Worlds 2026?",
          "Every day of the main draw is live on PickleballTV, Tuesday, November 3 through Sunday, November 8. The Celebrity Pro-Am is on Tennis Channel and PickleballTV on Thursday, November 5 from 7 to 9 p.m. CT. PickleballTV's free 24/7 channel carries selected matches; every court and replays need the paid PickleballTV app."),
         ("What time does PPA Worlds start each day?",
@@ -976,7 +914,6 @@ def make(page, e, fmt, PP, cur, ph):
                 "offers": {"@type": "AggregateOffer", "url": UP_TIX, "priceCurrency": "USD", "lowPrice": "30.42", "highPrice": "9751.90"}}
     ow_go = [(_cp("events/mlp-nations-cup-2026.html"), "MLP Nations Cup 2026: teams and how to watch"),
              (_cp("guides/how-to-watch-pro-pickleball.html"), "How to watch pro pickleball: PickleballTV free vs app"),
-             (_cp("events/ppa-worlds-2026.html"), "PPA Worlds 2026: parking and travel details"),
              (_cp("pro-paddles.html"), "What paddles the pros use"),
              (_cp("discount-codes.html"), "Pickleball discount codes"),
              (_cp("guides/pickleball-gift-guide-2026.html"), "2026 pickleball gift guide"),
@@ -992,7 +929,8 @@ def make(page, e, fmt, PP, cur, ph):
 </ul>
 <p>So "November 2 to 8" and "November 3 to 8" are both right: the first includes Monday qualifying, the second is the main draw only.</p>
 <h2>Venue and parking</h2>
-<p><b>Brookhaven Country Club</b>, 3333 Golfing Green Dr, <b>Farmers Branch, TX 75234</b>, per the {ext(PPA_TODAY, "PPA's at-the-event page")}. General parking is at <b>Dallas College Brookhaven Campus, Lot P3</b>, 3939 Valley View Lane, with free shuttles from about 6:30 AM to 11 PM daily, October 30 to November 8. Rideshare drop-off is on Brookhaven Drive, just past Golfing Green Drive. Overnight and RV parking is not allowed.</p>
+<p><b>Brookhaven Country Club</b>, 3333 Golfing Green Dr, <b>Farmers Branch, TX 75234</b>, per the {ext(PPA_TODAY, "PPA's at-the-event page")}. General parking is at <b>Dallas College Brookhaven Campus, Lot P3</b>, 3939 Valley View Lane, with free shuttles from about 6:30 AM to 11 PM daily, October 30 to November 8. Rideshare drop-off is on Brookhaven Drive, just past Golfing Green Drive. Box Suite ticket holders get on-site parking. Overnight and RV parking is not allowed.</p>
+<p>Brookhaven or Farmers Branch? Both names are right: Brookhaven is the club, Farmers Branch is the city. The {ext(FB_CITY, "City of Farmers Branch")} gives the same address and has a resident-only parking permit rule on streets near the club from October 30 to November 8, so use Lot P3.</p>
 <h2>Day-by-day schedule (CT)</h2>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Pro events and divisions</th><th>Start and stream (CT)</th></tr></thead><tbody>{ow_day_rows}</tbody></table></div>
 <p>Pro rounds and first-serve times are from the {ext(PPA_EV, "PPA event page")}; morning and evening session splits are from {ext(UP_TIX, "United Pickleball's ticket page")}; stream windows are from the {ext(UP_PRO, "United Pickleball pro page")} (CT) and match the {ext(PPA_WATCH, "PPA watch page")} (ET, one hour later). Nations Cup windows are converted from the PPA watch page's ET listing. The five pro events are men's and women's singles, men's and women's doubles, and mixed doubles. Amateur divisions run all week; your times are on your bracket at pickleballtournaments.com.</p>
@@ -1025,6 +963,7 @@ def make(page, e, fmt, PP, cur, ph):
           ("United Pickleball: Pro play", UP_PRO, f"draw sizes, CT windows, checked {ow_checked}"),
           ("United Pickleball: Week schedule", UP_SCHED, f"music, Nations Cup, checked {ow_checked}"),
           ("United Pickleball: Tickets", UP_TIX, "Tixr data from October 11, 2026"),
+          ("City of Farmers Branch: Pickleball", FB_CITY, "venue address, neighborhood parking"),
           ("PickleballTV", PBTV, "free channel platforms"),
           ("PickleballTV on the App Store", PBTV_IOS, "app price and trial"),
           ("The Kitchen: 2026 Worlds schedule of events", KITCHEN, "daily programming, updated Oct 29, 2026")])}
@@ -1130,7 +1069,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>Going in person</h2>
 <p>Nations Cup tickets are sold separately from Worlds week, on Tixr. {ext(NC_X_TIX, "MLP said on October 29")} that last-minute tickets start at $25. United Pickleball lists a Courtside Pass (bleacher seating, first come, first served) and a VIP Pass. Doors open one hour before the first matches. Outside food and drink aren't allowed, and filming matches isn't permitted without MLP's written approval. On Saturday, October 31, {ext(NC_X_COSTUME, "MLP is holding a Halloween costume contest")} for fans, with prizes for the top 3 from DoorDash and VIP ticket upgrades for 10 more fans.</p>
 <h2>Next up: PPA Worlds, November 2 to 8</h2>
-<p>The PPA Tour's Opendoor Pickleball World Championships follow at the same venue from <b>November 2 to 8</b>, per United Pickleball. See our <a href="ppa-worlds-2026.html">PPA Worlds 2026 guide</a> for parking and travel, and the <a href="opendoor-pickleball-world-championships.html">Pickleball World Championships 2026 schedule, TV and tickets page</a> for the day-by-day schedule in CT.</p>
+<p>The PPA Tour's Opendoor Pickleball World Championships follow at the same venue from <b>November 2 to 8</b>, per United Pickleball. See our <a href="opendoor-pickleball-world-championships.html">Pickleball World Championships 2026 schedule, TV and tickets page</a> for the day-by-day schedule in CT, parking and travel.</p>
 <h2>Gear before you go</h2>
 {money_links()}
 {nc_faq_html}
@@ -1143,7 +1082,7 @@ def make(page, e, fmt, PP, cur, ph):
           ("@MajorLeaguePB on X: tickets from $25", NC_X_TIX, "October 29, 2026"),
           ("@MajorLeaguePB on X: Halloween costume contest", NC_X_COSTUME, "October 29, 2026"),
           ("Major League Pickleball", NC_MLP, "live scores and standings")])}
-<p><a href="../tournaments.html">All tournaments</a> · <a href="ppa-worlds-2026.html">PPA Worlds 2026</a> · <a href="../guides/how-to-watch-pro-pickleball.html">How to watch pro pickleball</a></p>'''
+<p><a href="../tournaments.html">All tournaments</a> · <a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> · <a href="../guides/how-to-watch-pro-pickleball.html">How to watch pro pickleball</a></p>'''
     page("events/mlp-nations-cup-2026.html", "MLP Nations Cup 2026: Schedule, Teams & How to Watch", nations,
          "MLP Nations Cup 2026 (Oct 30-Nov 1, Farmers Branch, TX): full match schedule in CT, PickleballTV times, all 8 rosters incl. Team USA, and format.",
          fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "faq": nc_faq},
@@ -1204,7 +1143,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p>The <b>2026 Oceanview USA Pickleball National Championships</b> run <b>Saturday, October 31 to Sunday, November 8</b> at <b>Barnes Tennis Center in San Diego</b>, the second straight year there, per {ext(UN_NEWS, "USA Pickleball")}. Play is spread across 54 courts, with junior, collegiate, amateur, wheelchair and pro divisions. Amateur players qualify through Golden Ticket tournaments and USA Pickleball's Tiered Point System.</p>
 <h2>How to watch online</h2>
 <p>The {ext(UN_LIVE, "official livestream page")} says every match is livestreamed and recorded by <b>VS Sports</b>, so you can follow players live or catch up on recordings later. Individual match times are posted through Pickleball Den closer to play, per the {ext(UN_FAQ, "Nationals FAQ")}.</p>
-<p>Same week, different event: the Opendoor Pickleball World Championships run November 2 to 8 in Farmers Branch, Texas. See our <a href="ppa-worlds-2026.html">PPA Worlds 2026 guide</a> and <a href="mlp-nations-cup-2026.html">MLP Nations Cup 2026 how to watch</a>.</p>
+<p>Same week, different event: the Opendoor Pickleball World Championships run November 2 to 8 in Farmers Branch, Texas. See our <a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide</a> and <a href="mlp-nations-cup-2026.html">MLP Nations Cup 2026 how to watch</a>.</p>
 <h2>Day-by-day schedule</h2>
 <p>Divisions by day from the {ext(UN_SCHED, "official schedule")}:</p>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Who plays</th></tr></thead><tbody>{un_day_rows}</tbody></table></div>
@@ -1221,7 +1160,7 @@ def make(page, e, fmt, PP, cur, ph):
           ("Nationals livestream", UN_LIVE, "VS Sports livestream and recordings"),
           ("Nationals FAQs", UN_FAQ, "courts, match times, cashless venue"),
           ("USA Pickleball: Nationals return to Barnes Tennis Center in 2026", UN_NEWS, "venue announcement")])}
-<p><a href="../tournaments.html">All tournaments</a> · <a href="ppa-worlds-2026.html">PPA Worlds 2026</a> · <a href="mlp-nations-cup-2026.html">MLP Nations Cup 2026</a></p>'''
+<p><a href="../tournaments.html">All tournaments</a> · <a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> · <a href="mlp-nations-cup-2026.html">MLP Nations Cup 2026</a></p>'''
     page("events/usa-pickleball-nationals-2026.html", "USA Pickleball Nationals 2026: schedule, tickets and how to watch", nationals,
          "USA Pickleball Nationals 2026 runs Oct 31 to Nov 8 at Barnes Tennis Center, San Diego: VS Sports livestream, day-by-day schedule, pro medal matches, free GA tickets and parking.",
          fresh={"checked": UN_CHECKED, "days": UN_DAYS, "tix": UN_TIX_ROWS, "faq": un_faq},

@@ -532,7 +532,7 @@ EVWK_END = datetime.date(2026, 11, 8)
 EVWK_MARK = "<!--EVWK-->"
 EVWK_EVENTS = [("events/mlp-nations-cup-2026.html", "Nations Cup", "Oct 30–Nov 1"),
                ("events/usa-pickleball-nationals-2026.html", "Nationals", "Oct 31–Nov 8"),
-               ("events/ppa-worlds-2026.html", "PPA Worlds", "Nov 2–8")]
+               ("events/opendoor-pickleball-world-championships.html", "PPA Worlds", "Nov 2–8")]
 def evwk_page(fn):
     return fn == "index.html" or fn.startswith("guides/") or (fn.startswith("paddle-") and "/" not in fn)
 def evwk_build_date():
@@ -593,7 +593,7 @@ def build():
         em = f'<div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{e(v["video_id"])}" title="{e(v["title"])}" allowfullscreen></iframe></div>' if embed and v.get("video_id") else ""
         return f'<div class="card">{em}<h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta"><a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a> · {fmt(v["date"])}</div></div>'
     page("tournaments.html", "Tournaments", f'''<h1>Upcoming tournaments</h1><p class="meta">Pro events from the official <a href="https://www.ppatour.com/events/" target="_blank" rel="noopener">Carvana PPA Tour</a> event feed. Always confirm dates and sign up on the official page. Each card links to our event page, which only repeats fields from that feed.</p>
-<p>Going to Worlds? Read our <a href="events/ppa-worlds-2026.html">PPA Worlds 2026 guide</a> for dates, venue, parking and ticket prices. Watching the Oct 30 kickoff? See <a href="events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 teams and how to watch</a>. Following amateurs and pros in San Diego? Read <a href="events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026: schedule, tickets and how to watch</a>.</p>
+<p>Going to Worlds? Read our <a href="events/opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide</a> for dates, venue, parking and ticket prices. Watching the Oct 30 kickoff? See <a href="events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 teams and how to watch</a>. Following amateurs and pros in San Diego? Read <a href="events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026: schedule, tickets and how to watch</a>.</p>
 <div class="grid">{"".join(tcard(t) for t in T["items"]) or "<p>No events right now.</p>"}</div>
 <h2>Find amateur tournaments near you</h2><p>These directories host signups for local and regional events (including West Texas). We link to them instead of copying their listings:</p>
 <ul><li><a href="https://pickleballtournaments.com/" target="_blank" rel="noopener">PickleballTournaments.com</a></li><li><a href="https://www.pickleballbrackets.com/" target="_blank" rel="noopener">PickleballBrackets.com</a></li><li><a href="https://usapickleball.org/" target="_blank" rel="noopener">USA Pickleball</a> (sanctioned events)</li></ul>''',
@@ -610,7 +610,7 @@ def build():
         if t.get("link"): bits.append(f'<p><a class="btn" href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a></p>')
         if t.get("tickets"): bits.append(f'<p><a href="{e(t["tickets"])}" target="_blank" rel="noopener">Tickets</a></p>')
         if "World Championships" in t["name"] and (t.get("start") or "").startswith("2026"):
-            bits.append('<p><a href="ppa-worlds-2026.html">PPA Worlds 2026 guide: dates, venue, parking and ticket prices</a></p>')
+            bits.append('<p><a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide: dates, venue, parking and ticket prices</a></p>')
         bits.append('<p><a href="../tournaments.html">All tournaments</a></p>')
         loc = t.get("location") or ""
         when_desc = " – ".join(t[k] for k in ("start", "end") if t.get(k))

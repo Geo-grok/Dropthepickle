@@ -2,6 +2,7 @@
 // and handles /go/<slug> outbound redirects (counted in D1 table go_clicks,
 // with user_agent and an is_bot flag; HEAD requests are redirected but not logged).
 import GO from "./go-links.json";
+const WORLDS_301 = new Set(["/events/ppa-worlds-2026", "/events/ppa-worlds-2026.html", "/events/ppa-worlds-2026/"]);
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -18,6 +19,10 @@ export default {
     if (url.pathname.startsWith("/discount-codes/") && url.pathname !== url.pathname.toLowerCase()) {
       url.pathname = url.pathname.toLowerCase();
       return Response.redirect(url.toString(), 301);
+    }
+    // Duplicate Worlds page merged into the refreshed event page.
+    if (WORLDS_301.has(url.pathname)) {
+      return Response.redirect(new URL("/events/opendoor-pickleball-world-championships", url).toString(), 301);
     }
     return env.ASSETS.fetch(request);
   },
