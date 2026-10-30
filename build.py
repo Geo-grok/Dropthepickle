@@ -233,6 +233,7 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 """
 import gift_pages; CSS += gift_pages.CSS  # .holi holiday callout
 import volair_page; CSS += volair_page.CSS  # dedicated /discount-codes/volair page
+import save_gear; CSS += save_gear.CSS  # "Save on gear" CTA row (Buzz, news, guides, events, articles)
 CSS += """
 .evwk{background:#0b1426;border-bottom:2px solid #c6f432;color:#fff;contain:layout}
 .evwk[hidden]{display:none}
@@ -456,7 +457,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
     updated = note_fresh(fn, fresh)
     img = C["BASE_URL"].rstrip("/") + "/og-1200x630.png"
     stamp = f'<p class="meta updated">Updated {fmt(updated)}</p>' if updated else ""
-    if not full: body = f"<main>{pagehead(body)}{stamp}</main>"
+    if not full: body = f"<main>{save_gear.insert(fn, pagehead(body))}{stamp}</main>"
     elif stamp: body = body.replace('<span class="eyebrow"><i></i>Updated daily</span>', f'<span class="eyebrow"><i></i>Updated daily</span>{stamp}', 1)
     ld = json.dumps(ld_graph(doc_title, desc, url, crumbs or crumbs_for(fn, title, url), updated, schema), ensure_ascii=False).replace("<", "\\u003c")
     cols = "".join(f'<div><h4>{h}</h4>{"".join(f"<a href={chr(34)}{rel(u)}{chr(34)}>{t}</a>" for u, t in ls)}</div>' for h, ls in FOOTCOLS)
