@@ -16,20 +16,20 @@
   "updated": "2026-10-21"
  },
  "best-16mm-paddles.html": {
-  "hash": "6b79ad0b1b048abc90dae8b96137264e053c1374c2b90ce68236034197f12324",
-  "updated": "2026-10-27"
+  "hash": "441523487c78e10e4798c39bbbb848429617eaab93e2bbc050c8b86025387437",
+  "updated": "2026-10-30"
  },
  "best-crbn-paddles.html": {
   "hash": "1fbe8b1301e5d4ff094bf0286695d5f06ca13e0989890a26e3e815b090fced3f",
   "updated": null
  },
  "best-elongated-paddles.html": {
-  "hash": "3bac7a3418eb973487dbf7db21fb2e568fda3d47af466d404bd89108346aeddd",
-  "updated": "2026-10-27"
+  "hash": "ebc94c5e24783e0cee3511f33a50e0e50168495d363195f010dd2d67e79398c8",
+  "updated": "2026-10-30"
  },
  "best-engage-paddles.html": {
-  "hash": "2c149178deadbb28e7fe41c3455189555297f2f33610ceb7ad2124f17982ab04",
-  "updated": null
+  "hash": "efb113cf056d64c326945042f5f40146559a4bc89ad61ad4720bf84c1c2e17bc",
+  "updated": "2026-10-30"
  },
  "best-gearbox-paddles.html": {
   "hash": "67fd91b6c9944b037e05e1577d4666a14174a03f2629f47b8821a2f496646e94",
@@ -44,8 +44,8 @@
   "updated": "2026-10-26"
  },
  "best-paddles-for-beginners.html": {
-  "hash": "eb3343b31f879a42fb1dfaec2b9f753cbceb9c4ddedf501d22d8e90f5deb3797",
-  "updated": "2026-10-26"
+  "hash": "32c320ad304dbd4aab8d5f2b4e22c17e1bad2a14b41a3e48d2a7cc799c022c7e",
+  "updated": "2026-10-30"
  },
  "best-paddles-for-control.html": {
   "hash": "6a3cfa069d579ce533cbedfde05a25c4f2a7123aa2ecc4336de09ca9a2b7f54a",
@@ -56,12 +56,12 @@
   "updated": "2026-10-26"
  },
  "best-paddles-for-tennis-players.html": {
-  "hash": "fc8658e38a2a78e5f58cf13d5b0d1dfc4c02a99bc02238d798b7fbaa2d334cf6",
-  "updated": "2026-10-27"
+  "hash": "b9127ef9b52bcde75d695e22ad2001bcd8d00a2a476ae2604e143ed6615d4b5e",
+  "updated": "2026-10-30"
  },
  "best-paddles-under-100.html": {
-  "hash": "11a558493b930f5bdb50053e1d090040b534743d536e0615cb0493a847efd192",
-  "updated": "2026-10-26"
+  "hash": "8def1aa0911044918e82507522b29a8aa69651785a8133b361c82edc19dcbef9",
+  "updated": "2026-10-30"
  },
  "best-paddletek-paddles.html": {
   "hash": "24b9a0060f35ac26d4ce084309142105a8371a27affec0307f738b8436e3a7bc",
@@ -92,12 +92,12 @@
   "updated": null
  },
  "deals.html": {
-  "hash": "213b14459720848e79b62d638d9beb44a4022a8ab71bc3fc43536a266a2da596",
-  "updated": "2026-10-26"
+  "hash": "4cb553444d05be1e7b299f9a573a6c44c0343885e0bcf4cdfd96544579ca24ee",
+  "updated": "2026-10-30"
  },
  "deals/black-friday-pickleball-deals-2026.html": {
-  "hash": "005fbccbc85747ed4e7bdaebfe9019f9eb01eebf5bee8751c0995a2c9b780664",
-  "updated": null
+  "hash": "707d04f8039d698ea36723621fbe5dfe633d80e648f61af00e3ed4c47c203ad3",
+  "updated": "2026-10-30"
  },
  "discount-codes.html": {
   "hash": "33e76993f26ca5761031ddc9719be1ca7d4669a2cc7ad4a385c0a73e55a55942",
@@ -620,8 +620,8 @@
   "updated": "2026-10-24"
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "f8218466fa4dfc6a4bf594a98d1a25debf326720b451266a886468190632ed6a",
-  "updated": "2026-10-29"
+  "hash": "7f6be3e6784dcc2db997cf37a85894c885daeff91d85466bbd6cf082f0e24b72",
+  "updated": "2026-10-30"
  },
  "guides/best-volair-paddles.html": {
   "hash": "ce07e1aac179850bd1f562980f8b933f764941b294c6b38b4d64a9c04c3fd1ce",
@@ -656,8 +656,8 @@
   "updated": null
  },
  "guides/pickleball-gift-guide-2026.html": {
-  "hash": "b9b4f8384043cc9b3c7b8e07b52b7692ccf93ecea08a2e8d3e3219e889d90a1e",
-  "updated": null
+  "hash": "de58c2f3f4b812b1c608e977392a3c39783ee30c544c682b14e4a73437e84f81",
+  "updated": "2026-10-30"
  },
  "guides/pickleball-paddles-under-30.html": {
   "hash": "b1e22d107d307a904ebb3e227d41e67362809be3d6e1c3a99172015696c336e9",
@@ -676,12 +676,12 @@
   "updated": "2026-10-29"
  },
  "index.html": {
-  "hash": "05c83c1a63f88d4ac6f86e72958459d15fa909521900d4d4508e44f578437064",
+  "hash": "b4a66265a1ad0161810bd071e6f9d8b5b00ebb702aed72a0c576ac13a5670b83",
   "updated": "2026-10-30"
  },
  "news.html": {
-  "hash": "d2634c42e5bb5ace8772e1fbe8fe2d444acec257d41a35ee31193c4af3bd6463",
-  "updated": "2026-10-29"
+  "hash": "fc436633f021bb4cd8dee2e7cc0abb30e34956f2d3a486bf608751f3fe196650",
+  "updated": "2026-10-30"
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
   "hash": "dc9f574209e8c863d95e7ae37e241d4b079958ca7bd42d9080d413718476a708",
@@ -704,8 +704,8 @@
   "updated": null
  },
  "paddle-engage-pursuit-pro2-elongated-16mm.html": {
-  "hash": "2fe2257f9a9f1aaba93820da0dc1ff379b3cd9308cdfca5b7055bb9f9067b37f",
-  "updated": null
+  "hash": "d4f308ac3593ffd4b9b68f96ba9c62a8ba7633f0da131bb1a856297b04bbe567",
+  "updated": "2026-10-30"
  },
  "paddle-engage-x2-elongated.html": {
   "hash": "2e8348a8589246b4edd7c02386113cc5bb0ff3e314e8745388dbe9df3aa602d0",
@@ -768,8 +768,8 @@
   "updated": null
  },
  "paddle-quiz.html": {
-  "hash": "fdc38b0768718116852c3773d116ee8f9fc85088ff99092631c083d4a256c3ca",
-  "updated": "2026-10-29"
+  "hash": "33d58182a61eda3e84c48f38eca5c3fd3744fb2585a554fac054ac2b60b3eeba",
+  "updated": "2026-10-30"
  },
  "paddle-selkirk-labs-project-boomstik.html": {
   "hash": "88263b548de0e3ff3d68748888f63cfe903e9031d035afc3c7c525aee6c6b551",
@@ -852,20 +852,20 @@
   "updated": "2026-10-24"
  },
  "paddles.html": {
-  "hash": "f05adb2d8ec1b3c8a57c1679c54df00adc4266299bce7b56175c8e30538174ab",
-  "updated": "2026-10-27"
+  "hash": "d59627e1ca39f44ffa15e921990c99a2319b4653d943e34759cbf375a6c47996",
+  "updated": "2026-10-30"
  },
  "podcasts.html": {
   "hash": "ae4cef045d39b590277c0028c331f4b88eca99371d41e45a6b59e4bd57ac3ff4",
   "updated": "2026-10-29"
  },
  "price-index.html": {
-  "hash": "133b04d28caae3af2e3685d67c4febbe59e43bf426e0b0ebffbc89c7fdf01ce8",
-  "updated": "2026-10-29"
+  "hash": "8843dabd7f31271db0e63c8ad97e95e614c0888c911c293f2ebdebd5a735bf7c",
+  "updated": "2026-10-30"
  },
  "price-tracker.html": {
-  "hash": "06cc77b5a1bb4eb9831b7bf9dd43a23ea1191d38e5f9db4b81c62a5bc2fb89a6",
-  "updated": "2026-10-29"
+  "hash": "dd11856f6722abcebc577b0dc2c5fa1c4e1b9a963c1a5df35ca0d1a4359714dc",
+  "updated": "2026-10-30"
  },
  "privacy.html": {
   "hash": "476c2da24522f4949cdaa422935b31e375f1b6fa3d61909fbdec502765955355",
@@ -880,8 +880,8 @@
   "updated": null
  },
  "reviews.html": {
-  "hash": "0e60bbc49e3f5228ac135710b3c9a0f3bcae69a6e377fc2372008b86a08a0f25",
-  "updated": "2026-10-29"
+  "hash": "810a39970b31515ad5569557943a885e9fe68ea3356ddd47e91f995a349ec24d",
+  "updated": "2026-10-30"
  },
  "science.html": {
   "hash": "7001631c91bc072710ca681a449260e1a1556118e901a42ce98ffe999f014f24",
@@ -916,16 +916,16 @@
   "updated": null
  },
  "vs-engage-axiom-elongated-durable-grit-vs-engage-pursuit-pro2-elongated-16mm.html": {
-  "hash": "4ae9d3fdb8fd283d6f936854151bad885d75f02af86f43178c51b7e8d3637c62",
-  "updated": null
+  "hash": "f24f7399658969d03e72e3f9e2395cd65f68511d66182c065d7b0cdc154500f8",
+  "updated": "2026-10-30"
  },
  "vs-engage-axiom-elongated-durable-grit-vs-engage-x2-elongated.html": {
   "hash": "303ea38f1d022a0cb2d8e3906bd4c4b918cabfebfc19d2781f1c99f4ae56bc1f",
   "updated": null
  },
  "vs-engage-pursuit-pro2-elongated-16mm-vs-engage-x2-elongated.html": {
-  "hash": "0136a3e5ed8315457ae46da56f046880abd2ed20613418b32813fd938ff3c4f0",
-  "updated": null
+  "hash": "3b630a9a066a03c53c9be1b598522a397655aac98fdd6811f834e449a77492f1",
+  "updated": "2026-10-30"
  },
  "vs-gearbox-gbx-power-elongated-gen-3-vs-gearbox-gx2-power-hybrid.html": {
   "hash": "19498d93a57a20a0f6e9fea2ed58c5cb56685165811de4dec1f98eb76695d000",
