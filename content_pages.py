@@ -911,73 +911,121 @@ def make(page, e, fmt, PP, cur, ph):
          "PPA Worlds 2026: the Opendoor Pickleball World Championships run Nov 2 to 8 at Brookhaven Country Club, Farmers Branch, TX, after the Oct 30 MLP Nations Cup kickoff. Schedule, parking and ticket prices.",
          fresh={"checked": CHECKED, "week": WEEK, "tix": TIX, "faq": w_faq},
          schema=[w_event, w_faq_ld])
-    # MLP Nations Cup page. Every fact below was read on the two linked pages on NC_CHECKED.
-    NC_CHECKED = "2026-10-26"
+    # MLP Nations Cup page. Every fact below was read on the linked official pages (and the cited preview) on NC_CHECKED.
+    # No results are listed until official MLP / United Pickleball pages post them.
+    NC_CHECKED = "2026-10-30"
     nc_checked = _dt.date.fromisoformat(NC_CHECKED).strftime("%B %-d, %Y")
     NC_UP = "https://worlds.unitedpickleball.com/nations-cup"
-    NC_DINK = "https://www.thedinkpickleball.com/mlp-nations-cup-2026-tournament-preview-everything-you-need-to-know/"
     NC_MLP = "https://www.majorleaguepickleball.co/"
-    NC_TEAMS = [
-        ("A", "Team USA", "Johnny Goldberg", "Anna Bright, Tyra Black, Kate Fahey, Ben Johns, CJ Klinger, Will Howells"),
-        ("A", "Team Canada", "Steve Deakin", "Victoria DiMuzio, Blaine Hovenier, Armaan Jiwa Mawji, Layne Sleeth, Ryan Torresin, Angie Walker"),
-        ("A", "Team Europe - West", "Chris Cantino", "Judit Castillo, Helena Jansen, Will MacKinnon, Theo Platel, Estee Widdershoven, DJ Young"),
-        ("A", "Team Asia Domestic", "Geoffrey Nguyen and Jeff Tsao (co-captains)", "Augie Ge, Milan Rane, Jonathan Truong, Zoey Wang, Jamie Wei, Len Yang"),
-        ("B", "Team Australia", "Sange Carter", "Sarah Burr, Chris Crouch, Sahra Dennehy, Mitch Hargreaves, Danni-Elle Townsend, George Wall"),
-        ("B", "Team Latin America", "Juan Benitez", "Nico Acevedo, Mari Humberg, Rafa Lenhard, Eric Oncins, Alexa Schull, Charlie Trevino"),
-        ("B", "Team Europe - East", "Caleb Garrard", "Andrei Daescu, Arwid Dahlin, Ivan Jakovljevic, Lina Padegimaite, Tina Pisnik, Daria Walczak"),
-        ("B", "Team Asia International", "Madeleine Lim", "Rika Fujiwara, Lingwei Kong, Jimmy Liong, Tama Shimabukuro, Jack Wong, Macy Ybañez"),
+    NC_MLP_ROSTERS = "https://majorleaguepickleball.co/news/groups-rosters-and-captains-announced-for-inaugural-mlp-nations-cup-hosted-at-brookhaven-country-club-oct-30-nov-1/"
+    NC_MLP_SCHED = "https://majorleaguepickleball.co/news/match-schedule-for-mlp-nations-cup-released/"
+    NC_PPA_WATCH = "https://www.ppatour.com/watch/"
+    NC_YAHOO = "https://sports.yahoo.com/articles/inaugural-major-league-nations-cup-124924340.html"
+    NC_X_USA = "https://x.com/MajorLeaguePB/status/2115883868964196757"
+    NC_X_COSTUME = "https://x.com/MajorLeaguePB/status/2115858704926908872"
+    NC_X_TIX = "https://x.com/MajorLeaguePB/status/2115843605742977322"
+    NC_TEAMS = [  # MLP roster announcement, September 24, 2026; Asia International swap per MLP / United Pickleball / Yahoo Sports
+        ("A", "USA", "Johnny Goldberg", "Tyra Black, Anna Bright, Kate Fahey, Ben Johns, CJ Klinger, Will Howells"),
+        ("A", "Canada", "Steve Deakin", "Victoria DiMuzio, Blaine Hovenier, Armaan Jiwa Mawji, Layne Sleeth, Ryan Torresin, Angie Walker"),
+        ("A", "Europe - West", "Chris Cantino", "Judit Castillo, Helena Jansen, Will MacKinnon, Theo Platel, Estee Widdershoven, DJ Young"),
+        ("A", "Asia Domestic", "Geoffrey Nguyen and Jeff Tsao", "Augie Ge, Milan Rane, Jonathan Truong, Zoey Wang, Jamie Wei, Len Yang"),
+        ("B", "Asia International", "Madeleine Lim", "Rika Fujiwara, Lingwei Kong, Jimmy Liong, Tama Shimabukuro, Jack Wong, Macy Ybañez"),
+        ("B", "Australia", "Sange Carter", "Sarah Burr, Chris Crouch, Sahra Dennehy, Mitch Hargreaves, Danni-Elle Townsend, George Wall"),
+        ("B", "Europe - East", "Caleb Garrard", "Andrei Daescu, Arwid Dahlin, Ivan Jakovljevic, Lina Padegimaite, Tina Pisnik, Daria Walczak"),
+        ("B", "Latin America", "Juan Manuel Benitez", "Nico Acevedo, Mari Humberg, Rafa Lenhard, Eric Oncins, Alexa Schull, Charlie Trevino"),
     ]
-    NC_TV = [("Fri Oct 30", "Round robin (six matches)", "10 AM CT / 11 AM ET"),
-             ("Sat Oct 31", "Round robin (six matches)", "10 AM CT / 11 AM ET"),
-             ("Sun Nov 1", "Semifinals", "10 AM CT / 11 AM ET"),
-             ("Sun Nov 1", "Championship match", "2 PM CT / 3 PM ET")]
+    # Match order: MLP schedule release (Sep 29). Start times: United Pickleball match list (CT), read NC_CHECKED.
+    NC_SCHED = [
+        ("Fri Oct 30", "10:00 AM", "Group B", "Australia vs Asia International"),
+        ("Fri Oct 30", "11:30 AM", "Group B", "Europe - East vs Latin America"),
+        ("Fri Oct 30", "1:00 PM", "Group A", "Europe - West vs Asia Domestic"),
+        ("Fri Oct 30", "2:30 PM", "Group A", "Canada vs USA"),
+        ("Fri Oct 30", "4:00 PM", "Group B", "Australia vs Europe - East"),
+        ("Fri Oct 30", "5:30 PM", "Group A", "Asia Domestic vs Canada"),
+        ("Sat Oct 31", "10:00 AM", "Group B", "Latin America vs Asia International"),
+        ("Sat Oct 31", "11:30 AM", "Group A", "USA vs Europe - West"),
+        ("Sat Oct 31", "1:00 PM", "Group B", "Asia International vs Europe - East"),
+        ("Sat Oct 31", "2:30 PM", "Group B", "Latin America vs Australia"),
+        ("Sat Oct 31", "4:00 PM", "Group A", "USA vs Asia Domestic"),
+        ("Sat Oct 31", "5:30 PM", "Group A", "Europe - West vs Canada"),
+        ("Sun Nov 1", "10:00 AM", "Semifinal 1", "Group A No. 2 vs Group B No. 1"),
+        ("Sun Nov 1", "11:30 AM", "Semifinal 2", "Group A No. 1 vs Group B No. 2"),
+        ("Sun Nov 1", "2:00 PM", "Final", "Semifinal winners"),
+    ]
+    NC_TV = [("Fri Oct 30", "Pool play", "10 AM – 7 PM CT", "11 AM – 8 PM ET"),
+             ("Sat Oct 31", "Pool play", "10 AM – 7 PM CT", "11 AM – 8 PM ET"),
+             ("Sun Nov 1", "Semifinals", "10 AM – 1 PM CT", "11 AM – 2 PM ET"),
+             ("Sun Nov 1", "Final", "2 – 3:30 PM CT", "3 – 4:30 PM ET")]
     nc_team_rows = "".join(f'<tr><td>{e(g)}</td><th scope="row">{e(t)}</th><td>{e(c)}</td><td>{e(r)}</td></tr>' for g, t, c, r in NC_TEAMS)
-    nc_tv_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(t)}</td></tr>' for d, w, t in NC_TV)
+    nc_sched_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(t)}</td><td>{e(s)}</td><td>{"<b>" + e(m) + "</b>" if "USA" in m else e(m)}</td></tr>' for d, t, s, m in NC_SCHED)
+    nc_tv_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(ct)}</td><td>{e(et)}</td></tr>' for d, w, ct, et in NC_TV)
     nc_faq = [
+        ("When is the MLP Nations Cup 2026?",
+         "Friday, October 30 to Sunday, November 1, 2026, at Brookhaven Country Club, 3334 Golfing Green Drive, Farmers Branch, Texas. Play starts at 10 a.m. CT each day, and the final is Sunday, November 1 at 2 p.m. CT."),
         ("How can I watch the MLP Nations Cup 2026?",
-         "United Pickleball says every match is available on PickleballTV and the PickleballTV app. Championship Court matches are livestreamed on PickleballTV, and Grandstand Court matches are on the PickleballTV app."),
-        ("What time does MLP Nations Cup coverage start?",
-         "The Dink lists coverage starting at 10 a.m. CT (11 a.m. ET) on Friday, Saturday and Sunday, with the championship match at 2 p.m. CT (3 p.m. ET) on Sunday, November 1."),
+         "MLP says all matches are available on PickleballTV and the PickleballTV app, and United Pickleball says Championship Court matches are livestreamed on PickleballTV. Coverage runs 10 a.m. to 7 p.m. CT on Friday and Saturday, with semifinals 10 a.m. to 1 p.m. CT and the final 2 to 3:30 p.m. CT on Sunday."),
         ("Who is on Team USA at the MLP Nations Cup?",
-         "The Dink lists captain Johnny Goldberg with Anna Bright, Tyra Black, Kate Fahey, Ben Johns, CJ Klinger and Will Howells."),
+         "MLP lists Tyra Black, Anna Bright, Kate Fahey, Ben Johns, CJ Klinger and Will Howells, with captain Johnny Goldberg. Anna Leigh Waters is not on the roster."),
+        ("When does Team USA play?",
+         "Team USA is in Group A. It plays Canada on Friday, October 30 at 2:30 p.m. CT, then Europe - West on Saturday at 11:30 a.m. CT and Asia Domestic on Saturday at 4 p.m. CT, per the official schedule."),
         ("How does the MLP Nations Cup format work?",
-         "Eight teams play the MLP coed team format in two groups of four. Each team plays three round-robin matches on Friday and Saturday. The top two in each group reach Sunday's semifinals, where each group winner plays the other group's runner-up, and the winners meet in the final."),
+         "Eight teams of six pros, 48 players in all, play MLP's coed team format in two groups of four. Each team plays the other three in its group on Friday and Saturday. The top two in each group reach Sunday's semifinals, where each group winner plays the other group's runner-up, and the winners meet in the final."),
         ("Are Nations Cup tickets the same as PPA Worlds tickets?",
-         "No. United Pickleball says Nations Cup tickets are sold separately from Worlds week, with sessions and current prices on Tixr. Doors open one hour before the first matches."),
+         "No. United Pickleball says Nations Cup tickets are sold separately from Worlds week, on Tixr. MLP said on October 29 that last-minute tickets start at $25. Doors open one hour before the first matches."),
     ]
     nc_faq_html, nc_faq_ld = faq(nc_faq)
-    nc_event = {"@type": "SportsEvent", "name": "MLP Nations Cup 2026", "startDate": "2026-10-30", "endDate": "2026-11-01",
-                "url": NC_UP, "organizer": {"@type": "Organization", "name": "Major League Pickleball"},
-                "location": {"@type": "Place", "name": "Brookhaven Country Club",
-                             "address": {"@type": "PostalAddress", "addressLocality": "Farmers Branch", "addressRegion": "TX", "postalCode": "75234", "addressCountry": "US"}},
+    nc_place = {"@type": "Place", "name": "Brookhaven Country Club",
+                "address": {"@type": "PostalAddress", "streetAddress": "3334 Golfing Green Drive", "addressLocality": "Farmers Branch",
+                            "addressRegion": "TX", "postalCode": "75234", "addressCountry": "US"}}
+    nc_event = {"@type": "SportsEvent", "name": "MLP Nations Cup 2026", "startDate": "2026-10-30T10:00:00-05:00", "endDate": "2026-11-01T15:30:00-05:00",
+                "description": "The inaugural MLP Nations Cup: eight regional pro teams play Major League Pickleball's coed team format, with group play October 30-31 and semifinals and the final on November 1, as the kickoff to the Opendoor Pickleball World Championships.",
+                "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "sport": "Pickleball", "url": NC_UP, "location": nc_place,
+                "organizer": {"@type": "SportsOrganization", "name": "Major League Pickleball", "url": NC_MLP},
+                "competitor": [{"@type": "SportsTeam", "name": f"Team {t}"} for _, t, _, _ in NC_TEAMS],
                 "offers": {"@type": "Offer", "url": NC_UP}}
-    nations = f'''<h1>MLP Nations Cup 2026: teams, format and how to watch</h1>
-<p class="meta">From the official United Pickleball Nations Cup page and The Dink's October 26 preview. Checked {nc_checked}. Rosters and times can change, so confirm on the official pages.</p>
+    nations = f'''<h1>MLP Nations Cup 2026: schedule, teams and how to watch</h1>
+<p class="meta">Facts checked {nc_checked} against MLP's official roster and schedule announcements, the United Pickleball Nations Cup page and the PPA Tour watch page. All times Central (CT) unless noted. Times and rosters can change, so confirm on the official pages.</p>
 <h2>The basics</h2>
-<p>The inaugural <b>MLP Nations Cup</b> runs <b>Friday, October 30 to Sunday, November 1, 2026</b> at <b>Brookhaven Country Club in Farmers Branch, Texas</b>, in the Dallas area. {ext(NC_UP, "United Pickleball")} calls it the official kickoff to the Opendoor Pickleball World Championships, which start November 2 at the same venue. Eight regional teams and 48 pros play Major League Pickleball's coed team format.</p>
+<p>The inaugural <b>MLP Nations Cup</b> runs <b>Friday, October 30 to Sunday, November 1, 2026</b> at <b>Brookhaven Country Club</b>, 3334 Golfing Green Drive, <b>Farmers Branch, Texas</b>, in the Dallas area. {ext(NC_UP, "United Pickleball")} calls it the official kickoff to the Opendoor Pickleball World Championships. Eight regional teams of six pros, <b>48 players</b> in all, play Major League Pickleball's coed team format. Group play is Friday and Saturday, and the <b>final is Sunday, November 1 at 2 PM CT</b>.</p>
+<p>Results: play starts at 10 AM CT on October 30. We only add scores once MLP or United Pickleball posts them. For live scores and standings, follow {ext(NC_MLP, "majorleaguepickleball.co")} and the {ext(NC_UP, "United Pickleball standings")}.</p>
+<h2>Schedule</h2>
+<p>Every match is on Championship Court. Match order is from {ext(NC_MLP_SCHED, "MLP's schedule release")}, and start times are from the {ext(NC_UP, "United Pickleball match list")}. Team USA matches are in bold.</p>
+<div class="tbl"><table><thead><tr><th>Day</th><th>Start (CT)</th><th>Round</th><th>Match</th></tr></thead><tbody>{nc_sched_rows}</tbody></table></div>
 <h2>How to watch</h2>
-<p>Every match is available on <b>PickleballTV</b> and the <b>PickleballTV app</b>, per United Pickleball. Championship Court is livestreamed on PickleballTV, and Grandstand Court matches are on the app. These are the coverage start times listed by {ext(NC_DINK, "The Dink")}:</p>
-<div class="tbl"><table><thead><tr><th>Day</th><th>What's on</th><th>Coverage starts</th></tr></thead><tbody>{nc_tv_rows}</tbody></table></div>
-<p>Live scores and standings are posted on {ext(NC_MLP, "majorleaguepickleball.co")} during the event. United Pickleball says more broadcast details are still to be announced.</p>
+<p>MLP says <b>all matches are available on PickleballTV and the PickleballTV app</b>. United Pickleball says Championship Court matches are livestreamed on PickleballTV. These are the coverage windows from {ext(NC_UP, "United Pickleball")} (CT) and the {ext(NC_PPA_WATCH, "PPA Tour watch page")} (ET):</p>
+<div class="tbl"><table><thead><tr><th>Day</th><th>Coverage</th><th>Central</th><th>Eastern</th></tr></thead><tbody>{nc_tv_rows}</tbody></table></div>
+<p>Neither page lists any other TV broadcast, such as Tennis Channel, for the Nations Cup. For PickleballTV free vs paid and the rest of Worlds week, see <a href="../guides/how-to-watch-pro-pickleball.html">how to watch pro pickleball</a>.</p>
+<h2>Team USA</h2>
+<p>Team USA plays in Group A, with captain <b>Johnny Goldberg</b>. MLP's roster: <b>Ben Johns, CJ Klinger, Will Howells, Tyra Black, Anna Bright and Kate Fahey</b>. {ext(NC_X_USA, "MLP notes")} that St. Louis Shock teammates Bright and Fahey reunite on the USA squad. {ext(NC_YAHOO, "Yahoo Sports")} points out that <b>Anna Leigh Waters</b> is not on the team.</p>
+<ul><li>Fri Oct 30, 2:30 PM CT: USA vs Canada</li><li>Sat Oct 31, 11:30 AM CT: USA vs Europe - West</li><li>Sat Oct 31, 4:00 PM CT: USA vs Asia Domestic</li></ul>
 <h2>Format</h2>
-<p>The eight teams are split into two groups of four. Each team plays three round-robin matches across Friday and Saturday. The top two in each group advance to Sunday's single-elimination bracket: the Group A winner plays the Group B runner-up, the Group B winner plays the Group A runner-up, and the two winners meet in the final for the first Nations Cup title.</p>
+<p>The eight teams are split into two groups of four. Each team plays the other three in its group across Friday and Saturday. The top two in each group advance to Sunday's single-elimination bracket. Semifinal 1 is the Group A runner-up against the Group B winner, and Semifinal 2 is the Group A winner against the Group B runner-up. The two winners meet in the final for the first Nations Cup title.</p>
 <h2>Teams and rosters</h2>
-<p>Rosters as listed by The Dink on {nc_checked}. It notes that Tama Shimabukuro replaced Hien Truong on Asia International in an October 20 update.</p>
+<p>Groups, captains and players are from {ext(NC_MLP_ROSTERS, "MLP's September 24 roster announcement")}. Tama Shimabukuro has since replaced Hien Truong on Asia International, per the United Pickleball team list and Yahoo Sports. United Pickleball's team list (read {nc_checked}) also omits Ryan Torresin for Canada and Sarah Burr and Mitch Hargreaves for Australia. MLP hasn't announced a change, so check the official pages before match day.</p>
 <div class="tbl"><table><thead><tr><th>Group</th><th>Team</th><th>Captain</th><th>Players</th></tr></thead><tbody>{nc_team_rows}</tbody></table></div>
 <p>Want to see what the pros play? The <a href="../pro-paddles.html">pro paddles page</a> lists each player's paddle from their official PPA profile.</p>
 <h2>Going in person</h2>
-<p>Nations Cup tickets are sold separately from Worlds week, with sessions and current prices on Tixr. United Pickleball lists a Courtside Pass (bleacher seating, first come first served) and a VIP Pass. Doors open one hour before the first matches, outside food and drink are not allowed, and filming matches is not permitted without MLP's written approval. For parking, shuttles and the rest of the week, see our <a href="ppa-worlds-2026.html">PPA Worlds 2026 guide</a>.</p>
+<p>Nations Cup tickets are sold separately from Worlds week, on Tixr. {ext(NC_X_TIX, "MLP said on October 29")} that last-minute tickets start at $25. United Pickleball lists a Courtside Pass (bleacher seating, first come, first served) and a VIP Pass. Doors open one hour before the first matches. Outside food and drink aren't allowed, and filming matches isn't permitted without MLP's written approval. On Saturday, October 31, {ext(NC_X_COSTUME, "MLP is holding a Halloween costume contest")} for fans, with prizes for the top 3 from DoorDash and VIP ticket upgrades for 10 more fans.</p>
+<h2>Next up: PPA Worlds, November 2 to 8</h2>
+<p>The PPA Tour's Opendoor Pickleball World Championships follow at the same venue from <b>November 2 to 8</b>, per United Pickleball. See our <a href="ppa-worlds-2026.html">PPA Worlds 2026 guide</a> for the schedule, parking and tickets.</p>
 <h2>Gear before you go</h2>
 {money_links()}
 {nc_faq_html}
-{sources([("United Pickleball: MLP Nations Cup", NC_UP, f"dates, teams, streaming, tickets, checked {nc_checked}"),
-          ("The Dink: MLP Nations Cup 2026 preview", NC_DINK, "rosters, groups, format, broadcast times; by Erik Tice, October 26, 2026"),
+{sources([("Major League Pickleball: Groups, rosters and captains announced", NC_MLP_ROSTERS, "groups, captains, rosters, format; September 24, 2026"),
+          ("Major League Pickleball: Match schedule released", NC_MLP_SCHED, "match order, Sunday times, PickleballTV; September 29, 2026"),
+          ("United Pickleball: MLP Nations Cup", NC_UP, f"venue, match times, coverage windows, team list, tickets; read {nc_checked}"),
+          ("PPA Tour: Watch pro pickleball", NC_PPA_WATCH, f"PickleballTV windows in ET; read {nc_checked}"),
+          ("Yahoo Sports (Forbes): Inaugural Major League Nations Cup kicks off Worlds week", NC_YAHOO, "rosters, roster changes, Anna Leigh Waters not playing; by Todd Boss, October 28, 2026"),
+          ("@MajorLeaguePB on X: Bright and Fahey reunite for USA", NC_X_USA, "October 29, 2026"),
+          ("@MajorLeaguePB on X: tickets from $25", NC_X_TIX, "October 29, 2026"),
+          ("@MajorLeaguePB on X: Halloween costume contest", NC_X_COSTUME, "October 29, 2026"),
           ("Major League Pickleball", NC_MLP, "live scores and standings")])}
-<p><a href="../tournaments.html">All tournaments</a> · <a href="ppa-worlds-2026.html">PPA Worlds 2026</a></p>'''
-    page("events/mlp-nations-cup-2026.html", "MLP Nations Cup 2026: teams, rosters, format and how to watch", nations,
-         "How to watch the MLP Nations Cup 2026 (Oct 30 to Nov 1, Farmers Branch, TX): PickleballTV times in CT and ET, all 8 team rosters including Team USA, groups and format.",
-         fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "tv": NC_TV, "faq": nc_faq},
-         schema=[nc_event, nc_faq_ld])
+<p><a href="../tournaments.html">All tournaments</a> · <a href="ppa-worlds-2026.html">PPA Worlds 2026</a> · <a href="../guides/how-to-watch-pro-pickleball.html">How to watch pro pickleball</a></p>'''
+    page("events/mlp-nations-cup-2026.html", "MLP Nations Cup 2026: Schedule, Teams & How to Watch", nations,
+         "MLP Nations Cup 2026 (Oct 30-Nov 1, Farmers Branch, TX): full match schedule in CT, PickleballTV times, all 8 rosters incl. Team USA, and format.",
+         fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "faq": nc_faq},
+         schema=[nc_event, nc_faq_ld], raw_title=True)
     # USA Pickleball Nationals page. Every fact below was read on the official Nationals pages on UN_CHECKED.
     UN_CHECKED = "2026-10-27"
     un_checked = _dt.date.fromisoformat(UN_CHECKED).strftime("%B %-d, %Y")
