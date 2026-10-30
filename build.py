@@ -601,6 +601,7 @@ def build():
          fresh=[{k: t.get(k) for k in ("name", "start", "end", "location", "link", "tickets", "source")} for t in T["items"]],
          schema=[sports_event(t) for t in T["items"]])
     for t in T["items"]:
+        if event_fn(t) == "events/opendoor-pickleball-world-championships.html": continue  # full page built in content_pages.py
         bits = []
         if t.get("source"): bits.append(f'<p class="meta">{e(t["source"])}</p>')
         when = " – ".join(fmt(t[k]) for k in ("start", "end") if t.get(k))
