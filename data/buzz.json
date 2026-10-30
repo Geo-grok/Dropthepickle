@@ -1,9 +1,40 @@
 {
- "updated": "2026-10-30T06:06-05:00",
+ "updated": "2026-10-30T13:25-05:00",
  "date": "2026-10-30",
  "source_file": "dtp-newsroom/buzz-2026-10-30.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "MLP Nations Cup day 1: Australia beats Asia International 3-1 in the opener",
+   "summary": "Rain moved the first-ever MLP Nations Cup match indoors in Farmers Branch, Texas, today, Friday, Oct. 30. Australia won it 3-1 over Asia International in Group B: 11-9 in women's doubles, 11-3 and 11-7 in the two mixed doubles games, while Jack Wong and Jimmy Liong took men's doubles 14-12 for Asia International. The rest of day 1 (Europe - East vs Latin America, Europe - West vs Asia Domestic, Canada vs Team USA, Australia vs Europe - East and Asia Domestic vs Canada) was in progress or still to play as of 1:25 p.m. CT; results pending. Group play finishes Saturday, including USA vs Europe - West at 11:30 a.m. CT and USA vs Asia Domestic at 4 p.m. CT.",
+   "status": "confirmed",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "label": "United Pickleball: Nations Cup match list and standings (official MLP results)",
+     "url": "https://worlds.unitedpickleball.com/nations-cup"
+    },
+    {
+     "label": "@MajorLeaguePB: Australia took the match; Wong and Liong in men's doubles",
+     "url": "https://x.com/MajorLeaguePB/status/2116218781177676202"
+    },
+    {
+     "label": "@MajorLeaguePB: rain moves first match indoors",
+     "url": "https://x.com/MajorLeaguePB/status/2116184782254334407"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2116218781177676202"
+   ],
+   "social_angle": "Day 1 scoreboard post: Australia opens 3-1, Asia International's Wong/Liong steal men's doubles. 'Canada vs USA up next, who you got?' Tag MLP.",
+   "tags": [
+    "MLP",
+    "Nations Cup",
+    "Results",
+    "Australia",
+    "Dallas"
+   ]
+  },
   {
    "title": "MLP Nations Cup starts today in Dallas: Bright and Fahey reunite for Team USA, costume contest Saturday",
    "summary": "The inaugural MLP Nations Cup opens today, Friday, Oct. 30, at Brookhaven Country Club in Farmers Branch, Texas, and runs through Sunday, Nov. 1, with group play Friday and Saturday and an elimination bracket Sunday. MLP says Anna Bright and Kate Fahey reunite on the USA squad. On Saturday, MLP is holding a Halloween costume contest for fans, with prizes for the top 3 courtesy of DoorDash and VIP ticket upgrades for 10 more fans. MLP says last-minute tickets start at $25.",

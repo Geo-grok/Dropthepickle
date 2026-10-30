@@ -973,7 +973,7 @@ def make(page, e, fmt, PP, cur, ph):
          fresh={"checked": OW_CHECKED, "days": OW_DAYS, "tix": OW_TIX, "champs": OW_CHAMPS, "faq": ow_faq, "event": ow_event},
          schema=[ow_event, ow_faq_ld], raw_title=True)
     # MLP Nations Cup page. Every fact below was read on the linked official pages (and the cited preview) on NC_CHECKED.
-    # No results are listed until official MLP / United Pickleball pages post them.
+    # Results are listed only once official MLP / United Pickleball pages post them as final.
     NC_CHECKED = "2026-10-30"
     nc_checked = _dt.date.fromisoformat(NC_CHECKED).strftime("%B %-d, %Y")
     NC_UP = "https://worlds.unitedpickleball.com/nations-cup"
@@ -985,6 +985,7 @@ def make(page, e, fmt, PP, cur, ph):
     NC_X_USA = "https://x.com/MajorLeaguePB/status/2115883868964196757"
     NC_X_COSTUME = "https://x.com/MajorLeaguePB/status/2115858704926908872"
     NC_X_TIX = "https://x.com/MajorLeaguePB/status/2115843605742977322"
+    NC_X_RAIN = "https://x.com/MajorLeaguePB/status/2116184782254334407"
     NC_TEAMS = [  # MLP roster announcement, September 24, 2026; Asia International swap per MLP / United Pickleball / Yahoo Sports
         ("A", "USA", "Johnny Goldberg", "Tyra Black, Anna Bright, Kate Fahey, Ben Johns, CJ Klinger, Will Howells"),
         ("A", "Canada", "Steve Deakin", "Victoria DiMuzio, Blaine Hovenier, Armaan Jiwa Mawji, Layne Sleeth, Ryan Torresin, Angie Walker"),
@@ -1013,6 +1014,14 @@ def make(page, e, fmt, PP, cur, ph):
         ("Sun Nov 1", "11:30 AM", "Semifinal 2", "Group A No. 1 vs Group B No. 2"),
         ("Sun Nov 1", "2:00 PM", "Final", "Semifinal winners"),
     ]
+    # Day 1 results: only matches marked Final on the United Pickleball match list (official MLP results) are listed.
+    NC_RESULTS_AS_OF = "1:25 PM"
+    NC_RESULTS = [  # (group, team1, team2, [(game, t1, t2), ...], winner, games won/lost)
+        ("Group B", "Australia", "Asia International", [("W", 11, 9), ("M", 12, 14), ("MX1", 11, 3), ("MX2", 11, 7)], "Australia", "3-1"),
+    ]
+    NC_PENDING = ["Europe - East vs Latin America (Group B, in progress)", "Europe - West vs Asia Domestic (Group A)", "Canada vs USA (Group A)", "Australia vs Europe - East (Group B)", "Asia Domestic vs Canada (Group A)"]
+    NC_STANDINGS_NOTE = "Official standings after the first match: Group B is led by Australia (1-0, +2 games, +12 points), with Asia International 0-1 and Latin America and Europe - East yet to finish a match. No Group A match had finished. We will update the standings as official results come in."
+    NC_SAT = [r for r in NC_SCHED if r[0] == "Sat Oct 31"]
     NC_TV = [("Fri Oct 30", "Pool play", "10 AM – 7 PM CT", "11 AM – 8 PM ET"),
              ("Sat Oct 31", "Pool play", "10 AM – 7 PM CT", "11 AM – 8 PM ET"),
              ("Sun Nov 1", "Semifinals", "10 AM – 1 PM CT", "11 AM – 2 PM ET"),
@@ -1020,6 +1029,8 @@ def make(page, e, fmt, PP, cur, ph):
     nc_team_rows = "".join(f'<tr><td>{e(g)}</td><th scope="row">{e(t)}</th><td>{e(c)}</td><td>{e(r)}</td></tr>' for g, t, c, r in NC_TEAMS)
     nc_sched_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(t)}</td><td>{e(s)}</td><td>{"<b>" + e(m) + "</b>" if "USA" in m else e(m)}</td></tr>' for d, t, s, m in NC_SCHED)
     nc_tv_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(ct)}</td><td>{e(et)}</td></tr>' for d, w, ct, et in NC_TV)
+    nc_res_rows = "".join(f'<tr><td>{e(g)}</td><th scope="row">{e(w)} def. {e(b if w == a else a)}, {e(gs)}</th><td>{e(", ".join(f"{n} {x}-{y}" for n, x, y in games))}</td></tr>' for g, a, b, games, w, gs in NC_RESULTS)
+    nc_sat_rows = "".join(f'<li>{e(t)} CT ({e(s)}): {"<b>" + e(m) + "</b>" if "USA" in m else e(m)}</li>' for _, t, s, m in NC_SAT)
     nc_faq = [
         ("When is the MLP Nations Cup 2026?",
          "Friday, October 30 to Sunday, November 1, 2026, at Brookhaven Country Club, 3334 Golfing Green Drive, Farmers Branch, Texas. Play starts at 10 a.m. CT each day, and the final is Sunday, November 1 at 2 p.m. CT."),
@@ -1049,7 +1060,16 @@ def make(page, e, fmt, PP, cur, ph):
 <p class="meta">Facts checked {nc_checked} against MLP's official roster and schedule announcements, the United Pickleball Nations Cup page and the PPA Tour watch page. All times Central (CT) unless noted. Times and rosters can change, so confirm on the official pages.</p>
 <h2>The basics</h2>
 <p>The inaugural <b>MLP Nations Cup</b> runs <b>Friday, October 30 to Sunday, November 1, 2026</b> at <b>Brookhaven Country Club</b>, 3334 Golfing Green Drive, <b>Farmers Branch, Texas</b>, in the Dallas area. {ext(NC_UP, "United Pickleball")} calls it the official kickoff to the Opendoor Pickleball World Championships. Eight regional teams of six pros, <b>48 players</b> in all, play Major League Pickleball's coed team format. Group play is Friday and Saturday, and the <b>final is Sunday, November 1 at 2 PM CT</b>.</p>
-<p>Results: play starts at 10 AM CT on October 30. We only add scores once MLP or United Pickleball posts them. For live scores and standings, follow {ext(NC_MLP, "majorleaguepickleball.co")} and the {ext(NC_UP, "United Pickleball standings")}.</p>
+<h2>Day 1 results (Friday, October 30)</h2>
+<p class="meta">Results as of {e(NC_RESULTS_AS_OF)} CT; more to come. Scores are from the official MLP results on the {ext(NC_UP, "United Pickleball Nations Cup match list")}. Rain moved Friday's opener indoors with a {ext(NC_X_RAIN, "10:30 AM CT target start")}, so later start times may shift. Game key: W women's doubles, M men's doubles, MX mixed doubles, DB DreamBreaker.</p>
+<div class="tbl"><table><thead><tr><th>Group</th><th>Result</th><th>Game scores</th></tr></thead><tbody>{nc_res_rows}</tbody></table></div>
+<p>Result pending: {e("; ".join(NC_PENDING)) if NC_PENDING else "none"}.</p>
+<h3>Group standings</h3>
+<p>{NC_STANDINGS_NOTE} For live scores and standings, follow {ext(NC_MLP, "majorleaguepickleball.co")} and the {ext(NC_UP, "United Pickleball standings")}.</p>
+<h2>Up next Saturday (October 31)</h2>
+<p>Group play finishes Saturday, and the top two in each group reach Sunday's semifinals. Scheduled start times (CT), per the official schedule; Team USA in bold:</p>
+<ul>{nc_sat_rows}</ul>
+<p>Saturday is also MLP's Halloween costume contest for fans (see Going in person below).</p>
 <h2>Schedule</h2>
 <p>Every match is on Championship Court. Match order is from {ext(NC_MLP_SCHED, "MLP's schedule release")}, and start times are from the {ext(NC_UP, "United Pickleball match list")}. Team USA matches are in bold.</p>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Start (CT)</th><th>Round</th><th>Match</th></tr></thead><tbody>{nc_sched_rows}</tbody></table></div>
@@ -1081,11 +1101,13 @@ def make(page, e, fmt, PP, cur, ph):
           ("@MajorLeaguePB on X: Bright and Fahey reunite for USA", NC_X_USA, "October 29, 2026"),
           ("@MajorLeaguePB on X: tickets from $25", NC_X_TIX, "October 29, 2026"),
           ("@MajorLeaguePB on X: Halloween costume contest", NC_X_COSTUME, "October 29, 2026"),
+          ("@MajorLeaguePB on X: rain moves first match indoors", NC_X_RAIN, "October 30, 2026"),
+          ("United Pickleball: Nations Cup match list and pool standings (official MLP results)", NC_UP, f"day 1 scores and standings; read October 30, 2026, {NC_RESULTS_AS_OF} CT"),
           ("Major League Pickleball", NC_MLP, "live scores and standings")])}
 <p><a href="../tournaments.html">All tournaments</a> · <a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> · <a href="../guides/how-to-watch-pro-pickleball.html">How to watch pro pickleball</a></p>'''
     page("events/mlp-nations-cup-2026.html", "MLP Nations Cup 2026: Schedule, Teams & How to Watch", nations,
          "MLP Nations Cup 2026 (Oct 30-Nov 1, Farmers Branch, TX): full match schedule in CT, PickleballTV times, all 8 rosters incl. Team USA, and format.",
-         fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "faq": nc_faq},
+         fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "results": NC_RESULTS, "faq": nc_faq},
          schema=[nc_event, nc_faq_ld], raw_title=True)
     # USA Pickleball Nationals page. Every fact below was read on the official Nationals pages on UN_CHECKED.
     UN_CHECKED = "2026-10-27"
