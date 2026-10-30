@@ -250,6 +250,42 @@ CSS += """
 @media(min-width:760px){.evwk-in{grid-template-columns:auto 1fr auto;align-items:center;gap:12px}.evwk-ev{flex-direction:row;gap:8px;align-items:center;justify-content:flex-start;height:44px}}
 """
 
+# Mobile perf pass (2026-10-31): metric-matched local fallbacks (widths measured vs Arial/Arimo; caps text for the display faces) so the Google-font swap doesn't shift text (CLS),
+# thumb-size tap targets and no sub-16px labels on phones. Sizes only grow; no copy changes.
+CSS += """
+@font-face{font-family:"Inter Fallback";font-weight:100 550;src:local("Arial"),local("ArialMT"),local("Helvetica"),local("Arimo"),local("Roboto");size-adjust:107.26%;ascent-override:90.32%;descent-override:22.49%;line-gap-override:0%}
+@font-face{font-family:"Inter Fallback";font-weight:551 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Arimo Bold"),local("Roboto Bold"),local("Arial");size-adjust:103.4%;ascent-override:93.7%;descent-override:23.3%;line-gap-override:0%}
+@font-face{font-family:"Oswald Fallback";font-weight:100 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Arimo Bold"),local("Roboto Bold"),local("Arial");size-adjust:79.53%;ascent-override:150%;descent-override:36.34%;line-gap-override:0%}
+@font-face{font-family:"Bebas Neue Fallback";font-weight:100 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Arimo Bold"),local("Roboto Bold"),local("Arial");size-adjust:57.29%;ascent-override:157.09%;descent-override:52.36%;line-gap-override:0%}
+@font-face{font-family:"Anton Fallback";font-weight:100 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Arimo Bold"),local("Roboto Bold"),local("Arial");size-adjust:69.8%;ascent-override:168.52%;descent-override:47.15%;line-gap-override:0%}
+.spot img{height:auto}
+@media(max-width:720px){
+.meta,.tag,.badge,.seemore,.pagehead .meta,.ccard .cmeta{font-size:1rem}
+.seemore,.topwrap .seemore{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+.ccard .cshop,.owncode .cshop{display:inline-flex;align-items:center;min-height:44px}
+.owncode .owntag{font-size:1rem}.owncode .owndisc{font-size:1rem}
+.evwk-h{font-size:16px;line-height:20px;height:20px}
+.faq summary{display:flex;align-items:center;min-height:44px}
+.twitter-tweet>a{display:inline-flex;align-items:center;min-height:44px}
+.card h3 a,.top5 .bd h3 a,.card div.meta a{display:inline-block;padding:12px 0;margin:-12px 0}  /* 44px+ hit area, same layout */
+}
+/* <=360px phones: the header row (wordmark + menu + Join free) is ~375px wide; drop the small header mascot so Join free stays on screen. Text keeps its size. */
+@media(max-width:360px){.bar>.logo picture,.bar>.logo img{display:none}.bar>.logo{min-height:44px;align-items:center}.bar{padding-left:6px;padding-right:6px}}
+"""
+_FB = {"Inter": "Inter Fallback", "Oswald": "Oswald Fallback", '"Bebas Neue"': "Bebas Neue Fallback", "Anton": "Anton Fallback"}
+def _with_fallbacks(css):
+    # insert the metric-matched fallback right after each web font in every font/font-family stack
+    for fam, fb in _FB.items():
+        css = re.sub(r'(font(?:-family)?:[^;{}]*?(?<![\w"-])' + re.escape(fam) + r')(?=\s*,)', lambda m: m.group(1) + f',"{fb}"', css)
+    return css
+CSS = _with_fallbacks(CSS)
+# Buzz: load X's embed script only when the first embed nears the viewport (or on first interaction), not at page load (TBT).
+XLAZY = ("<script>(function(){var d=0;function go(){if(d)return;d=1;var s=document.createElement('script');"
+         "s.src='https://platform.twitter.com/widgets.js';s.async=true;s.charset='utf-8';document.body.appendChild(s)}"
+         "var t=document.querySelector('.twitter-tweet');if(!t)return;if('IntersectionObserver'in window){var o=new IntersectionObserver(function(es){"
+         "es.forEach(function(x){if(x.isIntersecting){o.disconnect();go()}})},{rootMargin:'800px 0px'});o.observe(t)}else go();"
+         "['scroll','touchstart','keydown'].forEach(function(ev){addEventListener(ev,go,{once:true,passive:true})})})()</script>")
+
 # Always-visible primary tabs (mobile-first). Codes uses the clean /discount-codes URL.
 TABS = [("buzz.html","Buzz"),("deals.html","Deals"),("/discount-codes","Codes"),("paddles.html","Paddles"),("guides.html","Guides"),("news.html","News")]
 TAB_ON = {"/discount-codes": ("discount-codes.html",), "guides.html": ("guides.html", "guides/"), "paddles.html": ("paddles.html", "paddle-")}
@@ -649,7 +685,7 @@ def build():
         return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)} {tags}</div><h3>{e(b["title"])}</h3><div class="meta">{fmt(b.get("date"))}</div><p>{e(b["summary"])}</p>'
                 f'<p class="srcs"><b>Sources:</b> {srcs}</p>{f"<div class={chr(34)}buzzx{chr(34)}>{emb}</div>" if emb else ""}</div>')
     BUZZ_TEASER = (f'<h2>Pickleball Buzz <a class="seemore" href="buzz.html">All buzz →</a></h2><div class="grid">{"".join(bcard(b, False) for b in B.get("items", [])[:3])}</div>') if B.get("items") else ""
-    page("buzz.html", "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p>{nudge("buzz", "buzz", SIGNUP_TITLE, SIGNUP_BLURB)}{gift_pages.holiday_note("buzz")}<div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div>{nudge("buzz-bottom", "buzzb", "Like the buzz? Get codes by email", SIGNUP_BLURB)}{NUDGEJS}<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
+    page("buzz.html", "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p>{nudge("buzz", "buzz", SIGNUP_TITLE, SIGNUP_BLURB)}{gift_pages.holiday_note("buzz")}<div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div>{nudge("buzz-bottom", "buzzb", "Like the buzz? Get codes by email", SIGNUP_BLURB)}{NUDGEJS}{XLAZY}',
          "Pickleball Buzz: what the pickleball world is talking about, with confirmed stories and clearly labeled rumors, each linked to its sources.",
          fresh={"updated": B.get("updated"), "items": [(b.get("title"), b.get("status"), b.get("date")) for b in B.get("items", [])]})
     rows = "".join(f'<tr><td><a href="{e(p["profile"])}" target="_blank" rel="noopener"><b>{e(p["name"])}</b></a></td><td>{e(p["country"])}</td><td>{e(p["paddle"])}</td><td>{" ".join(f"<a href={chr(34)}{e(u)}{chr(34)} target=_blank rel=noopener>{k}</a>" for k,u in p["socials"].items())}</td></tr>' for p in P.get("pros", []))
