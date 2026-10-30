@@ -1,9 +1,207 @@
 {
- "updated": "2026-10-29T06:08-05:00",
- "date": "2026-10-29",
- "source_file": "dtp-newsroom/buzz-2026-10-29.json",
+ "updated": "2026-10-30T06:06-05:00",
+ "date": "2026-10-30",
+ "source_file": "dtp-newsroom/buzz-2026-10-30.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "MLP Nations Cup starts today in Dallas: Bright and Fahey reunite for Team USA, costume contest Saturday",
+   "summary": "The inaugural MLP Nations Cup opens today, Friday, Oct. 30, at Brookhaven Country Club in Farmers Branch, Texas, and runs through Sunday, Nov. 1, with group play Friday and Saturday and an elimination bracket Sunday. MLP says Anna Bright and Kate Fahey reunite on the USA squad. On Saturday, MLP is holding a Halloween costume contest for fans, with prizes for the top 3 courtesy of DoorDash and VIP ticket upgrades for 10 more fans. MLP says last-minute tickets start at $25.",
+   "status": "confirmed",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "label": "@MajorLeaguePB: Bright and Fahey reunite on Team USA",
+     "url": "https://x.com/MajorLeaguePB/status/2115883868964196757"
+    },
+    {
+     "label": "@MajorLeaguePB: Saturday Halloween costume contest",
+     "url": "https://x.com/MajorLeaguePB/status/2115858704926908872"
+    },
+    {
+     "label": "@MajorLeaguePB: 1 day out, tickets from $25",
+     "url": "https://x.com/MajorLeaguePB/status/2115843605742977322"
+    },
+    {
+     "label": "MLP: Match schedule for MLP Nations Cup released",
+     "url": "https://majorleaguepickleball.co/news/match-schedule-for-mlp-nations-cup-released/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2115883868964196757"
+   ],
+   "social_angle": "'Day 1 is here' post: Bright/Fahey reunion plus 'Who wins it?' and the costume contest for Dallas fans. Tag MLP.",
+   "tags": [
+    "MLP",
+    "Nations Cup",
+    "Team USA",
+    "Dallas",
+    "How to watch"
+   ]
+  },
+  {
+   "title": "Ben Johns heads into Worlds without a men's doubles gold in his last 4 events",
+   "summary": "The Kitchen tallies Ben Johns' recent men's doubles run: a Round of 16 loss with Federico Staksrud at the Arizona Open, a final loss with Gabe Tardio to Christian Alshon/Andrei Daescu at the Las Vegas Open (where he lost all three finals), a Round of 32 exit with Jack Sock at the Chicago Cup, and a Hong Kong Slam final loss to Hayden Patriquin/Federico Staksrud, 11-6, 11-8. The Kitchen asks whether it's an injury or the field catching up; there is no confirmed injury, so treat it as a form question heading into the PPA World Championships.",
+   "status": "confirmed",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "label": "The Kitchen: Ben Johns just lost again. What's going on?",
+     "url": "https://thekitchenpickle.com/blogs/news/ben-johns-recent-losses-mens-doubles-ppa-tour/"
+    },
+    {
+     "label": "@TheKitchenPB: '4 tourneys, no golds' post",
+     "url": "https://x.com/TheKitchenPB/status/2115886057912942891"
+    }
+   ],
+   "embeds": [
+    "https://x.com/TheKitchenPB/status/2115886057912942891"
+   ],
+   "social_angle": "Debate post: 'Slump or everyone caught up?' Frame it as form, never as injury. Tag the PPA Tour.",
+   "tags": [
+    "Ben Johns",
+    "PPA",
+    "Worlds",
+    "Men's doubles"
+   ]
+  },
+  {
+   "title": "Gear: Holbrook launches the Fuze VantaGrit paddle at $199.99",
+   "summary": "Holbrook released the Fuze VantaGrit on Oct. 29 after the launch slipped from Oct. 15. Holbrook's site lists it at $199.99 in Elongated, Hybrid and Widebody shapes and says it is USA Pickleball approved; it showed as sold out on Holbrook's site when we checked Oct. 29. Holbrook's spin and wear claims, including the grit reaching 99.2% of the RPM limit, are the company's own. The Kitchen posted a Q&A with Holbrook's CEO about the paddle's story.",
+   "status": "confirmed",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "label": "Holbrook: Fuze VantaGrit product page",
+     "url": "https://holbrookpickleball.com/products/fuze"
+    },
+    {
+     "label": "Holbrook: Fuze VantaGrit overview",
+     "url": "https://holbrookpickleball.com/pages/fuze-vantagrit"
+    },
+    {
+     "label": "@TheKitchenPB: CEO Q&A on the VantaGrit",
+     "url": "https://x.com/TheKitchenPB/status/2115831779521409095"
+    },
+    {
+     "label": "Pickleheads: Holbrook Fuze VantaGrit review",
+     "url": "https://www.pickleheads.com/pickleball-gear/holbrook-fuze-vantagrit-review"
+    }
+   ],
+   "embeds": [
+    "https://x.com/TheKitchenPB/status/2115831779521409095"
+   ],
+   "social_angle": "Gear drop post: '$199.99, three shapes, sold out at launch.' Attribute the spin claim to Holbrook.",
+   "tags": [
+    "Gear",
+    "Paddles",
+    "Holbrook",
+    "New paddle"
+   ]
+  },
+  {
+   "title": "Club shakeout: Bisnow says pickleball's retail bet is souring, a Wake Forest club is sued over rent, and CityPickle questions franchising",
+   "summary": "Bisnow reports that some pickleball clubs that leased mall and big-box space are struggling as markets saturate, pointing to The Picklr's Oct. 9 bankruptcy filing (about $19 million in liabilities across 76 franchise locations, per Bisnow) and rents of roughly $30,000 to $50,000 a month for a 10-court club. It also notes that participation is still rising: SFIA counts more than 24 million players last year, up from nearly 20 million in 2024. The Triangle Business Journal reports a landlord has sued Pickles and Play over about $80,000 in unpaid rent at its Wake Forest, N.C. location, after the operator closed another Triangle facility earlier this year. In The Dink, CityPickle co-founder Mary Cannon argues that suburban clubs are hyper-local businesses and asks whether the franchise model adds value, since rent and labor are set locally.",
+   "status": "confirmed",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "label": "Bisnow: Pickleball clubs face a reckoning after betting big on retail space",
+     "url": "https://www.bisnow.com/news/national/retail/from-pandemic-darling-to-cautionary-tale-pickleball-clubs-face-a-reckoning-after-betting-big-on-retail-space"
+    },
+    {
+     "label": "Triangle Business Journal: Landlord sues Wake County pickleball venue over $80,000 in unpaid rent",
+     "url": "https://www.bizjournals.com/triangle/news/2026/10/29/pickles-play-wake-forest-lawsuit-rent-merritt.html"
+    },
+    {
+     "label": "The Dink: The curious case of pickleball club franchising (Mary Cannon, CityPickle)",
+     "url": "https://www.thedinkpickleball.com/why-the-pickleball-franchise-model-may-not-work-for-everyone/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Explainer: 'Is the indoor club boom over?' Demand is up, but bad leases are the problem. Stick to reported numbers.",
+   "tags": [
+    "Business",
+    "Clubs",
+    "Franchising",
+    "The Picklr",
+    "North Carolina"
+   ]
+  },
+  {
+   "title": "Bossier City bystanders, including a Barksdale AFB medic, honored for saving a player who collapsed at a pickleball facility",
+   "summary": "Gary Rondeau, a retired Air Force firefighter and EMT who is now the medical emergency manager at Barksdale Air Force Base's medical treatment facility, and other bystanders received the Bossier City Fire Department's Life Saving Award, the first time the department has given it in 15 years, according to a DVIDS release. Bruce Poynter collapsed in cardiac arrest at an indoor pickleball facility in Bossier City, La. on July 8. Bystanders including Dylan Fauver and Dr. Sean Patel started CPR, a police officer used an AED, and EMS took over. Per the release, Poynter has no lasting effects, and he and his wife have since become CPR certified.",
+   "status": "confirmed",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "label": "DVIDS via EIN Presswire: Barksdale medical emergency manager honored after life-saving pickleball rescue",
+     "url": "https://www.einpresswire.com/article/953172475/barksdale-medical-emergency-manager-honored-after-life-saving-pickleball-rescue"
+    },
+    {
+     "label": "DVIDS: photo of Poynter meeting his rescuers",
+     "url": "https://www.dvidshub.net/image/10057784/barksdale-medical-emergency-manager-honored-after-life-saving-pickleball-rescue"
+    },
+    {
+     "label": "KTBS: Bossier City Fire Department presents rare life-saving award",
+     "url": "https://www.ktbs.com/news/bossier-city-fire-department-presents-rare-life-saving-award-to-citizens-who-rescued-heart-attack/article_f53096bc-199a-49fd-b87f-10b37e4f0b05.html"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Feel-good safety post: 'Does your club have an AED?' Pairs with our Oct 24 Tucson CPR story.",
+   "tags": [
+    "Safety",
+    "CPR",
+    "AED",
+    "Louisiana",
+    "Community"
+   ]
+  },
+  {
+   "title": "Courts watch: Hot Springs, Ark. may buy 30 acres for a 16-court pickleball complex plus soccer and tennis",
+   "summary": "The Hot Springs Board of Directors could vote before year's end on buying about 30 acres between McLeod Street and Kimery Park, the Sentinel-Record reports; the city manager says the owners are asking about $2 million and he hopes to bring a deal to the board's first December meeting. Contractor Hill & Cox estimates a 16-court pickleball complex with 279 parking spaces at Kimery Park at about $10 million, and six soccer fields and four tennis courts north of McLeod at about $25 million. In the city's survey, 42% of respondents cited the need for more outdoor pickleball courts.",
+   "status": "confirmed",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "label": "Hot Springs Sentinel-Record: Hot Springs could buy 30 acres for pickleball, soccer and tennis complex",
+     "url": "https://www.hotsr.com/news/2026/oct/30/hot-springs-could-buy-30-acres-for-pickleball/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Courts-near-you item for Arkansas players; '16 courts and a pro shop' is the hook.",
+   "tags": [
+    "Courts",
+    "Arkansas",
+    "New courts",
+    "Tournaments"
+   ]
+  },
+  {
+   "title": "Pods: Eddie and Webby on questionable AI line calls; Tony Roig on whether Anna Bright should have challenged a ruling at 11-0, 10-0",
+   "summary": "Dinking Around with Eddie and Webby episode 115 asks whether Eddie has a fix for questionable AI line calls in pro pickleball. Pickleball Therapy episode 319 with coach Tony Roig asks whether it was OK for Anna Bright to challenge a ruling when leading 11-0, 10-0. These are opinion shows; we're only summarizing their episode descriptions.",
+   "status": "confirmed",
+   "date": "2026-10-30",
+   "sources": [
+    {
+     "label": "Dinking Around with Eddie and Webby, ep. 115",
+     "url": "https://podcasters.spotify.com/pod/show/dinkingaround/episodes/Episode-115---Does-Eddie-Have-the-Solution-to-Questionable-AI-Line-Calls-e3rclak"
+    },
+    {
+     "label": "Pickleball Therapy, ep. 319",
+     "url": "https://share.transistor.fm/s/5a3ecafe"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Poll: 'Is challenging a call at 10-0 fair game?' Good with the line-call tech debate.",
+   "tags": [
+    "Podcasts",
+    "Line calls",
+    "AI",
+    "Anna Bright",
+    "Etiquette"
+   ]
+  },
   {
    "title": "Houston Hammers join Major League Pickleball as the 21st team for 2027",
    "summary": "Major League Pickleball announced the Houston Hammers as its 21st team, starting in the 2027 season, with an ownership group led by Hugh Zhang. Per MLP, the Hammers will host a 2027 league event in the Houston market, keep their CSP Champion senior team, and field a Jr. Hammers team in Jr. MLP. MLP also cited 2026 records: 733,000 CBS viewers for the Aug. 30 New York City Finals and 146,000 on FS1, PickleballTV minutes watched up 32%, attendance up 69% and ticket revenue up 87%. Details on how the Hammers will acquire players, the draft date and the 2027 schedule are due in the next few weeks.",
