@@ -13,7 +13,7 @@ BF_FN = "deals/black-friday-pickleball-deals-2026.html"
 BF_DAY, CM_DAY = "2026-11-27", "2026-11-30"
 # Brand pages checked 2026-10-29 for officially published Black Friday 2026 details. None carried a 2026 date.
 BF_CHECKED = "2026-10-29"
-BF_WATCH = [("Selkirk", "https://www.selkirk.com/collections/black-friday-deals", "Selkirk runs a Black Friday collection page. It shows no 2026 dates, so we don't treat its prices as this year's sale."),
+BF_WATCH = [("Selkirk", "https://www.selkirk.com/collections/sale", "Selkirk's sale page shows no 2026 Black Friday dates, so we don't treat its prices as this year's sale."),
             ("Volair", "https://volair.com/collections/sale", "Volair's sale page shows no Black Friday dates."),
             ("CRBN", "https://crbnpickleball.com/", "CRBN's most recent Black Friday page we found is for 2025. No 2026 sale published.")]
 
@@ -117,14 +117,14 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
     listed = t1 + t2 + t3 + t4
     gbody = (f'<h1>Pickleball Gift Guide 2026</h1>{DISC}'
              f'<p class="meta">Gifts sorted by budget, using only prices we checked on each maker\'s own site. {price_checked(last, fmt, e)} We have not playtested these paddles and this is not a ranking.</p>'
-             f'<p class="meta"><a href="../deals.html"><b>Paddle deals →</b></a> · <a href="../{BF_FN}"><b>Black Friday pickleball deals 2026 →</b></a> · <a href="/discount-codes"><b>Discount codes →</b></a></p>'
+             f'<p class="meta"><a href="../deals.html"><b>Paddle deals →</b></a> · <a href="../{BF_FN}"><b>Black Friday pickleball deals 2026 →</b></a> · <a href="/discount-codes"><b>Discount codes →</b></a></p>{vcall}'
              f'<h2>Under $25</h2>{s1}'
              f'<h2>$25 to $75</h2>{table(t2, "../") if t2 else "<p>No items in our price data in this range right now.</p>"}'
              f'<h2>$75 to $100</h2>{thin3}{table(t3, "../") if t3 else "<p>No items in our price data in this range right now.</p>"}'
              f'<h2>$100 and up</h2><p class="meta">{len(t4)} paddles, lowest price first.' + (f' Six Zero ({len(aud)} paddles) prices in AUD only, so they are on the <a href="../price-index.html">price index</a> instead.' if aud else "") + f'</p>{table(t4, "../")}'
              f'<h2>Beginner gifts</h2><p>Our beginner rule: $200 or less, plus a 16mm core option or a wider or hybrid face. These are the {len(beg)} lowest-priced paddles that pass it. New players will also like <a href="pickleball-rules-for-beginners.html">rules for beginners</a> and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>{table(beg, "../")}'
              f'<h2>Paddle picks by player</h2><p>Know how they play? These spec-filter lists narrow it down.</p><ul>{pick_lis}</ul>'
-             f'<h2>Save with codes</h2><p>Codes can stack on a gift budget. See every code on our <a href="/discount-codes">pickleball discount codes</a> page, re-checked daily. For the brands in this guide:</p><ul>{code_lis}</ul>{vcall}'
+             f'<h2>Save with codes</h2><p>One code per order at most stores, so check the total at checkout. See every code on our <a href="/discount-codes">pickleball discount codes</a> page, re-checked daily. For the brands in this guide:</p><ul>{code_lis}</ul>'
              f'{faq(gqa)}'
              f'<p class="meta">More: <a href="../deals.html">Deals</a> · <a href="../price-tracker.html">Price tracker</a> · <a href="../price-index.html">Price index</a> · <a href="../paddle-quiz.html">Paddle quiz</a> · <a href="../disclosure.html">Disclosure</a></p>')
     gdesc = "Pickleball gifts by budget for 2026: stocking stuffers under $25, paddles from $49.99 to $100+, beginner picks, dated prices and verified codes."
@@ -161,7 +161,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
     ]
     under100 = t2 + t3
     bbody = (f'<h1>Black Friday Pickleball Deals 2026</h1>{DISC}'
-             f'<p class="meta">Black Friday is {fmt(BF_DAY)} and Cyber Monday is {fmt(CM_DAY)}. This is our hub for both: current verified prices and codes now, and we\'ll update it as brands announce sales. {price_checked(last, fmt, e)}</p>'
+             f'<p class="meta">Black Friday is {fmt(BF_DAY)} and Cyber Monday is {fmt(CM_DAY)}. This is our hub for both: current verified prices and codes now, and we\'ll update it as brands announce sales. {price_checked(last, fmt, e)}</p>{vcall}'
              f'<h2>Has any brand announced its 2026 sale?</h2><p>Not yet, as far as we could confirm on {fmt(BF_CHECKED)}. We only list a sale once the brand publishes it. Pages we\'re watching:</p><ul>{watch}</ul>'
              f'<h2>Is that deal real? Check before you buy</h2><p>Brands raise and cut prices all year. Before you trust a "Black Friday" price, compare it with our numbers:</p>'
              f'<ul><li><a href="../price-tracker.html"><b>Paddle Price Tracker</b></a>: popular paddles with "% off list", checked on each brand\'s own page.</li>'
@@ -169,7 +169,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
              f'<li>Each paddle page shows the lowest price we\'ve seen.</li></ul>'
              f'<h2>On sale at our last check</h2>{lowtbl}'
              f'<h2>Paddles $100 and under right now</h2>{table(under100, "../") if under100 else "<p>None at our last check.</p>"}'
-             f'<h2>Codes you can use now</h2><p>Most brands allow one code per order and may exclude sale items, so check the total before you pay. Every tracked code is on <a href="/discount-codes">pickleball discount codes</a>.</p>{vcall}'
+             f'<h2>Codes you can use now</h2><p>Most brands allow one code per order and may exclude sale items, so check the total before you pay. Every tracked code is on <a href="/discount-codes">pickleball discount codes</a>.</p>'
              f'<h2>Shopping for someone else?</h2><p>See our <a href="../{GIFT_FN}">Pickleball Gift Guide 2026</a>, sorted by budget.</p>'
              f'{faq(bqa, "Black Friday FAQ")}'
              f'<p class="meta">More: <a href="../deals.html">All paddle deals</a> · <a href="../guides/best-volair-paddles.html">Best Volair paddles</a> · <a href="../guides/best-paddles-under-100.html">Best paddles under $100</a> · <a href="../disclosure.html">Disclosure</a></p>')
