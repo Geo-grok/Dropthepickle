@@ -589,6 +589,12 @@ def evwk_html():
     # Nations Cup final watch link, through Sun Nov 1 (CT); also hidden client-side from Nov 2 00:00 CST (06:00 UTC).
     watch = ('<a class="evwk-watch" id="evwk-ncf" href="/guides/how-to-watch-pro-pickleball#nations-cup-final">How to watch the Nations Cup final Sunday →</a>'
              '<script>if(Date.now()>=Date.UTC(2026,10,2,6))document.getElementById("evwk-ncf").hidden=true</script>') if evwk_build_date() <= datetime.date(2026, 11, 1) else ""
+    # Worlds how-to-watch link from Sun Nov 1 (CT) through EVWK_END; client-side shown from Nov 1 00:00 CDT (05:00 UTC).
+    if evwk_build_date() >= datetime.date(2026, 11, 1):
+        watch += '<a class="evwk-watch" href="/events/opendoor-pickleball-world-championships#how-to-watch">How to watch Pickleball Worlds 2026 →</a>'
+    elif evwk_build_date() >= datetime.date(2026, 10, 31):
+        watch += ('<a class="evwk-watch" id="evwk-pwc" href="/events/opendoor-pickleball-world-championships#how-to-watch" hidden>How to watch Pickleball Worlds 2026 →</a>'
+                  '<script>if(Date.now()>=Date.UTC(2026,10,1,5))document.getElementById("evwk-pwc").hidden=false</script>')
     # Pages only rebuild on deploy, so also hide client-side once Nov 8 is over in Central Time (Nov 9 00:00 CST = 06:00 UTC).
     js = '<script>if(Date.now()>=Date.UTC(2026,10,9,6))document.getElementById("evwk").hidden=true</script>'
     return (f'<aside class="evwk" id="evwk" aria-label="Event week"><div class="evwk-in"><p class="evwk-h">Event week</p>'
