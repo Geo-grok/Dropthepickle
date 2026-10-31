@@ -215,7 +215,7 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .codewarn{background:#fff8e6;border:1px solid #f3d27a;border-radius:12px;padding:.8rem 1rem;color:#5a4300;font-size:.95rem}
 .b-unconf{background:#ffe1d3;color:#b23d0c;border:1px solid #ff7a45}.b-conf{background:#e6f9c2;color:#3b5a00}
 .buzzcard .srcs{font-size:.94rem;margin:.5rem 0 0}.buzzcard .srcs a{margin-right:.6rem}
-.buzzx{margin:.6rem 0}.buzzx .twitter-tweet{margin:.5rem 0!important}
+.buzzcard .watch{margin:.4rem 0 0;font-weight:700}.buzzx{margin:.6rem 0}.buzzx .twitter-tweet{margin:.5rem 0!important}
 
 .pt-grid{display:grid;gap:1rem;grid-template-columns:1fr}@media(min-width:720px){.pt-grid{grid-template-columns:1fr 1fr}}
 .ptcard{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:1.15rem;border-left:8px solid var(--neon);display:flex;flex-direction:column;gap:.5rem}
@@ -246,7 +246,9 @@ CSS += """
 .evwk-ev span{font:600 14px/18px Inter,system-ui,sans-serif;color:#c6f432;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .evwk-code>span{overflow:hidden;text-overflow:ellipsis}
 .evwk-code{display:flex;align-items:center;justify-content:center;height:44px;padding:0 10px;border-radius:10px;background:#c6f432;color:#0b1426;font:700 16px/20px Inter,system-ui,sans-serif;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.evwk-ev:focus-visible,.evwk-code:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.evwk-watch[hidden]{display:none}
+.evwk-watch{grid-column:1/-1;display:block;height:20px;color:#c6f432;font:700 14px/20px Inter,system-ui,sans-serif;text-decoration:underline;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evwk-ev:focus-visible,.evwk-code:focus-visible,.evwk-watch:focus-visible{outline:3px solid #fff;outline-offset:2px}
 @media(min-width:760px){.evwk-in{grid-template-columns:auto 1fr auto;align-items:center;gap:12px}.evwk-ev{flex-direction:row;gap:8px;align-items:center;justify-content:flex-start;height:44px}}
 """
 
@@ -584,10 +586,13 @@ def evwk_html():
     vol = OWN.get("Volair")  # active codes only; line drops if the code is retired
     links = "".join(f'<a class="evwk-ev" href="/{fn[:-5]}" aria-label="{e(t)} {e(d)}"><b>{e(t)}</b><span>{e(d)}</span></a>' for fn, t, d in have)
     code = (f'<a class="evwk-code" href="{e(vol["page"])}"><span>Volair code <b>{e(vol["code"])}</b>: {e(vol["discount"])}</span></a>' if vol else "")
+    # Nations Cup final watch link, through Sun Nov 1 (CT); also hidden client-side from Nov 2 00:00 CST (06:00 UTC).
+    watch = ('<a class="evwk-watch" id="evwk-ncf" href="/guides/how-to-watch-pro-pickleball#nations-cup-final">How to watch the Nations Cup final Sunday →</a>'
+             '<script>if(Date.now()>=Date.UTC(2026,10,2,6))document.getElementById("evwk-ncf").hidden=true</script>') if evwk_build_date() <= datetime.date(2026, 11, 1) else ""
     # Pages only rebuild on deploy, so also hide client-side once Nov 8 is over in Central Time (Nov 9 00:00 CST = 06:00 UTC).
     js = '<script>if(Date.now()>=Date.UTC(2026,10,9,6))document.getElementById("evwk").hidden=true</script>'
     return (f'<aside class="evwk" id="evwk" aria-label="Event week"><div class="evwk-in"><p class="evwk-h">Event week</p>'
-            f'<div class="evwk-evs n{len(have)}">{links}</div>{code}</div></aside>{js}')
+            f'<div class="evwk-evs n{len(have)}">{links}</div>{code}{watch}</div></aside>{js}')
 def evwk_apply():
     strip = evwk_html(); n = 0
     for f in DIST.rglob("*.html"):
@@ -682,7 +687,7 @@ def build():
         srcs = " ".join(f'<a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a>' for s in b.get("sources", []))
         emb = "".join(f'<blockquote class="twitter-tweet" data-dnt="true"><a href="{e(u)}">View post on X</a></blockquote>' for u in b.get("embeds", [])) if full else ""
         tags = " ".join(f'<span class="tag">{e(t)}</span>' for t in b.get("tags", [])) if full else ""
-        return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)} {tags}</div><h3>{e(b["title"])}</h3><div class="meta">{fmt(b.get("date"))}</div><p>{e(b["summary"])}</p>'
+        return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)} {tags}</div><h3>{e(b["title"])}</h3><div class="meta">{fmt(b.get("date"))}</div><p>{e(b["summary"])}</p>{"".join(f'<p class="watch"><a href="{e(l["href"])}">{e(l["label"])} →</a></p>' for l in b.get("links", []))}'
                 f'<p class="srcs"><b>Sources:</b> {srcs}</p>{f"<div class={chr(34)}buzzx{chr(34)}>{emb}</div>" if emb else ""}</div>')
     BUZZ_TEASER = (f'<h2>Pickleball Buzz <a class="seemore" href="buzz.html">All buzz →</a></h2><div class="grid">{"".join(bcard(b, False) for b in B.get("items", [])[:3])}</div>') if B.get("items") else ""
     page("buzz.html", "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p>{nudge("buzz", "buzz", SIGNUP_TITLE, SIGNUP_BLURB)}{gift_pages.holiday_note("buzz")}<div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div>{nudge("buzz-bottom", "buzzb", "Like the buzz? Get codes by email", SIGNUP_BLURB)}{NUDGEJS}{XLAZY}',

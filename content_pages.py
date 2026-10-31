@@ -749,6 +749,8 @@ def make(page, e, fmt, PP, cur, ph):
     WT_APP_DET = "https://www.theapp.global/news/detroit-preview-2026"
     WT_APP_OP = "https://www.theapp.global/news/sunday-broadcast-overland-park-2026"
     WT_UN_LIVE = "https://usapickleballnationals.com/livestream/"
+    WT_NC_MLP = "https://majorleaguepickleball.co/news/match-schedule-for-mlp-nations-cup-released/"
+    WT_NC_UP = "https://worlds.unitedpickleball.com/nations-cup"
     WT_WHO = [
         ("PPA Tour", "PickleballTV streams every round of every event", "Select rounds on Tennis Channel, FS1 and FS2 in the PPA's 2026 schedule; CBS carried Championship Sunday at the Carvana Masters in January", WT_PPA_TV),
         ("Major League Pickleball (MLP)", "PickleballTV", "MLP reports 2026 records on CBS (733K viewers, NYC Finals, Aug. 30) and FS1 (146K, Orlando, Aug. 1)", WT_MLP),
@@ -779,6 +781,8 @@ def make(page, e, fmt, PP, cur, ph):
     wt_week_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(c)}</td><td>{e(t)}</td></tr>' for d, w, c, t in WT_WEEK)
     wt_next_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(c)}</td></tr>' for d, w, c in WT_NEXT)
     wt_faq = [
+        ("What time is the MLP Nations Cup final?",
+         "The MLP Nations Cup final is Sunday, November 1, 2026 at 2 p.m. CT at Brookhaven Country Club in Farmers Branch, Texas, per MLP's official schedule. The semifinals are at 10 a.m. and 11:30 a.m. CT. All matches stream on PickleballTV and the PickleballTV app."),
         ("Is PickleballTV free?",
          "Partly. PickleballTV runs a free 24/7 channel with selected matches and original shows, offered on Fubo, Samsung TV Plus, Roku, Fire TV and Plex. Every court, full replays and DVR features need a paid PickleballTV app subscription."),
         ("How much does the PickleballTV app cost?",
@@ -801,6 +805,11 @@ def make(page, e, fmt, PP, cur, ph):
 <li><b>APP Tour:</b> <b>ESPN+</b> for Championship Court and <b>APPTV on YouTube</b> for the Players Court, per the {ext(WT_APP_DET, "APP")}.</li>
 <li><b>USA Pickleball Nationals:</b> every match is livestreamed and recorded by <b>VS Sports</b>, per the {ext(WT_UN_LIVE, "official Nationals site")}.</li>
 </ul>
+<h2 id="nations-cup-final">How to watch the MLP Nations Cup semis and final (Sunday Nov 1)</h2>
+<p>Championship Sunday of the inaugural MLP Nations Cup is <b>Sunday, November 1, 2026</b> at Brookhaven Country Club in Farmers Branch, Texas. Per {ext(WT_NC_MLP, "MLP's official match schedule")} (Central Time), all on Championship Court:</p>
+<ul><li><b>Semifinal 1:</b> 10:00 AM CT (Group A No. 2 vs Group B No. 1)</li><li><b>Semifinal 2:</b> 11:30 AM CT (Group A No. 1 vs Group B No. 2)</li><li><b>Final:</b> 2:00 PM CT (semifinal winners)</li></ul>
+<p><b>Where to watch:</b> <b>PickleballTV</b> and the PickleballTV app. MLP says all Nations Cup matches are available there, and {ext(WT_NC_UP, "United Pickleball")} lists PickleballTV windows of 10 AM to 1 PM CT for the semifinals and 2 to 3:30 PM CT for the final, noting windows can move.</p>
+<p>The four semifinalists are set after Saturday's pool play, when the top two in each pool advance. For live standings and the matchups once they are confirmed, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 page</a>.</p>
 <h2>Who streams what</h2>
 <div class="tbl"><table><thead><tr><th>Tour or event</th><th>Streaming</th><th>National TV</th><th>Source</th></tr></thead><tbody>{wt_who_rows}</tbody></table></div>
 <p>The CBS window at the Carvana Masters ran 12 to 2 p.m. ET on Championship Sunday in January 2026, per {ext(WT_CBS, "Pickleball.com")}. MLP's viewer numbers are from its {ext(WT_MLP, "October 28, 2026 release")}.</p>
@@ -825,7 +834,9 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>Gear while you watch</h2>
 <p>Seen a paddle you like on the broadcast? Our <a href="../pro-paddles.html">pro paddles page</a> lists what the pros use. Then check the <a href="/discount-codes">pickleball discount codes</a> and today's <a href="../deals.html">paddle deals</a> before you pay full price.</p>
 {wt_faq_html}
-{sources([("PPA Tour: Watch pro pickleball", WT_PPA, f"PickleballTV coverage, Nations Cup and Worlds windows (ET), read {wt_checked}"),
+{sources([("Major League Pickleball: Nations Cup match schedule", WT_NC_MLP, f"semifinal and final times (CT) and PickleballTV, read October 31, 2026"),
+          ("United Pickleball: MLP Nations Cup", WT_NC_UP, "PickleballTV windows for Sunday semifinals and final (CT), read October 31, 2026"),
+          ("PPA Tour: Watch pro pickleball", WT_PPA, f"PickleballTV coverage, Nations Cup and Worlds windows (ET), read {wt_checked}"),
           ("PPA Tour: TV schedule", WT_PPA_TV, f"2026 broadcast and streaming windows, read {wt_checked}"),
           ("United Pickleball: Worlds pro play", WT_UP_PRO, f"Worlds windows in CT, read {wt_checked}"),
           ("PickleballTV", WT_PBTV, "free 24/7 channel and platforms"),
