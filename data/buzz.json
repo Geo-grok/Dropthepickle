@@ -1,9 +1,212 @@
 {
- "updated": "2026-10-30T13:25-05:00",
- "date": "2026-10-30",
- "source_file": "dtp-newsroom/buzz-2026-10-30.json",
+ "updated": "2026-10-31T06:11-05:00",
+ "date": "2026-10-31",
+ "source_file": "dtp-newsroom/buzz-2026-10-31.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "MLP Nations Cup day 1: Asia Domestic and Australia start 2-0, USA beats Canada; group play wraps today",
+   "summary": "Day 1 of the first MLP Nations Cup in Farmers Branch, Texas, is done. In Pool 1, Asia Domestic went 2-0 with wins over Europe - West and Canada, and Team USA beat Canada to sit 1-0; Canada is 0-2 and Europe - West 0-1. In Pool 2, Australia went 2-0 (Asia International, then Europe - East), Europe - East swept Latin America in three games and sits 1-1, and Asia International and Latin America are 0-1. Group play finishes today, Saturday, Oct. 31, including USA vs Europe - West at 11:30 a.m. CT and Asia Domestic vs USA at 4 p.m. CT; the top 2 in each pool reach Championship Sunday. Today is also MLP's Halloween costume day for fans. Full day 1 matches are posted on PickleballTV's YouTube channel.",
+   "status": "confirmed",
+   "date": "2026-10-31",
+   "sources": [
+    {
+     "label": "United Pickleball: Nations Cup schedule, scores and standings (official MLP results)",
+     "url": "https://worlds.unitedpickleball.com/nations-cup"
+    },
+    {
+     "label": "@MajorLeaguePB: Day 1 down, standings",
+     "url": "https://x.com/MajorLeaguePB/status/2116345706709459280"
+    },
+    {
+     "label": "@MajorLeaguePB: USA opens with a win over Canada",
+     "url": "https://x.com/MajorLeaguePB/status/2116300039135842304"
+    },
+    {
+     "label": "@MajorLeaguePB: Europe-East sweeps Latin America",
+     "url": "https://x.com/MajorLeaguePB/status/2116265718891335994"
+    },
+    {
+     "label": "@MajorLeaguePB: Asia Domestic beats Europe-West",
+     "url": "https://x.com/MajorLeaguePB/status/2116294076148363423"
+    },
+    {
+     "label": "@MajorLeaguePB: Australia beats Europe-East",
+     "url": "https://x.com/MajorLeaguePB/status/2116319461313835044"
+    },
+    {
+     "label": "PickleballTV on YouTube: Team USA vs Team Canada full match",
+     "url": "https://www.youtube.com/watch?v=O7s7bzOq1xo"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2116345706709459280",
+    "https://x.com/MajorLeaguePB/status/2116311061523751190"
+   ],
+   "social_angle": "Scoreboard post: 'Asia Domestic and Australia are 2-0. Can USA hand Asia Domestic its first loss at 4 p.m. CT?' Embed the Chris Crouch ATP clip. Tag MLP.",
+   "tags": [
+    "MLP",
+    "Nations Cup",
+    "Results",
+    "Team USA",
+    "Dallas"
+   ]
+  },
+  {
+   "title": "Big week ahead: PPA Worlds draws are set, and USA Pickleball Nationals start today in San Diego",
+   "summary": "The PPA released the draws for the Opendoor Pickleball World Championships, which run Nov. 2-8 at Brookhaven Country Club in Farmers Branch, Texas, with a draw reveal show on PPA Tour YouTube. Separately, the 2026 Oceanview USA Pickleball National Championships run today, Oct. 31, through Nov. 8 at Barnes Tennis Center in San Diego, with 54 courts and the Franklin X-40 as the tournament ball, per USA Pickleball. The APP Selkirk U.S. Collegiate Series Championships also start their season at Nationals for the first time.",
+   "status": "confirmed",
+   "date": "2026-10-31",
+   "sources": [
+    {
+     "label": "@PPAtour: The draws are set",
+     "url": "https://x.com/PPAtour/status/2116257279754321994"
+    },
+    {
+     "label": "PPA Tour YouTube: Draw Reveal Show",
+     "url": "https://www.youtube.com/watch?v=DtWX52IoO2c"
+    },
+    {
+     "label": "USA Pickleball Nationals: event site",
+     "url": "https://usapickleballnationals.com/"
+    },
+    {
+     "label": "USA Pickleball: daily competition schedule",
+     "url": "https://usapickleball.org/usap-news/nationals/daily-competition-schedule-for-the-2026-oceanview-usa-pickleball-national-championships/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2116257279754321994"
+   ],
+   "social_angle": "Two-championships-one-week post: 'Worlds in Dallas, Nationals in San Diego. Who are you watching?' Link our Worlds event page.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "USA Pickleball",
+    "Nationals",
+    "San Diego"
+   ]
+  },
+  {
+   "title": "JW Johnson passes Ben Johns for the top men's doubles rating on DUPR",
+   "summary": "JW Johnson is No. 1 in men's doubles on DUPR's official rankings, updated Oct. 28, at 7.047, just ahead of Ben Johns at 7.032 and Hayden Patriquin at 6.888. Times Now reported he reached 7.066, a figure from an earlier DUPR update. DUPR ratings are based on match results against expectations, so they can differ from the PPA's points-based tour rankings.",
+   "status": "confirmed",
+   "date": "2026-10-31",
+   "sources": [
+    {
+     "label": "DUPR: Top rankings (updated Oct 28)",
+     "url": "https://www.dupr.com/rankings"
+    },
+    {
+     "label": "Times Now: JW Johnson becomes world's highest rated pickleball player",
+     "url": "https://www.timesnownews.com/sports/pickleball/jw-johnson-hits-new-heights-becomes-worlds-highest-rated-pickleball-player-article-156440322"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Debate post: 'The Flick Wizard is No. 1 on DUPR. Does it mean more than a Worlds gold?' Tag the PPA Tour.",
+   "tags": [
+    "DUPR",
+    "JW Johnson",
+    "Ben Johns",
+    "Rankings"
+   ]
+  },
+  {
+   "title": "Gear: Selkirk's Boomstik ST launches Nov. 10, and The Kitchen tracks the 'grit wars' re-releases",
+   "summary": "Selkirk's follow-up to its Boomstik power paddle, the Boomstik ST, launches Nov. 10, with VIP early access starting Nov. 5 on Selkirk's site; The Dink published first-look photos and says full specs aren't out yet. The original Boomstik sold for $333. Selkirk's teaser promises more dwell, better consistency and 'extreme grit,' which are the company's claims. The Kitchen also rounded up popular paddles re-released with durable grit: the Six Zero Coral Pro, Holbrook Fuze VantaGrit, Bread & Butter Loco 2 and Enhance MPP Turbo, which it says kept its price.",
+   "status": "confirmed",
+   "date": "2026-10-31",
+   "sources": [
+    {
+     "label": "The Dink: First look at Selkirk's Boomstik ST",
+     "url": "https://www.thedinkpickleball.com/selkirk-boomstik-st-first-look-photos-release-date/"
+    },
+    {
+     "label": "Selkirk: Coming soon (VIP early access Nov. 5)",
+     "url": "https://www.selkirk.com/pages/coming-soon"
+    },
+    {
+     "label": "The Kitchen: Grit wars, paddles re-released with new grit",
+     "url": "https://thekitchenpickle.com/blogs/gear/pickleball-paddles-new-durable-grit-surfaces-2026/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Gear tease: 'Boomstik ST drops Nov. 10. Upgrade or stick with your grit re-release?' Attribute specs to Selkirk.",
+   "tags": [
+    "Gear",
+    "Paddles",
+    "Selkirk",
+    "Grit",
+    "New paddle"
+   ]
+  },
+  {
+   "title": "Pickleball Hall of Fame names its 2026 class: Matt Wright, Lucy Kovalova and Dave Weinbach lead five inductees",
+   "summary": "The Pickleball Hall of Fame will induct competitors Matt Wright, Lucy Kovalova and Dave Weinbach and contributors Marsha Freso and Linda Laymon in Gold Canyon, Ariz. The induction ceremony is Nov. 13 at 7 p.m., after a 6 p.m. dinner; ticket listings show $65 for the full banquet and $10 for the ceremony only.",
+   "status": "confirmed",
+   "date": "2026-10-31",
+   "sources": [
+    {
+     "label": "Pickleball Hall of Fame: 2026 inductees",
+     "url": "https://pickleballhalloffame.global/inductees/"
+    },
+    {
+     "label": "Apache Junction/Gold Canyon Independent: Pickleball Hall of Fame to induct 5",
+     "url": "https://www.yourvalley.net/apache-junction-independent/stories/pickleball-hall-of-fame-to-induct-5-in-gold-canyon,728475"
+    },
+    {
+     "label": "Zeffy: 2026 banquet and induction tickets",
+     "url": "https://www.zeffy.com/en-US/ticketing/2026-pickleball-hall-of-fame-banquet-and-induction-ceremony"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Congrats post for the class of 2026; ask fans for their favorite Matt Wright or Lucy Kovalova memory.",
+   "tags": [
+    "Hall of Fame",
+    "Matt Wright",
+    "Lucy Kovalova",
+    "Arizona"
+   ]
+  },
+  {
+   "title": "Noise fight: Walnut Creek's Rudgear Park pickleball dispute enters its fourth year in court",
+   "summary": "Neighbors of Rudgear Park in Walnut Creek, Calif. are asking a judge to make the city control noise from eight pickleball courts converted from two tennis courts, Patch reports. Their amended complaint says homes sit 50 to 90 feet from the courts and alleges noise up to 88 decibels; they want fewer courts, quieter equipment, soundproofing, player limits or removal. The city says it cut court hours about 20%, closes the courts two afternoons a week and locks them outside posted hours, and won't comment on the litigation. Players told the council it's 'a community park,' not a quiet meadow.",
+   "status": "confirmed",
+   "date": "2026-10-31",
+   "sources": [
+    {
+     "label": "Patch: Pickleball dispute enters year 4 still unresolved in Walnut Creek",
+     "url": "https://patch.com/california/walnutcreek/pickleball-dispute-enters-year-4-still-unresolved-walnut-creek"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Explainer: 'How close is too close to the courts?' Pair with quiet-paddle tips. Keep it neutral.",
+   "tags": [
+    "Noise",
+    "Courts",
+    "California",
+    "Lawsuit"
+   ]
+  },
+  {
+   "title": "Could pickleball get its own web address? '.pickleball' shows up in ICANN's new domain round",
+   "summary": "Identity Digital listed .pickleball as a backup choice on three of its applications for new top-level domains (.collective, .festival and .server), Domain Name Wire reports. The company could swap a contested string for .pickleball; ICANN reveals final picks on Nov. 17. Domain Name Wire notes sports domains have been modest so far, with .football at about 6,500 registered names.",
+   "status": "confirmed",
+   "date": "2026-10-31",
+   "sources": [
+    {
+     "label": "Domain Name Wire: Will pickleball get its own .pickleball domain?",
+     "url": "https://domainnamewire.com/2026/10/30/pickleball-domain/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Fun post: 'dropthe.pickleball? Would you buy a .pickleball address?'",
+   "tags": [
+    "Internet",
+    "Domains",
+    "Fun"
+   ]
+  },
   {
    "title": "MLP Nations Cup day 1: Australia beats Asia International 3-1 in the opener",
    "summary": "Rain moved the first-ever MLP Nations Cup match indoors in Farmers Branch, Texas, today, Friday, Oct. 30. Australia won it 3-1 over Asia International in Group B: 11-9 in women's doubles, 11-3 and 11-7 in the two mixed doubles games, while Jack Wong and Jimmy Liong took men's doubles 14-12 for Asia International. The rest of day 1 (Europe - East vs Latin America, Europe - West vs Asia Domestic, Canada vs Team USA, Australia vs Europe - East and Asia Domestic vs Canada) was in progress or still to play as of 1:25 p.m. CT; results pending. Group play finishes Saturday, including USA vs Europe - West at 11:30 a.m. CT and USA vs Asia Domestic at 4 p.m. CT.",
@@ -3023,269 +3226,6 @@
    "tags": [
     "anna-leigh-waters",
     "international"
-   ]
-  },
-  {
-   "title": "Screaming & taunting debate erupts after Maria Ford vs. Genie Bouchard (PPA Chicago Cup)",
-   "summary": "Maria Ford's near-constant screams in her Chicago Cup women's singles win over Genie Bouchard went viral (~500K views per Total Pro Sports), and Bouchard declined to tap paddles afterward. No penalty was issued; commentator Jim Kloss posted a draft anti-taunting/anti-screaming rule and Anna Bright, Kate Fahey and others weighed in, but there is NO official PPA rule change.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "The Kitchen",
-     "url": "https://thekitchenpickle.com/blogs/news/pro-pickleball-celebrations-taunting-genie-bouchard-maria-ford/"
-    },
-    {
-     "label": "Total Pro Sports",
-     "url": "https://www.totalprosports.com/tennis/genie-bouchard-pickleball-opponent-video/"
-    },
-    {
-     "label": "@TheKitchenPB on X",
-     "url": "https://x.com/TheKitchenPB/status/2111107557238685704"
-    },
-    {
-     "label": "@pickleball_jim on X",
-     "url": "https://x.com/pickleball_jim/status/2110412512478769280"
-    },
-    {
-     "label": "@Pickleball on X",
-     "url": "https://x.com/Pickleball/status/2110816793254097058"
-    }
-   ],
-   "embeds": [
-    "https://x.com/TheKitchenPB/status/2111107557238685704",
-    "https://x.com/pickleball_jim/status/2110412512478769280",
-    "https://x.com/Pickleball/status/2110816793254097058"
-   ],
-   "social_angle": "Poll: 'Scream or no scream?' carousel with both sides' quotes; clearly label the ban as a fan proposal, not PPA policy.",
-   "tags": [
-    "ppa",
-    "pro-tour",
-    "controversy"
-   ]
-  },
-  {
-   "title": "Anna Leigh Waters hits 200, then 202 PPA titles; 45th Triple Crown",
-   "summary": "Waters won her 200th career PPA title and a record 45th Triple Crown at the Veolia Chicago Cup (Oct 5-11); PPA says the sweep took her to 202 titles, most in tour history. Roscoe Bellamy upset top seed Chris Haworth 11-4, 11-5 for men's singles, and Staksrud/Patriquin took men's doubles.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "@PPAtour on X",
-     "url": "https://x.com/PPAtour/status/2110074748613087434"
-    },
-    {
-     "label": "The Dink",
-     "url": "https://www.thedinkpickleball.com/anna-leigh-waters-makes-history-roscoe-bellamy-stuns-chris-haworth-at-ppa-chicago-cup/"
-    },
-    {
-     "label": "PPA Tour news",
-     "url": "https://www.ppatour.com/news/"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2110074748613087434"
-   ],
-   "social_angle": "'202' milestone graphic + link to the DTP pros page for ALW.",
-   "tags": [
-    "ppa",
-    "anna-leigh-waters",
-    "results"
-   ]
-  },
-  {
-   "title": "ALW's Manila tour draws big crowds; return set for Dec. 9",
-   "summary": "Waters headlined the Franklin Asia Pickleball Showcase at SM Mall of Asia, and Filipino outlets covered big crowds and fan meet-and-greets. NewsWatch Plus PH reports she returns Dec. 9 for the IAM Worldwide Pickleball Showdown at Smart Araneta Coliseum.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "@ABSCBNNews on X",
-     "url": "https://x.com/ABSCBNNews/status/2110962691917697475"
-    },
-    {
-     "label": "@DYANCASTILLEJO on X",
-     "url": "https://x.com/DYANCASTILLEJO/status/2110337551521477070"
-    },
-    {
-     "label": "@newswatchplusph on X",
-     "url": "https://x.com/newswatchplusph/status/2110678651604009325"
-    }
-   ],
-   "embeds": [
-    "https://x.com/ABSCBNNews/status/2110962691917697475",
-    "https://x.com/DYANCASTILLEJO/status/2110337551521477070",
-    "https://x.com/newswatchplusph/status/2110678651604009325"
-   ],
-   "social_angle": "'Pickleball goes global' post: Asia buzz + the Guangzhou metro courts story (https://x.com/ChinaDaily/status/2110883428854042797).",
-   "tags": [
-    "anna-leigh-waters",
-    "international"
-   ]
-  },
-  {
-   "title": "The Picklr files Chapter 11",
-   "summary": "Indoor franchisor The Picklr filed for Chapter 11 late Oct. 9 to renegotiate lease guarantees on about 40 franchise locations, with $4.8M in DIP financing from Tom Neale's Dynamus Alliance. The CEO says no clubs close as a direct result, but he expects the company to shrink.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "Sports Business Journal",
-     "url": "https://www.sportsbusinessjournal.com/Articles/2026/10/10/the-picklr-files-for-bankruptcy/"
-    },
-    {
-     "label": "@stlouisbiz on X",
-     "url": "https://x.com/stlouisbiz/status/2110989173498794490"
-    }
-   ],
-   "embeds": [
-    "https://x.com/stlouisbiz/status/2110989173498794490"
-   ],
-   "social_angle": "Plain explainer, 'Is my Picklr closing?', facts only.",
-   "tags": [
-    "business",
-    "clubs"
-   ]
-  },
-  {
-   "title": "Club boom meets shakeout: 6 chains grew 145 -> 199 locations",
-   "summary": "The Dink, using Business of Pickleball data, reports six franchise chains grew from 145 to 199 locations between January and September, but September added only 70 net indoor courts (418 were added in June). Ace, Pickleball Kingdom and PickleRage all grew sharply.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "The Dink",
-     "url": "https://www.thedinkpickleball.com/pickleball-clubs-keep-opening-as-some-operators-struggle/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Data chart post: 'Where to play is growing, but slower.'",
-   "tags": [
-    "business",
-    "clubs",
-    "data"
-   ]
-  },
-  {
-   "title": "UPA-A president calls for one paddle certification standard",
-   "summary": "UPA-A President Jason Aspes is calling for USA Pickleball and UPA-A to merge their paddle approval into one list run by an independent technical committee. He also criticizes USA Pickleball's certification of OWL paddles, and those allegations have not been independently verified.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "The Dink",
-     "url": "https://www.thedinkpickleball.com/upa-a-president-calls-for-one-paddle-certification-standard/"
-    },
-    {
-     "label": "@Pickleball on X",
-     "url": "https://x.com/Pickleball/status/2111138906129224081"
-    }
-   ],
-   "embeds": [
-    "https://x.com/Pickleball/status/2111138906129224081"
-   ],
-   "social_angle": "Ties to DTP paddle DB: 'What does paddle approval mean for your paddle?' explainer.",
-   "tags": [
-    "paddles",
-    "equipment",
-    "governance"
-   ]
-  },
-  {
-   "title": "PPA Virginia Beach Open live: Sofia Sewing upsets No. 2 Buckner; Lea Jansen playing hurt",
-   "summary": "Sofia Sewing reached the women's singles quarterfinals with a three-game win over No. 2 seed Brooke Buckner. Pickleball.com reports Lea Jansen is still competing through a serious lower-body injury.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "PPA Tour news",
-     "url": "https://www.ppatour.com/news/"
-    },
-    {
-     "label": "@crackedsportss on X",
-     "url": "https://x.com/crackedsportss/status/2109813014178488498"
-    }
-   ],
-   "embeds": [
-    "https://x.com/crackedsportss/status/2109813014178488498"
-   ],
-   "social_angle": "Live-results card / 'Upset alert' story linking to the DTP tournaments page.",
-   "tags": [
-    "ppa",
-    "results",
-    "live"
-   ]
-  },
-  {
-   "title": "PPA heads Down Under: Australia Pickleball Cup + MLP Australia midseason",
-   "summary": "The PPA's Walker Australia Pickleball Cup in Brisbane is a 1,500-point event with a star-studded field. MLP Australia is at its halfway mark, with the Northern Crocs and The Coasters out in front. A clip of Christian Alshon's roar in front of a near-empty crowd is also going viral.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "@azetice on X",
-     "url": "https://x.com/azetice/status/2109798373641293918"
-    },
-    {
-     "label": "@toddeboss on X",
-     "url": "https://x.com/toddeboss/status/2109997419597332949"
-    },
-    {
-     "label": "@ChrisCaliSNS on X",
-     "url": "https://x.com/ChrisCaliSNS/status/2110896241811013643"
-    }
-   ],
-   "embeds": [
-    "https://x.com/azetice/status/2109798373641293918",
-    "https://x.com/toddeboss/status/2109997419597332949",
-    "https://x.com/ChrisCaliSNS/status/2110896241811013643"
-   ],
-   "social_angle": "Light, fun meme-adjacent post on the Alshon clip (don't mock players); share the schedule with time zones.",
-   "tags": [
-    "ppa",
-    "mlp",
-    "international"
-   ]
-  },
-  {
-   "title": "New PPA late start times divide fans",
-   "summary": "The PPA's later, night-session start times have frustrated some fans. Pickleball.com ran an Oct. 15 piece defending the change, and podcasts are debating it too.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "PPA Tour news",
-     "url": "https://www.ppatour.com/news/"
-    },
-    {
-     "label": "Spot Sports (video)",
-     "url": "https://www.spotsports.com/videos/x9jRVYkxbK"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Quick poll: 'Prime-time pickleball, yes or no?'",
-   "tags": [
-    "ppa",
-    "fans",
-    "scheduling"
-   ]
-  },
-  {
-   "title": "Life Time LT Classic amateur series kicks off today (Oct 16-18, San Clemente)",
-   "summary": "Life Time expanded the LT Classic into a quarterly amateur series with more than $20K in total prizes. Stops run in San Clemente, Peachtree Corners (GA), Chicago and Minneapolis through Oct-Nov.",
-   "status": "confirmed",
-   "date": "2026-10-16",
-   "sources": [
-    {
-     "label": "Life Time newsroom",
-     "url": "https://news.lifetime.life/2026-10-13-Life-Time-LT-Classic-National-Pickleball-Tournament-Returns-with-Most-Significant-Prize-Purse-Yet"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Amateur-focused 'Play where the pros play' calendar post.",
-   "tags": [
-    "amateur",
-    "tournaments"
    ]
   }
  ]
