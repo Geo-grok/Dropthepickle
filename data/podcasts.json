@@ -1,6 +1,18 @@
 {
  "items": [
   {
+   "show": "Everything But The Kitchen Dink",
+   "title": "Episode 151: This Time Next Year",
+   "link": "https://podcasters.spotify.com/pod/show/ebtkd/episodes/Episode-151-This-Time-Next-Year-e3rd7g6",
+   "date": "2026-10-31"
+  },
+  {
+   "show": "Dinking Around with Eddie and Webby",
+   "title": "Episode 115 - Does Eddie Have the Solution to Questionable AI Line Calls?",
+   "link": "https://podcasters.spotify.com/pod/show/dinkingaround/episodes/Episode-115---Does-Eddie-Have-the-Solution-to-Questionable-AI-Line-Calls-e3rclak",
+   "date": "2026-10-30"
+  },
+  {
    "show": "The World Pickleball Podcast",
    "title": "Pickleball Politics: Leon Stango on Venezuela & One World Federation",
    "link": "https://worldpickleballpodcast.alitu.com/episode/1c5687bc-0b4f-4a8e-944f-3afe6cba4542",
@@ -133,12 +145,6 @@
    "date": "2026-09-23"
   },
   {
-   "show": "Everything But The Kitchen Dink",
-   "title": "Episode 148: No More Excuses",
-   "link": "https://podcasters.spotify.com/pod/show/ebtkd/episodes/Episode-148-No-More-Excuses-e3p2lb5",
-   "date": "2026-09-19"
-  },
-  {
    "show": "Pickleball Tips - 4.0 To Pro",
    "title": "69: Embracing The Suck.  What It's Like To Learn A New Shot As A Top-Tier Pro",
    "link": "https://podcasts.apple.com/us/podcast/pickleball-tips-4-0-to-pro-a-pocket-sized-pickleball-podcast/id1672463911",
@@ -155,12 +161,6 @@
    "title": "The Singles Playbook (Part 2) feat. Fear the Fro",
    "link": "https://podcasts.apple.com/us/podcast/pickleball-cheat-code/id1810074023",
    "date": "2026-07-01"
-  },
-  {
-   "show": "Dinking Around with Eddie and Webby",
-   "title": "Episode 112 - Pickleball Movies and TYPTI??",
-   "link": "https://podcasters.spotify.com/pod/show/dinkingaround/episodes/Episode-112---Pickleball-Movies-and-TYPTI-e3labbl",
-   "date": "2026-06-26"
   },
   {
    "show": "Pickleball Cheat Code (CRBN)",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-10-30T11:34"
+ "updated": "2026-10-31T11:30"
 }
