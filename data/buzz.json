@@ -1,9 +1,54 @@
 {
- "updated": "2026-10-31T06:11-05:00",
+ "updated": "2026-10-31T15:45-05:00",
  "date": "2026-10-31",
  "source_file": "dtp-newsroom/buzz-2026-10-31.json",
  "note": "Hand-curated; not touched by update.py.",
  "items": [
+  {
+   "title": "MLP Nations Cup day 2: Latin America and Europe East top Pool 2, USA beats Europe West to stay unbeaten",
+   "summary": "Saturday's results at the first MLP Nations Cup in Farmers Branch, Texas, per the official MLP results on United Pickleball's page as of 3:37 p.m. CT Oct. 31: Latin America beat Asia International 3-0, USA beat Europe West 3-0, Europe East beat Asia International 3-1, and Latin America beat Australia 3-0. Pool 2 is done: the official table shows Latin America first and Europe East second (both 2-1), then Australia (2-1) and Asia International (0-3). In Pool 1, Asia Domestic and USA are both 2-0 and were playing each other at 4 p.m. CT, with Europe West vs Canada at 5:30 p.m. CT still to come. MLP hasn't announced Sunday's semifinal matchups yet; the semis are Sunday, Nov. 1 at 10 and 11:30 a.m. CT and the final at 2 p.m. CT on PickleballTV.",
+   "status": "confirmed",
+   "date": "2026-10-31",
+   "sources": [
+    {
+     "label": "United Pickleball: Nations Cup schedule, scores and standings (official MLP results)",
+     "url": "https://worlds.unitedpickleball.com/nations-cup"
+    },
+    {
+     "label": "@MajorLeaguePB: Latin America takes the win",
+     "url": "https://x.com/MajorLeaguePB/status/2116620986275545211"
+    },
+    {
+     "label": "@MajorLeaguePB: Europe-East takes down Asia International",
+     "url": "https://x.com/MajorLeaguePB/status/2116616527701233995"
+    },
+    {
+     "label": "@MajorLeaguePB: Day 2 preview",
+     "url": "https://x.com/MajorLeaguePB/status/2116548346433163563"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2116620986275545211"
+   ],
+   "social_angle": "Scoreboard post: 'Latin America went from 0-1 to the top of Pool 2. USA and Asia Domestic, both 2-0, settle Pool 1 tonight.' Link our Nations Cup page.",
+   "tags": [
+    "MLP",
+    "Nations Cup",
+    "Results",
+    "Team USA",
+    "Dallas"
+   ],
+   "links": [
+    {
+     "href": "/events/mlp-nations-cup-2026",
+     "label": "Nations Cup standings and results"
+    },
+    {
+     "href": "/guides/how-to-watch-pro-pickleball#nations-cup-final",
+     "label": "How to watch the Nations Cup final Sunday"
+    }
+   ]
+  },
   {
    "title": "MLP Nations Cup day 1: Asia Domestic and Australia start 2-0, USA beats Canada; group play wraps today",
    "summary": "Day 1 of the first MLP Nations Cup in Farmers Branch, Texas, is done. In Pool 1, Asia Domestic went 2-0 with wins over Europe - West and Canada, and Team USA beat Canada to sit 1-0; Canada is 0-2 and Europe - West 0-1. In Pool 2, Australia went 2-0 (Asia International, then Europe - East), Europe - East swept Latin America in three games and sits 1-1, and Asia International and Latin America are 0-1. Group play finishes today, Saturday, Oct. 31, including USA vs Europe - West at 11:30 a.m. CT and Asia Domestic vs USA at 4 p.m. CT; the top 2 in each pool reach Championship Sunday. Today is also MLP's Halloween costume day for fans. Full day 1 matches are posted on PickleballTV's YouTube channel.",

@@ -1027,18 +1027,25 @@ def make(page, e, fmt, PP, cur, ph):
         ("Sun Nov 1", "11:30 AM", "Semifinal 2", "Group A No. 1 vs Group B No. 2"),
         ("Sun Nov 1", "2:00 PM", "Final", "Semifinal winners"),
     ]
-    # Day 1 results: only matches marked Final on the United Pickleball match list (official MLP results) are listed.
-    NC_RESULTS_AS_OF = "7:10 AM"
-    NC_RESULTS = [  # (group, team1, team2, [(game, t1, t2), ...], winner, games won/lost)
-        ("Group B", "Australia", "Asia International", [("W", 11, 9), ("M", 12, 14), ("MX1", 11, 3), ("MX2", 11, 7)], "Australia", "3-1"),
+    # Results: only matches marked Final on the United Pickleball match list (official MLP results) are listed. Winner listed first; game scores winner-first.
+    NC_RESULTS_AS_OF = "3:37 PM"
+    NC_RESULTS = [  # (day, group, winner, loser, [(game, winner pts, loser pts), ...], games won-lost)
+        ("Fri Oct 30", "Group B", "Australia", "Asia International", [("W", 11, 9), ("M", 12, 14), ("MX1", 11, 3), ("MX2", 11, 7)], "3-1"),
+        ("Fri Oct 30", "Group B", "Europe East", "Latin America", [("W", 11, 6), ("M", 11, 7), ("MX1", 11, 8)], "3-0"),
+        ("Fri Oct 30", "Group A", "Asia Domestic", "Europe West", [("W", 4, 11), ("M", 11, 9), ("MX1", 11, 1), ("MX2", 11, 9)], "3-1"),
+        ("Fri Oct 30", "Group A", "USA", "Canada", [("W", 5, 11), ("M", 11, 4), ("MX1", 11, 0), ("MX2", 11, 1)], "3-1"),
+        ("Fri Oct 30", "Group B", "Australia", "Europe East", [("W", 11, 9), ("M", 11, 2), ("MX1", 7, 11), ("MX2", 11, 4)], "3-1"),
+        ("Fri Oct 30", "Group A", "Asia Domestic", "Canada", [("W", 12, 10), ("M", 11, 7), ("MX1", 11, 2)], "3-0"),
+        ("Sat Oct 31", "Group B", "Latin America", "Asia International", [("W", 11, 8), ("M", 11, 5), ("MX1", 11, 4)], "3-0"),
+        ("Sat Oct 31", "Group A", "USA", "Europe West", [("W", 11, 5), ("M", 11, 1), ("MX1", 11, 2)], "3-0"),
+        ("Sat Oct 31", "Group B", "Europe East", "Asia International", [("W", 11, 2), ("M", 7, 11), ("MX1", 11, 4), ("MX2", 11, 7)], "3-1"),
+        ("Sat Oct 31", "Group B", "Latin America", "Australia", [("W", 12, 10), ("M", 11, 2), ("MX1", 11, 5)], "3-0"),
     ]
-    # Standings: United Pickleball "Two pools of four" tables (official MLP results), read Oct 31 at NC_RESULTS_AS_OF CT. Pool 1 = Group A, Pool 2 = Group B.
-    NC_STAND = {"Pool 1 (Group A)": [("Asia Domestic", 2, 0, "+5", "+22"), ("USA", 1, 0, "+2", "+22"), ("Europe West", 0, 1, "−2", "−7"), ("Canada", 0, 2, "−5", "−37")],
-                "Pool 2 (Group B)": [("Australia", 2, 0, "+4", "+26"), ("Europe East", 1, 1, "+1", "−2"), ("Asia International", 0, 1, "−2", "−12"), ("Latin America", 0, 1, "−3", "−12")]}
-    # Day 1 winners follow from the official W-L table and the Friday pairings (each team's results are fixed by its record).
-    NC_DAY1 = [("Group B", "Australia def. Asia International"), ("Group B", "Europe - East def. Latin America"), ("Group A", "Asia Domestic def. Europe - West"),
-               ("Group A", "USA def. Canada"), ("Group B", "Australia def. Europe - East"), ("Group A", "Asia Domestic def. Canada")]
-    NC_SAT = [r for r in NC_SCHED if r[0] == "Sat Oct 31"]
+    # Not final at NC_RESULTS_AS_OF (United Pickleball match list): (start CT, group, match, status)
+    NC_PENDING = [("4:00 PM", "Group A", "USA vs Asia Domestic", "in progress"), ("5:30 PM", "Group A", "Europe West vs Canada", "not started")]
+    # Standings: United Pickleball "Two pools of four" tables (official MLP results), copied in the order shown, read Oct 31 at NC_RESULTS_AS_OF CT. Pool 1 = Group A, Pool 2 = Group B.
+    NC_STAND = {"Pool 1 (Group A)": [("Asia Domestic", 2, 0, "+5", "+22"), ("USA", 2, 0, "+5", "+47"), ("Canada", 0, 2, "−5", "−37"), ("Europe West", 0, 2, "−5", "−32")],
+                "Pool 2 (Group B)": [("Latin America", 2, 1, "+3", "+21"), ("Europe East", 2, 1, "+3", "+14"), ("Australia", 2, 1, "+1", "+9"), ("Asia International", 0, 3, "−7", "−44")]}
     NC_TV = [("Fri Oct 30", "Pool play", "10 AM – 7 PM CT", "11 AM – 8 PM ET"),
              ("Sat Oct 31", "Pool play", "10 AM – 7 PM CT", "11 AM – 8 PM ET"),
              ("Sun Nov 1", "Semifinals", "10 AM – 1 PM CT", "11 AM – 2 PM ET"),
@@ -1046,10 +1053,10 @@ def make(page, e, fmt, PP, cur, ph):
     nc_team_rows = "".join(f'<tr><td>{e(g)}</td><th scope="row">{e(t)}</th><td>{e(c)}</td><td>{e(r)}</td></tr>' for g, t, c, r in NC_TEAMS)
     nc_sched_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(t)}</td><td>{e(s)}</td><td>{"<b>" + e(m) + "</b>" if "USA" in m else e(m)}</td></tr>' for d, t, s, m in NC_SCHED)
     nc_tv_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(ct)}</td><td>{e(et)}</td></tr>' for d, w, ct, et in NC_TV)
-    nc_res_rows = "".join(f'<tr><td>{e(g)}</td><th scope="row">{e(w)} def. {e(b if w == a else a)}, {e(gs)}</th><td>{e(", ".join(f"{n} {x}-{y}" for n, x, y in games))}</td></tr>' for g, a, b, games, w, gs in NC_RESULTS)
+    def nc_res_rows(day):
+        return "".join(f'<tr><td>{e(g)}</td><th scope="row">{e(w)} def. {e(l)}, {e(gs)}</th><td>{e(", ".join(f"{n} {x}-{y}" for n, x, y in games))}</td></tr>' for d, g, w, l, games, gs in NC_RESULTS if d == day)
+    nc_pending_rows = "".join(f'<li>{e(t)} CT ({e(g)}): {"<b>" + e(m) + "</b>" if "USA" in m else e(m)}, {e(st)} when we checked</li>' for t, g, m, st in NC_PENDING)
     nc_stand_html = "".join(f'<h3>{e(p)}</h3><div class="tbl"><table><thead><tr><th>Team</th><th>W</th><th>L</th><th>Game diff.</th><th>Point diff.</th></tr></thead><tbody>' + "".join(f'<tr><th scope="row">{e(t)}</th><td>{w}</td><td>{l}</td><td>{e(gd)}</td><td>{e(pd)}</td></tr>' for t, w, l, gd, pd in rows) + "</tbody></table></div>" for p, rows in NC_STAND.items())
-    nc_day1_rows = "".join(f"<li>{e(r)} ({e(g)})</li>" for g, r in NC_DAY1)
-    nc_sat_rows = "".join(f'<li>{e(t)} CT ({e(s)}): {"<b>" + e(m) + "</b>" if "USA" in m else e(m)}</li>' for _, t, s, m in NC_SAT)
     nc_faq = [
         ("When is the MLP Nations Cup 2026?",
          "Friday, October 30 to Sunday, November 1, 2026, at Brookhaven Country Club, 3334 Golfing Green Drive, Farmers Branch, Texas. Play starts at 10 a.m. CT each day, and the final is Sunday, November 1 at 2 p.m. CT."),
@@ -1064,7 +1071,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("Are Nations Cup tickets the same as PPA Worlds tickets?",
          "No. United Pickleball says Nations Cup tickets are sold separately from Worlds week, on Tixr. MLP said on October 29 that last-minute tickets start at $25. Doors open one hour before the first matches."),
         ("Who is in the Nations Cup semifinals?",
-         "Not set yet as of 7:10 a.m. CT on October 31. The top two in each pool advance after Saturday's pool play. After day 1, Asia Domestic (2-0) and USA (1-0) led Pool 1, and Australia (2-0) and Europe East (1-1) led Pool 2, per the official standings. Semifinal 1 (Group A No. 2 vs Group B No. 1) is Sunday, November 1 at 10 a.m. CT, Semifinal 2 at 11:30 a.m. CT, and the final at 2 p.m. CT, all on PickleballTV."),
+         "MLP had not announced the semifinal matchups as of 3:37 p.m. CT on October 31; they are set after Saturday night's group play. At that time Pool 2 had finished, with the official table showing Latin America first and Europe East second (both 2-1, ahead of Australia, also 2-1). In Pool 1, Asia Domestic and USA were both 2-0 and playing each other at 4 p.m. CT, with Europe West vs Canada at 5:30 p.m. CT still to come. Semifinal 1 (Group A No. 2 vs Group B No. 1) is Sunday, November 1 at 10 a.m. CT, Semifinal 2 at 11:30 a.m. CT, and the final at 2 p.m. CT, all on PickleballTV."),
         ("Where can I see Nations Cup results?",
          "United Pickleball's Nations Cup page posts the match list and pool standings from the official MLP results, and live scores and standings are on majorleaguepickleball.co during the event. Our standings and results section is dated with the time we last read them."),
     ]
@@ -1084,21 +1091,20 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>The basics</h2>
 <p>The inaugural <b>MLP Nations Cup</b> runs <b>Friday, October 30 to Sunday, November 1, 2026</b> at <b>Brookhaven Country Club</b>, 3334 Golfing Green Drive, <b>Farmers Branch, Texas</b>, in the Dallas area. {ext(NC_UP, "United Pickleball")} calls it the official kickoff to the Opendoor Pickleball World Championships. Eight regional teams of six pros, <b>48 players</b> in all, play Major League Pickleball's coed team format. Group play is Friday and Saturday, and the <b>final is Sunday, November 1 at 2 PM CT</b>.</p>
 <h2>MLP Nations Cup standings and results</h2>
-<p class="meta">As of {e(NC_RESULTS_AS_OF)} CT Oct 31. Standings and results are from the official MLP results on the {ext(NC_UP, "United Pickleball Nations Cup page")}. No Saturday match was final yet (first serve 10 AM CT). For anything newer, see live scores on {ext(NC_MLP, "majorleaguepickleball.co")}.</p>
-<p>The top two in each pool advance to Sunday's semifinals.</p>
+<p class="meta">Results as of {e(NC_RESULTS_AS_OF)} CT Oct 31. Standings and results are from the official MLP results on the {ext(NC_UP, "United Pickleball Nations Cup page")}; only matches marked Final are listed. For anything newer, see live scores on {ext(NC_MLP, "majorleaguepickleball.co")}.</p>
+<p>The top two in each pool advance to Sunday's semifinals. Standings are copied in the order the official table shows them. Pool 2 play is complete; Pool 1 finishes Saturday night.</p>
 {nc_stand_html}
+<p>Game key: W women's doubles, M men's doubles, MX mixed doubles, DB DreamBreaker. Game scores are listed winner first, from the official match list.</p>
+<h3>Nations Cup pickleball results: day 2 (Saturday, October 31)</h3>
+<div class="tbl"><table><thead><tr><th>Group</th><th>Result</th><th>Game scores</th></tr></thead><tbody>{nc_res_rows("Sat Oct 31")}</tbody></table></div>
+<p><b>Still to finish Saturday</b> (not final as of {e(NC_RESULTS_AS_OF)} CT; Team USA in bold):</p>
+<ul>{nc_pending_rows}</ul>
 <h3>Nations Cup pickleball results: day 1 (Friday, October 30)</h3>
-<ul>{nc_day1_rows}</ul>
-<p>Game scores for the opener, from the official match list. Game key: W women's doubles, M men's doubles, MX mixed doubles, DB DreamBreaker.</p>
-<div class="tbl"><table><thead><tr><th>Group</th><th>Result</th><th>Game scores</th></tr></thead><tbody>{nc_res_rows}</tbody></table></div>
+<div class="tbl"><table><thead><tr><th>Group</th><th>Result</th><th>Game scores</th></tr></thead><tbody>{nc_res_rows("Fri Oct 30")}</tbody></table></div>
 <p>Rain moved Friday's opener indoors with a {ext(NC_X_RAIN, "10:30 AM CT target start")}.</p>
-<h2>Nations Cup pickleball semifinals and final</h2>
+<h2>Sunday, November 1: Nations Cup semifinals and final</h2>
 <ul><li><b>Semifinal 1:</b> Sun Nov 1, 10:00 AM CT: Group A No. 2 vs Group B No. 1</li><li><b>Semifinal 2:</b> Sun Nov 1, 11:30 AM CT: Group A No. 1 vs Group B No. 2</li><li><b>Final:</b> Sun Nov 1, 2:00 PM CT: semifinal winners</li></ul>
-<p>Matchups are set after Saturday's last pool match and were not confirmed as of {e(NC_RESULTS_AS_OF)} CT Oct 31. United Pickleball lists PickleballTV coverage of the semifinals from 10 AM to 1 PM CT and the final from 2 to 3:30 PM CT.</p>
-<h2>Up next Saturday (October 31)</h2>
-<p>Group play finishes Saturday, and the top two in each group reach Sunday's semifinals. Scheduled start times (CT), per the official schedule; Team USA in bold:</p>
-<ul>{nc_sat_rows}</ul>
-<p>Saturday is also MLP's Halloween costume contest for fans (see Going in person below).</p>
+<p>Matchups set after tonight's group play. MLP had not announced them as of {e(NC_RESULTS_AS_OF)} CT Oct 31. All on Championship Court, with PickleballTV coverage of the semifinals from 10 AM to 1 PM CT and the final from 2 to 3:30 PM CT, per United Pickleball.</p>
 <h2>Schedule</h2>
 <p>Every match is on Championship Court. Match order is from {ext(NC_MLP_SCHED, "MLP's schedule release")}, and start times are from the {ext(NC_UP, "United Pickleball match list")}. Team USA matches are in bold.</p>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Start (CT)</th><th>Round</th><th>Match</th></tr></thead><tbody>{nc_sched_rows}</tbody></table></div>
@@ -1135,8 +1141,8 @@ def make(page, e, fmt, PP, cur, ph):
           ("Major League Pickleball", NC_MLP, "live scores and standings")])}
 <p><a href="../tournaments.html">All tournaments</a> · <a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> · <a href="../guides/how-to-watch-pro-pickleball.html">How to watch pro pickleball</a></p>'''
     page("events/mlp-nations-cup-2026.html", "MLP Nations Cup Standings & Results 2026: How to Watch", nations,
-         "MLP Nations Cup 2026 standings and results after day 1, the semifinals and final Sun Nov 1 (10 AM and 2 PM CT), how to watch on PickleballTV, schedule and rosters.",
-         fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "results": NC_RESULTS, "stand": NC_STAND, "faq": nc_faq},
+         "MLP Nations Cup 2026 standings and results through day 2, the semifinals and final Sun Nov 1 (10 AM and 2 PM CT), how to watch on PickleballTV, schedule and rosters.",
+         fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "results": NC_RESULTS, "pending": NC_PENDING, "stand": NC_STAND, "faq": nc_faq},
          schema=[nc_event, nc_faq_ld], raw_title=True)
     # USA Pickleball Nationals page. Every fact below was read on the official Nationals pages on UN_CHECKED.
     UN_CHECKED = "2026-10-27"
