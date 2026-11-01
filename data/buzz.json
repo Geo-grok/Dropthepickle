@@ -5,6 +5,47 @@
  "note": "Hand-curated; not touched by update.py.",
  "items": [
   {
+   "title": "Team USA wins the first MLP Nations Cup, sweeping Latin America 3-0 in the final",
+   "summary": "Team USA is the inaugural MLP Nations Cup champion. In Sunday's final at Brookhaven Country Club in Farmers Branch, Texas, USA beat Latin America 3-0 (11-9 women's doubles, 11-1 men's doubles, 11-6 mixed), per the official MLP results on United Pickleball. USA reached the final by beating Europe East 3-1 (11-3, 11-6, 12-14, 11-7), and Latin America beat Asia Domestic 3-1 (11-3, 9-11, 11-3, 11-3). USA finished the event unbeaten. PPA Worlds pro qualifying starts Monday, Nov 2 at 8 a.m. CT at the same venue.",
+   "status": "confirmed",
+   "date": "2026-11-01",
+   "sources": [
+    {
+     "label": "United Pickleball: Nations Cup scores and standings (official MLP results)",
+     "url": "https://worlds.unitedpickleball.com/nations-cup"
+    },
+    {
+     "label": "@MajorLeaguePB: USA is the 2026 Nations Cup champions",
+     "url": "https://x.com/MajorLeaguePB/status/2117008397656863145"
+    },
+    {
+     "label": "@MajorLeaguePB: USA beats Europe East 3-1 to reach the final",
+     "url": "https://x.com/MajorLeaguePB/status/2116984380857999747"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2117008397656863145"
+   ],
+   "social_angle": "Champions post: 'USA sweeps Latin America 3-0 to win the first MLP Nations Cup.' Embed MLP's champions post. Tag MLP.",
+   "tags": [
+    "MLP",
+    "Nations Cup",
+    "Team USA",
+    "Final",
+    "Dallas"
+   ],
+   "links": [
+    {
+     "href": "/events/mlp-nations-cup-2026",
+     "label": "Nations Cup final results"
+    },
+    {
+     "href": "/events/opendoor-pickleball-world-championships",
+     "label": "Next up: PPA Worlds 2026"
+    }
+   ]
+  },
+  {
    "title": "MLP Nations Cup Championship Sunday: unbeaten USA meets Europe East, Latin America faces Asia Domestic in today's semifinals",
    "summary": "Pool play at the first MLP Nations Cup in Farmers Branch, Texas, is done. Team USA finished 3-0 to win Pool 1 after its Saturday night match with Asia Domestic went to a DreamBreaker, the only one of the event so far per MLP; Asia Domestic (2-1) took second. In Pool 2, Latin America, Europe East and Australia all finished 2-1, and the official table puts Latin America first and Europe East second, so Australia is out. Today's semifinals are Latin America vs Asia Domestic at 10 a.m. CT and USA vs Europe East at 11:30 a.m. CT, with the final from 2 p.m. CT, all on PickleballTV. Saturday highlights included Tyra Black and Kate Fahey winning a 13-11 women's doubles game for USA.",
    "status": "confirmed",
