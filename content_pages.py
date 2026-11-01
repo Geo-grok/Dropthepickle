@@ -809,7 +809,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p>Championship Sunday of the inaugural MLP Nations Cup is <b>Sunday, November 1, 2026</b> at Brookhaven Country Club in Farmers Branch, Texas. Per {ext(WT_NC_MLP, "MLP's official match schedule")} (Central Time), all on Championship Court:</p>
 <ul><li><b>Semifinal 1:</b> 10:00 AM CT (Group A No. 2 vs Group B No. 1)</li><li><b>Semifinal 2:</b> 11:30 AM CT (Group A No. 1 vs Group B No. 2)</li><li><b>Final:</b> 2:00 PM CT (semifinal winners)</li></ul>
 <p><b>Where to watch:</b> <b>PickleballTV</b> and the PickleballTV app. MLP says all Nations Cup matches are available there, and {ext(WT_NC_UP, "United Pickleball")} lists PickleballTV windows of 10 AM to 1 PM CT for the semifinals and 2 to 3:30 PM CT for the final, noting windows can move.</p>
-<p>The four semifinalists are set after Saturday's pool play, when the top two in each pool advance. For live standings and the matchups once they are confirmed, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 page</a>.</p>
+<p>Pool play is final: <b>Semifinal 1</b> is Asia Domestic vs Latin America and <b>Semifinal 2</b> is USA vs Europe East, from the official final pool tables and MLP's bracket. For standings and results, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 page</a>.</p>
 <h2>Who streams what</h2>
 <div class="tbl"><table><thead><tr><th>Tour or event</th><th>Streaming</th><th>National TV</th><th>Source</th></tr></thead><tbody>{wt_who_rows}</tbody></table></div>
 <p>The CBS window at the Carvana Masters ran 12 to 2 p.m. ET on Championship Sunday in January 2026, per {ext(WT_CBS, "Pickleball.com")}. MLP's viewer numbers are from its {ext(WT_MLP, "October 28, 2026 release")}.</p>
@@ -1023,12 +1023,12 @@ def make(page, e, fmt, PP, cur, ph):
         ("Sat Oct 31", "2:30 PM", "Group B", "Latin America vs Australia"),
         ("Sat Oct 31", "4:00 PM", "Group A", "USA vs Asia Domestic"),
         ("Sat Oct 31", "5:30 PM", "Group A", "Europe - West vs Canada"),
-        ("Sun Nov 1", "10:00 AM", "Semifinal 1", "Group A No. 2 vs Group B No. 1"),
-        ("Sun Nov 1", "11:30 AM", "Semifinal 2", "Group A No. 1 vs Group B No. 2"),
+        ("Sun Nov 1", "10:00 AM", "Semifinal 1", "Asia Domestic (Group A No. 2) vs Latin America (Group B No. 1)"),
+        ("Sun Nov 1", "11:30 AM", "Semifinal 2", "USA (Group A No. 1) vs Europe East (Group B No. 2)"),
         ("Sun Nov 1", "2:00 PM", "Final", "Semifinal winners"),
     ]
     # Results: only matches marked Final on the United Pickleball match list (official MLP results) are listed. Winner listed first; game scores winner-first.
-    NC_RESULTS_AS_OF = "3:37 PM"
+    NC_RESULTS_AS_OF = "8:40 PM"
     NC_RESULTS = [  # (day, group, winner, loser, [(game, winner pts, loser pts), ...], games won-lost)
         ("Fri Oct 30", "Group B", "Australia", "Asia International", [("W", 11, 9), ("M", 12, 14), ("MX1", 11, 3), ("MX2", 11, 7)], "3-1"),
         ("Fri Oct 30", "Group B", "Europe East", "Latin America", [("W", 11, 6), ("M", 11, 7), ("MX1", 11, 8)], "3-0"),
@@ -1040,11 +1040,13 @@ def make(page, e, fmt, PP, cur, ph):
         ("Sat Oct 31", "Group A", "USA", "Europe West", [("W", 11, 5), ("M", 11, 1), ("MX1", 11, 2)], "3-0"),
         ("Sat Oct 31", "Group B", "Europe East", "Asia International", [("W", 11, 2), ("M", 7, 11), ("MX1", 11, 4), ("MX2", 11, 7)], "3-1"),
         ("Sat Oct 31", "Group B", "Latin America", "Australia", [("W", 12, 10), ("M", 11, 2), ("MX1", 11, 5)], "3-0"),
+        ("Sat Oct 31", "Group A", "USA", "Asia Domestic", [("W", 13, 11), ("M", 6, 11), ("MX1", 12, 14), ("MX2", 11, 4), ("DB", 21, 18)], "3-2"),
+        ("Sat Oct 31", "Group A", "Europe West", "Canada", [("W", 11, 3), ("M", 2, 11), ("MX1", 12, 10), ("MX2", 11, 6)], "3-1"),
     ]
     # Not final at NC_RESULTS_AS_OF (United Pickleball match list): (start CT, group, match, status)
-    NC_PENDING = [("4:00 PM", "Group A", "USA vs Asia Domestic", "in progress"), ("5:30 PM", "Group A", "Europe West vs Canada", "not started")]
+    NC_PENDING = []  # pool play complete: all 12 group matches marked Final
     # Standings: United Pickleball "Two pools of four" tables (official MLP results), copied in the order shown, read Oct 31 at NC_RESULTS_AS_OF CT. Pool 1 = Group A, Pool 2 = Group B.
-    NC_STAND = {"Pool 1 (Group A)": [("Asia Domestic", 2, 0, "+5", "+22"), ("USA", 2, 0, "+5", "+47"), ("Canada", 0, 2, "−5", "−37"), ("Europe West", 0, 2, "−5", "−32")],
+    NC_STAND = {"Pool 1 (Group A)": [("USA", 3, 0, "+6", "+52"), ("Asia Domestic", 2, 1, "+4", "+17"), ("Europe West", 1, 2, "−3", "−26"), ("Canada", 0, 3, "−7", "−43")],
                 "Pool 2 (Group B)": [("Latin America", 2, 1, "+3", "+21"), ("Europe East", 2, 1, "+3", "+14"), ("Australia", 2, 1, "+1", "+9"), ("Asia International", 0, 3, "−7", "−44")]}
     NC_TV = [("Fri Oct 30", "Pool play", "10 AM – 7 PM CT", "11 AM – 8 PM ET"),
              ("Sat Oct 31", "Pool play", "10 AM – 7 PM CT", "11 AM – 8 PM ET"),
@@ -1065,13 +1067,13 @@ def make(page, e, fmt, PP, cur, ph):
         ("Who is on Team USA at the MLP Nations Cup?",
          "MLP lists Tyra Black, Anna Bright, Kate Fahey, Ben Johns, CJ Klinger and Will Howells, with captain Johnny Goldberg. Anna Leigh Waters is not on the roster."),
         ("When does Team USA play?",
-         "Team USA is in Group A. It plays Canada on Friday, October 30 at 2:30 p.m. CT, then Europe - West on Saturday at 11:30 a.m. CT and Asia Domestic on Saturday at 4 p.m. CT, per the official schedule."),
+         "Team USA won Group A at 3-0, beating Canada 3-1, Europe - West 3-0 and Asia Domestic 3-2 in a DreamBreaker. It plays Europe East in Semifinal 2 on Sunday, November 1 at 11:30 a.m. CT on PickleballTV, and the final is at 2 p.m. CT."),
         ("How does the MLP Nations Cup format work?",
          "Eight teams of six pros, 48 players in all, play MLP's coed team format in two groups of four. Each team plays the other three in its group on Friday and Saturday. The top two in each group reach Sunday's semifinals, where each group winner plays the other group's runner-up, and the winners meet in the final."),
         ("Are Nations Cup tickets the same as PPA Worlds tickets?",
          "No. United Pickleball says Nations Cup tickets are sold separately from Worlds week, on Tixr. MLP said on October 29 that last-minute tickets start at $25. Doors open one hour before the first matches."),
         ("Who is in the Nations Cup semifinals?",
-         "MLP had not announced the semifinal matchups as of 3:37 p.m. CT on October 31; they are set after Saturday night's group play. At that time Pool 2 had finished, with the official table showing Latin America first and Europe East second (both 2-1, ahead of Australia, also 2-1). In Pool 1, Asia Domestic and USA were both 2-0 and playing each other at 4 p.m. CT, with Europe West vs Canada at 5:30 p.m. CT still to come. Semifinal 1 (Group A No. 2 vs Group B No. 1) is Sunday, November 1 at 10 a.m. CT, Semifinal 2 at 11:30 a.m. CT, and the final at 2 p.m. CT, all on PickleballTV."),
+         "USA, Asia Domestic, Latin America and Europe East. Pool play finished Saturday night: the official final tables show USA (3-0) and Asia Domestic (2-1) as the top two in Pool 1 (Group A), and Latin America and Europe East (both 2-1, ahead of Australia, also 2-1, on game and point differential) as the top two in Pool 2 (Group B). Under MLP's published bracket, Semifinal 1 is Asia Domestic vs Latin America on Sunday, November 1 at 10 a.m. CT, Semifinal 2 is USA vs Europe East at 11:30 a.m. CT, and the final is at 2 p.m. CT, all on PickleballTV."),
         ("Where can I see Nations Cup results?",
          "United Pickleball's Nations Cup page posts the match list and pool standings from the official MLP results, and live scores and standings are on majorleaguepickleball.co during the event. Our standings and results section is dated with the time we last read them."),
     ]
@@ -1092,19 +1094,18 @@ def make(page, e, fmt, PP, cur, ph):
 <p>The inaugural <b>MLP Nations Cup</b> runs <b>Friday, October 30 to Sunday, November 1, 2026</b> at <b>Brookhaven Country Club</b>, 3334 Golfing Green Drive, <b>Farmers Branch, Texas</b>, in the Dallas area. {ext(NC_UP, "United Pickleball")} calls it the official kickoff to the Opendoor Pickleball World Championships. Eight regional teams of six pros, <b>48 players</b> in all, play Major League Pickleball's coed team format. Group play is Friday and Saturday, and the <b>final is Sunday, November 1 at 2 PM CT</b>.</p>
 <h2>MLP Nations Cup standings and results</h2>
 <p class="meta">Results as of {e(NC_RESULTS_AS_OF)} CT Oct 31. Standings and results are from the official MLP results on the {ext(NC_UP, "United Pickleball Nations Cup page")}; only matches marked Final are listed. For anything newer, see live scores on {ext(NC_MLP, "majorleaguepickleball.co")}.</p>
-<p>The top two in each pool advance to Sunday's semifinals. Standings are copied in the order the official table shows them. Pool 2 play is complete; Pool 1 finishes Saturday night.</p>
+<p>Pool play is complete: all 12 group matches are marked Final. The top two in each pool advance to Sunday's semifinals: <b>USA</b> and <b>Asia Domestic</b> from Pool 1, <b>Latin America</b> and <b>Europe East</b> from Pool 2. Standings are copied in the order the official table shows them; Pool 2's three 2-1 teams are separated by game and point differential, which knocks out Australia.</p>
 {nc_stand_html}
 <p>Game key: W women's doubles, M men's doubles, MX mixed doubles, DB DreamBreaker. Game scores are listed winner first, from the official match list.</p>
 <h3>Nations Cup pickleball results: day 2 (Saturday, October 31)</h3>
 <div class="tbl"><table><thead><tr><th>Group</th><th>Result</th><th>Game scores</th></tr></thead><tbody>{nc_res_rows("Sat Oct 31")}</tbody></table></div>
-<p><b>Still to finish Saturday</b> (not final as of {e(NC_RESULTS_AS_OF)} CT; Team USA in bold):</p>
-<ul>{nc_pending_rows}</ul>
+<p>Team USA beat Asia Domestic 3-2 in a DreamBreaker (21-18) to finish 3-0 and top Pool 1.</p>
 <h3>Nations Cup pickleball results: day 1 (Friday, October 30)</h3>
 <div class="tbl"><table><thead><tr><th>Group</th><th>Result</th><th>Game scores</th></tr></thead><tbody>{nc_res_rows("Fri Oct 30")}</tbody></table></div>
 <p>Rain moved Friday's opener indoors with a {ext(NC_X_RAIN, "10:30 AM CT target start")}.</p>
 <h2>Sunday, November 1: Nations Cup semifinals and final</h2>
-<ul><li><b>Semifinal 1:</b> Sun Nov 1, 10:00 AM CT: Group A No. 2 vs Group B No. 1</li><li><b>Semifinal 2:</b> Sun Nov 1, 11:30 AM CT: Group A No. 1 vs Group B No. 2</li><li><b>Final:</b> Sun Nov 1, 2:00 PM CT: semifinal winners</li></ul>
-<p>Matchups set after tonight's group play. MLP had not announced them as of {e(NC_RESULTS_AS_OF)} CT Oct 31. All on Championship Court, with PickleballTV coverage of the semifinals from 10 AM to 1 PM CT and the final from 2 to 3:30 PM CT, per United Pickleball.</p>
+<ul><li><b>Semifinal 1:</b> Sun Nov 1, 10:00 AM CT: Asia Domestic (Group A No. 2) vs Latin America (Group B No. 1)</li><li><b>Semifinal 2:</b> Sun Nov 1, 11:30 AM CT: <b>USA</b> (Group A No. 1) vs Europe East (Group B No. 2)</li><li><b>Final:</b> Sun Nov 1, 2:00 PM CT: semifinal winners</li></ul>
+<p>Matchups follow MLP's published bracket (Group A No. 2 vs Group B No. 1, then Group A No. 1 vs Group B No. 2) applied to the final official pool tables; the official match list had not posted Sunday's matches yet as of {e(NC_RESULTS_AS_OF)} CT Oct 31. All on Championship Court, with PickleballTV coverage of the semifinals from 10 AM to 1 PM CT and the final from 2 to 3:30 PM CT, per United Pickleball.</p>
 <h2>Schedule</h2>
 <p>Every match is on Championship Court. Match order is from {ext(NC_MLP_SCHED, "MLP's schedule release")}, and start times are from the {ext(NC_UP, "United Pickleball match list")}. Team USA matches are in bold.</p>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Start (CT)</th><th>Round</th><th>Match</th></tr></thead><tbody>{nc_sched_rows}</tbody></table></div>
@@ -1114,7 +1115,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p>Neither page lists any other TV broadcast, such as Tennis Channel, for the Nations Cup. For PickleballTV free vs paid and the rest of Worlds week, see <a href="../guides/how-to-watch-pro-pickleball.html">how to watch pro pickleball</a>.</p>
 <h2>Team USA</h2>
 <p>Team USA plays in Group A, with captain <b>Johnny Goldberg</b>. MLP's roster: <b>Ben Johns, CJ Klinger, Will Howells, Tyra Black, Anna Bright and Kate Fahey</b>. {ext(NC_X_USA, "MLP notes")} that St. Louis Shock teammates Bright and Fahey reunite on the USA squad. {ext(NC_YAHOO, "Yahoo Sports")} points out that <b>Anna Leigh Waters</b> is not on the team.</p>
-<ul><li>Fri Oct 30, 2:30 PM CT: USA vs Canada</li><li>Sat Oct 31, 11:30 AM CT: USA vs Europe - West</li><li>Sat Oct 31, 4:00 PM CT: USA vs Asia Domestic</li></ul>
+<ul><li>Fri Oct 30, 2:30 PM CT: USA def. Canada 3-1</li><li>Sat Oct 31, 11:30 AM CT: USA def. Europe - West 3-0</li><li>Sat Oct 31, 4:00 PM CT: USA def. Asia Domestic 3-2 (DreamBreaker 21-18)</li><li>Sun Nov 1, 11:30 AM CT: semifinal vs Europe East</li></ul>
 <h2>Format</h2>
 <p>The eight teams are split into two groups of four. Each team plays the other three in its group across Friday and Saturday. The top two in each group advance to Sunday's single-elimination bracket. Semifinal 1 is the Group A runner-up against the Group B winner, and Semifinal 2 is the Group A winner against the Group B runner-up. The two winners meet in the final for the first Nations Cup title.</p>
 <h2>Teams and rosters</h2>
@@ -1141,7 +1142,7 @@ def make(page, e, fmt, PP, cur, ph):
           ("Major League Pickleball", NC_MLP, "live scores and standings")])}
 <p><a href="../tournaments.html">All tournaments</a> · <a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> · <a href="../guides/how-to-watch-pro-pickleball.html">How to watch pro pickleball</a></p>'''
     page("events/mlp-nations-cup-2026.html", "MLP Nations Cup Standings & Results 2026: How to Watch", nations,
-         "MLP Nations Cup 2026 standings and results through day 2, the semifinals and final Sun Nov 1 (10 AM and 2 PM CT), how to watch on PickleballTV, schedule and rosters.",
+         "MLP Nations Cup 2026 final pool standings and results, semifinals Sun Nov 1 (USA vs Europe East, Asia Domestic vs Latin America), final 2 PM CT, how to watch on PickleballTV.",
          fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "results": NC_RESULTS, "pending": NC_PENDING, "stand": NC_STAND, "faq": nc_faq},
          schema=[nc_event, nc_faq_ld], raw_title=True)
     # USA Pickleball Nationals page. Every fact below was read on the official Nationals pages on UN_CHECKED.
