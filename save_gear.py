@@ -19,29 +19,40 @@ CSS = (".savegear{background:var(--navy);border-radius:16px;padding:12px;margin:
        "background:#16264a;color:#fff;font:800 17px/1.2 Inter,system-ui,sans-serif;text-decoration:none;text-align:center;box-shadow:inset 0 0 0 2px rgba(198,244,50,.55)}"
        ".savegear a small{display:block;margin-top:3px;font:700 16px/1.2 Inter,system-ui,sans-serif;color:#d5deeb}"
        ".savegear a.hot{flex-basis:100%;background:var(--neon);color:var(--navy);box-shadow:none}.savegear a.hot small{color:var(--navy)}"
-       ".savegear a:hover{background:#1f3360}.savegear a.hot:hover{background:#d6ff4a}")
+       ".savegear a:hover{background:#1f3360}.savegear a.hot:hover{background:#d6ff4a}"
+       ".savegear.sgplus a{flex-basis:120px}.savegear.sgplus a.hot{flex-basis:100%}")
 
 SKIP = {"guides/pickleball-gift-guide-2026.html"}  # already a shopping page full of these links
 def wants(fn):
     if fn in SKIP: return False
     return fn in ("buzz.html", "news.html", "tournaments.html") or fn.startswith(("guides/", "events/", "articles/"))
 
-def html():
+# Tournament-traffic pages (Worlds week) also get gift guide, Black Friday hub and Top 5 buttons.
+# Scoped by filename so event pages (events/*) keep their exact built HTML.
+PLUS = {"buzz.html", "tournaments.html", "guides/how-to-watch-pro-pickleball.html"}
+EARLY = {"tournaments.html"}  # intro paragraphs push the row below the fold at 320px, so put it right after the header
+def html(plus=False):
     brands = len({c.get("brand") for c in _load("discount-codes.json").get("codes", []) if c.get("brand")})
     tracked = len(_load("price-tracker.json").get("rows", []))
     codes = f"<small>{brands} brands</small>" if brands else ""
     track = f"<small>{tracked} paddles</small>" if tracked else ""
-    return ('<nav class="savegear" aria-label="Save on pickleball gear"><p>🥒 <span>Save on gear:</span> codes, deals and price drops</p><div class="sgr">'
+    more = ('<a href="/guides/pickleball-gift-guide-2026">🎁 Gift guide</a>'
+            '<a href="/deals/black-friday-pickleball-deals-2026">🖤 Black Friday deals</a>'
+            '<a href="/#top5">🏆 Top 5 paddles</a>') if plus else ""
+    return (f'<nav class="savegear{" sgplus" if plus else ""}" aria-label="Save on pickleball gear"><p>🥒 <span>Save on gear:</span> codes, deals and price drops</p><div class="sgr">'
             f'<a class="hot" href="/discount-codes">🏷️ Discount codes{codes}</a>'
             '<a href="/deals">🔥 Paddle deals<small>Price drops</small></a>'
-            f'<a href="/price-tracker">📉 Price tracker{track}</a></div></nav>')
+            f'<a href="/price-tracker">📉 Price tracker{track}</a>{more}</div></nav>')
 
 # First block-level section after the page header: an <h2>, a <section>/<aside>/<nav>, or a card grid.
 _NEXT = re.compile(r'<(?:h2|section|aside|nav|div class="(?:grid|tbl)")[\s>]')
 def insert(fn, body):
     """Put the row right before the first section that follows the intro; append if the page has none."""
     if not wants(fn): return body
-    row = html()
+    row = html(fn in PLUS)
+    if fn in EARLY and body.startswith('<section class="pagehead">'):
+        k = body.index('</section>') + len('</section>')
+        return body[:k] + row + body[k:]
     m = re.search(r'</section>', body) if body.startswith('<section class="pagehead">') else re.search(r'</h1>', body)
     start = m.end() if m else 0
     n = _NEXT.search(body, start)
