@@ -9,6 +9,14 @@
    "date": "2026-10-31"
   },
   {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "CPX Hyper+ vs Honolulu J6CR vs Spartus Spitfire vs Vatic V Sol Tour vs Friday Aura Pro",
+   "link": "https://www.youtube.com/watch?v=H0OB5g8BB_I",
+   "video_id": "H0OB5g8BB_I",
+   "date": "2026-10-31"
+  },
+  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "Volair CMD Hybrid Update: Great Spin, But Why Is It So Underpowered?",
@@ -471,14 +479,6 @@
    "link": "https://www.youtube.com/watch?v=6jvUNZ02QH0",
    "video_id": "6jvUNZ02QH0",
    "date": "2026-10-04"
-  },
-  {
-   "channel": "PickleballPlaybook - Austin Hardy",
-   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
-   "title": "Honolulu J2CR vs J3CR vs J6CR on court paddle review & drill test",
-   "link": "https://www.youtube.com/watch?v=3WQ08ZV97a4",
-   "video_id": "3WQ08ZV97a4",
-   "date": "2026-09-30"
   }
  ],
  "all_items": [
@@ -488,6 +488,14 @@
    "title": "RPM Jade Review: Love It or Hate It, There’s More to the Story",
    "link": "https://www.youtube.com/watch?v=w-ALZTCD6bk",
    "video_id": "w-ALZTCD6bk",
+   "date": "2026-10-31"
+  },
+  {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "CPX Hyper+ vs Honolulu J6CR vs Spartus Spitfire vs Vatic V Sol Tour vs Friday Aura Pro",
+   "link": "https://www.youtube.com/watch?v=H0OB5g8BB_I",
+   "video_id": "H0OB5g8BB_I",
    "date": "2026-10-31"
   },
   {
@@ -1083,14 +1091,6 @@
    "date": "2026-10-04"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "Joola Power FX First Impressions | Can it Keep up With the Foam Market?",
-   "link": "https://www.youtube.com/watch?v=q0MBOao2sa8",
-   "video_id": "q0MBOao2sa8",
-   "date": "2026-10-02"
-  },
-  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "JOOLA's First Foam Paddle: Cash or Trash? 💰🗑️ Power FX Review + Holbrook Fuze Vantagrit",
@@ -1120,14 +1120,6 @@
    "title": "Are Pickleballs Too Fast, Neonic NEOGRIT, Gearbox Pressure X, Prototype Testing",
    "link": "https://www.youtube.com/watch?v=zkScWko2G9A",
    "video_id": "zkScWko2G9A",
-   "date": "2026-09-30"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Foam Recoil Pickleball Paddle Review: Spitfire-Level Grit With a Denser Feel (16mm, $230)",
-   "link": "https://www.youtube.com/watch?v=o8PG7_COrVo",
-   "video_id": "o8PG7_COrVo",
    "date": "2026-09-30"
   },
   {
@@ -1313,14 +1305,6 @@
    "link": "https://www.youtube.com/watch?v=YTQVH4tiozA",
    "video_id": "YTQVH4tiozA",
    "date": "2026-08-15"
-  },
-  {
-   "channel": "PickleBaller",
-   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
-   "title": "Luzz Inferno 2 vs Inferno Pro vs Inferno Frozen vs Tornazo Paddle Review",
-   "link": "https://www.youtube.com/watch?v=vbwrznek9ko",
-   "video_id": "vbwrznek9ko",
-   "date": "2026-08-14"
   },
   {
    "channel": "Farmer Lanky Pickleball",
@@ -1580,7 +1564,7 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (8)",
+  "Pickleball Studio": "ok (7)",
   "John Kew Pickleball": "ok (9)",
   "Pickleball Effect": "ok (7)",
   "Zane Navratil Pickleball": "ok (0)",
@@ -1602,7 +1586,7 @@
   "Pickleball Playbook Paddles": "ok (15)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
-  "Pickleball Advocate": "ok (13)"
+  "Pickleball Advocate": "ok (12)"
  },
- "updated": "2026-10-31T11:30"
+ "updated": "2026-11-01T11:29"
 }
