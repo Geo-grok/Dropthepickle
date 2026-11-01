@@ -814,8 +814,9 @@ def make(page, e, fmt, PP, cur, ph):
 <p>Pool play is final: <b>Semifinal 1</b> is Asia Domestic vs Latin America and <b>Semifinal 2</b> is USA vs Europe East, from the official final pool tables and MLP's bracket. For standings and results, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 page</a>.</p>
 <h2 id="ppa-worlds">How to watch PPA Worlds 2026 (Nov 2 to 8)</h2>
 <p>The Opendoor Pickleball World Championships follow the Nations Cup at Brookhaven Country Club in Farmers Branch, Texas. Per {ext(WT_UP_PRO, "United Pickleball")} (CT) and the {ext(WT_PPA, "PPA watch page")} (ET):</p>
-<ul><li><b>Mon Nov 2:</b> pro qualifying; no stream window listed.</li><li><b>Tue Nov 3 to Sat Nov 7:</b> round of 64 to semifinals on <b>PickleballTV</b>, 11 AM to 7 PM CT (6 PM on Thursday).</li><li><b>Thu Nov 5:</b> Celebrity Pro-Am on <b>Tennis Channel</b> and PickleballTV, 7 to 9 PM CT.</li><li><b>Sun Nov 8:</b> Championship Sunday on PickleballTV, 10 AM to 4 PM CT.</li></ul>
+<ul><li><b>Mon Nov 2:</b> pro qualifying in all five pro events; no stream window listed. First serve is 11 AM CT per the PPA or 8 AM CT per United Pickleball; follow live scores and brackets on the PPA's MATCHDAY app. Details: <a href="../events/opendoor-pickleball-world-championships.html#qualifying">Worlds qualifying Monday</a>.</li><li><b>Tue Nov 3 to Sat Nov 7:</b> round of 64 to semifinals on <b>PickleballTV</b>, 11 AM to 7 PM CT (6 PM on Thursday).</li><li><b>Thu Nov 5:</b> Celebrity Pro-Am on <b>Tennis Channel</b> and PickleballTV, 7 to 9 PM CT.</li><li><b>Sun Nov 8:</b> Championship Sunday on PickleballTV, 10 AM to 4 PM CT.</li></ul>
 <p>The PPA released the seeded draws on October 31. Full day-by-day table, draws and FAQs: <a href="../events/opendoor-pickleball-world-championships.html#how-to-watch">how to watch Pickleball Worlds 2026</a>.</p>
+<p><b>Gear up for Worlds:</b> <a href="../paddle-volair-mach-1-forza.html">Volair Mach 1 Forza</a> · <a href="../paddle-volair-mach-2-forza.html">Volair Mach 2 Forza</a> · <a href="../paddle-volair-cmd-el-16mm.html">Volair CMD EL 16mm</a> · <a href="../guides/pickleball-gift-guide-2026.html">2026 gift guide</a> · <a href="../discount-codes.html">discount codes</a></p>
 <h2>Who streams what</h2>
 <div class="tbl"><table><thead><tr><th>Tour or event</th><th>Streaming</th><th>National TV</th><th>Source</th></tr></thead><tbody>{wt_who_rows}</tbody></table></div>
 <p>The CBS window at the Carvana Masters ran 12 to 2 p.m. ET on Championship Sunday in January 2026, per {ext(WT_CBS, "Pickleball.com")}. MLP's viewer numbers are from its {ext(WT_MLP, "October 28, 2026 release")}.</p>
@@ -872,7 +873,7 @@ def make(page, e, fmt, PP, cur, ph):
     # ----- Opendoor Pickleball World Championships 2026: full search-answer page (refresh of the event card) -----
     # Every fact read on the linked official pages (plus the cited Kitchen schedule) on OW_CHECKED. Times CT (UTC-6 after DST ends Nov 1).
     from urls import clean_path as _cp
-    OW_CHECKED = "2026-10-31"
+    OW_CHECKED = "2026-11-01"
     ow_checked = _dt.date.fromisoformat(OW_CHECKED).strftime("%B %-d, %Y")
     OW_FN = "events/opendoor-pickleball-world-championships.html"
     PPA_WATCH, PPA_TV = "https://www.ppatour.com/watch/", "https://www.ppatour.com/watch/tv/"
@@ -884,7 +885,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("Fri Oct 30", "MLP Nations Cup: round-robin play (8 international teams)", "Pool play on PickleballTV 10 AM – 7 PM"),
         ("Sat Oct 31", "MLP Nations Cup: round-robin play", "Pool play on PickleballTV 10 AM – 7 PM"),
         ("Sun Nov 1", "MLP Nations Cup: single-elimination semifinals and final", "Semis 10 AM – 1 PM, finals 2 – 3:30 PM on PickleballTV"),
-        ("Mon Nov 2", "PPA pro qualifying, all five pro events", "No stream window listed"),
+        ("Mon Nov 2", "PPA pro qualifying, all five pro events", "First serve 11 AM (PPA) or 8 AM (United Pickleball); no stream window listed"),
         ("Tue Nov 3", "Main draw: round of 64", "First serve 11 AM; PickleballTV 11 AM – 7 PM"),
         ("Wed Nov 4", "Main draw: round of 32", "First serve 11 AM; PickleballTV 11 AM – 7 PM"),
         ("Thu Nov 5", "Main draw: round of 16. PPA Challenger Showdown singles pool play. Celebrity Pickleball Showdown at 7 PM", "PickleballTV 11 AM – 6 PM; Pro-Am 7 – 9 PM on Tennis Channel and PickleballTV"),
@@ -917,6 +918,10 @@ def make(page, e, fmt, PP, cur, ph):
          "The PPA Tour's Opendoor Pickleball World Championships run November 2 to 8, 2026: pro qualifying on Monday, November 2, then the main draw from the round of 64 on Tuesday, November 3 through Championship Sunday on November 8. United Pickleball bills the full Worlds week as October 30 to November 8 because the MLP Nations Cup opens it on October 30 to November 1."),
         ("When are the PPA Worlds qualifiers?",
          "PPA Worlds qualifiers are on Monday, November 2, 2026, the first day of the PPA event, and Championship Sunday is November 8, per United Pickleball's week schedule. The PPA lists Monday's first serve at 11 a.m. CT, while United Pickleball's pro schedule shows 8 a.m., so check the order of play."),
+        ("When does PPA Worlds qualifying start?",
+         "Pro qualifying for all five pro events is Monday, November 2, 2026. The PPA event page lists first serve at 11 a.m. local (CT), while United Pickleball's pro schedule lists pro qualifying at 8 a.m. CT. The two official pages still disagreed when we checked, so confirm in the order of play on the PPA's MATCHDAY app."),
+        ("Is Worlds qualifying streamed?",
+         "No stream window is listed for Monday qualifying. The PPA event page shows no live channel for Monday, November 2, and United Pickleball's PickleballTV schedule starts with the round of 64 on Tuesday, November 3. The PPA's MATCHDAY app lists live scores, brackets and order of play."),
         ("Is the main draw November 2 to 8 or November 3 to 8?",
          "Both dates appear because they describe different things. November 2 to 8 is the whole PPA event, including Monday qualifying. The main draw starts with the round of 64 on Tuesday, November 3 and ends November 8."),
         ("Where is PPA Worlds 2026?",
@@ -953,8 +958,23 @@ def make(page, e, fmt, PP, cur, ph):
              (_cp("guides/pickleball-gift-guide-2026.html"), "2026 pickleball gift guide"),
              (_cp("deals/black-friday-pickleball-deals-2026.html"), "Black Friday paddle deals hub")]
     ow_links = '<aside class="holi" aria-label="Related guides"><p><b>Plan the rest of Worlds week</b></p>' + "".join(f'<a class="holia" href="/{u}">{e(t)} →</a>' for u, t in ow_go) + "</aside>"
+    OW_GEAR = [(_cp("paddle-volair-mach-1-forza.html"), "Volair Mach 1 Forza review"),
+               (_cp("paddle-volair-mach-2-forza.html"), "Volair Mach 2 Forza review"),
+               (_cp("paddle-volair-cmd-el-16mm.html"), "Volair CMD EL 16mm review"),
+               (_cp("guides/pickleball-gift-guide-2026.html"), "2026 pickleball gift guide"),
+               (_cp("discount-codes.html"), "Pickleball discount codes")]
+    ow_gear = '<aside class="holi" aria-label="Gear up for Worlds"><p><b>Gear up for Worlds</b></p>' + "".join(f'<a class="holia" href="/{u}">{e(t)} →</a>' for u, t in OW_GEAR) + "</aside>"
     ow = f'''<h1>Pickleball World Championships 2026: schedule, how to watch and tickets</h1>
 <p class="meta">The Carvana PPA Tour's Opendoor Pickleball World Championships ("PPA Worlds"), Farmers Branch, Texas (Dallas area). Facts from the PPA Tour and United Pickleball pages, checked {ow_checked}. All times Central (CT). Times can move, so confirm on the official pages.</p>
+<h2 id="qualifying">Worlds qualifying Monday, Nov 2: schedule and how to follow</h2>
+<p><b>What it is:</b> Monday, November 2 is pro qualifying for all five pro events (men's and women's singles, men's and women's doubles, and mixed), per the {ext(PPA_EV, "PPA event page")}. Qualifying is the day before the seeded main draw starts with the round of 64 on Tuesday.</p>
+<ul>
+<li><b>First serve:</b> 11 AM CT on the {ext(PPA_EV, "PPA event page")}; 8 AM CT on {ext(UP_PRO, "United Pickleball's pro schedule")}. The two official pages still disagreed when we checked on {ow_checked}, so confirm in the order of play.</li>
+<li><b>Streaming:</b> no stream window is listed for Monday. The PPA event page shows no live channel for qualifying day, and United Pickleball's PickleballTV schedule starts Tuesday.</li>
+<li><b>Where to follow:</b> the PPA's MATCHDAY app (iOS and Android) lists live scores, brackets, order of play and match alerts, per the {ext(PPA_WATCH, "PPA watch page")}. The PPA event page lists Grounds Pass tickets for Monday if you want to go.</li>
+</ul>
+<p><b>Then the main draw, November 3 to 8:</b> the round of 64 starts Tuesday at 11 AM CT, with PickleballTV every day through Championship Sunday. See <a href="#how-to-watch">how to watch Pickleball Worlds 2026</a> for the full day-by-day windows.</p>
+{ow_gear}
 <h2>Pickleball Worlds 2026 schedule: Worlds week vs the main draw</h2>
 <ul>
 <li><b>Worlds week: October 30 to November 8, 2026.</b> {ext(UP_HOME, "United Pickleball")} bills ten days of Worlds, opened by the MLP Nations Cup on October 30 to November 1.</li>
@@ -968,7 +988,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>Day-by-day schedule (CT): PPA Worlds qualifiers to Championship Sunday</h2>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Pro events and divisions</th><th>Start and stream (CT)</th></tr></thead><tbody>{ow_day_rows}</tbody></table></div>
 <p>Pro rounds and first-serve times are from the {ext(PPA_EV, "PPA event page")}; morning and evening session splits are from {ext(UP_TIX, "United Pickleball's ticket page")}; stream windows are from the {ext(UP_PRO, "United Pickleball pro page")} (CT) and match the {ext(PPA_WATCH, "PPA watch page")} (ET, one hour later). Nations Cup windows are converted from the PPA watch page's ET listing. The five pro events are men's and women's singles, men's and women's doubles, and mixed doubles. Amateur divisions run all week; your times are on your bracket at pickleballtournaments.com.</p>
-<p><b>Conflict:</b> the PPA lists Monday's pro qualifying first serve at 11 AM, while United Pickleball's pro schedule shows 8 AM. Check the order of play before you go.</p>
+<p><b>Conflict:</b> the PPA lists Monday's pro qualifying first serve at 11 AM, while United Pickleball's pro schedule shows 8 AM; both still said so on {ow_checked}. Check the order of play before you go. More on <a href="#qualifying">Monday qualifying</a>.</p>
 <p>Off the pro courts: live music runs on the Pickleball Boulevard Stage every day from November 1 to 7, with Clayton Mullen on Friday, November 6 from 6:30 to 8 PM, per {ext(UP_SCHED, "United Pickleball's schedule")}. {ext(KITCHEN, "The Kitchen")} has the full daily list of clinics and socials.</p>
 <h2 id="how-to-watch">How to watch Pickleball Worlds 2026</h2>
 <p>The short answer: <b>PickleballTV every day of the main draw</b> (Tuesday, November 3 to Sunday, November 8), plus the <b>Celebrity Pro-Am on Tennis Channel</b> on Thursday, November 5 at 7 PM CT. All times Central (CT), from the {ext(UP_PRO, "United Pickleball pro page")}; the {ext(PPA_WATCH, "PPA watch page")} lists the same windows in ET, one hour later. Windows can move.</p>
@@ -1006,7 +1026,7 @@ def make(page, e, fmt, PP, cur, ph):
           ("The Kitchen: 2026 Worlds schedule of events", KITCHEN, "daily programming, updated Oct 29, 2026")])}
 <p><a href="../tournaments.html">All tournaments</a></p>'''
     page(OW_FN, "Pickleball Worlds 2026 Schedule and How to Watch (TV, CT)", ow,
-         "How to watch Pickleball Worlds 2026: PickleballTV every day Nov 3-8, Celebrity Pro-Am on Tennis Channel Thu Nov 5 at 7 PM CT. Daily schedule in CT, draws, tickets.",
+         "Pickleball Worlds 2026: qualifying Mon Nov 2, then PickleballTV every day Nov 3-8 and the Celebrity Pro-Am on Tennis Channel Thu Nov 5, 7 PM CT. Schedule in CT.",
          fresh={"checked": OW_CHECKED, "days": OW_DAYS, "tix": OW_TIX, "champs": OW_CHAMPS, "faq": ow_faq, "event": ow_event},
          schema=[ow_event, ow_faq_ld], raw_title=True)
     # MLP Nations Cup page. Every fact below was read on the linked official pages (and the cited preview) on NC_CHECKED.

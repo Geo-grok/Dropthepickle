@@ -591,7 +591,11 @@ def evwk_html():
              '<script>if(Date.now()>=Date.UTC(2026,10,2,6))document.getElementById("evwk-ncf").hidden=true</script>') if evwk_build_date() <= datetime.date(2026, 11, 1) else ""
     # Worlds how-to-watch link from Sun Nov 1 (CT) through EVWK_END; client-side shown from Nov 1 00:00 CDT (05:00 UTC).
     if evwk_build_date() >= datetime.date(2026, 11, 1):
-        watch += '<a class="evwk-watch" href="/events/opendoor-pickleball-world-championships#how-to-watch">How to watch Pickleball Worlds 2026 →</a>'
+        if evwk_build_date() == datetime.date(2026, 11, 2):  # qualifying day; client-side swaps to how-to-watch from Nov 3 00:00 CST (06:00 UTC)
+            watch += ('<a class="evwk-watch" id="evwk-pwq" href="/events/opendoor-pickleball-world-championships#qualifying">Worlds qualifying today: times and how to follow →</a>'
+                      '<script>if(Date.now()>=Date.UTC(2026,10,3,6)){var q=document.getElementById("evwk-pwq");q.href="/events/opendoor-pickleball-world-championships#how-to-watch";q.textContent="How to watch Pickleball Worlds 2026 →"}</script>')
+        else:
+            watch += '<a class="evwk-watch" href="/events/opendoor-pickleball-world-championships#how-to-watch">How to watch Pickleball Worlds 2026 →</a>'
     elif evwk_build_date() >= datetime.date(2026, 10, 31):
         watch += ('<a class="evwk-watch" id="evwk-pwc" href="/events/opendoor-pickleball-world-championships#how-to-watch" hidden>How to watch Pickleball Worlds 2026 →</a>'
                   '<script>if(Date.now()>=Date.UTC(2026,10,1,5))document.getElementById("evwk-pwc").hidden=false</script>')
