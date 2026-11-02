@@ -1,6 +1,41 @@
 {
  "items": [
   {
+   "source": "Pickleball Union",
+   "title": "The Cold-Weather Pickleball Guide Nobody Gives You",
+   "link": "https://pickleballunion.com/cold-weather-pickleball-guide/",
+   "date": "2026-11-02",
+   "summary": "Pickleball Union story from 2026-11-02, filed under Training, Gear, Injury Prevention & Recovery."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "How Pickleball Paddles Are Made, From Plywood to Full Foam",
+   "link": "https://pickleballunion.com/how-pickleball-paddles-are-made/",
+   "date": "2026-11-02",
+   "summary": "Pickleball Union story from 2026-11-02, filed under Gear, Carbon Fiber Paddles, Cold-Pressed Paddles."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "The “Higher Net” Trick That Can Instantly Improve Your Pickleball",
+   "link": "https://pickleballunion.com/net-clearance-pickleball/",
+   "date": "2026-11-02",
+   "summary": "Pickleball Union story from 2026-11-02, filed under Beginner Play, Intermediate Play, Tips & Strategy."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "Team USA wins inaugural Major League Pickleball Nations Cup",
+   "link": "https://thekitchenpickle.com/blogs/news/major-league-pickleball-nations-cup-2026-recap/",
+   "date": "2026-11-01",
+   "summary": "The Kitchen Pickle story from 2026-11-01, filed under Major League Pickleball, MLP, Pro pickleball."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "Paddletek launches new Bantam Jolt and Tempest Veyra paddles",
+   "link": "https://thekitchenpickle.com/blogs/gear/paddletek-releases-new-bantam-jolt-tempest-veyra-pickleball-paddles/",
+   "date": "2026-11-01",
+   "summary": "The Kitchen Pickle story from 2026-11-01, filed under Gear, pickleball gear, pickleball paddles."
+  },
+  {
    "source": "The Dink",
    "title": "Photos: Here's Your First Look at Selkirk's New Boomstik ST",
    "link": "https://www.thedinkpickleball.com/selkirk-boomstik-st-first-look-photos-release-date/",
@@ -169,13 +204,6 @@
    "summary": "Pickleball Union story from 2026-10-28, filed under Intermediate Play, Tips & Strategy, Training."
   },
   {
-   "source": "Pickleball Union",
-   "title": "The Topspin Upgrade That Makes Your Best Shot Show Up More Often",
-   "link": "https://pickleballunion.com/consistent-topspin-in-pickleball/",
-   "date": "2026-10-28",
-   "summary": "Pickleball Union story from 2026-10-28, filed under Intermediate Play, Tips & Strategy, Training."
-  },
-  {
    "source": "Major League Pickleball",
    "title": "Houston Hammers to Join Major League Pickleball as 21st Team for 2027 Season",
    "link": "https://majorleaguepickleball.co/news/houston-hammers-to-join-major-league-pickleball-as-21st-team-for-2027-season/",
@@ -190,20 +218,6 @@
    "summary": "The Kitchen Pickle story from 2026-10-28. Read the full piece at the source."
   },
   {
-   "source": "The Kitchen Pickle",
-   "title": "Pickleball after 50: Simple habits for better control and balance",
-   "link": "https://thekitchenpickle.com/blogs/tips/pickleball-tips-for-players-over-50-seniors/",
-   "date": "2026-10-28",
-   "summary": "The Kitchen Pickle story from 2026-10-28, filed under Tips, Pickleball instruction."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "Major League Pickleball Nations Cup: Rosters, format and schedule",
-   "link": "https://thekitchenpickle.com/blogs/news/major-league-pickleball-nations-cup-2026-rosters-format-schedule/",
-   "date": "2026-10-28",
-   "summary": "The Kitchen Pickle story from 2026-10-28, filed under Major League Pickleball, MLP, Pro pickleball."
-  },
-  {
    "source": "Pickleball Effect (site)",
    "title": "Franklin X-44 vs Life Time LT Pro 48 vs Selkirk S2 Pro: Which Is Best?",
    "link": "https://pickleballeffect.com/equipment-reviews/franklin-x-44-vs-lifetime-lt-pro-48-vs-selkirk-s2-pro/",
@@ -211,25 +225,11 @@
    "summary": "Pickleball Effect (site) story from 2026-10-28, filed under Equipment Reviews, Gear, Ball."
   },
   {
-   "source": "Pickleball Union",
-   "title": "What We Learned Asking 3,617 Pickleball Players About Their Paddles",
-   "link": "https://pickleballunion.com/pickleball-paddle-survey-what-we-learned/",
-   "date": "2026-10-27",
-   "summary": "Pickleball Union story from 2026-10-27, filed under Guides & Gear, Buying Guides, Gear."
-  },
-  {
    "source": "Pickleball Effect (site)",
    "title": "14mm vs 16mm Pickleball Paddles: Which Is Better?",
    "link": "https://pickleballeffect.com/resources/other/comparing-paddle-widths-whats-the-difference-between-14mm-amp-16mm-pickleball-paddles/",
    "date": "2026-10-27",
    "summary": "Pickleball Effect (site) story from 2026-10-27, filed under Paddle Tips."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "You Entered a 3.5 Tournament. Why Are You Playing 4.5s?",
-   "link": "https://pickleballunion.com/pickleball-tournament-dupr-merged-brackets/",
-   "date": "2026-10-26",
-   "summary": "Pickleball Union story from 2026-10-26, filed under Pickleball Ratings, Professional Pickleball, DUPR."
   },
   {
    "source": "Pickleball Effect (site)",
@@ -459,5 +459,5 @@
   "The Pickler – Inside the Den": "ok (8)",
   "Pickleball England": "ok (8)"
  },
- "updated": "2026-11-01T11:29"
+ "updated": "2026-11-02T11:49"
 }

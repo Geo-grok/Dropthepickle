@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "New Honolulu J6M+, RPM Diesel, Gearbox Pressure X, Spartus Spitfire Widebody, USAP  Fails Again",
+   "link": "https://www.youtube.com/watch?v=I1BVqZ8-5us",
+   "video_id": "I1BVqZ8-5us",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "I Fit 20 Paddles in This Pickleball Tote?! 🎒 Team Pickleball RePlay Backpack & Tote Review",
+   "link": "https://www.youtube.com/watch?v=3zY98wR_95Y",
+   "video_id": "3zY98wR_95Y",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "The RPM Jade Is Already #2 | Top 10 Pickleball Paddles, October 2026",
+   "link": "https://www.youtube.com/watch?v=Bkwh9_fEWK4",
+   "video_id": "Bkwh9_fEWK4",
+   "date": "2026-11-01"
+  },
+  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "RPM Jade Review: Love It or Hate It, There’s More to the Story",
@@ -225,14 +249,6 @@
    "date": "2026-10-22"
   },
   {
-   "channel": "Matt's Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "RPM Jade vs Bread & Butter Loco 2: Which One We’d Play",
-   "link": "https://www.youtube.com/watch?v=2YNVW8u97o8",
-   "video_id": "2YNVW8u97o8",
-   "date": "2026-10-21"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "BNB's Doug Talks Durable Grit, Ditching Widebodies & Bringing Back the Shogun | EP 145",
@@ -254,14 +270,6 @@
    "title": "CPX Hyper +, RPM Jade, B&B Loco 2, Luzz Cannon XPP",
    "link": "https://www.youtube.com/watch?v=HMR0WXzLdsI",
    "video_id": "HMR0WXzLdsI",
-   "date": "2026-10-19"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "LUZZ Inferno 2 M1 Review: They FINALLY Fixed the Grit 🔥",
-   "link": "https://www.youtube.com/watch?v=YZoWGNKKv4w",
-   "video_id": "YZoWGNKKv4w",
    "date": "2026-10-19"
   },
   {
@@ -471,17 +479,33 @@
    "link": "https://www.youtube.com/watch?v=25Zop81gcKU",
    "video_id": "25Zop81gcKU",
    "date": "2026-10-05"
-  },
-  {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "EP 100! Mega Paddle Giveaway, Top 5 Pickelball Paddles Now, Top 5 Most Influential Paddles and MORE!",
-   "link": "https://www.youtube.com/watch?v=6jvUNZ02QH0",
-   "video_id": "6jvUNZ02QH0",
-   "date": "2026-10-04"
   }
  ],
  "all_items": [
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "New Honolulu J6M+, RPM Diesel, Gearbox Pressure X, Spartus Spitfire Widebody, USAP  Fails Again",
+   "link": "https://www.youtube.com/watch?v=I1BVqZ8-5us",
+   "video_id": "I1BVqZ8-5us",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "I Fit 20 Paddles in This Pickleball Tote?! 🎒 Team Pickleball RePlay Backpack & Tote Review",
+   "link": "https://www.youtube.com/watch?v=3zY98wR_95Y",
+   "video_id": "3zY98wR_95Y",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "The RPM Jade Is Already #2 | Top 10 Pickleball Paddles, October 2026",
+   "link": "https://www.youtube.com/watch?v=Bkwh9_fEWK4",
+   "video_id": "Bkwh9_fEWK4",
+   "date": "2026-11-01"
+  },
   {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
@@ -705,14 +729,6 @@
    "link": "https://www.youtube.com/watch?v=T21VFDcjapw",
    "video_id": "T21VFDcjapw",
    "date": "2026-10-22"
-  },
-  {
-   "channel": "Matt's Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "RPM Jade vs Bread & Butter Loco 2: Which One We’d Play",
-   "link": "https://www.youtube.com/watch?v=2YNVW8u97o8",
-   "video_id": "2YNVW8u97o8",
-   "date": "2026-10-21"
   },
   {
    "channel": "Pickleball Playbook Paddles",
@@ -1097,14 +1113,6 @@
    "link": "https://www.youtube.com/watch?v=5Eso8Lg0E5g",
    "video_id": "5Eso8Lg0E5g",
    "date": "2026-10-02"
-  },
-  {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "Gearbox Pressure X Pickleball Paddle Review: The Most High Tech Core I Have Ever Seen",
-   "link": "https://www.youtube.com/watch?v=GmDj57H-4Mw",
-   "video_id": "GmDj57H-4Mw",
-   "date": "2026-10-01"
   },
   {
    "channel": "PickleballPlaybook - Austin Hardy",
@@ -1586,7 +1594,7 @@
   "Pickleball Playbook Paddles": "ok (15)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
-  "Pickleball Advocate": "ok (12)"
+  "Pickleball Advocate": "ok (13)"
  },
- "updated": "2026-11-01T11:29"
+ "updated": "2026-11-02T11:49"
 }

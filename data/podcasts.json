@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "show": "The World Pickleball Podcast",
+   "title": "JW Johnson Is World No.1 — Is Ben Johns Sinking? | With Gordon Watson",
+   "link": "https://worldpickleballpodcast.alitu.com/episode/cc6fbe66-89f0-47b8-b4ae-b081bda96abc",
+   "date": "2026-11-02"
+  },
+  {
    "show": "Everything But The Kitchen Dink",
    "title": "Episode 151: This Time Next Year",
    "link": "https://podcasters.spotify.com/pod/show/ebtkd/episodes/Episode-151-This-Time-Next-Year-e3rd7g6",
@@ -40,12 +46,6 @@
    "show": "Pickleball Effect: The Podcast",
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
    "link": "https://podcasters.spotify.com/pod/show/braydon-unsicker/episodes/RPM-Jade--Luzz-Cannon-XPP-First-Impressions--EP-146-e3r6jct",
-   "date": "2026-10-27"
-  },
-  {
-   "show": "The World Pickleball Podcast",
-   "title": "Bamboo vs Carbon: Ben Tinkler-Davies on Kinova & the Swift Paddle",
-   "link": "https://worldpickleballpodcast.alitu.com/episode/22acb933-3806-4ac1-90ec-60bcedb0aa82",
    "date": "2026-10-27"
   },
   {
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-11-01T11:29"
+ "updated": "2026-11-02T11:49"
 }
