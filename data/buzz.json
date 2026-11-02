@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T06:03-06:00",
+ "updated": "2026-11-02T15:37-06:00",
  "date": "2026-11-02",
  "source_file": "dtp-newsroom/buzz-2026-11-02.json",
  "note": "Hand-curated; not touched by update.py.",
@@ -7,8 +7,53 @@
  "seo_desc": "PPA Worlds 2026 bracket and how to watch, MLP Nations Cup results (USA beat Latin America 3-0) and the Paddletek Tempest Veyra launch, all sourced.",
  "items": [
   {
-   "title": "Worlds week is here: PPA pro qualifying starts today at 8 a.m. CT in Farmers Branch, with all five pro draws out",
-   "summary": "The Opendoor Pickleball World Championships run Nov. 2-8 at Brookhaven Country Club in Farmers Branch, Texas, the same venue that just hosted the Nations Cup. Per the PPA's updated schedule, pro qualifying starts today, Monday Nov. 2, at 8 a.m. CT; main-draw days Tuesday through Saturday start at 11 a.m. CT and Championship Sunday at 10 a.m. CT. On Sunday night the PPA posted the men's, women's and mixed doubles brackets plus the men's and women's singles draws. Meanwhile the Oceanview USA Pickleball National Championships continue in San Diego through Nov. 8.",
+   "title": "Worlds qualifying day: no qualifiers officially confirmed as of 3:37 p.m. CT; main draw starts Tuesday at 11 a.m. CT",
+   "summary": "Pro qualifying for the Opendoor Pickleball World Championships began Monday, Nov. 2, at Brookhaven Country Club in Farmers Branch, Texas. Official listings differ on the start time: the PPA's Oct. 28 X post and the United Pickleball Worlds schedule list 8 a.m. CT, while the PPA event page lists first serve at 11 a.m. Qualifying results as of 3:37 p.m. CT: neither the PPA Tour (event page or @PPAtour) nor pickleball.com has posted any confirmed main-draw qualifiers yet, so we are not naming any until they do. Main-draw play starts tomorrow, Tuesday Nov. 3, with the round of 64: the PPA's event page lists first serve at 11 a.m. local (CT), streaming on PickleballTV from 12-8 p.m. ET (11 a.m.-7 p.m. CT). The PPA also posted its full Nov. 3-8 broadcast schedule today. We'll add qualifiers once they're official.",
+   "status": "confirmed",
+   "date": "2026-11-02",
+   "sources": [
+    {
+     "label": "PPA Tour: Worlds event page, daily schedule and TV windows",
+     "url": "https://www.ppatour.com/events/2026/pickleball-world-championships/"
+    },
+    {
+     "label": "@PPAtour: Worlds broadcast schedule, Nov. 3-8",
+     "url": "https://x.com/PPAtour/status/2117328428231741544"
+    },
+    {
+     "label": "pickleball.com: Complete guide to the 2026 Worlds",
+     "url": "https://pickleball.com/news/complete-guide-to-the-2026-opendoor-pickleball-world-championships"
+    },
+    {
+     "label": "@PPAtour: Updated pro schedule (Mon qualifying 8 a.m. CT)",
+     "url": "https://x.com/PPAtour/status/2115563515494924594"
+    },
+    {
+     "label": "United Pickleball: Worlds 2026 daily schedule",
+     "url": "https://worlds.unitedpickleball.com/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2117328428231741544"
+   ],
+   "social_angle": "Schedule post: 'Qualifying is underway at Worlds. Main draw starts tomorrow at 11 a.m. CT on PickleballTV.' Embed the PPA broadcast schedule post. Tag the PPA Tour.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "Qualifying",
+    "Schedule",
+    "Dallas"
+   ],
+   "links": [
+    {
+     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
+     "label": "How to watch Worlds week"
+    }
+   ]
+  },
+  {
+   "title": "Worlds week is here: PPA pro qualifying begins today in Farmers Branch, with all five pro draws out",
+   "summary": "The Opendoor Pickleball World Championships run Nov. 2-8 at Brookhaven Country Club in Farmers Branch, Texas, the same venue that just hosted the Nations Cup. Pro qualifying begins today, Monday Nov. 2 (the PPA's Oct. 28 schedule post says 8 a.m. CT; its event page lists 11 a.m.); main-draw days Tuesday through Saturday start at 11 a.m. CT and Championship Sunday at 10 a.m. CT. On Sunday night the PPA posted the men's, women's and mixed doubles brackets plus the men's and women's singles draws. Meanwhile the Oceanview USA Pickleball National Championships continue in San Diego through Nov. 8.",
    "status": "confirmed",
    "date": "2026-11-02",
    "sources": [
@@ -84,7 +129,7 @@
   },
   {
    "title": "Team USA goes 5-0 to win the first MLP Nations Cup, sweeping Latin America 3-0 in the final",
-   "summary": "Team USA is the inaugural MLP Nations Cup champion. In Sunday's final at Brookhaven Country Club in Farmers Branch, Texas, USA beat Latin America 3-0 (11-9 women's doubles, 11-1 men's doubles, 11-6 mixed), per the official MLP results on United Pickleball. USA reached the final by beating Europe East 3-1 (11-3, 11-6, 12-14, 11-7), and Latin America beat Asia Domestic 3-1 (11-3, 9-11, 11-3, 11-3). USA finished the event unbeaten. PPA Worlds pro qualifying starts Monday, Nov 2 at 8 a.m. CT at the same venue.",
+   "summary": "Team USA is the inaugural MLP Nations Cup champion. In Sunday's final at Brookhaven Country Club in Farmers Branch, Texas, USA beat Latin America 3-0 (11-9 women's doubles, 11-1 men's doubles, 11-6 mixed), per the official MLP results on United Pickleball. USA reached the final by beating Europe East 3-1 (11-3, 11-6, 12-14, 11-7), and Latin America beat Asia Domestic 3-1 (11-3, 9-11, 11-3, 11-3). USA finished the event unbeaten. PPA Worlds pro qualifying begins Monday, Nov 2 at the same venue.",
    "status": "confirmed",
    "date": "2026-11-01",
    "sources": [
