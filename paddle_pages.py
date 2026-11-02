@@ -149,15 +149,6 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         b = p["brand"]; n = ncodes.get(b, 0); s = re.sub(r"[^a-z0-9]+", "-", b.lower()).strip("-")
         code = "" if b in OWN else (f'<a class="hot" href="/discount-codes/{s}">🏷️ {n} {e(b)} code{"s" if n != 1 else ""}</a>' if n else '<a class="hot" href="/discount-codes">🏷️ Discount codes</a>')
         return f'<nav class="saverow" aria-label="Ways to save">{code}<a href="price-tracker.html">📉 Price tracker</a><a href="deals.html">🔥 Deals</a></nav>'
-    # paddle detail pages
-    for p in PP:
-        users = pro_users(p)
-        pu = ("<h2>Pros who use it</h2><ul>" + "".join(f'<li><a href="{e(x["profile"])}" target="_blank" rel="noopener">{e(x["name"])}</a> ({e(x["paddle"])}, per PPA profile)</li>' for x in users) + "</ul>") if users else ""
-        h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
-        hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p>{owncall(p)}<div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div>{saverow(p)}<p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
-        page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}{gift_pages.holiday_note("paddle")}<p><a href="compare.html">Compare paddles →</a></p>',
-             f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
-             fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
     # comparisons: same brand, plus one cross-brand pair per brand combo that shares an elongated shape
     def shape_bucket(p):
         s = (p.get("shape") or "").lower()
@@ -192,6 +183,23 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             b = sorted(elong[elong_brands[j]], key=lambda p: p["model"].lower())[0]
             add_pair(a, b)
     if len(vs_pairs) > 70: vs_pairs = vs_pairs[:70]
+    # paddle detail pages (built after the pair list so each one links to its own head-to-head pages)
+    vs_of = {}
+    for A, B in vs_pairs:
+        fn = "vs-" + slug(A)[7:-5] + "-vs-" + slug(B)[7:-5] + ".html"
+        vs_of.setdefault(id(A), []).append((fn, B)); vs_of.setdefault(id(B), []).append((fn, A))
+    def vsrow(p):
+        ls = vs_of.get(id(p), [])[:6]
+        if not ls: return ""
+        return f'<h2>Compare {e(p["model"])} head to head</h2><nav class="saverow" aria-label="Head-to-head comparisons">' + "".join(f'<a href="{fn}">⚔️ vs {e(o["model"] if o["brand"] == p["brand"] else o["brand"] + " " + o["model"])}</a>' for fn, o in ls) + '</nav>'
+    for p in PP:
+        users = pro_users(p)
+        pu = ("<h2>Pros who use it</h2><ul>" + "".join(f'<li><a href="{e(x["profile"])}" target="_blank" rel="noopener">{e(x["name"])}</a> ({e(x["paddle"])}, per PPA profile)</li>' for x in users) + "</ul>") if users else ""
+        h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
+        hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p>{owncall(p)}<div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div>{saverow(p)}<p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
+        page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}{gift_pages.holiday_note("paddle")}{vsrow(p)}<p><a href="compare.html">Compare paddles →</a></p>',
+             f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
+             fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
     vs_links = []
     for A, B in vs_pairs:
         fn = "vs-" + slug(A)[7:-5] + "-vs-" + slug(B)[7:-5] + ".html"; t = f'{A["brand"]} {A["model"]} vs {B["brand"]} {B["model"]}'
