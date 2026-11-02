@@ -233,7 +233,8 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 """
 import gift_pages; CSS += gift_pages.CSS  # .holi holiday callout
 import volair_page; CSS += volair_page.CSS  # dedicated /discount-codes/volair page
-import save_gear; CSS += save_gear.CSS  # "Save on gear" CTA row (Buzz, news, guides, events, articles)
+import save_gear; CSS += save_gear.CSS
+import worlds_card; CSS += worlds_card.CSS  # homepage PPA Worlds main-draw card (Nov 3-8 CT)  # "Save on gear" CTA row (Buzz, news, guides, events, articles)
 CSS += """
 .evwk{background:#0b1426;border-bottom:2px solid #c6f432;color:#fff;contain:layout}
 .evwk[hidden]{display:none}
