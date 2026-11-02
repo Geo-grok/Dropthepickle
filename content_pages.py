@@ -37,6 +37,7 @@ GUIDES = [
     ("guides/pickleball-paddles-under-30.html", "Pickleball paddles under $30"),
     ("guides/six-zero-paddle-review.html", "Six Zero paddle lineup and prices"),
     ("guides/indoor-vs-outdoor-pickleball-balls.html", "Indoor vs outdoor pickleball balls"),
+    ("guides/how-to-choose-pickleball-shoes.html", "How to choose pickleball shoes"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -732,6 +733,103 @@ def make(page, e, fmt, PP, cur, ph):
          "Indoor vs outdoor pickleball balls: 26 vs 40 holes, official USA Pickleball size, weight and bounce specs, and the balls the PPA Tour, MLP and US Open use.",
          fresh={"spec": BALL_SPEC, "balls": BALLS, "faq": ball_faq},
          schema=[ball_faq_ld])
+
+    # ----- How to choose pickleball shoes (Nov 2, 2026) -----
+    # Evergreen. Every claim is paraphrased or quoted from a source read on SH_CHECKED. No shoe rankings, prices or codes are invented;
+    # the brand list below is built from data/discount-codes.json at build time (brands whose tracked code conditions mention shoes).
+    SH_CHECKED = "2026-11-02"
+    sh_checked = _dt.date.fromisoformat(SH_CHECKED).strftime("%B %-d, %Y")
+    SH_AAOS = "https://www.orthoinfo.org/staying-healthy/athletic-shoes/"
+    SH_AAPSM = "https://www.aapsm.org/sport-shoes.html"
+    SH_AMA = "https://www.ama-assn.org/public-health/prevention-wellness/what-doctors-want-patients-know-about-preventing-pickleball"
+    SH_CSMR = "https://pubmed.ncbi.nlm.nih.gov/33031206/"
+    SH_ASICS = "https://www.asics.com/us/en-us/blog/a-guide-to-pickleball-shoes/"
+    SH_SELKIRK = "https://www.selkirk.com/blogs/paddles-and-product-education/pickleball-shoe-faq"
+    import json as _json, pathlib as _pl, re as _re
+    try:
+        _dc = _json.loads((_pl.Path(__file__).parent / "data" / "discount-codes.json").read_text())
+    except Exception:
+        _dc = {}
+    shoe_brands = sorted({c["brand"] for c in _dc.get("codes", []) if "shoe" in (c.get("conditions") or "").lower()}, key=str.lower)
+    _sb = lambda b: _re.sub(r"[^a-z0-9]+", "-", b.lower()).strip("-")
+    shoe_links = ", ".join(f'<a href="../discount-codes/{_sb(b)}.html">{e(b)}</a>' for b in shoe_brands)
+    SH_CMP = [
+        ("Built for", "Quick cuts, side-to-side movement and sudden stops (AAPSM, AAOS)", "Forward, heel-to-toe motion (AAPSM)"),
+        ("Sides and upper", "Built up on the inside and outside edges for stability; firmer sides (AAPSM, AMA)", "Less lateral support (AMA, ASICS)"),
+        ("Sole", "Solid tread (AAOS), wider soles that flare past the upper (AAPSM), firmer outsoles (AMA)", "Softer, more cushioned (AMA)"),
+        ("Main job", "Help keep the foot from rolling during lateral moves (AAPSM)", "Absorb repeated impact when running (AAPSM)"),
+    ]
+    shoe_faq = [
+        ("Can you wear running shoes for pickleball?",
+         "It is not recommended. The American Academy of Podiatric Sports Medicine says running shoes are designed for heel-to-toe movement and not for side-to-side movement, pivoting or spinning. A 2020 review in Current Sports Medicine Reports says proper court shoes are a must and that running sneakers, built for linear movement, do not give enough support for other directions."),
+        ("Can I wear tennis shoes for pickleball?",
+         "Yes. Selkirk's shoe FAQ says that if you do not wear a pickleball-specific shoe, tennis shoes are the best option because both sports use similar side-to-side movement. In an American Medical Association Q&A, sports medicine physician Christopher Wu, MD, also suggests a tennis shoe with firm sides and grip."),
+        ("What is the difference between indoor and outdoor pickleball shoes?",
+         "The rubber. Selkirk says indoor pickleball shoes use softer materials such as gum rubber to protect the floor, while outdoor shoes use harder rubber to stand up to surfaces such as asphalt and concrete. ASICS says the tough rubber of outdoor shoes can scuff hardwood, and that soft indoor soles wear down faster on asphalt."),
+        ("Do I really need pickleball-specific shoes?",
+         "Not necessarily, but you do want a court shoe. The AAOS says that if you play one sport more than two times a week, you should buy a shoe designed for that sport, and the AAPSM says regular pickleball players should consider a sport-specific shoe. Any court shoe built for lateral movement, including a tennis shoe, fits that advice."),
+        ("How long do pickleball shoes last?",
+         "There is no fixed number. Selkirk says it depends on how often and how long you play, your style and whether you play indoors or outdoors, and that pickleball shoes can last anywhere from a few months to a few years."),
+        ("How should pickleball shoes fit?",
+         "The AAOS suggests trying shoes on at the end of the day in the socks you play in, leaving at least a half inch between your longest toe and the tip of the shoe, making sure the heel counter grips your heel, and lacing them up fully before you judge the fit."),
+    ]
+    shoe_faq_html, shoe_faq_ld = faq(shoe_faq)
+    cmp_rows = "".join(f'<tr><th scope="row">{e(k)}</th><td>{e(a)}</td><td>{e(b)}</td></tr>' for k, a, b in SH_CMP)
+    shoes = f'''<h1>How to choose pickleball shoes: court shoes vs running shoes</h1>
+<p class="meta">Can you play pickleball in running shoes? What separates a court shoe, and do you need separate indoor and outdoor pairs? Answers from sports medicine groups and shoe makers, read {sh_checked}. We have not wear-tested or ranked any shoe.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>Wear a court shoe, not a running shoe.</b> The <a href="{SH_AAPSM}" target="_blank" rel="noopener">American Academy of Podiatric Sports Medicine</a> (AAPSM) says running shoes are built for heel-to-toe movement and are not designed for side-to-side movement, pivoting or spinning. A <a href="{SH_CSMR}" target="_blank" rel="noopener">2020 review in <i>Current Sports Medicine Reports</i></a> says proper court shoes are a must for pickleball.</li>
+<li><b>A pickleball shoe or a tennis shoe both work.</b> <a href="{SH_SELKIRK}" target="_blank" rel="noopener">Selkirk</a> calls tennis shoes the best option if you skip pickleball-specific shoes, because the movements are similar.</li>
+<li><b>Match the sole to the court.</b> Softer gum-rubber soles for indoor floors, harder rubber for outdoor asphalt and concrete (Selkirk, ASICS).</li>
+</ul>
+<h2>Court shoes vs running shoes</h2>
+<p>Pickleball is played in short bursts: shuffles along the kitchen line, lunges for dinks and quick stops. The AAPSM lists the features that make court shoes different. The <a href="{SH_AAOS}" target="_blank" rel="noopener">American Academy of Orthopaedic Surgeons</a> (AAOS) adds that court shoes have a solid tread and are designed to provide stability in all directions.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Court shoe (pickleball, tennis)</th><th>Running shoe</th></tr></thead><tbody>{cmp_rows}</tbody></table></div>
+<p>In an <a href="{SH_AMA}" target="_blank" rel="noopener">American Medical Association Q&amp;A</a>, Atlantic Health sports medicine physician Christopher Wu, MD, says tennis shoes have firmer outsoles for cutting and pivoting, while a running shoe "likely will have more cushioning, but not as much support, especially when you're making lateral movements." He also says that "most importantly, a shoe should be comfortable."</p>
+<p>The <i>Current Sports Medicine Reports</i> review (Vitale and Liu, 2020) notes there are no evidence-based equipment studies for pickleball yet, so its advice comes from the authors' clinical experience. It still recommends court shoes, not running sneakers, for all players because of injury risk.</p>
+<h2>Indoor vs outdoor pickleball shoes</h2>
+<ul>
+<li><b>Indoor (gym floors, hardwood):</b> Selkirk says indoor shoes use softer materials such as gum rubber, which grips while protecting the floor. <a href="{SH_ASICS}" target="_blank" rel="noopener">ASICS</a> says the tough rubber on outdoor shoes is likely to leave scuff marks on hardwood.</li>
+<li><b>Outdoor (asphalt, concrete):</b> both makers say outdoor shoes use harder, stronger rubber to handle gritty court surfaces.</li>
+<li><b>One pair for both?</b> ASICS says you can wear indoor shoes outside, but the soft rubber wears down faster on asphalt. Selkirk says two pairs are worth considering depending on how much you play, but a pickleball-specific shoe can handle both.</li>
+</ul>
+<p>Balls change indoors and outdoors too. See <a href="indoor-vs-outdoor-pickleball-balls.html">indoor vs outdoor pickleball balls</a>.</p>
+<h2>What to look for</h2>
+<ul>
+<li><b>Lateral support:</b> a supportive upper or reinforced side walls (ASICS); sides built up on the inside and outside of the shoe (AAPSM).</li>
+<li><b>Traction that fits your court:</b> see indoor vs outdoor above.</li>
+<li><b>Cushioning:</b> ASICS points to shock absorption for the running, jumping and turning in a match.</li>
+<li><b>A heel that stays put:</b> the AAOS says the heel counter, the back of the shoe, should grip your heel.</li>
+<li><b>Fit and comfort:</b> Selkirk's checklist covers toe room, heel fit, width and weight.</li>
+</ul>
+<h2>How to try them on</h2>
+<p>From the AAOS shoe-buying tips:</p>
+<ul>
+<li>Shop at the end of the day or after a workout, because feet swell during the day.</li>
+<li>Wear the socks you play in.</li>
+<li>Leave at least a half inch between your longest toe and the tip of the shoe, with room to wiggle your toes.</li>
+<li>Lace them up fully, try on both shoes and walk on more than one surface.</li>
+<li>If you play one sport more than two times a week, buy a shoe made for that sport.</li>
+</ul>
+<h2>When to replace them</h2>
+<p>Selkirk says there is no single answer: it depends on how often and how long you play, your playing style and whether you play indoors or outdoors, so pickleball shoes can last from a few months to a few years. The AAOS adds that cushioning can become less effective over time, even in shoes that have sat unused on a shelf.</p>
+<h2>Shoe discount codes</h2>
+<p>{f"These brands have a tracked discount code whose terms mention shoes: {shoe_links}. Each brand page shows the code, its source and the terms." if shoe_links else "Check the brand pages on our discount code list for codes that cover shoes."} Check the terms before you buy.</p>
+<p>New player? Start with <a href="pickleball-rules-for-beginners.html">pickleball rules for beginners</a>, <a href="how-to-dink.html">how to dink</a> and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+{money_links()}
+{shoe_faq_html}
+{sources([("AAPSM: Footwear – Court Sport Shoes", SH_AAPSM, f"American Academy of Podiatric Sports Medicine, read {sh_checked}"),
+          ("AAOS OrthoInfo: Athletic Shoes", SH_AAOS, f"American Academy of Orthopaedic Surgeons, read {sh_checked}"),
+          ("AMA: What doctors want patients to know about preventing pickleball injuries", SH_AMA, "Sara Berg, with Christopher Wu, MD"),
+          ("Vitale K, Liu S. Pickleball: Review and Clinical Recommendations for this Fast-growing Sport", SH_CSMR, "Current Sports Medicine Reports, 2020;19(10):406-413"),
+          ("ASICS: A Guide to Pickleball Shoes", SH_ASICS, "August 15, 2024"),
+          ("Selkirk: Pickleball shoe FAQ", SH_SELKIRK, "Jaclyn Brandt, August 6, 2024")])}
+{more("guides/how-to-choose-pickleball-shoes.html")}'''
+    page("guides/how-to-choose-pickleball-shoes.html", "How to choose pickleball shoes: court vs running shoes", shoes,
+         "Can you play pickleball in running shoes? Court shoes vs running shoes, indoor vs outdoor soles, and fit tips, from the AAOS, AAPSM, AMA and shoe makers.",
+         fresh={"cmp": SH_CMP, "faq": shoe_faq, "brands": shoe_brands},
+         schema=[shoe_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
