@@ -3,6 +3,12 @@
 import urls
 import re, json, pathlib
 ROOT = pathlib.Path(__file__).parent
+# Search-tuned <title>/description for vs pages already near Google page 1 (GSC export 2026-10-27). Titles <=60 chars, raw (no site suffix).
+VS_SEO = {
+    "vs-selkirk-omni-vs-selkirk-slk-era-power.html": ("Selkirk Era vs Omni: Specs and Prices Side by Side",
+        "Selkirk SLK Era Power vs Selkirk Omni: maker specs and latest checked prices side by side, plus the spec differences. No made-up scores."),
+}
+
 def slug(p): return "paddle-" + re.sub(r"[^a-z0-9]+", "-", f'{p["brand"]} {p["model"]}'.lower().replace("¹","1").replace("³","3")).strip("-") + ".html"
 def cores(p): return [float(x) for x in re.findall(r"(\d+(?:\.\d+)?)\s*mm", p["core"])]
 def weights(p): return [float(x) for x in re.findall(r"(\d\.\d+)", p["weight"])]
@@ -225,7 +231,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         for ob in dict.fromkeys(x["brand"] for x in (A, B) if x["brand"] in OWN):  # our own code for a brand in this pair, once per brand
             ex = [x["model"] for x in (A, B) if x["brand"] == ob and x.get("code_excluded")]
             body += f'<h2>{e(ob)} promo code</h2>' + own_codes.callout(e, OWN[ob], js=True, note=(f"{ex[0]}: " + NOAPPLY) if ex else "", details=True)
-        page(fn, t, body, f"{t}: maker specs and latest checked prices for a same-category pair. No score or rating from us.",
+        st, sd = VS_SEO.get(fn, (None, f"{t}: maker specs and latest checked prices for a same-category pair. No score or rating from us."))
+        page(fn, st or t, body, sd, raw_title=bool(st),
              fresh=[fresh_p(A), fresh_p(B)], schema=[item_list([A, B])]); vs_links.append((fn, t))
     # best-of lists
     usd = [p for p in PP if p["currency"] == "USD"]
@@ -266,9 +273,9 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         aud = " Maker prices for this brand are in AUD." if items and items[0]["currency"] != "USD" else ""
         lst(f"Best {brand} paddles", f"best-{slugb}-paddles.html", f"Filter: brand is {brand} ({len(items)} paddles in paddles.json).{aud} Not a ranking of {brand} models.", items, listed)
     # hub
-    page("compare.html", "Compare paddles", f'<h1>Compare paddles</h1><p class="meta">Head-to-head pages pair paddles that share a brand, or one elongated paddle from each of two brands. Best-of lists are spec filters. None of these pages is a performance ranking.</p><h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in vs_links)}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in list_links)}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
-         "Same-category paddle comparisons and spec-filter lists from manufacturer specs and the latest checked maker prices. No performance ranking.",
-         fresh={"vs": [fn for fn, _t in vs_links], "lists": [fn for fn, _t in list_links]}, schema=[item_list(PP)])
+    page("compare.html", "Pickleball Paddle Comparisons: Head-to-Head Specs", f'<h1>Compare paddles</h1><p class="meta">Head-to-head pages pair paddles that share a brand, or one elongated paddle from each of two brands. Best-of lists are spec filters. None of these pages is a performance ranking.</p><h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in vs_links)}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in list_links)}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
+         "Compare pickleball paddles head to head: Selkirk Era vs Omni and more, with maker specs and latest checked prices, plus best-of spec lists.",
+         raw_title=True, fresh={"vs": [fn for fn, _t in vs_links], "lists": [fn for fn, _t in list_links]}, schema=[item_list(PP)])
     # deals
     deals = sorted([p for p in PP if ph(p).get("drop") or ph(p).get("sale")], key=lambda p: -(1 - cur(p) / (ph(p).get("compare_at") or ph(p).get("previous") or cur(p))))
     def dcard(p):

@@ -482,6 +482,9 @@ def pagehead(body):
     head = m.group(1) + "".join(f'<p>{t}</p>' for k, t in parts if k == "meta")
     disc = "".join(f'<p class="disc">{t}</p>' for k, t in parts if k == "disc")
     return f'<section class="pagehead">{head}</section>{disc}' + body[m.end():]
+# Brand code pages already near Google page 1 (GSC export 2026-10-27): short query-matching <title> when every code shares one discount.
+CODE_SEO_BRANDS = {"RPM", "Bodhi", "Pickle Poppers"}
+
 def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumbs=None, image=None, raw_title=False):
     prefix = "../" * fn.count("/")
     rel = lambda h: h if h.startswith(("http://", "https://", "mailto:", "#", "/")) else prefix + h
@@ -679,9 +682,9 @@ def build():
     # Newsroom articles (hand-written data/articles.json; update.py never writes it). Every claim links to its source.
     ART = D("articles.json").get("items", []) if (ROOT / "data" / "articles.json").exists() else []
     for art in ART:
-        page(f"articles/{art['slug']}.html", art["title"],
+        page(f"articles/{art['slug']}.html", art.get("seo_title") or art["title"],
              f'<article><h1>{e(art["title"])}</h1><p class="meta">DropThePickle newsroom · {fmt(art["date"])} · Sources linked inline</p>{art["body"]}<p class="meta"><a href="../news.html">More pickleball news</a></p></article>',
-             art["desc"], fresh={k: art.get(k) for k in ("title", "date", "body")},
+             art["desc"], raw_title=bool(art.get("seo_title")), fresh={k: art.get(k) for k in ("title", "date", "body")},
              schema=[{"@type": "NewsArticle", "headline": art["title"], "datePublished": art["date"], "description": art["desc"],
                       "url": canon(f"articles/{art['slug']}.html"), "publisher": {"@id": C["BASE_URL"].rstrip("/") + "/#organization"}}])
     newsroom = (f'<h2>From the newsroom</h2><div class="grid">' + "".join(
@@ -701,9 +704,9 @@ def build():
         return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)} {tags}</div><h3>{e(b["title"])}</h3><div class="meta">{fmt(b.get("date"))}</div><p>{e(b["summary"])}</p>{"".join(f'<p class="watch"><a href="{e(l["href"])}">{e(l["label"])} →</a></p>' for l in b.get("links", []))}'
                 f'<p class="srcs"><b>Sources:</b> {srcs}</p>{f"<div class={chr(34)}buzzx{chr(34)}>{emb}</div>" if emb else ""}</div>')
     BUZZ_TEASER = (f'<h2>Pickleball Buzz <a class="seemore" href="buzz.html">All buzz →</a></h2><div class="grid">{"".join(bcard(b, False) for b in B.get("items", [])[:3])}</div>') if B.get("items") else ""
-    page("buzz.html", "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p>{nudge("buzz", "buzz", SIGNUP_TITLE, SIGNUP_BLURB)}{gift_pages.holiday_note("buzz")}<div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div>{nudge("buzz-bottom", "buzzb", "Like the buzz? Get codes by email", SIGNUP_BLURB)}{NUDGEJS}{XLAZY}',
-         "Pickleball Buzz: what the pickleball world is talking about, with confirmed stories and clearly labeled rumors, each linked to its sources.",
-         fresh={"updated": B.get("updated"), "items": [(b.get("title"), b.get("status"), b.get("date")) for b in B.get("items", [])]})
+    page("buzz.html", B.get("seo_title") or "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p>{nudge("buzz", "buzz", SIGNUP_TITLE, SIGNUP_BLURB)}{gift_pages.holiday_note("buzz")}<div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div>{nudge("buzz-bottom", "buzzb", "Like the buzz? Get codes by email", SIGNUP_BLURB)}{NUDGEJS}{XLAZY}',
+         B.get("seo_desc") or "Pickleball Buzz: what the pickleball world is talking about, with confirmed stories and clearly labeled rumors, each linked to its sources.",
+         raw_title=bool(B.get("seo_title")), fresh={"updated": B.get("updated"), "items": [(b.get("title"), b.get("status"), b.get("date")) for b in B.get("items", [])]})
     rows = "".join(f'<tr><td><a href="{e(p["profile"])}" target="_blank" rel="noopener"><b>{e(p["name"])}</b></a></td><td>{e(p["country"])}</td><td>{e(p["paddle"])}</td><td>{" ".join(f"<a href={chr(34)}{e(u)}{chr(34)} target=_blank rel=noopener>{k}</a>" for k,u in p["socials"].items())}</td></tr>' for p in P.get("pros", []))
     page("pros.html", "Pro players", f'<h1>Top pro players</h1><p class="meta">Facts from each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Blank means the profile didn\'t list it.</p><div class="tbl"><table><tr><th>Player</th><th>Country</th><th>Paddle (per profile)</th><th>Socials</th></tr>{rows}</table></div>',
          "Country, paddle and social links for top pros, taken from each player's official PPA Tour profile.",
@@ -735,8 +738,8 @@ def build():
         if items: csecs += f'<h2>{title}</h2><div class="grid">{"".join(ccard(s) for s in items)}</div>'
     socials = [s for s in SR if s["type"] in ("x","instagram")]
     srow = "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a> on {"X" if s["type"]=="x" else "Instagram"} ({e(s["audience"]["value"])} followers)</li>' for s in socials)
-    page("creators.html", "Pickleball creators directory", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p><div class="card spot"><a href="creators/ryan-morneau.html"><img src="https://i.ytimg.com/vi/Q7zUZLXK_gE/hqdefault.jpg" alt="The Most Important Singles Shots, a Pickleball Breakdowns clip"></a><div><span class="tag b-pub">Spotlight</span><h3><a href="creators/ryan-morneau.html">Ryan Morneau · Pickleball Breakdowns</a></h3><p>Match breakdowns and strategy tips. James Madison University reported him as the No. 1-ranked collegiate singles player. Six of his latest clips are embedded on his page.</p><p><a href="creators/ryan-morneau.html">Open the spotlight</a></p></div></div>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>',
-         "A directory of pickleball YouTubers, coaches, reviewers and pros, with a spotlight on Ryan Morneau's Pickleball Breakdowns channel.",
+    page("creators.html", "Pickleball Creators and YouTubers to Follow (2026)", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p><div class="card spot"><a href="creators/ryan-morneau.html"><img src="https://i.ytimg.com/vi/Q7zUZLXK_gE/hqdefault.jpg" alt="The Most Important Singles Shots, a Pickleball Breakdowns clip"></a><div><span class="tag b-pub">Spotlight</span><h3><a href="creators/ryan-morneau.html">Ryan Morneau · Pickleball Breakdowns</a></h3><p>Match breakdowns and strategy tips. James Madison University reported him as the No. 1-ranked collegiate singles player. Six of his latest clips are embedded on his page.</p><p><a href="creators/ryan-morneau.html">Open the spotlight</a></p></div></div>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>',
+         "The pickleball creators and influencers worth following: YouTubers, coaches, gear reviewers and pros, with subscriber counts and a Ryan Morneau spotlight.", raw_title=True,
          fresh={"youtube": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in yts],
                 "social": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in socials],
                 "spotlight": "creators/ryan-morneau.html"})
@@ -953,7 +956,9 @@ def build():
                 f'{crumb_html}{main}{gift_pages.holiday_note("codes")}{gear}'
                 f'<h2>More ways to save</h2><p><a href="/discount-codes">All pickleball discount codes</a> · <a href="../deals.html">Paddle deals</a> · <a href="../price-tracker.html">Paddle Price Tracker</a></p>'
                 + (f'<h2>Related brands</h2><div class="codes-best">{rel_html}</div>' if rel_html else "") + faq_html + (copyjs if bc else ""))
-        page(fn, title, body, desc, fresh=fresh, schema=extra, crumbs=crumbs)
+        ds = list(dict.fromkeys(c["discount"] for c in bc))
+        short = f"{b} Pickleball Discount Codes: {ds[0].title()} ({month})" if len(ds) == 1 and b in CODE_SEO_BRANDS else ""
+        page(fn, short if short and len(short) <= 60 else title, body, desc, fresh=fresh, schema=extra, crumbs=crumbs, raw_title=bool(short and len(short) <= 60))
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
     evwk_apply()
