@@ -211,27 +211,53 @@ def make(page, e, fmt, PP, cur, ph):
          "No. Here, best means the paddle passed the price rule. We do not playtest or score power, control, or spin."),
     ]
     faq_html, faq_ld = faq(u100_faq)
-    under = f'''<h1>Best pickleball paddles under $100</h1>
+    _OWN = __import__("own_codes").own_codes(__import__("json").load(open(__import__("pathlib").Path(__file__).with_name("config.json"))))
+    _voc = _OWN.get("Volair")
+    vol_under = [p for p in ok_under if p["brand"] == "Volair"]
+
+    def vrow(p):
+        h = ph(p)
+        ex = " Volair doesn't tag this paddle as included in its discounts, so the code may not apply. Check the total before you pay." if p.get("code_excluded") else ""
+        spec = ", ".join(x for x in [p.get("shape"), p.get("core"), p.get("face")] if x)
+        return (f'<li><b>{alink(p)}</b>: {money(p, h["current"])} on volair.com (checked {e(fmt(h["checked"]))}). {e(spec)}.{e(ex)} '
+                f'<a href="{e(p["buy_url"])}" rel="sponsored noopener" target="_blank">Shop at Volair →</a></li>')
+    vol_html = ""
+    if vol_under and _voc:
+        vol_html = (f'<h2>Volair paddles under $100 with code {e(_voc["code"])}</h2>'
+                    f'<p>{"Every paddle" if len(vol_under) == len(ok_under) else f"{len(vol_under)} of the {len(ok_under)} paddles"} that passed our under-$100 rule {"is a Volair" if len(vol_under) == len(ok_under) else "are Volairs"}. Our code <b>{e(_voc["code"])}</b> takes {e(_voc["discount"])} at checkout on volair.com. '
+                    f'Volair doesn\'t publish whether the code stacks with sale prices, so check your cart total. {e(__import__("own_codes").earn_line(_voc))}</p>'
+                    f'<ul>{"".join(vrow(p) for p in vol_under)}</ul>'
+                    f'<p class="meta">Full code details: <a href="../discount-codes/volair.html">Volair promo code</a> · <a href="best-volair-paddles.html">Best Volair paddle by player type</a></p>')
+    u100_faq += [
+        ("Is there a discount code for paddles under $100?",
+         (f"Yes for Volair: our code {_voc['code']} takes {_voc['discount']} at checkout on volair.com. " if _voc else "") + "Some paddles may be excluded from discounts. Every code we track is on our discount codes page."),
+        ("Will these paddles be cheaper on Black Friday 2026?",
+         "We can't say yet. We only report a Black Friday sale once the brand publishes it. Our Black Friday hub tracks which brands have announced 2026 sales, and our price tracker shows if a price really dropped."),
+    ]
+    faq_html, faq_ld = faq(u100_faq)
+    under = f'''<h1>Best Pickleball Paddles Under $100 (2026)</h1>
 <p class="meta">Built from our own paddle file and dated maker price checks. Not a playtest and not a ranking.</p>
 {__import__("own_codes").volair_link(__import__("own_codes").own_codes(__import__("json").load(open(__import__("pathlib").Path(__file__).with_name("config.json")))), "Shopping Volair?")}
 <p>{under_lead} The rule is strict: the paddle needs a successful, in-stock price check on the maker's own page, in US dollars, and the current price must be below $100. Every price on this page shows the date it was checked.</p>
 <h2>Under $100 (verified)</h2>
 {under_table}
+{vol_html}
 <h2>Closest verified prices, $100 to $150</h2>
 <p>These paddles cost $100 or more, so they are <b>not</b> under-$100 picks. They are here so you can see where the cheapest verified prices actually sit.{e(at100_txt)}</p>
 {near_table}
 <h2>What we left out</h2>
 <ul>{"".join(f"<li>{e(x)}</li>" for x in excl) or "<li>Nothing else.</li>"}</ul>
 <p>Our database is a short list of major-brand models with specs copied from the maker. It is not a catalog of every budget paddle on the market. See every recorded price on the <a href="../price-index.html">price index</a>, or use the <a href="../best-paddles-under-100.html">under-$100 spec filter</a>. New to buying? Start with <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+<p class="meta">Shopping now? <a href="/discount-codes"><b>Discount codes →</b></a> · <a href="../deals.html"><b>Paddle deals →</b></a> · <a href="pickleball-gift-guide-2026.html"><b>Gift guide 2026 →</b></a> · <a href="../deals/black-friday-pickleball-deals-2026.html"><b>Black Friday 2026 hub →</b></a> · <a href="pickleball-paddles-under-30.html">Paddles under $30</a></p>
 {money_links()}
 {faq_html}
 {sources([(f"{p['brand']} {p['model']} (maker product page)", p["source_url"], f"price checked {fmt(ph(p)['checked'])}") for p in ok_under + ok_near])}
 {more("guides/best-paddles-under-100.html")}'''
-    page("guides/best-paddles-under-100.html", "Best pickleball paddles under $100 (dated price checks)", under,
-         "Pickleball paddles with a verified maker price under $100, with the date of each price check. No invented prices and no playtest scores.",
+    page("guides/best-paddles-under-100.html", "Best Pickleball Paddles Under $100 (2026): Dated Prices", under,
+         "Pickleball paddles under $100 in 2026 with dated maker prices, our Volair code DROPTHEPICKLE, and the closest picks to $150. No made-up scores.",
          fresh={"under": [(p["brand"], p["model"], ph(p)["current"], ph(p)["checked"]) for p in ok_under],
                 "near": [(p["brand"], p["model"], ph(p)["current"], ph(p)["checked"]) for p in ok_near], "faq": u100_faq},
-         schema=[faq_ld])
+         schema=[faq_ld], raw_title=True)
 
     # ----- rules -----
     rules_faq = [
