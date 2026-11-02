@@ -814,7 +814,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p>Pool play is final: <b>Semifinal 1</b> is Asia Domestic vs Latin America and <b>Semifinal 2</b> is USA vs Europe East, from the official final pool tables and MLP's bracket. For standings and results, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 page</a>.</p>
 <h2 id="ppa-worlds">How to watch PPA Worlds 2026 (Nov 2 to 8)</h2>
 <p>The Opendoor Pickleball World Championships follow the Nations Cup at Brookhaven Country Club in Farmers Branch, Texas. Per {ext(WT_UP_PRO, "United Pickleball")} (CT) and the {ext(WT_PPA, "PPA watch page")} (ET):</p>
-<ul><li><b>Mon Nov 2:</b> pro qualifying in all five pro events; no stream window listed. First serve is 11 AM CT per the PPA or 8 AM CT per United Pickleball; follow live scores and brackets on the PPA's MATCHDAY app. Details: <a href="../events/opendoor-pickleball-world-championships.html#qualifying">Worlds qualifying Monday</a>.</li><li><b>Tue Nov 3 to Sat Nov 7:</b> round of 64 to semifinals on <b>PickleballTV</b>, 11 AM to 7 PM CT (6 PM on Thursday).</li><li><b>Thu Nov 5:</b> Celebrity Pro-Am on <b>Tennis Channel</b> and PickleballTV, 7 to 9 PM CT.</li><li><b>Sun Nov 8:</b> Championship Sunday on PickleballTV, 10 AM to 4 PM CT.</li></ul>
+<ul><li><b>Mon Nov 2:</b> pro qualifying in all five pro events; no stream window listed. First serve is 8 AM CT per United Pickleball and the PPA's Oct 28 X post; the PPA event page still lists 11 AM. Check the Order of Play and live scores in the PPA's MATCHDAY app. Details: <a href="../events/opendoor-pickleball-world-championships.html#qualifying">Worlds qualifying Monday</a>.</li><li><b>Tue Nov 3 to Sat Nov 7:</b> round of 64 to semifinals on <b>PickleballTV</b>, 11 AM to 7 PM CT (6 PM on Thursday).</li><li><b>Thu Nov 5:</b> Celebrity Pro-Am on <b>Tennis Channel</b> and PickleballTV, 7 to 9 PM CT.</li><li><b>Sun Nov 8:</b> Championship Sunday on PickleballTV, 10 AM to 4 PM CT.</li></ul>
 <p>The PPA released the seeded draws on October 31. Full day-by-day table, draws and FAQs: <a href="../events/opendoor-pickleball-world-championships.html#how-to-watch">how to watch Pickleball Worlds 2026</a>.</p>
 <p><b>Gear up for Worlds:</b> <a href="../paddle-volair-mach-1-forza.html">Volair Mach 1 Forza</a> · <a href="../paddle-volair-mach-2-forza.html">Volair Mach 2 Forza</a> · <a href="../paddle-volair-cmd-el-16mm.html">Volair CMD EL 16mm</a> · <a href="../guides/pickleball-gift-guide-2026.html">2026 gift guide</a> · <a href="../discount-codes.html">discount codes</a></p>
 <h2>Who streams what</h2>
@@ -885,7 +885,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("Fri Oct 30", "MLP Nations Cup: round-robin play (8 international teams)", "Pool play on PickleballTV 10 AM – 7 PM"),
         ("Sat Oct 31", "MLP Nations Cup: round-robin play", "Pool play on PickleballTV 10 AM – 7 PM"),
         ("Sun Nov 1", "MLP Nations Cup: single-elimination semifinals and final", "Semis 10 AM – 1 PM, finals 2 – 3:30 PM on PickleballTV"),
-        ("Mon Nov 2", "PPA pro qualifying, all five pro events", "First serve 11 AM (PPA) or 8 AM (United Pickleball); no stream window listed"),
+        ("Mon Nov 2", "PPA pro qualifying, all five pro events", "First serve 8 AM CT per United Pickleball and the PPA's Oct 28 X post (PPA event page still lists 11 AM); no stream window listed"),
         ("Tue Nov 3", "Main draw: round of 64", "First serve 11 AM; PickleballTV 11 AM – 7 PM"),
         ("Wed Nov 4", "Main draw: round of 32", "First serve 11 AM; PickleballTV 11 AM – 7 PM"),
         ("Thu Nov 5", "Main draw: round of 16. PPA Challenger Showdown singles pool play. Celebrity Pickleball Showdown at 7 PM", "PickleballTV 11 AM – 6 PM; Pro-Am 7 – 9 PM on Tennis Channel and PickleballTV"),
@@ -900,7 +900,7 @@ def make(page, e, fmt, PP, cur, ph):
                  ("Men's doubles", "Hayden Patriquin and Federico Staksrud"), ("Women's doubles", "Anna Leigh Waters and Anna Bright"),
                  ("Mixed doubles", "Anna Leigh Waters and Ben Johns")]
     OW_WATCH = [  # United Pickleball pro page (CT) and PPA watch page / event page (ET, one hour later), read 2026-10-31
-        ("Mon Nov 2", "Pro qualifying, all five pro events", "No stream window listed", "First serve 11 AM (PPA) or 8 AM (United Pickleball)"),
+        ("Mon Nov 2", "Pro qualifying, all five pro events", "No stream window listed", "First serve 8 AM CT per United Pickleball and the PPA's Oct 28 X post (PPA event page still lists 11 AM)"),
         ("Tue Nov 3", "Main draw: round of 64", "PickleballTV", "11 AM – 7 PM"),
         ("Wed Nov 4", "Main draw: round of 32", "PickleballTV", "11 AM – 7 PM"),
         ("Thu Nov 5", "Main draw: round of 16", "PickleballTV", "11 AM – 6 PM"),
@@ -917,9 +917,9 @@ def make(page, e, fmt, PP, cur, ph):
         ("When is the 2026 Pickleball World Championships?",
          "The PPA Tour's Opendoor Pickleball World Championships run November 2 to 8, 2026: pro qualifying on Monday, November 2, then the main draw from the round of 64 on Tuesday, November 3 through Championship Sunday on November 8. United Pickleball bills the full Worlds week as October 30 to November 8 because the MLP Nations Cup opens it on October 30 to November 1."),
         ("When are the PPA Worlds qualifiers?",
-         "PPA Worlds qualifiers are on Monday, November 2, 2026, the first day of the PPA event, and Championship Sunday is November 8, per United Pickleball's week schedule. The PPA lists Monday's first serve at 11 a.m. CT, while United Pickleball's pro schedule shows 8 a.m., so check the order of play."),
+         "PPA Worlds qualifiers are on Monday, November 2, 2026, the first day of the PPA event, and Championship Sunday is November 8, per United Pickleball's week schedule. First serve is 8 a.m. CT per United Pickleball and the PPA's October 28 post on X; the PPA event page still lists 11 a.m. Check the Order of Play in the MATCHDAY app."),
         ("When does PPA Worlds qualifying start?",
-         "Pro qualifying for all five pro events is Monday, November 2, 2026. The PPA event page lists first serve at 11 a.m. local (CT), while United Pickleball's pro schedule lists pro qualifying at 8 a.m. CT. The two official pages still disagreed when we checked, so confirm in the order of play on the PPA's MATCHDAY app."),
+         "Pro qualifying for all five pro events is Monday, November 2, 2026. First serve is 8 a.m. CT per United Pickleball and the PPA's October 28 post on X; the PPA event page still lists 11 a.m. Check the Order of Play in the PPA's MATCHDAY app."),
         ("Is Worlds qualifying streamed?",
          "No stream window is listed for Monday qualifying. The PPA event page shows no live channel for Monday, November 2, and United Pickleball's PickleballTV schedule starts with the round of 64 on Tuesday, November 3. The PPA's MATCHDAY app lists live scores, brackets and order of play."),
         ("Is the main draw November 2 to 8 or November 3 to 8?",
@@ -931,7 +931,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("Is Pickleball Worlds on TV?",
          "Yes, for one night. The Celebrity Pro-Am is on Tennis Channel on Thursday, November 5, from 7 to 9 p.m. CT, per the PPA Tour and United Pickleball. The pro main draw, Tuesday, November 3 through Championship Sunday, November 8, streams on PickleballTV; neither official schedule lists another TV channel for it."),
         ("What time does Worlds start each day?",
-         "The PPA lists pro first serve at 11 a.m. CT Monday through Saturday and 10 a.m. CT on Championship Sunday. PickleballTV coverage runs 11 a.m. to 7 p.m. CT Tuesday to Saturday (to 6 p.m. Thursday) and 10 a.m. to 4 p.m. CT Sunday, per United Pickleball. United Pickleball lists Monday qualifying at 8 a.m., so check the order of play. Gate times had not been posted when we checked."),
+         "Monday qualifying starts at 8 a.m. CT per United Pickleball and the PPA's October 28 post on X (the PPA event page still lists 11 a.m.; check the Order of Play in the MATCHDAY app). Tuesday through Saturday start at 11 a.m. CT and Championship Sunday at 10 a.m. CT. PickleballTV coverage runs 11 a.m. to 7 p.m. CT Tuesday to Saturday (to 6 p.m. Thursday) and 10 a.m. to 4 p.m. CT Sunday, per United Pickleball. Gate times had not been posted when we checked."),
         ("Are the PPA Worlds 2026 draws and seeds out?",
          "Yes. The PPA released the draws on October 31 with a draw reveal show on PPA Tour YouTube. The full seeded main draws are on the PPA event page and United Pickleball's pro page, which fill in scores as matches finish."),
         ("How much are tickets to the Pickleball World Championships in Dallas?",
@@ -969,7 +969,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2 id="qualifying">Worlds qualifying Monday, Nov 2: schedule and how to follow</h2>
 <p><b>What it is:</b> Monday, November 2 is pro qualifying for all five pro events (men's and women's singles, men's and women's doubles, and mixed), per the {ext(PPA_EV, "PPA event page")}. Qualifying is the day before the seeded main draw starts with the round of 64 on Tuesday.</p>
 <ul>
-<li><b>First serve:</b> 11 AM CT on the {ext(PPA_EV, "PPA event page")}; 8 AM CT on {ext(UP_PRO, "United Pickleball's pro schedule")}. The two official pages still disagreed when we checked on {ow_checked}, so confirm in the order of play.</li>
+<li><b>First serve:</b> 8 AM CT per {ext(UP_PRO, "United Pickleball's pro schedule")} and the PPA's <a href="https://x.com/PPAtour/status/2115563515494924594" target="_blank" rel="noopener">Oct 28 X post</a>; the {ext(PPA_EV, "PPA event page")} still lists 11 AM. Check the Order of Play in the MATCHDAY app.</li>
 <li><b>Streaming:</b> no stream window is listed for Monday. The PPA event page shows no live channel for qualifying day, and United Pickleball's PickleballTV schedule starts Tuesday.</li>
 <li><b>Where to follow:</b> the PPA's MATCHDAY app (iOS and Android) lists live scores, brackets, order of play and match alerts, per the {ext(PPA_WATCH, "PPA watch page")}. The PPA event page lists Grounds Pass tickets for Monday if you want to go.</li>
 </ul>
@@ -988,7 +988,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>Day-by-day schedule (CT): PPA Worlds qualifiers to Championship Sunday</h2>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Pro events and divisions</th><th>Start and stream (CT)</th></tr></thead><tbody>{ow_day_rows}</tbody></table></div>
 <p>Pro rounds and first-serve times are from the {ext(PPA_EV, "PPA event page")}; morning and evening session splits are from {ext(UP_TIX, "United Pickleball's ticket page")}; stream windows are from the {ext(UP_PRO, "United Pickleball pro page")} (CT) and match the {ext(PPA_WATCH, "PPA watch page")} (ET, one hour later). Nations Cup windows are converted from the PPA watch page's ET listing. The five pro events are men's and women's singles, men's and women's doubles, and mixed doubles. Amateur divisions run all week; your times are on your bracket at pickleballtournaments.com.</p>
-<p><b>Conflict:</b> the PPA lists Monday's pro qualifying first serve at 11 AM, while United Pickleball's pro schedule shows 8 AM; both still said so on {ow_checked}. Check the order of play before you go. More on <a href="#qualifying">Monday qualifying</a>.</p>
+<p><b>Monday start time:</b> 8 AM CT per United Pickleball and the PPA's <a href="https://x.com/PPAtour/status/2115563515494924594" target="_blank" rel="noopener">Oct 28 X post</a>; the PPA event page still lists 11 AM. Check the Order of Play in the MATCHDAY app. Tuesday to Saturday start at 11 AM CT and Championship Sunday at 10 AM CT. More on <a href="#qualifying">Monday qualifying</a>.</p>
 <p>Off the pro courts: live music runs on the Pickleball Boulevard Stage every day from November 1 to 7, with Clayton Mullen on Friday, November 6 from 6:30 to 8 PM, per {ext(UP_SCHED, "United Pickleball's schedule")}. {ext(KITCHEN, "The Kitchen")} has the full daily list of clinics and socials.</p>
 <h2 id="how-to-watch">How to watch Pickleball Worlds 2026</h2>
 <p>The short answer: <b>PickleballTV every day of the main draw</b> (Tuesday, November 3 to Sunday, November 8), plus the <b>Celebrity Pro-Am on Tennis Channel</b> on Thursday, November 5 at 7 PM CT. All times Central (CT), from the {ext(UP_PRO, "United Pickleball pro page")}; the {ext(PPA_WATCH, "PPA watch page")} lists the same windows in ET, one hour later. Windows can move.</p>
@@ -1026,7 +1026,7 @@ def make(page, e, fmt, PP, cur, ph):
           ("The Kitchen: 2026 Worlds schedule of events", KITCHEN, "daily programming, updated Oct 29, 2026")])}
 <p><a href="../tournaments.html">All tournaments</a></p>'''
     page(OW_FN, "Pickleball Worlds 2026 Schedule and How to Watch (TV, CT)", ow,
-         "Pickleball Worlds 2026: qualifying Mon Nov 2, then PickleballTV every day Nov 3-8 and the Celebrity Pro-Am on Tennis Channel Thu Nov 5, 7 PM CT. Schedule in CT.",
+         "Pickleball Worlds 2026: qualifying Mon Nov 2 (8 AM CT; PPA page says 11 AM), then PickleballTV every day Nov 3-8 and the Celebrity Pro-Am on Tennis Channel Thu Nov 5, 7 PM CT. Schedule in CT.",
          fresh={"checked": OW_CHECKED, "days": OW_DAYS, "tix": OW_TIX, "champs": OW_CHAMPS, "faq": ow_faq, "event": ow_event},
          schema=[ow_event, ow_faq_ld], raw_title=True)
     # MLP Nations Cup page. Every fact below was read on the linked official pages (and the cited preview) on NC_CHECKED.
@@ -1179,7 +1179,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>Going in person</h2>
 <p>Nations Cup tickets are sold separately from Worlds week, on Tixr. {ext(NC_X_TIX, "MLP said on October 29")} that last-minute tickets start at $25. United Pickleball lists a Courtside Pass (bleacher seating, first come, first served) and a VIP Pass. Doors open one hour before the first matches. Outside food and drink aren't allowed, and filming matches isn't permitted without MLP's written approval. On Saturday, October 31, {ext(NC_X_COSTUME, "MLP is holding a Halloween costume contest")} for fans, with prizes for the top 3 from DoorDash and VIP ticket upgrades for 10 more fans.</p>
 <h2>Next up: PPA Worlds, November 2 to 8</h2>
-<p>The PPA Tour's Opendoor Pickleball World Championships follow at the same venue from <b>November 2 to 8</b>, per United Pickleball. See our <a href="opendoor-pickleball-world-championships.html">Pickleball World Championships 2026 schedule, TV and tickets page</a> for the day-by-day schedule in CT, parking and travel. PPA pro qualifying starts <b>Monday, November 2 at 8 AM CT</b>.</p>
+<p>The PPA Tour's Opendoor Pickleball World Championships follow at the same venue from <b>November 2 to 8</b>, per United Pickleball. See our <a href="opendoor-pickleball-world-championships.html">Pickleball World Championships 2026 schedule, TV and tickets page</a> for the day-by-day schedule in CT, parking and travel. PPA pro qualifying starts <b>Monday, November 2</b>: 8 AM CT per United Pickleball and the PPA's Oct 28 X post, though the PPA event page still lists 11 AM.</p>
 <p class="watch"><a href="opendoor-pickleball-world-championships.html#how-to-watch">Next up: Pickleball Worlds 2026 — how to watch →</a></p>
 <h2>Gear before you go</h2>
 {money_links()}

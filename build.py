@@ -592,7 +592,7 @@ def evwk_html():
     # Worlds how-to-watch link from Sun Nov 1 (CT) through EVWK_END; client-side shown from Nov 1 00:00 CDT (05:00 UTC).
     if evwk_build_date() >= datetime.date(2026, 11, 1):
         if evwk_build_date() == datetime.date(2026, 11, 2):  # qualifying day; client-side swaps to how-to-watch from Nov 3 00:00 CST (06:00 UTC)
-            watch += ('<a class="evwk-watch" id="evwk-pwq" href="/events/opendoor-pickleball-world-championships#qualifying">Worlds qualifying today: times and how to follow →</a>'
+            watch += ('<a class="evwk-watch" id="evwk-pwq" href="/events/opendoor-pickleball-world-championships#qualifying">Worlds qualifying today, 8 AM CT (PPA page: 11 AM) →</a>'
                       '<script>if(Date.now()>=Date.UTC(2026,10,3,6)){var q=document.getElementById("evwk-pwq");q.href="/events/opendoor-pickleball-world-championships#how-to-watch";q.textContent="How to watch Pickleball Worlds 2026 →"}</script>')
         else:
             watch += '<a class="evwk-watch" href="/events/opendoor-pickleball-world-championships#how-to-watch">How to watch Pickleball Worlds 2026 →</a>'
@@ -696,6 +696,7 @@ def build():
     def bcard(b, full=True):
         srcs = " ".join(f'<a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a>' for s in b.get("sources", []))
         emb = "".join(f'<blockquote class="twitter-tweet" data-dnt="true"><a href="{e(u)}">View post on X</a></blockquote>' for u in b.get("embeds", [])) if full else ""
+        if full and b.get("video_id"): emb += f'<div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{e(b["video_id"])}" title="{e(b["title"])}" allowfullscreen></iframe></div>'
         tags = " ".join(f'<span class="tag">{e(t)}</span>' for t in b.get("tags", [])) if full else ""
         return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)} {tags}</div><h3>{e(b["title"])}</h3><div class="meta">{fmt(b.get("date"))}</div><p>{e(b["summary"])}</p>{"".join(f'<p class="watch"><a href="{e(l["href"])}">{e(l["label"])} →</a></p>' for l in b.get("links", []))}'
                 f'<p class="srcs"><b>Sources:</b> {srcs}</p>{f"<div class={chr(34)}buzzx{chr(34)}>{emb}</div>" if emb else ""}</div>')

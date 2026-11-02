@@ -553,6 +553,28 @@
    "swing_weight": "105 (14mm) / 107 (16mm)",
    "twist_weight": "6.88 (14mm) / 6.93 (16mm)",
    "checked": "2026-10-23"
+  },
+  {
+   "brand": "Paddletek",
+   "model": "Tempest Veyra",
+   "weight": "",
+   "core": "",
+   "shape": "Elongated, Widebody",
+   "price": 179.99,
+   "currency": "USD",
+   "source_url": "https://www.paddletek.com/pages/bantam-jolt-tempest-veyra",
+   "buy_url": "https://www.paddletek.com/pages/bantam-jolt-tempest-veyra"
+  },
+  {
+   "brand": "Paddletek",
+   "model": "Bantam Jolt",
+   "weight": "",
+   "core": "",
+   "shape": "Elongated, Widebody",
+   "price": 224.99,
+   "currency": "USD",
+   "source_url": "https://www.paddletek.com/pages/bantam-jolt-tempest-veyra",
+   "buy_url": "https://www.paddletek.com/pages/bantam-jolt-tempest-veyra"
   }
  ]
 }
