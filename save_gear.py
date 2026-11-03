@@ -3,6 +3,7 @@ event and newsroom pages). Links to the three money-saving pages: brand discount
 
 Counts come straight from data/discount-codes.json (distinct brands) and data/price-tracker.json (rows), so the
 labels never claim more than the data holds. Absolute extensionless hrefs work at any directory depth.
+Best-X buying guides, head-to-head comparison pages and the pros, podcasts, reviews and science pages get it too.
 Paddle pages get their own brand-specific row (paddle_pages.py), and shopping pages already link these, so both are skipped.
 """
 import json, pathlib, re
@@ -25,7 +26,11 @@ CSS = (".savegear{background:var(--navy);border-radius:16px;padding:12px;margin:
 SKIP = {"guides/pickleball-gift-guide-2026.html"}  # already a shopping page full of these links
 def wants(fn):
     if fn in SKIP: return False
-    return fn in ("buzz.html", "news.html", "tournaments.html") or fn.startswith(("guides/", "events/", "articles/"))
+    if fn in ("buzz.html", "news.html", "tournaments.html") or fn.startswith(("guides/", "events/", "articles/")): return True
+    # Buying-intent pages (best-X paddle guides, head-to-head comparisons) and pro/podcast/review/science pages
+    # social and search visitors land on; they only linked codes and the tracker from the menu and footer.
+    if "/" not in fn and fn.startswith(("best-", "vs-")) and fn.endswith(".html"): return True
+    return fn in ("pros.html", "podcasts.html", "reviews.html", "science.html")
 
 # Tournament-traffic pages (Worlds week) also get gift guide, Black Friday hub and Top 5 buttons.
 # Scoped by filename so event pages (events/*) keep their exact built HTML.
