@@ -304,7 +304,7 @@ def make(page, e, fmt, PP, cur, ph):
     faq_html, faq_ld = faq(dink_faq)
     dink = f'''<h1>How to dink</h1>
 <p class="meta">The soft shot into the kitchen, for players who already know the two-bounce rule. Not a lesson from a certified coach and not a claim about what wins matches.</p>
-<p>After the serve and the return have bounced, most intermediate points are decided at the kitchen. A dink is the unhurried ball that lands in the opponent's kitchen so they cannot attack it. The <a href="pickleball-rules-for-beginners.html">rules guide</a> covers why you cannot volley that ball if you are touching the zone.</p>
+<p>After the serve and the return have bounced, most intermediate points are decided at the kitchen. A dink is the unhurried ball that lands in the opponent's kitchen so they cannot attack it. The <a href="pickleball-rules-for-beginners.html">rules guide</a> covers why you cannot volley that ball if you are touching the zone. The kitchen is 7 feet deep and 20 feet wide; see <a href="pickleball-court-dimensions.html">pickleball court dimensions</a> for the full layout.</p>
 <h2>The motion</h2>
 <ul>
 <li>Hold the paddle in front of you, not beside your hip. Meet the ball out in front of your body.</li>
@@ -449,7 +449,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p>Source: the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball Official Rulebook</a> (PDF) and the <a href="{RULES_CHANGES}" target="_blank" rel="noopener">2026 Rulebook Change Document</a> (PDF, published December 17, 2025). The 2026 book was renumbered, so rule numbers below are the 2026 numbers.</p>
 <h2>The basics</h2>
 <ul>
-<li><b>Court:</b> 20 by 44 feet for singles and doubles, with a non-volley zone (the kitchen) on each side of the net.</li>
+<li><b>Court:</b> 20 by 44 feet for singles and doubles, with a non-volley zone (the kitchen) on each side of the net. Full measurements: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</li>
 <li><b>Serve:</b> diagonal, into the opposite service court, using a legal volley serve or drop serve.</li>
 <li><b>Two-bounce rule (10.A):</b> the serve and the return of serve must each bounce before being hit.</li>
 <li><b>Double bounce (10.B):</b> you must return the ball before its second bounce.</li>
