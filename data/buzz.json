@@ -1,11 +1,45 @@
 {
- "updated": "2026-11-03T06:11-06:00",
+ "updated": "2026-11-03T15:17-06:00",
  "date": "2026-11-03",
  "source_file": "dtp-newsroom/buzz-2026-11-03.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026 Bracket, Nations Cup Results",
  "seo_desc": "PPA Worlds 2026 bracket and how to watch, MLP Nations Cup results (USA beat Latin America 3-0) and the Paddletek Tempest Veyra launch, all sourced.",
  "items": [
+  {
+   "title": "Worlds day 1, as of 3:17 PM CT: Anna Leigh Waters wins her singles opener 11-3, 11-3, and she and Ben Johns open mixed 11-3, 11-2",
+   "summary": "Round-of-64 results from day 1 of the Opendoor Pickleball World Championships main draw at Brookhaven Country Club in Farmers Branch, Texas, as of 3:17 PM CT Tue. Nov. 3, per the PPA Tour's official live scores. We list only matches the PPA's scoreboard shows as completed; play runs until about 7 p.m. CT on PickleballTV, so more results are still to come. Women's singles (round of 64 complete on the PPA scoreboard): Anna Leigh Waters def. Frances Altick 11-3, 11-3; Kelly Goodnow def. Nicole Conard 11-2, 11-2; Hannah Blatt advanced by walkover over Polina Libo; Milan Rane def. Naomi Nguyen 11-4, 13-15, 11-1; Judit Castillo def. Maria Ford 9-11, 11-3, 11-3; Sofia Sewing def. Huong Dan Linh 11-3, 11-8; Sahra Dennehy def. Xiao Yi Wang-Beckvall 11-1, 11-3; Helena Jansen def. Luana Stanciu 11-5, 11-2; Brooke Buckner def. Frida Mudsam 9-11, 11-3, 11-5; Kaitlynn Hart def. Valeria Montero 11-9, 11-3; Natalia Simson def. Genie Bouchard 11-3, 4-11, 11-5; Samantha Parker def. Victoria Dimuzio 11-8, 2-11, 12-10; Shannon Pretorius def. Chao Yi Wang 11-2, 0-11, 11-7; Allison Phillips def. Aiko Yoshitomi 12-10, 11-6; Rika Fujiwara def. Ava Cavataio 11-4, 11-6; Mya Bui def. Estee Widdershoven 4-11, 11-6, 11-0; Kate Fahey def. Adelie Osher 11-7, 11-2; Carlota Trevino def. Lina Padegimaite 9-11, 11-3, 11-1; Jalina Ingram def. Ashley Griffith 11-6, 11-9; Keilly Ulery def. Audrey Adele Brown 11-1, 11-1; Catherine Parenteau def. Masa Grgan 11-0, 11-1; Elsie Hendershot def. Marcela Aguila Ampon 4-11, 11-5, 11-5; Isabella Dunlap def. Cc Eleven Sacca 11-3, 11-4; Kei Sawaki def. Ting Chieh Wei 11-9, 11-5; Kaitlyn Christian def. Tatiana Diaz 11-1, 11-2; Lacy Schneemann def. Angie Walker 9-11, 11-1, 11-6; Cailyn Campbell def. Allyce Jones 11-8, 4-11, 11-9; Mari Humberg def. Paula Rives 11-3, 11-2; Kiora Kunimoto def. Caroline Maguire 11-1, 11-0; Danni-Elle Townsend def. Jessie Irvine 11-7, 13-11; Alex Walker def. Liz Truluck 11-9, 11-8; Jorja Johnson def. Chloe Igleski 11-7, 11-1. Mixed doubles (completed so far): Ben Johns/Anna Leigh Waters def. Brooke Caruso/Kyle Koszuta 11-3, 11-2; Sahra Dennehy/Tama Shimabukuro def. Yuta Funemizu/Estee Widdershoven 11-3, 9-11, 11-9; Xiao Yi Wang-Beckvall/Eunggwon Kim advanced by walkover over Sofia Sewing/Nicolas Acevedo; Rachel Rohrabacher/Christian Alshon def. Rafa Hewett/Cc Eleven Sacca 11-4, 11-2; Hong Kit Wong/Kei Sawaki def. Tyler Loong/Lindsey Newman 11-6, 11-7; Judit Castillo/Tyson McGuffin def. Anouar Braham/Mya Bui 11-2, 11-3; Parris Todd/Andrei Daescu def. Jaeda Minniefield/Andrew Caldarella 11-1, 11-6; Tina Pisnik/Noe Khlif def. Hannah Blatt/Grayson Goldin 11-1, 11-6; Riley Newman/Layne Sleeth def. Kenta Miyoshi/Ella Yeh 11-5, 11-3. Men's doubles: Kenta Miyoshi/James Delgado advanced by walkover over Daniel Phillips/Patrick Smith; Jhonnatan Medina Alvarez/Mark Growcott advanced by walkover over Jaume Martinez Vich/Nicolas Acevedo; every other men's doubles round-of-64 match was still listed as upcoming. Pending: men's singles round of 64 (including Ben Johns vs. Brandon French) and the rest of mixed and men's doubles; the PPA scoreboard lists no women's doubles round-of-64 matches. We'll add those results once the PPA shows them as final.",
+   "status": "confirmed",
+   "date": "2026-11-03",
+   "sources": [
+    {
+     "label": "PPA Tour: Worlds live scores (official scoreboard, round of 64), checked 3:17 PM CT",
+     "url": "https://www.ppatour.com/events/2026/pickleball-world-championships/#live-scores"
+    },
+    {
+     "label": "@PPAtour: Round of 64 live coverage starts at 11 AM CT on PickleballTV",
+     "url": "https://x.com/PPAtour/status/2117662126189764819"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2117662126189764819"
+   ],
+   "social_angle": "Scoreboard post: 'Day 1 at Worlds: Anna Leigh Waters wins 11-3, 11-3 in singles, then she and Ben Johns win 11-3, 11-2 in mixed.' Link the PPA live scores. Tag the PPA Tour. Don't post scores the PPA hasn't shown as final.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "Results",
+    "Anna Leigh Waters",
+    "Ben Johns",
+    "Dallas"
+   ],
+   "links": [
+    {
+     "href": "/events/opendoor-pickleball-world-championships",
+     "label": "Worlds 2026 bracket and how to watch"
+    }
+   ]
+  },
   {
    "title": "Worlds main draw starts today: Waters and Bright chase a record 18th straight title together, and Ben Johns (19 seed) opens singles vs. Brandon French",
    "summary": "Main-draw play at the Opendoor Pickleball World Championships begins today, Tuesday Nov. 3, at Brookhaven Country Club in Farmers Branch, Texas, with the round of 64 (first serve 11 a.m. CT, live on PickleballTV). Each title is worth 3,000 ranking points, total payouts are $1,648,641, and all three doubles finals are best of five. Per the PPA's Stats Desk, Anna Leigh Waters and Anna Bright are trying to win an 18th straight tournament together, which would break the all-doubles record of 17 that Waters shares with Ben Johns. The PPA's storylines note Waters hasn't lost a singles match in 888 days, Johns is the 19 seed in men's singles and faces local favorite Brandon French in the round of 64. Waters is the defending champion in women's singles, women's doubles (with Bright) and mixed (with Johns). Qualifying was Monday; no official list of qualifiers has been published yet, so we aren't naming any. Separately, USA Pickleball Nationals are underway in San Diego.",
