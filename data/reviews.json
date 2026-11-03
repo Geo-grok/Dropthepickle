@@ -1,11 +1,43 @@
 {
  "items": [
   {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "Luzz Cannon XPP M1 Paddle Review | Game Analysis",
+   "link": "https://www.youtube.com/watch?v=g5Bql5EK3B8",
+   "video_id": "g5Bql5EK3B8",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Pickleball Pursuit",
+   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
+   "title": "Is The BnB Loco 2 Worth It? | Bread N Butter Loco 2 Review",
+   "link": "https://www.youtube.com/watch?v=yNHLD9lFJQE",
+   "video_id": "yNHLD9lFJQE",
+   "date": "2026-11-02"
+  },
+  {
    "channel": "All Drive No Drop Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
    "title": "New Honolulu J6M+, RPM Diesel, Gearbox Pressure X, Spartus Spitfire Widebody, USAP  Fails Again",
    "link": "https://www.youtube.com/watch?v=I1BVqZ8-5us",
    "video_id": "I1BVqZ8-5us",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Matthew K Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
+   "title": "Is Core Innovation MORE Important than DURABLE GRIT?!? | Special Paddletek Interview",
+   "link": "https://www.youtube.com/watch?v=3a5r9hSJGgI",
+   "video_id": "3a5r9hSJGgI",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "Loco 2 Review: Everything You Need To Know",
+   "link": "https://www.youtube.com/watch?v=lfbHewCDzsI",
+   "video_id": "lfbHewCDzsI",
    "date": "2026-11-02"
   },
   {
@@ -153,14 +185,6 @@
    "date": "2026-10-27"
   },
   {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "CPX’s Hyper+ Just Got DURABLE GRIT!? | CPX Hyper+ RIPSAW Design Overview & Explainer | #QuickTake 📸",
-   "link": "https://www.youtube.com/watch?v=_IN7n_EHWx4",
-   "video_id": "_IN7n_EHWx4",
-   "date": "2026-10-27"
-  },
-  {
    "channel": "Pickleball Playbook Paddles",
    "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
    "title": "Engage pursuit pro 2 Review",
@@ -238,14 +262,6 @@
    "title": "Loco 2 Hybrid Paddle Review | Match Play",
    "link": "https://www.youtube.com/watch?v=CG7OGYnrDwM",
    "video_id": "CG7OGYnrDwM",
-   "date": "2026-10-22"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Is the Geau Sport Verve Backpack Worth It? (Looks Like My RPM Bag!)",
-   "link": "https://www.youtube.com/watch?v=T21VFDcjapw",
-   "video_id": "T21VFDcjapw",
    "date": "2026-10-22"
   },
   {
@@ -463,31 +479,47 @@
    "link": "https://www.youtube.com/watch?v=DcPEuBSy34E",
    "video_id": "DcPEuBSy34E",
    "date": "2026-10-06"
-  },
-  {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "All Tier 1 Paddles Have These 2 Things in Common | KewCast 125",
-   "link": "https://www.youtube.com/watch?v=aM5D-y2ziKw",
-   "video_id": "aM5D-y2ziKw",
-   "date": "2026-10-05"
-  },
-  {
-   "channel": "PickleballPlaybook - Austin Hardy",
-   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
-   "title": "Armorgrit Enhance Turbo MPP Review | On court drill & play test",
-   "link": "https://www.youtube.com/watch?v=25Zop81gcKU",
-   "video_id": "25Zop81gcKU",
-   "date": "2026-10-05"
   }
  ],
  "all_items": [
+  {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "Luzz Cannon XPP M1 Paddle Review | Game Analysis",
+   "link": "https://www.youtube.com/watch?v=g5Bql5EK3B8",
+   "video_id": "g5Bql5EK3B8",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Pickleball Pursuit",
+   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
+   "title": "Is The BnB Loco 2 Worth It? | Bread N Butter Loco 2 Review",
+   "link": "https://www.youtube.com/watch?v=yNHLD9lFJQE",
+   "video_id": "yNHLD9lFJQE",
+   "date": "2026-11-02"
+  },
   {
    "channel": "All Drive No Drop Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
    "title": "New Honolulu J6M+, RPM Diesel, Gearbox Pressure X, Spartus Spitfire Widebody, USAP  Fails Again",
    "link": "https://www.youtube.com/watch?v=I1BVqZ8-5us",
    "video_id": "I1BVqZ8-5us",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Matthew K Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
+   "title": "Is Core Innovation MORE Important than DURABLE GRIT?!? | Special Paddletek Interview",
+   "link": "https://www.youtube.com/watch?v=3a5r9hSJGgI",
+   "video_id": "3a5r9hSJGgI",
+   "date": "2026-11-02"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "Loco 2 Review: Everything You Need To Know",
+   "link": "https://www.youtube.com/watch?v=lfbHewCDzsI",
+   "video_id": "lfbHewCDzsI",
    "date": "2026-11-02"
   },
   {
@@ -632,14 +664,6 @@
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
    "link": "https://www.youtube.com/watch?v=9Zivh6G2WKM",
    "video_id": "9Zivh6G2WKM",
-   "date": "2026-10-27"
-  },
-  {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "CPX’s Hyper+ Just Got DURABLE GRIT!? | CPX Hyper+ RIPSAW Design Overview & Explainer | #QuickTake 📸",
-   "link": "https://www.youtube.com/watch?v=_IN7n_EHWx4",
-   "video_id": "_IN7n_EHWx4",
    "date": "2026-10-27"
   },
   {
@@ -867,14 +891,6 @@
    "date": "2026-10-15"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Gearbox Pressure X MPP Review | Match Play",
-   "link": "https://www.youtube.com/watch?v=G16CN53e9EY",
-   "video_id": "G16CN53e9EY",
-   "date": "2026-10-15"
-  },
-  {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
    "title": "BnB Loco 2 & RPM Jade Play Impressions & Reacting to Open Play Pet Peeves",
@@ -896,14 +912,6 @@
    "title": "RPM Jade 16mm Elongated First Impressions: Over Hyped Pickleball Paddle or Hyped Just Right?",
    "link": "https://www.youtube.com/watch?v=4zAi-B8A-hQ",
    "video_id": "4zAi-B8A-hQ",
-   "date": "2026-10-14"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Bread & Butter Loco 2 Elongated Paddle Review | Match Play",
-   "link": "https://www.youtube.com/watch?v=Resqv15qaXw",
-   "video_id": "Resqv15qaXw",
    "date": "2026-10-14"
   },
   {
@@ -963,14 +971,6 @@
    "date": "2026-10-12"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Honolulu J6CR Crystal Blue Grit Review: Game Play Analysis",
-   "link": "https://www.youtube.com/watch?v=yzfspqB2eic",
-   "video_id": "yzfspqB2eic",
-   "date": "2026-10-12"
-  },
-  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "This Cartoon Paddle Actually Plays GREAT 😳 Pickle Poppers Pop N’ Treasure Review",
@@ -1009,14 +1009,6 @@
    "link": "https://www.youtube.com/watch?v=Oh_oorKPThk",
    "video_id": "Oh_oorKPThk",
    "date": "2026-10-08"
-  },
-  {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "BnB Loco 2, UPA-A Boulder Opal, & Enhance Turbo Armor Grit Update",
-   "link": "https://www.youtube.com/watch?v=HbnX_HvJiXw",
-   "video_id": "HbnX_HvJiXw",
-   "date": "2026-10-07"
   },
   {
    "channel": "Pickleball Pursuit",
@@ -1107,14 +1099,6 @@
    "date": "2026-10-04"
   },
   {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "JOOLA's First Foam Paddle: Cash or Trash? 💰🗑️ Power FX Review + Holbrook Fuze Vantagrit",
-   "link": "https://www.youtube.com/watch?v=5Eso8Lg0E5g",
-   "video_id": "5Eso8Lg0E5g",
-   "date": "2026-10-02"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Honolulu J2CR vs J3CR vs J6CR on court paddle review & drill test",
@@ -1177,14 +1161,6 @@
    "link": "https://www.youtube.com/watch?v=57m00Y6lt-w",
    "video_id": "57m00Y6lt-w",
    "date": "2026-09-15"
-  },
-  {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "New Spin Durability Tests: 4 Paddles Struggle, Gearbox Survives | KewCast 122",
-   "link": "https://www.youtube.com/watch?v=HxQACyA1oO8",
-   "video_id": "HxQACyA1oO8",
-   "date": "2026-09-14"
   },
   {
    "channel": "Pickleball Blast",
@@ -1572,29 +1548,29 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (7)",
-  "John Kew Pickleball": "ok (9)",
+  "Pickleball Studio": "ok (6)",
+  "John Kew Pickleball": "ok (8)",
   "Pickleball Effect": "ok (7)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (0)",
   "The Kitchen Pickleball": "ok (0)",
   "Enhance Pickleball": "ok (2)",
-  "PickleballPlaybook - Austin Hardy": "ok (5)",
+  "PickleballPlaybook - Austin Hardy": "ok (6)",
   "Pickleball Kitchen": "ok (0)",
   "PickleballCentral": "ok (4)",
   "Pickleball Warehouse": "ok (6)",
   "Matt's Pickleball": "ok (1)",
   "Rackets & Runners - Pickleball": "ok (14)",
-  "Pickleball Pursuit": "ok (6)",
+  "Pickleball Pursuit": "ok (7)",
   "All Drive No Drop Pickleball": "ok (7)",
   "Matthew K Pickleball": "ok (2)",
   "Tickle My Pickleball": "ok (3)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
-  "Pickleball Playbook Paddles": "ok (15)",
+  "Pickleball Playbook Paddles": "ok (12)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (13)"
  },
- "updated": "2026-11-02T11:49"
+ "updated": "2026-11-03T11:46"
 }
