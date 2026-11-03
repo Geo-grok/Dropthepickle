@@ -38,6 +38,7 @@ GUIDES = [
     ("guides/six-zero-paddle-review.html", "Six Zero paddle lineup and prices"),
     ("guides/indoor-vs-outdoor-pickleball-balls.html", "Indoor vs outdoor pickleball balls"),
     ("guides/how-to-choose-pickleball-shoes.html", "How to choose pickleball shoes"),
+    ("guides/pickleball-court-dimensions.html", "Pickleball court dimensions"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -273,7 +274,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p class="meta">A short reading of the USA Pickleball rulebook, in our words. The rulebook wins if we ever disagree.</p>
 <p>The official text is the <a href="{RULES}" target="_blank" rel="noopener">USA Pickleball Official Rulebook</a> (PDF). The <a href="{RULES_SUM}" target="_blank" rel="noopener">basic rules summary</a> is the short version of the same organization. This page is the handful of rules that decide a rec game.</p>
 <h2>The court and the net</h2>
-<p>A standard court is 20 feet wide and 44 feet long for singles and doubles. The net is 36 inches high at the sidelines and 34 inches high at the center. Each end has a non-volley zone 7 feet deep. All lines that bound that zone are part of the zone.</p>
+<p>A standard court is 20 feet wide and 44 feet long for singles and doubles. The net is 36 inches high at the sidelines and 34 inches high at the center. Each end has a non-volley zone 7 feet deep. All lines that bound that zone are part of the zone. Full measurements, space needed and layout tips: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</p>
 <h2>The serve</h2>
 <p>You serve diagonally into the opposite service court. The ball has to clear the kitchen and land in the correct box. On a volley serve, the paddle has to be moving upward, the paddle head must not be above your wrist, and the ball must not be above your waist when you hit it. A drop serve is the other legal motion: you drop the ball and hit it after it bounces, without propelling the ball on the way down. In singles, you start on the right when your score is even, and on the left when it is odd.</p>
 <h2>Two bounces, then anything</h2>
@@ -856,6 +857,121 @@ def make(page, e, fmt, PP, cur, ph):
          "Can you play pickleball in running shoes? Court shoes vs running shoes, indoor vs outdoor soles, and fit tips, from the AAOS, AAPSM, AMA and shoe makers.",
          fresh={"cmp": SH_CMP, "faq": shoe_faq, "brands": shoe_brands},
          schema=[shoe_faq_ld])
+
+    # ----- Pickleball court dimensions (Nov 3, 2026) -----
+    # Evergreen. Measurements come from the 2026 USA Pickleball Official Rulebook (Section 3), USA Pickleball's
+    # court construction page and its court layout diagram, and the ITF 2026 Rules of Tennis, all read on CD_CHECKED.
+    # Square-foot totals and the tennis comparison are our own arithmetic from those numbers.
+    CD_CHECKED = "2026-11-03"
+    cd_checked = _dt.date.fromisoformat(CD_CHECKED).strftime("%B %-d, %Y")
+    CD_CONSTR = "https://usapickleball.org/construction/"
+    CD_DIAGRAM = "https://usapickleball.org/wp-content/uploads/2025/09/court-construction-layout-diagram.jpg"
+    CD_MANUAL = "https://usapickleball.org/construction/manual/"
+    CD_ITF = "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf"
+    CD_SPEC = [
+        ("Court (singles and doubles)", "20 ft x 44 ft", "6.10 m x 13.41 m", "Rule 3.A.1"),
+        ("Non-volley zone (kitchen), each side", "7 ft deep x 20 ft wide", "2.13 m deep", "Rule 3.A.4.c"),
+        ("Service court, each", "10 ft wide x 15 ft deep", "", "USA Pickleball court diagram"),
+        ("Line width", "2 in", "5.08 cm", "Rule 3.A.4.e"),
+        ("Net height at the sidelines", "36 in (+/- 1/4 in)", "91.44 cm", "Rule 3.B.6"),
+        ("Net height at the center", "34 in (+/- 1/4 in)", "86.36 cm", "Rule 3.B.7"),
+        ("Net post spacing (inside to inside)", "22 ft (+/- 1 in)", "6.71 m", "Rule 3.B.2"),
+        ("Net post diameter (max)", "3 in", "7.62 cm", "Rule 3.B.2"),
+        ("Net length (min)", "21 ft 9 in", "6.63 m", "Rule 3.B.3"),
+        ("Net height, bottom edge to top (min)", "30 in", "76.2 cm", "Rule 3.B.3"),
+        ("Corner-to-corner diagonal", "48 ft 4 in (+/- 3/4 in)", "", "USA Pickleball court diagram"),
+    ]
+    CD_AREA = [
+        ("The court itself", "20 x 44 ft", "6.10 x 13.41 m", "880"),
+        ("Minimum playing surface", "30 x 60 ft", "9.14 x 18.29 m", "1,800"),
+        ("New construction (recommended)", "34 x 64 ft", "10.36 x 19.5 m", "2,176"),
+        ("Tournament play (recommended)", "34 x 64 ft", "10.36 x 19.5 m", "2,176"),
+        ("Stadium court (recommended)", "50 x 80 ft", "15.24 x 24.38 m", "4,000"),
+    ]
+    CD_TOL = [
+        ("Net line to outside of the kitchen line", "7 ft", "+/- 1/8 in"),
+        ("Net line to outside of the baseline", "22 ft", "+/- 1/4 in"),
+        ("Outside sideline to outside sideline", "20 ft", "+/- 1/4 in"),
+        ("Outside sideline to the centerline", "10 ft", "+/- 1/8 in"),
+        ("Diagonal, to the outside of the lines", "48 ft 4 in", "+/- 3/4 in"),
+    ]
+    CD_TENNIS = [
+        ("Court length", "44 ft", "78 ft"),
+        ("Court width", "20 ft (singles and doubles)", "27 ft singles, 36 ft doubles"),
+        ("Net height at center", "34 in", "3 ft (36 in)"),
+        ("Net height at the posts/sidelines", "36 in at the sidelines", "3 1/2 ft (42 in) at the posts"),
+        ("Front zone", "7 ft non-volley zone (kitchen)", "No volley restriction"),
+    ]
+    cd_faq = [
+        ("What are the dimensions of a pickleball court?",
+         "A pickleball court is 20 feet wide and 44 feet long (6.10 m by 13.41 m) for both singles and doubles, per Rule 3.A.1 of the 2026 USA Pickleball Official Rulebook. Measurements are taken to the outside edge of the lines."),
+        ("How big is the kitchen on a pickleball court?",
+         "The non-volley zone, or kitchen, is 7 feet deep and 20 feet wide on each side of the net (Rule 3.A.4.c). All lines that bound it are part of the zone, so a foot on the kitchen line counts as being in the kitchen."),
+        ("How much space do you need for a pickleball court?",
+         "The 2026 rulebook sets the minimum playing surface at 30 by 60 feet (about 1,800 square feet). It recommends 34 by 64 feet for new construction and tournament play, and 50 by 80 feet for a stadium court."),
+        ("How high is a pickleball net?",
+         "36 inches at the sidelines and 34 inches at the center, each within a quarter inch, per Rules 3.B.6 and 3.B.7. If the net has a center strap, the 34-inch measurement includes the strap."),
+        ("Are singles and doubles pickleball courts the same size?",
+         "Yes. Unlike tennis, pickleball uses the same 20 by 44 foot court for singles and doubles. Mini-singles is also played on a standard court, with only one half of each end in play during a rally."),
+        ("How do I check that a court I taped out is square?",
+         "Measure the diagonal. USA Pickleball's court layout diagram gives the corner-to-corner diagonal as 48 feet 4 inches, plus or minus 3/4 inch, measured to the outside of the lines. If both diagonals match that, the rectangle is square."),
+        ("How does a pickleball court compare to a tennis court?",
+         "A tennis court is 78 feet long and 36 feet wide for doubles, per the ITF Rules of Tennis, versus 20 by 44 feet for pickleball. The tennis net is 3 feet high at the center, 2 inches higher than a pickleball net's 34 inches."),
+    ]
+    cd_faq_html, cd_faq_ld = faq(cd_faq)
+    cd_spec_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c) or "—"}</td><td>{e(d)}</td></tr>' for a, b, c, d in CD_SPEC)
+    cd_area_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td><td>{e(d)}</td></tr>' for a, b, c, d in CD_AREA)
+    cd_tol_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in CD_TOL)
+    cd_ten_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in CD_TENNIS)
+    court = f'''<h1>Pickleball court dimensions: size, kitchen, net height and layout (2026)</h1>
+<p class="meta">Every measurement on this page is from the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball Official Rulebook</a> (Section 3, Court and Equipment) and USA Pickleball's <a href="{CD_CONSTR}" target="_blank" rel="noopener">court construction page</a> and layout diagram, read {cd_checked}. Square-foot totals are our own math. If you are building a permanent court, use a professional court builder.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>Court:</b> 20 feet wide by 44 feet long, the same for singles and doubles (Rule 3.A.1).</li>
+<li><b>Kitchen:</b> 7 feet deep on each side of the net, the full 20-foot width (Rule 3.A.4.c).</li>
+<li><b>Net:</b> 36 inches high at the sidelines, 34 inches at the center (Rules 3.B.6 and 3.B.7).</li>
+<li><b>Space you need:</b> at least 30 by 60 feet of playing surface; 34 by 64 feet is recommended for new courts (Rule 3.A.3).</li>
+</ul>
+<h2>Court measurements</h2>
+<p>All measurements are made to the <b>outside edge</b> of the perimeter and kitchen lines (Rule 3.A.2), so the lines are part of the 20 by 44 foot court. The <a href="{CD_DIAGRAM}" target="_blank" rel="noopener">USA Pickleball court diagram</a> shows each service court as 10 feet wide and 15 feet deep: the 22 feet from the net to the baseline, minus the 7-foot kitchen.</p>
+<div class="tbl"><table><thead><tr><th>Part</th><th>Imperial</th><th>Metric</th><th>Source</th></tr></thead><tbody>{cd_spec_rows}</tbody></table></div>
+<h2>The lines and areas</h2>
+<ul>
+<li><b>Baselines</b> run parallel to the net at each end. <b>Sidelines</b> run the length of the court (Rules 3.A.4.a and b).</li>
+<li><b>The kitchen (non-volley zone)</b> is the 7 by 20 foot area next to the net on each side. All lines that bound it are part of the zone, and the rulebook says it is two-dimensional: it does not extend above the playing surface (Rule 3.A.4.c).</li>
+<li><b>The centerline</b> runs from the kitchen line to the baseline and splits the right and left service courts (Rule 3.A.4.d). It does not run through the kitchen.</li>
+<li><b>Service courts</b> include their baseline, sideline and the centerline, so a serve landing on any of those lines is in. Because the kitchen line belongs to the kitchen, a serve that lands on it is short (see our <a href="pickleball-rules-for-beginners.html">rules for beginners</a>).</li>
+<li><b>Lines</b> should be 2 inches wide and all one color that clearly contrasts with the court (Rule 3.A.4.e).</li>
+</ul>
+<h2>The net</h2>
+<p>The net sits 2 inches lower in the middle than at the sidelines: <b>36 inches</b> where it crosses the outer edge of the sidelines and <b>34 inches</b> at the center, each within a quarter inch. A center strap, placed 10 feet from the outside edge of the sidelines, may be used to pull it down to 34 inches, and the center measurement includes the strap (Rules 3.B.5 to 3.B.7).</p>
+<p>The posts should be 22 feet apart, inside to inside, within an inch, and no more than 3 inches in diameter. The net itself should be at least 21 feet 9 inches long and at least 30 inches from bottom edge to top, with a 2-inch white tape binding over a cord or cable along the top (Rules 3.B.2 to 3.B.4). USA Pickleball's diagram recommends the posts sit 12 inches outside each sideline.</p>
+<h2>How much space you need</h2>
+<p>The court is 880 square feet, but players need room to run behind the baseline and outside the sidelines. Rule 3.A.3 sets the minimum playing surface and lists recommended sizes:</p>
+<div class="tbl"><table><thead><tr><th>Purpose</th><th>Feet</th><th>Meters</th><th>Square feet (our math)</th></tr></thead><tbody>{cd_area_rows}</tbody></table></div>
+<p>By our math, the minimum 30 by 60 foot area leaves 5 feet on each side of the court and 8 feet behind each baseline. For orientation, USA Pickleball's <a href="{CD_CONSTR}" target="_blank" rel="noopener">construction page</a> says outdoor courts should run north to south so players don't look straight into the sun in the morning or late afternoon.</p>
+<h2>Laying out a court: check your measurements</h2>
+<p>Taping a temporary court in a gym or driveway? Use the tolerances from USA Pickleball's <a href="{CD_DIAGRAM}" target="_blank" rel="noopener">court layout diagram</a>, all measured to the outside of the lines:</p>
+<div class="tbl"><table><thead><tr><th>Measure</th><th>Target</th><th>Tolerance</th></tr></thead><tbody>{cd_tol_rows}</tbody></table></div>
+<p>The diagonal is the quick way to check the court is square: if both corner-to-corner measurements come out at 48 feet 4 inches, the corners are right angles. Tape or paint 2-inch lines, then measure the net at the sidelines and the center before you play.</p>
+<h2>Pickleball court vs tennis court</h2>
+<p>Tennis numbers are from the <a href="{CD_ITF}" target="_blank" rel="noopener">ITF 2026 Rules of Tennis</a>.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Pickleball</th><th>Tennis</th></tr></thead><tbody>{cd_ten_rows}</tbody></table></div>
+<p>By our math, a pickleball court (880 square feet) is under a third of a doubles tennis court (78 by 36 feet, 2,808 square feet). Planning to convert tennis courts? USA Pickleball and the American Sports Builders Association publish a <a href="{CD_MANUAL}" target="_blank" rel="noopener">court construction and maintenance manual</a> with a section on tennis conversions.</p>
+<h2>Gear for your court</h2>
+<p>Court surface changes the ball you should use: see <a href="indoor-vs-outdoor-pickleball-balls.html">indoor vs outdoor pickleball balls</a>. Gym floor or asphalt also changes your shoes: see <a href="how-to-choose-pickleball-shoes.html">how to choose pickleball shoes</a>. Then learn the shot that lives in that 7-foot zone in <a href="how-to-dink.html">how to dink</a>, and check the <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>.</p>
+{money_links()}
+{cd_faq_html}
+{sources([("USA Pickleball: 2026 Official Rulebook", RULES, f"Section 3, Court and Equipment (Rules 3.A and 3.B), read {cd_checked}"),
+          ("USA Pickleball: Pickleball court construction, lighting and shading", CD_CONSTR, f"court dimensions and north-south orientation, read {cd_checked}"),
+          ("USA Pickleball: Court construction layout diagram", CD_DIAGRAM, "service court size, line tolerances, diagonal and net post placement"),
+          ("USA Pickleball: Court construction and maintenance manual", CD_MANUAL, "USA Pickleball and ASBA manual, 2023 edition"),
+          ("ITF: 2026 Rules of Tennis", CD_ITF, f"Rule 1, The Court, read {cd_checked}")])}
+{more("guides/pickleball-court-dimensions.html")}'''
+    page("guides/pickleball-court-dimensions.html", "Pickleball Court Dimensions: Size, Kitchen and Net Height (2026)", court,
+         "Pickleball court dimensions from the 2026 USA Pickleball rulebook: 20 x 44 ft court, 7 ft kitchen, 36/34 in net, 30 x 60 ft minimum space, layout tolerances and tennis comparison.",
+         fresh={"checked": CD_CHECKED, "spec": CD_SPEC, "area": CD_AREA, "tol": CD_TOL, "tennis": CD_TENNIS, "faq": cd_faq},
+         schema=[cd_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
