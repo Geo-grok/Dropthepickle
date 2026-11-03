@@ -11,11 +11,12 @@ from paddle_pages import slug, cores, money, price_checked
 GIFT_FN = "guides/pickleball-gift-guide-2026.html"
 BF_FN = "deals/black-friday-pickleball-deals-2026.html"
 BF_DAY, CM_DAY = "2026-11-27", "2026-11-30"
-# Brand pages checked 2026-10-29 for officially published Black Friday 2026 details. None carried a 2026 date.
-BF_CHECKED = "2026-10-29"
-BF_WATCH = [("Selkirk", "https://www.selkirk.com/collections/sale", "Selkirk's sale page shows no 2026 Black Friday dates, so we don't treat its prices as this year's sale."),
-            ("Volair", "https://volair.com/collections/sale", "Volair's sale page shows no Black Friday dates."),
-            ("CRBN", "https://crbnpickleball.com/", "CRBN's most recent Black Friday page we found is for 2025. No 2026 sale published.")]
+# Brand pages re-checked 2026-11-03 for officially published Black Friday 2026 details. Selkirk now shows an "Early Black Friday"
+# promo (no end date published); Volair and CRBN show none.
+BF_CHECKED = "2026-11-03"
+BF_WATCH = [("Selkirk", "https://www.selkirk.com/collections/sale", "Selkirk's sale page shows an \"Early Black Friday: Up to 50% off paddles, apparel & more\" banner (checked Nov 3, 2026). It doesn't publish an end date, and we haven't logged its sale prices, so check each paddle's price on Selkirk's site."),
+            ("Volair", "https://volair.com/collections/sale", "Volair's sale page shows no Black Friday sale or dates (checked Nov 3, 2026)."),
+            ("CRBN", "https://crbnpickleball.com/", "CRBN's homepage shows no 2026 Black Friday sale (checked Nov 3, 2026).")]
 
 # Contextual holiday callout for high-traffic pages (paddle reviews, code pages, Buzz, how-to-watch).
 # Absolute extensionless hrefs (urls.clean_path), so it works at any directory depth. Max two holiday links per box.
@@ -150,19 +151,35 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
                 + f'<br><span class="meta">{stamp(p)}</span></td><td>{money(p, low) if low else "not recorded"}</td><td>{buy(p)}</td></tr>')
     lowtbl = ('<div class="tbl"><table><tr><th>Paddle</th><th>Price now</th><th>Lowest we\'ve recorded</th><th>Where to buy</th></tr>'
               + "".join(lowrow(p) for p in sale) + "</table></div>") if sale else "<p>No paddles were below the maker's compare-at price or our last recorded price at our latest check.</p>"
-    watch = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(b)}</a>: {e(t)}</li>' for b, u, t in BF_WATCH)
+    vpad = [p for p in usd if p["brand"] == "Volair"]
+    vin = [p for p in vpad if not p.get("code_excluded")]; vex = [p for p in vpad if p.get("code_excluded")]
+    def vrow(p):
+        h = ph(p); pr = cur(p)
+        was = f' <s class="meta">{money(p, h["compare_at"])}</s>' if h.get("sale") and h.get("compare_at") else ""
+        net = "code may not apply" if p.get("code_excluded") else f'about {money(p, round(pr * 0.9, 2))}'
+        return (f'<tr><td><a href="../{slug(p)}"><b>{e(p["brand"])}</b> {e(p["model"])}</a>{xnote(p)}</td><td><b>{money(p, pr)}</b>{was}<br><span class="meta">{stamp(p)}</span></td>'
+                f'<td>{e(net)}</td><td>{buy(p)}</td></tr>')
+    vtbl = ('<div class="tbl"><table><tr><th>Volair paddle</th><th>volair.com price</th><th>With ' + e(vol["code"]) + ' (10%)</th><th>Where to buy</th></tr>'
+            + "".join(vrow(p) for p in vpad) + "</table></div>") if vol and vpad else ""
+    vsec = (f'<h2>Volair paddle deals with code {e(vol["code"])}</h2><p>Our own code {e(vol["code"])} takes {e(vol["discount"])} at checkout on volair.com. '
+            'The "with code" column is the price minus 10%, before tax and shipping; your cart total is what counts. '
+            f'Compare picks in <a href="../guides/best-volair-paddles.html">best Volair paddles</a> or see the <a href="/discount-codes/volair">Volair promo code</a> page.</p>{vtbl}') if vtbl else ""
+    watch = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener"><a href="{e(u)}" target="_blank" rel="noopener">{e(b)}</a>: {e(t)}</li>' for b, u, t in BF_WATCH)
     bqa = [
         ("When is Black Friday 2026?", "Black Friday is Friday, November 27, 2026. Cyber Monday is Monday, November 30, 2026."),
-        ("Have pickleball brands announced Black Friday 2026 sales?", f"Not that we could confirm as of {fmt(BF_CHECKED)}. None of the brand pages we checked shows a dated 2026 Black Friday sale. We'll update this page as brands publish details."),
+        ("Have pickleball brands announced Black Friday 2026 sales?", f"One so far. As of {fmt(BF_CHECKED)}, Selkirk's sale page shows an Early Black Friday promo (up to 50% off paddles, apparel and more) with no end date published. Volair and CRBN show no Black Friday sale yet. We'll update this page as brands publish details."),
         ("How do I know if a Black Friday paddle deal is real?", "Compare the sale price with our price tracker and price index. Each paddle page shows the lowest price we've recorded on the maker's site, so you can see if a 'deal' is really lower."),
         ("Which paddles are on sale right now?", f"At our latest check, {len(sale)} paddle{'s were' if len(sale) != 1 else ' was'} below the maker's compare-at price or our last recorded price. They're listed on this page with the date we checked."),
         ("Is there a pickleball discount code for Black Friday?", (f"Our Volair code {vol['code']} takes {vol['discount']} at checkout on volair.com today. " if vol else "") + "Brands often limit codes on sale items, so check your cart total. All tracked codes are on our discount codes page."),
-        ("Should I buy now or wait?", "If a paddle is already at the lowest price we've recorded, waiting may not save more. Brands haven't published 2026 Black Friday prices yet, so nobody can promise a deeper cut."),
+        ("Which Volair paddles take code DROPTHEPICKLE?", (f"Volair tags {len(vin)} of the {len(vpad)} Volair paddles we track as included in its discounts, so {vol['code']} ({vol['discount']}) should apply to those at checkout. " if vol and vpad else "") + (f"The {', '.join(p['model'] for p in vex)} is not tagged, so the code may not apply to it. " if vex else "") + "Check your cart total before you pay."),
+        ("What is the cheapest Volair paddle right now?", (f"The {vpad[0]['brand']} {vpad[0]['model']} at {money(vpad[0], cur(vpad[0]))} on volair.com (checked {fmt(chk(vpad[0]))}).{xnote(vpad[0], False)}" + (f" The lowest-priced one tagged for discounts is the {vin[0]['model']} at {money(vin[0], cur(vin[0]))}, about {money(vin[0], round(cur(vin[0]) * 0.9, 2))} with {vol['code']} before tax and shipping." if vin and vol else "")) if vpad else "See our Volair code page."),
+        ("Should I buy now or wait?", "If a paddle is already at the lowest price we've recorded, waiting may not save more. Most brands haven't published 2026 Black Friday prices yet, so nobody can promise a deeper cut."),
     ]
     under100 = t2 + t3
-    bbody = (f'<h1>Black Friday Pickleball Deals 2026</h1>{DISC}'
+    bbody = (f'<h1>Black Friday Pickleball Paddle Deals 2026</h1>{DISC}'
              f'<p class="meta">Black Friday is {fmt(BF_DAY)} and Cyber Monday is {fmt(CM_DAY)}. This is our hub for both: current verified prices and codes now, and we\'ll update it as brands announce sales. {price_checked(last, fmt, e)}</p>{vcall}'
-             f'<h2>Has any brand announced its 2026 sale?</h2><p>Not yet, as far as we could confirm on {fmt(BF_CHECKED)}. We only list a sale once the brand publishes it. Pages we\'re watching:</p><ul>{watch}</ul>'
+             f'{vsec}'
+             f'<h2>Has any brand announced its 2026 sale?</h2><p>One so far, as of {fmt(BF_CHECKED)}: Selkirk shows an Early Black Friday promo. We only list a sale once the brand publishes it. Pages we\'re watching:</p><ul>{watch}</ul>'
              f'<h2>Is that deal real? Check before you buy</h2><p>Brands raise and cut prices all year. Before you trust a "Black Friday" price, compare it with our numbers:</p>'
              f'<ul><li><a href="../price-tracker.html"><b>Paddle Price Tracker</b></a>: popular paddles with "% off list", checked on each brand\'s own page.</li>'
              f'<li><a href="../price-index.html"><b>Paddle Price Index</b></a>: every maker price we\'ve recorded.</li>'
@@ -170,13 +187,14 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
              f'<h2>On sale at our last check</h2>{lowtbl}'
              f'<h2>Paddles $100 and under right now</h2>{table(under100, "../") if under100 else "<p>None at our last check.</p>"}'
              f'<h2>Codes you can use now</h2><p>Most brands allow one code per order and may exclude sale items, so check the total before you pay. Every tracked code is on <a href="/discount-codes">pickleball discount codes</a>.</p>'
-             f'<h2>Shopping for someone else?</h2><p>See our <a href="../{GIFT_FN}">Pickleball Gift Guide 2026</a>, sorted by budget.</p>'
+             f'<h2>Shopping for someone else?</h2><p>See our <a href="../{GIFT_FN}">Pickleball Gift Guide 2026</a>, sorted by budget, or the <a href="../guides/best-paddles-under-100.html">best paddles under $100</a>. Browse every paddle in the <a href="../paddles.html">paddle database</a> or take the <a href="../paddle-quiz.html">paddle quiz</a>.</p>'
              f'{faq(bqa, "Black Friday FAQ")}'
              f'<p class="meta">More: <a href="../deals.html">All paddle deals</a> · <a href="../guides/best-volair-paddles.html">Best Volair paddles</a> · <a href="../guides/best-paddles-under-100.html">Best paddles under $100</a> · <a href="../disclosure.html">Disclosure</a></p>')
-    bdesc = "Black Friday (Nov 27) and Cyber Monday (Nov 30) 2026 pickleball deals hub: dated paddle prices, working codes, and a price tracker to spot fake sales."
-    blist = sale + [p for p in under100 if p not in sale]
+    bdesc = "Black Friday 2026 pickleball paddle deals: Volair paddles 10% off with DROPTHEPICKLE, dated maker prices, announced brand sales and real-deal checks."
+    blist = vpad + [p for p in sale + under100 if p not in vpad]
+    blist = [p for i, p in enumerate(blist) if p not in blist[:i]]
     base = absu("index.html")
-    page(BF_FN, "Black Friday Pickleball Deals 2026: Prices & Codes", bbody, bdesc[:155],
-         fresh={"sale": [(p["brand"], p["model"], cur(p), chk(p)) for p in blist], "faq": bqa, "watch": BF_WATCH},
-         schema=[{**item_list(blist), "name": "Black Friday pickleball deals 2026"}, faq_ld(bqa)], raw_title=True,
-         crumbs=[{"name": "Home", "url": base}, {"name": "Deals", "url": absu("deals.html")}, {"name": "Black Friday Pickleball Deals 2026", "url": absu(BF_FN)}])
+    page(BF_FN, "Black Friday Pickleball Paddle Deals 2026: Prices & Codes", bbody, bdesc[:155],
+         fresh={"sale": [(p["brand"], p["model"], cur(p), chk(p)) for p in blist], "faq": bqa, "watch": BF_WATCH, "checked": BF_CHECKED},
+         schema=[{**item_list(blist), "name": "Black Friday pickleball paddle deals 2026"}, faq_ld(bqa)], raw_title=True,
+         crumbs=[{"name": "Home", "url": base}, {"name": "Deals", "url": absu("deals.html")}, {"name": "Black Friday Pickleball Paddle Deals 2026", "url": absu(BF_FN)}])
