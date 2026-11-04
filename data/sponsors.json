@@ -1037,7 +1037,7 @@
    ],
    "priority": 2,
    "status": "affiliate - approved Nov 4, 2026",
-   "notes": "Approval email 2026-11-04 (Gmail id 1a1a7c16ea836fe0) states no commission, cookie or discount terms. Referral tag set in config.json BRAND_AFFILIATE_PARAMS -> /go/udrippin-home.",
+   "notes": "Commission is paid as UDRIPPIN store credit, not cash (per Geo 2026-11-04); rate and cookie length unknown. Approval email 2026-11-04 (Gmail id 1a1a7c16ea836fe0) states no commission, cookie or discount terms. Referral tag set in config.json BRAND_AFFILIATE_PARAMS -> /go/udrippin-home.",
    "checked": "2026-11-04"
   }
  ],
