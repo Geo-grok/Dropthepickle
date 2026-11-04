@@ -30,6 +30,21 @@
       "terms_note": "Volair terms: don't post the code on deal sites or Reddit. Our own site is fine.",
       "how": "Type DROPTHEPICKLE in the discount code box at checkout on volair.com and tap Apply. Volair doesn't publish whether it combines with sale prices or other codes, so check the total before you pay.",
       "page": "/discount-codes/volair"
+    },
+    {
+      "brand": "Honolulu",
+      "code": "DROPTHEPICKLE",
+      "discount": "10% off",
+      "conditions": "Paddles on 808pickle.com; excludes Super Sale and bundle sale products",
+      "shop_url": "https://808pickle.com/",
+      "network": "UpPromote",
+      "commission": "a commission on the sale",
+      "pays_on": "code use or affiliate link",
+      "approved": "2026-11-04",
+      "active": true,
+      "terms_note": "Honolulu Pickleball Company ambassador program (Ashley Rice email 2026-10-26, Gmail id 1a17a518756e2163; affiliate approval 2026-11-04, Gmail id 1a1a5380bc70e954). Discount excludes Super Sale and bundle sale products. Email is marked confidential: don't quote it beyond the customer discount.",
+      "how": "Type DROPTHEPICKLE in the discount code box at checkout on 808pickle.com and tap Apply. Honolulu says the 10% doesn't apply to Super Sale or bundle sale products, so check the total before you pay.",
+      "page": "/discount-codes/honolulu"
     }
   ],
   "SIGNUP_ENDPOINT": "/api/signup",

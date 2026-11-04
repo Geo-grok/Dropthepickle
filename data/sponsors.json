@@ -1005,6 +1005,24 @@
    "priority": 1,
    "notes": "",
    "checked": "2026-10-14"
+  },
+  {
+   "name": "Honolulu Pickleball Company",
+   "category": "paddle brand",
+   "url": "https://808pickle.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "UpPromote (affiliate register: https://af.uppromote.com/4009c8-2/register)",
+   "affiliate_url": "https://808pickle.com/pages/ambassadors",
+   "sponsorship_or_media_contact_url": "https://808pickle.com/pages/ambassadors",
+   "pickleball_ad_evidence": [
+    "Public ambassador program page",
+    "Customer gets 10% off paddles with ambassador code (excl. Super Sale and bundle sale products), per HPC ambassador email 2026-10-26"
+   ],
+   "priority": 1,
+   "status": "ambassador - approved Nov 4, 2026",
+   "own_code": "DROPTHEPICKLE",
+   "notes": "Affiliate account approved 2026-11-04 (Gmail id 1a1a5380bc70e954). Own code in config.json OWN_CODES.",
+   "checked": "2026-11-04"
   }
  ],
  "ad_networks": [
