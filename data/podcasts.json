@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "show": "PicklePod (The Dink)",
+   "title": "Why Ben Johns' Team USA Isn't the Best MLP Team Ever",
+   "link": "https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
+   "date": "2026-11-03"
+  },
+  {
    "show": "The World Pickleball Podcast",
    "title": "JW Johnson Is World No.1 — Is Ben Johns Sinking? | With Gordon Watson",
    "link": "https://worldpickleballpodcast.alitu.com/episode/cc6fbe66-89f0-47b8-b4ae-b081bda96abc",
@@ -89,12 +95,6 @@
    "title": "Federico Staksrud: The $400K Fives Trade, Reuniting With Hayden, and Chasing Ben & Gabe | S5 E2",
    "link": "https://podcasters.spotify.com/pod/show/pickleballers",
    "date": "2026-10-15"
-  },
-  {
-   "show": "PicklePod (The Dink)",
-   "title": "Anna Leigh Waters Won Her 200th Gold. She's 19.",
-   "link": "https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
-   "date": "2026-10-13"
   },
   {
    "show": "Pickleball Effect: The Podcast",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-11-03T11:47"
+ "updated": "2026-11-04T11:53"
 }
