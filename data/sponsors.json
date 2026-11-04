@@ -1023,6 +1023,22 @@
    "own_code": "DROPTHEPICKLE",
    "notes": "Affiliate account approved 2026-11-04 (Gmail id 1a1a5380bc70e954). Own code in config.json OWN_CODES.",
    "checked": "2026-11-04"
+  },
+  {
+   "name": "UDRIPPIN",
+   "category": "apparel/accessories brand",
+   "url": "https://www.udrippin.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "UpPromote (sca_ref referral link; dashboard https://af.uppromote.com/Udrippin/login)",
+   "affiliate_url": "https://www.udrippin.com?sca_ref=12702736.PmFAc1tWVv",
+   "sponsorship_or_media_contact_url": "https://www.udrippin.com/pages/ambassador",
+   "pickleball_ad_evidence": [
+    "Public ambassador program page: 'Earn credits on every sale you generate' plus monthly/quarterly bonuses (no rate stated)"
+   ],
+   "priority": 2,
+   "status": "affiliate - approved Nov 4, 2026",
+   "notes": "Approval email 2026-11-04 (Gmail id 1a1a7c16ea836fe0) states no commission, cookie or discount terms. Referral tag set in config.json BRAND_AFFILIATE_PARAMS -> /go/udrippin-home.",
+   "checked": "2026-11-04"
   }
  ],
  "ad_networks": [
