@@ -172,7 +172,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
     vsec = (f'<h2>Volair paddle deals with code {e(vol["code"])}</h2><p>Our own code {e(vol["code"])} takes {e(vol["discount"])} at checkout on volair.com. '
             'The "with code" column is the price minus 10%, before tax and shipping; your cart total is what counts. '
             f'Compare picks in <a href="../guides/best-volair-paddles.html">best Volair paddles</a> or see the <a href="/discount-codes/volair">Volair promo code</a> page.</p>{vtbl}') if vtbl else ""
-    watch = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener"><a href="{e(u)}" target="_blank" rel="noopener">{e(b)}</a>: {e(t)}</li>' for b, u, t in BF_WATCH)
+    watch = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(b)}</a>: {e(t)}</li>' for b, u, t in BF_WATCH)
     bqa = [
         ("When is Black Friday 2026?", "Black Friday is Friday, November 27, 2026. Cyber Monday is Monday, November 30, 2026."),
         ("Have pickleball brands announced Black Friday 2026 sales?", f"One so far. As of {fmt(BF_CHECKED)}, Selkirk's sale page shows an Early Black Friday promo (up to 50% off paddles, apparel and more) with no end date published. Volair and CRBN show no Black Friday sale yet. We'll update this page as brands publish details."),

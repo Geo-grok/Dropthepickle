@@ -276,6 +276,21 @@ CSS += """
 /* <=360px phones: the header row (wordmark + menu + Join free) is ~375px wide; drop the small header mascot so Join free stays on screen. Text keeps its size. */
 @media(max-width:360px){.bar>.logo picture,.bar>.logo img{display:none}.bar>.logo{min-height:44px;align-items:center}.bar{padding-left:6px;padding-right:6px}}
 """
+# Mobile UX pass (2026-11-04): phone-only (<=720px). Event-week strip text was 14-15px and cut off with "..." on 320-390px phones
+# (incl. the Volair code discount at 320px); now 16px and wraps instead. Thumb-size (44px) hit areas for the brand-page Shop link,
+# code chips, breadcrumbs and Buzz "watch" links. Sizes only grow; no copy, price or link changes.
+CSS += """
+@media(max-width:720px){
+.evwk-ev{height:auto;min-height:52px;padding:6px 8px}
+.evwk-ev b,.evwk-ev span{font-size:16px;line-height:20px;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+.evwk-code{height:auto;min-height:44px;padding:6px 10px;white-space:normal;text-align:center}
+.evwk-watch{display:flex;align-items:center;height:auto;min-height:44px;font-size:16px;line-height:22px;white-space:normal}
+.cshop{display:inline-flex;align-items:center;min-height:44px}
+.codes-best a{display:inline-flex;align-items:center;min-height:44px;font-size:1rem}
+.crumbs{font-size:1rem}.crumbs a{display:inline-block;padding:12px 0;margin:-12px 0}
+.buzzcard .watch a{display:inline-block;padding:12px 0;margin:-12px 0}
+}
+"""
 _FB = {"Inter": "Inter Fallback", "Oswald": "Oswald Fallback", '"Bebas Neue"': "Bebas Neue Fallback", "Anton": "Anton Fallback"}
 def _with_fallbacks(css):
     # insert the metric-matched fallback right after each web font in every font/font-family stack
