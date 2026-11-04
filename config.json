@@ -35,15 +35,15 @@
       "brand": "Honolulu",
       "code": "DROPTHEPICKLE",
       "discount": "10% off",
-      "conditions": "Paddles on 808pickle.com; excludes Super Sale and bundle sale products",
+      "conditions": "Paddles on 808pickle.com; excludes demo paddles, apparel, Paddle Refresh, and the J2 Super Sale, J1/J5 Super Sale and Special Promotion Super Sales collections",
       "shop_url": "https://808pickle.com/",
       "network": "UpPromote",
       "commission": "a commission on the sale",
       "pays_on": "code use or affiliate link",
       "approved": "2026-11-04",
       "active": true,
-      "terms_note": "Honolulu Pickleball Company ambassador program (Ashley Rice email 2026-10-26, Gmail id 1a17a518756e2163; affiliate approval 2026-11-04, Gmail id 1a1a5380bc70e954). Discount excludes Super Sale and bundle sale products. Email is marked confidential: don't quote it beyond the customer discount.",
-      "how": "Type DROPTHEPICKLE in the discount code box at checkout on 808pickle.com and tap Apply. Honolulu says the 10% doesn't apply to Super Sale or bundle sale products, so check the total before you pay.",
+      "terms_note": "Honolulu Pickleball Company ambassador program (Ashley Rice email 2026-10-26, Gmail id 1a17a518756e2163; affiliate approval 2026-11-04, Gmail id 1a1a5380bc70e954). Excluded collections per Geo's UpPromote dashboard screenshot 2026-11-04: Demo paddles, J2 Super Sale, J1 J5 Super Sale, Special Promotion Super Sales, Apparel, Paddle Refresh. Email is marked confidential: don't quote it beyond the customer discount.",
+      "how": "Type DROPTHEPICKLE in the discount code box at checkout on 808pickle.com and tap Apply. The 10% doesn't apply to demo paddles, apparel, Paddle Refresh, and the J2 Super Sale, J1/J5 Super Sale and Special Promotion Super Sales collections, so check the total before you pay.",
       "page": "/discount-codes/honolulu"
     }
   ],
