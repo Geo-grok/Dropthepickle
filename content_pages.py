@@ -39,6 +39,7 @@ GUIDES = [
     ("guides/indoor-vs-outdoor-pickleball-balls.html", "Indoor vs outdoor pickleball balls"),
     ("guides/how-to-choose-pickleball-shoes.html", "How to choose pickleball shoes"),
     ("guides/pickleball-court-dimensions.html", "Pickleball court dimensions"),
+    ("guides/pickleball-grip-size.html", "Pickleball grip size chart"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -155,7 +156,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>4. Check the weight</h2>
 <p>Makers that publish a weight in our files land between {light[0]:.1f} oz ({alink(light[2])}) and {heavy[1]:.1f} oz ({alink(heavy[2])}{", maker price in AUD" if heavy[2]["currency"] != "USD" else ""}). Lighter published weights are easier to swing at the kitchen. Heavier published weights put more mass behind the ball and can feel slower in a fast exchange. Some makers leave weight blank. If it is blank on the paddle page, we do not guess it.</p>
 <h2>5. Read one spec page before you buy</h2>
-<p>Open the <a href="../paddles.html">paddle database</a> or <a href="../compare.html">compare two paddles</a> from the same brand. Each paddle page repeats the maker's core, shape, weight, and latest checked price, and links to the maker's product page.</p>
+<p>Open the <a href="../paddles.html">paddle database</a> or <a href="../compare.html">compare two paddles</a> from the same brand. Each paddle page repeats the maker's core, shape, weight, and latest checked price, and links to the maker's product page. Before you buy, measure your hand with our <a href="pickleball-grip-size.html">grip size guide</a>.</p>
 {faq_html}
 {more("guides/how-to-choose-a-paddle.html")}'''
     page("guides/how-to-choose-a-paddle.html", "How to choose a pickleball paddle", choose,
@@ -363,7 +364,7 @@ def make(page, e, fmt, PP, cur, ph):
 <ul>{"".join(thick_bits)}</ul>
 <p>The <a href="../best-16mm-paddles.html">16mm filter</a> is every paddle whose core field includes 16mm. It is not an ordered list of the softest paddles.</p>
 <h2>What to do with the numbers</h2>
-<p>If you mishit on the sides, look at a wider shape before you look at a heavier weight. If the ball feels too lively, look at a thicker published core before you add tape. Then open <a href="how-to-choose-a-paddle.html">how to choose a paddle</a> and the <a href="../compare.html">comparison pages</a>, which put two spec sheets side by side.</p>
+<p>If you mishit on the sides, look at a wider shape before you look at a heavier weight. If the ball feels too lively, look at a thicker published core before you add tape. Then open <a href="how-to-choose-a-paddle.html">how to choose a paddle</a> and the <a href="../compare.html">comparison pages</a>, which put two spec sheets side by side. The third number to check is grip circumference: see the <a href="pickleball-grip-size.html">pickleball grip size chart</a>.</p>
 {faq_html}
 {more("guides/paddle-weight-and-core.html")}'''
     page("guides/paddle-weight-and-core.html", "Paddle weight and core explained", weight,
@@ -972,6 +973,103 @@ def make(page, e, fmt, PP, cur, ph):
          "Pickleball court dimensions from the 2026 USA Pickleball rulebook: 20 x 44 ft court, 7 ft kitchen, 36/34 in net, 30 x 60 ft minimum space, layout tolerances and tennis comparison.",
          fresh={"checked": CD_CHECKED, "spec": CD_SPEC, "area": CD_AREA, "tol": CD_TOL, "tennis": CD_TENNIS, "faq": cd_faq},
          schema=[cd_faq_ld])
+
+    # ----- Pickleball grip size (Nov 4, 2026) -----
+    # Evergreen. Sizing methods and grip options are from Selkirk's grip-size article and grip guide and ARTI's grip-size guide;
+    # the grip-alteration rules are from the 2026 USA Pickleball Official Rulebook (Rule 3.D); the Volair table is built from
+    # data/paddles.json (maker specs, re-read on volair.com on GR_CHECKED). Nothing here is a playtest or our own sizing chart.
+    GR_CHECKED = "2026-11-04"
+    gr_checked = _dt.date.fromisoformat(GR_CHECKED).strftime("%B %-d, %Y")
+    GR_SLK = "https://www.selkirk.com/blogs/pickleball-education/how-do-i-know-my-pickleball-grip-size"
+    GR_SLK_GUIDE = "https://www.selkirk.com/pages/selkirk-grip-guide"
+    GR_ARTI = "https://www.playwitharti.com/blogs/news/pickleball-paddle-grip-size-guide-circumference"
+    GR_HEIGHT = [("Below 5 ft 3 in (160 cm)", "4 in (10.2 cm)"), ("5 ft 3 in to 5 ft 8 in (160-173 cm)", "4.25 in (10.8 cm)"), ("Above 5 ft 8 in (173 cm)", "4.5 in (11.4 cm)")]
+    GR_ARTI_CHART = [("Under 4 in", "4 1/8 in"), ("4 to 4 1/4 in", "4 1/4 in"), ("4 1/4 to 4 1/2 in", "4 3/8 in")]
+    GR_SLK_GRIPS = [("Thin Grip", "4 in", "Small hands; about 0.2 oz lighter than the Comfort Grip"),
+                    ("Comfort Grip", "4.25 in", "Selkirk's standard grip, \"preferred by most people\""),
+                    ("Contour Grip", "4.25 in", "Same size as Comfort, with ridges; recommended for beginners"),
+                    ("Double Grip", "4.5 in", "Very large hands; a Comfort Grip over another Comfort Grip, about 0.4 oz heavier on average")]
+    gr_vol = [p for p in PP if p["brand"] == "Volair" and p.get("grip")]
+    gr_vol.sort(key=lambda p: (p["grip"], p["model"]))
+    gr_faq = [
+        ("How do I measure my pickleball grip size?",
+         "Hold your playing hand palm up with the fingers extended and together. Measure from the middle of the three palm creases to the tip of your ring finger. Selkirk and ARTI both say that number, in inches, is about your grip circumference."),
+        ("What is the most common pickleball grip size?",
+         "4 1/4 inches. Selkirk's standard Comfort Grip is 4.25 inches and \"preferred by most people\", and ARTI calls 4 1/4 inches the most widely used size."),
+        ("Should I size up or down if I'm between grip sizes?",
+         "Go smaller. ARTI says to choose the smaller grip and add overgrip, because overgrip can only make a handle bigger. There is no practical way to shrink a grip that is too large."),
+        ("How much does an overgrip add?",
+         "ARTI says one layer of standard overgrip adds about 1/16 inch to the circumference. Selkirk's Double Grip, a full Comfort Grip wrapped over another, takes its 4.25-inch grip to 4.5 inches."),
+        ("Does the index finger test work for pickleball?",
+         "Selkirk calls it a myth for pickleball. It says the tennis rule of thumb, fitting an index finger between your fingertips and palm, tends to push players into a bigger grip than is most comfortable."),
+        ("Can I change my grip size and still play in sanctioned events?",
+         "Yes. The 2026 USA Pickleball rulebook lists changing grip size with inserts, adding or replacing grip wrap, and replacing OEM interchangeable grips as allowed alterations (Rule 3.D.6). The altered paddle must still meet all specifications."),
+        ("Can I use my height to pick a grip size?",
+         "Selkirk publishes a height chart: under 5 ft 3 in, a 4-inch grip; 5 ft 3 in to 5 ft 8 in, 4.25 inches; over 5 ft 8 in, 4.5 inches. It says this is less accurate than measuring your hand."),
+    ]
+    gr_faq_html, gr_faq_ld = faq(gr_faq)
+    gr_h_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td></tr>' for a, b in GR_HEIGHT)
+    gr_a_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td></tr>' for a, b in GR_ARTI_CHART)
+    gr_s_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in GR_SLK_GRIPS)
+    gr_v_rows = "".join(f'<tr><th scope="row">{alink(p, p["model"])}</th><td>{e(p["grip"])}</td><td>{e(p.get("handle") or "not published")}</td><td>{e(p.get("shape") or "")}</td></tr>' for p in gr_vol)
+    _gr_own = __import__("own_codes").own_codes(__import__("json").load(open(__import__("pathlib").Path(__file__).with_name("config.json")))).get("Volair")
+    gr_code = (f'<p>Our own Volair code <b>{e(_gr_own["code"])}</b> takes {e(_gr_own["discount"])} at checkout on volair.com. '
+               f'{e(__import__("own_codes").earn_line(_gr_own))} Details: <a href="../discount-codes/volair.html">Volair promo code</a>.</p>') if _gr_own else ""
+    gr_vol_html = (f'''<h2>Grip sizes on Volair paddles</h2>
+<p>Most makers list a single stock grip size, so check the spec before you buy. Volair publishes grip circumference and handle length for each paddle. These are the paddles in our database, with the numbers from each paddle's page on volair.com (re-read {gr_checked}):</p>
+<div class="tbl"><table><thead><tr><th>Volair paddle</th><th>Grip circumference</th><th>Handle length</th><th>Shape</th></tr></thead><tbody>{gr_v_rows}</tbody></table></div>
+<p>By that list, the Forza paddles and the V.1F/ XL-W list 4.15 inches and the CMD paddles 4.125, just under the common 4 1/4. Smaller grips like these can be built up with overgrip. The Pro and Mach 2 paddles list 4.25 inches in 14mm and 4.3 inches in 16mm.</p>
+{gr_code}''') if gr_vol else ""
+    grip = f'''<h1>Pickleball grip size: how to measure your hand and pick a paddle grip (2026)</h1>
+<p class="meta">Sizing methods and charts are from paddle makers <a href="{GR_SLK}" target="_blank" rel="noopener">Selkirk</a> and <a href="{GR_ARTI}" target="_blank" rel="noopener">ARTI</a>. Grip alteration rules are from the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball Official Rulebook</a>. All read {gr_checked}. This is not medical advice. If you have arm pain, see a doctor.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>Measure:</b> palm up, fingers together. Measure from the middle palm crease to the tip of your ring finger. That number, in inches, is about your grip circumference (Selkirk, ARTI).</li>
+<li><b>Most players:</b> 4 1/4 inches is the common starting size.</li>
+<li><b>Between sizes:</b> go smaller and add overgrip (ARTI).</li>
+<li><b>Legal:</b> grip wrap and grip-size inserts are allowed alterations under the 2026 rulebook (Rule 3.D.6).</li>
+</ul>
+<h2>Why grip size matters</h2>
+<p>Grip size is the <b>circumference</b> of the handle, measured around it in inches. Selkirk says a grip that is too small makes you squeeze the paddle harder than you need to, and one that is too big makes you strain for control. Over time, either one can tire your hand and arm. ARTI adds that an oversized grip limits the wrist movement you use for spin and soft shots at the kitchen.</p>
+<h2>How to measure your grip size (the ruler test)</h2>
+<ol>
+<li>Hold your playing hand palm up, fingers extended and pressed together.</li>
+<li>Find the <b>middle</b> of the three palm creases. Selkirk calls it the bottom lateral crease. ARTI calls it the horizontal line across the center of your palm, <i>not</i> the crease just below your fingers.</li>
+<li>Measure from that crease to the tip of your <b>ring finger</b> with a ruler marked in inches.</li>
+</ol>
+<p>Selkirk says the result "will be somewhere between 4 and 5 inches" and should be your grip circumference. ARTI turns it into a size with this chart:</p>
+<div class="tbl"><table><thead><tr><th>Your measurement</th><th>ARTI's suggested grip</th></tr></thead><tbody>{gr_a_rows}</tbody></table></div>
+<p>ARTI calls its chart "a starting point, not a verdict." Selkirk says the best check is court time with the paddle.</p>
+<h2>No ruler? Selkirk's height chart</h2>
+<div class="tbl"><table><thead><tr><th>Height</th><th>Grip size</th></tr></thead><tbody>{gr_h_rows}</tbody></table></div>
+<p>Selkirk says height is less accurate than measuring your hand.</p>
+<h2>Skip the index finger test</h2>
+<p>Tennis players are often told to fit their other index finger between the fingertips and palm while holding the handle. Selkirk calls this a myth for pickleball: it tends to push players into a bigger grip than is most comfortable. Coming from tennis, a slightly bigger grip may still feel right to you.</p>
+<h2>Grip size names: small, medium, large</h2>
+<p>Size names aren't standard, so go by the number. Selkirk's grip options:</p>
+<div class="tbl"><table><thead><tr><th>Selkirk grip</th><th>Circumference</th><th>Notes</th></tr></thead><tbody>{gr_s_rows}</tbody></table></div>
+<p>ARTI lists 4 1/8 inches as small, 4 1/4 as medium and 4 3/8 as large. It says a 4 1/2-inch grip is uncommon in pickleball.</p>
+<h2>Overgrips: the easy way to size up</h2>
+<p>ARTI says one layer of standard overgrip adds about 1/16 inch to the circumference. It also absorbs sweat and is cheap to replace. That only works in one direction: you can build a small grip up, but you can't make a big grip smaller. That's why ARTI says to go smaller when you're between sizes. Selkirk adds that grips change size over time as they wear down or swell with moisture, so check yours now and then.</p>
+<p>Under the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball rulebook</a>, adding or replacing grip wrap (Rule 3.D.6.h), changing grip size with inserts (3.D.6.g) and replacing OEM interchangeable grips (3.D.6.d) are allowed alterations. The altered paddle still has to meet all specifications. The rulebook also says decals and tape on the paddle face can't extend more than 1 inch above the top of the grip (Rule 3.D.7).</p>
+<h2>Handle length is a separate number</h2>
+<p>Circumference is how thick the handle is. Handle length is how long it is. Selkirk says handles are usually around 4.5 inches long, and a longer handle helps if you hit two-handed shots. The paddle as a whole is capped by Rule 3.D.2: length plus width can't exceed 24 inches, and length can't exceed 17 inches, so a longer handle means less face. For the rest of the spec sheet, see <a href="paddle-weight-and-core.html">paddle weight and core</a> and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+{gr_vol_html}
+<h2>Next steps</h2>
+<p>Still choosing a paddle? Try the <a href="../paddle-quiz.html">paddle quiz</a> or the <a href="best-paddles-under-100.html">best paddles under $100</a>. If your paddle feels different than it used to, check <a href="is-my-paddle-dead.html">core crush signs</a>.</p>
+{money_links()}
+{gr_faq_html}
+{sources([("Selkirk: How do I find my pickleball paddle grip size?", GR_SLK, f"ruler test, height chart, sizing effects, handle length, read {gr_checked}"),
+          ("Selkirk: Grip guide", GR_SLK_GUIDE, f"Thin, Comfort, Contour and Double Grip sizes and weights, index finger test, read {gr_checked}"),
+          ("ARTI Pickleball: Pickleball paddle grip size guide", GR_ARTI, f"measurement chart, size names, overgrip adds about 1/16 inch, read {gr_checked}"),
+          ("USA Pickleball: 2026 Official Rulebook", RULES, f"Rules 3.D.2 (dimensions), 3.D.6 (allowable alterations) and 3.D.7, read {gr_checked}"),
+          ("Volair product pages (one per paddle, linked from each paddle page)", "https://volair.com/", f"grip circumference and handle length for each paddle listed, re-read {gr_checked}")])}
+{more("guides/pickleball-grip-size.html")}'''
+    page("guides/pickleball-grip-size.html", "Pickleball Grip Size Chart: How to Measure Your Paddle Grip (2026)", grip,
+         "Find your pickleball grip size: the ruler test, Selkirk's height chart, ARTI's sizing chart, overgrip tips, the 2026 rulebook on grip changes, and Volair grip specs.",
+         fresh={"checked": GR_CHECKED, "height": GR_HEIGHT, "arti": GR_ARTI_CHART, "selkirk": GR_SLK_GRIPS,
+                "volair": [[p["model"], p["grip"], p.get("handle")] for p in gr_vol], "faq": gr_faq},
+         schema=[gr_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
