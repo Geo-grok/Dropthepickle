@@ -40,6 +40,7 @@ GUIDES = [
     ("guides/how-to-choose-pickleball-shoes.html", "How to choose pickleball shoes"),
     ("guides/pickleball-court-dimensions.html", "Pickleball court dimensions"),
     ("guides/pickleball-grip-size.html", "Pickleball grip size chart"),
+    ("guides/pickleball-drills.html", "Pickleball drills"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -317,6 +318,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>What to watch</h2>
 <p>Ryan Morneau posted "{e(vtitle)}" on his Pickleball Breakdowns channel on {fmt(vdate)}. It is his clip, embedded here so you can watch the idea from a player who breaks down pro points. More of his recent clips are on the <a href="../creators/ryan-morneau.html">spotlight page</a>.</p>
 {embed(vid, vtitle)}
+<p>To build the habit, run the dink drills in our <a href="pickleball-drills.html">pickleball drills guide</a>, starting with the Down the Link Dink Game.</p>
 <h2>The paddle is the smaller part</h2>
 <p>A published light weight is easier to reset in a fast exchange. In our file the lightest listed number is {light[0]:.1f} oz, on the {alink(light[2])}. That is a spec, not a promise that the paddle dinks better. Read <a href="paddle-weight-and-core.html">weight and core</a> before you buy a new face to fix a swing.</p>
 {faq_html}
@@ -1070,6 +1072,100 @@ def make(page, e, fmt, PP, cur, ph):
          fresh={"checked": GR_CHECKED, "height": GR_HEIGHT, "arti": GR_ARTI_CHART, "selkirk": GR_SLK_GRIPS,
                 "volair": [[p["model"], p["grip"], p.get("handle")] for p in gr_vol], "faq": gr_faq},
          schema=[gr_faq_ld])
+
+    # ----- Pickleball drills (Nov 5, 2026) -----
+    # Evergreen. Every drill below is described from the linked source page, read on DR_CHECKED: USA Pickleball's
+    # "Top Four Pickleball Drills Anyone Can Do" and third-shot article, PlayPickleball's 2-person drills (Barrett and Danea Bass),
+    # and pickleball.com's wall-drill piece with pro Ava Ignatowich. Wall tape heights come from the 2026 rulebook (our court guide).
+    # No invented rep targets: counts appear only where the source gives them.
+    DR_CHECKED = "2026-11-05"
+    dr_checked = _dt.date.fromisoformat(DR_CHECKED).strftime("%B %-d, %Y")
+    DR_USAP = "https://usapickleball.org/pickleball-skills/level-one/top-four-pickleball-drills/"
+    DR_USAP3 = "https://usapickleball.org/pickleball-skills/level-three/mastering-the-third-shot-in-pickleball/"
+    DR_PP = "https://playpickleball.com/pickleball-drills-2-people/"
+    DR_WALL = "https://pickleball.com/learn/the-best-pickleball-wall-drills-with-ava-ignatowich"
+    DR_TABLE = [
+        ("Down the Link Dink Game", "2", "Dink control, patience, when to attack", "USA Pickleball"),
+        ("Two Tap Drill", "2", "Soft hands, volley control", "USA Pickleball"),
+        ("Cross Court Drops", "2", "Third shot drop from the baseline", "USA Pickleball"),
+        ("Serving From a Basket", "1", "Serve consistency and depth", "USA Pickleball"),
+        ("Dink Dink Bang", "2", "Dinks, speed-ups, resets", "PlayPickleball"),
+        ("Fast Hands", "2", "Hand speed at the net", "PlayPickleball"),
+        ("Slinky", "2", "Shots from every part of the transition zone", "PlayPickleball"),
+        ("Work-Up", "2", "Getting from the baseline to the kitchen", "PlayPickleball"),
+        ("Skinny Singles", "2", "Game play on half the court", "PlayPickleball"),
+        ("Wall dinks, fast hands and drives", "1", "Feel, reflexes, cardio", "Ava Ignatowich via pickleball.com"),
+    ]
+    dr_faq = [
+        ("What are the best pickleball drills for beginners?",
+         "USA Pickleball's four drills \"anyone can do\" are the Down the Link Dink Game, the Two Tap Drill, Cross Court Drops and Serving From a Basket. Together they cover dinking, soft hands, the third shot drop and the serve."),
+        ("How do you do the Two Tap Drill?",
+         "Stand at the kitchen line across from a partner and volley back and forth. Each time the ball comes to you, tap it up to yourself once, then hit it back. USA Pickleball says it builds soft hands, ball control, reaction time and volley consistency."),
+        ("How many drop shots should I hit in a row?",
+         "In USA Pickleball's Cross Court Drops drill, the goal is 10 to 20 successful drops in a row from behind the baseline before you switch sides with your partner. Don't move forward after the drop during the drill."),
+        ("Can I practice pickleball alone?",
+         "Yes. USA Pickleball's Serving From a Basket drill needs only you and a basket of balls. A wall works too: pro Ava Ignatowich told pickleball.com she gets far more reps at a wall and spends most of that time on fast hands, alternating forehands and backhands."),
+        ("What is the Skinny Singles drill?",
+         "It's singles played on half of each side of the court, scored like a regular game to 11. PlayPickleball calls it the drill that's most like a real game when you only have two people."),
+        ("How high should the net line be for wall practice?",
+         "The 2026 USA Pickleball rulebook sets the net at 36 inches at the sidelines and 34 inches at the center, so a strip of tape at 34 to 36 inches is a fair stand-in. See our court dimensions guide for the full layout."),
+    ]
+    dr_faq_html, dr_faq_ld = faq(dr_faq)
+    dr_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td><td>{e(d)}</td></tr>' for a, b, c, d in DR_TABLE)
+    drills = f'''<h1>Pickleball drills: 10 drills for beginners, partners and solo practice (2026)</h1>
+<p class="meta">Each drill is described from its source: <a href="{DR_USAP}" target="_blank" rel="noopener">USA Pickleball</a>, <a href="{DR_PP}" target="_blank" rel="noopener">PlayPickleball</a> (Barrett and Danea Bass) and <a href="{DR_WALL}" target="_blank" rel="noopener">pickleball.com</a> (pro Ava Ignatowich). All read {dr_checked}. Rep targets appear only where the source gives one.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>New to drilling:</b> start with USA Pickleball's four basics: a dink game, the Two Tap Drill, cross-court drops and serving from a basket.</li>
+<li><b>Two players, more pace:</b> add Dink Dink Bang, Fast Hands, Slinky, Work-Up and Skinny Singles.</li>
+<li><b>No partner:</b> serve from a basket, or hit against a wall.</li>
+</ul>
+<p>USA Pickleball says drilling is "the fastest and most effective way to improve," and that even a few minutes of drills before games can make a noticeable difference.</p>
+<h2>All 10 drills at a glance</h2>
+<div class="tbl"><table><thead><tr><th>Drill</th><th>Players</th><th>What it works on</th><th>Source</th></tr></thead><tbody>{dr_rows}</tbody></table></div>
+<h2>USA Pickleball's four drills anyone can do</h2>
+<h3>1. Down the Link Dink Game</h3>
+<p>Stand at the kitchen line directly across from your partner and play on half the court only. One player feeds a dink, and the return must also be a dink. After that, anything goes: speed-ups, lobs, volleys or more dinks, as long as the ball stays on your half. USA Pickleball suggests playing best two out of three games to 5 points, then switching sides. It builds dink control and teaches when to attack. New to the shot? Read <a href="how-to-dink.html">how to dink</a> first.</p>
+<h3>2. Two Tap Drill</h3>
+<p>From the kitchen line, volley back and forth with your partner. When the ball comes to you, tap it up to yourself once before you send it back. The goal is a steady rally at a pace you control. USA Pickleball lists soft hands, ball control, reaction time and volley consistency as what it improves.</p>
+<h3>3. Cross Court Drops</h3>
+<p>Your partner stands at the kitchen line. You stand behind the baseline, cross-court. Hit drop shots to your partner, who returns the ball deep to your baseline. The key rule: don't move forward after your shot. Stay back and keep hitting drops. Aim for 10 to 20 good drops in a row, then switch. In a game, the drop is the soft third shot that buys you time to move up. USA Pickleball's <a href="{DR_USAP3}" target="_blank" rel="noopener">third shot guide</a> suggests going cross-court because that path crosses the lowest part of the net.</p>
+<h3>4. Serving From a Basket</h3>
+<p>Take a basket of balls and serve from one side until it's empty, focusing on consistency and placement. Collect the balls and repeat from the other side. This is the one you can do alone. Need a refresher on where a legal serve has to land? See the <a href="pickleball-rules-for-beginners.html">rules for beginners</a>.</p>
+<h2>Five 2-person drills from PlayPickleball</h2>
+<h3>5. Dink Dink Bang</h3>
+<p>Both players at the kitchen line. Hit three dinks, then the fourth shot is a speed-up and the fifth is a reset, then go back to dinking. The pattern is "dink, dink, dink, bang, reset," and PlayPickleball says it covers almost every kitchen-line shot.</p>
+<h3>6. Fast Hands</h3>
+<p>Volley back and forth from the kitchen line, aiming at each other's hips. Both players then step one step into the kitchen and keep volleying, adding a step at a time until someone faults. It's a drill, not a game: in a real point, you can't volley while you're touching the kitchen. PlayPickleball says the ball seems much slower once you're back at the line.</p>
+<h3>7. Slinky</h3>
+<p>Your partner stays put at the kitchen line. You hit three dinks, step back, hit three more shots, and keep stepping back three shots at a time until you reach the baseline. Then work your way forward the same way. The point is to hit from every part of the transition zone.</p>
+<h3>8. Work-Up</h3>
+<p>One player at the kitchen line feeds to the other at the baseline. The baseline player tries to work up to the kitchen while the net player tries to keep them back, then they play out the point. Start over after each fault. PlayPickleball says it works your drives, drops and speed-ups.</p>
+<h3>9. Skinny Singles</h3>
+<p>Play singles using only half of each side of the court, scored like a regular game to 11. PlayPickleball calls it the drill that's most like a real game when there are just two of you.</p>
+<h2>10. Solo: wall drills from a pro</h2>
+<p>Pro Ava Ignatowich told pickleball.com that at a wall she gets far more reps than in practice play, where she feels she hits "only about 25% of the shots." Her routine, as pickleball.com describes it:</p>
+<ul>
+<li><b>Dinks first.</b> Hit low, soft shots to warm up, watching the ball hit the sweet spot. You can't see where the balls would land, so this is about feel.</li>
+<li><b>Speed-ups and resets.</b> In the middle of a dink rally, speed up into the wall, then block the return so it comes back soft.</li>
+<li><b>Fast hands.</b> Most of her wall time goes here: alternate forehand and backhand. Step closer to make it faster, or back to make it easier.</li>
+<li><b>Drives for cardio.</b> Get low and hit through the ball, aiming slightly left or right so you have to move sideways.</li>
+</ul>
+<p>For a net line, put tape on the wall between 34 and 36 inches high. The 2026 rulebook sets the net at 36 inches at the sidelines and 34 at the center (see <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>).</p>
+<h2>Gear for practice</h2>
+<p>A handful of balls is all most drills need, but match them to your court: <a href="indoor-vs-outdoor-pickleball-balls.html">indoor vs outdoor balls</a>. Court shoes matter more when you're moving side to side for an hour: see <a href="how-to-choose-pickleball-shoes.html">how to choose pickleball shoes</a>. If your hand tires fast, check your <a href="pickleball-grip-size.html">grip size</a>.</p>
+{money_links()}
+{dr_faq_html}
+{sources([("USA Pickleball: Top Four Pickleball Drills Anyone Can Do", DR_USAP, f"Down the Link Dink Game, Two Tap Drill, Cross Court Drops, Serving From a Basket, read {dr_checked}"),
+          ("USA Pickleball: Mastering the Third Shot in Pickleball", DR_USAP3, f"drop vs drive, cross-court drops over the lowest part of the net, read {dr_checked}"),
+          ("PlayPickleball: 5 simple pickleball drills for 2 people (Barrett and Danea Bass)", DR_PP, f"Dink Dink Bang, Fast Hands, Slinky, Work-Up, Skinny Singles, read {dr_checked}"),
+          ("pickleball.com: The best pickleball wall drills with Ava Ignatowich", DR_WALL, f"wall dinks, speed-ups and resets, fast hands, drives, read {dr_checked}"),
+          ("USA Pickleball: 2026 Official Rulebook", RULES, f"net height and the non-volley zone (kitchen) volley rule, read {dr_checked}")])}
+{more("guides/pickleball-drills.html")}'''
+    page("guides/pickleball-drills.html", "Pickleball Drills: 10 Drills for Beginners, Partners and Solo (2026)", drills,
+         "10 pickleball drills from USA Pickleball, PlayPickleball and pro Ava Ignatowich: dinking, Two Tap, cross-court drops, serving, Skinny Singles and solo wall drills.",
+         fresh={"checked": DR_CHECKED, "table": DR_TABLE, "faq": dr_faq},
+         schema=[dr_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
