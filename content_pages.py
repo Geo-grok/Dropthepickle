@@ -263,33 +263,57 @@ def make(page, e, fmt, PP, cur, ph):
          schema=[faq_ld], raw_title=True)
 
     # ----- rules -----
+    # Beginner hub (SEO target approved 2026-11-05): keep the short rec-game reading, strengthen
+    # title/meta, add an at-a-glance + next-steps hub to cheat sheet / drills / court / dink.
+    # Facts stay paraphrases of the USA Pickleball Official Rulebook; no invented rule numbers.
     rules_faq = [
         ("Who can score a point?",
          "In standard scoring, a point is scored by serving the ball and winning the rally. If the receiving side wins the rally, it does not get a point. Rally scoring, where either side can score, is a separate option in the rulebook."),
         ("What is the kitchen?",
          "The non-volley zone, called the kitchen, is the 7-foot area on each side of the net. You may not volley the ball while you, or anything you are wearing or carrying, are touching that zone, including its lines. Your momentum after a volley counts too."),
+        ("What is the two-bounce rule?",
+         "The receiver must let the serve bounce, and the serving side must let the return bounce. After those two bounces, either side may volley or play a groundstroke. Hitting the ball before the required bounce is a fault."),
+        ("How do you call the score in doubles?",
+         "Call three numbers: serving team's score, receiving team's score, then the server number (1 or 2). A doubles game starts at zero-zero-two, because the first server of the game is treated as the second server. In singles, call only two numbers: server's score, then receiver's score."),
         ("What happens if the serve clips the net?",
          "Under the USA Pickleball rulebook, the serve must clear the kitchen and land in the correct service court, with or without touching the net. A serve that lands in the kitchen is a fault. A pro tour can publish its own deviations, so check that event's sheet before you play it."),
     ]
     faq_html, faq_ld = faq(rules_faq)
-    rules = f'''<h1>Pickleball rules for beginners</h1>
-<p class="meta">A short reading of the USA Pickleball rulebook, in our words. The rulebook wins if we ever disagree.</p>
-<p>The official text is the <a href="{RULES}" target="_blank" rel="noopener">USA Pickleball Official Rulebook</a> (PDF). The <a href="{RULES_SUM}" target="_blank" rel="noopener">basic rules summary</a> is the short version of the same organization. This page is the handful of rules that decide a rec game.</p>
+    rules = f'''<h1>Pickleball rules for beginners: court, serve, kitchen and scoring (2026)</h1>
+<p class="meta">A short reading of the 2026 USA Pickleball Official Rulebook, in our words. The rulebook wins if we ever disagree.</p>
+<p>The official text is the <a href="{RULES}" target="_blank" rel="noopener">USA Pickleball Official Rulebook</a> (PDF). The <a href="{RULES_SUM}" target="_blank" rel="noopener">basic rules summary</a> is the short version of the same organization. This page is the handful of rules that decide a rec game. For a one-page quick reference, use the <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>.</p>
+<h2>At a glance</h2>
+<ul>
+<li><b>Court:</b> 20 by 44 feet for singles and doubles; kitchen 7 feet deep; net 36 inches at the sidelines and 34 at the center.</li>
+<li><b>Serve:</b> diagonal into the opposite service court; must clear the kitchen; legal volley serve or drop serve.</li>
+<li><b>Two-bounce rule:</b> the serve and the return must each bounce before anyone can volley.</li>
+<li><b>Kitchen:</b> you may stand in it; you may not volley while touching it, including its lines.</li>
+<li><b>Scoring:</b> in standard scoring, only the serving side scores; a typical game is to 11, win by 2.</li>
+</ul>
 <h2>The court and the net</h2>
 <p>A standard court is 20 feet wide and 44 feet long for singles and doubles. The net is 36 inches high at the sidelines and 34 inches high at the center. Each end has a non-volley zone 7 feet deep. All lines that bound that zone are part of the zone. Full measurements, space needed and layout tips: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</p>
 <h2>The serve</h2>
-<p>You serve diagonally into the opposite service court. The ball has to clear the kitchen and land in the correct box. On a volley serve, the paddle has to be moving upward, the paddle head must not be above your wrist, and the ball must not be above your waist when you hit it. A drop serve is the other legal motion: you drop the ball and hit it after it bounces, without propelling the ball on the way down. In singles, you start on the right when your score is even, and on the left when it is odd.</p>
+<p>You serve diagonally into the opposite service court. The ball has to clear the kitchen and land in the correct box. On a volley serve, the paddle has to be moving upward, the paddle head must not be above your wrist, and the ball must not be above your waist when you hit it. A drop serve is the other legal motion: you drop the ball and hit it after it bounces, without propelling the ball on the way down. In singles, you start on the right when your score is even, and on the left when it is odd. Solo practice for this: <a href="pickleball-drills.html">Serving From a Basket</a> in our drills guide.</p>
 <h2>Two bounces, then anything</h2>
 <p>The receiver has to let the serve bounce. The serving side then has to let that return bounce. After those two bounces, either side may volley or play a groundstroke. Hitting the ball before the required bounce is a fault. Letting the ball bounce twice on your side is a fault.</p>
 <h2>The kitchen</h2>
 <p>You can stand in the kitchen. You cannot hit a volley while touching it. If you volley from behind the line and your momentum carries you, your paddle, or your hat into the zone, that is still a fault, even if the ball is already dead. A ball that lands on a line is in, except a serve that lands on the kitchen line, which is short. The <a href="how-to-dink.html">dink guide</a> is the soft shot people hit into this zone once the two bounces are done.</p>
 <h2>Scoring</h2>
-<p>Standard scoring gives a point only to the serving side, and only if that side wins the rally. A typical game in the rulebook's introduction is the first to 11, with a lead of at least 2. Tournament sections also list games to 15 or 21, still win by two. Call two numbers in singles: server's score, then receiver's score. The game starts at zero-zero. Call three numbers in doubles: serving team's score, receiving team's score, then the server number. A doubles game starts at zero-zero-two, because the first server of the game is treated as the second server. When in doubt, ask before the serve. The rulebook says a player may ask who the correct server or receiver is before the ball is hit.</p>
-<p>Ready to look at gear after the rules make sense? <a href="how-to-choose-a-paddle.html">Choose a paddle</a> from the specs we have, or see <a href="../tournaments.html">which pro events are on the calendar</a>.</p>
+<p>Standard scoring gives a point only to the serving side, and only if that side wins the rally. A typical game in the rulebook's introduction is the first to 11, with a lead of at least 2. Tournament sections also list games to 15 or 21, still win by two. Call two numbers in singles: server's score, then receiver's score. The game starts at zero-zero. Call three numbers in doubles: serving team's score, receiving team's score, then the server number. A doubles game starts at zero-zero-two, because the first server of the game is treated as the second server. When in doubt, ask before the serve. The rulebook says a player may ask who the correct server or receiver is before the ball is hit. Rally scoring and other 2026 updates are summarized on the <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>.</p>
+<h2>What to practice next</h2>
+<ul>
+<li><a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a> — one-page quick reference, including confirmed 2026 changes.</li>
+<li><a href="pickleball-drills.html">Pickleball drills</a> — USA Pickleball's four beginner drills, plus partner and solo wall work.</li>
+<li><a href="pickleball-court-dimensions.html">Pickleball court dimensions</a> — court size, kitchen depth, net height and layout tolerances.</li>
+<li><a href="how-to-dink.html">How to dink</a> — the soft kitchen shot after the two bounces.</li>
+<li><a href="how-to-choose-a-paddle.html">How to choose a paddle</a> — specs from our database once the rules make sense. Or browse <a href="../best-paddles-for-beginners.html">best paddles for beginners</a>.</li>
+</ul>
+<p>Want the calendar after that? See <a href="../tournaments.html">which pro events are upcoming</a>.</p>
+{money_links()}
 {faq_html}
 {more("guides/pickleball-rules-for-beginners.html")}'''
-    page("guides/pickleball-rules-for-beginners.html", "Pickleball rules for beginners", rules,
-         "Beginner pickleball rules from the USA Pickleball rulebook: court, serve, two-bounce rule, kitchen, and scoring. Not a substitute for the official book.",
+    page("guides/pickleball-rules-for-beginners.html", "Pickleball Rules for Beginners: Serve, Kitchen and Scoring (2026)", rules,
+         "Pickleball rules for beginners from the 2026 USA Pickleball rulebook: court, serve, two-bounce rule, kitchen, and how scoring works. Not a substitute for the official book.",
          fresh={"source": RULES, "faq": rules_faq},
          schema=[faq_ld])
 
