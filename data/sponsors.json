@@ -1046,7 +1046,7 @@
    "url": "https://solasepickleball.com/",
    "affiliate_program": "yes",
    "affiliate_network": "UpPromote (dashboard https://af.uppromote.com/vmmvvu-jc/login)",
-   "affiliate_url": "https://solasepickleball.com/pages/ambassadors",
+   "affiliate_url": "https://vmmvvu-jc.myshopify.com?sca_ref=12681762.bV6EAtfxmvuZ8owk",
    "sponsorship_or_media_contact_url": "https://solasepickleball.com/pages/ambassadors",
    "pickleball_ad_evidence": [
     "Public ambassadors page: up to 25% payout (varies); program describes exclusive discount codes",
@@ -1055,7 +1055,7 @@
    "priority": 2,
    "status": "affiliate - approved Nov 5, 2026",
    "own_code": "DROPTHEPICKLE",
-   "notes": "Affiliate approval email 2026-11-02 (Gmail id 1a19ab88741118d7). Geo confirmed affiliate + code DROPTHEPICKLE 2026-11-05. Own code in config.json OWN_CODES. No sca_ref/affiliate_tag yet.",
+   "notes": "Affiliate approval email 2026-11-02 (Gmail id 1a19ab88741118d7). Geo confirmed affiliate + code DROPTHEPICKLE + link 2026-11-05. Referral: https://vmmvvu-jc.myshopify.com?sca_ref=12681762.bV6EAtfxmvuZ8owk (301 → https://solasepickleball.com/?sca_ref=12681762.bV6EAtfxmvuZ8owk). sca_ref in config.json BRAND_AFFILIATE_PARAMS → /go/solasepickleball-home. Dashboard: $0 pending, rate not shown there; email states 15%.",
    "checked": "2026-11-05"
   }
  ],

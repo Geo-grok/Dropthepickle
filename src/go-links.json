@@ -493,6 +493,10 @@
    "url": "https://slycesport.com/",
    "affiliate_tag": ""
   },
+  "solasepickleball-home": {
+   "url": "https://solasepickleball.com/",
+   "affiliate_tag": "sca_ref=12681762.bV6EAtfxmvuZ8owk"
+  },
   "sonapickleball-home": {
    "url": "https://sonapickleball.com/",
    "affiliate_tag": ""
@@ -631,10 +635,6 @@
   },
   "wepickleball-home": {
    "url": "https://wepickleball.com/",
-   "affiliate_tag": ""
-  },
-  "solasepickleball-home": {
-   "url": "https://solasepickleball.com/",
    "affiliate_tag": ""
   }
  }
