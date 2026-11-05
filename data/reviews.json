@@ -1,9 +1,41 @@
 {
  "items": [
   {
+   "channel": "Pickleball Studio",
+   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
+   "title": "Selkirk Boomstik ST First Impressions | I am so confused...",
+   "link": "https://www.youtube.com/watch?v=Vwvmr7l5pr4",
+   "video_id": "Vwvmr7l5pr4",
+   "date": "2026-11-04"
+  },
+  {
+   "channel": "John Kew Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
+   "title": "Selkirk Boomstik ST First Look: Better Spin, But Worth $350?",
+   "link": "https://www.youtube.com/watch?v=XYxtcFotALM",
+   "video_id": "XYxtcFotALM",
+   "date": "2026-11-04"
+  },
+  {
+   "channel": "Pickleball Effect",
+   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
+   "title": "Selkirk Boomstik ST First Impressions & Final Verdict on Balls | EP 147",
+   "link": "https://www.youtube.com/watch?v=-t8ydgWZMVM",
+   "video_id": "-t8ydgWZMVM",
+   "date": "2026-11-04"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Thrive Ignite Hybrid Game Play Paddle Review",
+   "link": "https://www.youtube.com/watch?v=3SuMB7d51i4",
+   "video_id": "3SuMB7d51i4",
+   "date": "2026-11-04"
+  },
+  {
    "channel": "Matt's Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "RPM Jade First Look: I Didn’t Love It, Then It Grew on Me | Pickleball",
+   "title": "RPM Jade vs Spartus Spitfire, Luzz Inferno 2, Loco 2: Softest of the Four | Pickleball",
    "link": "https://www.youtube.com/watch?v=0LqSsmy8tOk",
    "video_id": "0LqSsmy8tOk",
    "date": "2026-11-03"
@@ -241,14 +273,6 @@
    "date": "2026-10-23"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Pakle Fuse Paddle Review | Match Play",
-   "link": "https://www.youtube.com/watch?v=EoQhYcWMIfU",
-   "video_id": "EoQhYcWMIfU",
-   "date": "2026-10-23"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "Volair CMD Hybrid Review, Comparisons & My Custom Setup",
@@ -425,14 +449,6 @@
    "date": "2026-10-10"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "RPM Jade 14mm Elongated First Impressions | Answering Your Questions",
-   "link": "https://www.youtube.com/watch?v=Yx7eJ-DZMcQ",
-   "video_id": "Yx7eJ-DZMcQ",
-   "date": "2026-10-09"
-  },
-  {
    "channel": "Farmer Lanky Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
    "title": "Volair CMD Hybrid Pickleball Paddle Review: The Perfect Balance?",
@@ -457,35 +473,51 @@
    "date": "2026-10-07"
   },
   {
-   "channel": "Pickleball Effect",
-   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
-   "title": "We Tested If Paddles Are Getting Faster + Anna Leigh’s Lob Serve Explained | EP 143",
-   "link": "https://www.youtube.com/watch?v=GMvvDrCajlg",
-   "video_id": "GMvvDrCajlg",
-   "date": "2026-10-06"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Gearbox Pressure X Paddle Review | On court drill test",
    "link": "https://www.youtube.com/watch?v=79ePGZ0A218",
    "video_id": "79ePGZ0A218",
    "date": "2026-10-06"
-  },
-  {
-   "channel": "Pickleball Pursuit",
-   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
-   "title": "Can a Paddle Have Power and Control? Volair CMD Hybrid Review",
-   "link": "https://www.youtube.com/watch?v=vzR_tQpMK7M",
-   "video_id": "vzR_tQpMK7M",
-   "date": "2026-10-06"
   }
  ],
  "all_items": [
   {
+   "channel": "Pickleball Studio",
+   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
+   "title": "Selkirk Boomstik ST First Impressions | I am so confused...",
+   "link": "https://www.youtube.com/watch?v=Vwvmr7l5pr4",
+   "video_id": "Vwvmr7l5pr4",
+   "date": "2026-11-04"
+  },
+  {
+   "channel": "John Kew Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
+   "title": "Selkirk Boomstik ST First Look: Better Spin, But Worth $350?",
+   "link": "https://www.youtube.com/watch?v=XYxtcFotALM",
+   "video_id": "XYxtcFotALM",
+   "date": "2026-11-04"
+  },
+  {
+   "channel": "Pickleball Effect",
+   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
+   "title": "Selkirk Boomstik ST First Impressions & Final Verdict on Balls | EP 147",
+   "link": "https://www.youtube.com/watch?v=-t8ydgWZMVM",
+   "video_id": "-t8ydgWZMVM",
+   "date": "2026-11-04"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Thrive Ignite Hybrid Game Play Paddle Review",
+   "link": "https://www.youtube.com/watch?v=3SuMB7d51i4",
+   "video_id": "3SuMB7d51i4",
+   "date": "2026-11-04"
+  },
+  {
    "channel": "Matt's Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "RPM Jade First Look: I Didn’t Love It, Then It Grew on Me | Pickleball",
+   "title": "RPM Jade vs Spartus Spitfire, Luzz Inferno 2, Loco 2: Softest of the Four | Pickleball",
    "link": "https://www.youtube.com/watch?v=0LqSsmy8tOk",
    "video_id": "0LqSsmy8tOk",
    "date": "2026-11-03"
@@ -835,14 +867,6 @@
    "date": "2026-10-19"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Ultre Jelly Bean 2 Paddle Review",
-   "link": "https://www.youtube.com/watch?v=HOpxVI1SBBM",
-   "video_id": "HOpxVI1SBBM",
-   "date": "2026-10-18"
-  },
-  {
    "channel": "Rackets & Runners - Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
    "title": "RPM Jade First Impressions Review | Rackets & Runners",
@@ -987,14 +1011,6 @@
    "date": "2026-10-10"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "RPM Jade 14mm Elongated First Impressions | Answering Your Questions",
-   "link": "https://www.youtube.com/watch?v=Yx7eJ-DZMcQ",
-   "video_id": "Yx7eJ-DZMcQ",
-   "date": "2026-10-09"
-  },
-  {
    "channel": "Farmer Lanky Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
    "title": "Volair CMD Hybrid Pickleball Paddle Review: The Perfect Balance?",
@@ -1121,14 +1137,6 @@
    "link": "https://www.youtube.com/watch?v=unpK-G5-aqw",
    "video_id": "unpK-G5-aqw",
    "date": "2026-09-26"
-  },
-  {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "Franklin X-44 vs LT Pro-48: The Lab Result We Did Not Expect | KewCast 123",
-   "link": "https://www.youtube.com/watch?v=uPHvwvuKpa8",
-   "video_id": "uPHvwvuKpa8",
-   "date": "2026-09-21"
   },
   {
    "channel": "Rackets & Runners - Pickleball",
@@ -1534,7 +1542,7 @@
  "sources": {
   "Pickleball Studio": "ok (6)",
   "John Kew Pickleball": "ok (7)",
-  "Pickleball Effect": "ok (7)",
+  "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (0)",
   "The Kitchen Pickleball": "ok (0)",
@@ -1556,5 +1564,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (13)"
  },
- "updated": "2026-11-04T11:53"
+ "updated": "2026-11-05T11:52"
 }

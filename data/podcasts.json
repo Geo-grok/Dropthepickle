@@ -1,6 +1,18 @@
 {
  "items": [
   {
+   "show": "Pickleball Effect: The Podcast",
+   "title": "Selkirk Boomstik ST First Impressions & Final Verdict on Balls | EP 147",
+   "link": "https://podcasters.spotify.com/pod/show/braydon-unsicker/episodes/Selkirk-Boomstik-ST-First-Impressions--Final-Verdict-on-Balls--EP-147-e3rnelt",
+   "date": "2026-11-04"
+  },
+  {
+   "show": "The World Pickleball Podcast",
+   "title": "First Overall: Crystal Mildwaters on the PYCL, the Gems and the Dream Breaker",
+   "link": "https://worldpickleballpodcast.alitu.com/episode/a0460068-a597-4b12-abb5-d0f2baa0bfac",
+   "date": "2026-11-04"
+  },
+  {
    "show": "PicklePod (The Dink)",
    "title": "Why Ben Johns' Team USA Isn't the Best MLP Team Ever",
    "link": "https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
@@ -35,12 +47,6 @@
    "title": "Steve Aoki: Why the World’s Biggest DJ Is Obsessed With Pickleball | S5 E4",
    "link": "https://podcasters.spotify.com/pod/show/pickleballers",
    "date": "2026-10-29"
-  },
-  {
-   "show": "The World Pickleball Podcast",
-   "title": "English Nationals 2026 Preview: Seeds, Dark Horses & a 16-1 Bet",
-   "link": "https://worldpickleballpodcast.alitu.com/episode/e4540043-2a1c-44f5-aeca-7155ab64f195",
-   "date": "2026-10-28"
   },
   {
    "show": "PicklePod (The Dink)",
@@ -95,12 +101,6 @@
    "title": "Federico Staksrud: The $400K Fives Trade, Reuniting With Hayden, and Chasing Ben & Gabe | S5 E2",
    "link": "https://podcasters.spotify.com/pod/show/pickleballers",
    "date": "2026-10-15"
-  },
-  {
-   "show": "Pickleball Effect: The Podcast",
-   "title": "BNB Loco 2 Impressions + New Selkirk S2 Ball Data | EP 144",
-   "link": "https://podcasters.spotify.com/pod/show/braydon-unsicker/episodes/BNB-Loco-2-Impressions--New-Selkirk-S2-Ball-Data--EP-144-e3qdn21",
-   "date": "2026-10-13"
   },
   {
    "show": "Dinking Around with Eddie and Webby",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-11-04T11:53"
+ "updated": "2026-11-05T11:53"
 }
