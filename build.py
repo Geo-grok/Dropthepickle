@@ -776,12 +776,12 @@ def build():
     DC = D("discount-codes.json"); codes = DC.get("codes", [])
     DS = D("discount-sources.json")  # shop URLs + dead_shops for brands with no working code
     def slugb(b): return re.sub(r"[^a-z0-9]+", "-", b.lower()).strip("-")
-    def earn_note(cs):
+    def earn_note(cs, include_all_own=False):
         # Must stay accurate: only claim no earnings while none of these shop links carries an approved affiliate param.
         if any(is_tagged(c.get("shop_url", "")) for c in cs):
             base = "DropThePickle may earn a commission when you use our Shop links, at no cost to you. We don\'t earn from the creators\' codes."
         else: base = "DropThePickle doesn\'t earn anything from these creator codes."
-        own = [OWN[b] for b in sorted({c["brand"] for c in cs}) if b in OWN]
+        own = [OWN[b] for b in sorted(({c["brand"] for c in cs} | (set(OWN) if include_all_own else set()))) if b in OWN]
         if own: base += " Exception: we earn a commission when you use our own " + " / ".join(f'{o["brand"]} code {o["code"]}' for o in own) + " (marked \u201cOur own code\u201d)."
         return base
     def score(c):
@@ -795,10 +795,14 @@ def build():
                 f'<div class="crow"><button class="ccode" data-code="{cd}" aria-label="Copy code {cd}">{cd}</button><button class="btn ccopy" data-code="{cd}">Copy</button></div>'
                 f'<a class="cshop" href="{e(c["shop_url"])}" target="_blank" rel="{"sponsored nofollow noopener" if is_tagged(c["shop_url"]) else "nofollow noopener"}">Shop {e(c["brand"])} →</a>'
                 f'<div class="cmeta">Last checked {fmt(c.get("verified"))}{exp} · Source: <a href="{e(c["source_url"])}" target="_blank" rel="noopener">{e(c["source"])}</a>{sd}</div></div>')
-    brands = sorted({c["brand"] for c in codes}, key=str.lower)
+    # OWN_CODES brands (config.json) are included even with no creator codes, so our own code still gets a
+    # /discount-codes/<slug> page and a section on the index. refresh-codes never touches config.json.
+    brands = sorted({c["brand"] for c in codes} | set(OWN), key=str.lower)
     best = {}
     for c in codes:
         if c["brand"] not in best or score(c) > score(best[c["brand"]]): best[c["brand"]] = c
+    for b, oc in OWN.items():  # own-only brands: jump chip uses our discount
+        if b not in best: best[b] = {"discount": oc["discount"], "code": oc["code"]}
     jump = "".join(f'<a href="#{slugb(b)}">{e(b)} · {e(best[b]["discount"])}</a>' for b in brands)
     secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2>{own_codes.callout(e, OWN[b]) if b in OWN else ""}{f'<p><a class="btn" href="/discount-codes/{slugb(b)}">{e(b)} promo code: how to use it + lineup →</a></p>' if b == "Volair" else ""}<div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
     nocode = "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
@@ -820,10 +824,10 @@ def build():
     page("discount-codes.html", "Pickleball Discount Codes & Paddle Coupons (Updated Daily)",
          f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
          f'{nudge("discount-codes", "top")}'
-         f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes)} <a href=/disclosure>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) or OWN else ""}'
+         f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes, include_all_own=True)} <a href=/disclosure>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) or OWN else ""}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
          f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a> or the <a href="price-tracker.html">Paddle Price Tracker</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p>{gift_pages.holiday_note("codes")}<h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
-         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(codes)} <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
+         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(codes, include_all_own=True)} <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
          f'{nudge("discount-codes-bottom", "bottom", "Don\'t miss the next code", "We re-check creator and brand pages every day. Join the list and hear about new codes first.")}{copyjs}{NUDGEJS}',
          f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
          fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]}, schema=code_ld)
@@ -875,7 +879,7 @@ def build():
     # Brands with no working code (no_code notes, or every tracked code removed) get a page that says so and points to deals.
     nc = DC.get("no_code", {})
     zero = sorted((set(nc) | {r["brand"] for r in DC.get("removed", [])}) - set(brands), key=str.lower)
-    all_b = sorted(set(brands) | set(zero), key=str.lower)
+    all_b = sorted(set(brands) | set(zero) | set(OWN), key=str.lower)
     by_src = {}
     for c in codes: by_src.setdefault(c["source"], set()).add(c["brand"])
     def otype(d):
@@ -950,29 +954,46 @@ def build():
                         for i, c in enumerate(bc, 1)]}]
             fresh = {"codes": [(c["code"], c["discount"], c["conditions"], c["source_url"], c.get("verified")) for c in bc]}
         else:
+            oc = OWN.get(b)
             month = datetime.date.fromisoformat(DC["updated"]).strftime("%b %Y")
-            title = f"{b} discount codes & promo codes (none working, {month})"
-            why = nc.get(b) or "The code we were tracking was no longer shown on its source page, so we removed it."
-            faq_pairs = [
-                (f"Is there a working {b} discount code?", f"Not in our list. As of {fmt(DC['updated'])} we list no working {b} code. {why}"),
-                (f"How can I save on {b} instead?", "Check our deals page for price drops, and our full discount code list for other brands."),
-            ]
-            intro = f'<p class="meta">We don\'t list a working {e(b)} code right now (list updated {fmt(DC["updated"])}). {e(why)} We won\'t post made-up or expired codes.</p>'
-            # Tracked shop link for brands whose store is up (no link for stores listed under dead_shops in discount-sources.json).
-            shop = "" if b in DS.get("dead_shops", {}) else DS.get("shops", {}).get(b, "")
-            shop_a = f'<p><a class="cshop" href="{e(shop)}" target="_blank" rel="{"sponsored nofollow noopener" if is_tagged(shop) else "nofollow noopener"}">Shop {e(b)} →</a></p>' if shop else ""
-            if shop and is_tagged(shop): shop_a += '<p class="disc">DropThePickle may earn a commission if you buy through this link, at no cost to you. <a href="../disclosure.html">Disclosure</a>.</p>'
-            main = f'<p><a class="btn" href="../deals.html">See current paddle deals →</a> <a class="btn" href="/discount-codes">All discount codes →</a></p>{shop_a}'
-            desc = f"No working {b} discount code as of {fmt(DC['updated'])}. Why, plus paddle deals and working codes for other pickleball brands."
-            extra = []
-            fresh = {"none": why}
+            if oc:  # own-only brand: our ambassador/affiliate code is the working offer
+                title = f"{b} discount codes & promo codes (verified {month})"
+                faq_pairs = [
+                    (f"Is there a working {b} discount code?", f'Yes: DropThePickle\'s own code {oc["code"]} ({oc["discount"]}). {own_codes.earn_line(oc)}'),
+                    (f"Does DropThePickle have its own {b} code?", f'Yes: {oc["code"]} ({oc["discount"]}). {own_codes.earn_line(oc)}'),
+                    (f"Can I use more than one {b} code?", "Most brands allow one code per order, and sale prices often beat a code. Check your cart total before you pay."),
+                ]
+                intro = (f'<p class="meta">DropThePickle\'s own {e(b)} code. Last listed {fmt(oc.get("approved") or DC["updated"])}. '
+                         f'We don\'t currently track third-party creator codes for {e(b)}.</p>')
+                main = (f'<h2>Our featured {e(b)} code</h2>{own_codes.callout(e, oc, "../disclosure.html")}'
+                        f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order. Check your cart total before you pay.</p>')
+                desc = f'{b} discount code: {oc["code"]} ({oc["discount"]}) from DropThePickle. Tap to copy, then shop {b}.'
+                extra = []
+                fresh = {"own": (oc["code"], oc["discount"], oc.get("approved"))}
+            else:
+                title = f"{b} discount codes & promo codes (none working, {month})"
+                why = nc.get(b) or "The code we were tracking was no longer shown on its source page, so we removed it."
+                faq_pairs = [
+                    (f"Is there a working {b} discount code?", f"Not in our list. As of {fmt(DC['updated'])} we list no working {b} code. {why}"),
+                    (f"How can I save on {b} instead?", "Check our deals page for price drops, and our full discount code list for other brands."),
+                ]
+                intro = f'<p class="meta">We don\'t list a working {e(b)} code right now (list updated {fmt(DC["updated"])}). {e(why)} We won\'t post made-up or expired codes.</p>'
+                # Tracked shop link for brands whose store is up (no link for stores listed under dead_shops in discount-sources.json).
+                shop = "" if b in DS.get("dead_shops", {}) else DS.get("shops", {}).get(b, "")
+                shop_a = f'<p><a class="cshop" href="{e(shop)}" target="_blank" rel="{"sponsored nofollow noopener" if is_tagged(shop) else "nofollow noopener"}">Shop {e(b)} →</a></p>' if shop else ""
+                if shop and is_tagged(shop): shop_a += '<p class="disc">DropThePickle may earn a commission if you buy through this link, at no cost to you. <a href="../disclosure.html">Disclosure</a>.</p>'
+                main = f'<p><a class="btn" href="../deals.html">See current paddle deals →</a> <a class="btn" href="/discount-codes">All discount codes →</a></p>{shop_a}'
+                desc = f"No working {b} discount code as of {fmt(DC['updated'])}. Why, plus paddle deals and working codes for other pickleball brands."
+                extra = []
+                fresh = {"none": why}
         faq_html = "<h2>Questions</h2>" + "".join(f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faq_pairs)
         extra.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq_pairs]})
-        disc = f'<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(bc)} <a href="../disclosure.html">Disclosure</a>.</p>' if bc else ""
+        disc = (f'<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(bc)} <a href="../disclosure.html">Disclosure</a>.</p>'
+                if bc else (f'<p class="disc"><b>Disclosure:</b> {own_codes.earn_line(OWN[b])} <a href="../disclosure.html">Details</a>.</p>' if b in OWN else ""))
         body = (f'<h1>{e(b)} discount codes</h1>{intro}{disc}'
                 f'{crumb_html}{main}{gift_pages.holiday_note("codes")}{gear}'
                 f'<h2>More ways to save</h2><p><a href="/discount-codes">All pickleball discount codes</a> · <a href="../deals.html">Paddle deals</a> · <a href="../price-tracker.html">Paddle Price Tracker</a></p>'
-                + (f'<h2>Related brands</h2><div class="codes-best">{rel_html}</div>' if rel_html else "") + faq_html + (copyjs if bc else ""))
+                + (f'<h2>Related brands</h2><div class="codes-best">{rel_html}</div>' if rel_html else "") + faq_html + (copyjs if (bc or b in OWN) else ""))
         ds = list(dict.fromkeys(c["discount"] for c in bc))
         short = f"{b} Pickleball Discount Codes: {ds[0].title()} ({month})" if len(ds) == 1 and b in CODE_SEO_BRANDS else ""
         page(fn, short if short and len(short) <= 60 else title, body, desc, fresh=fresh, schema=extra, crumbs=crumbs, raw_title=bool(short and len(short) <= 60))

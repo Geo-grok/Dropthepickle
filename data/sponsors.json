@@ -1039,6 +1039,24 @@
    "status": "affiliate - approved Nov 4, 2026",
    "notes": "Commission is paid as UDRIPPIN store credit, not cash (per Geo 2026-11-04); rate and cookie length unknown. Approval email 2026-11-04 (Gmail id 1a1a7c16ea836fe0) states no commission, cookie or discount terms. Referral tag set in config.json BRAND_AFFILIATE_PARAMS -> /go/udrippin-home.",
    "checked": "2026-11-04"
+  },
+  {
+   "name": "Solase Pickleball",
+   "category": "shoes brand",
+   "url": "https://solasepickleball.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "UpPromote (dashboard https://af.uppromote.com/vmmvvu-jc/login)",
+   "affiliate_url": "https://solasepickleball.com/pages/ambassadors",
+   "sponsorship_or_media_contact_url": "https://solasepickleball.com/pages/ambassadors",
+   "pickleball_ad_evidence": [
+    "Public ambassadors page: up to 25% payout (varies); program describes exclusive discount codes",
+    "Approval email states 10% audience discount code and 15% commission on link or code"
+   ],
+   "priority": 2,
+   "status": "affiliate - approved Nov 5, 2026",
+   "own_code": "DROPTHEPICKLE",
+   "notes": "Affiliate approval email 2026-11-02 (Gmail id 1a19ab88741118d7). Geo confirmed affiliate + code DROPTHEPICKLE 2026-11-05. Own code in config.json OWN_CODES. No sca_ref/affiliate_tag yet.",
+   "checked": "2026-11-05"
   }
  ],
  "ad_networks": [

@@ -46,6 +46,21 @@
       "terms_note": "Honolulu Pickleball Company ambassador program (Ashley Rice email 2026-10-26, Gmail id 1a17a518756e2163; affiliate approval 2026-11-04, Gmail id 1a1a5380bc70e954). Excluded collections per Geo's UpPromote dashboard screenshot 2026-11-04: Demo paddles, J2 Super Sale, J1 J5 Super Sale, Special Promotion Super Sales, Apparel, Paddle Refresh. Email is marked confidential: don't quote it beyond the customer discount.",
       "how": "Type DROPTHEPICKLE in the discount code box at checkout on 808pickle.com and tap Apply. The 10% doesn't apply to demo paddles, apparel, Paddle Refresh, and the J2 Super Sale, J1/J5 Super Sale and Special Promotion Super Sales collections, so check the total before you pay.",
       "page": "/discount-codes/honolulu"
+    },
+    {
+      "brand": "Solase",
+      "code": "DROPTHEPICKLE",
+      "discount": "10% off",
+      "conditions": "Enter at checkout on solasepickleball.com",
+      "shop_url": "https://solasepickleball.com/",
+      "network": "UpPromote",
+      "commission": "15% of the sale",
+      "pays_on": "code use or affiliate link",
+      "approved": "2026-11-02",
+      "active": true,
+      "terms_note": "Solase Pickleball affiliate approval email 2026-11-02 (Gmail id 1a19ab88741118d7): 10% discount code for audience, 15% commission on purchases through affiliate link or discount code. Geo confirmed code DROPTHEPICKLE on 2026-11-05. Cookie length and exclusions not stated. No referral URL provided yet.",
+      "how": "Type DROPTHEPICKLE in the discount code box at checkout on solasepickleball.com and tap Apply. Solase hasn't published stacking or exclusion rules for this code, so check the total before you pay.",
+      "page": "/discount-codes/solase"
     }
   ],
   "SIGNUP_ENDPOINT": "/api/signup",
