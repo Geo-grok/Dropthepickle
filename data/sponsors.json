@@ -1057,6 +1057,24 @@
    "own_code": "DROPTHEPICKLE",
    "notes": "Affiliate approval email 2026-11-02 (Gmail id 1a19ab88741118d7). Geo confirmed affiliate + code DROPTHEPICKLE + link 2026-11-05. Referral: https://vmmvvu-jc.myshopify.com?sca_ref=12681762.bV6EAtfxmvuZ8owk (301 → https://solasepickleball.com/?sca_ref=12681762.bV6EAtfxmvuZ8owk). sca_ref in config.json BRAND_AFFILIATE_PARAMS → /go/solasepickleball-home. Dashboard: $0 pending, rate not shown there; email states 15%.",
    "checked": "2026-11-05"
+  },
+  {
+   "name": "Blinded Wear Co.",
+   "category": "eyewear brand",
+   "url": "https://blindedwear.com/",
+   "affiliate_program": "yes",
+   "affiliate_network": "GoAffPro (https://blindedwear.goaffpro.com)",
+   "affiliate_url": "https://blindedwear.com/?ref=DROPTHEPICKLE",
+   "sponsorship_or_media_contact_url": "https://blindedwear.com/pages/become-an-affiliate-blinded-wear-co-pickleball-eyewear",
+   "pickleball_ad_evidence": [
+    "Public affiliate program page (commission terms not published)",
+    "Partner of Bay Area Breakers (MLP) per brand homepage"
+   ],
+   "priority": 2,
+   "status": "affiliate - approved Nov 5, 2026",
+   "own_code": "DROPTHEPICKLE",
+   "notes": "GoAffPro approval 2026-11-01 (Gmail id 1a198134f16c4df4). Geo confirmed link/code/15% commission 2026-11-05. Buyer discount % not in email or public pages — OWN_CODES discount left as 'a checkout discount'. ref tag in BRAND_AFFILIATE_PARAMS → /go/blindedwear-home (https://blindedwear.com/?ref=DROPTHEPICKLE).",
+   "checked": "2026-11-05"
   }
  ],
  "ad_networks": [

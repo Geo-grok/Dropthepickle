@@ -15,7 +15,8 @@
     "paddletek.com": "",
     "luzzpickleball.com": "",
     "udrippin.com": "sca_ref=12702736.PmFAc1tWVv",
-    "solasepickleball.com": "sca_ref=12681762.bV6EAtfxmvuZ8owk"
+    "solasepickleball.com": "sca_ref=12681762.bV6EAtfxmvuZ8owk",
+    "blindedwear.com": "ref=DROPTHEPICKLE"
   },
   "OWN_CODES": [
     {
@@ -62,6 +63,21 @@
       "terms_note": "Solase Pickleball affiliate approval email 2026-11-02 (Gmail id 1a19ab88741118d7): 10% discount code for audience, 15% commission on purchases through affiliate link or discount code. Geo confirmed code DROPTHEPICKLE and affiliate link on 2026-11-05 (https://vmmvvu-jc.myshopify.com?sca_ref=12681762.bV6EAtfxmvuZ8owk; public storefront keeps the same sca_ref). UpPromote dashboard showed $0 pending and did not restate the rate. Cookie/exclusions not stated.",
       "how": "Type DROPTHEPICKLE in the discount code box at checkout on solasepickleball.com and tap Apply. Solase hasn't published stacking or exclusion rules for this code, so check the total before you pay.",
       "page": "/discount-codes/solase"
+    },
+    {
+      "brand": "Blinded Wear",
+      "code": "DROPTHEPICKLE",
+      "discount": "a checkout discount",
+      "conditions": "Enter at checkout on blindedwear.com (buyer % not published by Blinded Wear)",
+      "shop_url": "https://blindedwear.com/",
+      "network": "GoAffPro",
+      "commission": "15% of the sale",
+      "pays_on": "code use or affiliate link",
+      "approved": "2026-11-05",
+      "active": true,
+      "terms_note": "Geo confirmed affiliate Nov 5, 2026: link https://blindedwear.com/?ref=DROPTHEPICKLE, coupon DROPTHEPICKLE, commission 15% from dashboard. GoAffPro approval email 2026-11-01 (Gmail id 1a198134f16c4df4) states no rate, cookie, or buyer discount %. Public affiliate page also omits those. Cookie/stacking/buyer % left unstated.",
+      "how": "Type DROPTHEPICKLE in the discount code box at checkout on blindedwear.com and tap Apply, or shop through our Blinded Wear link (ref=DROPTHEPICKLE). Blinded Wear hasn't published the buyer discount amount or stacking rules for this code, so check the total before you pay.",
+      "page": "/discount-codes/blinded-wear"
     }
   ],
   "SIGNUP_ENDPOINT": "/api/signup",
