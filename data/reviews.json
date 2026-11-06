@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Honolulu J6CR M105 CBES vs J6CR CBES Paddle Review",
+   "link": "https://www.youtube.com/watch?v=T-yCoKVVKqc",
+   "video_id": "T-yCoKVVKqc",
+   "date": "2026-11-05"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "LUZZ Cannon XPP vs $100 Budget Paddles: Is It Worth $150? (vs Spitfire, Vatic, Armorgrit) + Unboxing",
+   "link": "https://www.youtube.com/watch?v=OybwlQ-4C2E",
+   "video_id": "OybwlQ-4C2E",
+   "date": "2026-11-05"
+  },
+  {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
    "title": "Selkirk Boomstik ST First Impressions | I am so confused...",
@@ -217,14 +233,6 @@
    "date": "2026-10-28"
   },
   {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "NEW Paddle Haul: Gearbox Pressure X, Friday Durable Grit, Volair CMD, Enhance MPP AG & More",
-   "link": "https://www.youtube.com/watch?v=0XBaAdRugCo",
-   "video_id": "0XBaAdRugCo",
-   "date": "2026-10-28"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
@@ -247,14 +255,6 @@
    "link": "https://www.youtube.com/watch?v=XFqplEzYlbs",
    "video_id": "XFqplEzYlbs",
    "date": "2026-10-26"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Selkirk Omni Paddle Review | Match Play",
-   "link": "https://www.youtube.com/watch?v=OrUk1nheRrI",
-   "video_id": "OrUk1nheRrI",
-   "date": "2026-10-24"
   },
   {
    "channel": "John Kew Pickleball",
@@ -361,14 +361,6 @@
    "date": "2026-10-15"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "BnB Loco 2 & RPM Jade Play Impressions & Reacting to Open Play Pet Peeves",
-   "link": "https://www.youtube.com/watch?v=IzxBf-7c1i8",
-   "video_id": "IzxBf-7c1i8",
-   "date": "2026-10-14"
-  },
-  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "Bread & Butter Loco 2 Review: Did They Fix Its Biggest Weakness?",
@@ -407,14 +399,6 @@
    "link": "https://www.youtube.com/watch?v=uzRr_dHTyUU",
    "video_id": "uzRr_dHTyUU",
    "date": "2026-10-13"
-  },
-  {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "Spartus Spitfire Review | Elite Performance for $109",
-   "link": "https://www.youtube.com/watch?v=Jndk7hFgPiM",
-   "video_id": "Jndk7hFgPiM",
-   "date": "2026-10-12"
   },
   {
    "channel": "John Kew Pickleball",
@@ -479,9 +463,41 @@
    "link": "https://www.youtube.com/watch?v=79ePGZ0A218",
    "video_id": "79ePGZ0A218",
    "date": "2026-10-06"
+  },
+  {
+   "channel": "Pickleball Pursuit",
+   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
+   "title": "Can a Paddle Have Power and Control? Volair CMD Hybrid Review",
+   "link": "https://www.youtube.com/watch?v=vzR_tQpMK7M",
+   "video_id": "vzR_tQpMK7M",
+   "date": "2026-10-06"
+  },
+  {
+   "channel": "Pickleball Blast",
+   "channel_url": "https://www.youtube.com/channel/UCsPTdgkeMp68IyHd5gMFDfg",
+   "title": "I Ranked EVERY Six Zero Pickleball Paddle… Here’s My Tier List",
+   "link": "https://www.youtube.com/watch?v=DcPEuBSy34E",
+   "video_id": "DcPEuBSy34E",
+   "date": "2026-10-06"
   }
  ],
  "all_items": [
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Honolulu J6CR M105 CBES vs J6CR CBES Paddle Review",
+   "link": "https://www.youtube.com/watch?v=T-yCoKVVKqc",
+   "video_id": "T-yCoKVVKqc",
+   "date": "2026-11-05"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "LUZZ Cannon XPP vs $100 Budget Paddles: Is It Worth $150? (vs Spitfire, Vatic, Armorgrit) + Unboxing",
+   "link": "https://www.youtube.com/watch?v=OybwlQ-4C2E",
+   "video_id": "OybwlQ-4C2E",
+   "date": "2026-11-05"
+  },
   {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
@@ -843,14 +859,6 @@
    "date": "2026-10-19"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Pickleball Apes Zen S+ Paddle Review",
-   "link": "https://www.youtube.com/watch?v=-CCvzY3zHQo",
-   "video_id": "-CCvzY3zHQo",
-   "date": "2026-10-19"
-  },
-  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "LUZZ Inferno 2 M1 Review: They FINALLY Fixed the Grit 🔥",
@@ -915,14 +923,6 @@
    "date": "2026-10-15"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "BnB Loco 2 & RPM Jade Play Impressions & Reacting to Open Play Pet Peeves",
-   "link": "https://www.youtube.com/watch?v=IzxBf-7c1i8",
-   "video_id": "IzxBf-7c1i8",
-   "date": "2026-10-14"
-  },
-  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "Bread & Butter Loco 2 Review: Did They Fix Its Biggest Weakness?",
@@ -961,14 +961,6 @@
    "link": "https://www.youtube.com/watch?v=uzRr_dHTyUU",
    "video_id": "uzRr_dHTyUU",
    "date": "2026-10-13"
-  },
-  {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "Spartus Spitfire Review | Elite Performance for $109",
-   "link": "https://www.youtube.com/watch?v=Jndk7hFgPiM",
-   "video_id": "Jndk7hFgPiM",
-   "date": "2026-10-12"
   },
   {
    "channel": "John Kew Pickleball",
@@ -1072,14 +1064,6 @@
    "title": "I Ranked EVERY Six Zero Pickleball Paddle… Here’s My Tier List",
    "link": "https://www.youtube.com/watch?v=DcPEuBSy34E",
    "video_id": "DcPEuBSy34E",
-   "date": "2026-10-06"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "RPM Jade Review: 14mm vs 16mm + My Entire RPM Paddle Journey",
-   "link": "https://www.youtube.com/watch?v=y7VUVQip_aU",
-   "video_id": "y7VUVQip_aU",
    "date": "2026-10-06"
   },
   {
@@ -1540,7 +1524,7 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (6)",
+  "Pickleball Studio": "ok (4)",
   "John Kew Pickleball": "ok (7)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
@@ -1564,5 +1548,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (13)"
  },
- "updated": "2026-11-05T11:52"
+ "updated": "2026-11-06T11:48"
 }

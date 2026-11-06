@@ -1,6 +1,41 @@
 {
  "items": [
   {
+   "source": "Pickleball Union",
+   "title": "The Pickleball Endurance Plan for Players Who Hate Cardio",
+   "link": "https://pickleballunion.com/pickleball-endurance-training/",
+   "date": "2026-11-06",
+   "summary": "Pickleball Union story from 2026-11-06, filed under Training, Injury Prevention & Recovery, Intermediate Pickleball."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "When to Drive Instead of Reset in Pickleball’s Transition Zone",
+   "link": "https://pickleballunion.com/aggressive-transition-zone-drive/",
+   "date": "2026-11-06",
+   "summary": "Pickleball Union story from 2026-11-06, filed under Tips & Strategy, Beginner Play, Intermediate Play."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "Ben Johns Just Started Hitting Lefty Forehands at Worlds. Should You Try It?",
+   "link": "https://pickleballunion.com/ben-johns-left-handed-forehand/",
+   "date": "2026-11-06",
+   "summary": "Pickleball Union story from 2026-11-06, filed under Tips & Strategy, Advanced Play, Professional Pickleball."
+  },
+  {
+   "source": "The Dink",
+   "title": "Too Hot: USA Pickleball Delists CPX Hyper+ Paddles",
+   "link": "https://www.thedinkpickleball.com/usa-pickleball-delists-cpx-hyper-paddles-weighs-fines/",
+   "date": "2026-11-05",
+   "summary": "The Dink story from 2026-11-05, filed under Paddle Certification, USA Pickleball, John Kew."
+  },
+  {
+   "source": "The Dink",
+   "title": "Win the New Selkirk Boomstik ST: We’re Giving Away 3",
+   "link": "https://www.thedinkpickleball.com/win-the-new-selkirk-boomstik-st/",
+   "date": "2026-11-05",
+   "summary": "The Dink story from 2026-11-05, filed under Selkirk, Giveaway."
+  },
+  {
    "source": "The Dink",
    "title": "Ben Johns Brings Back a Secret Weapon: A Lefty Forehand",
    "link": "https://www.thedinkpickleball.com/ben-johns-unleashes-surprise-lefty-forehand-at-ppa-worlds/",
@@ -39,20 +74,6 @@
    "source": "The Dink",
    "title": "3 Steps to Hit a Better Swinging Volley After Your Third Shot",
    "link": "https://www.thedinkpickleball.com/3-steps-to-hit-a-better-swinging-volley-off-a-pop-up/",
-   "date": "2026-11-04",
-   "summary": "The Dink story from 2026-11-04, filed under Pickleball 101, pickleball tips, pickleball strategy."
-  },
-  {
-   "source": "The Dink",
-   "title": "Why Pros Are Now Hitting This Once-Rare Cross Court Flick",
-   "link": "https://www.thedinkpickleball.com/cross-court-flick-5-grip-change-keys-from-the-pros/",
-   "date": "2026-11-04",
-   "summary": "The Dink story from 2026-11-04, filed under Pickleball 101, pickleball tips, pickleball strategy."
-  },
-  {
-   "source": "The Dink",
-   "title": "6 Hands Battle Habits That Beat Hard Hitters Without Hitting Harder",
-   "link": "https://www.thedinkpickleball.com/pickleball-hands-battle-6-habits-to-beat-hard-hitters/",
    "date": "2026-11-04",
    "summary": "The Dink story from 2026-11-04, filed under Pickleball 101, pickleball tips, pickleball strategy."
   },
@@ -120,13 +141,6 @@
    "summary": "Pickleball Union story from 2026-11-02, filed under Gear, Carbon Fiber Paddles, Cold-Pressed Paddles."
   },
   {
-   "source": "Pickleball Union",
-   "title": "The “Higher Net” Trick That Can Instantly Improve Your Pickleball",
-   "link": "https://pickleballunion.com/net-clearance-pickleball/",
-   "date": "2026-11-02",
-   "summary": "Pickleball Union story from 2026-11-02, filed under Beginner Play, Intermediate Play, Tips & Strategy."
-  },
-  {
    "source": "The Kitchen Pickle",
    "title": "2026 Pickleball World Championships: Draws, schedule and TV information",
    "link": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-draws-schedule-tv-information/",
@@ -146,20 +160,6 @@
    "link": "https://thekitchenpickle.com/blogs/gear/paddletek-releases-new-bantam-jolt-tempest-veyra-pickleball-paddles/",
    "date": "2026-11-01",
    "summary": "The Kitchen Pickle story from 2026-11-01, filed under Gear, pickleball gear, pickleball paddles."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "Back-to-Back Pickleball After 50: How to Know If Your Body Is Ready",
-   "link": "https://pickleballunion.com/back-to-back-pickleball-recovery-over-50/",
-   "date": "2026-10-30",
-   "summary": "Pickleball Union story from 2026-10-30, filed under Tips & Strategy, Injury Prevention & Recovery, Training."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "The Kitchen Isn’t Lava: Step In and Hit a Better Dink",
-   "link": "https://pickleballunion.com/short-dink-footwork/",
-   "date": "2026-10-30",
-   "summary": "Pickleball Union story from 2026-10-30, filed under Beginner Play, Tips & Strategy, Training."
   },
   {
    "source": "The Kitchen Pickle",
@@ -459,5 +459,5 @@
   "The Pickler – Inside the Den": "ok (8)",
   "Pickleball England": "ok (8)"
  },
- "updated": "2026-11-05T11:52"
+ "updated": "2026-11-06T11:48"
 }
