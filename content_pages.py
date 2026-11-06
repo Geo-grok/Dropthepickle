@@ -321,6 +321,9 @@ def make(page, e, fmt, PP, cur, ph):
          schema=[faq_ld])
 
     # ----- dink -----
+    # SERP polish (approved P2, 2026-11-05): stronger title/meta for "how to dink in
+    # pickleball", snippet-friendly at-a-glance, FAQs from facts already on this page,
+    # kitchen-rules + beginners + drills links. Retain video embed and drill cross-links.
     vid, vtitle, vdate = DINK_VIDEO
     dink_faq = [
         ("What is a dink?",
@@ -329,11 +332,23 @@ def make(page, e, fmt, PP, cur, ph):
          "Yes, if the ball bounces first. The kitchen fault is for a volley, not for standing there. If you swing before the bounce, or your momentum from a volley carries you in, it is a fault."),
         ("Where should a beginner aim a dink?",
          "Crosscourt. The kitchen is 20 feet wide and 7 feet deep, so the diagonal gives you a longer landing area than a straight-ahead dink."),
+        ("Why do my dinks float or pop up?",
+         "Two habits on this page cause that: a big backswing (it turns a dink into a pop-up) and standing up as you hit (the usual way a dink floats). Keep the swing short and stay down."),
+        ("When should I dink in a point?",
+         "After the serve and the return have bounced. Most intermediate points are then decided at the kitchen, and a dink is the soft ball that lands in the opponent's kitchen so they cannot attack it."),
     ]
     faq_html, faq_ld = faq(dink_faq)
-    dink = f'''<h1>How to dink</h1>
-<p class="meta">The soft shot into the kitchen, for players who already know the two-bounce rule. Not a lesson from a certified coach and not a claim about what wins matches.</p>
-<p>After the serve and the return have bounced, most intermediate points are decided at the kitchen. A dink is the unhurried ball that lands in the opponent's kitchen so they cannot attack it. The <a href="pickleball-rules-for-beginners.html">rules guide</a> covers why you cannot volley that ball if you are touching the zone. The kitchen is 7 feet deep and 20 feet wide; see <a href="pickleball-court-dimensions.html">pickleball court dimensions</a> for the full layout.</p>
+    dink = f'''<h1>How to dink in pickleball: soft kitchen shot, technique and drills</h1>
+<p class="meta">How to dink in pickleball after the two-bounce rule: short-swing technique, crosscourt aim, kitchen/NVZ fault to avoid, a Ryan Morneau clip, and drills. Not a certified coaching lesson and not a claim about what wins matches.</p>
+<h2>Dink at a glance</h2>
+<ul>
+<li><b>What it is:</b> a soft, unhurried shot that lands in the opponent's kitchen (non-volley zone) so they cannot attack it.</li>
+<li><b>When:</b> after the serve and the return have bounced. Then most intermediate points are decided at the kitchen.</li>
+<li><b>Motion:</b> paddle in front, short swing, meet the ball out front, aim crosscourt when you can, stay down.</li>
+<li><b>Kitchen / NVZ:</b> you may step in after a bounce; volleying while touching the zone (or letting volley momentum carry you in) is a fault.</li>
+<li><b>Practice:</b> watch the clip below, then run the Down the Link Dink Game in our drills guide.</li>
+</ul>
+<p>After the serve and the return have bounced, most intermediate points are decided at the kitchen. A dink is the unhurried ball that lands in the opponent's kitchen so they cannot attack it. The <a href="pickleball-rules-for-beginners.html">rules for beginners</a> guide covers why you cannot volley that ball if you are touching the zone; the full NVZ walk-through is <a href="pickleball-kitchen-rules.html">pickleball kitchen rules</a>. The kitchen is 7 feet deep and 20 feet wide; see <a href="pickleball-court-dimensions.html">pickleball court dimensions</a> for the full layout.</p>
 <h2>The motion</h2>
 <ul>
 <li>Hold the paddle in front of you, not beside your hip. Meet the ball out in front of your body.</li>
@@ -350,8 +365,8 @@ def make(page, e, fmt, PP, cur, ph):
 <p>A published light weight is easier to reset in a fast exchange. In our file the lightest listed number is {light[0]:.1f} oz, on the {alink(light[2])}. That is a spec, not a promise that the paddle dinks better. Read <a href="paddle-weight-and-core.html">weight and core</a> before you buy a new face to fix a swing.</p>
 {faq_html}
 {more("guides/how-to-dink.html")}'''
-    page("guides/how-to-dink.html", "How to dink", dink,
-         "How to dink in pickleball: a soft kitchen shot, the non-volley fault to avoid, and one real clip from Ryan Morneau.",
+    page("guides/how-to-dink.html", "How to Dink in Pickleball: Soft Kitchen Shot, Technique and Drills", dink,
+         "How to dink in pickleball: the soft kitchen shot after the two-bounce rule, short-swing technique, common pop-up mistakes, kitchen/NVZ fault, plus a Ryan Morneau clip and drills.",
          fresh={"video": DINK_VIDEO, "light": [light[2]["brand"], light[2]["model"], light[0]], "faq": dink_faq},
          schema=[faq_ld, {"@type": "VideoObject", "name": vtitle, "uploadDate": vdate,
                           "url": f"https://www.youtube.com/watch?v={vid}",
