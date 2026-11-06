@@ -1,11 +1,41 @@
 {
- "updated": "2026-11-06T06:59-06:00",
+ "updated": "2026-11-06T13:10-06:00",
  "date": "2026-11-06",
  "source_file": "dtp-newsroom/buzz-2026-11-06.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026 Bracket, Nations Cup Results",
  "seo_desc": "PPA Worlds 2026 round of 16 results and Friday quarterfinals (Sock upsets Staksrud; Waters vs Sewing), CPX Hyper+ delisting, Selkirk LevelUp camps deal, and MLP Nations Cup context, all sourced.",
  "items": [
+  {
+   "title": "Worlds quarterfinal results: Waters, Fahey, Christian, Alshon and Hunter Johnson advance",
+   "summary": "As of 1:10 PM CT on Friday, Nov. 6, the official United Pickleball Worlds live board marks five pro quarterfinals Final at the Opendoor Pickleball World Championships in Farmers Branch, Texas. Women's singles: Anna Leigh Waters defeated Sofia Sewing 11-2, 11-8; Kate Fahey defeated Catherine Parenteau 11-3, 11-0; Kaitlyn Christian defeated Jorja Johnson 11-13, 12-10, 11-7. Men's singles: Christian Alshon defeated Jaume Martinez Vich 11-5, 11-9; Hunter Johnson defeated Hong Kit Wong 11-3, 11-6. All five results are from the official board linked below. Jack Sock-Roscoe Bellamy is marked live, so its outcome remains pending with no in-progress scores reported. Christopher Haworth-John Lucian Goins and Brooke Buckner-Rika Fujiwara are marked Up Next and remain pending. All mixed, men's doubles and women's doubles quarterfinals are also marked Up Next, including Ben Johns/Waters in mixed and Johns/Gabriel Tardio in men's doubles. This is a partial results snapshot, not a complete quarterfinal recap.",
+   "status": "confirmed",
+   "date": "2026-11-06",
+   "sources": [
+    {
+     "label": "Official United Pickleball Worlds live board: five quarterfinals marked Final (as of 1:10 PM CT, Nov. 6)",
+     "url": "https://worlds.unitedpickleball.com/ppa-tour"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Official partial quarterfinal results only; other outcomes pending as of 1:10 PM CT. No posting requested.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "Quarterfinals",
+    "Anna Leigh Waters",
+    "Kate Fahey",
+    "Kaitlyn Christian",
+    "Christian Alshon",
+    "Hunter Johnson"
+   ],
+   "links": [
+    {
+     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
+     "label": "How to watch Worlds week"
+    }
+   ]
+  },
   {
    "title": "Team Wahlberg beats Team Piven in a DreamBreaker at the MUNICIPAL Celebrity Showdown at Worlds",
    "summary": "Team Wahlberg defeated Team Piven in a DreamBreaker on Thursday evening at the MUNICIPAL Celebrity Pickleball Showdown presented by Corient, on Powerball Championship Court at the Opendoor Pickleball World Championships. The line score was 6-11, 11-5, 11-7, 4-11, 15-13. Celebrities on the court included Mark Wahlberg, Sean O'Malley, Jeremy Piven, Isabelle Harrison, John Isner, Richard Rawlings and Lauren Riihimaki, paired with pros Ben Johns, Anna Bright, Kate Fahey, Jack Sock, Brooke Buckner, Roscoe Bellamy, Tyson McGuffin and Lacy Schneemann. Per the pickleball.com recap, Team Wahlberg was Wahlberg, O'Malley, Harrison, Johns, Bright, Schneemann and Sock; Team Piven was Piven, Rawlings, Riihimaki, Isner, McGuffin, Fahey, Buckner and Bellamy.",
