@@ -41,6 +41,7 @@ GUIDES = [
     ("guides/pickleball-court-dimensions.html", "Pickleball court dimensions"),
     ("guides/pickleball-grip-size.html", "Pickleball grip size chart"),
     ("guides/pickleball-drills.html", "Pickleball drills"),
+    ("guides/pickleball-kitchen-rules.html", "Pickleball kitchen rules"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -297,12 +298,13 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>Two bounces, then anything</h2>
 <p>The receiver has to let the serve bounce. The serving side then has to let that return bounce. After those two bounces, either side may volley or play a groundstroke. Hitting the ball before the required bounce is a fault. Letting the ball bounce twice on your side is a fault.</p>
 <h2>The kitchen</h2>
-<p>You can stand in the kitchen. You cannot hit a volley while touching it. If you volley from behind the line and your momentum carries you, your paddle, or your hat into the zone, that is still a fault, even if the ball is already dead. A ball that lands on a line is in, except a serve that lands on the kitchen line, which is short. The <a href="how-to-dink.html">dink guide</a> is the soft shot people hit into this zone once the two bounces are done.</p>
+<p>You can stand in the kitchen. You cannot hit a volley while touching it. If you volley from behind the line and your momentum carries you, your paddle, or your hat into the zone, that is still a fault, even if the ball is already dead. A ball that lands on a line is in, except a serve that lands on the kitchen line, which is short. Full NVZ faults walk-through: <a href="pickleball-kitchen-rules.html">pickleball kitchen rules</a>. The <a href="how-to-dink.html">dink guide</a> is the soft shot people hit into this zone once the two bounces are done.</p>
 <h2>Scoring</h2>
 <p>Standard scoring gives a point only to the serving side, and only if that side wins the rally. A typical game in the rulebook's introduction is the first to 11, with a lead of at least 2. Tournament sections also list games to 15 or 21, still win by two. Call two numbers in singles: server's score, then receiver's score. The game starts at zero-zero. Call three numbers in doubles: serving team's score, receiving team's score, then the server number. A doubles game starts at zero-zero-two, because the first server of the game is treated as the second server. When in doubt, ask before the serve. The rulebook says a player may ask who the correct server or receiver is before the ball is hit. Rally scoring and other 2026 updates are summarized on the <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>.</p>
 <h2>What to practice next</h2>
 <ul>
 <li><a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a> — one-page quick reference, including confirmed 2026 changes.</li>
+<li><a href="pickleball-kitchen-rules.html">Pickleball kitchen rules</a> — NVZ faults, paddle-touch, momentum and the kitchen line.</li>
 <li><a href="pickleball-drills.html">Pickleball drills</a> — USA Pickleball's four beginner drills, plus partner and solo wall work.</li>
 <li><a href="pickleball-court-dimensions.html">Pickleball court dimensions</a> — court size, kitchen depth, net height and layout tolerances.</li>
 <li><a href="how-to-dink.html">How to dink</a> — the soft kitchen shot after the two bounces.</li>
@@ -1190,6 +1192,86 @@ def make(page, e, fmt, PP, cur, ph):
          "10 pickleball drills from USA Pickleball, PlayPickleball and pro Ava Ignatowich: dinking, Two Tap, cross-court drops, serving, Skinny Singles and solo wall drills.",
          fresh={"checked": DR_CHECKED, "table": DR_TABLE, "faq": dr_faq},
          schema=[dr_faq_ld])
+
+    # ----- Pickleball kitchen / NVZ rules (Nov 6, 2026) -----
+    # Evergreen deep-dive for the approved P3 target. Every rule number and paraphrase below was read from the
+    # 2026 USA Pickleball Official Rulebook PDF, the Basic Rules Summary PDF, and USA Pickleball's rules-summary
+    # and how-to-play pages on KV_CHECKED. Court size cross-checks our court-dimensions guide (Rule 3.A.4.c).
+    KV_CHECKED = "2026-11-06"
+    kv_checked = _dt.date.fromisoformat(KV_CHECKED).strftime("%B %-d, %Y")
+    KV_SUM_PAGE = "https://usapickleball.org/rules/summary/"
+    KV_HOW = "https://usapickleball.org/pickleball-skills/level-one/how-to-play-pickleball/"
+    KV_FAULTS = [
+        ("Contact while volleying", "11.A.1", "You, your paddle, clothing, or anything else touching you (including your partner) touches the NVZ during the volley"),
+        ("Momentum after a volley", "11.A.2", "The volley's momentum carries you into contact with the NVZ, or into something already touching it, even after the ball is dead"),
+        ("Volley before exiting", "11.A.3", "After you touched the NVZ, you volley again before both feet are completely outside it on the playing surface"),
+        ("Serve into the kitchen", "7.E.2 / 8.C", "A serve that lands in the NVZ, or on the NVZ line, is short and a fault"),
+    ]
+    kv_faq = [
+        ("What are the pickleball kitchen rules?",
+         "The kitchen is the non-volley zone: 7 feet deep by 20 feet wide on each side of the net (Rule 3.A.4.c). You may stand in it. You may not volley while you, or anything in contact with you, are touching it. Momentum from a volley that carries you into the zone is also a fault (Section 11)."),
+        ("Can you stand in the kitchen in pickleball?",
+         "Yes. USA Pickleball's rules summary says a player may legally be in the non-volley zone any time other than when volleying a ball. After a bounce, you can step in to play the ball. Standing there while not volleying is legal; volleying while touching it is not."),
+        ("Is the kitchen line part of the kitchen?",
+         "Yes. Rule 3.A.4.c says all lines that bound the non-volley zone are part of the zone. A toe on the kitchen line counts as being in the kitchen for a volley."),
+        ("Is a paddle touch in the kitchen a fault?",
+         "Yes, if it happens during the act of volleying. Rule 11.A.1 faults a volleying player when anything that has contact with that player — paddle, clothing, hat, or partner — contacts the non-volley zone."),
+        ("Does momentum into the kitchen count after the ball is dead?",
+         "Yes. Rule 11.A.2 says a volleying player's momentum that causes contact with the non-volley zone is a fault even after the ball becomes dead. Rule 9.B.1 calls out this momentum exception to the usual live-ball-only fault rule."),
+        ("Is a serve that lands on the kitchen line in or out?",
+         "Out. The rules summary and Rule 8.C say a serve that contacts the non-volley zone line is short and a fault. Other balls that touch a line are in."),
+        ("Do I have to leave the kitchen before I can volley again?",
+         "Yes. Rule 11.A.3: after contacting the non-volley zone, you may not volley until both feet have contacted the playing surface completely outside the zone."),
+    ]
+    kv_faq_html, kv_faq_ld = faq(kv_faq)
+    kv_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in KV_FAULTS)
+    kitchen = f'''<h1>Pickleball kitchen rules: NVZ faults, paddle touch and momentum (2026)</h1>
+<p class="meta">Paraphrased from the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball Official Rulebook</a>, the <a href="{RULES_SUM}" target="_blank" rel="noopener">Basic Rules Summary</a>, and USA Pickleball's <a href="{KV_SUM_PAGE}" target="_blank" rel="noopener">rules summary</a> and <a href="{KV_HOW}" target="_blank" rel="noopener">how to play</a> pages, all read {kv_checked}. The rulebook wins if we ever disagree.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>What it is:</b> the non-volley zone (NVZ), nicknamed the kitchen — 7 feet deep by 20 feet wide on each side of the net (Rule 3.A.4.c).</li>
+<li><b>The real rule:</b> you may stand in it. You may not volley while touching it, including its lines.</li>
+<li><b>Connected contact counts:</b> paddle, clothing, hat, or partner contact during a volley is the same fault (Rule 11.A.1).</li>
+<li><b>Momentum counts:</b> if a volley carries you into the kitchen, it is a fault even after the ball is dead (Rule 11.A.2).</li>
+<li><b>Serve short:</b> a serve that lands in the kitchen or on the kitchen line is a fault (Rules 7.E.2 and 8.C).</li>
+</ul>
+<h2>What the kitchen is</h2>
+<p>Rule 3.A.4.c defines each non-volley zone as the 7-foot by 20-foot (2.13 m by 6.08 m) area next to the net. The NVZ lines run parallel to the net, 7 feet out, between the sidelines. <b>All lines that bound the zone are part of the zone</b>, so a foot or paddle on the kitchen line is contact with the kitchen. The rulebook also says the zone is two-dimensional: it does not extend above the playing surface. Full court layout: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</p>
+<p>USA Pickleball's how-to-play page calls the NVZ the 14-foot area around the net (7 feet on each side) and notes the nickname "Kitchen." Beginner overview: <a href="pickleball-rules-for-beginners.html">pickleball rules for beginners</a>.</p>
+<h2>When standing in the kitchen is legal</h2>
+<p>The Basic Rules Summary is blunt: a player may legally be in the non-volley zone any time other than when volleying a ball. After the ball has bounced on your side, you can step in (or stay in) to hit it. That is how dinks and erases work at the net — see <a href="how-to-dink.html">how to dink</a>. Standing idle in the kitchen is legal; it is just usually bad position because you cannot take the next ball out of the air until you re-establish outside.</p>
+<h2>The three NVZ faults in Section 11</h2>
+<p>Section 11 opens with Rule 11.A: all volleys must be initiated outside the non-volley zone. A player, or anything in contact with the player, may contact the zone at any time <b>except during the act of volleying</b>.</p>
+<div class="tbl"><table><thead><tr><th>Fault</th><th>Rule</th><th>What triggers it</th></tr></thead><tbody>{kv_rows}</tbody></table></div>
+<h3>Paddle touch and anything connected to you</h3>
+<p>Rule 11.A.1 faults a volleying player when that player, or anything that has contact with the volleying player — including the player's partner — contacts the non-volley zone. The Basic Rules Summary says the same in plain language: it is a fault if, when volleying, the player steps on the NVZ, including the line, or when the player's momentum causes them or anything they are wearing or carrying to touch the zone. So a paddle tip, a hat brim, a sleeve, or leaning on a partner who is in the kitchen can all finish the fault.</p>
+<h3>Momentum after the volley</h3>
+<p>The rulebook defines momentum as the property that keeps a player moving after contacting the ball. The act of volleying produces momentum that ends when the player regains balance and control, or stops moving toward the non-volley zone. Rule 11.A.2: when a volleying player's momentum causes the player to contact anything (including the player's partner) that is in contact with the NVZ, <b>even after the ball becomes dead</b>, it is a fault. Rule 9.B.1 makes the same point: faults normally require a live ball, except for non-volley zone violations involving momentum.</p>
+<p>Practical read: if you volley a winner and then stumble onto the kitchen line, you still lose the rally. Stopping yourself by grabbing a partner who is standing in the kitchen is the same problem.</p>
+<h3>Re-establishing both feet outside before the next volley</h3>
+<p>Rule 11.A.3: after contacting the non-volley zone, when a player volleys a ball before both feet contact the playing surface completely outside the zone, it is a fault. You cannot hop from inside the kitchen and volley in the air without first planting both feet outside. Once both feet are clear, you may volley again from outside the line.</p>
+<h2>Serve: kitchen and kitchen line are short</h2>
+<p>Rule 7.E says the served ball must clear the opponent's non-volley zone and land in the correct service court. Rule 7.E.2: a served ball that lands in the non-volley zone is a fault against the server. Rule 8.C and the rules summary add the line call: a serve that contacts the non-volley zone line is "out" — short and a fault. Other balls that touch a line are in. One-page reminder: <a href="pickleball-rules-cheat-sheet-2026.html">pickleball rules cheat sheet 2026</a>.</p>
+<h2>Common kitchen arguments, settled</h2>
+<ul>
+<li><b>"My paddle only brushed the line after I hit."</b> If it was part of the act of volleying or the momentum from that volley, Rules 11.A.1 and 11.A.2 still apply.</li>
+<li><b>"The ball was already dead."</b> Momentum into the kitchen is the exception; the fault still counts (Rules 11.A.2 and 9.B.1).</li>
+<li><b>"I was just standing there."</b> Standing is fine. Volleying while touching the zone is not. Hitting a ball that has bounced first is fine.</li>
+<li><b>"The kitchen line is in for a serve."</b> No. For a serve, the kitchen line is short. For other shots, a ball on the kitchen line is in — but your foot on that line during a volley is still NVZ contact.</li>
+</ul>
+<h2>Practice the line without the fault</h2>
+<p>Soft hands at the kitchen are a skill, not a loophole. Use the dink and Two Tap work in our <a href="pickleball-drills.html">pickleball drills</a> guide, and keep your toes behind the line until the bounce. When you do step in after a bounce, remember Rule 11.A.3 before the next volley: both feet outside first.</p>
+{money_links()}
+{kv_faq_html}
+{sources([("USA Pickleball: 2026 Official Rulebook", RULES, f"Rules 3.A.4.c, 7.E.2, 8.C, 9.B.1, Section 11 (11.A–11.A.3), Momentum and Non-Volley Zone definitions, read {kv_checked}"),
+          ("USA Pickleball: Basic Rules Summary (PDF)", RULES_SUM, f"Non-Volley Zone and Line Calls summary, Rev. 1/1/2026, read {kv_checked}"),
+          ("USA Pickleball: Essential Pickleball Rules Summary", KV_SUM_PAGE, f"NVZ, kitchen nickname, momentum and line-call bullets, read {kv_checked}"),
+          ("USA Pickleball: How to Play Pickleball", KV_HOW, f"Kitchen rule overview, standing vs volleying, serve must clear the kitchen, read {kv_checked}")])}
+{more("guides/pickleball-kitchen-rules.html")}'''
+    page("guides/pickleball-kitchen-rules.html", "Pickleball Kitchen Rules: NVZ Faults, Paddle Touch and Momentum (2026)", kitchen,
+         "Pickleball kitchen rules from the 2026 USA Pickleball rulebook: NVZ size, paddle-touch and momentum faults, standing after a bounce, kitchen line on the serve, and FAQ.",
+         fresh={"checked": KV_CHECKED, "faults": KV_FAULTS, "faq": kv_faq},
+         schema=[kv_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
