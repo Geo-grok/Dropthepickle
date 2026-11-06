@@ -1,11 +1,43 @@
 {
- "updated": "2026-11-06T06:07-06:00",
+ "updated": "2026-11-06T06:59-06:00",
  "date": "2026-11-06",
  "source_file": "dtp-newsroom/buzz-2026-11-06.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026 Bracket, Nations Cup Results",
  "seo_desc": "PPA Worlds 2026 round of 16 results and Friday quarterfinals (Sock upsets Staksrud; Waters vs Sewing), CPX Hyper+ delisting, Selkirk LevelUp camps deal, and MLP Nations Cup context, all sourced.",
  "items": [
+  {
+   "title": "Team Wahlberg beats Team Piven in a DreamBreaker at the MUNICIPAL Celebrity Showdown at Worlds",
+   "summary": "Team Wahlberg defeated Team Piven in a DreamBreaker on Thursday evening at the MUNICIPAL Celebrity Pickleball Showdown presented by Corient, on Powerball Championship Court at the Opendoor Pickleball World Championships. The line score was 6-11, 11-5, 11-7, 4-11, 15-13. Celebrities on the court included Mark Wahlberg, Sean O'Malley, Jeremy Piven, Isabelle Harrison, John Isner, Richard Rawlings and Lauren Riihimaki, paired with pros Ben Johns, Anna Bright, Kate Fahey, Jack Sock, Brooke Buckner, Roscoe Bellamy, Tyson McGuffin and Lacy Schneemann. Per the pickleball.com recap, Team Wahlberg was Wahlberg, O'Malley, Harrison, Johns, Bright, Schneemann and Sock; Team Piven was Piven, Rawlings, Riihimaki, Isner, McGuffin, Fahey, Buckner and Bellamy.",
+   "status": "confirmed",
+   "date": "2026-11-06",
+   "sources": [
+    {
+     "label": "Pickleball.com: Team Wahlberg defeats Team Piven in MUNICIPAL Celebrity Showdown",
+     "url": "https://pickleball.com/culture/team-wahlberg-defeats-team-piven-to-win-muncipal-celebrity-showdown-presented-by-corient"
+    },
+    {
+     "label": "PickleballTV (YouTube): Mark Wahlberg on-court interview at the MUNICIPAL Celebrity Showdown",
+     "url": "https://www.youtube.com/watch?v=RMOpEXFkpXk"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Short recap / celebs-on-the-court: 'Team Wahlberg edged Team Piven 15-13 in the DreamBreaker at Worlds.' Link the pickleball.com recap. On X, no hashtags.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "Celebrity",
+    "Mark Wahlberg",
+    "Jeremy Piven",
+    "MUNICIPAL"
+   ],
+   "links": [
+    {
+     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
+     "label": "How to watch Worlds week"
+    }
+   ]
+  },
   {
    "title": "Jack Sock upsets No. 2 Federico Staksrud 3-11, 11-6, 11-8 and knocks the defending Worlds champ out of singles",
    "summary": "No. 13 Jack Sock beat No. 2 Federico Staksrud, the defending Opendoor Pickleball World Championships men's singles champion, 3-11, 11-6, 11-8 in the round of 16 on Thursday, Nov. 5, in Farmers Branch, Texas. Per the PPA and the official bracket, Sock dropped the first game badly, then took the next two. Selkirk's match report says Sock is leaner and fitter this week and that this is his third career win over Staksrud in eight meetings. Sock plays No. 5 Roscoe Bellamy in Friday's quarterfinals. Staksrud is still alive in men's doubles with Hayden Patriquin.",
