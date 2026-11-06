@@ -517,6 +517,9 @@ def make(page, e, fmt, PP, cur, ph):
          schema=[faq_ld])
 
     # ----- DUPR -----
+    # SERP polish (approved P1, 2026-11-05): stronger title/meta for "how to read DUPR /
+    # DUPR scale / DUPR explained", snippet-friendly at-a-glance, club-facing FAQs.
+    # Percentiles and scale numbers stay from DUPR + The Dink sources already on this page.
     DUPR_HOW = "https://www.dupr.com/how-it-works"
     DUPR_CALC = "https://www.dupr.com/post/how-your-dupr-rating-is-calculated"
     DUPR_ALGO = "https://www.dupr.com/post/dupr-algo-update-win-or-lose-your-rating-can-go-up"
@@ -533,12 +536,24 @@ def make(page, e, fmt, PP, cur, ph):
          "About the 84th percentile, so roughly the top 16% of active DUPR doubles players. That comes from a DUPR snapshot dated September 22, 2026, reported by DUPR and The Dink."),
         ("What is the DUPR reliability score?",
          "It is a 1 to 100% number on your profile that shows how much recent match data your rating is based on. A low score means the rating rests on old or thin data."),
+        ("What is a typical or average DUPR rating?",
+         "There is no single average published as a mean. In the September 22, 2026 doubles snapshot from DUPR and The Dink, the biggest band is 3.000 to 3.499 (29% of active doubles players), and 53% of active doubles players are somewhere in the 3s."),
+        ("Are singles and doubles DUPR ratings the same?",
+         "No. DUPR gives separate ratings for singles, gender doubles, and mixed doubles. Players in the 50 to 65+ bracket can also have an age-group rating. Compare like with like."),
     ]
     faq_html, faq_ld = faq(dupr_faq)
     pct_rows = "".join(f'<tr><th scope="row">{r}</th><td>{p}</td><td>{t}</td></tr>' for r, p, t in PCT)
     dist_rows = "".join(f'<tr><th scope="row">{r}</th><td>{s_}</td></tr>' for r, s_ in DIST_ROWS)
-    dupr = f'''<h1>How to read DUPR ratings</h1>
-<p class="meta">The DUPR scale, how a rating is calculated, and what percentile your number puts you in. From DUPR's own pages and The Dink.</p>
+    dupr = f'''<h1>How to read DUPR ratings: scale explained, calculation and percentiles</h1>
+<p class="meta">DUPR explained without the app: the 2.000 to 8.000 scale, how a rating moves, the reliability score, and 2026 doubles percentiles. Sourced from DUPR and The Dink.</p>
+<h2>DUPR at a glance</h2>
+<ul>
+<li><b>Scale:</b> 2.000 to 8.000. New players start as <b>NR</b> (not rated) until they have enough results.</li>
+<li><b>Separate numbers:</b> singles, gender doubles, and mixed doubles each get their own rating; 50 to 65+ players can also get an age-group rating.</li>
+<li><b>Reliability score:</b> 1 to 100% on your profile. Higher means the rating rests on fresher, thicker match data.</li>
+<li><b>Four factors:</b> performance vs. expectation, type of match, recency, and volume.</li>
+<li><b>Quick percentile:</b> a 4.0 doubles rating is about the 84th percentile (top 16%) in the September 22, 2026 snapshot.</li>
+</ul>
 <h2>The scale</h2>
 <p>According to <a href="{DUPR_HOW}" target="_blank" rel="noopener">DUPR</a>, every new player starts as <b>NR</b> (not rated), then gets a rating on a scale from <b>2.000 to 8.000</b>. You get separate ratings for singles, gender doubles, and mixed doubles, and players in the 50 to 65+ bracket also get an age-group rating.</p>
 <p>Your profile shows two numbers: the <b>DUPR rating</b> and a <b>reliability score</b> from 1 to 100%. A higher reliability score means the rating is more likely to reflect your current level. A low one means it rests on old or thin match data.</p>
@@ -562,7 +577,8 @@ def make(page, e, fmt, PP, cur, ph):
 <li>Compare like with like. Your singles and doubles ratings are separate.</li>
 <li>Log verified matches. Club, league, and tournament results count more than self-posted games.</li>
 </ul>
-<p>Need a rules refresher before a rated match? Use the <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>.</p>
+<p>For clubs and captains: the same three checks are the useful ones before you place someone in a bracket. This page does not invent a bracket formula; it restates how DUPR describes the rating itself.</p>
+<p>Need a rules refresher before a rated match? Use the <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>, <a href="pickleball-rules-for-beginners.html">rules for beginners</a>, or <a href="pickleball-kitchen-rules.html">kitchen / NVZ rules</a>.</p>
 {money_links()}
 {faq_html}
 {sources([("DUPR: How it works", DUPR_HOW, ""),
@@ -571,8 +587,8 @@ def make(page, e, fmt, PP, cur, ph):
           ("DUPR: DUPR rating percentiles", DUPR_PCT, "snapshot September 22, 2026"),
           ("The Dink: DUPR rating percentiles, where does your rating rank?", DINK_PCT, "Thomas Shields, October 7, 2026")])}
 {more("guides/how-to-read-dupr-ratings.html")}'''
-    page("guides/how-to-read-dupr-ratings.html", "How to read DUPR ratings: scale, calculation and percentiles", dupr,
-         "How to read a DUPR rating: the 2.000 to 8.000 scale, the four factors in the calculation, the reliability score, and 2026 percentiles from DUPR and The Dink.",
+    page("guides/how-to-read-dupr-ratings.html", "How to Read DUPR Ratings: Scale Explained and Percentiles", dupr,
+         "How to read DUPR ratings (DUPR explained): the 2.000 to 8.000 scale, four calculation factors, reliability score, and 2026 doubles percentiles from DUPR and The Dink.",
          fresh={"pct": PCT, "dist": DIST_ROWS, "faq": dupr_faq},
          schema=[faq_ld])
 
