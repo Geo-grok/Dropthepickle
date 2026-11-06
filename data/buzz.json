@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T13:10-06:00",
+ "updated": "2026-11-06T17:19:52-06:00",
  "date": "2026-11-06",
  "source_file": "dtp-newsroom/buzz-2026-11-06.json",
  "note": "Hand-curated; not touched by update.py.",
@@ -7,27 +7,30 @@
  "seo_desc": "PPA Worlds 2026 round of 16 results and Friday quarterfinals (Sock upsets Staksrud; Waters vs Sewing), CPX Hyper+ delisting, Selkirk LevelUp camps deal, and MLP Nations Cup context, all sourced.",
  "items": [
   {
-   "title": "Worlds quarterfinal results: Waters, Fahey, Christian, Alshon and Hunter Johnson advance",
-   "summary": "As of 1:10 PM CT on Friday, Nov. 6, the official United Pickleball Worlds live board marks five pro quarterfinals Final at the Opendoor Pickleball World Championships in Farmers Branch, Texas. Women's singles: Anna Leigh Waters defeated Sofia Sewing 11-2, 11-8; Kate Fahey defeated Catherine Parenteau 11-3, 11-0; Kaitlyn Christian defeated Jorja Johnson 11-13, 12-10, 11-7. Men's singles: Christian Alshon defeated Jaume Martinez Vich 11-5, 11-9; Hunter Johnson defeated Hong Kit Wong 11-3, 11-6. All five results are from the official board linked below. Jack Sock-Roscoe Bellamy is marked live, so its outcome remains pending with no in-progress scores reported. Christopher Haworth-John Lucian Goins and Brooke Buckner-Rika Fujiwara are marked Up Next and remain pending. All mixed, men's doubles and women's doubles quarterfinals are also marked Up Next, including Ben Johns/Waters in mixed and Johns/Gabriel Tardio in men's doubles. This is a partial results snapshot, not a complete quarterfinal recap.",
+   "title": "Worlds quarterfinal results: Sock wins again; Johns/Waters advance and Staksrud/Patriquin exit",
+   "summary": "As of 5:19:52 PM CT on Friday, Nov. 6, the official United Pickleball Worlds live board marks 15 pro quarterfinals Final at the Opendoor Pickleball World Championships in Farmers Branch, Texas. All 15 finals are unchanged from the 5:10:47 PM CT check, including the five already final at 1:10 PM CT. Women's singles: Anna Leigh Waters defeated Sofia Sewing 11-2, 11-8; Kate Fahey defeated Catherine Parenteau 11-3, 11-0; Kaitlyn Christian defeated Jorja Johnson 11-13, 12-10, 11-7; Brooke Buckner defeated Rika Fujiwara 13-11, 11-4. Men's singles: Jack Sock defeated Roscoe Bellamy 11-8, 11-7; John Lucian Goins defeated Christopher Haworth 11-5, 11-5; Christian Alshon defeated Jaume Martinez Vich 11-5, 11-9; Hunter Johnson defeated Hong Kit Wong 11-3, 11-6. Mixed doubles: Anna Bright and Hayden Patriquin defeated P. Todd and A. Daescu 11-2, 11-3; Ben Johns and Anna Leigh Waters defeated Sahra Dennehy and Tama Shimabukuro 11-5, 11-0; J. Johnson and J. Johnson defeated Catherine Parenteau and Eric Oncins 11-5, 11-2; R. Rohrabacher and Christian Alshon defeated T. Black and Gabriel Tardio 11-4, 11-7. Men's doubles: C. Klinger and Eric Oncins defeated Federico Staksrud and Hayden Patriquin 11-8, 11-4. Women's doubles: Anna Bright and Anna Leigh Waters defeated C. Wang and L. Sleeth 11-1, 11-4; Kate Fahey and T. Pisnik defeated M. Humberg and Milan Rane 12-10, 11-9. All 15 results are from the official board linked below. Five gender-doubles quarterfinals remain unresolved, two Live and three Up Next: men's doubles Ben Johns and Gabriel Tardio vs. C. Garnett and D. Frazier (Live), A. Daescu and Christian Alshon vs. W. Mackinnon and H. Johnson (Live), and Tama Shimabukuro and J. Johnson vs. R. Newman and Noe Khlif (Up Next); women's doubles R. Rohrabacher and P. Todd vs. Brooke Buckner and Kaitlyn Christian (Up Next), and T. Black and J. Johnson vs. Sofia Sewing and Catherine Parenteau (Up Next). These matches are not final; live scores are intentionally omitted. This is a partial results snapshot, not a complete quarterfinal recap.",
    "status": "confirmed",
    "date": "2026-11-06",
    "sources": [
     {
-     "label": "Official United Pickleball Worlds live board: five quarterfinals marked Final (as of 1:10 PM CT, Nov. 6)",
+     "label": "Official United Pickleball Worlds live board: 15 quarterfinals marked Final (as of 5:19:52 PM CT, Nov. 6)",
      "url": "https://worlds.unitedpickleball.com/ppa-tour"
     }
    ],
    "embeds": [],
-   "social_angle": "Official partial quarterfinal results only; other outcomes pending as of 1:10 PM CT. No posting requested.",
+   "social_angle": "Official partial quarterfinal results only; five gender-doubles quarterfinals still unresolved as of 5:19:52 PM CT. These matches are not final; live scores are intentionally omitted. No posting requested.",
    "tags": [
     "PPA",
     "Worlds",
     "Quarterfinals",
+    "Jack Sock",
+    "Ben Johns",
     "Anna Leigh Waters",
     "Kate Fahey",
     "Kaitlyn Christian",
     "Christian Alshon",
-    "Hunter Johnson"
+    "Hunter Johnson",
+    "Federico Staksrud"
    ],
    "links": [
     {
