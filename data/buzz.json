@@ -1,11 +1,42 @@
 {
- "updated": "2026-11-06T17:19:52-06:00",
- "date": "2026-11-06",
+ "updated": "2026-11-07T13:06:21-06:00",
+ "date": "2026-11-07",
  "source_file": "dtp-newsroom/buzz-2026-11-06.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026 Bracket, Nations Cup Results",
  "seo_desc": "PPA Worlds 2026 round of 16 results and Friday quarterfinals (Sock upsets Staksrud; Waters vs Sewing), CPX Hyper+ delisting, Selkirk LevelUp camps deal, and MLP Nations Cup context, all sourced.",
  "items": [
+  {
+   "title": "Worlds semifinal results: Goins beats Alshon and Waters beats Buckner",
+   "summary": "As of 1:06:21 PM CT on Saturday, Nov. 7, the official United Pickleball Worlds live board marks two pro semifinals Final at the Opendoor Pickleball World Championships in Farmers Branch, Texas. Men's singles: John Lucian Goins defeated Christian Alshon 11-4, 11-9. Women's singles: Anna Leigh Waters defeated Brooke Buckner 11-2, 11-0. Both results are from the official board linked below. Eight semifinals remain unresolved. Men's singles: Jack Sock vs. Hunter Johnson (Live, scheduled 12:50 PM CT). Women's singles: Kate Fahey vs. Kaitlyn Christian (Up Next, scheduled 1:45 PM CT). Mixed doubles: Ben Johns and Anna Leigh Waters vs. R. Rohrabacher and Christian Alshon (Up Next, scheduled 2:40 PM CT); Anna Bright and Hayden Patriquin vs. J. Johnson and J. Johnson (Up Next, scheduled 3:35 PM CT). Men's doubles: Ben Johns and Gabriel Tardio vs. Andrei Daescu and Christian Alshon (Up Next, scheduled 4:30 PM CT); C. Klinger and Eric Oncins vs. Tama Shimabukuro and J. Johnson (Up Next, scheduled 6:20 PM CT). Women's doubles: Anna Bright and Anna Leigh Waters vs. R. Rohrabacher and P. Todd (Up Next, scheduled 5:25 PM CT); Sofia Sewing and Catherine Parenteau vs. Kate Fahey and Tina Pisnik (Up Next, scheduled 7:15 PM CT). These matches are not final; live scores are intentionally omitted. This is a partial results snapshot, not a complete semifinal recap.",
+   "status": "confirmed",
+   "date": "2026-11-07",
+   "sources": [
+    {
+     "label": "Official United Pickleball Worlds live board: two semifinals marked Final (as of 1:06:21 PM CT, Nov. 7)",
+     "url": "https://worlds.unitedpickleball.com/ppa-tour"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Official partial semifinal results only; eight semifinals still unresolved as of 1:06:21 PM CT. These matches are not final; live scores are intentionally omitted. No posting requested.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "Semifinals",
+    "John Lucian Goins",
+    "Christian Alshon",
+    "Anna Leigh Waters",
+    "Brooke Buckner",
+    "Jack Sock",
+    "Hunter Johnson"
+   ],
+   "links": [
+    {
+     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
+     "label": "How to watch Worlds week"
+    }
+   ]
+  },
   {
    "title": "Worlds quarterfinal results: Sock wins again; Johns/Waters advance and Staksrud/Patriquin exit",
    "summary": "As of 5:19:52 PM CT on Friday, Nov. 6, the official United Pickleball Worlds live board marks 15 pro quarterfinals Final at the Opendoor Pickleball World Championships in Farmers Branch, Texas. All 15 finals are unchanged from the 5:10:47 PM CT check, including the five already final at 1:10 PM CT. Women's singles: Anna Leigh Waters defeated Sofia Sewing 11-2, 11-8; Kate Fahey defeated Catherine Parenteau 11-3, 11-0; Kaitlyn Christian defeated Jorja Johnson 11-13, 12-10, 11-7; Brooke Buckner defeated Rika Fujiwara 13-11, 11-4. Men's singles: Jack Sock defeated Roscoe Bellamy 11-8, 11-7; John Lucian Goins defeated Christopher Haworth 11-5, 11-5; Christian Alshon defeated Jaume Martinez Vich 11-5, 11-9; Hunter Johnson defeated Hong Kit Wong 11-3, 11-6. Mixed doubles: Anna Bright and Hayden Patriquin defeated P. Todd and A. Daescu 11-2, 11-3; Ben Johns and Anna Leigh Waters defeated Sahra Dennehy and Tama Shimabukuro 11-5, 11-0; J. Johnson and J. Johnson defeated Catherine Parenteau and Eric Oncins 11-5, 11-2; R. Rohrabacher and Christian Alshon defeated T. Black and Gabriel Tardio 11-4, 11-7. Men's doubles: C. Klinger and Eric Oncins defeated Federico Staksrud and Hayden Patriquin 11-8, 11-4. Women's doubles: Anna Bright and Anna Leigh Waters defeated C. Wang and L. Sleeth 11-1, 11-4; Kate Fahey and T. Pisnik defeated M. Humberg and Milan Rane 12-10, 11-9. All 15 results are from the official board linked below. Five gender-doubles quarterfinals remain unresolved, two Live and three Up Next: men's doubles Ben Johns and Gabriel Tardio vs. C. Garnett and D. Frazier (Live), A. Daescu and Christian Alshon vs. W. Mackinnon and H. Johnson (Live), and Tama Shimabukuro and J. Johnson vs. R. Newman and Noe Khlif (Up Next); women's doubles R. Rohrabacher and P. Todd vs. Brooke Buckner and Kaitlyn Christian (Up Next), and T. Black and J. Johnson vs. Sofia Sewing and Catherine Parenteau (Up Next). These matches are not final; live scores are intentionally omitted. This is a partial results snapshot, not a complete quarterfinal recap.",
