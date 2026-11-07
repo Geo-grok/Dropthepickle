@@ -438,7 +438,8 @@ def crumbs_for(fn, title, url):
     if fn == "index.html": return [home]
     crumbs = [home]
     if fn.startswith("events/"): crumbs.append({"name": "Tournaments", "url": canon("tournaments.html")})
-    elif fn.startswith("guides/"): crumbs.append({"name": "Guides", "url": canon("guides/how-to-choose-a-paddle.html")})
+    elif fn.startswith("guides/"): crumbs.append({"name": "Guides", "url": canon("guides.html")})
+    elif fn.startswith("deals/"): crumbs.append({"name": "Deals", "url": canon("deals.html")})
     elif fn.startswith("articles/"): crumbs.append({"name": "News", "url": canon("news.html")})
     elif fn.startswith("creators/"): crumbs.append({"name": "Creators", "url": canon("creators.html")})
     elif fn.startswith("paddle-") or fn == "price-index.html": crumbs.append({"name": "Paddles", "url": canon("paddles.html")})
@@ -663,7 +664,7 @@ def build():
             return f'<div class="card"><a class="thumb" href="{e(v["link"])}" target="_blank" rel="noopener" aria-label="Watch on YouTube"><img loading="lazy" decoding="async" width="320" height="180" src="https://i.ytimg.com/vi/{e(v["video_id"])}/mqdefault.jpg" alt=""><span class="play"></span><span class="chan">{e(v["channel"])}</span></a><h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta">{fmt(v["date"])} · <a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a></div></div>'
         em = f'<div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{e(v["video_id"])}" title="{e(v["title"])}" allowfullscreen></iframe></div>' if embed and v.get("video_id") else ""
         return f'<div class="card">{em}<h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta"><a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a> · {fmt(v["date"])}</div></div>'
-    page("tournaments.html", "Tournaments", f'''<h1>Upcoming tournaments</h1><p class="meta">Pro events from the official <a href="https://www.ppatour.com/events/" target="_blank" rel="noopener">Carvana PPA Tour</a> event feed. Always confirm dates and sign up on the official page. Each card links to our event page, which only repeats fields from that feed.</p>
+    page("tournaments.html", "Upcoming pro pickleball tournaments", f'''<h1>Upcoming pro pickleball tournaments</h1><p class="meta">Pro events from the official <a href="https://www.ppatour.com/events/" target="_blank" rel="noopener">Carvana PPA Tour</a> event feed. Always confirm dates and sign up on the official page. Each card links to our event page, which only repeats fields from that feed.</p>
 <p>Going to Worlds? Read our <a href="events/opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide</a> for dates, venue, parking and ticket prices. Watching the Oct 30 kickoff? See <a href="events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 teams and how to watch</a>. Following amateurs and pros in San Diego? Read <a href="events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026: schedule, tickets and how to watch</a>.</p>
 <div class="grid">{"".join(tcard(t) for t in T["items"]) or "<p>No events right now.</p>"}</div>
 <h2>Find amateur tournaments near you</h2><p>These directories host signups for local and regional events (including West Texas). We link to them instead of copying their listings:</p>
@@ -678,6 +679,7 @@ def build():
         when = " – ".join(fmt(t[k]) for k in ("start", "end") if t.get(k))
         where = e(t["location"]) if t.get("location") else ""
         if when or where: bits.append(f'<p>{when}{(" · " + where) if where else ""}</p>')
+        bits.append('<p class="meta">Copied from the official event feed. Confirm the date, place, and signup on the official page.</p>')
         if t.get("link"): bits.append(f'<p><a class="btn" href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a></p>')
         if t.get("tickets"): bits.append(f'<p><a href="{e(t["tickets"])}" target="_blank" rel="noopener">Tickets</a></p>')
         if "World Championships" in t["name"] and (t.get("start") or "").startswith("2026"):
@@ -693,7 +695,7 @@ def build():
              ". ".join(desc_bits) + ".",
              fresh={k: t.get(k) for k in ("name", "start", "end", "location", "link", "tickets", "source")},
              schema=[sports_event(t)])
-    page("reviews.html", "Paddle review roundup", f'<h1>Paddle review roundup</h1><p class="meta">The newest paddle videos from leading independent reviewers, pulled from their public YouTube feeds. All videos play on YouTube and belong to their creators. Go subscribe!</p><div class="grid">{"".join(rcard(v, False) for v in R["items"])}</div>',
+    page("reviews.html", "Pickleball paddle review videos", f'<h1>Pickleball paddle review videos</h1><p class="meta">The newest paddle videos from leading independent reviewers, pulled from their public YouTube feeds. All videos play on YouTube and belong to their creators. Go subscribe!</p><div class="grid">{"".join(rcard(v, False) for v in R["items"])}</div>',
          "Newest pickleball paddle videos from independent YouTube reviewers, with a link back to each creator's channel.",
          fresh=[{k: v.get(k) for k in ("channel", "title", "link", "date", "video_id")} for v in R["items"]])
     # Newsroom articles (hand-written data/articles.json; update.py never writes it). Every claim links to its source.
@@ -725,7 +727,7 @@ def build():
          B.get("seo_desc") or "Pickleball Buzz: what the pickleball world is talking about, with confirmed stories and clearly labeled rumors, each linked to its sources.",
          raw_title=bool(B.get("seo_title")), fresh={"updated": B.get("updated"), "items": [(b.get("title"), b.get("status"), b.get("date")) for b in B.get("items", [])]})
     rows = "".join(f'<tr><td><a href="{e(p["profile"])}" target="_blank" rel="noopener"><b>{e(p["name"])}</b></a></td><td>{e(p["country"])}</td><td>{e(p["paddle"])}</td><td>{" ".join(f"<a href={chr(34)}{e(u)}{chr(34)} target=_blank rel=noopener>{k}</a>" for k,u in p["socials"].items())}</td></tr>' for p in P.get("pros", []))
-    page("pros.html", "Pro players", f'<h1>Top pro players</h1><p class="meta">Facts from each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Blank means the profile didn\'t list it.</p><div class="tbl"><table><tr><th>Player</th><th>Country</th><th>Paddle (per profile)</th><th>Socials</th></tr>{rows}</table></div>',
+    page("pros.html", "Pro pickleball players", f'<h1>Pro pickleball players</h1><p class="meta">Facts from each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Blank means the profile didn\'t list it.</p><div class="tbl"><table><tr><th>Player</th><th>Country</th><th>Paddle (per profile)</th><th>Socials</th></tr>{rows}</table></div>',
          "Country, paddle and social links for top pros, taken from each player's official PPA Tour profile.",
          fresh=[{k: p.get(k) for k in ("name", "country", "paddle", "profile", "socials")} for p in P.get("pros", [])])
     page("shop.html", "Merch", f'<h1>Merch shop</h1><div class="card"><h3>Coming soon 👕</h3><p>Shirts, hats and gear for dinkers. Get notified when we launch.</p>{signup("merch")}</div>',

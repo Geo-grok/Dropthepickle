@@ -185,6 +185,38 @@ if "maker pages" not in about_desc or "geolobo@mail.grokbot.com" not in about_de
 if "yours either way" in "\n".join(p.read_text() for p in pages):
     fail("a built page still says the discount is yours either way")
 
+guide = json.loads(BeautifulSoup(text_of("guides/how-to-dink.html"), "html.parser").find("script", attrs={"type": "application/ld+json"}).string)
+crumbs = next(n for n in guide["@graph"] if n.get("@type") == "BreadcrumbList")
+guides_url = next(i["item"] for i in crumbs["itemListElement"] if i["name"] == "Guides")
+if guides_url != "https://dropthepickle.com/guides":
+    fail(f"Guides breadcrumb points at {guides_url}")
+deal = json.loads(BeautifulSoup(text_of("deals/black-friday-pickleball-deals-2026.html"), "html.parser").find("script", attrs={"type": "application/ld+json"}).string)
+deal_crumbs = next(n for n in deal["@graph"] if n.get("@type") == "BreadcrumbList")
+deals_url = next((i["item"] for i in deal_crumbs["itemListElement"] if i["name"] == "Deals"), None)
+if deals_url != "https://dropthepickle.com/deals":
+    fail(f"Deals breadcrumb is {deals_url}")
+
+def product_offer(fn):
+    g = json.loads(BeautifulSoup(text_of(fn), "html.parser").find("script", attrs={"type": "application/ld+json"}).string)
+    return next(n for n in g["@graph"] if n.get("@type") == "Product")["offers"]
+if product_offer("paddle-paddletek-honeyfoam-tko-x.html").get("availability") != "https://schema.org/OutOfStock":
+    fail("Honeyfoam TKO-X should be OutOfStock")
+if "availability" in product_offer("paddle-paddletek-tempest-veyra.html"):
+    fail("Tempest Veyra has no recorded availability and should not claim InStock")
+if product_offer("paddle-volair-v-1f-xl-w-16mm.html").get("availability") != "https://schema.org/InStock":
+    fail("V.1F should stay InStock")
+cmp_ = json.loads(BeautifulSoup(text_of("compare.html"), "html.parser").find("script", attrs={"type": "application/ld+json"}).string)
+cmp_list = next(n for n in cmp_["@graph"] if n.get("@type") == "ItemList")
+if cmp_list.get("name") != "All paddles":
+    fail("compare ItemList is not named for the All paddles section")
+if "Compare pickleball paddles" not in text_of("compare.html"):
+    fail("compare H1 was not clarified")
+if "<h1>Upcoming pro pickleball tournaments</h1>" not in text_of("tournaments.html"):
+    fail("tournaments H1 was not clarified")
+feed_events = [p for p in pages if p.parent.name == "events" and p.name not in ("opendoor-pickleball-world-championships.html", "mlp-nations-cup-2026.html", "usa-pickleball-nationals-2026.html")]
+if not feed_events or not all("Copied from the official event feed." in p.read_text() for p in feed_events):
+    fail("a feed event page does not say it only repeats the official feed")
+
 print(f"checked {len(pages)} HTML pages, {len(locs)} sitemap URLs")
 if bad:
     print(f"{len(bad)} problems:")

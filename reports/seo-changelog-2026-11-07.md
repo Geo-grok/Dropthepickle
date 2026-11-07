@@ -2,7 +2,7 @@
 
 Date of this work: November 7, 2026.
 
-This file is the review log for branch `cursor/seo-onpage-fixes-4c4f`. It is not deployed. The live site at https://dropthepickle.com still serves whatever was last published from `main` with `npx wrangler deploy`. Nothing in this change set touches DNS, hosting, `wrangler.jsonc`, `src/worker.js`, or outreach.
+This file is the review log for branch `cursor/seo-onpage-fixes-4c4f`. Nothing here is a merge or a publish. `wrangler.jsonc`, DNS, hosting settings, and the worker were not edited. A Cloudflare Workers Builds check does run against this branch; see "Deployment check" below. Local `python3 build.py` / `scripts/check_seo.py` are not CI.
 
 Structured data below was parsed as JSON-LD and checked against the visible copy. Parsing is not a promise that Google will show a rich result.
 
@@ -21,6 +21,25 @@ A second pass the same day checked the club, the ticket page, and whether semifi
 **Event end.** Worlds `endDate` is `2026-11-08` with no clock. The description says the 4:00 p.m. CT PickleballTV window is a broadcast end, not an event-end time. Nations Cup `endDate` is `2026-11-01` with no clock. The old `15:30` matched the 3:30 p.m. coverage window, not a last ball.
 
 **About meta description.** "DropThePickle, from Midland, Texas, copies paddle specs from maker pages, dates each maker price check, and pulls news and events from public feeds. Corrections: geolobo@mail.grokbot.com." The visible section leads with that sourcing. It does not invent a byline. There is no Person schema.
+
+## Site-wide pass (same branch)
+
+Inventory of the November 7 build: 309 HTML files, 306 sitemap URLs. Families covered: home, guides, three hand-written event guides plus PPA-feed event stubs, 43 paddle pages, the quiz, `vs-` pages, `best-` filters, per-brand discount-code pages, newsroom articles, creators, podcasts, deals, price index, price tracker, and root hubs. No missing H1. No unparseable JSON-LD. Noindex only on `/links/tiktok` and `/links/instagram`, both canonical to `/links`. The only shared title is those three link pages, on purpose. The one Person node is Ryan Morneau, named on his creator page.
+
+Changes:
+
+- Guides breadcrumb "Guides" now points at `/guides` instead of `/guides/how-to-choose-a-paddle`. Every `guides/*.html` page.
+- `deals/*.html` gets a Deals crumb to `/deals` unless the page already passes crumbs. Black Friday already did.
+- Product offers include availability only when `price_history.json` records true or false. Tempest Veyra and Bantam Jolt no longer claim InStock. Honeyfoam TKO-X stays OutOfStock. The other 40 recorded-available paddles stay InStock, including lists that embed those offers.
+- https://dropthepickle.com/compare H1 is "Compare pickleball paddles". ItemList name is "All paddles".
+- https://dropthepickle.com/tournaments title and H1 are "Upcoming pro pickleball tournaments".
+- https://dropthepickle.com/pros title and H1 are "Pro pickleball players".
+- https://dropthepickle.com/paddles title and H1 are "Pickleball paddle database".
+- https://dropthepickle.com/reviews title and H1 are "Pickleball paddle review videos".
+- https://dropthepickle.com/deals H1 is "Pickleball paddle deals". The title already said that.
+- Each PPA-feed event page, other than the hand-written Worlds page, says it is copied from the official feed and to confirm on the official page. No new facts.
+
+Left on purpose: robots, canonicals, sitemap membership, shop and community (short coming-soon pages, still indexable; noindex would be a coverage decision), the under-$100 filter and guide as two different pages, long unique titles, affiliate disclosures, prices, and `/go/` links. Not added: SearchAction, a named editor, ratings, or title shortening for pixel width. Search analytics are not in the repo, so titles that already match a query were not retuned.
 
 ## What was verified before editing
 
@@ -302,3 +321,13 @@ There is no project lint config and no unit-test suite. `python3 scripts/check_l
 - A clock time for the last ball of Worlds or of the Nations Cup final. The published materials give the last calendar day and a broadcast window (Worlds PickleballTV until 4:00 p.m. CT Sunday; Nations Cup coverage until 3:30 p.m. CT). Schema uses the date only.
 - A live Tixr cart price on November 7. The official ticket page itself still attributes its numbers to Tixr on October 11, 2026. The table repeats that snapshot and says so.
 - A personal editor name. The site does not publish one, and none was added.
+
+## Deployment check (not an SEO failure)
+
+GitHub check "Workers Builds: dropthepickle" on commit `518a6878fe892c04849614fd9e1ff658bf8fb552` concluded failure. Check run: https://github.com/Geo-grok/Dropthepickle/runs/128471874373 . The GitHub output has no log text and no annotations. It only links to Cloudflare build `5fb8436a-cf26-46ba-b635-6cf31fdd4d84`: https://dash.cloudflare.com/f12f2564c774e2aff0eaf7aa86947e6e/workers/services/view/dropthepickle/production/builds/5fb8436a-cf26-46ba-b635-6cf31fdd4d84
+
+A read-only look at that build, reported back for this pass: the build command was `pip install -r requirements.txt && python3 update.py --no-fetch`, it reported 309 pages, and the build command succeeded. The deploy command `npx wrangler preview` (Wrangler 4.158.0) failed because `wrangler.jsonc` has no `previews` block. The same failure happened on the earlier build `783ec64f-2334-49f1-b658-773f959efcd2` at commit `45094313`. `wrangler.jsonc` is the same on this branch and on the base: a D1 binding, no `previews`. Dashboard build settings, as reported, have `auto_build_enabled=true`, `previews_enabled=false`, and the production settings for this SEO branch call `npx wrangler preview`.
+
+That is a deployment-configuration mismatch, not an SEO regression and not a failure of the static build. `wrangler.jsonc` was not edited. No deploy, preview, or check rerun was started from here. A preview-safe separate D1 binding or a validation-only workflow would need approval before anyone changes that configuration.
+
+Risk left as-is: Workers Builds is on for this repo, so a push can start that production-targeted preview command even though the config cannot satisfy it. The failed command is `wrangler preview`, and this pass does not establish whether a later successful preview would publish. Production was still on the old pages at about 11:36 AM CT on November 7, 2026, after both failed checks.
