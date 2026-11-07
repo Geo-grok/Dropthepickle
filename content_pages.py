@@ -1355,6 +1355,30 @@ def make(page, e, fmt, PP, cur, ph):
          "The official Nationals site says every match at the 2026 Oceanview USA Pickleball National Championships, October 31 to November 8 in San Diego, is livestreamed and recorded by VS Sports."),
     ]
     wt_faq_html, wt_faq_ld = faq(wt_faq)
+    import os as _os
+    from zoneinfo import ZoneInfo as _ZI
+    _bd = _os.environ.get("DTP_BUILD_DATE")
+    build_day = _dt.date.fromisoformat(_bd) if _bd else _dt.datetime.now(_ZI("America/Chicago")).date()
+    _sat, _sun = _dt.date(2026, 11, 7), _dt.date(2026, 11, 8)
+    _built = build_day.strftime("%B %-d, %Y")
+    _wt_link = '<a href="../events/opendoor-pickleball-world-championships.html#this-weekend">Worlds weekend schedule</a>'
+    if build_day == _sat:
+        wt_weekend = (f'<p><b>Page built {_built}.</b> The published schedule has semifinals that day on <b>PickleballTV</b> from 11 AM to 7 PM CT, '
+                      f'and Championship Sunday on November 8, first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window, not an event-end clock. '
+                      f'A November 7 reading of United Pickleball marked Monday through Friday completed. Full table: {_wt_link}.</p>')
+        wt_week_note = f'This page was built {_built}. PPA Worlds semifinals are on the published Saturday schedule, and Championship Sunday is November 8.'
+    elif build_day == _sun:
+        wt_weekend = (f'<p><b>Page built {_built}.</b> Semifinals were Saturday, November 7 (PickleballTV 11 AM to 7 PM CT). '
+                      f'Championship Sunday is November 8: first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window. Full table: {_wt_link}.</p>')
+        wt_week_note = f'This page was built {_built}. Championship Sunday is the remaining published PPA Worlds day. Semifinals were Saturday, November 7.'
+    elif build_day > _sun:
+        wt_weekend = (f'<p><b>Page built {_built}, after Championship Sunday.</b> Published windows were semifinals on Saturday, November 7, on <b>PickleballTV</b> from 11 AM to 7 PM CT, '
+                      f'and Championship Sunday on November 8, first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window, not an event-end clock. Full table: {_wt_link}.</p>')
+        wt_week_note = f'This page was built {_built}. The published PPA Worlds windows were semifinals on November 7 and Championship Sunday on November 8.'
+    else:
+        wt_weekend = (f'<p><b>Page built {_built}.</b> Published windows: semifinals Saturday, November 7, on <b>PickleballTV</b> from 11 AM to 7 PM CT, '
+                      f'and Championship Sunday November 8, first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window. Full table: {_wt_link}.</p>')
+        wt_week_note = f'This page was built {_built}. The published PPA Worlds windows are semifinals on November 7 and Championship Sunday on November 8.'
     watch = f'''<h1>How to watch pro pickleball on TV and streaming (2026)</h1>
 <p class="meta">Where the PPA Tour, Major League Pickleball, the APP Tour and USA Pickleball Nationals stream and air, from the tours' own pages and the PickleballTV app listings, read {wt_checked}. Broadcast windows move, so confirm on the linked schedule before you tune in. Times are Central (CT) unless noted.</p>
 <h2>The short answer</h2>
@@ -1367,9 +1391,9 @@ def make(page, e, fmt, PP, cur, ph):
 <p>The inaugural MLP Nations Cup final was <b>Sunday, November 1, 2026</b> at Brookhaven Country Club in Farmers Branch, Texas. <b>Team USA beat Latin America 3-0.</b> Scores and the published watch windows are on our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 page</a>. The schedule {ext(WT_NC_MLP, "MLP published")} before the event, all on Championship Court, was:</p>
 <ul><li><b>Semifinal 1:</b> 10:00 AM CT (Group A No. 2 vs Group B No. 1). Result: Latin America def. Asia Domestic 3-1.</li><li><b>Semifinal 2:</b> 11:30 AM CT (Group A No. 1 vs Group B No. 2). Result: USA def. Europe East 3-1.</li><li><b>Final:</b> 2:00 PM CT. Result: USA def. Latin America 3-0.</li></ul>
 <p><b>Where it streamed:</b> <b>PickleballTV</b> and the PickleballTV app. MLP said all Nations Cup matches were available there, and {ext(WT_NC_UP, "United Pickleball")} listed PickleballTV windows of 10 AM to 1 PM CT for the semifinals and 2 to 3:30 PM CT for the final.</p>
-<h2 id="ppa-worlds">How to watch the rest of PPA Worlds 2026</h2>
-<p><b>Still ahead as of November 7, 2026:</b> semifinals on Saturday, November 7, on <b>PickleballTV</b> from 11 AM to 7 PM CT, and Championship Sunday on November 8, first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. United Pickleball's pro page that day marked Monday through Friday completed. Monday qualifying had no stream window. Full table: <a href="../events/opendoor-pickleball-world-championships.html#this-weekend">Worlds this weekend</a>.</p>
-<ul><li><b>Mon Nov 2 (completed):</b> pro qualifying in all five pro events; no stream window listed. First serve was recorded as 8 AM CT per United Pickleball and the PPA's Oct 28 X post; the PPA event page still listed 11 AM on a November 7 recheck. Details: <a href="../events/opendoor-pickleball-world-championships.html#qualifying">Worlds qualifying Monday</a>.</li><li><b>Tue Nov 3 to Fri Nov 6 (completed):</b> round of 64 through quarterfinals on <b>PickleballTV</b>, 11 AM to 7 PM CT (6 PM on Thursday).</li><li><b>Thu Nov 5 (completed):</b> Celebrity Pro-Am on <b>Tennis Channel</b> and PickleballTV, 7 to 9 PM CT.</li><li><b>Sat Nov 7:</b> semifinals on <b>PickleballTV</b>, 11 AM to 7 PM CT.</li><li><b>Sun Nov 8:</b> Championship Sunday on PickleballTV, 10 AM to 4 PM CT.</li></ul>
+<h2 id="ppa-worlds">How to watch PPA Worlds 2026 (published windows)</h2>
+{wt_weekend}
+<ul><li><b>Mon Nov 2 (completed):</b> pro qualifying in all five pro events; no stream window listed. First serve was recorded as 8 AM CT per United Pickleball and the PPA's Oct 28 X post; the PPA event page still listed 11 AM on a November 7 recheck. Details: <a href="../events/opendoor-pickleball-world-championships.html#qualifying">Worlds qualifying Monday</a>.</li><li><b>Tue Nov 3 to Fri Nov 6 (completed):</b> round of 64 through quarterfinals on <b>PickleballTV</b>, 11 AM to 7 PM CT (6 PM on Thursday).</li><li><b>Thu Nov 5 (completed):</b> Celebrity Pro-Am on <b>Tennis Channel</b> and PickleballTV, 7 to 9 PM CT.</li><li><b>Sat Nov 7:</b> semifinals on <b>PickleballTV</b>, 11 AM to 7 PM CT.</li><li><b>Sun Nov 8:</b> Championship Sunday on PickleballTV, 10 AM to 4 PM CT. The 4 PM time is the broadcast window.</li></ul>
 <p>The PPA released the seeded draws on October 31. Full day-by-day table, draws and FAQs: <a href="../events/opendoor-pickleball-world-championships.html#how-to-watch">how to watch Pickleball Worlds 2026</a>.</p>
 <p><b>Gear up for Worlds:</b> <a href="../paddle-volair-mach-1-forza.html">Volair Mach 1 Forza</a> · <a href="../paddle-volair-mach-2-forza.html">Volair Mach 2 Forza</a> · <a href="../paddle-volair-cmd-el-16mm.html">Volair CMD EL 16mm</a> · <a href="../guides/pickleball-gift-guide-2026.html">2026 gift guide</a> · <a href="../discount-codes.html">discount codes</a></p>
 <h2>Who streams what</h2>
@@ -1380,7 +1404,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p><b>The paid app.</b> The {ext(WT_IOS, "App Store")} (iPhone, iPad, Apple TV) and {ext(WT_PLAY, "Google Play")} listings say the app is a free download, and full access costs <b>$5.99 a month or $59.99 a year</b>, with a 30-day free trial. Paid access adds up to six live courts per event, full replays on demand, and pause and rewind. The listings say it covers more than 3,000 live hours from 32 PPA and MLP tournaments a year.</p>
 <p>So if you only want the feature court, the free channel may be enough. If you want to follow one player on an outer court, or rewatch a match, you need the app.</p>
 <h2>This week: Nations Cup, Nationals and PPA Worlds</h2>
-<p>The table is the published week of windows, not a live board. The Nations Cup ended November 1 (Team USA won; <a href="../events/mlp-nations-cup-2026.html">results</a>). As of November 7, 2026, PPA Worlds has semifinals on Saturday and Championship Sunday on November 8. Nations Cup times are converted from the {ext(WT_PPA, "PPA's watch page")} (listed in ET). PPA Worlds times are from {ext(WT_UP_PRO, "United Pickleball")} (listed in CT), which says windows can move. All times CT.</p>
+<p>The table is the published week of windows, not a live board. The Nations Cup ended November 1 (Team USA won; <a href="../events/mlp-nations-cup-2026.html">results</a>). {wt_week_note} Nations Cup times are converted from the {ext(WT_PPA, "PPA's watch page")} (listed in ET). PPA Worlds times are from {ext(WT_UP_PRO, "United Pickleball")} (listed in CT), which says windows can move. All times CT.</p>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Event</th><th>Where to watch</th><th>Window (CT)</th></tr></thead><tbody>{wt_week_rows}</tbody></table></div>
 <p>PPA pro qualifying on Monday, November 2 had no stream window on the PPA's schedule when we checked. For tickets, parking and rosters, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026</a>, <a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026</a> and <a href="../events/opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> guides.</p>
 <p>For the full Worlds day-by-day schedule, ticket prices and entrants, see <a href="../events/opendoor-pickleball-world-championships.html">Pickleball World Championships 2026: schedule, TV and tickets</a>.</p>
@@ -1414,7 +1438,7 @@ def make(page, e, fmt, PP, cur, ph):
 {more("guides/how-to-watch-pro-pickleball.html")}'''
     page("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball: TV channels, PickleballTV and streaming (2026)", watch,
          "How to watch pro pickleball in 2026: PickleballTV free channel vs $5.99 app, PPA and MLP on Tennis Channel, FS1 and CBS, APP on ESPN+, plus PPA Worlds windows.",
-         fresh={"checked": WT_CHECKED, "who": WT_WHO, "week": WT_WEEK, "next": WT_NEXT, "faq": wt_faq},
+         fresh={"checked": WT_CHECKED, "who": WT_WHO, "week": WT_WEEK, "next": WT_NEXT, "faq": wt_faq, "weekend_bucket": ("sat" if build_day == _sat else "sun" if build_day == _sun else "after" if build_day > _sun else "before")},
          schema=[wt_faq_ld])
 
     # ----- PPA Worlds 2026 -----
@@ -1470,7 +1494,7 @@ def make(page, e, fmt, PP, cur, ph):
     ow_champ_rows = "".join(f'<tr><th scope="row">{e(k)}</th><td>{e(v)}</td></tr>' for k, v in OW_CHAMPS)
     ow_faq = [
         ("When is the 2026 Pickleball World Championships?",
-         "The PPA Tour's Opendoor Pickleball World Championships run November 2 to 8, 2026, at Brookhaven Country Club in Farmers Branch, Texas. As of a November 7, 2026 recheck, United Pickleball marks Monday, November 2 through Friday, November 6 completed. Saturday, November 7 is semifinals (PickleballTV 11 a.m. to 7 p.m. CT) and Sunday, November 8 is Championship Sunday (first serve 10 a.m. CT, PickleballTV 10 a.m. to 4 p.m. CT). United Pickleball bills the full Worlds week as October 30 to November 8 because the MLP Nations Cup opened it on October 30 to November 1."),
+         "The PPA Tour's Opendoor Pickleball World Championships run November 2 to 8, 2026, at Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, Texas. The published schedule puts semifinals on Saturday, November 7 (PickleballTV 11 a.m. to 7 p.m. CT) and Championship Sunday on November 8 (first serve 10 a.m. CT; PickleballTV lists coverage until 4 p.m. CT, which is a broadcast window, not a published event-end time). A November 7, 2026 reading of United Pickleball marked Monday through Friday completed. That reading is not a live board. United Pickleball bills the full Worlds week as October 30 to November 8 because the MLP Nations Cup opened it."),
         ("When are the PPA Worlds qualifiers?",
          "PPA Worlds qualifiers are on Monday, November 2, 2026, the first day of the PPA event, and Championship Sunday is November 8, per United Pickleball's week schedule. First serve is 8 a.m. CT per United Pickleball and the PPA's October 28 post on X; the PPA event page still lists 11 a.m. Check the Order of Play in the MATCHDAY app."),
         ("When does PPA Worlds qualifying start?",
@@ -1480,7 +1504,7 @@ def make(page, e, fmt, PP, cur, ph):
         ("Is the main draw November 2 to 8 or November 3 to 8?",
          "Both dates appear because they describe different things. November 2 to 8 is the whole PPA event, including Monday qualifying. The main draw starts with the round of 64 on Tuesday, November 3 and ends November 8."),
         ("Where is PPA Worlds 2026?",
-         "Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, TX 75234, in the Dallas area. Brookhaven is the club and Farmers Branch is the city, so both names are correct. General parking is at Dallas College Brookhaven Campus, Lot P3, 3939 Valley View Lane, with free shuttles to the venue."),
+         "Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, TX 75234. That is the address on the club's own contact page (invitedclubs.com, read November 7, 2026) and on the PPA at-the-event page. United Pickleball's Nations Cup page prints 3334 Golfing Green Drive for the same club; this page uses the club's number. Brookhaven is the club and Farmers Branch is the city. General parking is at Dallas College Brookhaven Campus, Lot P3, 3939 Valley View Lane, with free shuttles to the venue."),
         ("How can I watch Pickleball Worlds 2026?",
          "Every day of the main draw is live on PickleballTV, Tuesday, November 3 through Sunday, November 8. The Celebrity Pro-Am is on Tennis Channel and PickleballTV on Thursday, November 5 from 7 to 9 p.m. CT. PickleballTV's free 24/7 channel carries selected matches; every court and replays need the paid PickleballTV app."),
         ("Is Pickleball Worlds on TV?",
@@ -1490,22 +1514,22 @@ def make(page, e, fmt, PP, cur, ph):
         ("Are the PPA Worlds 2026 draws and seeds out?",
          "Yes. The PPA released the draws on October 31 with a draw reveal show on PPA Tour YouTube. The full seeded main draws are on the PPA event page and United Pickleball's pro page, which fill in scores as matches finish."),
         ("How much are tickets to the Pickleball World Championships in Dallas?",
-         "United Pickleball's ticket page, using Tixr data from October 11, 2026, lists a Grounds Pass at $30.42 on any day, Courtside Bleacher seats from $46.66 to $92.03 and a Weeklong Grounds Pass at $113.69, fees included. Tickets are sold on Tixr and prices vary by day and demand."),
+         "These figures are not a live checkout price. United Pickleball's ticket page, re-read November 7, 2026, still prints a Grounds Pass at $30.42, Courtside Bleacher seats from $46.66 to $92.03, and a Weeklong Grounds Pass at $113.69, and it says those numbers are Tixr data from October 11, 2026, fees included. Prices vary by day and demand. Confirm the current total on Tixr before you pay."),
         ("How much prize money is at PPA Worlds 2026?",
          "The PPA Tour lists a total payout of $1,648,641 across the five pro divisions, including appearance fees. It is a PPA Major, worth 3,000 ranking points per division title."),
         ("Who is playing at PPA Worlds 2026?",
          "The PPA says every No. 1 seed is entered and highlights Anna Leigh Waters, Len Yang and Rachel Rohrabacher in the draw. The defending champions are Federico Staksrud (men's singles), Anna Leigh Waters (women's singles), Hayden Patriquin and Federico Staksrud (men's doubles), Anna Leigh Waters and Anna Bright (women's doubles), and Anna Leigh Waters and Ben Johns (mixed)."),
     ]
     ow_faq_html, ow_faq_ld = faq(ow_faq)
+    BH_CONTACT = "https://www.invitedclubs.com/clubs/brookhaven-country-club/contact-us/"
     ow_event = {"@type": "SportsEvent", "name": "Opendoor Pickleball World Championships 2026",
-                "description": "PPA pro event November 2 to 8, 2026 at Brookhaven Country Club, Farmers Branch, Texas. Qualifying first serve on this page is 8:00 a.m. CT from United Pickleball and the PPA's October 28 X post; the PPA event page still listed 11:00 a.m. on a November 7, 2026 recheck. Main draw began November 3. As of that recheck, Saturday November 7 is semifinals (PickleballTV 11 a.m. to 7 p.m. CT) and Sunday November 8 is Championship Sunday (PickleballTV until 4:00 p.m. CT).",
-                "sport": "Pickleball", "startDate": "2026-11-02T08:00:00-06:00", "endDate": "2026-11-08T16:00:00-06:00",
+                "description": "PPA pro event November 2 to 8, 2026 at Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, Texas, the address on the club's contact page. Qualifying first serve on this page is 8:00 a.m. CT from United Pickleball and the PPA's October 28 X post; the PPA event page listed 11:00 a.m. on a November 7, 2026 recheck. endDate is the published last day, November 8, with no clock time. PickleballTV's 4:00 p.m. CT Sunday window is a broadcast end, not a published event-end time.",
+                "sport": "Pickleball", "startDate": "2026-11-02T08:00:00-06:00", "endDate": "2026-11-08",
                 "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                 "url": PPA_EV, "organizer": {"@type": "Organization", "name": "Carvana PPA Tour", "url": "https://www.ppatour.com/"},
                 "location": {"@type": "Place", "name": "Brookhaven Country Club",
                              "address": {"@type": "PostalAddress", "streetAddress": "3333 Golfing Green Dr", "addressLocality": "Farmers Branch",
-                                         "addressRegion": "TX", "postalCode": "75234", "addressCountry": "US"}},
-                "offers": {"@type": "AggregateOffer", "url": UP_TIX, "priceCurrency": "USD", "lowPrice": "30.42", "highPrice": "9751.90"}}
+                                         "addressRegion": "TX", "postalCode": "75234", "addressCountry": "US"}}}
     ow_go = [(_cp("events/mlp-nations-cup-2026.html"), "MLP Nations Cup 2026: teams and how to watch"),
              (_cp("guides/how-to-watch-pro-pickleball.html"), "How to watch pro pickleball: PickleballTV free vs app"),
              (_cp("pro-paddles.html"), "What paddles the pros use"),
@@ -1519,15 +1543,41 @@ def make(page, e, fmt, PP, cur, ph):
                (_cp("guides/pickleball-gift-guide-2026.html"), "2026 pickleball gift guide"),
                (_cp("discount-codes.html"), "Pickleball discount codes")]
     ow_gear = '<aside class="holi" aria-label="Gear up for Worlds"><p><b>Gear up for Worlds</b></p>' + "".join(f'<a class="holia" href="/{u}">{e(t)} →</a>' for u, t in OW_GEAR) + "</aside>"
+    _sched = ("Saturday, November 7 is semifinals on the published schedule: PickleballTV 11 AM to 7 PM CT, and the PPA event page lists a first serve of 11:00 AM. "
+              "Sunday, November 8 is Championship Sunday: first serve 10:00 AM CT, PickleballTV 10 AM to 4 PM CT. "
+              "The 4 PM time is the published broadcast window, not an event-end clock.")
+    if build_day == _sat:
+        ow_h2 = "Built November 7, 2026: semifinals, then Championship Sunday"
+        ow_lead = (f"<p id=\"ow-weekend-lead\"><b>This page was built on November 7, 2026.</b> {_sched} "
+                   f"{ext(UP_PRO, 'United Pickleball')} that day marked Monday, November 2 through Friday, November 6 completed.</p>")
+    elif build_day == _sun:
+        ow_h2 = "Built November 8, 2026: Championship Sunday"
+        ow_lead = ("<p id=\"ow-weekend-lead\"><b>This page was built on November 8, 2026.</b> Semifinals were Saturday, November 7. "
+                   "Championship Sunday is November 8: first serve 10:00 AM CT, PickleballTV 10 AM to 4 PM CT. "
+                   "The 4 PM time is the broadcast window, not an event-end clock. Semifinal winners are not listed on this build.</p>")
+    elif build_day > _sun:
+        ow_h2 = "PPA Worlds weekend: the published schedule"
+        ow_lead = (f"<p id=\"ow-weekend-lead\"><b>This page was built on {_built}, after Championship Sunday.</b> "
+                   "The event dates were November 2 to 8, 2026. The published windows were semifinals on Saturday, November 7 "
+                   "(PickleballTV 11 AM to 7 PM CT) and Championship Sunday on November 8 (first serve 10:00 AM CT, PickleballTV 10 AM to 4 PM CT). "
+                   "The 4 PM time is the broadcast window, not an event-end clock. This build does not list semifinal or final match winners.</p>")
+    else:
+        ow_h2 = "Weekend schedule: semifinals Saturday and Championship Sunday"
+        ow_lead = f"<p id=\"ow-weekend-lead\"><b>Published schedule, not a live board.</b> This copy was built on {_built}. {_sched}</p>"
+    ow_snapshot = (f'<p><b>Court board snapshot, read November 7, 2026:</b> {ext(UP_PRO, "United Pickleball\'s pro page")} showed semifinals with '
+                   'Championship Court first up at 11:00 AM CT and court SC1 first up at 8:45 AM CT. That board is the reading from that date, not the order of play on a later day. '
+                   f'The same reading did not include a final semifinal winner list, and the {ext(PPA_EV, "PPA event page")} labeled semifinals "Live · auto-updating." '
+                   'This page does not list semifinal winners.</p>')
+    ow_weekend_js = """<script>(function(){var h=document.getElementById("this-weekend"),p=document.getElementById("ow-weekend-lead");if(!h||!p)return;var n=Date.now();
+if(n>=Date.UTC(2026,10,9,6)){h.textContent="PPA Worlds weekend: the published schedule";p.textContent="The event dates were November 2 to 8, 2026. Published windows: semifinals Saturday November 7, PickleballTV 11 AM to 7 PM CT. Championship Sunday November 8, first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window, not an event-end clock. Semifinal winners are not listed on this page.";}
+else if(n>=Date.UTC(2026,10,8,6)){h.textContent="Championship Sunday, November 8, 2026";p.textContent="Semifinals were Saturday, November 7. Championship Sunday is November 8: first serve 10:00 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window, not an event-end clock. Semifinal winners are not listed here.";}
+})();</script>"""
     ow = f'''<h1>Pickleball World Championships 2026: schedule, how to watch and tickets</h1>
-<p class="meta">The Carvana PPA Tour's Opendoor Pickleball World Championships ("PPA Worlds"), Farmers Branch, Texas (Dallas area). Schedule rechecked November 7, 2026 on the PPA event page and United Pickleball's pro page. Earlier facts below keep the date they were read. All times Central (CT). Times can move, so confirm on the official pages.</p>
-<h2 id="this-weekend">What's left: semifinals Saturday and Championship Sunday</h2>
-<p><b>Short answer for November 7, 2026:</b> Saturday, November 7 is semifinals. Sunday, November 8 is Championship Sunday. {ext(UP_PRO, "United Pickleball's pro page")}, re-read that day, marks Monday, November 2 through Friday, November 6 as completed.</p>
-<ul>
-<li><b>Sat Nov 7, semifinals:</b> PickleballTV 11 AM to 7 PM CT. The {ext(PPA_EV, "PPA event page")} lists a first serve of 11:00 AM. United Pickleball's court board at the November 7 reading showed semifinals with Championship Court first up at 11:00 AM CT and court SC1 first up at 8:45 AM CT. Court times move. Check the order of play.</li>
-<li><b>Sun Nov 8, Championship Sunday:</b> first serve 10:00 AM CT, PickleballTV 10 AM to 4 PM CT, on both the PPA event page and United Pickleball. The 4 PM time is the published PickleballTV window, not a claim about the last ball.</li>
-</ul>
-<p>Monday qualifying is over. The start-time disagreement stays on the record: 8 AM CT from an earlier reading of United Pickleball and the PPA's <a href="https://x.com/PPAtour/status/2115563515494924594" target="_blank" rel="noopener">Oct 28 X post</a>, while the PPA event page still listed 11 AM on November 7, 2026. See <a href="#qualifying">qualifying</a> and <a href="#how-to-watch">how to watch</a>.</p>
+<p class="meta">The Carvana PPA Tour's Opendoor Pickleball World Championships ("PPA Worlds"), Farmers Branch, Texas (Dallas area). Schedule rechecked November 7, 2026 on the PPA event page and United Pickleball's pro page. The weekend lead below follows the date this page was built, so a later rebuild does not keep calling November 7 current. Earlier facts keep the date they were read. All times Central (CT). Times can move, so confirm on the official pages.</p>
+<h2 id="this-weekend">{ow_h2}</h2>
+{ow_lead}
+{ow_snapshot}
+{ow_weekend_js}
 <h2 id="qualifying">Worlds qualifying Monday, Nov 2: schedule and how to follow</h2>
 <p><b>What it is:</b> Monday, November 2 is pro qualifying for all five pro events (men's and women's singles, men's and women's doubles, and mixed), per the {ext(PPA_EV, "PPA event page")}. Qualifying is the day before the seeded main draw starts with the round of 64 on Tuesday.</p>
 <ul>
@@ -1545,7 +1595,7 @@ def make(page, e, fmt, PP, cur, ph):
 </ul>
 <p>So "November 2 to 8" and "November 3 to 8" are both right: the first includes Monday qualifying, the second is the main draw only.</p>
 <h2>Venue and parking</h2>
-<p><b>Brookhaven Country Club</b>, 3333 Golfing Green Dr, <b>Farmers Branch, TX 75234</b>, per the {ext(PPA_TODAY, "PPA's at-the-event page")}. General parking is at <b>Dallas College Brookhaven Campus, Lot P3</b>, 3939 Valley View Lane, with free shuttles from about 6:30 AM to 11 PM daily, October 30 to November 8. Rideshare drop-off is on Brookhaven Drive, just past Golfing Green Drive. Box Suite ticket holders get on-site parking. Overnight and RV parking is not allowed.</p>
+<p><b>Brookhaven Country Club</b>, 3333 Golfing Green Dr, <b>Farmers Branch, TX 75234</b>. That street address is on the {ext(BH_CONTACT, "club's own contact page")} (read November 7, 2026) and on the {ext(PPA_TODAY, "PPA's at-the-event page")}. {ext("https://worlds.unitedpickleball.com/nations-cup", "United Pickleball's Nations Cup page")} prints 3334 Golfing Green Drive for the same club; this page uses the club's number. General parking is at <b>Dallas College Brookhaven Campus, Lot P3</b>, 3939 Valley View Lane, with free shuttles from about 6:30 AM to 11 PM daily, October 30 to November 8. Rideshare drop-off is on Brookhaven Drive, just past Golfing Green Drive. Box Suite ticket holders get on-site parking. Overnight and RV parking is not allowed.</p>
 <p>Brookhaven or Farmers Branch? Both names are right: Brookhaven is the club, Farmers Branch is the city. The {ext(FB_CITY, "City of Farmers Branch")} gives the same address and has a resident-only parking permit rule on streets near the club from October 30 to November 8, so use Lot P3.</p>
 <h2>Day-by-day schedule (CT): PPA Worlds qualifiers to Championship Sunday</h2>
 <div class="tbl"><table><thead><tr><th>Day</th><th>Pro events and divisions</th><th>Start and stream (CT)</th></tr></thead><tbody>{ow_day_rows}</tbody></table></div>
@@ -1563,8 +1613,8 @@ def make(page, e, fmt, PP, cur, ph):
 </ul>
 <p>Our <a href="../guides/how-to-watch-pro-pickleball.html">how to watch pro pickleball guide</a> has the full week of windows, including the Nations Cup and USA Pickleball Nationals.</p>
 <h2>Tickets</h2>
-<p>Tickets are sold on Tixr. {ext(UP_TIX, "United Pickleball's ticket page")} lists these prices, fees included, using Tixr data from October 11, 2026. Prices vary by day and demand.</p>
-<div class="tbl"><table><thead><tr><th>Ticket</th><th>Price listed</th></tr></thead><tbody>{ow_tix_rows}</tbody></table></div>
+<p><b>Not a live checkout price.</b> {ext(UP_TIX, "United Pickleball's ticket page")}, re-read November 7, 2026, still prints the figures below and says they are Tixr data from <b>October 11, 2026</b>, fees included. The page also says prices vary by day and demand. The ranges in this table are that October 11 snapshot, not a cart total we checked on November 7. Confirm the current price on Tixr before you pay.</p>
+<div class="tbl"><table><thead><tr><th>Ticket</th><th>October 11, 2026 Tixr figure</th></tr></thead><tbody>{ow_tix_rows}</tbody></table></div>
 <p>A Grounds Pass covers the outer courts, including select pro matches; Courtside, Chair and VIP add reserved seats on Championship Court. Nations Cup tickets (October 30 to November 1) are sold separately; see our <a href="mlp-nations-cup-2026.html">Nations Cup guide</a>.</p>
 <h2>Format, prize money and points</h2>
 <p>The {ext(PPA_EV, "PPA Tour")} lists Worlds as a <b>PPA Major worth 3,000 ranking points</b> per division title, with a <b>total payout of $1,648,641</b> across five pro divisions, including appearance fees. {ext(UP_PRO, "United Pickleball")} lists single-elimination main draws: 64 players in men's and women's singles, 32 teams in men's and women's doubles, and 32 teams in mixed. The PPA Challenger Showdown runs alongside it from Thursday to Saturday, with eight 2027 PPA Tour contracts on the line.</p>
@@ -1581,15 +1631,16 @@ def make(page, e, fmt, PP, cur, ph):
           ("United Pickleball: Pickleball Worlds 2026", UP_HOME, f"Oct 30 to Nov 8 week, checked {ow_checked}"),
           ("United Pickleball: Pro play", UP_PRO, f"draw sizes, CT windows, checked {ow_checked}"),
           ("United Pickleball: Week schedule", UP_SCHED, f"qualifiers Mon Nov 2 to Championship Sunday Nov 8, music, Nations Cup, checked October 31, 2026"),
-          ("United Pickleball: Tickets", UP_TIX, "Tixr data from October 11, 2026"),
+          ("United Pickleball: Tickets", UP_TIX, "Tixr snapshot dated October 11, 2026, still printed when re-read November 7, 2026; not a live cart price"),
+          ("Brookhaven Country Club: contact", BH_CONTACT, "club address 3333 Golfing Green Dr, read November 7, 2026"),
           ("City of Farmers Branch: Pickleball", FB_CITY, "venue address, neighborhood parking"),
           ("PickleballTV", PBTV, "free channel platforms"),
           ("PickleballTV on the App Store", PBTV_IOS, "app price and trial"),
           ("The Kitchen: 2026 Worlds schedule of events", KITCHEN, "daily programming, updated Oct 29, 2026")])}
 <p><a href="../tournaments.html">All tournaments</a></p>'''
     page(OW_FN, "Pickleball Worlds 2026 Schedule and How to Watch (TV, CT)", ow,
-         "Pickleball Worlds 2026: semifinals Sat Nov 7 on PickleballTV 11 AM–7 PM CT, Championship Sunday Nov 8 at 10 AM CT. Qualifying was Mon Nov 2 (8 AM CT on record; PPA page still lists 11 AM).",
-         fresh={"checked": OW_CHECKED, "days": OW_DAYS, "tix": OW_TIX, "champs": OW_CHAMPS, "faq": ow_faq, "event": ow_event},
+         "Pickleball Worlds 2026 in CT: semifinals Sat Nov 7 (PickleballTV 11 AM–7 PM), Championship Sunday Nov 8 (first serve 10 AM; 4 PM is the broadcast window). Qualifying Mon Nov 2 is on record at 8 AM CT; the PPA page lists 11 AM.",
+         fresh={"checked": OW_CHECKED, "days": OW_DAYS, "tix": OW_TIX, "champs": OW_CHAMPS, "faq": ow_faq, "event": ow_event, "weekend_bucket": ("sat" if build_day == _sat else "sun" if build_day == _sun else "after" if build_day > _sun else "before")},
          schema=[ow_event, ow_faq_ld], raw_title=True)
     # MLP Nations Cup page. Every fact below was read on the linked official pages (and the cited preview) on NC_CHECKED.
     # Results are listed only once official MLP / United Pickleball pages post them as final.
@@ -1672,7 +1723,7 @@ def make(page, e, fmt, PP, cur, ph):
     nc_stand_html = "".join(f'<h3>{e(p)}</h3><div class="tbl"><table><thead><tr><th>Team</th><th>W</th><th>L</th><th>Game diff.</th><th>Point diff.</th></tr></thead><tbody>' + "".join(f'<tr><th scope="row">{e(t)}</th><td>{w}</td><td>{l}</td><td>{e(gd)}</td><td>{e(pd)}</td></tr>' for t, w, l, gd, pd in rows) + "</tbody></table></div>" for p, rows in NC_STAND.items())
     nc_faq = [
         ("When is the MLP Nations Cup 2026?",
-         "Friday, October 30 to Sunday, November 1, 2026, at Brookhaven Country Club, 3334 Golfing Green Drive, Farmers Branch, Texas. Play starts at 10 a.m. CT each day, and the final is Sunday, November 1 at 2 p.m. CT."),
+         "Friday, October 30 to Sunday, November 1, 2026, at Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, Texas, the address on the club's contact page. United Pickleball's Nations Cup page prints 3334 Golfing Green Drive. Play started at 10 a.m. CT each day, and the final was Sunday, November 1 at 2 p.m. CT."),
         ("How can I watch the MLP Nations Cup 2026?",
          "MLP says all matches are available on PickleballTV and the PickleballTV app, and United Pickleball says Championship Court matches are livestreamed on PickleballTV. Coverage runs 10 a.m. to 7 p.m. CT on Friday and Saturday, with semifinals 10 a.m. to 1 p.m. CT and the final 2 to 3:30 p.m. CT on Sunday."),
         ("Who is on Team USA at the MLP Nations Cup?",
@@ -1692,10 +1743,10 @@ def make(page, e, fmt, PP, cur, ph):
     ]
     nc_faq_html, nc_faq_ld = faq(nc_faq)
     nc_place = {"@type": "Place", "name": "Brookhaven Country Club",
-                "address": {"@type": "PostalAddress", "streetAddress": "3334 Golfing Green Drive", "addressLocality": "Farmers Branch",
+                "address": {"@type": "PostalAddress", "streetAddress": "3333 Golfing Green Dr", "addressLocality": "Farmers Branch",
                             "addressRegion": "TX", "postalCode": "75234", "addressCountry": "US"}}
-    nc_event = {"@type": "SportsEvent", "name": "MLP Nations Cup 2026", "startDate": "2026-10-30T10:00:00-05:00", "endDate": "2026-11-01T15:30:00-05:00",
-                "description": "The inaugural MLP Nations Cup, October 30 to November 1, 2026, at Brookhaven Country Club. Eight regional pro teams played Major League Pickleball's coed format. Team USA won the final, beating Latin America 3-0 on November 1.",
+    nc_event = {"@type": "SportsEvent", "name": "MLP Nations Cup 2026", "startDate": "2026-10-30T10:00:00-05:00", "endDate": "2026-11-01",
+                "description": "The inaugural MLP Nations Cup, October 30 to November 1, 2026, at Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, Texas. Eight regional pro teams played Major League Pickleball's coed format. Team USA won the final, beating Latin America 3-0 on November 1. endDate is the last published day, with no clock time for the final ball.",
                 "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                 "sport": "Pickleball", "url": NC_UP, "location": nc_place,
                 "organizer": {"@type": "SportsOrganization", "name": "Major League Pickleball", "url": NC_MLP},
@@ -1704,7 +1755,7 @@ def make(page, e, fmt, PP, cur, ph):
     nations = f'''<h1>MLP Nations Cup 2026: standings, results, schedule and how to watch</h1>
 <p class="meta">Facts checked {nc_checked} against MLP's official roster and schedule announcements, the United Pickleball Nations Cup page and the PPA Tour watch page. All times Central (CT) unless noted. Times and rosters can change, so confirm on the official pages.</p>
 <h2>The basics</h2>
-<p>The inaugural <b>MLP Nations Cup</b> was <b>Friday, October 30 to Sunday, November 1, 2026</b> at <b>Brookhaven Country Club</b>, 3334 Golfing Green Drive, <b>Farmers Branch, Texas</b>, in the Dallas area. {ext(NC_UP, "United Pickleball")} called it the official kickoff to the Opendoor Pickleball World Championships. Eight regional teams of six pros, <b>48 players</b> in all, played Major League Pickleball's coed team format. <b>Team USA won</b>, beating Latin America 3-0 in the final on Sunday, November 1 at 2 PM CT.</p>
+<p>The inaugural <b>MLP Nations Cup</b> was <b>Friday, October 30 to Sunday, November 1, 2026</b> at <b>Brookhaven Country Club</b>, 3333 Golfing Green Dr, <b>Farmers Branch, Texas</b>. That is the address on the {ext(BH_CONTACT, "club's contact page")} (read November 7, 2026). {ext(NC_UP, "United Pickleball's Nations Cup page")} prints 3334 Golfing Green Drive; this page uses the club's number. United Pickleball called the event the official kickoff to the Opendoor Pickleball World Championships. Eight regional teams of six pros, <b>48 players</b> in all, played Major League Pickleball's coed team format. <b>Team USA won</b>, beating Latin America 3-0 in the final on Sunday, November 1 at 2 PM CT.</p>
 <h2>MLP Nations Cup standings and results</h2>
 <p class="meta">Final results. Standings and results are from the official MLP results on the {ext(NC_UP, "United Pickleball Nations Cup page")}; only matches marked Final are listed. For anything newer, see live scores on {ext(NC_MLP, "majorleaguepickleball.co")}.</p>
 <p>Pool play is complete: all 12 group matches are marked Final. The top two in each pool reached Sunday's semifinals: <b>USA</b> and <b>Asia Domestic</b> from Pool 1, <b>Latin America</b> and <b>Europe East</b> from Pool 2. Standings are copied in the order the official table shows them; Pool 2's three 2-1 teams are separated by game and point differential, which knocked out Australia. USA then won the tournament.</p>
@@ -1741,7 +1792,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>Going in person</h2>
 <p>Nations Cup tickets are sold separately from Worlds week, on Tixr. {ext(NC_X_TIX, "MLP said on October 29")} that last-minute tickets start at $25. United Pickleball lists a Courtside Pass (bleacher seating, first come, first served) and a VIP Pass. Doors open one hour before the first matches. Outside food and drink aren't allowed, and filming matches isn't permitted without MLP's written approval. On Saturday, October 31, {ext(NC_X_COSTUME, "MLP is holding a Halloween costume contest")} for fans, with prizes for the top 3 from DoorDash and VIP ticket upgrades for 10 more fans.</p>
 <h2>Next up: PPA Worlds, November 2 to 8</h2>
-<p>The PPA Tour's Opendoor Pickleball World Championships follow at the same venue from <b>November 2 to 8</b>, per United Pickleball. See our <a href="opendoor-pickleball-world-championships.html#this-weekend">Pickleball World Championships 2026 page</a> for what is left (semifinals November 7 and Championship Sunday November 8), plus the day-by-day schedule in CT, parking and travel. PPA pro qualifying was <b>Monday, November 2</b>. The first-serve time on the record is 8 AM CT from an earlier United Pickleball reading and the PPA's Oct 28 X post; the PPA event page still listed 11 AM on November 7, 2026.</p>
+<p>The PPA Tour's Opendoor Pickleball World Championships follow at the same venue from <b>November 2 to 8</b>, per United Pickleball. See our <a href="opendoor-pickleball-world-championships.html#this-weekend">Pickleball World Championships 2026 page</a> for the published weekend windows (semifinals November 7, Championship Sunday November 8; the lead there follows the build date), plus parking and the day-by-day schedule in CT. PPA pro qualifying was <b>Monday, November 2</b>. The first-serve time on the record is 8 AM CT from an earlier United Pickleball reading and the PPA's Oct 28 X post; the PPA event page still listed 11 AM on November 7, 2026.</p>
 <p class="watch"><a href="opendoor-pickleball-world-championships.html#how-to-watch">Next up: Pickleball Worlds 2026 — how to watch →</a></p>
 <h2>Gear before you go</h2>
 {money_links()}
@@ -1762,7 +1813,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p><a href="../tournaments.html">All tournaments</a> · <a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> · <a href="../guides/how-to-watch-pro-pickleball.html">How to watch pro pickleball</a></p>'''
     page("events/mlp-nations-cup-2026.html", "MLP Nations Cup Standings & Results 2026: How to Watch", nations,
          "MLP Nations Cup 2026 final results: USA beat Latin America 3-0 to win the first Nations Cup. Semifinal scores, final pool standings and every group result.",
-         fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "results": NC_RESULTS, "pending": NC_PENDING, "stand": NC_STAND, "faq": nc_faq},
+         fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "results": NC_RESULTS, "pending": NC_PENDING, "stand": NC_STAND, "faq": nc_faq, "address": "3333 Golfing Green Dr"},
          schema=[nc_event, nc_faq_ld], raw_title=True)
     # USA Pickleball Nationals page. Every fact below was read on the official Nationals pages on UN_CHECKED.
     UN_CHECKED = "2026-10-27"

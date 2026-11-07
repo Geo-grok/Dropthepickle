@@ -6,6 +6,22 @@ This file is the review log for branch `cursor/seo-onpage-fixes-4c4f`. It is not
 
 Structured data below was parsed as JSON-LD and checked against the visible copy. Parsing is not a promise that Google will show a rich result.
 
+## Follow-up on this same branch
+
+A second pass the same day checked the club, the ticket page, and whether semifinal winners were final. This section is the shipped state where it conflicts with an earlier paragraph.
+
+**Address.** The club's contact page, https://www.invitedclubs.com/clubs/brookhaven-country-club/contact-us/ (page title "Contact Us | Brookhaven Country Club"), read November 7, 2026, prints Brookhaven Country Club, 3333 Golfing Green Dr, Farmers Branch, TX 75234, phone 972-243-6151. United Pickleball's Nations Cup page, read the same day, prints 3334 Golfing Green Drive. Worlds, the Nations Cup page, both FAQs, and both Place schemas now use 3333 Golfing Green Dr and say that United Pickleball prints 3334.
+
+**Tickets.** https://worlds.unitedpickleball.com/tickets , read November 7, 2026, still prints the same summary ranges and says they are Tixr data from October 11, 2026, fees included, and that prices vary. The table header is "October 11, 2026 Tixr figure." The intro says "Not a live checkout price." The SportsEvent AggregateOffer was removed so those figures are not a current offer in schema.
+
+**Semifinal winners.** The PPA event page and United Pickleball's pro page, read November 7, 2026, showed a live semifinal board ("Live · auto-updating" on the PPA page). Neither presented a final winner list. No score was added. The page records that the November 7 reading had no final winner list.
+
+**Build date.** The weekend heading follows the America/Chicago build date (`DTP_BUILD_DATE` overrides it). November 7: "Built November 7, 2026: semifinals, then Championship Sunday." November 8: "Built November 8, 2026: Championship Sunday." After November 8: "PPA Worlds weekend: the published schedule." A script moves that lead forward if the page is opened on a later day. The court board stays under "Court board snapshot, read November 7, 2026." The homepage card and the how-to-watch lead use the same split. `scripts/check_seo.py` was run after builds dated November 7, November 8, and November 9, then the tree was rebuilt for November 7.
+
+**Event end.** Worlds `endDate` is `2026-11-08` with no clock. The description says the 4:00 p.m. CT PickleballTV window is a broadcast end, not an event-end time. Nations Cup `endDate` is `2026-11-01` with no clock. The old `15:30` matched the 3:30 p.m. coverage window, not a last ball.
+
+**About meta description.** "DropThePickle, from Midland, Texas, copies paddle specs from maker pages, dates each maker price check, and pulls news and events from public feeds. Corrections: geolobo@mail.grokbot.com." The visible section leads with that sourcing. It does not invent a byline. There is no Person schema.
+
 ## What was verified before editing
 
 Public baseline (same day) plus a fresh read of the repo and of these sources on November 7, 2026:
@@ -187,7 +203,7 @@ Titles and H1s on these pages were left as they were. Order was left alphabetica
 - Description before: led with Monday qualifying. After: `Pickleball Worlds 2026: semifinals Sat Nov 7 on PickleballTV 11 AM–7 PM CT, Championship Sunday Nov 8 at 10 AM CT. Qualifying was Mon Nov 2 (8 AM CT on record; PPA page still lists 11 AM).`
 - New first section, `id="this-weekend"`: what's left on November 7, 2026. Semifinals Saturday, Championship Sunday November 8. United Pickleball's Nov 7 court-board times are quoted as a reading, not as a permanent order of play. The 4 PM Sunday time is labeled as the PickleballTV window.
 - Qualifying stays on the page. The 8 AM CT figure remains the earlier United Pickleball / PPA Oct 28 X-post answer. The Nov 7 recheck of the PPA event page still showed 11 AM, and that conflict is repeated in the lead, the qualifying section, the day-by-day note, two FAQs, and the SportsEvent description. It was not deleted.
-- SportsEvent `startDate` before: `2026-11-02T11:00:00-06:00` (the disputed PPA clock, which the page did not choose). After: `2026-11-02T08:00:00-06:00`, matching the page's sourced qualifying answer. `endDate` stays `2026-11-08T16:00:00-06:00`, the published Sunday broadcast end. No offers, ratings, or results were added. Saturday match winners were not written in; they were not confirmed as final.
+- SportsEvent `startDate` is `2026-11-02T08:00:00-06:00`. `endDate` is the date `2026-11-08` with no clock. See the follow-up section: the 4:00 p.m. figure is the broadcast window, and the October 11 ticket snapshot is not an AggregateOffer. No semifinal winners were added.
 - FAQ "When is the 2026 Pickleball World Championships?" now leads with the Nov 7 status. "When does PPA Worlds qualifying start?" is past tense and keeps both clocks. "What time does Worlds start each day?" keeps the daily pattern and adds the Nov 7 court-board reading.
 - `lastmod` 2026-11-02 → 2026-11-07.
 - Ticket prices, parking, and prize money were not re-fetched and were not rewritten.
@@ -202,19 +218,19 @@ Titles and H1s on these pages were left as they were. Order was left alphabetica
 
 ### https://dropthepickle.com/events/mlp-nations-cup-2026
 
-- Lead is past tense: the event was Oct 30–Nov 1, and Team USA won 3-0. Address left as `3334 Golfing Green Drive` (see remaining tasks).
+- Lead is past tense: the event was Oct 30–Nov 1, and Team USA won 3-0. The street address is 3333 Golfing Green Dr, from the club's contact page. The page also says United Pickleball prints 3334. `endDate` is `2026-11-01` with no clock.
 - Standings copy no longer says the top two "advance" or that the final "is" Sunday.
 - Format paragraph is past tense and points at the result already on the page.
 - The Worlds handoff no longer says qualifying "starts" Monday. It points at `#this-weekend` and keeps the 8 AM / 11 AM note with the Nov 7 recheck.
 - FAQs "When does Team USA play?" and "Who was in the Nations Cup semifinals?" no longer describe Sunday as upcoming.
-- SportsEvent description now says USA beat Latin America 3-0. `startDate` / `endDate` unchanged (`2026-10-30T10:00:00-05:00` to `2026-11-01T15:30:00-05:00`). `eventStatus` stays `EventScheduled` because schema.org has no "completed" status; the end date is in the past.
+- SportsEvent description says USA beat Latin America 3-0. `startDate` stays `2026-10-30T10:00:00-05:00`. `endDate` is `2026-11-01` (the last day, not the 3:30 p.m. coverage cutoff). `eventStatus` stays `EventScheduled` because schema.org has no "completed" status; the end date is in the past.
 - `lastmod` 2026-11-01 → 2026-11-07.
 - Scores were not newly researched. They were already on this page from the Nov 1 official-results read.
 
 ### https://dropthepickle.com/about
 
 - New H2 `How the pages are checked`. States that no person is named as editor or reviewer, what is copied from maker pages, what the price script does, what comes from feeds, and that own-code discounts apply only if checkout accepts them. Corrections still go to geolobo@mail.grokbot.com. No Person/author schema was added.
-- Description before: `DropThePickle is an independent pickleball hub from Midland, Texas, linking tournaments, news and gear specs back to their sources.` After: `DropThePickle is an independent pickleball hub from Midland, Texas. Specs, prices and feeds are sourced and dated. No named editor. Corrections: geolobo@mail.grokbot.com.`
+- Description: `DropThePickle, from Midland, Texas, copies paddle specs from maker pages, dates each maker price check, and pulls news and events from public feeds. Corrections: geolobo@mail.grokbot.com.`
 - `lastmod` was unset → 2026-11-07.
 
 ### https://dropthepickle.com/guides/pickleball-rules-for-beginners
@@ -266,19 +282,23 @@ python3 scripts/check_seo.py
 - `build.py`: exit 0, `built 309 pages`
 - `scripts/check_seo.py`: exit 0, `checked 309 HTML pages, 306 sitemap URLs`, `seo checks passed`
 
-The check requires one title, one meta description, one H1, a `https://dropthepickle.com` canonical without `.html`, parseable JSON-LD, sitemap URLs that exist as built pages, and internal links that resolve. It also asserts the under-$100 ItemList prices, the V.1F weight wording, the Worlds `startDate`, the homepage H1, the about editor sentence, and that no page still says "yours either way" or puts `paddles.json` in a meta description.
+The check requires one title, one meta description, one H1, a `https://dropthepickle.com` canonical without `.html`, parseable JSON-LD, sitemap URLs that exist as built pages, and internal links that resolve. It also asserts the under-$100 ItemList prices, the V.1F weight wording, the Worlds start and date-only end, no ticket AggregateOffer, the club address 3333, the dated court-board snapshot, the build-date weekend heading, the about sourcing description, and that no page still says "yours either way" or puts `paddles.json` in a meta description.
+
+The same check was run three times on November 7, 2026, each after `python3 build.py`:
+
+- default build date (November 7, America/Chicago): exit 0
+- `DTP_BUILD_DATE=2026-11-08`: exit 0
+- `DTP_BUILD_DATE=2026-11-09`: exit 0, and the homepage event card was hidden
+
+The committed pages are the November 7 build. Each run printed `checked 309 HTML pages, 306 sitemap URLs` and `seo checks passed`.
 
 There is no project lint config and no unit-test suite. `python3 scripts/check_links.py` also calls every external URL; that full external crawl was not run. Internal links and `/go/` slugs were checked locally instead.
 
 `pip install -r requirements.txt` was needed in this environment so BeautifulSoup was available for the check. That install is not a site change.
 
-## Remaining human or hosting tasks
+## Facts not established from a public official page
 
-- Deploy is manual (`npx wrangler deploy` from an up-to-date `main`). This branch does not do that.
-- No editor name was added. The repo and the about page do not publish one. A byline or `Person` schema needs a name and role you are willing to show.
-- Brookhaven street number is `3333 Golfing Green Dr` on the Worlds page (tied to the PPA at-the-event page) and `3334 Golfing Green Drive` on the Nations Cup page. Both were left. They should be reconciled against the club's own address before either page is edited.
-- The Nov 7 court-board times (SC1 8:45 AM, Championship Court 11:00 AM) will be stale after Saturday. Refresh them from United Pickleball if the page stays up Sunday, and do not treat them as the official first serve.
-- Saturday semifinal scores were not added. Add them only from a final official list.
-- Ticket prices on the Worlds page still cite the October 11 Tixr read. They were not rechecked.
-- Search Console, index coverage, and a rich-result test were not available here. JSON-LD was only parsed locally.
-- Backlinks were not requested or started.
+- Semifinal and championship match winners. On November 7, 2026 the PPA event page and United Pickleball's pro page showed a live board, not a final results list. Nothing on those pages named a semifinal winner. Scores were left off for that reason.
+- A clock time for the last ball of Worlds or of the Nations Cup final. The published materials give the last calendar day and a broadcast window (Worlds PickleballTV until 4:00 p.m. CT Sunday; Nations Cup coverage until 3:30 p.m. CT). Schema uses the date only.
+- A live Tixr cart price on November 7. The official ticket page itself still attributes its numbers to Tixr on October 11, 2026. The table repeats that snapshot and says so.
+- A personal editor name. The site does not publish one, and none was added.

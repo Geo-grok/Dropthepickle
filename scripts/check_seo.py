@@ -116,25 +116,71 @@ if "<h1>Volair V.1F/ XL-W 16mm</h1>" not in vol:
 
 worlds = text_of("events/opendoor-pickleball-world-championships.html")
 wgraph = json.loads(BeautifulSoup(worlds, "html.parser").find("script", attrs={"type": "application/ld+json"}).string)
-event = next(n for n in wgraph["@graph"] if n.get("@type") == "SportsEvent")
+event = next(n for n in wgraph["@graph"] if n.get("@type") == "SportsEvent" and "World" in n.get("name", ""))
 if event.get("startDate") != "2026-11-02T08:00:00-06:00":
     fail(f"Worlds startDate is {event.get('startDate')}")
-if "11:00 a.m." not in event.get("description", "") and "11:00" not in event.get("description", ""):
+if event.get("endDate") != "2026-11-08":
+    fail(f"Worlds endDate should be the published last day with no clock, got {event.get('endDate')}")
+if "offers" in event:
+    fail("Worlds SportsEvent still carries an offer, and the ticket figures are an October 11 snapshot")
+if "11:00 a.m." not in event.get("description", ""):
     fail("Worlds schema description dropped the PPA 11 a.m. disagreement")
+if "broadcast end" not in event.get("description", ""):
+    fail("Worlds schema description does not say the 4 p.m. window is a broadcast end")
+if event["location"]["address"]["streetAddress"] != "3333 Golfing Green Dr":
+    fail("Worlds schema address is not the club's 3333 Golfing Green Dr")
 if 'id="this-weekend"' not in worlds:
     fail("Worlds page is missing the weekend answer")
-if "November 7, 2026" not in worlds:
-    fail("Worlds page does not record the November 7 recheck")
+if "Court board snapshot, read November 7, 2026" not in worlds:
+    fail("Worlds page does not date the court-board snapshot")
+if "What's left:" in worlds or "Short answer for November 7" in worlds:
+    fail("Worlds lead still presents November 7 as the current status")
+if "Not a live checkout price" not in worlds:
+    fail("Worlds ticket section does not mark the October 11 figures as historical")
+if "October 11, 2026 Tixr figure" not in worlds:
+    fail("Worlds ticket table header does not name the Tixr snapshot")
+import os
+from datetime import date
+from zoneinfo import ZoneInfo
+_bd = os.environ.get("DTP_BUILD_DATE")
+built = date.fromisoformat(_bd) if _bd else __import__("datetime").datetime.now(ZoneInfo("America/Chicago")).date()
+h2 = BeautifulSoup(worlds, "html.parser").find(id="this-weekend")
+h2_text = h2.get_text(" ", strip=True) if h2 else ""
+if built == date(2026, 11, 7) and h2_text != "Built November 7, 2026: semifinals, then Championship Sunday":
+    fail(f"Nov 7 build lead heading is {h2_text!r}")
+elif built == date(2026, 11, 8) and "November 8, 2026" not in h2_text:
+    fail(f"Nov 8 build lead heading is {h2_text!r}")
+elif built > date(2026, 11, 8) and h2_text != "PPA Worlds weekend: the published schedule":
+    fail(f"post-event build lead heading is {h2_text!r}")
+elif built < date(2026, 11, 7) and "November 7, 2026" in h2_text and "Built November 7" in h2_text:
+    fail("a pre-November 7 build is using the November 7 current-status heading")
+
+nations = text_of("events/mlp-nations-cup-2026.html")
+ngraph = json.loads(BeautifulSoup(nations, "html.parser").find("script", attrs={"type": "application/ld+json"}).string)
+nc = next(n for n in ngraph["@graph"] if n.get("@type") == "SportsEvent")
+if nc["location"]["address"]["streetAddress"] != "3333 Golfing Green Dr":
+    fail(f"Nations Cup schema address is {nc['location']['address']['streetAddress']}")
+if nc.get("endDate") != "2026-11-01":
+    fail(f"Nations Cup endDate should be the last day with no clock, got {nc.get('endDate')}")
+if "3334 Golfing Green Drive" not in nations:
+    fail("Nations Cup page dropped the United Pickleball 3334 disagreement")
 
 home = text_of("index.html")
 if "<h1>Pickleball news, paddle prices and codes</h1>" not in home:
     fail("homepage H1 was not updated")
 if "yours either way" in home:
     fail("homepage still says the discount is yours either way")
+if built == date(2026, 11, 7) and "Built Nov 7:" not in home:
+    fail("homepage Worlds card does not date the November 7 build")
+if built > date(2026, 11, 8) and 'id="wmd"' in home:
+    fail("homepage Worlds card is still rendered after November 8")
 
 about = text_of("about.html")
-if "No person is named as editor" not in about:
-    fail("about page does not state that there is no named editor")
+about_desc = about and BeautifulSoup(about, "html.parser").find("meta", attrs={"name": "description"})["content"]
+if "No named editor" in about_desc or "No person is named" in about_desc:
+    fail(f"about meta description centers a missing editor: {about_desc}")
+if "maker pages" not in about_desc or "geolobo@mail.grokbot.com" not in about_desc:
+    fail(f"about meta description does not describe sourcing and corrections: {about_desc}")
 
 if "yours either way" in "\n".join(p.read_text() for p in pages):
     fail("a built page still says the discount is yours either way")
