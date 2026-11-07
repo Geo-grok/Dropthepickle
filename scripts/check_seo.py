@@ -214,8 +214,8 @@ if "Compare pickleball paddles" not in text_of("compare.html"):
 if "<h1>Upcoming pro pickleball tournaments</h1>" not in text_of("tournaments.html"):
     fail("tournaments H1 was not clarified")
 feed_events = [p for p in pages if p.parent.name == "events" and p.name not in ("opendoor-pickleball-world-championships.html", "mlp-nations-cup-2026.html", "usa-pickleball-nationals-2026.html")]
-if not feed_events or not all("What the official feed lists" in p.read_text() and "DropThePickle does not fill them in" in p.read_text() for p in feed_events):
-    fail("a feed event page is missing the official-feed facts or the unknown-fields note")
+if not feed_events or not all("What the official feed lists" in p.read_text() and "does not call the ticket link registration" in p.read_text() and "A ticket link, when the feed has one, is only a ticket link." in p.read_text() for p in feed_events):
+    fail("a feed event page is missing the official-feed facts or mislabels tickets as registration")
 if any("Drop the Pickle" in p.read_text() for p in pages):
     fail("a page still says Drop the Pickle")
 for p in pages:
@@ -241,6 +241,20 @@ if " · DropThePickle" not in BeautifulSoup(text_of("discount-codes/bodhi.html")
     fail("Bodhi coupon title is missing the separate DropThePickle token")
 if "DROPTHEPICKLE" not in text_of("discount-codes/volair.html"):
     fail("Volair coupon spelling changed")
+volair_title = BeautifulSoup(text_of("discount-codes/volair.html"), "html.parser").title.string
+if volair_title.count("DropThePickle") != 1 or "DROPTHEPICKLE" not in volair_title or not volair_title.endswith(" · DropThePickle"):
+    fail(f"Volair title must keep the coupon and add one exact publisher suffix: {volair_title}")
+cmp_html = text_of("compare.html")
+if "Maker specs side by side" not in cmp_html or "Price checked" not in cmp_html or "Not a playtest." not in cmp_html:
+    fail("compare hub is missing the maker-facts table")
+if "Side-by-side maker specs. Not a playtest." not in text_of("best-paddles-for-power.html"):
+    fail("power best-of hub is missing the spec table")
+vs_html = text_of("vs-selkirk-omni-vs-selkirk-slk-era-power.html")
+if "Price checked" not in vs_html or "Maker spec page" not in vs_html or "not a playtest result" not in vs_html:
+    fail("head-to-head page is missing price date, source, or fact/opinion line")
+volair_vs = text_of("vs-volair-mach-2-forza-vs-volair-pro-1.html")
+if "specs read" not in volair_vs or "prices checked" not in volair_vs or "not a playtest" not in volair_vs:
+    fail("Volair Mach 2 vs Pro 1 no longer states source dates and the not-a-playtest line")
 
 print(f"checked {len(pages)} HTML pages, {len(locs)} sitemap URLs")
 if bad:

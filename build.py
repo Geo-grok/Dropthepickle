@@ -683,9 +683,10 @@ def build():
         bits.append('<h2>What the official feed lists</h2><div class="tbl"><table>'
                     f'<tr><th scope="row">Dates</th><td>{e(when)}</td></tr>'
                     f'<tr><th scope="row">Location</th><td>{where}</td></tr>'
-                    f'<tr><th scope="row">Official page</th><td>{reg}</td></tr>'
+                    f'<tr><th scope="row">Official event page</th><td>{reg}</td></tr>'
+                    f'<tr><th scope="row">Registration</th><td>Not a separate field in this feed record. When an official event page is linked above, that is the organizer\'s page. DropThePickle does not call the ticket link registration.</td></tr>'
                     f'<tr><th scope="row">Tickets</th><td>{tix}</td></tr></table></div>')
-        bits.append('<h2>What this page does not have</h2><p>Entry fees, the division list, and the registration deadline are not fields in this feed record. DropThePickle does not fill them in. Read the official page when one is linked.</p>')
+        bits.append('<h2>What this page does not have</h2><p>Entry fees, the division list, and the registration deadline are not fields in this feed record. DropThePickle does not invent them. A ticket link, when the feed has one, is only a ticket link.</p>')
         if "World Championships" in t["name"] and (t.get("start") or "").startswith("2026"):
             bits.append('<p><a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide: dates, venue, parking and ticket prices</a></p>')
         bits.append('<p><a href="../tournaments.html">All tournaments</a></p>')

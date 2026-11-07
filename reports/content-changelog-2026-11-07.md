@@ -49,6 +49,36 @@ All 43 detail pages: the spec table heading is "Maker-listed specs". The old "Pr
 
 No Wrangler command. No push. No deploy. No merge.
 
+## Follow-up after c3113a3
+
+`c3113a3` is unchanged. This section is the next local commit.
+
+### 16 titles versus 15
+
+The spelling audit's title rows marked `brand_omitted_not_error` are 15 pages. Those are the ones named in the first commit. The 16th title page is https://dropthepickle.com/discount-codes/volair . Its title was `Volair Promo Code: 10% Off with DROPTHEPICKLE (2026)`. A case-insensitive search treats the coupon `DROPTHEPICKLE` as the publisher name, so that page was left off the audit's omitted-brand list. The publisher token `DropThePickle` is not in that coupon. The title rule is case-sensitive (`DropThePickle` must occur as that string), so the first commit already appended ` · DropThePickle` and left the coupon as `DROPTHEPICKLE`. Checked title, Open Graph title, and Twitter title:
+
+`Volair Promo Code: 10% Off with DROPTHEPICKLE (2026) · DropThePickle`
+
+That is one exact publisher suffix. No second suffix was added in this follow-up. Every other HTML title in the 309-page build also contains the exact string `DropThePickle`.
+
+### Comparison pages
+
+`/compare` did not meet the side-by-side requirement in `c3113a3`. It was a list of links and had no spec table. It now has the heading "Maker specs side by side" and one table of every paddle in the database: latest maker price, price-checked date, weight, core, shape, and maker spec page. The intro says that table is maker facts and that notes on a head-to-head page are a reading of those fields, not a playtest.
+
+The 14 best-of hubs other than `/best-paddles-under-100` also had no table in `c3113a3` (cards only). Each now uses the same maker-facts table. `/best-paddles-under-100` keeps its two groups and now includes the maker-page column in those tables.
+
+70 generated head-to-head pages gained two fact rows, "Price checked" and "Maker spec page". The sentence above the table says highlighted cells are the lower maker price or more listed core thicknesses, and that this is not a playtest. https://dropthepickle.com/vs-volair-mach-2-forza-vs-volair-pro-1 already stated the volair.com source links, the specs-read date, the prices-checked date, and "not a playtest". That page's body was not rewritten; only the shared title suffix from `c3113a3` applies.
+
+### Event registration
+
+Feed event tables now have a Registration row: "Not a separate field in this feed record." The ticket row stays labeled Tickets. The unknowns paragraph says a ticket link is only a ticket link. Fees, divisions, and the registration deadline remain unknown because they are not in the feed.
+
+## Checks
+
+`python3 build.py` built 309 pages. `python3 scripts/check_seo.py` exited 0 after this follow-up, including the compare table, the power best-of table, the Selkirk head-to-head price date and maker page, the Volair Mach 2 vs Pro 1 source dates, the Volair coupon-plus-exact-suffix title, and the registration wording.
+
+No Wrangler command. No push. No deploy. No merge.
+
 ## Not verified here
 
 - Live production after the `3d1790b` merge. That check is running separately.
