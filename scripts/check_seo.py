@@ -214,8 +214,33 @@ if "Compare pickleball paddles" not in text_of("compare.html"):
 if "<h1>Upcoming pro pickleball tournaments</h1>" not in text_of("tournaments.html"):
     fail("tournaments H1 was not clarified")
 feed_events = [p for p in pages if p.parent.name == "events" and p.name not in ("opendoor-pickleball-world-championships.html", "mlp-nations-cup-2026.html", "usa-pickleball-nationals-2026.html")]
-if not feed_events or not all("Copied from the official event feed." in p.read_text() for p in feed_events):
-    fail("a feed event page does not say it only repeats the official feed")
+if not feed_events or not all("What the official feed lists" in p.read_text() and "DropThePickle does not fill them in" in p.read_text() for p in feed_events):
+    fail("a feed event page is missing the official-feed facts or the unknown-fields note")
+if any("Drop the Pickle" in p.read_text() for p in pages):
+    fail("a page still says Drop the Pickle")
+for p in pages:
+    rel = p.relative_to(DIST).as_posix()
+    if rel == "404.html":
+        continue
+    if "DropThe<span>Pickle</span>" not in p.read_text():
+        fail(f"{rel} wordmark is not DropThePickle")
+    if 'property="og:image:alt" content="DropThePickle"' not in p.read_text() and rel not in ("links.html", "links/tiktok.html", "links/instagram.html"):
+        fail(f"{rel} og:image:alt is not DropThePickle")
+home_html = text_of("index.html")
+if "We do not claim to have playtested the paddles." not in home_html:
+    fail("homepage identity sentence missing")
+if "avantlink.com/affiliate_app_confirm.php" not in home_html:
+    fail("AvantLink homepage script was removed")
+if "Side-by-side maker specs. Not a playtest." not in text_of("best-paddles-under-100.html"):
+    fail("under-100 comparison table missing")
+if "DropThePickle has not playtested this paddle." not in text_of("paddle-volair-v-1f-xl-w-16mm.html"):
+    fail("V.1F still lacks the specs-vs-playtest line")
+if " · DropThePickle" not in BeautifulSoup(text_of("events/opendoor-pickleball-world-championships.html"), "html.parser").title.string:
+    fail("Worlds title is missing the DropThePickle publisher token")
+if " · DropThePickle" not in BeautifulSoup(text_of("discount-codes/bodhi.html"), "html.parser").title.string:
+    fail("Bodhi coupon title is missing the separate DropThePickle token")
+if "DROPTHEPICKLE" not in text_of("discount-codes/volair.html"):
+    fail("Volair coupon spelling changed")
 
 print(f"checked {len(pages)} HTML pages, {len(locs)} sitemap URLs")
 if bad:

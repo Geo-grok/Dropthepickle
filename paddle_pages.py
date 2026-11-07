@@ -210,7 +210,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         pu = ("<h2>Pros who use it</h2><ul>" + "".join(f'<li><a href="{e(x["profile"])}" target="_blank" rel="noopener">{e(x["name"])}</a> ({e(x["paddle"])}, per PPA profile)</li>' for x in users) + "</ul>") if users else ""
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
         hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["brand"])} {e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p>{owncall(p)}<div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div>{saverow(p)}<p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
-        page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}{gift_pages.holiday_note("paddle")}{vsrow(p)}<p><a href="compare.html">Compare paddles →</a></p>',
+        page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Maker-listed specs</h2><div class="tbl">{specs(p)}</div><h2>Notes from those specs</h2><p class="meta">The notes below describe the published spec fields. DropThePickle has not playtested this paddle.</p>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}{gift_pages.holiday_note("paddle")}{vsrow(p)}<p><a href="compare.html">Compare paddles →</a></p>',
              f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
              fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
     vs_links = []
@@ -252,7 +252,14 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 subset = list(subset)
                 ordered.extend(subset)
                 cards = "".join(pcard(p, why(p)) for p in subset) or "<p>No paddles in our database match this filter.</p>"
-                blocks.append(f"<h2>{e(heading)}</h2><p>{blurb}</p><div class=\"grid\">{cards}</div>")
+                table = ""
+                if subset:
+                    body_rows = []
+                    for p in subset:
+                        h = ph(p)
+                        body_rows.append(f'<tr><th scope="row"><a href="{slug(p)}">{e(p["brand"])} {e(p["model"])}</a></th><td>{money(p, cur(p))}</td><td>{e((h.get("checked") or "")[:10])}</td><td>{e(p.get("weight") or "not published")}</td><td>{e(p.get("core") or "not published")}</td><td>{e(p.get("shape") or "not published")}</td></tr>')
+                    table = '<div class="tbl"><table><caption>Side-by-side maker specs. Not a playtest.</caption><thead><tr><th>Paddle</th><th>Latest maker price</th><th>Price checked</th><th>Weight</th><th>Core</th><th>Shape</th></tr></thead><tbody>' + "".join(body_rows) + '</tbody></table></div>'
+                blocks.append(f"<h2>{e(heading)}</h2><p>{blurb}</p>{table}<div class=\"grid\">{cards}</div>")
                 if subset: schema.append(item_list(subset, heading))
             mid = "".join(blocks)
         else:
@@ -270,7 +277,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     price_updated = D("price_history.json").get("updated", "")
     checked_txt = fmt(price_updated) if price_updated else "our latest check"
     lst("Best paddles under $100", "best-paddles-under-100.html",
-        f'Paddles in our database at <b>$100 or less</b> at the latest checked maker price ({len(u100)} at the {e(checked_txt)} check), listed before the closest picks up to $150. Our database is small and focused on major brands, so check back as we add budget models. The <a href="guides/best-paddles-under-100.html">under-$100 guide</a> explains this price rule in plain language.',
+        f'Our database is a short list of major-brand models, not every paddle sold under $100. At the {e(checked_txt)} maker-price check, <b>{len(u100)}</b> of those models were at $100 or less. They are ordered by that checked price, not by a playtest. A code may change the checkout total; confirm it with the maker. The <a href="guides/best-paddles-under-100.html">under-$100 guide</a> explains the same price rule.',
         u100 + near,
         lambda p: ("At or under $100 at our last check." if cur(p) <= 100 else "Over $100 and at or under $150 at our last check.") + " " + notes(p, ph(p))[0][0],
         groups=[
@@ -395,7 +402,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 f'<div class="px">{money(p, cur(p))}{was}{f"<span class={chr(34)}off{chr(34)}>-{pct}%</span>" if pct > 0 else ""}</div>'
                 f'<a class="btn go" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Get deal →</a></div></li>')
     top5 = (f'<h2 id="top5">Top 5 paddle deals <a class="seemore" href="deals.html">All →</a></h2><ol class="top5">{"".join(top5row(i, p) for i, p in enumerate(deals[:5], 1))}</ol><p class="more">Prices from makers\' own sites. {price_checked(upd, fmt, e)} Confirm at checkout. <a href="/discount-codes">Find a discount code →</a></p>') if deals else ""
-    home = __import__('worlds_card').html() + f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>Pickleball news, paddle prices and codes</h1><p>Free for everyone. {len(deals)} paddle deals, prices checked {fmt(upd)}.</p></div></div>
+    home = __import__('worlds_card').html() + f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>Pickleball news, paddle prices and codes</h1><p>DropThePickle tracks pickleball paddle prices, discount codes and pro events. Compare maker-sourced specs and dated price checks, then follow the original tournament and review sources. We do not claim to have playtested the paddles. {len(deals)} paddle deals, prices checked {fmt(upd)}.</p></div></div>
 {top5}</div></section>
 <main>
 {__import__("bf_card").html("home", OWN)}
