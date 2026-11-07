@@ -1,6 +1,13 @@
 {
  "items": [
   {
+   "source": "The Dink",
+   "title": "7 Pickleball Recovery Methods Ranked From Worst to Best",
+   "link": "https://www.thedinkpickleball.com/7-pickleball-recovery-methods-ranked-worst-to-best/",
+   "date": "2026-11-06",
+   "summary": "The Dink story from 2026-11-06, filed under up your game, Fitness, Connor Derrickson."
+  },
+  {
    "source": "Pickleball Union",
    "title": "The Pickleball Endurance Plan for Players Who Hate Cardio",
    "link": "https://pickleballunion.com/pickleball-endurance-training/",
@@ -20,6 +27,20 @@
    "link": "https://pickleballunion.com/ben-johns-left-handed-forehand/",
    "date": "2026-11-06",
    "summary": "Pickleball Union story from 2026-11-06, filed under Tips & Strategy, Advanced Play, Professional Pickleball."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "Pickleballers Season 5, Episode 5: Why Connor Garnett left big money for pickleball",
+   "link": "https://thekitchenpickle.com/blogs/news/connor-garnett-pickleballers-season-5-episode-5/",
+   "date": "2026-11-06",
+   "summary": "The Kitchen Pickle story from 2026-11-06, filed under Major League Pickleball, Pickleballers, PPA."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "Paddle tracker: What the pros are using at the Pickleball World Championships",
+   "link": "https://thekitchenpickle.com/blogs/gear/what-paddles-top-pickleball-pros-use-worlds-november-2026/",
+   "date": "2026-11-06",
+   "summary": "The Kitchen Pickle story from 2026-11-06, filed under Gear, pickleball gear, pickleball paddles."
   },
   {
    "source": "The Dink",
@@ -67,13 +88,6 @@
    "source": "The Dink",
    "title": "3 Pickleball Tips I Wish I Learned Sooner (Geometry, Transition, Kitchen Line)",
    "link": "https://www.thedinkpickleball.com/3-pickleball-tip-fixes-i-wish-i-learned-sooner/",
-   "date": "2026-11-04",
-   "summary": "The Dink story from 2026-11-04, filed under Pickleball 101, pickleball tips, pickleball strategy."
-  },
-  {
-   "source": "The Dink",
-   "title": "3 Steps to Hit a Better Swinging Volley After Your Third Shot",
-   "link": "https://www.thedinkpickleball.com/3-steps-to-hit-a-better-swinging-volley-off-a-pop-up/",
    "date": "2026-11-04",
    "summary": "The Dink story from 2026-11-04, filed under Pickleball 101, pickleball tips, pickleball strategy."
   },
@@ -153,20 +167,6 @@
    "link": "https://thekitchenpickle.com/blogs/news/major-league-pickleball-nations-cup-2026-recap/",
    "date": "2026-11-01",
    "summary": "The Kitchen Pickle story from 2026-11-01, filed under Major League Pickleball, MLP, Pro pickleball."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "Paddletek launches new Bantam Jolt and Tempest Veyra paddles",
-   "link": "https://thekitchenpickle.com/blogs/gear/paddletek-releases-new-bantam-jolt-tempest-veyra-pickleball-paddles/",
-   "date": "2026-11-01",
-   "summary": "The Kitchen Pickle story from 2026-11-01, filed under Gear, pickleball gear, pickleball paddles."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "Grit wars: A closer look at popular paddles that have been re-released with new grit",
-   "link": "https://thekitchenpickle.com/blogs/gear/pickleball-paddles-new-durable-grit-surfaces-2026/",
-   "date": "2026-10-30",
-   "summary": "The Kitchen Pickle story from 2026-10-30, filed under Gear, pickleball gear, pickleball paddles."
   },
   {
    "source": "The Pickler – Inside the Den",
@@ -459,5 +459,5 @@
   "The Pickler – Inside the Den": "ok (8)",
   "Pickleball England": "ok (8)"
  },
- "updated": "2026-11-06T11:48"
+ "updated": "2026-11-07T11:32"
 }
