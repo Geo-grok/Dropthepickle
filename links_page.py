@@ -47,6 +47,7 @@ body{font:17px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-fo
 .av{display:inline-grid;place-items:center;width:112px;height:112px;border-radius:50%;background:#c6f432;box-shadow:0 0 0 6px rgba(198,244,50,.18)}
 .av img{width:100px;height:100px;border-radius:50%;display:block;background:#0b1630}
 .wm{display:block;margin:14px 0 4px;font:400 38px/1 Anton,Impact,"Arial Narrow Bold",sans-serif;letter-spacing:.02em;color:#fff;text-decoration:none}.wm span{color:#7cff4f}
+h1.tg{margin:8px 0 4px;font:800 22px/1.25 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#fff}
 .tg{margin:0;font-size:18px;font-weight:700;color:#c9d3e6}
 .bt{display:flex;align-items:center;gap:14px;min-height:72px;margin:0 0 14px;padding:14px 18px;border-radius:18px;background:#16264a;color:#fff;text-decoration:none;font-size:20px;font-weight:800;line-height:1.2;border:2px solid #22386a}
 .bt:active{transform:scale(.98)}.bt:focus-visible{outline:4px solid #c6f432;outline-offset:3px}
@@ -82,7 +83,7 @@ def make(C, e, canon, CATALOG, DIST, extra=None):
 <style>{CSS}</style>
 <script async src="https://aromatic-caribou-889.convex.site/api/a/am_WGwXq9YSwrdbKKse"></script></head>
 <body data-src="{src}"><main class="w"><header class="hd"><a class="av" href="{e(utm('/', src))}" data-utm aria-label="{e(n)} home"><picture><source srcset="{pre}avatar.webp" type="image/webp"><img src="{pre}avatar.png" alt="Big Dill, the DropThePickle mascot" width="100" height="100"></picture></a>
-<a class="wm" href="{e(utm('/', src))}" data-utm>DROPTHE<span>PICKLE</span></a><p class="tg">All things pickleball. Free.</p></header>
+<a class="wm" href="{e(utm('/', src))}" data-utm>DROPTHE<span>PICKLE</span></a><h1 class="tg">Big Dill's pickleball links</h1><p class="tg">Discount codes, deals, buzz and the latest video.</p></header>
 <nav aria-label="Links">{btns}</nav>
 <p class="ft">Big Dill's home: <a href="{e(utm('/', src))}" data-utm>dropthepickle.com</a></p></main>
 {JS % alias_js}

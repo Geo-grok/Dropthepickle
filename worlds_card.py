@@ -1,6 +1,6 @@
 """Homepage card for PPA Worlds main-draw week (Tue Nov 3 to Sun Nov 8, 2026). Static HTML, date-gated at build
-time in Central Time like the event-week strip (build.py evwk_build_date, DTP_BUILD_DATE override for testing).
-Only the main-draw start (11 AM CT Tue Nov 3) is stated; no other times."""
+time in Central Time (DTP_BUILD_DATE override for testing). The sentence follows the build date, and a small
+script moves it forward if the page is opened on a later day in that window. No live scores."""
 import datetime, os
 from zoneinfo import ZoneInfo
 START, END = datetime.date(2026, 11, 3), datetime.date(2026, 11, 8)
@@ -21,9 +21,19 @@ def build_date():  # same rule as build.py evwk_build_date()
 def html(today=None):
     today = today or build_date()
     if not (START <= today <= END): return ""
+    if today >= datetime.date(2026, 11, 8):
+        line = "Championship Sunday is Nov 8 (first serve 10 AM CT, PickleballTV 10 AM–4 PM). Semifinals were Sat Nov 7. The 4 PM time is the broadcast window."
+    elif today == datetime.date(2026, 11, 7):
+        line = "Built Nov 7: semifinals are Sat Nov 7 (PickleballTV 11 AM–7 PM CT). Championship Sunday is Nov 8 (first serve 10 AM CT, PickleballTV 10 AM–4 PM)."
+    else:
+        line = "Published schedule: semifinals Sat Nov 7 (PickleballTV 11 AM–7 PM CT). Championship Sunday is Nov 8 (first serve 10 AM CT, PickleballTV 10 AM–4 PM)."
     return ('<aside class="wmd" id="wmd" aria-label="PPA Worlds main draw"><h2>🏆 PPA Worlds main draw</h2>'
-            '<p>Main draw starts Tue Nov 3 at 11 AM CT.</p><div class="wmd-r">'
-            '<a class="w1" href="/guides/how-to-watch-pro-pickleball#ppa-worlds">📺 How to watch Worlds</a>'
+            f'<p id="wmd-p">{line}</p><div class="wmd-r">'
+            '<a class="w1" href="/events/opendoor-pickleball-world-championships#this-weekend">📺 Worlds schedule this weekend</a>'
             '<a class="w2" href="/buzz">🔥 Worlds coverage on Buzz</a></div></aside>'
-            # Pages only rebuild daily, so also hide once Nov 8 is over in CT (Nov 9 00:00 CST = 06:00 UTC); runs before first paint.
-            '<script>if(Date.now()>=Date.UTC(2026,10,9,6))document.getElementById("wmd").hidden=true</script>')
+            # A page built earlier in the week should not keep saying semifinals are current once Sunday starts,
+            # and the card hides once Nov 8 is over in CT (Nov 9 00:00 CST = 06:00 UTC).
+            '<script>(function(){var p=document.getElementById("wmd-p"),n=Date.now();'
+            'if(n>=Date.UTC(2026,10,9,6)){var c=document.getElementById("wmd");if(c)c.hidden=true;return}'
+            'if(p&&n>=Date.UTC(2026,10,8,6))p.textContent="Championship Sunday is Nov 8 (first serve 10 AM CT, PickleballTV 10 AM–4 PM). Semifinals were Sat Nov 7. The 4 PM time is the broadcast window.";'
+            '})();</script>')
