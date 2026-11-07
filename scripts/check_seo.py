@@ -214,8 +214,53 @@ if "Compare pickleball paddles" not in text_of("compare.html"):
 if "<h1>Upcoming pro pickleball tournaments</h1>" not in text_of("tournaments.html"):
     fail("tournaments H1 was not clarified")
 feed_events = [p for p in pages if p.parent.name == "events" and p.name not in ("opendoor-pickleball-world-championships.html", "mlp-nations-cup-2026.html", "usa-pickleball-nationals-2026.html")]
-if not feed_events or not all("Copied from the official event feed." in p.read_text() for p in feed_events):
-    fail("a feed event page does not say it only repeats the official feed")
+if not feed_events or not all("What the official feed lists" in p.read_text() and "does not call the ticket link registration" in p.read_text() and "A ticket link, when the feed has one, is only a ticket link." in p.read_text() for p in feed_events):
+    fail("a feed event page is missing the official-feed facts or mislabels tickets as registration")
+if any("Drop the Pickle" in p.read_text() for p in pages):
+    fail("a page still says Drop the Pickle")
+for p in pages:
+    rel = p.relative_to(DIST).as_posix()
+    if rel == "404.html":
+        continue
+    if "DropThe<span>Pickle</span>" not in p.read_text():
+        fail(f"{rel} wordmark is not DropThePickle")
+    if 'property="og:image:alt" content="DropThePickle"' not in p.read_text() and rel not in ("links.html", "links/tiktok.html", "links/instagram.html"):
+        fail(f"{rel} og:image:alt is not DropThePickle")
+home_html = text_of("index.html")
+if "We do not claim to have playtested the paddles." not in home_html:
+    fail("homepage identity sentence missing")
+if "avantlink.com/affiliate_app_confirm.php" not in home_html:
+    fail("AvantLink homepage script was removed")
+if "Side-by-side maker specs. Not a playtest." not in text_of("best-paddles-under-100.html"):
+    fail("under-100 comparison table missing")
+if "DropThePickle has not playtested this paddle." not in text_of("paddle-volair-v-1f-xl-w-16mm.html"):
+    fail("V.1F still lacks the specs-vs-playtest line")
+if " · DropThePickle" not in BeautifulSoup(text_of("events/opendoor-pickleball-world-championships.html"), "html.parser").title.string:
+    fail("Worlds title is missing the DropThePickle publisher token")
+if " · DropThePickle" not in BeautifulSoup(text_of("discount-codes/bodhi.html"), "html.parser").title.string:
+    fail("Bodhi coupon title is missing the separate DropThePickle token")
+if "DROPTHEPICKLE" not in text_of("discount-codes/volair.html"):
+    fail("Volair coupon spelling changed")
+volair_title = BeautifulSoup(text_of("discount-codes/volair.html"), "html.parser").title.string
+if volair_title.count("DropThePickle") != 1 or "DROPTHEPICKLE" not in volair_title or not volair_title.endswith(" · DropThePickle"):
+    fail(f"Volair title must keep the coupon and add one exact publisher suffix: {volair_title}")
+cmp_html = text_of("compare.html")
+if "Maker specs side by side" not in cmp_html or "Price checked" not in cmp_html or "Not a playtest." not in cmp_html:
+    fail("compare hub is missing the maker-facts table")
+if "Side-by-side maker specs. Not a playtest." not in text_of("best-paddles-for-power.html"):
+    fail("power best-of hub is missing the spec table")
+vs_html = text_of("vs-selkirk-omni-vs-selkirk-slk-era-power.html")
+if "Price checked" not in vs_html or "Maker spec page" not in vs_html or "not a playtest result" not in vs_html:
+    fail("head-to-head page is missing price date, source, or fact/opinion line")
+volair_vs = text_of("vs-volair-mach-2-forza-vs-volair-pro-1.html")
+if "specs read" not in volair_vs or "prices checked" not in volair_vs or "not a playtest" not in volair_vs:
+    fail("Volair Mach 2 vs Pro 1 no longer states source dates and the not-a-playtest line")
+volair_best = text_of("guides/best-volair-paddles.html")
+if "Price checked" not in volair_best or ">volair.com</a>" not in volair_best or "have not playtested" not in volair_best:
+    fail("Volair player-type guide is missing per-row price date, source, or the not-a-playtest line")
+under_guide = text_of("guides/best-paddles-under-100.html")
+if "Price checked" not in under_guide or "maker product page" not in under_guide or "Not a playtest" not in under_guide:
+    fail("under-$100 guide is missing price date, maker source, or the not-a-playtest line")
 
 print(f"checked {len(pages)} HTML pages, {len(locs)} sitemap URLs")
 if bad:

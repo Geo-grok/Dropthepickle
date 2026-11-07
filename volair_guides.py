@@ -25,9 +25,11 @@ def make(page, e, fmt, OWN, PD, H, paddle_slug):
     oc = OWN.get("Volair")
     pp = {p["model"]: p for p in PD["paddles"] if p["brand"] == "Volair"}
     if not pp: return
-    def now(p): return H.get(f'Volair {p["model"]}', {}).get("current", p["price"])
+    def hist(p): return H.get(f'Volair {p["model"]}', {})
+    def now(p): return hist(p).get("current", p["price"])
+    def price_when(p): return hist(p).get("checked") or p.get("checked") or ""
     def usd(x): return f"${x:,.2f}"
-    checked = max(p.get("checked", "") for p in pp.values())
+    price_checked = max((price_when(p) for p in pp.values()), default="")
     code_line = (f'<p class="meta vlink">Buying one? Our <a href="/discount-codes/volair"><b>Volair promo code</b></a> {e(oc["code"])} takes {e(oc["discount"])} at checkout on volair.com. '
                  f'<a href="/discount-codes/volair">How to use it and what it excludes →</a></p>') if oc else ""
     callout = own_codes.callout(e, oc, "../disclosure.html" , js=True, details=True) if oc else ""
@@ -48,9 +50,11 @@ def make(page, e, fmt, OWN, PD, H, paddle_slug):
     def row(p):
         note = f' <span class="meta">({e(p["note"])})</span>' if p.get("note") else ""
         exn = ' <span class="meta">(code may not apply)</span>' if p.get("code_excluded") else ""
+        when = e(fmt(price_when(p))) if price_when(p) else "not recorded"
+        src = f'<a href="{e(p["source_url"])}" target="_blank" rel="noopener">volair.com</a>' if p.get("source_url") else "not recorded"
         return (f'<tr><td><a href="../{paddle_slug(p)}">{e(p["model"])}</a>{note}{exn}</td><td>{e(p.get("shape") or "not listed")}</td><td>{e(p["core"])}</td>'
-                f'<td>{e(p["weight"])}</td><td>{e(p["face"])}</td><td>{usd(now(p))}</td></tr>')
-    thead = "<tr><th>Paddle</th><th>Shape</th><th>Core</th><th>Weight</th><th>Face</th><th>Price</th></tr>"
+                f'<td>{e(p["weight"])}</td><td>{e(p["face"])}</td><td>{usd(now(p))}</td><td>{when}</td><td>{src}</td></tr>')
+    thead = "<tr><th>Paddle</th><th>Shape</th><th>Core</th><th>Weight</th><th>Face</th><th>Price</th><th>Price checked</th><th>Source</th></tr>"
     secs = "".join(f'<h2>Best Volair paddle for {e(t.lower()) if not t.startswith("All") else "all-court play"}</h2><p>{e(why)}</p><div class="tbl"><table>{thead}{"".join(row(p) for p in ps)}</table></div>' for t, why, ps in groups if ps)
     lo, hi = min(map(now, pp.values())), max(map(now, pp.values()))
     gqa = [
@@ -58,11 +62,11 @@ def make(page, e, fmt, OWN, PD, H, paddle_slug):
         ("Which Volair paddle has the most power?", "Volair markets the Mach 2 Forza for power. Its 14mm version is the thinner core option. We haven't tested power ourselves."),
         ("Which Volair paddle is best for control?", "Volair markets the CTRL 1 and CTRL 2 Forza for control. Both use an aramid fiber face on a 16mm core."),
         ("Which Volair paddle is best for beginners?", "By our spec rule, the lower-priced 16mm options such as the Pro 1, Pro 2 and Mach 2 fit. Volair describes the Pro 1 as an upgrade from a starter paddle."),
-        ("How much do Volair paddles cost?", f"The Volair paddles we track run {usd(lo)} to {usd(hi)} at our last check of volair.com ({fmt(checked)}), before any code."),
+        ("How much do Volair paddles cost?", f"The Volair paddles we track run {usd(lo)} to {usd(hi)} at our last check of volair.com ({fmt(price_checked)}), before any code."),
         ("Is there a Volair discount code?", f"Yes. Our code {oc['code']} takes {oc['discount']} at checkout on volair.com. Some licensed and excluded paddles don't take codes." if oc else "See our Volair discount codes page."),
     ]
     gbody = (f'<h1>Best Volair Paddle by Player Type ({CHECKED[:4]})</h1>'
-             f'<p>Volair makes {len(pp)} paddles in our database. This guide sorts them by how you play: power, control, all-court and beginner. Every spec and price comes from volair.com (prices checked {fmt(checked)}). We group by published specs and Volair\'s own product descriptions. We have not playtested these paddles and this is not a ranking.</p>'
+             f'<p>Volair makes {len(pp)} paddles in our database. This guide sorts them by how you play: power, control, all-court and beginner. Each table is maker facts: shape, core, weight, face, the latest maker price, the date of that price check, and the volair.com spec page. Prices checked {fmt(price_checked)}. The group headings are our reading of those published fields and of Volair\'s own product descriptions. We have not playtested these paddles and this is not a ranking.</p>'
              f'{code_line}{secs}'
              f'<h2>Head to head</h2><p><a href="../vs-volair-mach-2-forza-vs-volair-pro-1.html">Volair Mach 2 Forza vs Pro 1: specs side by side →</a></p>'
              f'<h2>Volair promo code</h2>{callout}'
@@ -97,7 +101,7 @@ def make(page, e, fmt, OWN, PD, H, paddle_slug):
         ("Does the Volair promo code work on both?", f"Our code {oc['code']} takes {oc['discount']} at checkout on volair.com. Volair doesn't flag either paddle as excluded, but licensed art editions say codes don't apply. Check your total before you pay." if oc else "See our Volair discount codes page."),
     ]
     vbody = (f'<h1>Volair Mach 2 Forza vs Pro 1</h1>'
-             f'<p>Volair\'s widebody Mach 2 Forza and hybrid Pro 1, side by side. Every number below is copied from volair.com (specs read {fmt(CHECKED)}, prices checked {fmt(checked)}). '
+             f'<p>Volair\'s widebody Mach 2 Forza and hybrid Pro 1, side by side. Every number below is copied from volair.com (specs read {fmt(CHECKED)}, prices checked {fmt(price_checked)}). '
              f'This is a spec comparison, not a playtest, and we don\'t score either paddle. Sources: <a href="{ua}" target="_blank" rel="noopener">Mach 2 Forza on volair.com</a>, <a href="{ub}" target="_blank" rel="noopener">Pro 1 on volair.com</a>.</p>'
              f'{code_line}<h2>Specs side by side</h2>{tbl}<h2>Differences in the published specs</h2><ul>{"".join(f"<li>{e(d)}</li>" for d in diffs)}</ul>'
              f'<p><a class="btn" href="{paddle_slug(A)}">Mach 2 Forza full specs →</a> <a class="btn ghost" href="{paddle_slug(B)}">Pro 1 full specs →</a></p>'

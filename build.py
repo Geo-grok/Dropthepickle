@@ -34,7 +34,7 @@ header{position:sticky;top:0;z-index:50;background:#0b1630;border-bottom:1px sol
 .logo{display:flex;align-items:center;gap:.45rem;text-decoration:none;line-height:1;flex:none;min-width:0;color:#fff}
 .logo picture{display:block;line-height:0;flex:none}
 .logo img{width:60px;height:60px;max-width:none;border-radius:50%;object-fit:cover;flex:none}
-.logo b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:32px;letter-spacing:.02em;color:#fff;white-space:nowrap;line-height:1}
+.logo b{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.03em;color:#fff;white-space:nowrap;line-height:1;text-transform:none}
 .logo b span{color:#7cff4f}
 .nav{display:flex;gap:.1rem;margin-left:auto;align-items:center;min-width:0;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}
 .nav a{color:#c9d3e6;text-decoration:none;padding:.45rem .55rem;border-radius:10px;font-size:.94rem;font-weight:600;white-space:nowrap;transition:.2s}
@@ -379,7 +379,7 @@ def logo_html(rel):
     """Round Mic Drop avatar plus a live text wordmark. The wide logo image stays out of the header."""
     return (f'<picture><source srcset="{rel("avatar.webp")}" type="image/webp">'
             f'<img src="{rel("avatar.png")}" alt="Big Dill, the DropThePickle mascot" width="60" height="60"></picture>'
-            f'<b>DROPTHE<span>PICKLE</span></b>')
+            f'<b>DropThe<span>Pickle</span></b>')
 PADDLE_SVG = '''<svg viewBox="0 0 200 260" width="70%" aria-label="Paddle illustration"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18284a"/><stop offset="1" stop-color="#0b1426"/></linearGradient></defs><rect x="40" y="10" width="120" height="160" rx="52" fill="url(#pg)"/><rect x="48" y="18" width="104" height="144" rx="46" fill="none" stroke="#c6f432" stroke-width="3" opacity=".7"/><path d="M60 120 L140 60" stroke="#ff7a45" stroke-width="6" stroke-linecap="round" opacity=".85"/><rect x="88" y="168" width="24" height="80" rx="8" fill="#0b1426"/><rect x="88" y="190" width="24" height="6" fill="#c6f432"/><rect x="88" y="208" width="24" height="6" fill="#c6f432"/><circle cx="150" cy="40" r="16" fill="#c6f432"/></svg>'''
 COURT = '''<svg class="court" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#c6f432" stroke-width="3"><rect x="120" y="70" width="960" height="460"/><line x1="600" y1="70" x2="600" y2="530"/><line x1="460" y1="70" x2="460" y2="530"/><line x1="740" y1="70" x2="740" y2="530"/><line x1="120" y1="300" x2="460" y2="300"/><line x1="740" y1="300" x2="1080" y2="300"/></g><g stroke="#fff" stroke-width="2" stroke-dasharray="6 10" opacity=".6"><line x1="600" y1="40" x2="600" y2="560"/></g></svg>'''
 HEROART = '''<svg class="heroart" viewBox="0 0 400 400" aria-hidden="true"><defs><radialGradient id="ballg" cx=".35" cy=".3"><stop offset="0" stop-color="#eaff8a"/><stop offset=".6" stop-color="#c6f432"/><stop offset="1" stop-color="#8db511"/></radialGradient><linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a6b"/><stop offset="1" stop-color="#ff5f2e"/></linearGradient></defs><g transform="rotate(-24 200 200)"><rect x="110" y="40" width="170" height="220" rx="76" fill="url(#pad)"/><rect x="122" y="52" width="146" height="196" rx="66" fill="none" stroke="#fff" stroke-width="3" opacity=".45"/><rect x="178" y="252" width="34" height="110" rx="12" fill="#0b1426"/><rect x="178" y="280" width="34" height="8" fill="#c6f432"/><rect x="178" y="304" width="34" height="8" fill="#c6f432"/></g><circle cx="300" cy="110" r="62" fill="url(#ballg)"/><g fill="#0b1426" opacity=".85"><circle cx="280" cy="85" r="7"/><circle cx="315" cy="78" r="6"/><circle cx="335" cy="110" r="7"/><circle cx="300" cy="112" r="7.5"/><circle cx="270" cy="120" r="6"/><circle cx="292" cy="145" r="6.5"/><circle cx="325" cy="140" r="5.5"/></g><g stroke="#c6f432" stroke-width="4" stroke-linecap="round" opacity=".5"><line x1="210" y1="150" x2="150" y2="170"/><line x1="220" y1="120" x2="170" y2="125"/></g></svg>'''
@@ -510,7 +510,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
     tabs = "".join(f'<a href="{rel(h)}"{" class=" + chr(34) + "on" + chr(34) + " aria-current=" + chr(34) + "page" + chr(34) if any(fn.startswith(x) for x in TAB_ON.get(h, (h,))) else ""}>{t}</a>' for h, t in TABS)
     n = C["SITE_NAME"]
     mark = logo_html(rel)
-    doc_title = title if raw_title else f"{title} · {n}"  # raw_title: title already fits ~60 chars, skip site suffix
+    doc_title = title if (raw_title and n in title) else f"{title} · {n}"
     if not desc: desc = f"{title} on {n}: {C['TAGLINE']}."
     url = canon(fn)
     updated = note_fresh(fn, fresh)
@@ -523,7 +523,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
     fjs = __import__("paddle_pages").FRESHJS if 'class="pchk"' in body else ""  # browser-side price-freshness check
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(doc_title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1426">
-<meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Drop the Pickle">
+<meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="DropThePickle">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
 <link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="{GFONTS}"><link rel="stylesheet" href="{GFONTS}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="{GFONTS}"></noscript>
@@ -664,7 +664,7 @@ def build():
             return f'<div class="card"><a class="thumb" href="{e(v["link"])}" target="_blank" rel="noopener" aria-label="Watch on YouTube"><img loading="lazy" decoding="async" width="320" height="180" src="https://i.ytimg.com/vi/{e(v["video_id"])}/mqdefault.jpg" alt=""><span class="play"></span><span class="chan">{e(v["channel"])}</span></a><h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta">{fmt(v["date"])} · <a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a></div></div>'
         em = f'<div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{e(v["video_id"])}" title="{e(v["title"])}" allowfullscreen></iframe></div>' if embed and v.get("video_id") else ""
         return f'<div class="card">{em}<h3><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a></h3><div class="meta"><a href="{e(v["channel_url"])}" target="_blank" rel="noopener">{e(v["channel"])}</a> · {fmt(v["date"])}</div></div>'
-    page("tournaments.html", "Upcoming pro pickleball tournaments", f'''<h1>Upcoming pro pickleball tournaments</h1><p class="meta">Pro events from the official <a href="https://www.ppatour.com/events/" target="_blank" rel="noopener">Carvana PPA Tour</a> event feed. Always confirm dates and sign up on the official page. Each card links to our event page, which only repeats fields from that feed.</p>
+    page("tournaments.html", "Upcoming pro pickleball tournaments", f'''<h1>Upcoming pro pickleball tournaments</h1><p class="meta">These cards are pro events from the official <a href="https://www.ppatour.com/events/" target="_blank" rel="noopener">Carvana PPA Tour</a> feed. Amateur signups are not in that feed; they are in the directories further down. Confirm dates, divisions, fees and availability with the organizer. DropThePickle does not add fees the feed does not list.</p>
 <p>Going to Worlds? Read our <a href="events/opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide</a> for dates, venue, parking and ticket prices. Watching the Oct 30 kickoff? See <a href="events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 teams and how to watch</a>. Following amateurs and pros in San Diego? Read <a href="events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026: schedule, tickets and how to watch</a>.</p>
 <div class="grid">{"".join(tcard(t) for t in T["items"]) or "<p>No events right now.</p>"}</div>
 <h2>Find amateur tournaments near you</h2><p>These directories host signups for local and regional events (including West Texas). We link to them instead of copying their listings:</p>
@@ -675,13 +675,18 @@ def build():
     for t in T["items"]:
         if event_fn(t) == "events/opendoor-pickleball-world-championships.html": continue  # full page built in content_pages.py
         bits = []
-        if t.get("source"): bits.append(f'<p class="meta">{e(t["source"])}</p>')
-        when = " – ".join(fmt(t[k]) for k in ("start", "end") if t.get(k))
-        where = e(t["location"]) if t.get("location") else ""
-        if when or where: bits.append(f'<p>{when}{(" · " + where) if where else ""}</p>')
-        bits.append('<p class="meta">Copied from the official event feed. Confirm the date, place, and signup on the official page.</p>')
-        if t.get("link"): bits.append(f'<p><a class="btn" href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a></p>')
-        if t.get("tickets"): bits.append(f'<p><a href="{e(t["tickets"])}" target="_blank" rel="noopener">Tickets</a></p>')
+        if t.get("source"): bits.append(f'<p class="meta">Source: {e(t["source"])} event feed. DropThePickle does not run this event.</p>')
+        when = " – ".join(fmt(t[k]) for k in ("start", "end") if t.get(k)) or "Not in the feed record"
+        where = e(t["location"]) if t.get("location") else "Not in the feed record"
+        reg = f'<a href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a>' if t.get("link") else "No official page link in the feed record"
+        tix = f'<a href="{e(t["tickets"])}" target="_blank" rel="noopener">Ticket link from the feed</a>' if t.get("tickets") else "No ticket link in the feed record"
+        bits.append('<h2>What the official feed lists</h2><div class="tbl"><table>'
+                    f'<tr><th scope="row">Dates</th><td>{e(when)}</td></tr>'
+                    f'<tr><th scope="row">Location</th><td>{where}</td></tr>'
+                    f'<tr><th scope="row">Official event page</th><td>{reg}</td></tr>'
+                    f'<tr><th scope="row">Registration</th><td>Not a separate field in this feed record. When an official event page is linked above, that is the organizer\'s page. DropThePickle does not call the ticket link registration.</td></tr>'
+                    f'<tr><th scope="row">Tickets</th><td>{tix}</td></tr></table></div>')
+        bits.append('<h2>What this page does not have</h2><p>Entry fees, the division list, and the registration deadline are not fields in this feed record. DropThePickle does not invent them. A ticket link, when the feed has one, is only a ticket link.</p>')
         if "World Championships" in t["name"] and (t.get("start") or "").startswith("2026"):
             bits.append('<p><a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide: dates, venue, parking and ticket prices</a></p>')
         bits.append('<p><a href="../tournaments.html">All tournaments</a></p>')

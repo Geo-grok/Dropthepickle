@@ -210,7 +210,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         pu = ("<h2>Pros who use it</h2><ul>" + "".join(f'<li><a href="{e(x["profile"])}" target="_blank" rel="noopener">{e(x["name"])}</a> ({e(x["paddle"])}, per PPA profile)</li>' for x in users) + "</ul>") if users else ""
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
         hero = f'<section class="phero"><div class="img" style="position:relative">{img(p, eager=True, hi=True)}{credit(p)}</div><div><span class="eyebrow"><i></i>{e(p["brand"])}</span><h1>{e(p["brand"])} {e(p["model"])}</h1><p>{badge(h, p)}</p><div class="price">{money(p, cur(p))}{was}</div><p class="meta">{price_checked(h.get("checked",""), fmt, e, label="Maker price checked")} Lowest we\'ve seen: {money(p, h.get("low", cur(p)))}.</p>{owncall(p)}<div class="ctas"><a class="btn" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Check price at {e(p["brand"])} →</a><a class="btn ghost" href="compare.html">Compare</a></div>{saverow(p)}<p class="meta">Where to buy: {buy(p)} · <a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker spec page</a></p></div></section>'
-        page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Specs</h2><div class="tbl">{specs(p)}</div><h2>Pros & cons (from the specs)</h2>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}{gift_pages.holiday_note("paddle")}{vsrow(p)}<p><a href="compare.html">Compare paddles →</a></p>',
+        page(slug(p), f'{p["brand"]} {p["model"]}', f'{hero}{DISC}{SRC}<h2>Maker-listed specs</h2><div class="tbl">{specs(p)}</div><h2>Notes from those specs</h2><p class="meta">The notes below describe the published spec fields. DropThePickle has not playtested this paddle.</p>{pc(p)}{pu}<h2>Reviewer videos</h2>{vlist(p)}{gift_pages.holiday_note("paddle")}{vsrow(p)}<p><a href="compare.html">Compare paddles →</a></p>',
              f'{p["brand"]} {p["model"]} specs, maker price and links to independent reviewer videos. No DropThePickle rating.',
              fresh=fresh_p(p), schema=[product_node(p)], image=ph(p).get("image") or None)
     vs_links = []
@@ -221,7 +221,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             if k == "List price" and A["currency"] == B["currency"] and A["price"] != B["price"]: return "A" if A["price"] < B["price"] else "B"
             if k == "Core" and len(cores(A)) != len(cores(B)) and cores(A) and cores(B): return "A" if len(set(cores(A))) > len(set(cores(B))) else "B"
             return ""
-        rows = "".join(f'<tr><th scope="row">{k}</th><td class="{"win" if win(k)=="A" else ""}">{f(A)}</td><td class="{"win" if win(k)=="B" else ""}">{f(B)}</td></tr>' for k, f in [("Weight", lambda p: e(p["weight"]) or "not published"), ("Core", lambda p: e(p["core"]) or "not published"), ("Shape", lambda p: e(p["shape"]) or "not published"), ("List price", money), ("Latest price", pricecell), ("Buy", buy)])
+        rows = "".join(f'<tr><th scope="row">{k}</th><td class="{"win" if win(k)=="A" else ""}">{f(A)}</td><td class="{"win" if win(k)=="B" else ""}">{f(B)}</td></tr>' for k, f in [("Weight", lambda p: e(p["weight"]) or "not published"), ("Core", lambda p: e(p["core"]) or "not published"), ("Shape", lambda p: e(p["shape"]) or "not published"), ("List price", money), ("Latest price", pricecell), ("Price checked", lambda p: e((ph(p).get("checked") or "not recorded")[:10])), ("Maker spec page", lambda p: f'<a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker page</a>' if p.get("source_url") else "not recorded"), ("Buy", buy)])
         diff = []
         ca, cb = cores(A), cores(B)
         if ca and cb and set(ca) != set(cb): diff.append(f'Core options differ: {A["model"]} lists {A["core"]}; {B["model"]} lists {B["core"]}.')
@@ -232,9 +232,9 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         if A["brand"] == B["brand"]: same.append(f'same brand ({A["brand"]})')
         if shape_bucket(A) and shape_bucket(A) == shape_bucket(B): same.append(f'shape field includes {shape_bucket(A)}')
         vh = f'<section class="pagehead"><span class="eyebrow"><i></i>Head to head</span><h1 style="margin-top:.7rem">{e(t)}</h1><div class="vshead"><div><a class="vsimg" href="{slug(A)}">{img(A)}</a><h3>{e(A["model"])}</h3><div class="price" style="font-size:1.6rem">{money(A, cur(A))}</div></div><div class="vsbadge">VS</div><div><a class="vsimg" href="{slug(B)}">{img(B)}</a><h3>{e(B["model"])}</h3><div class="price" style="font-size:1.6rem">{money(B, cur(B))}</div></div></div></section>'
-        body = f'{vh}{DISC}{SRC}<p class="meta">Same-category pair ({"; ".join(same) or "shared spec fields"}). Highlighted cells are the lower maker price or more listed core thicknesses. That is not a performance ranking.</p><h2>Specs side by side</h2><div class="tbl vs"><table><tr><th></th><th><a href="{slug(A)}">{e(A["model"])}</a></th><th><a href="{slug(B)}">{e(B["model"])}</a></th></tr>{rows}</table></div><h2>Differences in the published specs</h2><ul>{"".join(f"<li>{e(x)}</li>" for x in diff) or "<li>The published spec fields shown here match.</li>"}</ul>'
+        body = f'{vh}{DISC}{SRC}<p class="meta">The table is maker facts: published specs, the list price, and the latest checked maker price with its check date. Highlighted cells are the lower maker price or more listed core thicknesses. That highlight is not a playtest result and not a performance ranking.</p><h2>Maker facts side by side</h2><div class="tbl vs"><table><tr><th></th><th><a href="{slug(A)}">{e(A["model"])}</a></th><th><a href="{slug(B)}">{e(B["model"])}</a></th></tr>{rows}</table></div><h2>Differences in the published specs</h2><ul>{"".join(f"<li>{e(x)}</li>" for x in diff) or "<li>The published spec fields shown here match.</li>"}</ul>'
         for p in (A, B): body += f'<h2>{e(p["model"])}: notes from the specs</h2>{pc(p)}<h3>Reviewer videos</h3>{vlist(p)}'
-        body += '<p class="meta">These notes restate published specs. They are not lab or on-court test results.</p>'
+        body += '<p class="meta">The notes under each model are our reading of those published fields. They are not lab or on-court test results.</p>'
         for ob in dict.fromkeys(x["brand"] for x in (A, B) if x["brand"] in OWN):  # our own code for a brand in this pair, once per brand
             ex = [x["model"] for x in (A, B) if x["brand"] == ob and x.get("code_excluded")]
             body += f'<h2>{e(ob)} promo code</h2>' + own_codes.callout(e, OWN[ob], js=True, note=(f"{ex[0]}: " + NOAPPLY) if ex else "", details=True)
@@ -244,6 +244,14 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     # best-of lists
     usd = [p for p in PP if p["currency"] == "USD"]
     list_links = []
+    def spec_table(ps, caption="Side-by-side maker specs. Not a playtest."):
+        if not ps: return ""
+        body_rows = []
+        for p in ps:
+            h = ph(p)
+            src = f'<a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker page</a>' if p.get("source_url") else "not recorded"
+            body_rows.append(f'<tr><th scope="row"><a href="{slug(p)}">{e(p["brand"])} {e(p["model"])}</a></th><td>{money(p, cur(p))}</td><td>{e((h.get("checked") or "")[:10])}</td><td>{e(p.get("weight") or "not published")}</td><td>{e(p.get("core") or "not published")}</td><td>{e(p.get("shape") or "not published")}</td><td>{src}</td></tr>')
+        return '<div class="tbl"><table><caption>' + e(caption) + '</caption><thead><tr><th>Paddle</th><th>Latest maker price</th><th>Price checked</th><th>Weight</th><th>Core</th><th>Shape</th><th>Source</th></tr></thead><tbody>' + "".join(body_rows) + '</tbody></table></div>'
     def lst(title, fn, intro, items, why, *, groups=None, desc=None):
         schema = []
         if groups:
@@ -252,13 +260,14 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 subset = list(subset)
                 ordered.extend(subset)
                 cards = "".join(pcard(p, why(p)) for p in subset) or "<p>No paddles in our database match this filter.</p>"
-                blocks.append(f"<h2>{e(heading)}</h2><p>{blurb}</p><div class=\"grid\">{cards}</div>")
+                table = spec_table(subset)
+                blocks.append(f"<h2>{e(heading)}</h2><p>{blurb}</p>{table}<div class=\"grid\">{cards}</div>")
                 if subset: schema.append(item_list(subset, heading))
             mid = "".join(blocks)
         else:
             ordered = sorted(items, key=lambda p: (p["brand"].lower(), p["model"].lower()))
             cards = "".join(pcard(p, why(p)) for p in ordered)
-            mid = f'<p class="meta">Alphabetical by brand and model. Not a performance ranking.</p><div class="grid">{cards or "<p>No paddles in our database match this filter.</p>"}</div>'
+            mid = f'<p class="meta">Alphabetical by brand and model. The table is maker facts. It is not a performance ranking.</p>{spec_table(ordered)}<div class="grid">{cards or "<p>No paddles in our database match this filter.</p>"}</div>'
             if ordered: schema.append(item_list(ordered))
         if not desc:
             desc = f"{title}: spec filter of paddles in our database, using published maker specs and the latest checked maker price. Not a playtest or a scored ranking."
@@ -270,7 +279,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     price_updated = D("price_history.json").get("updated", "")
     checked_txt = fmt(price_updated) if price_updated else "our latest check"
     lst("Best paddles under $100", "best-paddles-under-100.html",
-        f'Paddles in our database at <b>$100 or less</b> at the latest checked maker price ({len(u100)} at the {e(checked_txt)} check), listed before the closest picks up to $150. Our database is small and focused on major brands, so check back as we add budget models. The <a href="guides/best-paddles-under-100.html">under-$100 guide</a> explains this price rule in plain language.',
+        f'Our database is a short list of major-brand models, not every paddle sold under $100. At the {e(checked_txt)} maker-price check, <b>{len(u100)}</b> of those models were at $100 or less. They are ordered by that checked price, not by a playtest. A code may change the checkout total; confirm it with the maker. The <a href="guides/best-paddles-under-100.html">under-$100 guide</a> explains the same price rule.',
         u100 + near,
         lambda p: ("At or under $100 at our last check." if cur(p) <= 100 else "Over $100 and at or under $150 at our last check.") + " " + notes(p, ph(p))[0][0],
         groups=[
@@ -305,7 +314,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         aud = " Maker prices for this brand are in AUD." if items and items[0]["currency"] != "USD" else ""
         lst(f"Best {brand} paddles", f"best-{slugb}-paddles.html", f"Filter: brand is {brand} ({len(items)} paddles in our database).{aud} Not a ranking of {brand} models.", items, listed)
     # hub
-    page("compare.html", "Pickleball Paddle Comparisons: Head-to-Head Specs", f'<h1>Compare pickleball paddles</h1><p class="meta">Head-to-head pages pair paddles that share a brand, or one elongated paddle from each of two brands. Best-of lists are spec filters. None of these pages is a performance ranking.</p><h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in vs_links)}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in list_links)}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
+    cmp_table = spec_table(sorted(PP, key=lambda p: (p["brand"].lower(), p["model"].lower())), "Every paddle in this database: maker price, check date, and published specs. Not a playtest.")
+    page("compare.html", "Pickleball Paddle Comparisons: Head-to-Head Specs", f'<h1>Compare pickleball paddles</h1><p class="meta">Head-to-head pages pair paddles that share a brand, or one elongated paddle from each of two brands. Best-of lists are spec filters. The table below is maker facts: latest checked price, the date of that check, weight, core, shape, and the maker spec page. Notes on a head-to-head page are our reading of those fields. None of these pages is a playtest or a performance ranking.</p><h2>Maker specs side by side</h2>{cmp_table}<h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in vs_links)}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in list_links)}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
          "Compare pickleball paddles head to head: Selkirk Era vs Omni and more, with maker specs and latest checked prices, plus best-of spec lists.",
          raw_title=True, fresh={"vs": [fn for fn, _t in vs_links], "lists": [fn for fn, _t in list_links]}, schema=[item_list(PP, "All paddles")])
     # deals
@@ -395,7 +405,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 f'<div class="px">{money(p, cur(p))}{was}{f"<span class={chr(34)}off{chr(34)}>-{pct}%</span>" if pct > 0 else ""}</div>'
                 f'<a class="btn go" href="{e(p["buy_url"])}" rel="sponsored nofollow noopener" target="_blank">Get deal →</a></div></li>')
     top5 = (f'<h2 id="top5">Top 5 paddle deals <a class="seemore" href="deals.html">All →</a></h2><ol class="top5">{"".join(top5row(i, p) for i, p in enumerate(deals[:5], 1))}</ol><p class="more">Prices from makers\' own sites. {price_checked(upd, fmt, e)} Confirm at checkout. <a href="/discount-codes">Find a discount code →</a></p>') if deals else ""
-    home = __import__('worlds_card').html() + f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>Pickleball news, paddle prices and codes</h1><p>Free for everyone. {len(deals)} paddle deals, prices checked {fmt(upd)}.</p></div></div>
+    home = __import__('worlds_card').html() + f'''<section class="topwrap"><div class="in"><div class="hstrip"><span class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="68" height="68"></picture></span><div><span class="eyebrow"><i></i>Updated daily</span><h1>Pickleball news, paddle prices and codes</h1><p>DropThePickle tracks pickleball paddle prices, discount codes and pro events. Compare maker-sourced specs and dated price checks, then follow the original tournament and review sources. We do not claim to have playtested the paddles. {len(deals)} paddle deals, prices checked {fmt(upd)}.</p></div></div>
 {top5}</div></section>
 <main>
 {__import__("bf_card").html("home", OWN)}
