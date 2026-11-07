@@ -255,6 +255,12 @@ if "Price checked" not in vs_html or "Maker spec page" not in vs_html or "not a 
 volair_vs = text_of("vs-volair-mach-2-forza-vs-volair-pro-1.html")
 if "specs read" not in volair_vs or "prices checked" not in volair_vs or "not a playtest" not in volair_vs:
     fail("Volair Mach 2 vs Pro 1 no longer states source dates and the not-a-playtest line")
+volair_best = text_of("guides/best-volair-paddles.html")
+if "Price checked" not in volair_best or ">volair.com</a>" not in volair_best or "have not playtested" not in volair_best:
+    fail("Volair player-type guide is missing per-row price date, source, or the not-a-playtest line")
+under_guide = text_of("guides/best-paddles-under-100.html")
+if "Price checked" not in under_guide or "maker product page" not in under_guide or "Not a playtest" not in under_guide:
+    fail("under-$100 guide is missing price date, maker source, or the not-a-playtest line")
 
 print(f"checked {len(pages)} HTML pages, {len(locs)} sitemap URLs")
 if bad:

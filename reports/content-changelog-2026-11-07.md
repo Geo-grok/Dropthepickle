@@ -67,15 +67,24 @@ That is one exact publisher suffix. No second suffix was added in this follow-up
 
 The 14 best-of hubs other than `/best-paddles-under-100` also had no table in `c3113a3` (cards only). Each now uses the same maker-facts table. `/best-paddles-under-100` keeps its two groups and now includes the maker-page column in those tables.
 
-70 generated head-to-head pages gained two fact rows, "Price checked" and "Maker spec page". The sentence above the table says highlighted cells are the lower maker price or more listed core thicknesses, and that this is not a playtest. https://dropthepickle.com/vs-volair-mach-2-forza-vs-volair-pro-1 already stated the volair.com source links, the specs-read date, the prices-checked date, and "not a playtest". That page's body was not rewritten; only the shared title suffix from `c3113a3` applies.
+70 generated head-to-head pages gained two fact rows, "Price checked" and "Maker spec page". The sentence above the table says highlighted cells are the lower maker price or more listed core thicknesses, and that this is not a playtest. https://dropthepickle.com/vs-volair-mach-2-forza-vs-volair-pro-1 already had the spec table, the volair.com source links, a specs-read date, a prices-checked date, and "not a playtest". The prices-checked date on that page was the paddle-file date. The follow-up below points it at the price-history check.
 
 ### Event registration
 
 Feed event tables now have a Registration row: "Not a separate field in this feed record." The ticket row stays labeled Tickets. The unknowns paragraph says a ticket link is only a ticket link. Fees, divisions, and the registration deadline remain unknown because they are not in the feed.
 
+### Volair player-type guide
+
+This date and column change is the commit after `5c9fe8c`. `c3113a3` is still unchanged.
+https://dropthepickle.com/guides/best-volair-paddles already had shape, core, weight, face, and price in each of its four group tables, and a page-level sentence that the numbers came from volair.com. That sentence used the paddle-file date (2026-10-23). The price in the cell is the price-history current value, last checked 2026-11-07. Each row now has Price checked (that history date, rendered Nov 07, 2026) and a volair.com source link. The intro says the columns are maker facts and the group headings are a reading of those fields, not a playtest.
+
+On https://dropthepickle.com/vs-volair-mach-2-forza-vs-volair-pro-1 the prices-checked date now matches that same price-history check (Nov 07, 2026). The specs-read date stays Oct 25, 2026, which is when the extra length, width, swing-weight, and twist-weight figures were copied. The source links and the not-a-playtest sentence were already there.
+
+https://dropthepickle.com/guides/best-paddles-under-100 already had two tables (maker price, price-checked date, published specs) and a Sources list with each maker page and check date, plus the line that the page is not a playtest. That guide was not rewritten.
+
 ## Checks
 
-`python3 build.py` built 309 pages. `python3 scripts/check_seo.py` exited 0 after this follow-up, including the compare table, the power best-of table, the Selkirk head-to-head price date and maker page, the Volair Mach 2 vs Pro 1 source dates, the Volair coupon-plus-exact-suffix title, and the registration wording.
+`python3 build.py` built 309 pages. `python3 scripts/check_seo.py` exited 0 after this follow-up, including the compare table, the power best-of table, the Selkirk head-to-head price date and maker page, the Volair Mach 2 vs Pro 1 source dates, the Volair player-type price date and source column, the under-$100 guide, the Volair coupon-plus-exact-suffix title, and the registration wording.
 
 No Wrangler command. No push. No deploy. No merge.
 
