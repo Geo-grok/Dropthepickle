@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T13:06:21-06:00",
+ "updated": "2026-11-07T17:09:16-06:00",
  "date": "2026-11-07",
  "source_file": "dtp-newsroom/buzz-2026-11-06.json",
  "note": "Hand-curated; not touched by update.py.",
@@ -7,28 +7,29 @@
  "seo_desc": "PPA Worlds 2026 round of 16 results and Friday quarterfinals (Sock upsets Staksrud; Waters vs Sewing), CPX Hyper+ delisting, Selkirk LevelUp camps deal, and MLP Nations Cup context, all sourced.",
  "items": [
   {
-   "title": "Worlds semifinal results: Goins beats Alshon and Waters beats Buckner",
-   "summary": "As of 1:06:21 PM CT on Saturday, Nov. 7, the official United Pickleball Worlds live board marks two pro semifinals Final at the Opendoor Pickleball World Championships in Farmers Branch, Texas. Men's singles: John Lucian Goins defeated Christian Alshon 11-4, 11-9. Women's singles: Anna Leigh Waters defeated Brooke Buckner 11-2, 11-0. Both results are from the official board linked below. Eight semifinals remain unresolved. Men's singles: Jack Sock vs. Hunter Johnson (Live, scheduled 12:50 PM CT). Women's singles: Kate Fahey vs. Kaitlyn Christian (Up Next, scheduled 1:45 PM CT). Mixed doubles: Ben Johns and Anna Leigh Waters vs. R. Rohrabacher and Christian Alshon (Up Next, scheduled 2:40 PM CT); Anna Bright and Hayden Patriquin vs. J. Johnson and J. Johnson (Up Next, scheduled 3:35 PM CT). Men's doubles: Ben Johns and Gabriel Tardio vs. Andrei Daescu and Christian Alshon (Up Next, scheduled 4:30 PM CT); C. Klinger and Eric Oncins vs. Tama Shimabukuro and J. Johnson (Up Next, scheduled 6:20 PM CT). Women's doubles: Anna Bright and Anna Leigh Waters vs. R. Rohrabacher and P. Todd (Up Next, scheduled 5:25 PM CT); Sofia Sewing and Catherine Parenteau vs. Kate Fahey and Tina Pisnik (Up Next, scheduled 7:15 PM CT). These matches are not final; live scores are intentionally omitted. This is a partial results snapshot, not a complete semifinal recap.",
+   "title": "Worlds semifinal results: Sock beats Hunter Johnson; Daescu/Alshon eliminate Johns/Tardio",
+   "summary": "As of 5:09:16 PM CT on Saturday, Nov. 7, the official United Pickleball Worlds live board marks seven pro main-draw semifinals Final at the Opendoor Pickleball World Championships in Farmers Branch, Texas. No main-draw championship final is complete; these are semifinal results, not championship wins. The two semifinals already final at 1:06:21 PM CT are unchanged. Men's singles: John Lucian Goins defeated Christian Alshon 11-4, 11-9; Jack Sock defeated Hunter Johnson 11-5, 8-11, 11-1. Women's singles: Anna Leigh Waters defeated Brooke Buckner 11-2, 11-0; Kate Fahey defeated Kaitlyn Christian 11-1, 11-3. Mixed doubles: Ben Johns and Anna Leigh Waters defeated R. Rohrabacher and Christian Alshon 11-8, 11-5; J. Johnson and J. Johnson defeated Anna Bright and Hayden Patriquin 11-2, 11-4. Men's doubles: Andrei Daescu and Christian Alshon defeated Ben Johns and Gabriel Tardio 11-9, 11-6. All seven results are from the official board linked below. Three main-draw semifinals remain unresolved, all Up Next: women's doubles Anna Bright and Anna Leigh Waters vs. R. Rohrabacher and P. Todd (scheduled 5:25 PM CT, Championship Court); men's doubles C. Klinger and Eric Oncins vs. Tama Shimabukuro and J. Johnson (scheduled 6:20 PM CT, Court TBA); women's doubles Sofia Sewing and Catherine Parenteau vs. Kate Fahey and Tina Pisnik (scheduled 7:15 PM CT, Court TBA). These matches are not final; live scores are intentionally omitted. This is a partial results snapshot, not a complete semifinal recap.",
    "status": "confirmed",
    "date": "2026-11-07",
    "sources": [
     {
-     "label": "Official United Pickleball Worlds live board: two semifinals marked Final (as of 1:06:21 PM CT, Nov. 7)",
+     "label": "Official United Pickleball Worlds live board: seven main-draw semifinals marked Final (as of 5:09:16 PM CT, Nov. 7)",
      "url": "https://worlds.unitedpickleball.com/ppa-tour"
     }
    ],
    "embeds": [],
-   "social_angle": "Official partial semifinal results only; eight semifinals still unresolved as of 1:06:21 PM CT. These matches are not final; live scores are intentionally omitted. No posting requested.",
+   "social_angle": "Official partial semifinal results only; three main-draw semifinals still unresolved as of 5:09:16 PM CT. These are semifinal results, not championship wins. These matches are not final; live scores are intentionally omitted. No posting requested.",
    "tags": [
     "PPA",
     "Worlds",
     "Semifinals",
-    "John Lucian Goins",
-    "Christian Alshon",
-    "Anna Leigh Waters",
-    "Brooke Buckner",
     "Jack Sock",
-    "Hunter Johnson"
+    "Hunter Johnson",
+    "Kate Fahey",
+    "Ben Johns",
+    "Andrei Daescu",
+    "John Lucian Goins",
+    "Anna Leigh Waters"
    ],
    "links": [
     {
