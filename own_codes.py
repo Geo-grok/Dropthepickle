@@ -22,10 +22,13 @@ def own_codes(C):
 def own_code(C, brand): return own_codes(C).get(brand)
 
 def earn_line(oc):
-    """FTC disclosure for an own code. Must stay accurate: we earn only when the code is used."""
+    """FTC disclosure for an own code. We earn only when the code is used.
+    The discount is not promised on paddles the brand excludes or when checkout rejects the code."""
     pay = oc.get("commission") or "a commission"
-    return (f'This is DropThePickle\'s own {oc["brand"]} code. We earn {pay} when you use it, at no extra cost to you '
-            f'(the {oc["discount"]} discount is yours either way).')
+    disc = (oc.get("discount") or "the stated discount").strip()
+    offer = disc[0].upper() + disc[1:] if disc.lower().startswith("a ") else f"The {disc} discount"
+    return (f"This is DropThePickle's own {oc['brand']} code. We earn {pay} when you use it, at no extra cost to you. "
+            f"{offer} applies only if checkout accepts the code.")
 
 # Minimal copy-to-clipboard handler for pages that don't already have one (deals, paddle pages). Guarded so it binds once.
 COPY_JS = ("<script>if(!window.__dtpOwnCopy){window.__dtpOwnCopy=1;document.addEventListener('click',ev=>{const b=ev.target.closest('.owncode [data-code]');"

@@ -1,6 +1,7 @@
 """Homepage card for PPA Worlds main-draw week (Tue Nov 3 to Sun Nov 8, 2026). Static HTML, date-gated at build
 time in Central Time like the event-week strip (build.py evwk_build_date, DTP_BUILD_DATE override for testing).
-Only the main-draw start (11 AM CT Tue Nov 3) is stated; no other times."""
+Copy stays true for the whole window: semifinals Sat Nov 7 and Championship Sunday Nov 8, from the published
+United Pickleball / PPA windows. No live scores."""
 import datetime, os
 from zoneinfo import ZoneInfo
 START, END = datetime.date(2026, 11, 3), datetime.date(2026, 11, 8)
@@ -22,8 +23,8 @@ def html(today=None):
     today = today or build_date()
     if not (START <= today <= END): return ""
     return ('<aside class="wmd" id="wmd" aria-label="PPA Worlds main draw"><h2>🏆 PPA Worlds main draw</h2>'
-            '<p>Main draw starts Tue Nov 3 at 11 AM CT.</p><div class="wmd-r">'
-            '<a class="w1" href="/guides/how-to-watch-pro-pickleball#ppa-worlds">📺 How to watch Worlds</a>'
+            '<p>Semifinals are Sat Nov 7 (PickleballTV 11 AM–7 PM CT). Championship Sunday is Nov 8 (first serve 10 AM CT, PickleballTV 10 AM–4 PM).</p><div class="wmd-r">'
+            '<a class="w1" href="/events/opendoor-pickleball-world-championships#this-weekend">📺 Worlds schedule this weekend</a>'
             '<a class="w2" href="/buzz">🔥 Worlds coverage on Buzz</a></div></aside>'
             # Pages only rebuild daily, so also hide once Nov 8 is over in CT (Nov 9 00:00 CST = 06:00 UTC); runs before first paint.
             '<script>if(Date.now()>=Date.UTC(2026,10,9,6))document.getElementById("wmd").hidden=true</script>')
