@@ -1,6 +1,38 @@
 {
  "items": [
   {
+   "channel": "Rackets & Runners - Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
+   "title": "These are the BEST Durable Grit Pickleball Paddles | Rackets & Runners",
+   "link": "https://www.youtube.com/watch?v=3V1EetH4WmQ",
+   "video_id": "3V1EetH4WmQ",
+   "date": "2026-11-08"
+  },
+  {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "Gearbox Pressure X 8E vs 8M: A 90-Degree Club Split Them | Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=q1n0AE8b63Y",
+   "video_id": "q1n0AE8b63Y",
+   "date": "2026-11-07"
+  },
+  {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "Loco 2 vs Loco 1 vs J6CR M105 vs RPM Jade vs J6CR Crystal Blue: Which Paddle Is Best?",
+   "link": "https://www.youtube.com/watch?v=GPeDZ5DAh5Q",
+   "video_id": "GPeDZ5DAh5Q",
+   "date": "2026-11-07"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Honolulu J6CR M105 Paddle Review | On Court Drill Test",
+   "link": "https://www.youtube.com/watch?v=59VuUzSHGLY",
+   "video_id": "59VuUzSHGLY",
+   "date": "2026-11-07"
+  },
+  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "RPM Jade Review – Big Spin, High Power, and the Durability Question",
@@ -201,14 +233,6 @@
    "date": "2026-10-30"
   },
   {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "[GIVEAWAY!] Explosive MPP Paddle with Durable Grit for $100!? | The COMPLETE Pakle Fuse Explainer",
-   "link": "https://www.youtube.com/watch?v=SAnuaNfCGTY",
-   "video_id": "SAnuaNfCGTY",
-   "date": "2026-10-30"
-  },
-  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "The $130 Paddle Built for Ping Pong Players | Vanwin Alpha Power Quick Review",
@@ -262,14 +286,6 @@
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
    "link": "https://www.youtube.com/watch?v=9Zivh6G2WKM",
    "video_id": "9Zivh6G2WKM",
-   "date": "2026-10-27"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Engage pursuit pro 2 Review",
-   "link": "https://www.youtube.com/watch?v=McXn-_cm7es",
-   "video_id": "McXn-_cm7es",
    "date": "2026-10-27"
   },
   {
@@ -463,25 +479,41 @@
    "link": "https://www.youtube.com/watch?v=4nmsBozxc3Y",
    "video_id": "4nmsBozxc3Y",
    "date": "2026-10-07"
-  },
-  {
-   "channel": "PickleballPlaybook - Austin Hardy",
-   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
-   "title": "Gearbox Pressure X Paddle Review | On court drill test",
-   "link": "https://www.youtube.com/watch?v=79ePGZ0A218",
-   "video_id": "79ePGZ0A218",
-   "date": "2026-10-06"
-  },
-  {
-   "channel": "Pickleball Pursuit",
-   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
-   "title": "Can a Paddle Have Power and Control? Volair CMD Hybrid Review",
-   "link": "https://www.youtube.com/watch?v=vzR_tQpMK7M",
-   "video_id": "vzR_tQpMK7M",
-   "date": "2026-10-06"
   }
  ],
  "all_items": [
+  {
+   "channel": "Rackets & Runners - Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
+   "title": "These are the BEST Durable Grit Pickleball Paddles | Rackets & Runners",
+   "link": "https://www.youtube.com/watch?v=3V1EetH4WmQ",
+   "video_id": "3V1EetH4WmQ",
+   "date": "2026-11-08"
+  },
+  {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "Gearbox Pressure X 8E vs 8M: A 90-Degree Club Split Them | Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=q1n0AE8b63Y",
+   "video_id": "q1n0AE8b63Y",
+   "date": "2026-11-07"
+  },
+  {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "Loco 2 vs Loco 1 vs J6CR M105 vs RPM Jade vs J6CR Crystal Blue: Which Paddle Is Best?",
+   "link": "https://www.youtube.com/watch?v=GPeDZ5DAh5Q",
+   "video_id": "GPeDZ5DAh5Q",
+   "date": "2026-11-07"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Honolulu J6CR M105 Paddle Review | On Court Drill Test",
+   "link": "https://www.youtube.com/watch?v=59VuUzSHGLY",
+   "video_id": "59VuUzSHGLY",
+   "date": "2026-11-07"
+  },
   {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
@@ -683,14 +715,6 @@
    "date": "2026-10-30"
   },
   {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "[GIVEAWAY!] Explosive MPP Paddle with Durable Grit for $100!? | The COMPLETE Pakle Fuse Explainer",
-   "link": "https://www.youtube.com/watch?v=SAnuaNfCGTY",
-   "video_id": "SAnuaNfCGTY",
-   "date": "2026-10-30"
-  },
-  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "The $130 Paddle Built for Ping Pong Players | Vanwin Alpha Power Quick Review",
@@ -841,14 +865,6 @@
    "link": "https://www.youtube.com/watch?v=T21VFDcjapw",
    "video_id": "T21VFDcjapw",
    "date": "2026-10-22"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "11six24 Ultré Power 2 Paddle Review",
-   "link": "https://www.youtube.com/watch?v=eSpkPKCWgpI",
-   "video_id": "eSpkPKCWgpI",
-   "date": "2026-10-21"
   },
   {
    "channel": "Pickleball Effect",
@@ -1235,14 +1251,6 @@
    "date": "2026-08-27"
   },
   {
-   "channel": "PickleBaller",
-   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
-   "title": "11six24 Jelly Bean 2 vs Power 2 Pickleball Paddles Review",
-   "link": "https://www.youtube.com/watch?v=fX1AvMBHN-o",
-   "video_id": "fX1AvMBHN-o",
-   "date": "2026-08-21"
-  },
-  {
    "channel": "Farmer Lanky Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
    "title": "The BEST Value in Pickleball: Spartus Spitfire Pickleball Paddle Review",
@@ -1395,14 +1403,6 @@
    "date": "2026-03-06"
   },
   {
-   "channel": "Rackets & Runners - Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
-   "title": "Joola Pro V Paddles First Impressions | Rackets & Runners",
-   "link": "https://www.youtube.com/watch?v=4Nkr9gNhMr4",
-   "video_id": "4Nkr9gNhMr4",
-   "date": "2026-03-03"
-  },
-  {
    "channel": "The Paddle Plug",
    "channel_url": "https://www.youtube.com/channel/UClgb_PSuuUN9u7ugZEKl1qA",
    "title": "Gherkin Draco: Quick Review on new foam type!",
@@ -1543,11 +1543,11 @@
   "Pickleball Kitchen": "ok (0)",
   "PickleballCentral": "ok (4)",
   "Pickleball Warehouse": "ok (6)",
-  "Matt's Pickleball": "ok (2)",
+  "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (7)",
   "All Drive No Drop Pickleball": "ok (6)",
-  "Matthew K Pickleball": "ok (2)",
+  "Matthew K Pickleball": "ok (1)",
   "Tickle My Pickleball": "ok (3)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
@@ -1556,5 +1556,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (13)"
  },
- "updated": "2026-11-07T11:32"
+ "updated": "2026-11-08T11:33"
 }
