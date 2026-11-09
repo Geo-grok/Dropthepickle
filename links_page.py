@@ -75,7 +75,7 @@ def make(C, e, canon, CATALOG, DIST, extra=None):
     def render(fn, src, robots):
         pre = "../" * fn.count("/")
         btns = "".join(f'<a class="bt{" " + c if c else ""}" href="{e(utm(h, src))}" data-utm><i aria-hidden="true">{ic}</i><span><b>{e(t)}</b><small>{e(s)}</small></span></a>' for c, ic, t, s, h in buttons)
-        title = f"{n} links · Big Dill"
+        title = f"Big Dill's pickleball links · {n}"
         doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1630">{robots}
 <meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:alt" content="DropThePickle"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}">
@@ -96,7 +96,7 @@ def make(C, e, canon, CATALOG, DIST, extra=None):
     for p in PLATFORMS:
         sizes[f"links/{p}.html"] = render(f"links/{p}.html", p, NOINDEX)
     # /links and its platform copies are noindex (copies canonical to /links); none of them go in the sitemap.
-    CATALOG["links.html"] = {"fn": "links.html", "title": f"{n} links · Big Dill", "desc": desc, "updated": None, "noindex": True}
+    CATALOG["links.html"] = {"fn": "links.html", "title": f"Big Dill's pickleball links · {n}", "desc": desc, "updated": None, "noindex": True}
     for fn, size in sizes.items():
         if size > 30_000: raise SystemExit(f"{fn} is {size} bytes; keep the link-in-bio page under 30KB")
     return sizes

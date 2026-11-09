@@ -5,7 +5,7 @@ import re, json, pathlib
 ROOT = pathlib.Path(__file__).parent
 # Search-tuned <title>/description for vs pages already near Google page 1 (GSC export 2026-10-27). Titles <=60 chars, raw (no site suffix).
 VS_SEO = {
-    "vs-selkirk-omni-vs-selkirk-slk-era-power.html": ("Selkirk Era vs Omni: Specs and Prices Side by Side",
+    "vs-selkirk-omni-vs-selkirk-slk-era-power.html": ("Selkirk Era vs Omni: Specs & Prices",
         "Selkirk SLK Era Power vs Selkirk Omni: maker specs and latest checked prices side by side, plus the spec differences. No made-up scores."),
 }
 
@@ -409,7 +409,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         lst(f"Best {brand} paddles", f"best-{slugb}-paddles.html", f"Filter: brand is {brand} ({len(items)} paddles in our database).{aud} Not a ranking of {brand} models.", items, listed)
     # hub
     cmp_table = spec_table(sorted(PP, key=lambda p: (p["brand"].lower(), p["model"].lower())), "Every paddle in this database: maker price, check date, and published specs. Not a playtest.")
-    page("compare.html", "Pickleball Paddle Comparisons: Head-to-Head Specs", f'<h1>Compare pickleball paddles</h1><p class="meta">Head-to-head pages pair paddles that share a brand, or one elongated paddle from each of two brands. Best-of lists are spec filters. The table below is maker facts: latest checked price, the date of that check, weight, core, shape, and the maker spec page. Notes on a head-to-head page are our reading of those fields. None of these pages is a playtest or a performance ranking.</p><h2>Maker specs side by side</h2>{cmp_table}<h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in vs_links)}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in list_links)}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
+    page("compare.html", "Pickleball Paddle Comparisons: Head-to-Head", f'<h1>Compare pickleball paddles</h1><p class="meta">Head-to-head pages pair paddles that share a brand, or one elongated paddle from each of two brands. Best-of lists are spec filters. The table below is maker facts: latest checked price, the date of that check, weight, core, shape, and the maker spec page. Notes on a head-to-head page are our reading of those fields. None of these pages is a playtest or a performance ranking.</p><h2>Maker specs side by side</h2>{cmp_table}<h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in vs_links)}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in list_links)}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
          "Compare pickleball paddles head to head: Selkirk Era vs Omni and more, with maker specs and latest checked prices, plus best-of spec lists.",
          raw_title=True, fresh={"vs": [fn for fn, _t in vs_links], "lists": [fn for fn, _t in list_links]}, schema=[item_list(PP, "All paddles")])
     # deals

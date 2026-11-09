@@ -66,7 +66,7 @@ def make(page, e, fmt, C, OWN, PD, H, go_slug, paddle_slug, cards, copyjs, crumb
             + (f'<h2>Other Volair codes we track</h2><p class="meta">Published by creators; each card links to its source. Many are affiliate codes, so the creator may earn a commission.</p><div class="grid">{cards}</div>' if cards else "")
             + f'<p class="meta"><a href="/discount-codes">All pickleball discount codes</a> · <a href="../paddle-quiz.html">Paddle quiz</a> · <a href="../deals.html">Paddle deals</a> · <a href="../disclosure.html">Disclosure</a></p>'
             + copyjs + own_codes.COPY_JS)
-    title = f"Volair Promo Code: {oc['discount'].replace(' off', ' Off')} with {oc['code']} ({__import__('datetime').date.today().year})" if oc else "Volair promo codes & paddle discounts · DropThePickle"
+    title = f"Volair Promo Code {oc['code']}: {oc['discount'].replace(' off', ' Off')}" if oc else "Volair promo codes & paddle discounts · DropThePickle"
     desc = (f"Volair promo code {oc['code']}: {oc['discount']} at checkout on volair.com. How to use it, exclusions, and Mach, Pro and CMD paddle prices." if oc
             else "Volair promo codes and paddle discounts, with how to use them and current Volair paddles.")
     schema = [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]

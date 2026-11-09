@@ -72,7 +72,7 @@ def make(page, e, fmt, OWN, PD, H, paddle_slug):
              f'<h2>Volair promo code</h2>{callout}'
              f'{_faq_html(e, gqa, "Best Volair paddle FAQ")}'
              f'<p class="meta">More: <a href="/discount-codes/volair">Volair promo code</a> · <a href="../paddle-quiz.html">Paddle quiz</a> · <a href="../best-paddles-for-power.html">Best paddles for power</a> · <a href="../best-paddles-for-control.html">Best paddles for control</a> · <a href="../best-paddles-for-beginners.html">Best paddles for beginners</a> · <a href="../disclosure.html">Disclosure</a></p>')
-    page("guides/best-volair-paddles.html", "Best Volair Paddle for Power, Control & Beginners (2026)", gbody,
+    page("guides/best-volair-paddles.html", "Best Volair Paddle by Player Type (2026)", gbody,
          f"Best Volair paddle by player type: power, control, all-court, beginner. Real volair.com specs and prices ({usd(lo)}-{usd(hi)}), plus code {oc['code'] if oc else ''}."[:155],
          fresh={"volair": [(p["model"], now(p)) for p in pp.values()]}, schema=_faq(gqa), raw_title=True)
 
@@ -108,6 +108,6 @@ def make(page, e, fmt, OWN, PD, H, paddle_slug):
              f'<h2>Volair promo code</h2>{own_codes.callout(e, oc, "disclosure.html", js=True, details=True) if oc else ""}'
              f'{_faq_html(e, vqa, "Mach 2 Forza vs Pro 1 FAQ")}'
              f'<p class="meta">More: <a href="guides/best-volair-paddles.html">Best Volair paddle by player type</a> · <a href="/discount-codes/volair">Volair promo code</a> · <a href="compare.html">Compare paddles</a> · <a href="disclosure.html">Disclosure</a></p>')
-    page("vs-volair-mach-2-forza-vs-volair-pro-1.html", "Volair Mach 2 Forza vs Pro 1: Specs & Price Compared", vbody,
+    page("vs-volair-mach-2-forza-vs-volair-pro-1.html", "Volair Mach 2 Forza vs Pro 1: Specs & Price", vbody,
          f"Volair Mach 2 Forza vs Pro 1: shape, face, weight, swing and twist weight, and price ({usd(now(A))} vs {usd(now(B))}) from volair.com. Code {oc['code'] if oc else ''} for {oc['discount'] if oc else ''}."[:155],
          fresh={"vs": [(A["model"], now(A)), (B["model"], now(B))]}, schema=_faq(vqa), raw_title=True)

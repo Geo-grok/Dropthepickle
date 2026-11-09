@@ -258,7 +258,7 @@ def make(page, e, fmt, PP, cur, ph):
 {faq_html}
 {sources([(f"{p['brand']} {p['model']} (maker product page)", p["source_url"], f"price checked {fmt(ph(p)['checked'])}") for p in ok_under + ok_near])}
 {more("guides/best-paddles-under-100.html")}'''
-    page("guides/best-paddles-under-100.html", "Best Pickleball Paddles Under $100 (2026): Dated Prices", under,
+    page("guides/best-paddles-under-100.html", "Best Pickleball Paddles Under $100 (2026)", under,
          "Pickleball paddles under $100 in 2026 with dated maker prices, our Volair code DROPTHEPICKLE, and the closest picks to $150. No made-up scores.",
          fresh={"under": [(p["brand"], p["model"], ph(p)["current"]) for p in ok_under],  # no daily "checked" stamp
                 "near": [(p["brand"], p["model"], ph(p)["current"]) for p in ok_near], "faq": u100_faq},
@@ -1732,7 +1732,7 @@ else if(n>=Date.UTC(2026,10,8,6)){h.textContent="Championship Sunday, November 8
           ("PickleballTV on the App Store", PBTV_IOS, "app price and trial"),
           ("The Kitchen: 2026 Worlds schedule of events", KITCHEN, "daily programming, updated Oct 29, 2026")])}
 <p><a href="../tournaments.html">All tournaments</a></p>'''
-    page(OW_FN, "Pickleball Worlds 2026 Schedule and How to Watch (TV, CT)", ow,
+    page(OW_FN, "Pickleball Worlds 2026: Schedule & TV", ow,
          "Pickleball Worlds 2026 in CT: semifinals Sat Nov 7 (PickleballTV 11 AM–7 PM), Championship Sunday Nov 8 (first serve 10 AM; 4 PM is the broadcast window). Qualifying Mon Nov 2 is on record at 8 AM CT; the PPA page lists 11 AM.",
          fresh={"checked": OW_CHECKED, "days": OW_DAYS, "tix": OW_TIX, "champs": OW_CHAMPS, "faq": ow_faq, "event": ow_event, "weekend_bucket": ("sat" if build_day == _sat else "sun" if build_day == _sun else "after" if build_day > _sun else "before")},
          schema=[ow_event, ow_faq_ld], raw_title=True)
@@ -1905,7 +1905,7 @@ else if(n>=Date.UTC(2026,10,8,6)){h.textContent="Championship Sunday, November 8
           ("@MajorLeaguePB on X: USA are the 2026 Nations Cup champions", NC_X_FINAL, "November 1, 2026"),
           ("Major League Pickleball", NC_MLP, "live scores and standings")])}
 <p><a href="../tournaments.html">All tournaments</a> · <a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> · <a href="../guides/how-to-watch-pro-pickleball.html">How to watch pro pickleball</a></p>'''
-    page("events/mlp-nations-cup-2026.html", "MLP Nations Cup Standings & Results 2026: How to Watch", nations,
+    page("events/mlp-nations-cup-2026.html", "MLP Nations Cup 2026 Standings & Results", nations,
          "MLP Nations Cup 2026 final results: USA beat Latin America 3-0 to win the first Nations Cup. Semifinal scores, final pool standings and every group result.",
          fresh={"checked": NC_CHECKED, "teams": NC_TEAMS, "sched": NC_SCHED, "tv": NC_TV, "results": NC_RESULTS, "pending": NC_PENDING, "stand": NC_STAND, "faq": nc_faq, "address": "3333 Golfing Green Dr"},
          schema=[nc_event, nc_faq_ld], raw_title=True)
