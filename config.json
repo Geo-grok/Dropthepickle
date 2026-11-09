@@ -80,6 +80,14 @@
       "page": "/discount-codes/blinded-wear"
     }
   ],
+  "DEALS_AFFILIATE_FEATURES": [
+    {
+      "name": "UDRIPPIN",
+      "go": "udrippin-home",
+      "blurb": "Pickleball overgrips, hats, apparel and towels from UDRIPPIN.",
+      "logo": ""
+    }
+  ],
   "SIGNUP_ENDPOINT": "/api/signup",
   "YOUTUBE_CHANNELS": {
     "Pickleball Studio": "UCge5MvXGyRQPpFnxgRb_pXA",

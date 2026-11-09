@@ -420,7 +420,24 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     upd = D("price_history.json").get("updated", "")
     # Our own codes (stacking with sales is unconfirmed); one copy handler for the strip and any own-code brand cards.
     OWNSTRIP = (("<h2>Our own code</h2>" + "".join(own_codes.callout(e, oc, details=True) for _b, oc in sorted(OWN.items()))) + own_codes.COPY_JS) if OWN else ""
-    page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Pickleball paddle deals</h1>{DISC}{own_codes.volair_link(OWN)}{OWNSTRIP}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p>{__import__("bf_card").html("deals", OWN)}<p class="meta"><a href="discount-codes.html"><b>See current discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · <a href="guides/pickleball-gift-guide-2026.html"><b>Pickleball gift guide 2026 →</b></a> · <a href="deals/black-friday-pickleball-deals-2026.html"><b>Black Friday 2026 deals hub →</b></a> · <a href="guides/best-paddles-under-100.html"><b>Best paddles under $100 (2026) →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals at our last check. Check back later.</p>"}</div>',
+    # Link-only affiliate partners (config.json DEALS_AFFILIATE_FEATURES: [{name, go, blurb, logo?, active?}]). No code, no
+    # discount or commission terms: just a neutral line and a shop button through the partner's /go/<slug> (src/go-links.json).
+    # Empty or missing list (or every slug unknown) renders nothing.
+    try: GOMAP = json.loads((pathlib.Path(__file__).parent / "src" / "go-links.json").read_text()).get("links", {})
+    except Exception: GOMAP = {}
+    def lpcard(f):
+        url = (GOMAP.get(f.get("go") or "") or {}).get("url")
+        if not (f.get("name") and url) or f.get("active") is False: return ""
+        blurb = f'<p class="ownhow">{e(f["blurb"])}</p>' if f.get("blurb") else ""
+        logo = (f'<img class="lplogo" src="{e(f["logo"])}" alt="{e(f["name"])} logo" width="120" height="40" loading="lazy" decoding="async">' if f.get("logo") else "")
+        return (f'<div class="owncode lpfeat"><p class="owntag">Affiliate partner</p>{logo}<p class="ownhead">{e(f["name"])}</p>'
+                f'{blurb}'
+                f'<a class="btn lpshop" href="{e(url)}" target="_blank" rel="sponsored nofollow noopener">Shop {e(f["name"])} →</a>'
+                f'<p class="owndisc"><b>Disclosure:</b> Affiliate link. We may earn a commission at no extra cost to you. <a href="disclosure.html">Details</a>.</p></div>')
+    LPCARDS = "".join(lpcard(f) for f in (C.get("DEALS_AFFILIATE_FEATURES") or []))
+    LPSTRIP = ('<style>.lpfeat .lpshop{align-self:stretch;min-height:48px;font-size:1.05rem}.lpfeat .lplogo{height:40px;width:auto}.lpfeat .owndisc{font-size:1rem}</style>'
+               '<h2>Partner shops</h2>' + LPCARDS) if LPCARDS else ""
+    page("deals.html", "Pickleball paddle deals & price drops", f'<h1>Pickleball paddle deals</h1>{DISC}{own_codes.volair_link(OWN)}{OWNSTRIP}{LPSTRIP}<p class="meta">{price_checked(upd, fmt, e)} We check each paddle\'s price on its maker\'s own site (only where robots.txt allows). A <b>price drop</b> means the price fell since our last check. <b>On sale</b> means the maker shows a higher compare-at price. Prices can change at any time, so confirm at checkout.</p>{__import__("bf_card").html("deals", OWN)}<p class="meta"><a href="discount-codes.html"><b>See current discount codes →</b></a> · <a href="price-tracker.html"><b>Paddle Price Tracker →</b></a> · <a href="guides/pickleball-gift-guide-2026.html"><b>Pickleball gift guide 2026 →</b></a> · <a href="deals/black-friday-pickleball-deals-2026.html"><b>Black Friday 2026 deals hub →</b></a> · <a href="guides/best-paddles-under-100.html"><b>Best paddles under $100 (2026) →</b></a> · Shopping for touch? See <a href="best-paddles-for-control.html"><b>best paddles for control</b></a>.</p><div class="grid">{"".join(dcard(p) for p in deals) or "<p>No deals at our last check. Check back later.</p>"}</div>',
          f"Pickleball paddle price drops and maker-site sales, checked on each brand's own page. {price_checked(upd, fmt, e, html=False)}",
          fresh=[fresh_p(p) for p in deals], schema=[item_list(deals)] if deals else None)
     # paddle database (re-rendered with links + badges)
