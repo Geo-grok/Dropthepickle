@@ -394,23 +394,33 @@ def canon(fn): return urls.canon(C["BASE_URL"], fn)
 clean_hrefs = lambda doc: urls.clean_hrefs(C["BASE_URL"], doc)
 def fingerprint(obj):
     return hashlib.sha256(json.dumps(obj, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()
+# Sitemap <lastmod> and the visible "Updated" stamp come from here, so they must move only when the page's own content
+# changes. Payloads must leave out volatile values such as the daily "verified"/"last checked" stamp.
+# FRESH_V marks the payload format. An entry written under an older format keeps its recorded date (the backfilled real
+# content-change date, see scripts/backfill_lastmod.py) and only has its hash re-baselined, so a format change never
+# makes every page look changed today. A brand-new page is dated the day it first appears.
+FRESH_V = 2
+_TODAY = datetime.date.today().isoformat()
+def _fresh_date(fn, h):
+    prev = _PREV.get(fn)
+    if not prev: return _TODAY if _PREV else None   # new page: first published today (no store yet: unknown)
+    if prev.get("v") != FRESH_V: return prev.get("updated")
+    if prev.get("hash") == h: return prev.get("updated")
+    return _TODAY
 def note_fresh(fn, payload):
-    """Return an ISO date only when this page's data changed since the last build. The first time we see a payload is a baseline, not a change."""
+    """ISO date of this page's last real content change (None only when it is genuinely unknown)."""
     if payload is None: return None
     h = fingerprint(payload); _NEXT[fn] = h
-    prev = _PREV.get(fn)
-    if prev and prev.get("hash") == h: return prev.get("updated")
-    if prev: return datetime.date.today().isoformat()
-    return None
+    return _fresh_date(fn, h)
 def save_fresh():
     store = {}
     for fn, h in sorted(_NEXT.items()):
-        prev = _PREV.get(fn)
-        if prev and prev.get("hash") == h: updated = prev.get("updated")
-        elif prev: updated = datetime.date.today().isoformat()
-        else: updated = None
-        store[fn] = {"hash": h, "updated": updated}
+        store[fn] = {"hash": h, "updated": _fresh_date(fn, h), "v": FRESH_V}
     (ROOT / "data" / "page_dates.json").write_text(json.dumps(store, indent=1, sort_keys=True) + "\n")
+def body_fresh(title, desc, body):
+    """Default freshness payload for pages without a data payload: the visible text, minus scripts and markup."""
+    t = re.sub(r"<(script|style)\b.*?</\1>", " ", body, flags=re.S)
+    return {"title": title, "desc": desc, "text": re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t)).strip()}
 def publish_brand():
     """Copy Mic Drop files into dist. Header logo and favicons are the generated sizes; originals stay under /brand/."""
     brand = ROOT / "assets" / "brand"
@@ -466,7 +476,7 @@ def ld_graph(title, desc, url, crumbs, updated, extra):
 def emit_crawl_files():
     base = C["BASE_URL"].rstrip("/")
     save_fresh()
-    pages = [CATALOG[fn] for fn in CATALOG if fn != "404.html"]
+    pages = [CATALOG[fn] for fn in CATALOG if fn != "404.html" and not CATALOG[fn].get("noindex")]
     pages.sort(key=lambda p: (p["fn"] != "index.html", p["fn"]))
     urls = []
     for p in pages:
@@ -503,7 +513,9 @@ def pagehead(body):
 # Brand code pages already near Google page 1 (GSC export 2026-10-27): short query-matching <title> when every code shares one discount.
 CODE_SEO_BRANDS = {"RPM", "Bodhi", "Pickle Poppers"}
 
-def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumbs=None, image=None, raw_title=False):
+def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumbs=None, image=None, raw_title=False, noindex=False):
+    """noindex=True: the page stays reachable (links keep working) but carries <meta name="robots" content="noindex,follow">
+    and is left out of sitemap.xml and llms.txt."""
     prefix = "../" * fn.count("/")
     rel = lambda h: h if h.startswith(("http://", "https://", "mailto:", "#", "/")) else prefix + h
     nav = "".join(f'<a href="{rel(h)}" class="{"on" if h==fn else ""}">{t}</a>' for h, t in NAV)
@@ -513,6 +525,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
     doc_title = title if (raw_title and n in title) else f"{title} · {n}"
     if not desc: desc = f"{title} on {n}: {C['TAGLINE']}."
     url = canon(fn)
+    if fresh is None and fn != "404.html": fresh = body_fresh(title, desc, body)
     updated = note_fresh(fn, fresh)
     img = C["BASE_URL"].rstrip("/") + "/og-1200x630.png"
     stamp = f'<p class="meta updated">Updated {fmt(updated)}</p>' if updated else ""
@@ -522,7 +535,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
     cols = "".join(f'<div><h4>{h}</h4>{"".join(f"<a href={chr(34)}{rel(u)}{chr(34)}>{t}</a>" for u, t in ls)}</div>' for h, ls in FOOTCOLS)
     fjs = __import__("paddle_pages").FRESHJS if 'class="pchk"' in body else ""  # browser-side price-freshness check
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(doc_title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1426">
+<title>{e(doc_title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1426">{'<meta name="robots" content="noindex,follow">' if noindex else ""}
 <meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="DropThePickle">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
 <link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -549,7 +562,7 @@ document.querySelectorAll('form[action$="/api/signup"]:not(.nudge-form)').forEac
     dest = DIST / fn
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(clean_hrefs(golinks(doc)))
-    CATALOG[fn] = {"fn": fn, "title": doc_title, "desc": desc, "updated": updated}
+    CATALOG[fn] = {"fn": fn, "title": doc_title, "desc": desc, "updated": updated, "noindex": bool(noindex)}
 
 def buy(p):
     # Brand affiliate params are applied once, at the /go/ redirect (write_go_map -> go-links.json affiliate_tag),
@@ -653,10 +666,25 @@ def build():
         if t.get("start"): ev["startDate"] = t["start"]
         if t.get("end"): ev["endDate"] = t["end"]
         if t.get("link"): ev["url"] = t["link"]
-        if t.get("location"): ev["location"] = {"@type": "Place", "name": t["location"]}
-        if t.get("source"): ev["organizer"] = {"@type": "Organization", "name": t["source"]}
-        if t.get("tickets"): ev["offers"] = {"@type": "Offer", "url": t["tickets"]}
+        if t.get("location"): ev["location"] = event_place(t["location"])
+        if t.get("source"):
+            ev["organizer"] = {"@type": "Organization", "name": t["source"]}
+            if "PPA" in t["source"]: ev["organizer"]["url"] = "https://www.ppatour.com/"
+        # Pro tour stops are in-person events; the feed lists no cancellations or postponements.
+        ev["eventAttendanceMode"] = "https://schema.org/OfflineEventAttendanceMode"
+        ev["eventStatus"] = "https://schema.org/EventScheduled"
+        if t.get("tickets"): ev["offers"] = {"@type": "Offer", "url": t["tickets"]}  # the feed has no ticket prices, so none are given
         return ev
+    def event_place(loc):
+        """'Venue, 123 Street, City, ST 12345' / 'Venue, City, ST' / 'City, ST' -> Place with a PostalAddress (US two-letter states)."""
+        parts = [x.strip() for x in loc.split(",") if x.strip()]
+        m = re.fullmatch(r"([A-Z]{2})(?:\s+(\d{5}))?", parts[-1]) if parts else None
+        if not m or len(parts) < 2: return {"@type": "Place", "name": loc, "address": loc}
+        addr = {"@type": "PostalAddress", "addressLocality": parts[-2], "addressRegion": m.group(1), "addressCountry": "US"}
+        if m.group(2): addr["postalCode"] = m.group(2)
+        rest = parts[:-2]
+        if rest and re.match(r"\d", rest[-1]): addr["streetAddress"] = rest.pop()
+        return {"@type": "Place", "name": ", ".join(rest) or parts[-2], "address": addr}
     tcard = lambda t: f'<div class="card tcard">{dbadge(t["start"]) if t.get("start") else ""}<span class="tag b-pub">{e(t["source"])}</span><h3><a href="{event_fn(t)}">{e(t["name"])}</a></h3><div class="meta">{(fmt(t["start"]) + " – " + fmt(t["end"])) if t.get("start") and t.get("end") else ""}{(" · " + e(t["location"])) if t.get("location") else ""}</div><p><a href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a>{(" · <a href="+chr(34)+e(t["tickets"])+chr(34)+" target=_blank rel=noopener>Tickets</a>") if t.get("tickets") else ""}</p></div>'
     ncard = lambda n: f'<div class="card newscard"><div class="pub"><span class="tag b-pub">{e(n["source"])}</span></div><h3><a href="{e(n["link"])}" target="_blank" rel="noopener">{e(n["title"])}</a></h3><div class="meta">{e(n["summary"])}</div></div>'
     def rcard(v, embed=True):
@@ -699,7 +727,7 @@ def build():
         page(event_fn(t), t["name"], f'<h1>{e(t["name"])}</h1>' + "".join(bits),
              ". ".join(desc_bits) + ".",
              fresh={k: t.get(k) for k in ("name", "start", "end", "location", "link", "tickets", "source")},
-             schema=[sports_event(t)])
+             schema=[sports_event(t)], noindex=True)  # feed-only stub (~150 words): kept for visitors, not for the index
     page("reviews.html", "Pickleball paddle review videos", f'<h1>Pickleball paddle review videos</h1><p class="meta">The newest paddle videos from leading independent reviewers, pulled from their public YouTube feeds. All videos play on YouTube and belong to their creators. Go subscribe!</p><div class="grid">{"".join(rcard(v, False) for v in R["items"])}</div>',
          "Newest pickleball paddle videos from independent YouTube reviewers, with a link back to each creator's channel.",
          fresh=[{k: v.get(k) for k in ("channel", "title", "link", "date", "video_id")} for v in R["items"]])
@@ -719,26 +747,18 @@ def build():
          fresh=[{k: n.get(k) for k in ("source", "title", "link", "date")} for n in N["items"]])
     # Pickleball Buzz (hand-curated data/buzz.json; update.py never writes it)
     B = D("buzz.json")
-    def sbadge(b): return '<span class="tag b-unconf">⚠ Unconfirmed</span>' if b.get("status") != "confirmed" else '<span class="tag b-conf">Confirmed</span>'
-    def bcard(b, full=True):
-        srcs = " ".join(f'<a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a>' for s in b.get("sources", []))
-        emb = "".join(f'<blockquote class="twitter-tweet" data-dnt="true"><a href="{e(u)}">View post on X</a></blockquote>' for u in b.get("embeds", [])) if full else ""
-        if full and b.get("video_id"): emb += f'<div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/{e(b["video_id"])}" title="{e(b["title"])}" allowfullscreen></iframe></div>'
-        tags = " ".join(f'<span class="tag">{e(t)}</span>' for t in b.get("tags", [])) if full else ""
-        return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)} {tags}</div><h3>{e(b["title"])}</h3><div class="meta">{fmt(b.get("date"))}</div><p>{e(b["summary"])}</p>{"".join(f'<p class="watch"><a href="{e(l["href"])}">{e(l["label"])} →</a></p>' for l in b.get("links", []))}'
-                f'<p class="srcs"><b>Sources:</b> {srcs}</p>{f"<div class={chr(34)}buzzx{chr(34)}>{emb}</div>" if emb else ""}</div>')
-    BUZZ_TEASER = (f'<h2>Pickleball Buzz <a class="seemore" href="buzz.html">All buzz →</a></h2><div class="grid">{"".join(bcard(b, False) for b in B.get("items", [])[:3])}</div>') if B.get("items") else ""
-    page("buzz.html", B.get("seo_title") or "Pickleball Buzz", f'<h1>Pickleball Buzz</h1><p class="meta">What the pickleball world is talking about (updated {e(B.get("updated",""))}). Items marked <b>Unconfirmed</b> are rumors or chatter with no official confirmation. Every item links to its sources; X posts are shown with X\'s official embeds.</p>{nudge("buzz", "buzz", SIGNUP_TITLE, SIGNUP_BLURB)}{gift_pages.holiday_note("buzz")}<div class="grid">{"".join(bcard(b) for b in B.get("items", [])) or "<p>No buzz right now.</p>"}</div>{nudge("buzz-bottom", "buzzb", "Like the buzz? Get codes by email", SIGNUP_BLURB)}{NUDGEJS}{XLAZY}',
-         B.get("seo_desc") or "Pickleball Buzz: what the pickleball world is talking about, with confirmed stories and clearly labeled rumors, each linked to its sources.",
-         raw_title=bool(B.get("seo_title")), fresh={"updated": B.get("updated"), "items": [(b.get("title"), b.get("status"), b.get("date")) for b in B.get("items", [])]})
+    import buzz_pages
+    BUZZ_TEASER, BZ = buzz_pages.make(page, e, fmt, C, B, nudge=nudge, NUDGEJS=NUDGEJS, XLAZY=XLAZY, SIGNUP_TITLE=SIGNUP_TITLE,
+                                      SIGNUP_BLURB=SIGNUP_BLURB, holiday_note=lambda k: gift_pages.holiday_note(k), canon=canon)
+    print(f"buzz: {BZ['stories']} story pages, {BZ['indexed']} indexable")
     rows = "".join(f'<tr><td><a href="{e(p["profile"])}" target="_blank" rel="noopener"><b>{e(p["name"])}</b></a></td><td>{e(p["country"])}</td><td>{e(p["paddle"])}</td><td>{" ".join(f"<a href={chr(34)}{e(u)}{chr(34)} target=_blank rel=noopener>{k}</a>" for k,u in p["socials"].items())}</td></tr>' for p in P.get("pros", []))
     page("pros.html", "Pro pickleball players", f'<h1>Pro pickleball players</h1><p class="meta">Facts from each player\'s official PPA Tour profile (retrieved {e(P.get("retrieved"))}). Blank means the profile didn\'t list it.</p><div class="tbl"><table><tr><th>Player</th><th>Country</th><th>Paddle (per profile)</th><th>Socials</th></tr>{rows}</table></div>',
          "Country, paddle and social links for top pros, taken from each player's official PPA Tour profile.",
          fresh=[{k: p.get(k) for k in ("name", "country", "paddle", "profile", "socials")} for p in P.get("pros", [])])
     page("shop.html", "Merch", f'<h1>Merch shop</h1><div class="card"><h3>Coming soon 👕</h3><p>Shirts, hats and gear for dinkers. Get notified when we launch.</p>{signup("merch")}</div>',
-         "DropThePickle merch is coming soon. Join the list to hear when shirts, hats and gear go on sale.")
+         "DropThePickle merch is coming soon. Join the list to hear when shirts, hats and gear go on sale.", noindex=True)
     page("community.html", "Marketplace & forum", f'<h1>Marketplace & forum</h1><div class="grid"><div class="card"><h3>Used-paddle marketplace</h3><p>Buy and sell paddles and gear. Coming soon.</p></div><div class="card"><h3>Community forum</h3><p>Find partners, talk gear and swap tips. Coming soon.</p></div></div><h2>Be first in line</h2>{signup("community")}',
-         "A used-paddle marketplace and community forum are on the way. Join the list to get in first.")
+         "A used-paddle marketplace and community forum are on the way. Join the list to get in first.", noindex=True)
     page("about.html", "About", f'<h1>About {e(C["SITE_NAME"])}</h1><p>{e(C["SITE_NAME"])} is an independent pickleball hub started by a player and fitness fan in Midland, Texas. We gather tournaments, reviews, news and gear specs from public sources into one fast page, and always link back to the original.</p><p>We aren\'t affiliated with the PPA Tour, MLP, USA Pickleball or any brand listed. Every headline, video and event belongs to its publisher. The site is refreshed automatically each day. Spot an error? Email <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>.</p><h2>How the pages are checked</h2><p>Paddle specs are copied from each maker\'s product page. Maker prices are rechecked by a script where that site\'s robots.txt allows, and the check date is printed next to the price. News, reviewer videos and the pro event list are pulled from public feeds. Discount codes are refreshed from the creator and brand pages we track. Codes marked <b>Our own code</b> are ones a brand issued to {e(C["SITE_NAME"])}; the discount applies only if checkout accepts the code. These pages do not add a personal byline. Send corrections to <a href="mailto:{e(C["CONTACT_EMAIL"])}">{e(C["CONTACT_EMAIL"])}</a>. If a page and its linked source disagree, the source wins.</p><p>Affiliate links are labeled. Read the <a href="disclosure.html">affiliate disclosure</a>.</p><section class="dill"><picture><source srcset="avatar.webp" type="image/webp"><img src="avatar.png" alt="Big Dill, the DropThePickle mascot" width="88" height="88"></picture><div><h2>Meet Big Dill</h2><p>Big Dill is the Mic Drop pickle on the logo. He hangs around the deals, then gets out of the way. The site is still All Things Pickleball.</p></div></section>',
          "DropThePickle, from Midland, Texas, copies paddle specs from maker pages, dates each maker price check, and pulls news and events from public feeds. Corrections: geolobo@mail.grokbot.com.",
          fresh={"email": C["CONTACT_EMAIL"], "checks": "maker specs, dated prices, public feeds"})
@@ -811,7 +831,7 @@ def build():
     for b, oc in OWN.items():  # own-only brands: jump chip uses our discount
         if b not in best: best[b] = {"discount": oc["discount"], "code": oc["code"]}
     jump = "".join(f'<a href="#{slugb(b)}">{e(b)} · {e(best[b]["discount"])}</a>' for b in brands)
-    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2>{own_codes.callout(e, OWN[b]) if b in OWN else ""}{f'<p><a class="btn" href="/discount-codes/{slugb(b)}">{e(b)} promo code: how to use it + lineup →</a></p>' if b == "Volair" else ""}<div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
+    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2>{f'<p class="meta">★ Our own {e(b)} code <b>{e(OWN[b]["code"])}</b> ({e(OWN[b]["discount"])}) is at the <a href="#own-codes">top of this page</a>.</p>' if b in OWN else ""}{f'<p><a class="btn" href="/discount-codes/{slugb(b)}">{e(b)} promo code: how to use it + lineup →</a></p>' if b == "Volair" else ""}<div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
     nocode = "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
     nocode += "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> The code we were tracking was no longer shown on its source page, so we removed it.</li>'
                       for b in sorted({r["brand"] for r in DC.get("removed", [])} - {c["brand"] for c in codes} - set(DC.get("no_code", {})), key=str.lower))
@@ -828,16 +848,24 @@ def build():
                {"@type": "FAQPage", "mainEntity": [
                    {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in code_faq]}]
     copyjs = """<script>document.addEventListener('click',ev=>{const b=ev.target.closest('[data-code]');if(!b)return;const c=b.dataset.code,done=()=>{const k=b.parentNode.querySelector('.ccopy');if(k){k.textContent='Copied!';k.classList.add('ok');setTimeout(()=>{k.textContent='Copy';k.classList.remove('ok')},1800)}};if(navigator.clipboard)navigator.clipboard.writeText(c).then(done,done);else{const t=document.createElement('textarea');t.value=c;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();done()}});</script>"""
+    # Lead with DropThePickle's own codes (issued to us by the brand), then the creator codes we track.
+    own_sorted = sorted(OWN.values(), key=lambda o: (o.get("approved") or "", o["brand"].lower()))
+    own_block = (f'<section id="own-codes"><h2>DropThePickle\'s own codes</h2><p class="meta">{len(OWN)} brands gave {e(C["SITE_NAME"])} its own code. '
+                 f'These are listed from the brand\'s approval, not copied from another site. Each one shows the date the brand approved it.</p>'
+                 + "".join(f'{own_codes.callout(e, o)}<p class="meta">{e(o["brand"])} approved this code {fmt(o.get("approved"))}. <a href="/discount-codes/{slugb(o["brand"])}">All {e(o["brand"])} codes →</a></p>' for o in own_sorted)
+                 + '</section>') if OWN else ""
     page("discount-codes.html", "Pickleball Discount Codes & Paddle Coupons (Updated Daily)",
-         f'<h1>Pickleball discount codes</h1><p class="meta">{len(codes)} working codes for {len(brands)} paddle brands and retailers. Every code is re-checked each day on the creator or brand page that publishes it. Codes that disappear get removed. Last checked: {fmt(DC.get("updated"))}.</p>'
-         f'{nudge("discount-codes", "top")}'
+         f'<h1>Pickleball discount codes</h1><p class="meta">{len(OWN)} codes of our own, plus {len(codes)} creator codes for {len(brands)} paddle brands and retailers. '
+         f'Our script last re-checked every creator and brand page on {fmt(DC.get("updated"))}. Each card shows the date its code was last found on its source page, '
+         f'and the source page\'s own date when it prints one. Codes that disappear get removed.</p>'
+         f'{own_block}{nudge("discount-codes", "top")}'
          f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes, include_all_own=True)} <a href=/disclosure>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) or OWN else ""}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
          f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a> or the <a href="price-tracker.html">Paddle Price Tracker</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p>{gift_pages.holiday_note("codes")}<h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
          f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(codes, include_all_own=True)} <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
          f'{nudge("discount-codes-bottom", "bottom", "Don\'t miss the next code", "We re-check creator and brand pages every day. Join the list and hear about new codes first.")}{copyjs}{NUDGEJS}',
          f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
-         fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes]}, schema=code_ld)
+         fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes], "own": [(o["brand"], o["code"], o["discount"]) for o in OWN.values()]}, schema=code_ld)
     # Paddle Price Tracker (data/price-tracker.json, verified on each retailer's own product page) + public JSON for Receipts content
     PT = json.loads((ROOT / "data" / "price-tracker.json").read_text())
     try:  # the tracker should match the newest verified checks in price_history.json (scripts/sync_tracker.py)
@@ -869,6 +897,16 @@ def build():
     # Big Dill Science video hub (existing science explainers in media/)
     SCI = [("physics-topspin", "Why topspin dips", "The physics of topspin: how spin bends the ball down so you can hit hard and still land it."),
            ("physics-third-shot-drop", "The physics of the third shot drop", "Why a soft, high-arc third shot lands in the kitchen and buys you time to get to the net.")]
+    # First published on this site in commit 3581c0a ("Publish Big Dill Science videos", 2026-10-20 16:45:23 UTC).
+    SCI_UPLOADED = {"physics-topspin": "2026-10-20T11:45:23-05:00", "physics-third-shot-drop": "2026-10-20T11:45:23-05:00"}
+    def sci_ld(slug, t, d):
+        if not (ROOT / "media" / f"{slug}.mp4").exists(): return None
+        b = C["BASE_URL"].rstrip("/")
+        thumb = next((f"{b}/media/{slug}{x}" for x in (".jpg", ".png", ".webp") if (ROOT / "media" / f"{slug}{x}").exists()), None)
+        node = {"@type": "VideoObject", "name": t, "description": d, "contentUrl": f"{b}/media/{slug}.mp4",
+                "uploadDate": SCI_UPLOADED.get(slug), "publisher": {"@id": b + "/#organization"}}
+        if thumb: node["thumbnailUrl"] = [thumb]
+        return node if node["uploadDate"] and thumb else None
     def scicard(slug, t, d):
         poster = next((f"media/{slug}{x}" for x in (".jpg", ".png", ".webp") if (ROOT / "media" / f"{slug}{x}").exists()), "")
         pa = f' poster="{poster}"' if poster else ""
@@ -876,7 +914,7 @@ def build():
     page("science.html", "Big Dill Science: pickleball physics videos",
          f'<h1>Big Dill Science</h1><p class="meta">Short videos that explain the physics behind the shots. Tap play. Sound on.</p><div class="sci-grid">{"".join(scicard(*v) for v in SCI if (ROOT / "media" / f"{v[0]}.mp4").exists())}</div>'
          f'<p class="meta">Want to put it to work? Try <a href="guides/how-to-dink.html"><b>how to dink</b></a> or <a href="reviews.html"><b>paddle reviews</b></a>.</p>',
-         "Big Dill Science: short pickleball physics videos on topspin and the third shot drop.", fresh={"sci": SCI})
+         "Big Dill Science: short pickleball physics videos on topspin and the third shot drop.", fresh={"sci": SCI}, schema=[sci_ld(*v) for v in SCI])
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, nudge=nudge, NUDGEJS=NUDGEJS, SIGNUP_TITLE=SIGNUP_TITLE, SIGNUP_BLURB=SIGNUP_BLURB, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
     import paddle_quiz; QUIZ = paddle_quiz.make(page, e, fmt, D, PD, go_slug, paddle_pages.slug, C=C)
     print(f"paddle quiz: {QUIZ['recommendable']} of {QUIZ['paddles']} paddles recommendable, {QUIZ['tracked']} with tracker prices")
@@ -928,10 +966,11 @@ def build():
             import volair_page
             def vcard(c): return ccard(c).replace('<div class="cdisc">', f'<div class="ctype meta">{e(otype(c["discount"]))}</div><div class="cdisc">', 1)
             volair_page.make(page, e, fmt, C, OWN, PD, D("price_history.json").get("paddles", {}), go_slug, paddle_pages.slug, "".join(vcard(c) for c in bc), copyjs, crumbs, crumb_html, canon,
-                             {"codes": [(c["code"], c["discount"], c["conditions"], c["source_url"], c.get("verified")) for c in bc], "own": (OWN.get(b) or {}).get("code")})
+                             {"codes": [(c["code"], c["discount"], c["conditions"], c["source_url"]) for c in bc], "own": (OWN.get(b) or {}).get("code")})
             import volair_guides  # Volair gap pages: best-by-player-type guide + Mach 2 Forza vs Pro 1
             volair_guides.make(page, e, fmt, OWN, PD, D("price_history.json").get("paddles", {}), paddle_pages.slug)
             continue
+        thin = False  # code-less brand pages: kept for visitors, noindex + out of the sitemap (nothing unique to rank)
         if bc:
             title = f"{b} discount codes & promo codes (verified {month})"
             srcs = sorted({c["source"] for c in bc}, key=str.lower)
@@ -959,7 +998,7 @@ def build():
                         {"@type": "ListItem", "position": i, "item": {"@type": "Offer", "name": f'{b} code {c["code"]}: {c["discount"]}', "description": c["conditions"],
                                                                       "url": c["shop_url"], "seller": {"@type": "Organization", "name": b}}}
                         for i, c in enumerate(bc, 1)]}]
-            fresh = {"codes": [(c["code"], c["discount"], c["conditions"], c["source_url"], c.get("verified")) for c in bc]}
+            fresh = {"codes": [(c["code"], c["discount"], c["conditions"], c["source_url"]) for c in bc], "own": (OWN.get(b) or {}).get("code")}  # no daily "verified" stamp: it is not a content change
         else:
             oc = OWN.get(b)
             month = datetime.date.fromisoformat(DC["updated"]).strftime("%b %Y")
@@ -993,6 +1032,7 @@ def build():
                 desc = f"No working {b} discount code as of {fmt(DC['updated'])}. Why, plus paddle deals and working codes for other pickleball brands."
                 extra = []
                 fresh = {"none": why}
+                thin = True
         faq_html = "<h2>Questions</h2>" + "".join(f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faq_pairs)
         extra.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq_pairs]})
         disc = (f'<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(bc)} <a href="../disclosure.html">Disclosure</a>.</p>'
@@ -1003,7 +1043,7 @@ def build():
                 + (f'<h2>Related brands</h2><div class="codes-best">{rel_html}</div>' if rel_html else "") + faq_html + (copyjs if (bc or b in OWN) else ""))
         ds = list(dict.fromkeys(c["discount"] for c in bc))
         short = f"{b} Pickleball Discount Codes: {ds[0].title()} ({month})" if len(ds) == 1 and b in CODE_SEO_BRANDS else ""
-        page(fn, short if short and len(short) <= 60 else title, body, desc, fresh=fresh, schema=extra, crumbs=crumbs, raw_title=bool(short and len(short) <= 60))
+        page(fn, short if short and len(short) <= 60 else title, body, desc, fresh=fresh, schema=extra, crumbs=crumbs, raw_title=bool(short and len(short) <= 60), noindex=thin)
     page("404.html", "Page not found", f'''<h1>Out of bounds</h1><p class="meta">That page isn't on the court. The point is over.</p>
 <p><a class="btn" href="index.html">Back to {e(C["SITE_NAME"])}</a></p>''', "That page isn't on the court. Head back to the DropThePickle hub.")
     evwk_apply()

@@ -80,6 +80,94 @@ def notes(p, ph):
     if ph.get("sale"): pro.append(f"At our last check, below the maker's compare-at price ({money(p, ph['compare_at'])}).")
     if ph.get("available") is False: con.append("Shown as unavailable on the maker's site at our last check.")
     return pro or ["Nothing stands out from the published specs alone."], con or ["No obvious spec drawbacks. Watch the linked reviews for on-court impressions."]
+def _labelled(v):
+    """'114 (14mm) / 120 (16mm)' -> {'14mm': 114.0, '16mm': 120.0}; '4.15 in' -> {'': 4.15}. Unparseable -> {}."""
+    v = v or ""; out = {}
+    for part in v.split("/"):
+        m = re.search(r"(\d+(?:\.\d+)?)", part)
+        if not m: continue
+        lab = re.search(r"\((\d+(?:\.\d+)?\s*mm)\)", part)
+        out[lab.group(1).replace(" ", "") if lab else ""] = float(m.group(1))
+    return out
+def _cmp_labelled(a, b):
+    """Shared-label numbers for two spec strings, or None when they can't be compared like for like."""
+    x, y = _labelled(a), _labelled(b)
+    common = sorted(set(x) & set(y))
+    if not common: return None
+    return [(k, x[k], y[k]) for k in common]
+def verdict(A, B, cur, ph, money):
+    """'Which one fits you' bullets built only from published spec fields and our dated maker price checks.
+    Returns (summary_sentence, reasons_for_A, reasons_for_B). No performance claims beyond the general spec
+    characteristics already used in notes()."""
+    ra, rb, lead = [], [], []
+    wa, wb = weights(A), weights(B)
+    if wa and wb:
+        ma, mb = (min(wa) + max(wa)) / 2, (min(wb) + max(wb)) / 2
+        if abs(ma - mb) >= 0.1 - 1e-9:
+            lt, hv, rl, rh = (A, B, ra, rb) if ma < mb else (B, A, rb, ra)
+            rl.append(f'a lighter listed weight ({lt["weight"]} vs {hv["weight"]}), which generally favors quick hands at the kitchen')
+            rh.append(f'more listed mass ({hv["weight"]} vs {lt["weight"]}) behind drives and serves')
+            lead.append((abs(ma - mb) / 0.3, f'listed weight ({lt["model"]} is lighter)'))
+    ca, cb = cores(A), cores(B)
+    if ca and cb and max(ca) != max(cb):
+        th, tn, rt, rn = (A, B, ra, rb) if max(ca) > max(cb) else (B, A, rb, ra)
+        rt.append(f'a thicker core option ({max(cores(th)):g}mm vs {max(cores(tn)):g}mm), generally described as softer and more control-friendly')
+        rn.append(f'a thinner core ({min(cores(tn)):g}mm), generally associated with a crisper, poppier response')
+        lead.append((1.0, f'core thickness ({th["model"]} offers {max(cores(th)):g}mm)'))
+    elif ca and cb and len(set(ca)) != len(set(cb)):
+        mo, ra_ = (A, ra) if len(set(ca)) > len(set(cb)) else (B, rb)
+        ra_.append(f'a choice of core thicknesses ({mo["core"]})')
+    ea, eb = "elongated" in (A.get("shape") or "").lower(), "elongated" in (B.get("shape") or "").lower()
+    if ea != eb and A.get("shape") and B.get("shape"):
+        el, ot, re_, ro = (A, B, ra, rb) if ea else (B, A, rb, ra)
+        re_.append(f'an elongated face ({el["shape"]}) for extra reach on serves and drives')
+        ro.append(f'a {ot["shape"].lower()} face, which is wider than an elongated one and more forgiving on off-center hits')
+        lead.append((1.2, f'shape ({el["model"]} is elongated)'))
+    if A["currency"] == B["currency"]:
+        pa, pb = cur(A), cur(B)
+        if pa != pb:
+            lo, hi, rl = (A, B, ra) if pa < pb else (B, A, rb)
+            diff = abs(pa - pb); pct = round(100 * diff / max(pa, pb))
+            when = (ph(lo).get("checked") or "")[:10]
+            rl.append(f'to spend less: {money(lo, cur(lo))} vs {money(hi, cur(hi))} at our latest maker price check{" (" + when + ")" if when else ""}, {pct}% lower')
+            lead.append((pct / 10, f'price ({lo["model"]} is {money(lo, diff)} lower at our latest check)'))
+    for key, label, low_good in (("swing_weight", "swing weight", True), ("twist_weight", "twist weight", False)):
+        pairs = _cmp_labelled(A.get(key), B.get(key))
+        if not pairs: continue
+        da = sum(x for _, x, _ in pairs); db = sum(y for _, _, y in pairs)
+        if da == db: continue
+        txt = "; ".join(f'{k + ": " if k else ""}{x:g} vs {y:g}' for k, x, y in pairs)
+        win_a = (da < db) if low_good else (da > db)
+        (ra if win_a else rb).append(
+            f'a {"lower" if low_good else "higher"} published {label} ({txt}, {A["model"]} first)'
+            + (", which makers describe as easier to swing" if low_good else ", the figure makers use for stability on off-center hits"))
+    for key, label, why in (("length", "length", "for reach"), ("width", "width", "for a wider hitting area side to side")):
+        pairs = _cmp_labelled(A.get(key), B.get(key))
+        if not pairs or all(x == y for _, x, y in pairs): continue
+        big, small, rr = (A, B, ra) if pairs[0][1] > pairs[0][2] else (B, A, rb)
+        rr.append(f'more published {label} ({big[key]} vs {small[key]}) {why}')
+    for key, label in (("face", "face material"), ("core_material", "core material")):
+        if A.get(key) and B.get(key) and A[key].lower() != B[key].lower():
+            ra.append(f'a {A[key]} {label} (the {B["model"]} lists {B[key]})')
+    for p, rr in ((A, ra), (B, rb)):
+        h = ph(p)
+        if h.get("sale") and h.get("compare_at"): rr.append(f'a model that was below its compare-at price ({money(p, h["compare_at"])}) at our last check')
+    summary = ""
+    if lead:
+        lead.sort(key=lambda x: -x[0])
+        summary = "The biggest published difference is " + lead[0][1] + (", then " + lead[1][1] if len(lead) > 1 else "") + "."
+    elif not ra and not rb:
+        same = []
+        if A.get("weight") and A["weight"] == B.get("weight"): same.append(f'weight ({A["weight"]})')
+        if A.get("core") and A["core"] == B.get("core"): same.append(f'core ({A["core"]})')
+        if A.get("shape") and A["shape"] == B.get("shape"): same.append(f'shape ({A["shape"]})')
+        if A["currency"] == B["currency"] and cur(A) == cur(B): same.append(f'latest maker price ({money(A, cur(A))})')
+        gaps = [f'{p["model"]} has no published {f}' for p in (A, B) for f in ("weight", "shape") if not (p.get(f) or "").strip()]
+        summary = ("In our file these two list the same " + ", ".join(same) + ". " if same else "Nothing in the published fields we track separates these two. ") + \
+                  (" ".join(g + "." for g in gaps) + " " if gaps else "") + "The maker pages linked above are where the remaining differences (face, shape and feel details) are described."
+    else:
+        summary = "The published specs for these two are close; the differences below are small."
+    return summary, ra, rb
 def badge(ph, p=None):
     b = ""
     if ph.get("drop"): b += '<span class="tag b-drop">⬇ Price drop</span> '
@@ -233,6 +321,12 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         if shape_bucket(A) and shape_bucket(A) == shape_bucket(B): same.append(f'shape field includes {shape_bucket(A)}')
         vh = f'<section class="pagehead"><span class="eyebrow"><i></i>Head to head</span><h1 style="margin-top:.7rem">{e(t)}</h1><div class="vshead"><div><a class="vsimg" href="{slug(A)}">{img(A)}</a><h3>{e(A["model"])}</h3><div class="price" style="font-size:1.6rem">{money(A, cur(A))}</div></div><div class="vsbadge">VS</div><div><a class="vsimg" href="{slug(B)}">{img(B)}</a><h3>{e(B["model"])}</h3><div class="price" style="font-size:1.6rem">{money(B, cur(B))}</div></div></div></section>'
         body = f'{vh}{DISC}{SRC}<p class="meta">The table is maker facts: published specs, the list price, and the latest checked maker price with its check date. Highlighted cells are the lower maker price or more listed core thicknesses. That highlight is not a playtest result and not a performance ranking.</p><h2>Maker facts side by side</h2><div class="tbl vs"><table><tr><th></th><th><a href="{slug(A)}">{e(A["model"])}</a></th><th><a href="{slug(B)}">{e(B["model"])}</a></th></tr>{rows}</table></div><h2>Differences in the published specs</h2><ul>{"".join(f"<li>{e(x)}</li>" for x in diff) or "<li>The published spec fields shown here match.</li>"}</ul>'
+        vsum, va, vb = verdict(A, B, cur, ph, money)
+        def why(p, rs, other):
+            if rs: return f'<li><b>Pick the {e(p["model"])}</b> if you want {"; ".join(e(r) for r in rs)}.</li>'
+            return f'<li><b>{e(p["model"])}</b>: no edge over the {e(other["model"])} in these published fields.</li>'
+        body += (f'<h2>Which one fits you</h2><p>{e(vsum)}</p>{f"<ul>{why(A, va, B)}{why(B, vb, A)}</ul>" if (va or vb) else ""}'
+                 '<p class="meta">This verdict is read from the maker-published specs and our dated maker price checks above. It is not a playtest or a rating.</p>')
         for p in (A, B): body += f'<h2>{e(p["model"])}: notes from the specs</h2>{pc(p)}<h3>Reviewer videos</h3>{vlist(p)}'
         body += '<p class="meta">The notes under each model are our reading of those published fields. They are not lab or on-court test results.</p>'
         for ob in dict.fromkeys(x["brand"] for x in (A, B) if x["brand"] in OWN):  # our own code for a brand in this pair, once per brand
@@ -240,7 +334,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             body += f'<h2>{e(ob)} promo code</h2>' + own_codes.callout(e, OWN[ob], js=True, note=(f"{ex[0]}: " + NOAPPLY) if ex else "", details=True)
         st, sd = VS_SEO.get(fn, (None, f"{t}: maker specs and latest checked prices for a same-category pair. No score or rating from us."))
         page(fn, st or t, body, sd, raw_title=bool(st),
-             fresh=[fresh_p(A), fresh_p(B)], schema=[item_list([A, B])]); vs_links.append((fn, t))
+             fresh=[fresh_p(A), fresh_p(B), {"verdict": [vsum, va, vb]}], schema=[item_list([A, B])]); vs_links.append((fn, t))
     # best-of lists
     usd = [p for p in PP if p["currency"] == "USD"]
     list_links = []
