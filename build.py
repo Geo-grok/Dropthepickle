@@ -394,12 +394,24 @@ def canon(fn): return urls.canon(C["BASE_URL"], fn)
 clean_hrefs = lambda doc: urls.clean_hrefs(C["BASE_URL"], doc)
 def fingerprint(obj):
     return hashlib.sha256(json.dumps(obj, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()
+# Freshness payloads carry daily "last checked" stamps: "checked"/"verified" date fields, and dates written into text
+# ("price check (2026-11-09)", "last checked Nov 09, 2026", the checked-date column in price tables). The daily refresh
+# moves those even when nothing else on the page changes, so they are left out of the freshness hash. A field that is
+# only a date (a story's date, an event's start/end) is kept, so a real date change still counts.
+_DATE_RX = re.compile(r"\b(?:20\d\d-\d\d-\d\d(?:[T ][0-9:.+\-Z]*)?|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.? \d{1,2}, 20\d\d)")
+_STAMP_KEYS = {"checked", "verified", "last_checked"}
+def _stable(o):
+    if isinstance(o, dict):
+        return {k: _stable(v) for k, v in o.items() if not (k in _STAMP_KEYS and isinstance(v, str) and _DATE_RX.fullmatch(v.strip()))}
+    if isinstance(o, (list, tuple)): return [_stable(v) for v in o]
+    if isinstance(o, str) and not _DATE_RX.fullmatch(o.strip()): return _DATE_RX.sub("<date>", o)
+    return o
 # Sitemap <lastmod> and the visible "Updated" stamp come from here, so they must move only when the page's own content
 # changes. Payloads must leave out volatile values such as the daily "verified"/"last checked" stamp.
 # FRESH_V marks the payload format. An entry written under an older format keeps its recorded date (the backfilled real
 # content-change date, see scripts/backfill_lastmod.py) and only has its hash re-baselined, so a format change never
 # makes every page look changed today. A brand-new page is dated the day it first appears.
-FRESH_V = 2
+FRESH_V = 3  # 3: daily check-date stamps left out of the hash (_stable)
 _TODAY = datetime.date.today().isoformat()
 def _fresh_date(fn, h):
     prev = _PREV.get(fn)
@@ -410,7 +422,7 @@ def _fresh_date(fn, h):
 def note_fresh(fn, payload):
     """ISO date of this page's last real content change (None only when it is genuinely unknown)."""
     if payload is None: return None
-    h = fingerprint(payload); _NEXT[fn] = h
+    h = fingerprint(_stable(payload)); _NEXT[fn] = h
     return _fresh_date(fn, h)
 def save_fresh():
     store = {}

@@ -259,8 +259,8 @@ def make(page, e, fmt, PP, cur, ph):
 {more("guides/best-paddles-under-100.html")}'''
     page("guides/best-paddles-under-100.html", "Best Pickleball Paddles Under $100 (2026): Dated Prices", under,
          "Pickleball paddles under $100 in 2026 with dated maker prices, our Volair code DROPTHEPICKLE, and the closest picks to $150. No made-up scores.",
-         fresh={"under": [(p["brand"], p["model"], ph(p)["current"], ph(p)["checked"]) for p in ok_under],
-                "near": [(p["brand"], p["model"], ph(p)["current"], ph(p)["checked"]) for p in ok_near], "faq": u100_faq},
+         fresh={"under": [(p["brand"], p["model"], ph(p)["current"]) for p in ok_under],  # no daily "checked" stamp
+                "near": [(p["brand"], p["model"], ph(p)["current"]) for p in ok_near], "faq": u100_faq},
          schema=[faq_ld], raw_title=True)
 
     # ----- rules -----

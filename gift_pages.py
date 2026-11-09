@@ -147,7 +147,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
             d = {**d, "numberOfItems": len(els), "itemListElement": els}
         return d
     page(GIFT_FN, "Pickleball Gifts 2026: Gift Guide by Budget + Black Friday", gbody, gdesc[:155],
-         fresh={"items": [(p["brand"], p["model"], cur(p), chk(p)) for p in listed + beg], "faq": gqa},
+         fresh={"items": [(p["brand"], p["model"], cur(p)) for p in listed + beg], "faq": gqa},  # no daily "checked" stamp
          schema=[{**item_list(listed), "name": "Pickleball Gift Guide 2026"}, faq_ld(gqa)], raw_title=True)
 
     # ---------------- Black Friday hub ----------------
@@ -203,6 +203,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
     blist = [p for i, p in enumerate(blist) if p not in blist[:i]]
     base = absu("index.html")
     page(BF_FN, "Black Friday Pickleball Paddle Deals 2026: Prices & Codes", bbody, bdesc[:155],
-         fresh={"sale": [(p["brand"], p["model"], cur(p), chk(p)) for p in blist], "faq": bqa, "watch": BF_WATCH, "checked": BF_CHECKED},
+         fresh={"sale": [(p["brand"], p["model"], cur(p)) for p in blist],  # no daily "checked" stamp
+                "faq": bqa, "watch": BF_WATCH, "checked": BF_CHECKED},
          schema=[{**item_list(blist), "name": "Black Friday pickleball paddle deals 2026"}, faq_ld(bqa)], raw_title=True,
          crumbs=[{"name": "Home", "url": base}, {"name": "Deals", "url": absu("deals.html")}, {"name": "Black Friday Pickleball Paddle Deals 2026", "url": absu(BF_FN)}])
