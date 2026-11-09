@@ -16,9 +16,11 @@ export default {
       return handleMedia(request, env);
     }
     // /discount-codes/Volair etc.: brand pages are lowercase slugs, so send case variants to the real page instead of a 404.
+    // Strip .html and a trailing slash in this same hop. A lowercase-only redirect left /Volair.html and /Volair/
+    // one step short of the clean URL, so Google saw two redirects.
     if (url.pathname.startsWith("/discount-codes/") && url.pathname !== url.pathname.toLowerCase()) {
-      url.pathname = url.pathname.toLowerCase();
-      return Response.redirect(url.toString(), 301);
+      url.pathname = cleanPath(url.pathname.toLowerCase());
+      return permanent(url.toString());
     }
     // Duplicate Worlds page merged into the refreshed event page.
     if (WORLDS_301.has(url.pathname)) {
@@ -57,11 +59,15 @@ function permanent(location) {
   return new Response(null, { status: 301, headers: { location, "cache-control": "public, max-age=3600" } });
 }
 
-// /foo.html -> /foo, /dir/index.html -> /dir/, /index.html -> /. Matches urls.clean_path in the build.
+// /foo.html -> /foo, /foo/ -> /foo, /dir/index.html -> /dir, /index.html -> /.
+// Trailing slash is stripped too: the asset layer's clean URL for a page has no slash, and leaving it
+// on a www hop made /buzz/ redirect to https://dropthepickle.com/buzz/ (a second hop).
 function cleanPath(path) {
-  if (path.endsWith("/index.html")) return path.slice(0, -"index.html".length);
-  if (path.endsWith(".html")) return path.slice(0, -".html".length);
-  return path;
+  let p = path;
+  if (p.endsWith("/index.html")) p = p.slice(0, -"index.html".length);
+  else if (p.endsWith(".html")) p = p.slice(0, -".html".length);
+  if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+  return p || "/";
 }
 
 // Public video files copied from media/ into dist/media by build.py. Served from static assets

@@ -25,6 +25,10 @@ t /discount-codes.html 301 "$B/discount-codes"
 t /discount-codes/volair.html 301 "$B/discount-codes/volair"
 t /discount-codes/volair/ 301 "$B/discount-codes/volair"
 t /discount-codes/Volair 301 "$B/discount-codes/volair"
+t /discount-codes/Volair.html 301 "$B/discount-codes/volair"
+t "/discount-codes/Volair.html?x=1" 301 "$B/discount-codes/volair?x=1"
+t /discount-codes/Volair/ 301 "$B/discount-codes/volair"
+t /buzz/ 301 "https://dropthepickle.com/buzz" www.dropthepickle.com
 t /vs-selkirk-omni-vs-selkirk-slk-era-power.html 301 "$B/vs-selkirk-omni-vs-selkirk-slk-era-power"
 t /events/ppa-worlds-2026.html 301 "$B/events/opendoor-pickleball-world-championships"
 t /nonexistent.html 404 -

@@ -2,7 +2,8 @@
 
 Data: data/buzz.json (hand-curated; update.py never writes it). Story URLs must not move when a headline is edited, so
 the first slug issued for a story is kept in data/buzz_slugs.json, keyed by date + first source URL (falling back to the
-title). That file only grows. Unknown /buzz/<x> URLs are sent to the hub by the Worker.
+title). Two stories that share that key (same day, same first source) get a second key of date|source|next source URL,
+and that slug is saved too. That file only grows. Unknown /buzz/<x> URLs are sent to the hub by the Worker.
 Stories whose summary is shorter than MIN_WORDS still get a page (the hub links to it) but are noindex and stay out of
 the sitemap, as are items not marked confirmed.
 """
@@ -11,9 +12,16 @@ ROOT = pathlib.Path(__file__).parent
 SLUGS = ROOT / "data" / "buzz_slugs.json"
 MIN_WORDS = 60
 
+def _source_urls(b):
+    return [s.get("url") for s in b.get("sources", []) if s.get("url")]
 def _key(b):
-    src = next((s.get("url") for s in b.get("sources", []) if s.get("url")), "") or b.get("title", "")
-    return f'{b.get("date", "")}|{src}'
+    src = _source_urls(b)[:1] or [b.get("title", "")]
+    return f'{b.get("date", "")}|{src[0]}'
+def _dup_key(b):
+    """A second story with the same date and first source. The next source URL stays put when the headline is edited."""
+    urls = _source_urls(b)
+    extra = urls[1] if len(urls) > 1 else b.get("title", "")
+    return f"{_key(b)}|{extra}"
 
 def _slugify(b):
     words = re.sub(r"[^a-z0-9]+", " ", b["title"].lower().replace("'", "")).split()
@@ -21,24 +29,33 @@ def _slugify(b):
     keep = [w for w in words if w not in stop][:8] or words[:8]
     return f'{b.get("date", "undated")}-' + "-".join(keep)
 
+def _mint(b, used):
+    base = _slugify(b); s = base; n = 2
+    while s in used: s = f"{base}-{n}"; n += 1
+    used.add(s)
+    return s
 def assign_slugs(items):
     try: reg = json.loads(SLUGS.read_text())
     except Exception: reg = {}
-    used = set(reg.values()); out = []
+    used = set(reg.values()); out = []; seen_base = set(); keys = []
     for b in items:
-        k = _key(b); s = reg.get(k)
+        base = _key(b)
+        k = base if base not in seen_base else _dup_key(b)
+        n = 2
+        while k in keys:  # same date, same first two sources: still one saved slug per story
+            k = f"{_dup_key(b)}|{n}"; n += 1
+        seen_base.add(base); keys.append(k)
+        s = reg.get(k)
         if not s:
-            base = _slugify(b); s = base; n = 2
-            while s in used: s = f"{base}-{n}"; n += 1
-            reg[k] = s; used.add(s)
+            s = _mint(b, used); reg[k] = s
+        else:
+            used.add(s)
         out.append(s)
-    if len(set(out)) != len(out):  # two items sharing a key: give the later ones their own slug
+    if len(set(out)) != len(out):  # registry handed two stories one slug: split the later one and save it
         seen = set()
         for i, s in enumerate(out):
             if s in seen:
-                base = _slugify(items[i]); s2 = base; n = 2
-                while s2 in used: s2 = f"{base}-{n}"; n += 1
-                out[i] = s2; used.add(s2)
+                s2 = _mint(items[i], used); out[i] = s2; reg[keys[i]] = s2
             seen.add(out[i])
     SLUGS.write_text(json.dumps(reg, indent=1, sort_keys=True, ensure_ascii=False) + "\n")
     return out
