@@ -1130,7 +1130,7 @@
   "v": 3
  },
  "guides.html": {
-  "hash": "c5805b30a68cb0a93d37038f2c3145b930f307966df8f295004b4bbc24071ccb",
+  "hash": "842d4477d03a2fe1b5f493063a1f59e7ed368005d2b3171219e9015a2d13489d",
   "updated": "2026-11-09",
   "v": 3
  },
@@ -1227,6 +1227,11 @@
  "guides/six-zero-paddle-review.html": {
   "hash": "c6bc68860b2f4fbef8b06eea1dffc4787e393ce356d3f65b3f91fabcb53a3980",
   "updated": "2026-11-08",
+  "v": 3
+ },
+ "guides/third-shot-drop.html": {
+  "hash": "440a71f4946aca2b066ba7e2aa520891f67815472ae11f8d5a455653f99ad51e",
+  "updated": "2026-11-09",
   "v": 3
  },
  "index.html": {
