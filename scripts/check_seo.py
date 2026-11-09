@@ -229,8 +229,8 @@ for p in pages:
 home_html = text_of("index.html")
 if "We do not claim to have playtested the paddles." not in home_html:
     fail("homepage identity sentence missing")
-if "avantlink.com/affiliate_app_confirm.php" not in home_html:
-    fail("AvantLink homepage script was removed")
+if "avantlink.com/affiliate_app_confirm.php" in home_html:
+    fail("AvantLink homepage verification script is still present")
 if "Side-by-side maker specs. Not a playtest." not in text_of("best-paddles-under-100.html"):
     fail("under-100 comparison table missing")
 if "DropThePickle has not playtested this paddle." not in text_of("paddle-volair-v-1f-xl-w-16mm.html"):
