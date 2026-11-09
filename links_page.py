@@ -91,11 +91,12 @@ def make(C, e, canon, CATALOG, DIST, extra=None):
 </body></html>"""
         out = DIST / fn; out.parent.mkdir(parents=True, exist_ok=True); out.write_text(urls.clean_hrefs(C["BASE_URL"], doc))
         return len(doc.encode())
-    sizes = {"links.html": render("links.html", "bio", "")}
+    NOINDEX = '<meta name="robots" content="noindex,follow">'
+    sizes = {"links.html": render("links.html", "bio", NOINDEX)}  # link-in-bio stub: reachable, not indexed
     for p in PLATFORMS:
-        sizes[f"links/{p}.html"] = render(f"links/{p}.html", p, '<meta name="robots" content="noindex,follow">')
-    # Only the main /links page goes in the sitemap; the platform copies are noindex with a canonical to it.
-    CATALOG["links.html"] = {"fn": "links.html", "title": f"{n} links · Big Dill", "desc": desc, "updated": None}
+        sizes[f"links/{p}.html"] = render(f"links/{p}.html", p, NOINDEX)
+    # /links and its platform copies are noindex (copies canonical to /links); none of them go in the sitemap.
+    CATALOG["links.html"] = {"fn": "links.html", "title": f"{n} links · Big Dill", "desc": desc, "updated": None, "noindex": True}
     for fn, size in sizes.items():
         if size > 30_000: raise SystemExit(f"{fn} is {size} bytes; keep the link-in-bio page under 30KB")
     return sizes

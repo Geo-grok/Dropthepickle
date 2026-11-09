@@ -24,9 +24,45 @@ export default {
     if (WORLDS_301.has(url.pathname)) {
       return Response.redirect(new URL("/events/opendoor-pickleball-world-championships", url).toString(), 301);
     }
-    return env.ASSETS.fetch(request);
+    // www -> apex in one permanent hop, straight to the clean URL (only runs if a www request ever reaches the Worker).
+    if (url.hostname.startsWith("www.")) {
+      url.hostname = url.hostname.slice(4);
+      url.protocol = "https:";
+      url.pathname = cleanPath(url.pathname);
+      return permanent(url.toString());
+    }
+    return canonicalize(request, env, url);
   },
 };
+
+// Static-asset HTML handling ("auto-trailing-slash") answers /foo.html and /foo/ with a TEMPORARY 307 to /foo.
+// Search engines treat 307 as "keep the old URL", so every such redirect is re-issued as a single permanent 301
+// to the same target, query string kept. Real 404s stay 404 (the asset layer returns 404 directly for unknown
+// paths, so an unknown .html never becomes a 301 -> 404 chain).
+const PERMANENT_FROM = new Set([302, 303, 307, 308]);
+async function canonicalize(request, env, url) {
+  const res = await env.ASSETS.fetch(request);
+  // A Buzz story URL that no longer exists (story dropped from data/buzz.json) goes to the Buzz hub.
+  if (res.status === 404 && /^\/buzz\/[^/]+$/.test(url.pathname)) return permanent(new URL("/buzz", url).toString());
+  if (!PERMANENT_FROM.has(res.status)) return res;
+  const loc = res.headers.get("location");
+  if (!loc) return res;
+  const target = new URL(loc, url);
+  if (target.origin !== url.origin) return res;
+  if (!target.search && url.search) target.search = url.search;
+  return permanent(target.toString());
+}
+
+function permanent(location) {
+  return new Response(null, { status: 301, headers: { location, "cache-control": "public, max-age=3600" } });
+}
+
+// /foo.html -> /foo, /dir/index.html -> /dir/, /index.html -> /. Matches urls.clean_path in the build.
+function cleanPath(path) {
+  if (path.endsWith("/index.html")) return path.slice(0, -"index.html".length);
+  if (path.endsWith(".html")) return path.slice(0, -".html".length);
+  return path;
+}
 
 // Public video files copied from media/ into dist/media by build.py. Served from static assets
 // (content-type video/mp4, no redirect). If the asset layer answers a Range request with a full 200,
