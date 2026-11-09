@@ -75,8 +75,8 @@
   "v": 2
  },
  "best-paddles-under-100.html": {
-  "hash": "2d0dd88c9bda94be8f98d3eae6be2a6e131529b2e4c8562df91d73d5fb18549b",
-  "updated": "2026-11-08",
+  "hash": "43c1ef0e1cd3a824281e8ce05d8ecc5c13a6d8e2b8efe950c48eb0d0959d2ab6",
+  "updated": "2026-11-09",
   "v": 2
  },
  "best-paddletek-paddles.html": {
@@ -480,8 +480,8 @@
   "v": 2
  },
  "deals/black-friday-pickleball-deals-2026.html": {
-  "hash": "33966fbaa2e8848087c8cfda0234c164d5f110422a1a22ba44e5ad09daad9550",
-  "updated": "2026-11-08",
+  "hash": "469b06a73cb133c338334b8cc8bf221c7e77a6c4d7531db9c149a949b652bca5",
+  "updated": "2026-11-09",
   "v": 2
  },
  "disclosure.html": {
@@ -1145,8 +1145,8 @@
   "v": 2
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "a797275aff410b8fa323abf87896f2d65cfe1ac92651db97f363dc1095d729ad",
-  "updated": "2026-11-08",
+  "hash": "7874f5961ae511dbcffcedc2f958697df48f54dba84a93634c9f1bf572ea24eb",
+  "updated": "2026-11-09",
   "v": 2
  },
  "guides/best-volair-paddles.html": {
@@ -1205,8 +1205,8 @@
   "v": 2
  },
  "guides/pickleball-gift-guide-2026.html": {
-  "hash": "50c37c07a18c6af8b950968131ce4e747559525d5db29d3e4f4ccc12756a8563",
-  "updated": "2026-11-08",
+  "hash": "648d7b0ac91b7a45f21fc3f1816bb7113bd27f2ea4f44dd57ba1ffbad60b2d3c",
+  "updated": "2026-11-09",
   "v": 2
  },
  "guides/pickleball-grip-size.html": {
@@ -1240,13 +1240,13 @@
   "v": 2
  },
  "index.html": {
-  "hash": "caee990e47434a3061e68097dd82bf30200f8bcc4219b543b8237622cc82f852",
-  "updated": "2026-11-08",
+  "hash": "8905611cd5d403c2e4c0ebcc41c4aef2c78348feeeccf542296b9560440f31d3",
+  "updated": "2026-11-09",
   "v": 2
  },
  "news.html": {
-  "hash": "f9c71f65684d4ebce4cb6129399659174165b0fe5cea6832cc67c50e68bb8d27",
-  "updated": "2026-11-08",
+  "hash": "ea832884da46feecc85b4a41396d30b05b61c182f301663e22529eb67bf67257",
+  "updated": "2026-11-09",
   "v": 2
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
@@ -1365,8 +1365,8 @@
   "v": 2
  },
  "paddle-quiz.html": {
-  "hash": "423094c084f04064add3d241bc158398c686844c96f974fe1b95c941b00d2be4",
-  "updated": "2026-11-08",
+  "hash": "a10d71d86126ff6d62319bdd3d8c158d14872b7bdbb820c617b0e4901ad64284",
+  "updated": "2026-11-09",
   "v": 2
  },
  "paddle-selkirk-labs-project-boomstik.html": {
@@ -1480,8 +1480,8 @@
   "v": 2
  },
  "price-index.html": {
-  "hash": "ff3c51d4bcd03c2aafe2dbf4dcc15bb38f55e204cdd7fb69d80b14f1587379f4",
-  "updated": "2026-11-08",
+  "hash": "031611807522616dac4da3bda3abfc6ea24b6187792394a0e40a58275431739b",
+  "updated": "2026-11-09",
   "v": 2
  },
  "price-tracker.html": {
@@ -1505,8 +1505,8 @@
   "v": 2
  },
  "reviews.html": {
-  "hash": "c302aefd5fb23ae12246f59b6f5acfb423b1c5dbb2b1109878ea105c44b89013",
-  "updated": "2026-11-08",
+  "hash": "09d6772d7a1362192712ebc2538bcaced2bc354bd7ce836746134c5cdb4a5733",
+  "updated": "2026-11-09",
   "v": 2
  },
  "science.html": {
@@ -1520,27 +1520,27 @@
   "v": 2
  },
  "tournaments.html": {
-  "hash": "637a63b272d27acf665c06b82c257782ac8bcaac4761f5807b2c08e1220c1d08",
-  "updated": "2026-10-24",
+  "hash": "754191260aa4ebefc06d4ba44d867a8bf2e8d5cad36564e5f4b130115982b596",
+  "updated": "2026-11-09",
   "v": 2
  },
  "vs-crbn-crbn1-trufoam-barrage-vs-crbn-crbn1-trufoam-genesis.html": {
-  "hash": "6e328337df7049a4845803a8cbdc6fd8196fb500e8881b1c2fb5caabec93f591",
+  "hash": "f41f5cd4f03c574c511532f9d21fc075b3194a7e6b311288c0040cb51dcd105c",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-crbn-crbn1-trufoam-barrage-vs-crbn-crbn1-x-series.html": {
-  "hash": "59422d1104123a046b44da6b6c426142950af1e1705ac1b21545f252de9ebec0",
+  "hash": "2bd109c22fa68979cbc6ada182ac9b2a609f28e09a96321bcb397a2a759590fd",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-crbn-crbn1-trufoam-genesis-vs-crbn-crbn1-x-series.html": {
-  "hash": "3219c0175053f3cdf205952e83bfce5a012a8ecef23601b3f759c0a92416a446",
+  "hash": "68a746919ff475f13da9c976fb4adf4d9e414f8f15d28a6747504cafa16abcd8",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-crbn-crbn3-trufoam-waves-vs-crbn-crbn1-trufoam-barrage.html": {
-  "hash": "3f8a1d1a581ff5af329dc6ba9508736b7e4f119cf55cdaf88c87f8b3a03373eb",
+  "hash": "8c98a2805865df963e6dc1519758cfad1350232a43adcf152243a0e2fe377dea",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1550,32 +1550,32 @@
   "v": 2
  },
  "vs-crbn-crbn3-trufoam-waves-vs-crbn-crbn1-x-series.html": {
-  "hash": "9b2a25cc7118151fae1bd0cb0e6a480f5c6c7c3bc243ffd3fd3470f132da3ab8",
+  "hash": "0794c060b3ab55bb60e773e9077a9e46c9ff83db25da3f21d468486a3ac87dc7",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-engage-axiom-elongated-durable-grit-vs-engage-pursuit-pro2-elongated-16mm.html": {
-  "hash": "2f8eb53a9b339577960b366fa6df7172394ef6494c94a877dfe33cc53e8d24eb",
+  "hash": "1db704e4839cdba6636d7cab8b44ba180070e4ae42f29e6fba4acd6ffc990ebc",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-engage-axiom-elongated-durable-grit-vs-engage-x2-elongated.html": {
-  "hash": "f8884b388e823d9ef0043546342cd30dc7ac3b2bac4f5c5f4c7dbb1223a682f5",
+  "hash": "95dea5ae107ec87375a1a9f10f8ab8d8ac81672e44c292b51eb0eba673267850",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-engage-pursuit-pro2-elongated-16mm-vs-engage-x2-elongated.html": {
-  "hash": "8e7c34c239e272ef6710e76c5253ef6b76ef7393def139a8cf839ea076b02926",
+  "hash": "1344122461c5cebee38c22a146d67d9dab105959e4edfb54872bda01799e9ea0",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-gearbox-gbx-power-elongated-gen-3-vs-gearbox-gx2-power-hybrid.html": {
-  "hash": "f7539a867f5558649ede75ffd338936f84fca0f715a680793569eb25c4b16619",
+  "hash": "8a7df3a8c8f3ff6541db6d0ed6977a3288f35582c3eb07bf8a44d3f5bc28273e",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-gearbox-gbx-power-elongated-gen-3-vs-gearbox-pressure-x-8e.html": {
-  "hash": "2e9ec753e404cf61beafc1294e95b656fccb331cb400f8160367bb5c1241aecf",
+  "hash": "024cd3e334b01d7591b29373ae78b26f218298752efbae11fcb8828bddef9ea6",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1590,7 +1590,7 @@
   "v": 2
  },
  "vs-joola-hyperion-pro-v-vs-joola-perseus-3s-dual-16mm.html": {
-  "hash": "e07f4510acfb0b345fd95038d3819636aa1123f5b454e51c323f1b0a2ae2edd7",
+  "hash": "c2fc560cb218bafa44a7778cdc0d1a118a38dc5c7aa73b2db2f88a8871f42d38",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1610,7 +1610,7 @@
   "v": 2
  },
  "vs-joola-kosmos-pro-v-vs-joola-perseus-3s-dual-16mm.html": {
-  "hash": "39076160a7b95bdc67323138c76de1b7c08728c2f7e1b8ba0dd9485620ffabf0",
+  "hash": "b42c57f7387f9e7358ef73828dc9f94a4e4d6c77f0a911dcced8b19ffeb33c22",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1630,17 +1630,17 @@
   "v": 2
  },
  "vs-joola-perseus-3s-dual-16mm-vs-joola-perseus-pro-v.html": {
-  "hash": "a1578e1afa1c1a73cd91672b07984c48c0665be472c89a3856e6f0b4d45eacce",
+  "hash": "900f551bfdc19bf1a7faedff5cce2799e63d9b9a91809d39a9cbeb26e67d643c",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-joola-perseus-3s-dual-16mm-vs-joola-radius-pro-v.html": {
-  "hash": "500535cc14d5b2dfbc1f133120f29a3bb1e945ddfbb3a8e4e6b106ce0d9a0fb2",
+  "hash": "e9a706844138b48a195d37d1d2fe0d0d41f6a9ef5e781f65896fc9a068d6e5d2",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-joola-perseus-3s-dual-16mm-vs-joola-scorpeus-pro-v.html": {
-  "hash": "c20ea6c419ddece83b1eb722017d6e1dc3bdd05bfe11243ab47f003f002840f4",
+  "hash": "eedd7df36e7c698f7330a12be48ea1e1eeb6a3c62b33a0f58fdd04ff7ea320bb",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1660,12 +1660,12 @@
   "v": 2
  },
  "vs-luzz-cannon-xpp-m1-vs-luzz-glider-2026-hybrid.html": {
-  "hash": "416cc24d1f1dfadf2631db8265a2be29747dac03b9459a38c85fe69b7e81449f",
+  "hash": "60471d49e6c744c450cfbc03b41774438b416618398b249533c868fe075d9bf5",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-paddletek-bantam-jolt-vs-paddletek-bantam-tko-c.html": {
-  "hash": "603e1e0a1f55d49bbdab04553206f6ffd63bc660ab3a9eca4d9490c9d291f96d",
+  "hash": "db74cf42fdb6be81a70f445de51b4b3fc2b75c6fd6e91830a4ad52e7cfd7619f",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1680,12 +1680,12 @@
   "v": 2
  },
  "vs-paddletek-bantam-jolt-vs-paddletek-tempest-wave-pro-c.html": {
-  "hash": "671d2b83e7109a2f748917a7695481b47a35390805431185d16ec6ff18567224",
+  "hash": "4c3c2ca01df392e82f01af82917fb59ef341259f75ad0c1e83338b6dd429d037",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "3532b8eca7ec4502763b678ad434be52f39309675208190be002b9ffc7398b7a",
+  "hash": "ea72986d44201a2ead98ec87a90c8886c53c7f3bba5e545360d8731788ff9dec",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1695,7 +1695,7 @@
   "v": 2
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-tempest-wave-pro-c.html": {
-  "hash": "ef51e396fd056e39527db8b61e72b1974cecd51410e14e77ca88f2b1b47d2089",
+  "hash": "e22122dbc8ae011461c15d7c36a1ddd807cc60288afc51c583703ac63bc243c2",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1705,37 +1705,37 @@
   "v": 2
  },
  "vs-paddletek-honeyfoam-tko-x-vs-paddletek-tempest-wave-pro-c.html": {
-  "hash": "c532806779a6bcf7b4f765406e349a81151d37550c5b3f33d9a3b6501287b7f2",
+  "hash": "686962ae2b10c1402ddcaf6b8373ff8ba33739d9fb882fc43d73a000339f4603",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-paddletek-tempest-veyra-vs-paddletek-tempest-wave-pro-c.html": {
-  "hash": "5969dfc740bf8120b5d191a299bc3ad4a37f9e451268680506db93baa4c04d83",
+  "hash": "fd22d0a91b8d17b051fb1eec7e71a02cad4fb091ce53c19f3172cb8278b2e6d9",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-luxx-control-air-infinigrit.html": {
-  "hash": "5c8ee3ad23b7c6583f2a999af2bd44287fcb33ddc13a8c9e07c1b22109937541",
+  "hash": "93ad963f2c171b65129cf7b1a4bbed37dfffb90f0c68c5508c5e6c7d1ee0825a",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html": {
-  "hash": "86de85da8a86b4d08f040556f4e04c530d4dd2858090c6107043c3cda7868d6d",
+  "hash": "62ea4f64d106c0fcedf94ec9bff2cefa4cb226b2e77b51d03d3a7bf0035c75ac",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-slk-era-power.html": {
-  "hash": "31cd984fe91d17f4ca620e905b5127db76c2406e09cf2ec9bd0e44fb08a29b1b",
+  "hash": "9db761ab8eba0d2dbb0ebc9fcc5d351c1b98a6ba52cb342474fd9cd51a71c50d",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-slk-halo-power.html": {
-  "hash": "8f3d2e88cb31b59c7f9e2e20d6e256323340550049e59f31a662b3499ccd7e46",
+  "hash": "2befd76689bcb2463b2b1dc80f92e5838880500f91441466bee94fcbb69315f4",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-selkirk-luxx-control-air-infinigrit-vs-selkirk-omni.html": {
-  "hash": "f0662cbd90210a6d2e0ead8deeeb8386be081a439c04026698deba3b0c89f544",
+  "hash": "8660b102706f527d51f8e927bd18809105b895b6b7316a5377dd253123829246",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1745,52 +1745,52 @@
   "v": 2
  },
  "vs-selkirk-luxx-control-air-infinigrit-vs-selkirk-slk-halo-power.html": {
-  "hash": "fd89d155edb9d28af7f1b35abc9df2310c625f42bcf256240d30171bae7ca7ce",
+  "hash": "56ac4f2229b2417cb137fe3f86cad33e8496d958728726735dea86f3951e4164",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-selkirk-omni-vs-selkirk-slk-era-power.html": {
-  "hash": "b15d27334bce55d69a76477ad43d8cab38d0e4b5334d7b46a54d95b837d68f2b",
+  "hash": "d2f73de25ccaf5f22342540651ecfdf3ad05da0e6131ba8f0a6fdbfd8b69ba4a",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-selkirk-omni-vs-selkirk-slk-halo-power.html": {
-  "hash": "f8e7fe66a965a6a1bb8e03450064be890b91cc13d54b7cdbe4b3e2cc05865503",
+  "hash": "467dd40db61f96b7fac47d5431e1fd39577f64d4661fbfe104f86845b838d24c",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-selkirk-slk-era-power-vs-selkirk-slk-halo-power.html": {
-  "hash": "79027402ce61baf6a70c0d24c86b686f8fe4446d826e15046ddedb734635dfc5",
+  "hash": "3f6102259872352e7a092ab0c3a7cbd7be862cbaabcff917d7c7318e178a54ff",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-coral-16mm.html": {
-  "hash": "24b370ed0615a2e87d9fe39d94418eec90d7715d67091a83d44a888641140fc4",
+  "hash": "1f47ea1fa58b6f32c5a0231df548f220048e826b4424d201eb9e291bee0e2b79",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-double-black-diamond-control.html": {
-  "hash": "2d760fd770278c370092d260e0674020cde47f0f1446c38df8813ebdc3cec8a2",
+  "hash": "ada56675a35590e8ca22083e874f55f84a18b2fab050aa2ad2ddffd93e46293f",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-ruby.html": {
-  "hash": "21088fa0c396ade1317682ba22e1481509d18eb92265725416867d4f27f02c0f",
+  "hash": "ad7dfa50193d89890e5aa986379376b579e234f3512f6f4c8b6051acf495ef72",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-six-zero-coral-16mm-vs-six-zero-double-black-diamond-control.html": {
-  "hash": "fac01dbd2d848c04ef34011090e506f1799f8afda3c79aff674a31d89a4baffd",
+  "hash": "e9c3468172c6a6834363aa47ee2e668d261a4241d3a8df58e76b3ce11b86e6cf",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-six-zero-coral-16mm-vs-six-zero-ruby.html": {
-  "hash": "fbec5086f036d776cb182c7c43e42a42f6709544e457d6893e9c4d8f33684c62",
+  "hash": "e805703a04172768d45949515f9d133132ab52df6ab01deadded52b0bbb4cd03",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-six-zero-double-black-diamond-control-vs-six-zero-ruby.html": {
-  "hash": "fd4707625e56f27eb55a227006a80e31482727515c3cd469f30195e95f00e2c5",
+  "hash": "d8af9b9ed4dfa5086ece0d87d6c1befb41f42b52316104221ec9e176fbef71f6",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1805,42 +1805,42 @@
   "v": 2
  },
  "vs-volair-cmd-el-16mm-vs-volair-ctrl-1-forza.html": {
-  "hash": "2e5d77e115a829a84f7a6b38d200b163c34ae1df12605065336ac7241b622c9a",
+  "hash": "952a9288db5c8f6ee07de352e8b65cbed0460cc38c3ee13410cbf7b1cbe3e261",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-el-16mm-vs-volair-ctrl-2-forza.html": {
-  "hash": "d63e8e0c29914859ebb2ba5358c04c59d85c000fe26fb6b8389881dbb333e70f",
+  "hash": "6988342448c41af66db990b1fe35fe8e7e3de272d862d44071d7f10905bb4409",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-1-forza.html": {
-  "hash": "baf7724114de9197868e512472829f36b34e5ff6cffcf65ee5d83826f9eefe06",
+  "hash": "2b80b97b1632073c55f3ca59c67ce56fdc07ed3c3857eccd5bf569125a907c3d",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-2-forza.html": {
-  "hash": "d70ab4bd91899a8694362402431b19defdf21adef519b134d6cd6bf6e0c61e6e",
+  "hash": "50b7cccfb7f666c4deb4b928b9f5278e53de39c9c7e71523906d57d2dc1a8a5f",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-2.html": {
-  "hash": "6f50409eb7c86592ea11cb7050abd033924343d7b5365f22896f5be726a8b799",
+  "hash": "21fce24861666e3c1040ee1b1a2d7b9f01b332079384605e3ff655b0332a036c",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-el-16mm-vs-volair-pro-1.html": {
-  "hash": "7b94eadf1ce3b794329cd966527541aaa50427415dc77b5115a5644f35c8b59c",
+  "hash": "190e0921398604e5d436a16862e65b5835d7aef1f65b8b96b850f1c88a800193",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-el-16mm-vs-volair-pro-2.html": {
-  "hash": "4591d682dbd51253dfc76d6ce1a8d94e7b99813225a32073579bcf92c5ffa2c4",
+  "hash": "dfbd196475d8e44870d01dc0ab9ec5007b131cf01021fbd411a42ded6f20ed52",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-el-16mm-vs-volair-v-1f-xl-w-16mm.html": {
-  "hash": "8f14421667cde11a68ce6d5d764941cdc1f66a114286a8ee6373f7611ff15339",
+  "hash": "a6cd322b70f6c0add936dc55ce1a516149934836303deb213e9d7f76cf4b4856",
   "updated": "2026-11-09",
   "v": 2
  },
@@ -1850,27 +1850,27 @@
   "v": 2
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-1-forza.html": {
-  "hash": "fc0e8ca48fce0ff25baabf9caa368d493ea9fc7143d0f1130cac6ea6cbd3c1c2",
+  "hash": "3518315e8d25b76e8a1f1e2030f4301da21771c2019817dba982b97c8738816c",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-2-forza.html": {
-  "hash": "5a3bd4b810525aa2ef4e5eb099748acd6c5f210b6559c09fd578976f8d36f415",
+  "hash": "c1f733e5b597fd7cd989e3ce9b29a08c60f1c2f3323dd9edd8c405f69e11737f",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-1-forza.html": {
-  "hash": "fdb71c6e8692425f78c2a2f31bfe20da391119894f1a4fc36b7c4741a7a5222f",
+  "hash": "954ebd123cc7320c74b06680930cb5f0704e4504545e54bd8f15bae4df56f502",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2-forza.html": {
-  "hash": "832c67e4bef52f967a28bec24dbc4c497f96e1155646f6824f2230cd25aa9353",
+  "hash": "b679ecdfc50c613019dde6f261b3817d98ab32f525040998a13125ce20c97849",
   "updated": "2026-11-09",
   "v": 2
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2.html": {
-  "hash": "8e875d8725e216a9e78bee411394e61eaedb22dd1d6153e15a8004dc6e934a8a",
+  "hash": "03e650d23db573a929fb2c519f5a3460c59e52a1c19f6dfa6bff5da087c65de1",
   "updated": "2026-11-09",
   "v": 2
  },

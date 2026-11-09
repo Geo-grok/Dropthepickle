@@ -1,6 +1,41 @@
 {
  "items": [
   {
+   "source": "Pickleball Union",
+   "title": "Is Complimenting the Other Team Bad Pickleball?",
+   "link": "https://pickleballunion.com/complimenting-opponents-in-pickleball/",
+   "date": "2026-11-09",
+   "summary": "Pickleball Union story from 2026-11-09, filed under Pickleball 101, Complimenting Opponents In Pickleball, Intermediate Pickleball."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "Why 3.5 Players May Be Dinking Too Much",
+   "link": "https://pickleballunion.com/should-3-5-pickleball-players-be-dinking-less/",
+   "date": "2026-11-09",
+   "summary": "Pickleball Union story from 2026-11-09, filed under Tips & Strategy, Intermediate Play, 3.5 Pickleball."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "Jack Sock Tried the Lob Serve—And That’s More Interesting Than Whether He Won the Point",
+   "link": "https://pickleballunion.com/jack-sock-lob-serve/",
+   "date": "2026-11-09",
+   "summary": "Pickleball Union story from 2026-11-09, filed under Advanced Play, Tips & Strategy."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "2026 Pickleball World Championships recap: JW Johnson, Tama Shimabukuro break through at Worlds",
+   "link": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-recap-jw-johnson-tama-shimabukuro-ben-johns-anna-leigh-waters/",
+   "date": "2026-11-09",
+   "summary": "The Kitchen Pickle story from 2026-11-09, filed under PPA, Pro pickleball."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "Review: This paddle helped JW Johnson get to DUPR No. 1",
+   "link": "https://thekitchenpickle.com/blogs/gear/paddletek-bantam-jolt-tempest-veyra-paddle-review/",
+   "date": "2026-11-08",
+   "summary": "The Kitchen Pickle story from 2026-11-08, filed under Gear, pickleball gear, pickleball paddles."
+  },
+  {
    "source": "The Dink",
    "title": "3 Overhead Smash Tips That Make the Ball Never Come Back",
    "link": "https://www.thedinkpickleball.com/3-overhead-smash-tips-for-power-that-ends-the-point/",
@@ -113,13 +148,6 @@
    "summary": "Pickleball Union story from 2026-11-04, filed under Gear, Legal Pickleball Paddles, Paddle Approval."
   },
   {
-   "source": "Pickleball Union",
-   "title": "How Gabe Tardio Creates a Heavier Speed-Up With a Smaller Swing",
-   "link": "https://pickleballunion.com/gabe-tardio-forehand-speed-up/",
-   "date": "2026-11-04",
-   "summary": "Pickleball Union story from 2026-11-04, filed under Tips & Strategy, Advanced Play, Intermediate Play."
-  },
-  {
    "source": "The Kitchen Pickle",
    "title": "RPM just updated its paddle warranty policy … and it’s a huge win for customers",
    "link": "https://thekitchenpickle.com/blogs/gear/rpm-pickleball-updated-warranty-policy-james-ignatowich-interview/",
@@ -139,34 +167,6 @@
    "link": "https://thekitchenpickle.com/blogs/news/major-league-pickleball-nations-cup-finals-best-moments-team-usa-team-latin-america/",
    "date": "2026-11-03",
    "summary": "The Kitchen Pickle story from 2026-11-03, filed under Major League Pickleball, MLP, Pro pickleball."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "Mark Wahlberg, Jeremy Piven, John Isner and more to play in celebrity pickleball showdown at Pickleball World Championships",
-   "link": "https://thekitchenpickle.com/blogs/news/mark-wahlberg-jeremy-piven-john-isner-celebrity-pickleball-showdown-2026-pickleball-world-championships/",
-   "date": "2026-11-03",
-   "summary": "The Kitchen Pickle story from 2026-11-03, filed under PPA, Pro pickleball."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "The Cold-Weather Pickleball Guide Nobody Gives You",
-   "link": "https://pickleballunion.com/cold-weather-pickleball-guide/",
-   "date": "2026-11-02",
-   "summary": "Pickleball Union story from 2026-11-02, filed under Training, Gear, Injury Prevention & Recovery."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "How Pickleball Paddles Are Made, From Plywood to Full Foam",
-   "link": "https://pickleballunion.com/how-pickleball-paddles-are-made/",
-   "date": "2026-11-02",
-   "summary": "Pickleball Union story from 2026-11-02, filed under Gear, Carbon Fiber Paddles, Cold-Pressed Paddles."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "2026 Pickleball World Championships: Draws, schedule and TV information",
-   "link": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-draws-schedule-tv-information/",
-   "date": "2026-11-02",
-   "summary": "The Kitchen Pickle story from 2026-11-02, filed under PPA, Pro pickleball."
   },
   {
    "source": "The Pickler – Inside the Den",
@@ -459,5 +459,5 @@
   "The Pickler – Inside the Den": "ok (8)",
   "Pickleball England": "ok (8)"
  },
- "updated": "2026-11-08T11:33"
+ "updated": "2026-11-09T11:52"
 }
