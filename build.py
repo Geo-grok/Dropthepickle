@@ -925,7 +925,7 @@ def build():
         return f'<article class="scicard"><video controls playsinline preload="metadata"{pa} src="media/{slug}.mp4"></video><h3>{e(t)}</h3><p>{e(d)}</p></article>'
     page("science.html", "Big Dill Science: pickleball physics videos",
          f'<h1>Big Dill Science</h1><p class="meta">Short videos that explain the physics behind the shots. Tap play. Sound on.</p><div class="sci-grid">{"".join(scicard(*v) for v in SCI if (ROOT / "media" / f"{v[0]}.mp4").exists())}</div>'
-         f'<p class="meta">Want to put it to work? Try <a href="guides/how-to-dink.html"><b>how to dink</b></a> or <a href="reviews.html"><b>paddle reviews</b></a>.</p>',
+         f'<p class="meta">Want to put it to work? Try <a href="guides/how-to-dink.html"><b>how to dink</b></a>, the <a href="guides/third-shot-drop.html"><b>third shot drop guide</b></a> or <a href="reviews.html"><b>paddle reviews</b></a>.</p>',
          "Big Dill Science: short pickleball physics videos on topspin and the third shot drop.", fresh={"sci": SCI}, schema=[sci_ld(*v) for v in SCI])
     import paddle_pages; paddle_pages.make(page, e, fmt, buy, D, C, PD, R, P, X=dict(tcard=tcard, ncard=ncard, rcard=rcard, signup=signup, nudge=nudge, NUDGEJS=NUDGEJS, SIGNUP_TITLE=SIGNUP_TITLE, SIGNUP_BLURB=SIGNUP_BLURB, T=T, N=N, BUZZ_TEASER=BUZZ_TEASER, COURT=COURT, HEROART=HEROART, PADDLE_SVG=PADDLE_SVG))
     import paddle_quiz; QUIZ = paddle_quiz.make(page, e, fmt, D, PD, go_slug, paddle_pages.slug, C=C)

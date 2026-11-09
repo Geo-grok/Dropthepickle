@@ -42,6 +42,7 @@ GUIDES = [
     ("guides/pickleball-grip-size.html", "Pickleball grip size chart"),
     ("guides/pickleball-drills.html", "Pickleball drills"),
     ("guides/pickleball-kitchen-rules.html", "Pickleball kitchen rules"),
+    ("guides/third-shot-drop.html", "Third shot drop"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -1171,7 +1172,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h3>2. Two Tap Drill</h3>
 <p>From the kitchen line, volley back and forth with your partner. When the ball comes to you, tap it up to yourself once before you send it back. The goal is a steady rally at a pace you control. USA Pickleball lists soft hands, ball control, reaction time and volley consistency as what it improves.</p>
 <h3>3. Cross Court Drops</h3>
-<p>Your partner stands at the kitchen line. You stand behind the baseline, cross-court. Hit drop shots to your partner, who returns the ball deep to your baseline. The key rule: don't move forward after your shot. Stay back and keep hitting drops. Aim for 10 to 20 good drops in a row, then switch. In a game, the drop is the soft third shot that buys you time to move up. USA Pickleball's <a href="{DR_USAP3}" target="_blank" rel="noopener">third shot guide</a> suggests going cross-court because that path crosses the lowest part of the net.</p>
+<p>Your partner stands at the kitchen line. You stand behind the baseline, cross-court. Hit drop shots to your partner, who returns the ball deep to your baseline. The key rule: don't move forward after your shot. Stay back and keep hitting drops. Aim for 10 to 20 good drops in a row, then switch. In a game, the drop is the soft third shot that buys you time to move up. USA Pickleball's <a href="{DR_USAP3}" target="_blank" rel="noopener">third shot guide</a> suggests going cross-court because that path crosses the lowest part of the net. Full technique, drop vs drive and more drills: <a href="third-shot-drop.html">third shot drop guide</a>.</p>
 <h3>4. Serving From a Basket</h3>
 <p>Take a basket of balls and serve from one side until it's empty, focusing on consistency and placement. Collect the balls and repeat from the other side. This is the one you can do alone. Need a refresher on where a legal serve has to land? See the <a href="pickleball-rules-for-beginners.html">rules for beginners</a>.</p>
 <h2>Five 2-person drills from PlayPickleball</h2>
@@ -1288,6 +1289,99 @@ def make(page, e, fmt, PP, cur, ph):
          "Pickleball kitchen rules from the 2026 USA Pickleball rulebook: NVZ size, paddle-touch and momentum faults, standing after a bounce, kitchen line on the serve, and FAQ.",
          fresh={"checked": KV_CHECKED, "faults": KV_FAULTS, "faq": kv_faq},
          schema=[kv_faq_ld])
+
+    # ----- Third shot drop (Nov 9, 2026) -----
+    # Evergreen technique page for the approved P3 target. Every tip below paraphrases the linked USA Pickleball
+    # and Pickleball.com pages read on TS_CHECKED. No invented stats, heights or percentages beyond what they say.
+    TS_CHECKED = "2026-11-09"
+    ts_checked = _dt.date.fromisoformat(TS_CHECKED).strftime("%B %-d, %Y")
+    TS_USAP_DD = "https://usapickleball.org/pickleball-skills/level-three/mastering-the-third-shot-in-pickleball/"
+    TS_USAP_BASICS = "https://usapickleball.org/pickleball-skills/level-three/basics-of-the-third-shot-drop/"
+    TS_USAP_L3 = "https://usapickleball.org/skill-level/level-three/"
+    TS_PBCOM = "https://pickleball.com/learn/drop-or-drive-mastering-the-third-shot-decision"
+    TS_CHOICE = [
+        ("Low return that is hard to attack", "Drop", "USA Pickleball"),
+        ("Deep return that pushes you back", "Drop", "USA Pickleball, Pickleball.com"),
+        ("Short return that bounces high", "Drive", "USA Pickleball, Pickleball.com"),
+        ("You are balanced and stepping in", "Drive", "Pickleball.com"),
+        ("Off balance and need a simpler ball", "Drive (then drop on the fifth)", "USA Pickleball"),
+    ]
+    ts_faq = [
+        ("What is a third shot drop in pickleball?",
+         "It is a soft, controlled shot hit by the serving team on the third shot of the rally, after the serve and return, that lands in the opponent's kitchen. USA Pickleball describes it as like a longer dink hit from the baseline. Because it lands low in the kitchen, the net team has to let it bounce or hit up, which gives the serving team time to move forward."),
+        ("Why is it called the third shot?",
+         "The serve is shot one and the return is shot two. Under the two-bounce rule the serving team must let the return bounce, so they usually start the third shot from the baseline while the receivers are already at the kitchen line. The third shot is the serving team's first chance to get to the net."),
+        ("Should I drop or drive the third shot?",
+         "USA Pickleball's level-three tip is simple: drop low balls, drive high balls, and follow your shot in. Drop when the return is low or deep and pushes you back. Drive when the return is short with a high bounce and you are balanced. A drive can also set up an easier drop on the fifth shot."),
+        ("How hard should I grip the paddle for a third shot drop?",
+         "Loosely. USA Pickleball suggests about a three on a one-to-ten grip pressure scale. A tighter grip sends the ball farther."),
+        ("Where should I aim a third shot drop?",
+         "Into the opponent's kitchen. USA Pickleball suggests crosscourt because that path crosses the lowest part of the net, and also lists the opponent's backhand, the middle of the court, and the returner as smart targets. Pickleball.com suggests a soft arc that clears the net by no more than about a foot."),
+        ("Should I run to the net after a third shot drop?",
+         "Only after a good one. Both USA Pickleball and Pickleball.com say to move up once you know the drop is quality. If it is high or short, hold back, defend, and try to get in on the fifth shot."),
+    ]
+    ts_faq_html, ts_faq_ld = faq(ts_faq)
+    ts_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in TS_CHOICE)
+    tsd = f'''<h1>Third shot drop: how to hit it, when to drop vs drive, and drills</h1>
+<p class="meta">Built from USA Pickleball's <a href="{TS_USAP_BASICS}" target="_blank" rel="noopener">third shot drop basics</a> and <a href="{TS_USAP_DD}" target="_blank" rel="noopener">drop vs drive</a> lessons, its <a href="{TS_USAP_L3}" target="_blank" rel="noopener">level three skills page</a>, and <a href="{TS_PBCOM}" target="_blank" rel="noopener">Pickleball.com's third-shot decision guide</a>, all read {ts_checked}. No coaching stats are made up here.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>What it is:</b> a soft shot the serving team hits on shot three that lands in the opponent's kitchen, like a long dink from the baseline.</li>
+<li><b>Why it matters:</b> the two-bounce rule keeps the serving team back while the receivers reach the kitchen line. A good drop lets you move up without eating a hard volley.</li>
+<li><b>How to hit it:</b> semi-open stance, paddle in front of you, grip pressure around 3 out of 10, gentle low-to-high lift with your legs, short follow-through.</li>
+<li><b>Where:</b> into the kitchen, often crosscourt over the lowest part of the net.</li>
+<li><b>Drop or drive:</b> drop low or deep returns; drive short, high ones when you are balanced.</li>
+</ul>
+<h2>Why the third shot is the hard one</h2>
+<p>A rally starts with the serve and the return, and both must bounce (<a href="pickleball-rules-for-beginners.html">two-bounce rule</a>). That means the returning team can walk up to the <a href="pickleball-kitchen-rules.html">kitchen line</a> while the serving team waits at the baseline. USA Pickleball calls the third shot one of the most important and toughest shots in the game because it is the serving team's bridge from the baseline to the kitchen, where most points are won. Court layout and kitchen depth: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</p>
+<h2>How to hit a third shot drop</h2>
+<ol>
+<li><b>Stay back and get set.</b> Wait behind the baseline for the return, then take small steps so you hit the ball out in front of you (USA Pickleball).</li>
+<li><b>Semi-open stance.</b> Halfway between facing the net and facing the sideline. USA Pickleball says it keeps the stroke compact and stops an oversized backswing.</li>
+<li><b>Paddle in front.</b> USA Pickleball's picture: a brick wall right behind your legs, and the paddle never swings past it.</li>
+<li><b>Soft grip.</b> About a 3 on a 1 to 10 pressure scale. Squeeze harder and the ball flies farther.</li>
+<li><b>Lift, don't slap.</b> Pickleball.com: a gentle low-to-high motion, paddle face slightly open, legs doing the work instead of the wrist.</li>
+<li><b>Soft arc.</b> Pickleball.com suggests the ball clear the net by no more than about a foot and land in the kitchen so opponents have to hit up.</li>
+<li><b>Earn the walk forward.</b> Move up only after a quality drop. If it floats high or lands short, hold your ground and look for the fifth shot.</li>
+</ol>
+<p>Same soft hands as a dink, just from farther back. If dinks still feel stiff, start with <a href="how-to-dink.html">how to dink</a>. For why a high, soft arc lands short and slows down, watch our Big Dill Science short on <a href="../science.html">the physics of the third shot drop</a>.</p>
+<h2>Drop or drive: a quick read</h2>
+<p>USA Pickleball's level-three rule of thumb is "drop low balls, drive high balls, and follow your shot in." The table puts the sources' cues side by side.</p>
+<div class="tbl"><table><thead><tr><th>What the return gives you</th><th>Usual choice</th><th>Source</th></tr></thead><tbody>{ts_rows}</tbody></table></div>
+<p>A drive does not need to win the point. Pickleball.com says a heavy drive can force pop-ups and set up the fifth shot, and suggests aiming at the hip area rather than the shoulders.</p>
+<h2>Where to aim</h2>
+<ul>
+<li><b>Crosscourt:</b> USA Pickleball notes the crosscourt path takes the ball over the lowest part of the net and gives you more room.</li>
+<li><b>The backhand:</b> usually the weaker side.</li>
+<li><b>The middle:</b> more margin for error, and it can cause confusion between partners.</li>
+<li><b>The returner:</b> often still moving forward after the return.</li>
+</ul>
+<h2>Common third shot drop mistakes</h2>
+<ul>
+<li><b>Too much backswing.</b> The brick-wall cue fixes it.</li>
+<li><b>Death grip.</b> Tension adds distance; relax toward a 3 out of 10.</li>
+<li><b>Wristy flick.</b> Lift with the legs instead.</li>
+<li><b>Running in behind a bad drop.</b> A high drop plus a rushing serving team is how points get lost. Stay back and reset.</li>
+<li><b>Only one shot.</b> USA Pickleball says to practice both the drop and the drive and learn when to use each.</li>
+</ul>
+<h2>Third shot drop drills</h2>
+<p>USA Pickleball's "Cross Court Drops" drill is in our <a href="pickleball-drills.html">pickleball drills</a> guide: your partner stands at the kitchen line, you hit drops crosscourt from the baseline, they feed it back deep, and you stay back until you string 10 to 20 good drops together. Two easy add-ons, both following the sources' tips:</p>
+<ul>
+<li><b>Drop and step.</b> Hit a drop, take a few steps forward only if it landed in the kitchen, then split-step and reset back to the baseline.</li>
+<li><b>Call it.</b> Your partner feeds a random mix of low, deep and short, high balls. Call "drop" or "drive" before you hit, then hit that shot.</li>
+</ul>
+<p>USA Pickleball's level-three page suggests tracking one focus number each game, for example the share of your drops that were quality ones. A paddle with a softer, more controlled feel can help this shot; see <a href="paddle-weight-and-core.html">paddle weight and core</a> and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+{money_links()}
+{ts_faq_html}
+{sources([("USA Pickleball: Basics of the Third Shot Drop", TS_USAP_BASICS, f"definition, semi-open stance, paddle in front, grip pressure about 3 of 10, read {ts_checked}"),
+          ("USA Pickleball: Mastering the Third Shot, Drop vs. Drive", TS_USAP_DD, f"when to drop vs drive, keys to the third shot, placement and crosscourt tip, read {ts_checked}"),
+          ("USA Pickleball: Skill Level Three", TS_USAP_L3, f"third-shot rule of thumb and one-focus-metric tip, read {ts_checked}"),
+          ("Pickleball.com: Drop or drive? Mastering the third shot decision", TS_PBCOM, f"low-to-high lift, net clearance, drive cues and targets, read {ts_checked}")])}
+{more("guides/third-shot-drop.html")}'''
+    page("guides/third-shot-drop.html", "Third Shot Drop in Pickleball: How to Hit It, Drop vs Drive and Drills", tsd,
+         "How to hit a pickleball third shot drop: stance, grip pressure, low-to-high lift, where to aim, when to drop vs drive, common mistakes and drills, from USA Pickleball tips.",
+         fresh={"checked": TS_CHECKED, "choice": TS_CHOICE, "faq": ts_faq},
+         schema=[ts_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
