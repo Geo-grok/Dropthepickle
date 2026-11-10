@@ -31,6 +31,12 @@ t /discount-codes/Volair/ 301 "$B/discount-codes/volair"
 t /buzz/ 301 "https://dropthepickle.com/buzz" www.dropthepickle.com
 t /vs-selkirk-omni-vs-selkirk-slk-era-power.html 301 "$B/vs-selkirk-omni-vs-selkirk-slk-era-power"
 t /events/ppa-worlds-2026.html 301 "$B/events/opendoor-pickleball-world-championships"
+t /best-paddles-under-100 301 "$B/guides/best-paddles-under-100"
+t /best-paddles-under-100.html 301 "$B/guides/best-paddles-under-100"
+t /best-paddles-under-100/ 301 "$B/guides/best-paddles-under-100"
+t "/best-paddles-under-100.html?utm=1" 301 "$B/guides/best-paddles-under-100?utm=1"
+t /best-paddles-under-100.html 301 "https://dropthepickle.com/guides/best-paddles-under-100" www.dropthepickle.com
+t /guides/best-paddles-under-100 200 -
 t /nonexistent.html 404 -
 t /nonexistent/ 404 -
 t /nonexistent 404 -

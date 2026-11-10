@@ -74,11 +74,6 @@
   "updated": "2026-11-10",
   "v": 3
  },
- "best-paddles-under-100.html": {
-  "hash": "aa5f5355042cbdf86ad4dfb45db45f48af2cd014d9b402dbf62882e87d038c09",
-  "updated": "2026-11-10",
-  "v": 3
- },
  "best-paddletek-paddles.html": {
   "hash": "0e8738efb156f3f0ee8d39bdaa85a2277d5915768c2031a65b20e2b7fb2e9a60",
   "updated": "2026-11-10",
@@ -450,8 +445,8 @@
   "v": 3
  },
  "compare.html": {
-  "hash": "815c5f1cecadd2f99ca3bf06ca03f31edc20c91d72897cf1e3ecbeb7288f57a0",
-  "updated": "2026-11-02",
+  "hash": "a499344e0af7c57f2b0add6cdeeed403f4eba3c9b8701e330788103cdd2d3f84",
+  "updated": "2026-11-10",
   "v": 3
  },
  "creators.html": {
