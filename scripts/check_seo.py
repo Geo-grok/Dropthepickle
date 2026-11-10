@@ -199,8 +199,11 @@ if deals_url != "https://dropthepickle.com/deals":
 def product_offer(fn):
     g = json.loads(BeautifulSoup(text_of(fn), "html.parser").find("script", attrs={"type": "application/ld+json"}).string)
     return next(n for n in g["@graph"] if n.get("@type") == "Product")["offers"]
-if product_offer("paddle-paddletek-honeyfoam-tko-x.html").get("availability") != "https://schema.org/OutOfStock":
-    fail("Honeyfoam TKO-X should be OutOfStock")
+# Honeyfoam TKO-X: schema availability must follow the latest recorded price check, not a hardcoded state.
+_tko = json.loads((ROOT / "data" / "price_history.json").read_text())["paddles"]["Paddletek Honeyfoam TKO-X"]["history"][-1].get("available")
+_tko_want = {True: "https://schema.org/InStock", False: "https://schema.org/OutOfStock"}.get(_tko)
+if product_offer("paddle-paddletek-honeyfoam-tko-x.html").get("availability") != _tko_want:
+    fail(f"Honeyfoam TKO-X availability should match latest price check ({_tko_want or 'none recorded'})")
 if "availability" in product_offer("paddle-paddletek-tempest-veyra.html"):
     fail("Tempest Veyra has no recorded availability and should not claim InStock")
 if product_offer("paddle-volair-v-1f-xl-w-16mm.html").get("availability") != "https://schema.org/InStock":
