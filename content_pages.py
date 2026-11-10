@@ -43,6 +43,7 @@ GUIDES = [
     ("guides/pickleball-drills.html", "Pickleball drills"),
     ("guides/pickleball-kitchen-rules.html", "Pickleball kitchen rules"),
     ("guides/third-shot-drop.html", "Third shot drop"),
+    ("guides/pickleball-stacking.html", "Pickleball stacking"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -306,6 +307,7 @@ def make(page, e, fmt, PP, cur, ph):
 <ul>
 <li><a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a> — one-page quick reference, including confirmed 2026 changes.</li>
 <li><a href="pickleball-kitchen-rules.html">Pickleball kitchen rules</a> — NVZ faults, paddle-touch, momentum and the kitchen line.</li>
+<li><a href="pickleball-stacking.html">How to stack in pickleball</a> — legal doubles positioning on the serve and return.</li>
 <li><a href="pickleball-drills.html">Pickleball drills</a> — USA Pickleball's four beginner drills, plus partner and solo wall work.</li>
 <li><a href="pickleball-court-dimensions.html">Pickleball court dimensions</a> — court size, kitchen depth, net height and layout tolerances.</li>
 <li><a href="how-to-dink.html">How to dink</a> — the soft kitchen shot after the two bounces.</li>
@@ -519,7 +521,7 @@ def make(page, e, fmt, PP, cur, ph):
 <li><b>Spectators (8.J).</b> Spectators must not be consulted on any call. The old wording was "should not."</li>
 </ul>
 <p>The change document also lists other updates, including adaptive standing play, timeouts, ejections, and wheelchair rules. Read the full <a href="{RULES_CHANGES}" target="_blank" rel="noopener">change document</a> or USA Pickleball's <a href="{RULES_CHANGES_VIEW}" target="_blank" rel="noopener">rule change list</a> for every entry. Pro tours can publish their own deviations, so check the event's rules before you play it.</p>
-<p>Once the rules click, see <a href="how-to-dink.html">how to dink</a> and <a href="how-to-read-dupr-ratings.html">how to read DUPR ratings</a>.</p>
+<p>Once the rules click, see <a href="how-to-dink.html">how to dink</a>, <a href="pickleball-stacking.html">how to stack in doubles</a> (legal under the position rules in Section 5) and <a href="how-to-read-dupr-ratings.html">how to read DUPR ratings</a>.</p>
 {money_links()}
 {faq_html}
 {sources([("USA Pickleball 2026 Official Rulebook (PDF)", RULES, ""),
@@ -1397,6 +1399,133 @@ def make(page, e, fmt, PP, cur, ph):
          "How to hit a pickleball third shot drop: stance, grip pressure, low-to-high lift, where to aim, when to drop vs drive, common mistakes and drills, from USA Pickleball tips.",
          fresh={"checked": TS_CHECKED, "choice": TS_CHOICE, "faq": ts_faq},
          schema=[ts_faq_ld])
+
+    # ----- Pickleball stacking (Nov 10, 2026) -----
+    # Evergreen doubles-tactics page for the approved P3 target. Rule numbers are from the 2026 USA Pickleball
+    # Official Rulebook PDF (Section 5, 6.D.2, 7.A, 7.E.4, 14.A, 18.C), read on SK_CHECKED. Tactics paraphrase the
+    # linked Pickleheads, The Kitchen and USA Pickleball pages read the same day. No invented stats or rule numbers.
+    SK_CHECKED = "2026-11-10"
+    sk_checked = _dt.date.fromisoformat(SK_CHECKED).strftime("%B %-d, %Y")
+    SK_USAP_SKILL = "https://usapickleball.org/skill-level/"
+    SK_USAP_STRAT = "https://usapickleball.org/pickleball-skills/level-three/how-to-develop-a-strategy-to-identify-a-players-strengths-or-weaknesses/"
+    SK_PH = "https://www.pickleheads.com/guides/what-is-stacking-in-pickleball"
+    SK_KITCHEN = "https://thekitchenpickle.com/blogs/tips/stacking-in-pickleball-basics-how-to-stack/"
+    SK_RULES = [
+        ("5.B.1", "The correct server must serve from the correct serving area, and the correct receiver must receive the serve."),
+        ("5.B.2", "After each side out, the first server is the player correctly positioned on the right side for the team's score."),
+        ("5.B.3", "The starting server's correct position is the right side when the team's score is zero or even, the left when it is odd. The partner is on the opposite side."),
+        ("5.B.4", "Except while serving and receiving, there is no restriction on where players stand, on or off the court, as long as they are on their own end of the net."),
+        ("5.C", "Before the serve, you may ask your opponent who the correct server or receiver is, or whether players are in the correct positions. They must answer."),
+        ("5.C.1.c", "If positions are correct and the wrong player returns the serve, it is a fault against that player, even if the rally is finished. It must be called before the next serve."),
+        ("7.E.4", "A serve that hits the server or the server's partner is a fault against the server."),
+    ]
+    sk_faq = [
+        ("What is stacking in pickleball?",
+         "Stacking is a doubles tactic where both partners line up on the same side of the court before the serve or the return, then move to their preferred sides once the ball is in play. The serving and receiving rules still decide who serves, who receives and from which side. Stacking only changes where the other partner waits and where each player ends up."),
+        ("Is stacking legal in pickleball?",
+         "Yes. In the 2026 USA Pickleball rulebook, the correct server must serve from the correct serving area and the correct receiver must receive the serve (rule 5.B.1). Except while serving and receiving, rule 5.B.4 puts no restriction on where players stand, on or off the court, as long as they stay on their own end of the net."),
+        ("What is the difference between a half stack and a full stack?",
+         "Pickleheads calls stacking only when your team is serving a half stack, because it is easier than stacking on the return. Stacking on both your serve and your return is what players usually call a full stack. The return stack takes more movement and usually a hand signal."),
+        ("Why do righty and lefty teams stack?",
+         "When a right-handed and a left-handed player line up the traditional way, one arrangement puts both backhands in the middle. Stacking lets the team switch sides only on the points where the score puts them in that alignment, so both forehands cover the middle, as The Kitchen and Pickleheads both explain."),
+        ("What are the hand signals for stacking?",
+         "Pickleheads describes the common system: the partner at the kitchen line signals behind their back so the other team cannot see. An open hand means switch, a closed fist means stay, and some teams add a signal for a fake switch."),
+        ("What happens if we end up in the wrong position while stacking?",
+         "Under the 2026 USA Pickleball rulebook, if the correct server or receiver is out of position when the score is called and someone stops the rally to point it out correctly, the rally is replayed (5.C.1.a). If the rally is completed first, the result stands (5.C.2). If positions are correct but the wrong player returns the serve, that is a fault (5.C.1.c). Stopping play with an incorrect claim is a fault against the player who stopped it (5.C.1.b)."),
+    ]
+    sk_faq_html, sk_faq_ld = faq(sk_faq)
+    sk_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td></tr>' for a, b in SK_RULES)
+    stk = f'''<h1>How to stack in pickleball: serve and return stacking explained</h1>
+<p class="meta">Rules from the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball Official Rulebook</a> (PDF). Tactics from <a href="{SK_PH}" target="_blank" rel="noopener">Pickleheads</a>, <a href="{SK_KITCHEN}" target="_blank" rel="noopener">The Kitchen</a> and USA Pickleball's <a href="{SK_USAP_SKILL}" target="_blank" rel="noopener">skill levels</a>, all read {sk_checked}. The rulebook wins if we ever disagree. No coaching stats are made up here.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>What it is:</b> both partners line up on the same side before the serve or return, then slide to their preferred sides once the ball is in play.</li>
+<li><b>Why:</b> keep both forehands in the middle (especially righty/lefty teams), or keep the stronger player on the side they play best.</li>
+<li><b>Is it legal:</b> yes. The correct server serves from the correct side and the correct receiver receives. The other two players can stand anywhere on their own end, on or off the court (rule 5.B.4).</li>
+<li><b>Half stack:</b> stack only when your team serves. <b>Full stack:</b> stack on the return too, usually with a hand signal.</li>
+<li><b>What it never changes:</b> who serves, who receives, or the score.</li>
+</ul>
+<h2>What stacking is</h2>
+<p>In traditional doubles, partners split the court: each player starts on one side of the centerline and stays roughly there. The score decides those starting sides. The Kitchen puts the key idea simply: the rules decide where you start, not where you play. Stacking means the partner who is not serving or receiving waits on the same side as the server or receiver, often near or beyond the sideline. After the serve or return, the team slides so each player ends up on the side they want.</p>
+<p>New to how the score sets your side? In doubles, the starting server is on the right when the team's score is zero or even and on the left when it is odd, and the partner is on the other side (rule 5.B.3). Pickleheads calls these each player's "even side" and "odd side." Serving and scoring basics: <a href="pickleball-rules-for-beginners.html">pickleball rules for beginners</a>.</p>
+<h2>Why teams stack</h2>
+<ul>
+<li><b>Forehands in the middle.</b> The middle is a favorite target because it can cause confusion and force a backhand. For a right-handed and a left-handed partner, one traditional alignment puts both backhands in the middle. Stacking fixes it on those points (The Kitchen, Pickleheads).</li>
+<li><b>A stronger player on one side.</b> For two righties or two lefties, someone's forehand is already in the middle, so stacking is optional. It still helps when one player has a much stronger forehand or prefers one side (The Kitchen, Pickleheads).</li>
+<li><b>Hiding a weakness.</b> USA Pickleball's strategy tips list stacking or switching to get more forehands on the ball as one way to adjust when opponents keep attacking a weak shot.</li>
+<li><b>Changing the picture.</b> Pickleheads also lists keeping momentum and unsettling opponents who are not adapting to your movement.</li>
+</ul>
+<p>USA Pickleball's <a href="{SK_USAP_SKILL}" target="_blank" rel="noopener">skill level descriptions</a> treat stacking as an intermediate strategy: basic knowledge of it at one level, a solid understanding of when and how to use it at the next, and partners who "easily stack" court positions above that.</p>
+<h2>How to stack on the serve</h2>
+<ol>
+<li><b>Server goes where the score says.</b> The correct server stands in the correct serving area for the score, with at least one foot touching that serving area behind the baseline and neither foot on the court (rules 7.A.1 to 7.A.3).</li>
+<li><b>Partner lines up on the same side.</b> If the score already puts you both on your preferred sides, line up normally. If it does not, the partner waits beside the server, toward the sideline, instead of crossing to the other half.</li>
+<li><b>Stay out of the serve's way.</b> A serve that hits the server's partner is a fault against the server (rule 7.E.4). Pickleheads stresses standing where you do not impede the serve.</li>
+<li><b>Slide after the serve.</b> Once the ball is served, both players move to their preferred sides and play the point from there.</li>
+</ol>
+<p>The serve stack is the easier half because the serving team stays back for the return anyway (the two-bounce rule), so there is time to move. The Kitchen suggests starting with serve-only stacking in rec games.</p>
+<h2>How to stack on the return</h2>
+<ol>
+<li><b>Receiver goes where the score says.</b> The correct receiver stands in the service court for the score and must be the one to return the serve (rules 5.B.1, 5.C.1.c).</li>
+<li><b>Partner waits at the kitchen line on the same side.</b> Pickleheads describes the non-receiver standing at the kitchen line, often just outside the sideline on the receiver's side.</li>
+<li><b>Return deep with some arc.</b> Pickleheads suggests a deep return with less pace and a little arc, and The Kitchen a deep return with some loft. Both buy time for the switch. Pickleheads also suggests returning to the opponent straight across rather than crosscourt, for a little more time.</li>
+<li><b>Switch on contact.</b> After the return, the partner slides across to their side of the kitchen line, covering the middle on the way, while the returner moves up to the kitchen line on the side the partner left.</li>
+</ol>
+<p>Because the receiving team switches during a live ball, the return stack is the one that needs communication, and the one where a slow move costs points.</p>
+<h2>Half stack vs full stack</h2>
+<p>Pickleheads calls stacking only when serving a "half stack," since stacking on the return is harder. Stacking on both serve and return is often called a full stack. Many teams also mix in "switch or stay" on the return point by point instead of switching every time, which The Kitchen notes as an option.</p>
+<h2>The position rules that matter</h2>
+<p>From the 2026 USA Pickleball Official Rulebook (rule numbers are the 2026 numbering):</p>
+<div class="tbl"><table><thead><tr><th>Rule</th><th>What it says, in our words</th></tr></thead><tbody>{sk_rows}</tbody></table></div>
+<p>A few more that come up when stacking:</p>
+<ul>
+<li><b>Out of position, rally stopped (5.C.1.a):</b> if the correct server or receiver was not in the correct position when the score was called and a player correctly stops the rally, the rally is replayed.</li>
+<li><b>Out of position, rally finished (5.C.2):</b> if nobody stopped it, the result of the rally stands.</li>
+<li><b>Wrong claim (5.C.1.b):</b> stopping a rally with an incorrect position claim is a fault against the player who stopped it.</li>
+<li><b>Changing serving areas after the score call (6.D.2):</b> the server must let all players reposition, then re-call the score to restart the 10-second count.</li>
+<li><b>Tournaments (18.C):</b> starting servers in doubles must wear the identification the Tournament Director requires, which helps everyone track who belongs where.</li>
+<li><b>Rally scoring (14.A):</b> in the provisional rally-scoring option, only one player serves per side out, and service still begins with the player correctly positioned on the right for the team's score (14.A.4, 14.A.5).</li>
+</ul>
+<p>Kitchen rules do not change when you stack: <a href="pickleball-kitchen-rules.html">pickleball kitchen rules</a>. One-page rule summary: <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>.</p>
+<h2>How to signal</h2>
+<p>The serve stack needs no signal. On the return, Pickleheads describes the common system: the partner at the kitchen line signals behind their back so the other team cannot see it.</p>
+<ul>
+<li><b>Open hand:</b> switch.</li>
+<li><b>Closed fist:</b> stay.</li>
+<li><b>Fake:</b> some teams add a signal for a fake switch to keep opponents guessing (Pickleheads, The Kitchen).</li>
+</ul>
+<p>You can also just talk to your partner, but Pickleheads points out that the other team hears it too. Agree on the signals before the game.</p>
+<h2>Common stacking mistakes</h2>
+<ul>
+<li><b>Losing track of the score or server.</b> Stacking never changes who serves or the score, so The Kitchen suggests one partner tracks positions. If unsure, ask before the serve (rule 5.C).</li>
+<li><b>The wrong player returns.</b> When positions are correct, a return by the wrong player is a fault (5.C.1.c).</li>
+<li><b>Standing in the serve's path.</b> A serve that hits the server's partner is a fault against the server (7.E.4).</li>
+<li><b>A lazy or late switch.</b> The Kitchen warns that a slow switch can leave a gap worse than not stacking at all. Pickleheads warns that strong drivers will hit into any open space while you move.</li>
+<li><b>A fast, low return.</b> It gives you no time to switch. Go deep with some arc.</li>
+<li><b>Running through your shot.</b> Pickleheads: be ready to stop and split step to hit, then keep moving into position.</li>
+<li><b>Both reaching for the middle.</b> Once you are set, agree who takes the middle ball (The Kitchen).</li>
+</ul>
+<h2>When not to stack</h2>
+<ul>
+<li><b>When it puts a weak backhand in the middle,</b> or both backhands, unless that is your strength (Pickleheads).</li>
+<li><b>When it takes a strong forehand away</b> by forcing that player to a side where they hit more backhands (Pickleheads).</li>
+<li><b>When it causes more errors than it saves.</b> Pickleheads calls stacking an advanced concept: work on fundamentals and practice it before relying on it.</li>
+<li><b>When opponents keep punishing the switch.</b> The Kitchen suggests signaling to stay put for a while.</li>
+</ul>
+<h2>How to practice it</h2>
+<p>Start with the serve stack in casual games, expect a few mix-ups, and fix them before the next serve (The Kitchen). Then add the return stack with a deep, lofted return, which is the same soft control you build with <a href="third-shot-drop.html">third shot drops</a> and <a href="how-to-dink.html">dinks</a>. Partner warm-ups: <a href="pickleball-drills.html">pickleball drills</a>. Court layout and where the sidelines are: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</p>
+{money_links()}
+{sk_faq_html}
+{sources([("USA Pickleball 2026 Official Rulebook (PDF)", RULES, f"rules 5.B.1 to 5.B.4, 5.C, 5.C.1.a to 5.C.1.c, 5.C.2, 6.D.2, 7.A, 7.E.4, 14.A.4, 14.A.5, 18.C, read {sk_checked}"),
+          ("USA Pickleball: Skill levels", SK_USAP_SKILL, f"where stacking sits in the skill descriptions, read {sk_checked}"),
+          ("USA Pickleball: How to develop a strategy to identify a player's strengths or weaknesses", SK_USAP_STRAT, f"stacking or switching to get more forehands on the ball, read {sk_checked}"),
+          ("Pickleheads: What is stacking in pickleball?", SK_PH, f"serve and return setups, half stacking, hand signals, when not to stack, read {sk_checked}"),
+          ("The Kitchen: How stacking in pickleball helps you own the middle", SK_KITCHEN, f"righty/lefty teams, switch/stay/fake, easing into it, read {sk_checked}")])}
+{more("guides/pickleball-stacking.html")}'''
+    page("guides/pickleball-stacking.html", "How to Stack in Pickleball: Serve and Return Stacking Explained", stk,
+         "How to stack in pickleball doubles: half stack vs full stack, serve and return setups, hand signals, the USA Pickleball position rules, common faults and when not to stack.",
+         fresh={"checked": SK_CHECKED, "rules": SK_RULES, "faq": sk_faq},
+         schema=[sk_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
