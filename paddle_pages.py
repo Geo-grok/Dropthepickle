@@ -3,10 +3,22 @@
 import urls
 import re, json, pathlib
 ROOT = pathlib.Path(__file__).parent
-# Search-tuned <title>/description for vs pages already near Google page 1 (GSC export 2026-10-27). Titles <=60 chars, raw (no site suffix).
+# Search-tuned <title>/description for vs pages already near Google page 1.
+# Title is the stem; build.py appends " · DropThePickle" unless the stem already has the site name.
+# Keep the stem short so the full <title> stays near 60 characters. Optional h1 overrides the default
+# "{brand} {model} vs {brand} {model}" heading for query wording. Prices/specs are filled at build time
+# from paddles.json and price_history.json — never hardcoded here.
 VS_SEO = {
-    "vs-selkirk-omni-vs-selkirk-slk-era-power.html": ("Selkirk Era vs Omni: Specs & Prices",
-        "Selkirk SLK Era Power vs Selkirk Omni: maker specs and latest checked prices side by side, plus the spec differences. No made-up scores."),
+    "vs-selkirk-omni-vs-selkirk-slk-era-power.html": {
+        "title": "Selkirk Era vs Omni: Specs & Prices",
+        "h1": "Selkirk Era vs Omni",
+        "query": "selkirk era vs omni",
+    },
+    "vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html": {
+        "title": "Selkirk Omni vs Boomstik: Price & Specs",
+        "h1": "Selkirk Omni vs Boomstik Price",
+        "query": "omni vs boomstick price",
+    },
 }
 
 def slug(p): return "paddle-" + re.sub(r"[^a-z0-9]+", "-", f'{p["brand"]} {p["model"]}'.lower().replace("¹","1").replace("³","3")).strip("-") + ".html"
@@ -319,7 +331,10 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         same = []
         if A["brand"] == B["brand"]: same.append(f'same brand ({A["brand"]})')
         if shape_bucket(A) and shape_bucket(A) == shape_bucket(B): same.append(f'shape field includes {shape_bucket(A)}')
-        vh = f'<section class="pagehead"><span class="eyebrow"><i></i>Head to head</span><h1 style="margin-top:.7rem">{e(t)}</h1><div class="vshead"><div><a class="vsimg" href="{slug(A)}">{img(A, eager=True)}</a><h3>{e(A["model"])}</h3><div class="price" style="font-size:1.6rem">{money(A, cur(A))}</div></div><div class="vsbadge">VS</div><div><a class="vsimg" href="{slug(B)}">{img(B, eager=True)}</a><h3>{e(B["model"])}</h3><div class="price" style="font-size:1.6rem">{money(B, cur(B))}</div></div></div></section>'
+        seo = VS_SEO.get(fn)
+        st = seo.get("title") if isinstance(seo, dict) else (seo[0] if seo else None)
+        custom_h1 = seo.get("h1") if isinstance(seo, dict) else None
+        vh = f'<section class="pagehead"><span class="eyebrow"><i></i>Head to head</span><h1 style="margin-top:.7rem">{e(custom_h1 or t)}</h1><div class="vshead"><div><a class="vsimg" href="{slug(A)}">{img(A, eager=True)}</a><h3>{e(A["model"])}</h3><div class="price" style="font-size:1.6rem">{money(A, cur(A))}</div></div><div class="vsbadge">VS</div><div><a class="vsimg" href="{slug(B)}">{img(B, eager=True)}</a><h3>{e(B["model"])}</h3><div class="price" style="font-size:1.6rem">{money(B, cur(B))}</div></div></div></section>'
         body = f'{vh}{DISC}{SRC}<p class="meta">The table is maker facts: published specs, the list price, and the latest checked maker price with its check date. Highlighted cells are the lower maker price or more listed core thicknesses. That highlight is not a playtest result and not a performance ranking.</p><h2>Maker facts side by side</h2><div class="tbl vs"><table><tr><th></th><th><a href="{slug(A)}">{e(A["model"])}</a></th><th><a href="{slug(B)}">{e(B["model"])}</a></th></tr>{rows}</table></div><h2>Differences in the published specs</h2><ul>{"".join(f"<li>{e(x)}</li>" for x in diff) or "<li>The published spec fields shown here match.</li>"}</ul>'
         vsum, va, vb = verdict(A, B, cur, ph, money)
         def why(p, rs, other):
@@ -332,9 +347,99 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         for ob in dict.fromkeys(x["brand"] for x in (A, B) if x["brand"] in OWN):  # our own code for a brand in this pair, once per brand
             ex = [x["model"] for x in (A, B) if x["brand"] == ob and x.get("code_excluded")]
             body += f'<h2>{e(ob)} promo code</h2>' + own_codes.callout(e, OWN[ob], js=True, note=(f"{ex[0]}: " + NOAPPLY) if ex else "", details=True)
-        st, sd = VS_SEO.get(fn, (None, f"{t}: maker specs and latest checked prices for a same-category pair. No score or rating from us."))
+        extra_schema = []
+        if isinstance(seo, dict):
+            # Per-page SERP polish only (at-a-glance, dated price line, FAQs, paddle + codes links).
+            def _chk(p):
+                return (ph(p).get("checked") or "not recorded")[:10]
+            def _when(p):
+                return fmt(_chk(p)) if _chk(p) != "not recorded" else "not recorded"
+            def _price(p):
+                h = ph(p)
+                s = f'{money(p, cur(p))} (checked {_when(p)})'
+                if h.get("sale") and h.get("compare_at"):
+                    s += f', below its compare-at {money(p, h["compare_at"])}'
+                return s
+            pa, pb = cur(A), cur(B)
+            if A["currency"] == B["currency"] and pa != pb:
+                lo, hi = (A, B) if pa < pb else (B, A)
+                gap = money(lo, abs(pa - pb))
+                cheaper = f'The {lo["model"]} is {gap} lower than the {hi["model"]} at that check.'
+            elif A["currency"] == B["currency"]:
+                cheaper = f'Both list the same latest checked maker price ({money(A, pa)}).'
+            else:
+                cheaper = "The two prices are in different currencies, so we do not subtract them."
+            price_line = (f'At our latest maker-price check, the {A["brand"]} {A["model"]} is {_price(A)}, '
+                          f'and the {B["brand"]} {B["model"]} is {_price(B)}. {cheaper}')
+            same_bits = []
+            if A.get("core") and A.get("core") == B.get("core"):
+                same_bits.append(f'core {A["core"]}')
+            if A.get("shape") and A.get("shape") == B.get("shape"):
+                same_bits.append(f'shape {A["shape"]}')
+            same_txt = ("Both list the same " + " and ".join(same_bits) + "." if same_bits
+                        else "Published core and shape fields are in the table below.")
+            glance = (
+                '<h2>At a glance</h2><ul>'
+                f'<li><b>Price:</b> {e(price_line)}</li>'
+                f'<li><b>Published specs:</b> {e(same_txt)} Weight: {e(A["model"])} {e(A.get("weight") or "not published")}; '
+                f'{e(B["model"])} {e(B.get("weight") or "not published")}.</li>'
+                f'<li><b>From the file:</b> {e(vsum)} This is not a playtest or a rating.</li>'
+                '</ul>'
+            )
+            # FAQs use only file facts (prices, check dates, published fields, existing verdict).
+            an, bn = f'{A["brand"]} {A["model"]}', f'{B["brand"]} {B["model"]}'
+            faqs = [
+                (f"What is the difference between the {A['model']} and the {B['model']}?",
+                 f"{vsum} {same_txt} The full published fields are in the table below. This is a spec comparison, not a playtest."),
+                (f"How much is the {A['model']} vs the {B['model']}?",
+                 price_line + " We only report the maker's own price from our latest check; we do not invent street or coupon prices."),
+            ]
+            if "boomstik" in fn:
+                faqs.insert(0, (
+                    "Is the Selkirk Boomstik the same as Boomstick?",
+                    "Yes. The maker lists this paddle as the Selkirk LABS Project Boomstik (no c). Searches for Omni vs Boomstick price refer to the same model."
+                ))
+                faqs = faqs[:3]
+            else:
+                faqs.append((
+                    f"Which should I buy, the {A['model']} or the {B['model']}?",
+                    (("Pick the " + A["model"] + " if you want " + "; ".join(va) + ". " if va else "")
+                     + ("Pick the " + B["model"] + " if you want " + "; ".join(vb) + ". " if vb else "")
+                     + "That reading comes from the published specs and our maker price checks. It is not a playtest or a rating.")
+                ))
+            faq_html = "<h2>Questions</h2>" + "".join(
+                f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faqs)
+            extra_schema.append({"@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]})
+            more = (f'<p class="meta">Paddle pages: <a href="{slug(A)}">{e(an)}</a> · <a href="{slug(B)}">{e(bn)}</a>. '
+                    f'Shopping? <a href="/discount-codes">Discount codes</a> · <a href="discount-codes/selkirk.html">Selkirk codes</a> · '
+                    f'<a href="compare.html">All comparisons</a>.</p>')
+            body = body.replace(vh, vh + glance, 1)
+            # Keep a short standalone price line just under the glance for the "omni vs boomstick price" query.
+            body = body.replace(glance, glance + f'<p>{e(price_line)}</p>', 1)
+            body += more + faq_html
+            # Tight query-matching meta; prices and dates come from the same check used in the body.
+            def _short(p):
+                h = ph(p)
+                s = money(p, cur(p))
+                if h.get("sale") and h.get("compare_at"):
+                    s += f" (compare-at {money(p, h['compare_at'])})"
+                return s
+            dates = sorted({_chk(A), _chk(B)})
+            when = fmt(dates[-1]) if dates and dates[-1] != "not recorded" else "our latest check"
+            if "boomstik" in fn:
+                boom, omni = (A, B) if "Boomstik" in A["model"] else (B, A)
+                sd = (f"Omni vs Boomstik price: Selkirk OMNI {_short(omni)} vs "
+                      f"LABS Project Boomstik {_short(boom)} "
+                      f"at our {when} maker-price check. Also searched as Boomstick. Not a playtest.")
+            else:
+                era, omni = (A, B) if "ERA" in A["model"].upper() else (B, A)
+                sd = (f"Selkirk Era vs Omni: SLK ERA Power {_short(era)} vs OMNI {_short(omni)} "
+                      f"at our {when} maker-price check, plus published specs side by side. Not a playtest.")
+        else:
+            sd = f"{t}: maker specs and latest checked prices for a same-category pair. No score or rating from us."
         page(fn, st or t, body, sd, raw_title=bool(st),
-             fresh=[fresh_p(A), fresh_p(B), {"verdict": [vsum, va, vb]}], schema=[item_list([A, B])]); vs_links.append((fn, t))
+             fresh=[fresh_p(A), fresh_p(B), {"verdict": [vsum, va, vb]}], schema=[item_list([A, B]), *extra_schema]); vs_links.append((fn, t))
     # best-of lists
     usd = [p for p in PP if p["currency"] == "USD"]
     list_links = []
