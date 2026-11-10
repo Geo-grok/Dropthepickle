@@ -206,15 +206,26 @@ def make(page, e, fmt, PP, cur, ph):
     names = ", ".join(f"{p['brand']} {p['model']}" for p in ok_under)
     checked_dates = sorted({ph(p)["checked"] for p in PP if verified(p)})
     last_check = fmt(checked_dates[-1]) if checked_dates else "not recorded"
+    cheapest = ok_under[0] if ok_under else None
+    cheapest_txt = (
+        f"At our latest check, the lowest verified maker price under $100 is {money(cheapest, ph(cheapest)['current'])} "
+        f"for the {cheapest['brand']} {cheapest['model']} (checked {fmt(ph(cheapest)['checked'])})."
+        if cheapest else
+        "None right now. See the $100 to $150 table for the closest verified prices."
+    )
     u100_faq = [
         ("Which pickleball paddles are under $100?",
          under_lead + (f" They are: {names}." if ok_under else " The cheapest verified prices in our file are $100 or more, and they are shown in a separate table.")),
+        ("What is the cheapest paddle under $100 on this page?",
+         cheapest_txt),
         ("Where do these prices come from?",
          f"Each price is the maker's own price from our latest check of the maker page, saved with the date it was checked. The latest check date on this page is {last_check}. We do not invent street or coupon prices."),
         ("Why is a $100.00 paddle not on the list?",
          "This list only includes paddles priced under $100. A paddle at exactly $100.00 does not meet that rule, so it is shown in the $100 to $150 table instead."),
         ("Is this a ranking of the best paddles?",
          "No. Here, best means the paddle passed the price rule. We do not playtest or score power, control, or spin."),
+        ("Are under-$100 paddles good for beginners?",
+         "A low price does not automatically mean a beginner paddle. Use this page for the budget filter, then check published shape and weight on how to choose a paddle and the beginners paddles filter."),
     ]
     faq_html, faq_ld = faq(u100_faq)
     _OWN = __import__("own_codes").own_codes(__import__("json").load(open(__import__("pathlib").Path(__file__).with_name("config.json"))))
@@ -236,25 +247,36 @@ def make(page, e, fmt, PP, cur, ph):
                     f'<p class="meta">Full code details: <a href="../discount-codes/volair.html">Volair promo code</a> · <a href="best-volair-paddles.html">Best Volair paddle by player type</a></p>')
     u100_faq += [
         ("Is there a discount code for paddles under $100?",
-         (f"Yes for Volair: our code {_voc['code']} takes {_voc['discount']} at checkout on volair.com. " if _voc else "") + "Some paddles may be excluded from discounts. Every code we track is on our discount codes page."),
+         (f"Yes for Volair: our code {_voc['code']} takes {_voc['discount']} at checkout on volair.com. " if _voc else "") + "Some paddles may be excluded from discounts (including some sale models). Every code we track is on our discount codes page."),
         ("Will these paddles be cheaper on Black Friday 2026?",
          "We can't say yet. We only report a Black Friday sale once the brand publishes it. Our Black Friday hub tracks which brands have announced 2026 sales, and our price tracker shows if a price really dropped."),
     ]
     faq_html, faq_ld = faq(u100_faq)
+    # SERP polish (approved P1): at-a-glance criteria, buyer FAQs, internal links.
+    # Keep Web Dev's short title stem; build.py appends " · DropThePickle". Prices stay
+    # data-driven from price_history checks — no invented scores or codes.
     under = f'''<h1>Best Pickleball Paddles Under $100 (2026)</h1>
-<p class="meta">Built from our own paddle file and dated maker price checks. Not a playtest and not a ranking.</p>
+<p class="meta">Verified maker prices from our own paddle file (latest check {e(last_check)}). Not a playtest and not a ranking. Built for the 2026 shopping season.</p>
 {__import__("own_codes").volair_link(__import__("own_codes").own_codes(__import__("json").load(open(__import__("pathlib").Path(__file__).with_name("config.json")))), "Shopping Volair?")}
 <p>{under_lead} The rule is strict: the paddle needs a successful, in-stock price check on the maker's own page, in US dollars, and the current price must be below $100. Every price on this page shows the date it was checked.</p>
-<h2>Under $100 (verified)</h2>
+<h2>How this under-$100 list works</h2>
+<ul>
+<li><b>Strict under-$100 rule:</b> current maker price must be below $100 (a paddle at exactly $100.00 goes in the near table).</li>
+<li><b>Verified only:</b> USD, in stock, with a check date on the maker's own page. We do not invent street or coupon prices.</li>
+<li><b>"Best" means the filter:</b> we do not playtest or score power, control, or spin.</li>
+<li><b>Near $100:</b> verified prices from $100 to $150 sit in a separate table so you can see the next step up.</li>
+<li><b>Codes:</b> when a Volair under-$100 paddle is eligible, our code applies at checkout; some models are excluded. Full list on <a href="/discount-codes">discount codes</a>.</li>
+</ul>
+<h2>Under $100 right now (verified maker prices)</h2>
 {under_table}
 {vol_html}
-<h2>Closest verified prices, $100 to $150</h2>
+<h2>Near $100: verified prices $100 to $150</h2>
 <p>These paddles cost $100 or more, so they are <b>not</b> under-$100 picks. They are here so you can see where the cheapest verified prices actually sit.{e(at100_txt)}</p>
 {near_table}
 <h2>What we left out</h2>
 <ul>{"".join(f"<li>{e(x)}</li>" for x in excl) or "<li>Nothing else.</li>"}</ul>
-<p>Our database is a short list of major-brand models with specs copied from the maker. It is not a catalog of every budget paddle on the market. See every recorded price on the <a href="../price-index.html">price index</a>. New to buying? Start with <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
-<p class="meta">Shopping now? <a href="/discount-codes"><b>Discount codes →</b></a> · <a href="../deals.html"><b>Paddle deals →</b></a> · <a href="pickleball-gift-guide-2026.html"><b>Gift guide 2026 →</b></a> · <a href="../deals/black-friday-pickleball-deals-2026.html"><b>Black Friday 2026 hub →</b></a> · <a href="pickleball-paddles-under-30.html">Paddles under $30</a></p>
+<p>Our database is a short list of major-brand models with specs copied from the maker. It is not a catalog of every budget paddle on the market. See every recorded price on the <a href="../price-index.html">price index</a>. New to buying? Start with <a href="how-to-choose-a-paddle.html">how to choose a paddle</a> or the <a href="../best-paddles-for-beginners.html">best paddles for beginners</a> filter.</p>
+<p class="meta">Shopping now? <a href="/discount-codes"><b>Discount codes →</b></a> · <a href="../discount-codes/volair.html"><b>Volair code →</b></a> · <a href="../deals.html"><b>Paddle deals →</b></a> · <a href="pickleball-gift-guide-2026.html"><b>Gift guide 2026 →</b></a> · <a href="../deals/black-friday-pickleball-deals-2026.html"><b>Black Friday 2026 hub →</b></a> · <a href="../best-paddles-for-beginners.html">Beginners paddles</a> · <a href="pickleball-paddles-under-30.html">Paddles under $30</a></p>
 {money_links()}
 {faq_html}
 {sources([(f"{p['brand']} {p['model']} (maker product page)", p["source_url"], f"price checked {fmt(ph(p)['checked'])}") for p in ok_under + ok_near])}
@@ -283,7 +305,7 @@ def make(page, e, fmt, PP, cur, ph):
     u100_lists = [x for x in (item_list_u100(ok_under, "Under $100 (verified)"),
                               item_list_u100(ok_near, "Closest verified prices, $100 to $150")) if x]
     page("guides/best-paddles-under-100.html", "Best Pickleball Paddles Under $100 (2026)", under,
-         "Pickleball paddles under $100 in 2026 with dated maker prices, our Volair code DROPTHEPICKLE, and the closest picks to $150. No made-up scores.",
+         "Best pickleball paddles under $100 with verified maker prices, our Volair code DROPTHEPICKLE where it applies, and the closest $100–$150 picks. Strict under-$100 filter. No playtest scores.",
          fresh={"under": [(p["brand"], p["model"], ph(p)["current"]) for p in ok_under],  # no daily "checked" stamp
                 "near": [(p["brand"], p["model"], ph(p)["current"]) for p in ok_near], "faq": u100_faq},
          schema=[faq_ld, *u100_lists], raw_title=True)
@@ -487,7 +509,7 @@ def make(page, e, fmt, PP, cur, ph):
 <li>You see cracks, a split edge guard, or the face lifting.</li>
 <li>It has been heavy use for a long time. Selkirk's rough guide is every 3 to 6 months for heavy competitive players and a year or longer for recreational players.</li>
 </ul>
-<p>To make a paddle last longer, Selkirk advises keeping it out of hot cars and off wet courts. Before you buy a new one, read <a href="paddle-weight-and-core.html">paddle weight and core</a>, then compare <a href="best-paddles-under-100.html">dated prices under $100</a>.</p>
+<p>To make a paddle last longer, Selkirk advises keeping it out of hot cars and off wet courts. Before you buy a new one, read <a href="paddle-weight-and-core.html">paddle weight and core</a>, then compare <a href="best-paddles-under-100.html">paddles under $100</a>.</p>
 {money_links()}
 {faq_html}
 {sources([("Selkirk: What is core crushing in pickleball?", SELKIRK, "manufacturer"),
@@ -676,7 +698,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p>The deal was reported by {ext(SW_INV, "The Inventory")} at $29.99. It also covered the same set at $29.96 on {ext(SW_INV_AUG, "August 31, 2026")}. Amazon prices move daily and can differ by color, so the price you see may not match.</p>
 <h2>Where the evidence is thin</h2>
 <p>One confirmed listing is not a market survey. We did not find other sub-$30 prices we could confirm on a retailer page for this update, so we left them out instead of guessing. {"Our own paddle list starts at $" + format(usd_prices[0], ",.2f") + " in US dollars" if usd_prices else "Our own paddle list has no US-dollar prices"}, so none of the paddles we track are under $30.</p>
-<p>If you can stretch your budget, the <a href="best-paddles-under-100.html">best paddles under $100</a> guide lists dated maker prices, and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a> explains what you give up at the low end.</p>
+<p>If you can stretch your budget, the <a href="best-paddles-under-100.html">best paddles under $100</a> guide lists verified maker prices, and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a> explains what you give up at the low end.</p>
 {money_links()}
 {u30_faq_html}
 {sources([("Amazon: Smartway Pickleball Paddles Set of 2 (ASIN B0GLYWT2VN)", SW_AMZ, f"$29.99, list $36.99, checked {checked}"),
