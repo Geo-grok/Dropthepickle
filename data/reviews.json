@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "I Tested the New Selkirk Boomstick ST: Is It Actually Better? First Impressions",
+   "link": "https://www.youtube.com/watch?v=rxXAIJcxEYg",
+   "video_id": "rxXAIJcxEYg",
+   "date": "2026-11-10"
+  },
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "New Selkirk Boomstick ST vs OG, Honolulu M105 vs Honolulu J6M+, and New Paddletek Veyras and Jolts",
+   "link": "https://www.youtube.com/watch?v=mqKtItiGNQw",
+   "video_id": "mqKtItiGNQw",
+   "date": "2026-11-09"
+  },
+  {
    "channel": "Rackets & Runners - Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
    "title": "These are the BEST Durable Grit Pickleball Paddles | Rackets & Runners",
@@ -401,14 +417,6 @@
    "date": "2026-10-14"
   },
   {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "RPM Jade 16mm Elongated First Impressions: Over Hyped Pickleball Paddle or Hyped Just Right?",
-   "link": "https://www.youtube.com/watch?v=4zAi-B8A-hQ",
-   "video_id": "4zAi-B8A-hQ",
-   "date": "2026-10-14"
-  },
-  {
    "channel": "Farmer Lanky Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
    "title": "The Hardest Hitting Legal Paddle? CPX Hyper+ 16mm Elongated Pickleball Paddle Review",
@@ -430,14 +438,6 @@
    "title": "RPM Jade, Loco 2 & Cannon XPP: Promising Early Spin Results | KewCast 126",
    "link": "https://www.youtube.com/watch?v=pmJsBaoMWaE",
    "video_id": "pmJsBaoMWaE",
-   "date": "2026-10-12"
-  },
-  {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "Insane October Paddle Season; RPM Jade, Honolulu MPP J6CR, Joola Power FX, and Luzz Cannon XPP",
-   "link": "https://www.youtube.com/watch?v=RKE7njjZQdg",
-   "video_id": "RKE7njjZQdg",
    "date": "2026-10-12"
   },
   {
@@ -482,6 +482,22 @@
   }
  ],
  "all_items": [
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "I Tested the New Selkirk Boomstick ST: Is It Actually Better? First Impressions",
+   "link": "https://www.youtube.com/watch?v=rxXAIJcxEYg",
+   "video_id": "rxXAIJcxEYg",
+   "date": "2026-11-10"
+  },
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "New Selkirk Boomstick ST vs OG, Honolulu M105 vs Honolulu J6M+, and New Paddletek Veyras and Jolts",
+   "link": "https://www.youtube.com/watch?v=mqKtItiGNQw",
+   "video_id": "mqKtItiGNQw",
+   "date": "2026-11-09"
+  },
   {
    "channel": "Rackets & Runners - Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
@@ -1538,7 +1554,7 @@
   "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (7)",
-  "All Drive No Drop Pickleball": "ok (6)",
+  "All Drive No Drop Pickleball": "ok (8)",
   "Matthew K Pickleball": "ok (1)",
   "Tickle My Pickleball": "ok (3)",
   "PickleBaller": "ok (8)",
@@ -1548,5 +1564,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (12)"
  },
- "updated": "2026-11-09T11:52"
+ "updated": "2026-11-10T11:47"
 }
