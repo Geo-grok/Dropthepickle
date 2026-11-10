@@ -131,7 +131,7 @@ main{max-width:1200px;margin:auto;padding:1.4rem 1.1rem 3rem}
 .tbl{overflow-x:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--sh);background:#fff}
 table{width:100%;border-collapse:collapse;font-size:.94rem}th,td{padding:.75rem .9rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 tr:last-child td,tr:last-child th{border-bottom:0}thead th,tr:first-child th:not([scope]){background:var(--navy);color:#fff;font-family:Oswald,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:0;font-weight:500}
-tr:first-child th a{color:var(--neon)}tbody tr:hover{background:#f8faff}
+thead th a,tr:first-child th:not([scope]) a{color:var(--neon)}tbody tr:hover{background:#f8faff}
 .vs td.win{background:linear-gradient(90deg,rgba(198,244,50,.25),rgba(198,244,50,.08));font-weight:700;position:relative}
 .vs td.win::after{content:"✓ edge";margin-left:.4rem;font-size:.94rem;font-weight:800;color:var(--navy);background:var(--neon);padding:.08rem .4rem;border-radius:5px;text-transform:uppercase}
 .vs th[scope=row]{background:#f4f6fa;color:var(--navy3);width:22%}
@@ -290,6 +290,17 @@ CSS += """
 .crumbs{font-size:1rem}.crumbs a{display:inline-block;padding:12px 0;margin:-12px 0}
 .buzzcard .watch a{display:inline-block;padding:12px 0;margin:-12px 0}
 }
+"""
+# Readability pass (2026-11-10): three text colors that were hard or impossible to read, worst on phones in daylight.
+# - "Sale" badge: white on orange was 2.6:1 contrast; navy on the same orange is 6.9:1 (badge color unchanged).
+# - Light-page ghost buttons (Volair code page "All discount codes", Volair vs guide "Pro 1 full specs") were white on
+#   light gray (1.1:1, effectively invisible); now navy text + navy outline (16.6:1). Ghost buttons on dark heroes untouched.
+# - (selector fix above) the first paddle-name link in body rows of best-* tables was neon on white (1.3:1) because the
+#   header-only rule also matched row headers; it now only applies to navy header cells.
+CSS += """
+.b-sale{color:var(--navy)}
+.vnext .btn.ghost,main p>.btn.ghost{color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+.vnext .btn.ghost:hover,main p>.btn.ghost:hover{background:var(--navy);color:#fff;box-shadow:inset 0 0 0 2px var(--navy)}
 """
 _FB = {"Inter": "Inter Fallback", "Oswald": "Oswald Fallback", '"Bebas Neue"': "Bebas Neue Fallback", "Anton": "Anton Fallback"}
 def _with_fallbacks(css):
