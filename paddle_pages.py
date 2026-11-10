@@ -367,20 +367,6 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             desc = f"{title}: spec filter of paddles in our database, using published maker specs and the latest checked maker price. Not a playtest or a scored ranking."
         page(fn, title, f'<h1>{e(title)}</h1>{DISC}<p>{intro}</p>{own_codes.volair_link(OWN, "Looking at a Volair paddle?")}{SRC}{mid}',
              desc, fresh={"desc": desc, "rows": [fresh_p(p) for p in ordered]}, schema=schema or None); list_links.append((fn, title))
-    def price_key(p): return (cur(p), p["brand"].lower(), p["model"].lower())
-    u100 = sorted([p for p in usd if cur(p) <= 100], key=price_key)
-    near = sorted([p for p in usd if 100 < cur(p) <= 150], key=price_key)
-    price_updated = D("price_history.json").get("updated", "")
-    checked_txt = fmt(price_updated) if price_updated else "our latest check"
-    lst("Best paddles under $100", "best-paddles-under-100.html",
-        f'Our database is a short list of major-brand models, not every paddle sold under $100. At the {e(checked_txt)} maker-price check, <b>{len(u100)}</b> of those models were at $100 or less. They are ordered by that checked price, not by a playtest. A code may change the checkout total; confirm it with the maker. The <a href="guides/best-paddles-under-100.html">under-$100 guide</a> explains the same price rule.',
-        u100 + near,
-        lambda p: ("At or under $100 at our last check." if cur(p) <= 100 else "Over $100 and at or under $150 at our last check.") + " " + notes(p, ph(p))[0][0],
-        groups=[
-            ("At or under $100", f"{len(u100)} paddles at the latest checked maker price. Lowest price first. Not a performance ranking.", u100),
-            ("Closest picks, $100 to $150", f"{len(near)} paddles priced over $100 and at or under $150 at that same check. They are not under-$100 answers.", near),
-        ],
-        desc=f"{len(u100)} paddles in our database at or under $100 (maker prices checked {checked_txt}), listed before $100 to $150 alternatives. Not a playtest ranking.")
     beg = sorted([p for p in usd if cur(p) <= 200 and (cores(p) and max(cores(p)) >= 16 or re.search("hybrid|widebody|max", p["shape"], re.I))], key=cur)[:8]
     lst("Best pickleball paddles for beginners", "best-paddles-for-beginners.html", "Our beginner shortlist uses three spec rules: a price of $200 or less, plus a 16mm core option or a wider or hybrid face. Both are generally considered more forgiving. It's a starting point based on specs, not a test ranking.", beg,
         lambda p: "Budget-friendly with a forgiving spec profile: " + ", ".join(x for x in [p["core"], p["shape"]] if x) + ".")

@@ -26,6 +26,16 @@ export default {
     if (WORLDS_301.has(url.pathname)) {
       return Response.redirect(new URL("/events/opendoor-pickleball-world-championships", url).toString(), 301);
     }
+    // /best-paddles-under-100 was a second under-$100 list (self canonical, also in the sitemap).
+    // It now 301s in one hop to the guide, including .html, trailing-slash and www variants, query string kept.
+    if (cleanPath(url.pathname) === "/best-paddles-under-100") {
+      if (url.hostname.startsWith("www.")) {
+        url.hostname = url.hostname.slice(4);
+        url.protocol = "https:";
+      }
+      url.pathname = "/guides/best-paddles-under-100";
+      return permanent(url.toString());
+    }
     // www -> apex in one permanent hop, straight to the clean URL (only runs if a www request ever reaches the Worker).
     if (url.hostname.startsWith("www.")) {
       url.hostname = url.hostname.slice(4);

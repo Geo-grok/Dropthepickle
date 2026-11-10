@@ -253,17 +253,40 @@ def make(page, e, fmt, PP, cur, ph):
 {near_table}
 <h2>What we left out</h2>
 <ul>{"".join(f"<li>{e(x)}</li>" for x in excl) or "<li>Nothing else.</li>"}</ul>
-<p>Our database is a short list of major-brand models with specs copied from the maker. It is not a catalog of every budget paddle on the market. See every recorded price on the <a href="../price-index.html">price index</a>, or use the <a href="../best-paddles-under-100.html">under-$100 spec filter</a>. New to buying? Start with <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+<p>Our database is a short list of major-brand models with specs copied from the maker. It is not a catalog of every budget paddle on the market. See every recorded price on the <a href="../price-index.html">price index</a>. New to buying? Start with <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
 <p class="meta">Shopping now? <a href="/discount-codes"><b>Discount codes →</b></a> · <a href="../deals.html"><b>Paddle deals →</b></a> · <a href="pickleball-gift-guide-2026.html"><b>Gift guide 2026 →</b></a> · <a href="../deals/black-friday-pickleball-deals-2026.html"><b>Black Friday 2026 hub →</b></a> · <a href="pickleball-paddles-under-30.html">Paddles under $30</a></p>
 {money_links()}
 {faq_html}
 {sources([(f"{p['brand']} {p['model']} (maker product page)", p["source_url"], f"price checked {fmt(ph(p)['checked'])}") for p in ok_under + ok_near])}
 {more("guides/best-paddles-under-100.html")}'''
+    def item_list_u100(ps, name):
+        # Product/ItemList ported from the dropped /best-paddles-under-100 spec-filter page, using this guide's lists.
+        if not ps:
+            return None
+        import urls
+        base = __import__("json").load(open(__import__("pathlib").Path(__file__).with_name("config.json")))["BASE_URL"]
+        els = []
+        for i, p in enumerate(ps, 1):
+            h = ph(p)
+            offer = {"@type": "Offer", "url": p["buy_url"], "priceCurrency": p["currency"], "price": f"{h['current']:.2f}",
+                     "itemCondition": "https://schema.org/NewCondition"}
+            if h.get("available") is True:
+                offer["availability"] = "https://schema.org/InStock"
+            elif h.get("available") is False:
+                offer["availability"] = "https://schema.org/OutOfStock"
+            node = {"@type": "Product", "name": f'{p["brand"]} {p["model"]}', "brand": {"@type": "Brand", "name": p["brand"]},
+                    "category": "Pickleball paddle", "url": urls.canon(base, slug(p)), "offers": offer}
+            if h.get("image"):
+                node["image"] = h["image"]
+            els.append({"@type": "ListItem", "position": i, "name": node["name"], "url": node["url"], "item": node})
+        return {"@type": "ItemList", "name": name, "numberOfItems": len(ps), "itemListElement": els}
+    u100_lists = [x for x in (item_list_u100(ok_under, "Under $100 (verified)"),
+                              item_list_u100(ok_near, "Closest verified prices, $100 to $150")) if x]
     page("guides/best-paddles-under-100.html", "Best Pickleball Paddles Under $100 (2026)", under,
          "Pickleball paddles under $100 in 2026 with dated maker prices, our Volair code DROPTHEPICKLE, and the closest picks to $150. No made-up scores.",
          fresh={"under": [(p["brand"], p["model"], ph(p)["current"]) for p in ok_under],  # no daily "checked" stamp
                 "near": [(p["brand"], p["model"], ph(p)["current"]) for p in ok_near], "faq": u100_faq},
-         schema=[faq_ld], raw_title=True)
+         schema=[faq_ld, *u100_lists], raw_title=True)
 
     # ----- rules -----
     # Beginner hub (SEO target approved 2026-11-05): keep the short rec-game reading, strengthen

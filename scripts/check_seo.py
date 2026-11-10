@@ -89,20 +89,20 @@ for loc in locs:
 def text_of(rel):
     return (DIST / rel).read_text()
 
-u100 = text_of("best-paddles-under-100.html")
-if u100.find("<h2>At or under $100</h2>") > u100.find("<h2>Closest picks, $100 to $150</h2>"):
+u100 = text_of("guides/best-paddles-under-100.html")
+if u100.find("<h2>Under $100 (verified)</h2>") > u100.find("<h2>Closest verified prices, $100 to $150</h2>"):
     fail("under-$100 page lists the over-$100 group first")
 graph = json.loads(BeautifulSoup(u100, "html.parser").find("script", attrs={"type": "application/ld+json"}).string)
 lists = [n for n in graph["@graph"] if n.get("@type") == "ItemList"]
 names = [n.get("name") for n in lists]
-if names[:1] != ["At or under $100"]:
+if names[:1] != ["Under $100 (verified)"]:
     fail(f"under-$100 primary ItemList name is {names[:1]}")
 primary = lists[0]
 for item in primary["itemListElement"]:
     price = float(item["item"]["offers"]["price"])
-    if price > 100: fail(f"under-$100 ItemList includes {item['name']} at {price}")
-if any(n.get("name") == "Closest picks, $100 to $150" and any(float(i["item"]["offers"]["price"]) <= 100 for i in n["itemListElement"]) for n in lists):
-    fail("the $100 to $150 ItemList includes an at-or-under-$100 paddle")
+    if price >= 100: fail(f"under-$100 ItemList includes {item['name']} at {price}")
+if any(n.get("name") == "Closest verified prices, $100 to $150" and any(float(i["item"]["offers"]["price"]) < 100 for i in n["itemListElement"]) for n in lists):
+    fail("the $100 to $150 ItemList includes an under-$100 paddle")
 
 vol = text_of("paddle-volair-v-1f-xl-w-16mm.html")
 if "doesn't publish a weight" in vol:
@@ -231,8 +231,8 @@ if "We do not claim to have playtested the paddles." not in home_html:
     fail("homepage identity sentence missing")
 if "avantlink.com/affiliate_app_confirm.php" in home_html:
     fail("AvantLink homepage verification script is still present")
-if "Side-by-side maker specs. Not a playtest." not in text_of("best-paddles-under-100.html"):
-    fail("under-100 comparison table missing")
+if "Price checked" not in text_of("guides/best-paddles-under-100.html"):
+    fail("under-100 guide comparison table missing")
 if "DropThePickle has not playtested this paddle." not in text_of("paddle-volair-v-1f-xl-w-16mm.html"):
     fail("V.1F still lacks the specs-vs-playtest line")
 if " · DropThePickle" not in BeautifulSoup(text_of("events/opendoor-pickleball-world-championships.html"), "html.parser").title.string:
