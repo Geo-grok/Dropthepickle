@@ -44,6 +44,7 @@ GUIDES = [
     ("guides/pickleball-kitchen-rules.html", "Pickleball kitchen rules"),
     ("guides/third-shot-drop.html", "Third shot drop"),
     ("guides/pickleball-stacking.html", "Pickleball stacking"),
+    ("guides/pickleball-reset.html", "Pickleball reset shot"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -1423,7 +1424,7 @@ def make(page, e, fmt, PP, cur, ph):
 <li><b>Too much backswing.</b> The brick-wall cue fixes it.</li>
 <li><b>Death grip.</b> Tension adds distance; relax toward a 3 out of 10.</li>
 <li><b>Wristy flick.</b> Lift with the legs instead.</li>
-<li><b>Running in behind a bad drop.</b> A high drop plus a rushing serving team is how points get lost. Stay back and reset.</li>
+<li><b>Running in behind a bad drop.</b> A high drop plus a rushing serving team is how points get lost. Stay back and <a href="pickleball-reset.html">reset</a>.</li>
 <li><b>Only one shot.</b> USA Pickleball says to practice both the drop and the drive and learn when to use each.</li>
 </ul>
 <h2>Third shot drop drills</h2>
@@ -1571,6 +1572,99 @@ def make(page, e, fmt, PP, cur, ph):
          "How to stack in pickleball doubles: half stack vs full stack, serve and return setups, hand signals, the USA Pickleball position rules, common faults and when not to stack.",
          fresh={"checked": SK_CHECKED, "rules": SK_RULES, "faq": sk_faq},
          schema=[sk_faq_ld])
+
+    # ----- Pickleball reset shot (Nov 11, 2026) -----
+    # Evergreen technique page for the approved P2 target "pickleball reset shot". Every tip paraphrases the linked
+    # USA Pickleball, The Kitchen and Pickleheads pages read on RS_CHECKED. No invented stats, heights or percentages.
+    RS_CHECKED = "2026-11-11"
+    rs_checked = _dt.date.fromisoformat(RS_CHECKED).strftime("%B %-d, %Y")
+    RS_USAP1 = "https://usapickleball.org/pickleball-skills/level-one/pickleball-reset-technique-to-keep-the-ball-down/"
+    RS_USAP2 = "https://usapickleball.org/pickleball-skills/level-two/pro-level-pickleball-reset-strategy/"
+    RS_K_AVR = "https://thekitchenpickle.com/blogs/tips/attack-vs-reset-in-pickleball-decision-making/"
+    RS_K_TZ = "https://thekitchenpickle.com/blogs/tips/pickleball-instruction-winning-the-transition-zone-resets-drop-shots/"
+    RS_PH = "https://news.joinpickleheads.com/p/hit-perfect-resets-with-these-3-pointers"
+    RS_CHOICE = [
+        ("Off balance: leaning or losing your footing", "Reset", "The Kitchen"),
+        ("Outstretched: reaching wide for the ball", "Reset", "The Kitchen"),
+        ("Off court: running or scrambling", "Reset", "The Kitchen"),
+        ("You just popped one up and they are swinging down", "Step back, then reset", "USA Pickleball"),
+        ("Their paddle is below the net, so they must hit up", "Paddle up, ready to counter", "USA Pickleball"),
+    ]
+    rs_faq = [
+        ("What is a reset in pickleball?",
+         "A reset is a soft, defensive shot you hit when the other team is attacking you, usually in the transition zone or at the kitchen line. Instead of hitting back hard, you absorb the pace and land the ball low in the opponents' kitchen so they cannot keep attacking, which slows the rally back down to dinks."),
+        ("How tight should I grip the paddle for a reset?",
+         "Very loose. USA Pickleball suggests about a 2 or 3 on a 1 to 10 grip pressure scale, the same as a dink, so the paddle absorbs the ball's power. The Kitchen warns that a tight grip will send the ball flying."),
+        ("Why do my resets pop up?",
+         "USA Pickleball says resets often pop up when you are leaning one way or moving while you hit. Get behind the ball, stop, and hit from a low, balanced stance with your feet a little wider than your shoulders. For low balls out wide, Pickleheads suggests a more sideways paddle face instead of tip-down."),
+        ("When should I reset instead of attack?",
+         "The Kitchen's rule of thumb is the three O's: reset when you are off balance, outstretched, or off court. A mediocre third shot is also a cue to stay in the transition zone and be ready to reset rather than force an attack."),
+        ("Where should a reset land?",
+         "Low in the opponents' kitchen, so they have to let it bounce or hit up. The Kitchen says to aim low into the kitchen and keep the motion small."),
+        ("How do I practice resets?",
+         "The Kitchen's drill: stand in the transition zone and have a partner hit hard balls at your feet while you soften them back into the kitchen. Start slow, then let your partner speed up."),
+    ]
+    rs_faq_html, rs_faq_ld = faq(rs_faq)
+    rs_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in RS_CHOICE)
+    rst = f'''<h1>Pickleball reset shot: how to hit it and when to reset vs attack</h1>
+<p class="meta">Built from USA Pickleball's <a href="{RS_USAP1}" target="_blank" rel="noopener">reset technique</a> and <a href="{RS_USAP2}" target="_blank" rel="noopener">pro-level reset strategy</a> tips, The Kitchen's <a href="{RS_K_AVR}" target="_blank" rel="noopener">attack-or-reset checklist</a> and <a href="{RS_K_TZ}" target="_blank" rel="noopener">transition zone lesson</a>, and a <a href="{RS_PH}" target="_blank" rel="noopener">Pickleheads reset tip</a>, all read {rs_checked}. No coaching stats are made up here.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>What it is:</b> a soft, defensive shot that takes the pace off an attack and lands low in the opponents' kitchen, turning a fast exchange back into a dink rally.</li>
+<li><b>Grip:</b> loose, about 2 or 3 out of 10, the same as a dink (USA Pickleball).</li>
+<li><b>Body:</b> stop, get low, feet a little wider than your shoulders, weight even.</li>
+<li><b>Swing:</b> small and compact, paddle out in front. Absorb the ball rather than swing at it.</li>
+<li><b>When:</b> off balance, outstretched or off court, reset instead of attacking (The Kitchen).</li>
+</ul>
+<h2>Why the reset matters</h2>
+<p>After the serve and return, the serving team has to work forward through the transition zone, the area between the baseline and the <a href="pickleball-kitchen-rules.html">kitchen</a>, while the other team is already at the line. The Kitchen points out that the trip is rarely a straight line: the <a href="third-shot-drop.html">third shot drop</a> gets the attention, but the fifth- and seventh-shot drops and resets are often what actually get you to the kitchen. The Kitchen also says the reset is not giving up. It is a tactical choice to get control back.</p>
+<h2>How to hit a reset</h2>
+<ol>
+<li><b>Loosen your grip.</b> USA Pickleball puts reset grip pressure around 2 or 3 on a 1 to 10 scale so the paddle soaks up the pace. Getting attacked makes everyone tense up, so this takes practice.</li>
+<li><b>Stop and get balanced.</b> Feet a little over shoulder-width apart, weight even, body still. USA Pickleball says resets pop up when you lean or move as you hit.</li>
+<li><b>Lower your body, not just the paddle.</b> In the mid-court, get low and compact instead of standing tall (Pickleheads).</li>
+<li><b>Keep it compact.</b> No big swing. The Kitchen says to keep the motion small and controlled, with the paddle out in front like a dink.</li>
+<li><b>Use two hands on low, fast balls.</b> Pickleheads suggests a two-handed reset when the ball comes in below your knees, for stability.</li>
+<li><b>Turn the face sideways out wide.</b> On a wide ball, a more sideways paddle face, not tip-down, keeps the ball from popping up (Pickleheads).</li>
+<li><b>Aim low into the kitchen.</b> The goal is a ball the other team has to let bounce or hit up.</li>
+</ol>
+<p>If soft hands at the line still feel strange, start with <a href="how-to-dink.html">how to dink</a>. A reset is the same touch under more pressure.</p>
+<h2>Reset or attack: a quick read</h2>
+<p>The Kitchen's "three O's" checklist and USA Pickleball's "see-saw" cue side by side:</p>
+<div class="tbl"><table><thead><tr><th>What you see</th><th>Usual choice</th><th>Source</th></tr></thead><tbody>{rs_rows}</tbody></table></div>
+<p>USA Pickleball's see-saw idea: if the opponent's paddle goes up, they are about to swing down, so lower your paddle and get ready to block or reset. If their paddle is below the net, they have to hit up, so raise yours and get ready to counter.</p>
+<h2>After you pop one up</h2>
+<p>USA Pickleball notes that pros almost always take a big step back right after hitting a ball a little high. The extra distance buys reaction time and room to soften the next ball. Then get low, bend your knees, put your weight behind the paddle and reset into the kitchen instead of trying to counterattack a hard shot.</p>
+<h2>Moving forward after a reset</h2>
+<p>The Kitchen's advice for the transition zone: after each shot your opponents can't put away, take one or two small steps forward, and split step before they hit so you land balanced. Do not charge the net. If the drop comes back, hit another drop or reset and keep inching in.</p>
+<h2>Common reset mistakes</h2>
+<ul>
+<li><b>Death grip.</b> A tight grip makes the ball fly. Relax toward 2 or 3 out of 10.</li>
+<li><b>Hitting on the move.</b> Leaning or moving at contact is how resets pop up. Stop first.</li>
+<li><b>Big swings.</b> Keep it a short block or push, not a stroke.</li>
+<li><b>Standing tall in the mid-court.</b> Get your whole body low, not just the paddle.</li>
+<li><b>Tip-down on wide balls.</b> Turn the face more sideways.</li>
+<li><b>Trying to win the point from a bad spot.</b> If you are off balance, outstretched or off court, reset first.</li>
+</ul>
+<h2>Reset drills</h2>
+<ul>
+<li><b>Feet feed (The Kitchen).</b> Stand in the transition zone. Your partner at the kitchen line hits hard balls at your feet, and you soften each one back into the kitchen.</li>
+<li><b>Step back and reset.</b> Same setup, but your partner sends you a high ball first. Following USA Pickleball's tip, take a big step back, get low, and reset the next ball.</li>
+<li><b>Dink, dink, bang, reset.</b> The kitchen-line pattern from our <a href="pickleball-drills.html">pickleball drills</a> guide includes a reset after every speed-up.</li>
+</ul>
+<p>A paddle with a softer, more controlled feel can help this shot. See <a href="../best-paddles-for-control.html">best control paddles</a>, <a href="paddle-weight-and-core.html">paddle weight and core</a> and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+{money_links()}
+{rs_faq_html}
+{sources([("USA Pickleball: Pickleball reset technique to keep the ball down", RS_USAP1, f"grip pressure 2 to 3 of 10, balance and a still body, read {rs_checked}"),
+          ("USA Pickleball: Pro level pickleball reset strategy", RS_USAP2, f"step back after a pop-up, the see-saw theory, read {rs_checked}"),
+          ("The Kitchen: Attack or reset? Memorize this checklist", RS_K_AVR, f"three O's rule, how to reset, feet-feed drill, read {rs_checked}"),
+          ("The Kitchen: How to win the transition zone", RS_K_TZ, f"fifth- and seventh-shot drops, small steps forward, split step, read {rs_checked}"),
+          ("Pickleheads: Hit perfect resets with these 3 pointers", RS_PH, f"two hands on low balls, sideways paddle face out wide, get low, read {rs_checked}")])}
+{more("guides/pickleball-reset.html")}'''
+    page("guides/pickleball-reset.html", "Pickleball Reset Shot: How to Hit It and When to Use It", rst,
+         "How to hit a pickleball reset shot: loose grip, balanced stance, compact block, when to reset vs attack, what to do after a pop-up, common mistakes and drills.",
+         fresh={"checked": RS_CHECKED, "choice": RS_CHOICE, "faq": rs_faq},
+         schema=[rs_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
