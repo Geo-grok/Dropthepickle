@@ -1,11 +1,142 @@
 {
- "updated": "2026-11-10T06:04-06:00",
- "date": "2026-11-10",
- "source_file": "dtp-newsroom/buzz-2026-11-10.json",
+ "updated": "2026-11-11T05:56-06:00",
+ "date": "2026-11-11",
+ "source_file": "dtp-newsroom/buzz-2026-11-11.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026 & Nations Cup",
- "seo_desc": "PPA Worlds 2026 champions and full replays, USA Pickleball Nationals pro golds, MLP Nations Cup results, the Boomstik ST launch, and more, all sourced.",
+ "seo_desc": "PPA Worlds 2026 champions and replays, MLP Nations Cup results, USA Pickleball's OWL Sport paddle ruling, new PPA Challenger contracts, and the pro calendar, all sourced.",
  "items": [
+  {
+   "title": "USA Pickleball will retire six OWL Sport quiet paddles from sanctioned play on Feb. 1, 2028 after spin-test findings",
+   "summary": "USA Pickleball said Nov. 9 that six OWL Sport paddle models (Talon X1, CX, CXE, PX, PXE and SILENT STORM) show performance that improves with use, which it calls 'Degrade to Benefit,' based on evaluation following its new Spin Rate Test (in effect since Oct. 1, 2026). The paddles stay approved during a transition period through Jan. 31, 2028; starting Feb. 1, 2028 they will no longer be approved for USA Pickleball-sanctioned competition. USA Pickleball credited OWL Sport's work on noise, and OWL Sport is developing updated Quiet Category paddles that will go through standard certification.",
+   "status": "confirmed",
+   "date": "2026-11-11",
+   "sources": [
+    {
+     "label": "USA Pickleball: Statement Regarding OWL Sport",
+     "url": "https://usapickleball.org/usap-news/equipment-news/statement-regarding-owl-sport/"
+    },
+    {
+     "label": "USA Pickleball: Spin Rate Test update and timeline",
+     "url": "https://usapickleball.org/usap-news/equipment-news/update-regarding-the-usa-pickleball-spin-rate-test-and-implementation-timeline/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Gear/rules post: 'Own an OWL quiet paddle? USA Pickleball says six models are legal for sanctioned play until Jan. 31, 2028, then they're out.' Link the USAP statement. On X, no hashtags.",
+   "tags": [
+    "USA Pickleball",
+    "Equipment",
+    "OWL Sport",
+    "Quiet paddles",
+    "Spin Rate Test"
+   ]
+  },
+  {
+   "title": "At 15, Tama Shimabukuro is the youngest men's doubles champion in PPA Tour history",
+   "summary": "The PPA Tour says Tama Shimabukuro's Worlds men's doubles title with JW Johnson makes him the youngest men's doubles champion in PPA Tour history. He is 15 and picked up pickleball in 2023 after skateboarding, per the tour. The pair came back from two games down to beat Christian Alshon and Andrei Daescu 5-11, 5-11, 11-4, 11-8, 11-4 on Nov. 8, their first title together. MLP noted he made his MLP debut at 14 on the same Brookhaven Country Club courts a year earlier.",
+   "status": "confirmed",
+   "date": "2026-11-11",
+   "sources": [
+    {
+     "label": "PPA Tour on X: youngest men's doubles champion in PPA Tour history",
+     "url": "https://x.com/PPAtour/status/2120259963209548210"
+    },
+    {
+     "label": "Open Scoring: Shimabukuro and Johnson rally for Worlds gold",
+     "url": "https://openscoringsports.com/pickleball/2026-11-10/"
+    },
+    {
+     "label": "MLP on X: one year after his MLP debut",
+     "url": "https://x.com/MajorLeaguePB/status/2120234277942010089"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2120259963209548210"
+   ],
+   "social_angle": "Stat post: 'Skateboard in 2023. World champion at 15. Tama Shimabukuro is the youngest men's doubles champ in PPA Tour history.' Quote the PPA post. On X, no hashtags.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "Tama Shimabukuro",
+    "JW Johnson",
+    "Record"
+   ],
+   "links": [
+    {
+     "href": "/events/opendoor-pickleball-world-championships",
+     "label": "Worlds 2026 hub"
+    }
+   ]
+  },
+  {
+   "title": "PPA Challenger Showdown: Eileen Wang, Matt Burkhardt and three teams earn PPA Tour contracts",
+   "summary": "While Worlds was on, the top eight unsigned players and teams from the 2026 PPA Challenger season played the Challenger Showdown in Farmers Branch, Texas, with a PPA Tour contract for each division winner, per Pickleball.com. Women's singles: Eileen Wang beat Jessica Ho 6-11, 11-5, 13-11. Men's singles: Matt Burkhardt beat Troy Akin 11-0, 12-10. Women's doubles: Allie Reichert/Madalina Grigoriu beat Marisa Ruiz/Kelsey Laurente 9-11, 11-8, 11-0. Men's doubles: Riley Inn/Alex Emery beat Connor McCartney/Wade Heerboth 6-11, 11-7, 11-6. Mixed: Anne-Sophie Courteau/Juan Varon beat Grigoriu/Garrison Eaby 11-6, 10-12, 11-7.",
+   "status": "confirmed",
+   "date": "2026-11-11",
+   "sources": [
+    {
+     "label": "Pickleball.com: PPA contracts earned at 2026 Challenger Showdown",
+     "url": "https://pickleball.com/news/ppa-contracts-earned-at-2026-challenger-showdown"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Next-gen post: 'Five new PPA contracts: Wang, Burkhardt, Reichert/Grigoriu, Inn/Emery, Courteau/Varon won the Challenger Showdown.' Link Pickleball.com. On X, no hashtags.",
+   "tags": [
+    "PPA",
+    "Challenger Series",
+    "Contracts",
+    "Results"
+   ]
+  },
+  {
+   "title": "Pro calendar after Worlds: APP Arizona Open in Mesa this week, then the $1.06M PPA Daytona Beach Open Nov. 16-22",
+   "summary": "The APP Tour's Arizona Open runs Thursday to Sunday, Nov. 12-15 at Arizona Athletic Grounds in Mesa with $125,000 in prize money, per Pickleballer citing the APP. PPA Tour Europe has a 125-level Challenger near Lille, France the same week. The PPA Tour is back Nov. 16-22 with the Proton Daytona Beach Open at Pictona at Holly Hill, Fla., an Open-level event (1,000 ranking points per title) with a listed $1,063,327 total payout. PickleballTV is the listed broadcaster, with finals Sunday, Nov. 22 from noon to 5 p.m. ET. MLP Asia's first season opens Friday, Nov. 13 in Japan.",
+   "status": "confirmed",
+   "date": "2026-11-11",
+   "sources": [
+    {
+     "label": "Pickleballer: After Worlds, the APP goes to Mesa and the PPA heads to Daytona",
+     "url": "https://pickleballer.world/stories/after-worlds-app-arizona-open-ppa-daytona/"
+    },
+    {
+     "label": "APPTV: 2026 APP Arizona Open championship court stream (Nov. 13)",
+     "url": "https://www.youtube.com/watch?v=t-Wcy47y1n0"
+    },
+    {
+     "label": "World Pickleball Magazine: MLP Asia opens Friday",
+     "url": "https://worldpickleballmagazine.com/li-xiaopeng-china-pickleball-tour-mlp-asia/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Schedule post: 'No rest after Worlds. APP Mesa this week, MLP Asia opens Friday, PPA Daytona ($1.06M) next week.' Link Pickleballer. On X, no hashtags.",
+   "tags": [
+    "APP",
+    "Arizona Open",
+    "PPA",
+    "Daytona Beach Open",
+    "MLP Asia",
+    "Schedule"
+   ]
+  },
+  {
+   "title": "Light item: Rockies GM Josh Byrnes and Ian Levin win the MLB GM meetings pickleball tournament",
+   "summary": "Colorado Rockies general manager Josh Byrnes and Ian Levin won the second annual pickleball tournament held at MLB's general managers meetings, per Purple Row. Rockies fans online joked it was the club's long-awaited title.",
+   "status": "confirmed",
+   "date": "2026-11-11",
+   "sources": [
+    {
+     "label": "Purple Row: Josh Byrnes & Ian Levin win the second annual MLB GM pickleball tournament",
+     "url": "https://www.purplerow.com/post/vTl7xgsRS4Tf"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Fun post: 'MLB's GMs held a pickleball tournament. The Rockies front office won it.' Link Purple Row; keep it playful.",
+   "tags": [
+    "MLB",
+    "Celebrity",
+    "Culture"
+   ]
+  },
   {
    "title": "USA Pickleball Nationals pro golds: Ronan Camron and Seone Mendez win singles, and Richard Livornese takes two titles",
    "summary": "The five pro gold medals at the Oceanview USA Pickleball National Championships were decided Sunday, Nov. 8 at Barnes Tennis Center in San Diego, per World Pickleball Magazine, citing the Pickleball Den results board. Men's singles: Ronan Camron beat Andre Millet 11-8, 11-5. Women's singles: Seone Mendez beat Bobbi Oshiro 11-0, 11-4. Men's doubles: Jack Munro/Richard Livornese beat Jayden Broderick/Zack Card 8-11, 11-6, 11-5. Women's doubles: Vivian Glozman/Roos Van Reek beat Katerina Stewart/Bobbi Oshiro 9-11, 11-5, 11-5. Mixed doubles: Stewart/Livornese beat Munro/Van Reek 11-5, 12-10. USA Pickleball's own Nationals recap page had not posted Sunday's medalists at check time.",
@@ -2165,151 +2296,6 @@
     "Courts",
     "California",
     "Ohio",
-    "New courts"
-   ]
-  },
-  {
-   "title": "Nations Cup countdown: Inside MLP breaks down all 8 rosters ahead of Friday's start in Farmers Branch, Texas",
-   "summary": "Major League Pickleball's new Inside MLP episode has Will Daughton and Dave Fleming going through all eight MLP Nations Cup rosters, the team captains and their teams to watch, per MLP's YouTube description. MLP also kept its countdown going on X, with Mari Humberg and Nico Acevedo ready to represent Latin America and the Europe-East roster (Tina Pisnik, Andrei Daescu, Lina Padegimaite, Daria Walczak, Arwid Dahlin and Ivan Jakovljevic, captain Caleb Garrard). The inaugural Nations Cup starts Friday, Oct. 30, at Brookhaven Country Club and kicks off the 2026 Opendoor Pickleball World Championships. (Full format, groups and how to watch are in our Oct. 26 Buzz.)",
-   "status": "confirmed",
-   "date": "2026-10-27",
-   "sources": [
-    {
-     "label": "MLP YouTube: Inside MLP, 2026 Nations Cup Edition",
-     "url": "https://www.youtube.com/watch?v=908Yv2BNJ4g"
-    },
-    {
-     "label": "@MajorLeaguePB: Daughton and Fleming break down all 8 rosters",
-     "url": "https://x.com/MajorLeaguePB/status/2114825765443252460"
-    },
-    {
-     "label": "@MajorLeaguePB: Humberg and Acevedo for Latin America, 4 days out",
-     "url": "https://x.com/MajorLeaguePB/status/2114820620642877928"
-    },
-    {
-     "label": "@MajorLeaguePB: Europe-East roster",
-     "url": "https://x.com/MajorLeaguePB/status/2114741341053718707"
-    },
-    {
-     "label": "The Dink: Nations Cup preview (format, schedule)",
-     "url": "https://www.thedinkpickleball.com/mlp-nations-cup-2026-tournament-preview-everything-you-need-to-know/"
-    }
-   ],
-   "embeds": [
-    "https://x.com/MajorLeaguePB/status/2114825765443252460",
-    "https://x.com/MajorLeaguePB/status/2114820620642877928"
-   ],
-   "social_angle": "Preview post: 'Who wins the first Nations Cup?' Link the Inside MLP episode and ask followers for their pick. Tag MLP.",
-   "tags": [
-    "MLP",
-    "Nations Cup",
-    "Worlds",
-    "Preview",
-    "Rosters"
-   ]
-  },
-  {
-   "title": "Noise fights: Charleston cuts its Parkshore Park plan to 2 unlit courts; West U, Texas ends pickleball on 2 Wier Park courts after a sound study",
-   "summary": "The City of Charleston now plans just two pickleball courts at Parkshore Park in West Ashley, down from an original plan for 12 lighted courts and a later plan for four, The Post and Courier reports. The updated plan, shown at the Oct. 22 recreation committee meeting, drops the lights, moves the courts 30 feet farther from homes and limits the courts to eight people at a time; the city is also considering acoustic fencing and a vegetative barrier and will do a sound study, with no timeline set. In West University Place, Texas, pickleball on two of Wier Park's western courts ended Oct. 23 on the Parks and Recreation Board's recommendation, after a city acoustical study found pickleball impact sounds 'stand out more' than tennis or basketball, Community Impact reports. The city found sound barriers unfeasible and said quiet equipment does not perform like standard gear; the board takes up next steps on Nov. 4, and the closed courts will be re-striped for tennis.",
-   "status": "confirmed",
-   "date": "2026-10-27",
-   "sources": [
-    {
-     "label": "The Post and Courier: Charleston adjusts Parkshore Park pickleball plans",
-     "url": "https://www.postandcourier.com/charleston_sc/charleston-parkshore-park-pickleball/article_e225e781-ea5f-4582-a848-a2f745d28dd0.html"
-    },
-    {
-     "label": "Community Impact: West U discontinues pickleball on two Wier Park courts",
-     "url": "https://communityimpact.com/bellaire-meyerland-west-university/government/west-u-to-continue-talks-of-modified-pickleball-park-rules-amid-discontinued-usage-at-wier-park/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Noise-war tracker, part 2 (after Brentwood): what cities are actually doing (fewer courts, no lights, quiet gear after 8 p.m., sound studies). Good hook for a quiet-paddle guide.",
-   "tags": [
-    "Noise",
-    "Courts",
-    "Local government",
-    "South Carolina",
-    "Texas"
-   ]
-  },
-  {
-   "title": "Anna Bright in Manila: 'International pickleball needs to be in the Philippines'",
-   "summary": "Anna Bright met Filipino players and fans at the SM Mall of Asia Music Hall in Pasay City on Tuesday, Oct. 27, in an SM Active event, Manila Standard reports. At a press conference there, Bright said she would love to see more international tournaments and more homegrown Filipino talent in the Philippines: '100%. I think international pickleball needs to be in the Philippines,' she told Fastbreak. Bright is also on Team USA's roster for the MLP Nations Cup, which starts Friday in Texas.",
-   "status": "confirmed",
-   "date": "2026-10-27",
-   "sources": [
-    {
-     "label": "Fastbreak: Anna Bright hopes for more international tourneys in the PH",
-     "url": "https://fastbreak.com.ph/us-player-anna-bright-hopes-for-more-international-pickleball-tourneys-in-the-ph/sports-galore/"
-    },
-    {
-     "label": "@mnlstandardph: SM Active puts pickleball in the spotlight with Anna Bright",
-     "url": "https://x.com/mnlstandardph/status/2115009114611065006"
-    },
-    {
-     "label": "The Dink: Nations Cup preview (Team USA roster)",
-     "url": "https://www.thedinkpickleball.com/mlp-nations-cup-2026-tournament-preview-everything-you-need-to-know/"
-    }
-   ],
-   "embeds": [
-    "https://x.com/mnlstandardph/status/2115009114611065006"
-   ],
-   "social_angle": "Quote card with Bright's '100%' line; Philippines pickleball keeps growing (ALW was in Manila Oct. 16). Ties into her Nations Cup run Friday.",
-   "tags": [
-    "Anna Bright",
-    "Philippines",
-    "Asia",
-    "Pros"
-   ]
-  },
-  {
-   "title": "CityPickle's Paddletek One Point Slam: one rally per match, $5,000 to the winners, and a 2027 road tour planned",
-   "summary": "CityPickle and Paddletek ran the first Paddletek One Point Slam at CityPickle Times Square, a single-elimination amateur doubles event where every match is one rally, inspired by the Australian Open's one-point exhibition. PodPlay's recap says 44 doubles teams entered on Saturday, Oct. 17, and Mia Yu and Sheridan Kim, who signed up that morning, won the $5,000 check; a replay review overturned one contested finish when it showed a foot in the kitchen. Teams with more Paddletek paddles won the coin toss automatically. PodPlay says it plans to take the One Point Slam to more clubs in 2027, and CityPickle's release says its Boca Raton, Fla. club opens this fall and a 60,000-square-foot, 11-court CityPickle Brooklyn Bridge, DUMBO club opens in early spring.",
-   "status": "confirmed",
-   "date": "2026-10-27",
-   "sources": [
-    {
-     "label": "GlobeNewswire: CityPickle and Paddletek bring the One Point Slam to NYC",
-     "url": "https://www.globenewswire.com/news-release/2026/10/26/3388159/0/en/citypickle-and-paddletek-bring-high-stakes-one-point-slam-to-new-york-city-awarding-5-000-grand-prize.html"
-    },
-    {
-     "label": "PodPlay: One Point, $5,000 (recap and video)",
-     "url": "https://podplay.app/blog/one-point-slam-programming-that-tells-a-story"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Fun format post: 'Would you play one point for $5,000?' Easy engagement question; good for rec players.",
-   "tags": [
-    "Amateur",
-    "Events",
-    "New York",
-    "CityPickle",
-    "Paddletek",
-    "Formats"
-   ]
-  },
-  {
-   "title": "Courts watch: The Yards adds 9 covered courts in Ponte Vedra Beach ($1.5M); Upper Dublin, Pa. opens 4 courts at Twining Valley Park",
-   "summary": "The Yards, a semi-private club at Sawgrass Players Club in Ponte Vedra Beach, Fla., finished a $1.5 million renovation of its Pickle Garden in September, adding nine covered, open-air courts with a steel roof and overhead fans next to its three uncovered courts, according to a Jacksonville Business Journal feature. Upper Dublin Township, Pa. cut the ribbon on four new pickleball courts at Twining Valley Park on Monday, Oct. 26; the Pennsylvania Department of Conservation and Natural Resources paid for half the project, Wiss Now reports.",
-   "status": "confirmed",
-   "date": "2026-10-27",
-   "sources": [
-    {
-     "label": "Jacksonville Business Journal: The Yards' $1.5M pickleball transformation",
-     "url": "https://www.bizjournals.com/jacksonville/news/2026/10/26/yards-pickleball-transformation-ponte-vedra-beach.html"
-    },
-    {
-     "label": "Wiss Now: Upper Dublin opens new courts at Twining Valley Park",
-     "url": "https://wissnow.com/news/upper-dublin-township-opens-new-pickleball-courts-at-twining-valley-park/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Courts-near-you item; covered outdoor courts as the Florida answer to rain and heat.",
-   "tags": [
-    "Courts",
-    "Florida",
-    "Pennsylvania",
     "New courts"
    ]
   }
