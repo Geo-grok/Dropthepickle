@@ -302,6 +302,19 @@ CSS += """
 .vnext .btn.ghost,main p>.btn.ghost{color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
 .vnext .btn.ghost:hover,main p>.btn.ghost:hover{background:var(--navy);color:#fff;box-shadow:inset 0 0 0 2px var(--navy)}
 """
+# Tap-target pass (2026-11-11): phone-only (<=720px). On the discount-code hub and per-brand code pages, the per-card
+# "Source:" link, the "<Brand> codes" section headings, disclosure links, "top of this page"/"All <Brand> codes" links and
+# the link lists (no-code brands, brand paddles/comparisons, More ways to save) were plain inline text links ~20-30px tall.
+# Each is now a 44px+ tall hit area with bold navy text (no neon on white). Layout and copy unchanged.
+CSS += """
+@media(max-width:720px){
+.ccard .cmeta a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px;font-weight:800;color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.cbrand h2 a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.cbrand .meta a,#own-codes .meta a,.disc a,.owncode .owndisc a{display:inline-flex;align-items:center;min-height:44px;font-weight:800;color:var(--navy)}
+.tapl a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--navy)}
+.cshop{font-weight:800;color:var(--navy)}
+}
+"""
 _FB = {"Inter": "Inter Fallback", "Oswald": "Oswald Fallback", '"Bebas Neue"': "Bebas Neue Fallback", "Anton": "Anton Fallback"}
 def _with_fallbacks(css):
     # insert the metric-matched fallback right after each web font in every font/font-family stack
@@ -884,7 +897,7 @@ def build():
          f'{f"<p class=disc><b>Disclosure:</b> {earn_note(codes, include_all_own=True)} <a href=/disclosure>Details</a>.</p>" if any(is_tagged(c.get("shop_url", "")) for c in codes) or OWN else ""}'
          f'<p class="codewarn"><b>Heads up:</b> codes can expire or change without notice, and most brands allow one code per order (sale prices often beat a code). Check your cart total before you pay. We don\'t make up codes or post leaked ones.</p>'
          f'<p class="meta">Looking for price drops instead? See <a href="deals.html">Big Dill\'s paddle deals</a> or the <a href="price-tracker.html">Paddle Price Tracker</a>. Prefer soft hands at the kitchen? See <a href="best-paddles-for-control.html">best paddles for control</a>.</p>{gift_pages.holiday_note("codes")}<h2>Best code per brand</h2><div class="codes-best">{jump}</div>{secs}'
-         f'{f"<h2>No working code right now</h2><ul>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(codes, include_all_own=True)} <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
+         f'{f"<h2>No working code right now</h2><ul class=tapl>{nocode}</ul>" if nocode else ""}<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(codes, include_all_own=True)} <a href="disclosure.html">Disclosure</a>.</p>{faq_html}'
          f'{nudge("discount-codes-bottom", "bottom", "Don\'t miss the next code", "We re-check creator and brand pages every day. Join the list and hear about new codes first.")}{copyjs}{NUDGEJS}',
          f"{len(codes)} pickleball discount codes and paddle coupons for {', '.join(brands[:8])} and more, re-checked daily. Tap to copy.",
          fresh={"codes": [(c["brand"], c["code"], c["discount"]) for c in codes], "own": [(o["brand"], o["code"], o["discount"]) for o in OWN.values()]}, schema=code_ld)
@@ -979,8 +992,8 @@ def build():
         if bestf in CATALOG: plinks.insert(0, (bestf, ttl(bestf)))
         gear = ""
         def lis(xs): return "".join(f'<li><a href="../{f}">{e(t)}</a></li>' for f, t in xs)
-        if plinks: gear += f'<h2>{e(b)} paddles</h2><ul>{lis(plinks)}</ul>'
-        if vs: gear += f'<h2>{e(b)} paddle comparisons</h2><ul>{lis(vs)}</ul>'
+        if plinks: gear += f'<h2>{e(b)} paddles</h2><ul class="tapl">{lis(plinks)}</ul>'
+        if vs: gear += f'<h2>{e(b)} paddle comparisons</h2><ul class="tapl">{lis(vs)}</ul>'
         rel_html = "".join(f'<a href="/discount-codes/{slugb(x)}">{e(x)} codes</a>' for x in related(b))
         crumbs = [{"name": "Home", "url": C["BASE_URL"].rstrip("/") + "/"}, {"name": "Discount codes", "url": canon("discount-codes.html")}, {"name": f"{b} codes", "url": url}]
         crumb_html = f'<nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="/discount-codes">Discount codes</a> › <span>{e(b)}</span></nav>'
@@ -1061,7 +1074,7 @@ def build():
                 if bc else (f'<p class="disc"><b>Disclosure:</b> {own_codes.earn_line(OWN[b])} <a href="../disclosure.html">Details</a>.</p>' if b in OWN else ""))
         body = (f'<h1>{e(b)} discount codes</h1>{intro}{disc}'
                 f'{crumb_html}{main}{gift_pages.holiday_note("codes")}{gear}'
-                f'<h2>More ways to save</h2><p><a href="/discount-codes">All pickleball discount codes</a> · <a href="../deals.html">Paddle deals</a> · <a href="../price-tracker.html">Paddle Price Tracker</a></p>'
+                f'<h2>More ways to save</h2><p class="tapl"><a href="/discount-codes">All pickleball discount codes</a> · <a href="../deals.html">Paddle deals</a> · <a href="../price-tracker.html">Paddle Price Tracker</a></p>'
                 + (f'<h2>Related brands</h2><div class="codes-best">{rel_html}</div>' if rel_html else "") + faq_html + (copyjs if (bc or b in OWN) else ""))
         ds = list(dict.fromkeys(c["discount"] for c in bc))
         # Short query-matching title; the full <title> with " · SITE_NAME" stays <= 60 chars (drop the month if it would not fit).
