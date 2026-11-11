@@ -1,11 +1,51 @@
 {
  "items": [
   {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "Selkirk Boomstik ST vs Original Boomstik vs Omni Pickleball Paddle Review: Which Is Best?",
+   "link": "https://www.youtube.com/watch?v=uxXX3DTIMhY",
+   "video_id": "uxXX3DTIMhY",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "Selkirk Boomstik ST Review: Worth $350? (vs Original Boomstik)",
+   "link": "https://www.youtube.com/watch?v=i93BGLoaAmw",
+   "video_id": "i93BGLoaAmw",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "The Kitchen Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
+   "title": "Selkirk Just Made the Boomstik Even Better | Boomstik ST Review",
+   "link": "https://www.youtube.com/watch?v=xjehd2q7_oI",
+   "video_id": "xjehd2q7_oI",
+   "date": "2026-11-10"
+  },
+  {
    "channel": "All Drive No Drop Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
    "title": "I Tested the New Selkirk Boomstick ST: Is It Actually Better? First Impressions",
    "link": "https://www.youtube.com/watch?v=rxXAIJcxEYg",
    "video_id": "rxXAIJcxEYg",
+   "date": "2026-11-10"
+  },
+  {
+   "channel": "Matthew K Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
+   "title": "[GIVEAWAY!] Watch BEFORE You Buy! | Honolulu M 105 MPP Paddle Review",
+   "link": "https://www.youtube.com/watch?v=T68oa5OoeKc",
+   "video_id": "T68oa5OoeKc",
+   "date": "2026-11-10"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Honolulu J6CR M105 Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=vCMusHxcS78",
+   "video_id": "vCMusHxcS78",
    "date": "2026-11-10"
   },
   {
@@ -62,14 +102,6 @@
    "title": "RPM Jade Review – Big Spin, High Power, and the Durability Question",
    "link": "https://www.youtube.com/watch?v=H2ztCs2PFHE",
    "video_id": "H2ztCs2PFHE",
-   "date": "2026-11-06"
-  },
-  {
-   "channel": "The Kitchen Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
-   "title": "The Paddle That Got JW Johnson to DUPR No. 1 | Full Review",
-   "link": "https://www.youtube.com/watch?v=d-biKg1qwUY",
-   "video_id": "d-biKg1qwUY",
    "date": "2026-11-06"
   },
   {
@@ -137,14 +169,6 @@
    "date": "2026-11-03"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Pickle Poppers Pop N Rush Game Play Paddle Review",
-   "link": "https://www.youtube.com/watch?v=YRizC0ZybDQ",
-   "video_id": "YRizC0ZybDQ",
-   "date": "2026-11-03"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Luzz Cannon XPP M1 Paddle Review | Game Analysis",
@@ -166,14 +190,6 @@
    "title": "New Honolulu J6M+, RPM Diesel, Gearbox Pressure X, Spartus Spitfire Widebody, USAP  Fails Again",
    "link": "https://www.youtube.com/watch?v=I1BVqZ8-5us",
    "video_id": "I1BVqZ8-5us",
-   "date": "2026-11-02"
-  },
-  {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "Is Core Innovation MORE Important than DURABLE GRIT?!? | Special Paddletek Interview",
-   "link": "https://www.youtube.com/watch?v=3a5r9hSJGgI",
-   "video_id": "3a5r9hSJGgI",
    "date": "2026-11-02"
   },
   {
@@ -278,14 +294,6 @@
    "title": "RPM Diesel First Impressions: Can This Shape Change the Game of Pickleball?",
    "link": "https://www.youtube.com/watch?v=RL7t7zlFwPU",
    "video_id": "RL7t7zlFwPU",
-   "date": "2026-10-29"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Hit Testing the Loco 2 and Other New Gritty Paddles! Luzz Cannon XPP M1",
-   "link": "https://www.youtube.com/watch?v=b_rKvx3ebq0",
-   "video_id": "b_rKvx3ebq0",
    "date": "2026-10-29"
   },
   {
@@ -471,23 +479,55 @@
    "link": "https://www.youtube.com/watch?v=Oh_oorKPThk",
    "video_id": "Oh_oorKPThk",
    "date": "2026-10-08"
-  },
-  {
-   "channel": "Pickleball Pursuit",
-   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
-   "title": "Why Some Durable Grits Last Longer, Loco 2, Neonic FLX, Luzz Cannon XPP",
-   "link": "https://www.youtube.com/watch?v=4nmsBozxc3Y",
-   "video_id": "4nmsBozxc3Y",
-   "date": "2026-10-07"
   }
  ],
  "all_items": [
+  {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "Selkirk Boomstik ST vs Original Boomstik vs Omni Pickleball Paddle Review: Which Is Best?",
+   "link": "https://www.youtube.com/watch?v=uxXX3DTIMhY",
+   "video_id": "uxXX3DTIMhY",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "Selkirk Boomstik ST Review: Worth $350? (vs Original Boomstik)",
+   "link": "https://www.youtube.com/watch?v=i93BGLoaAmw",
+   "video_id": "i93BGLoaAmw",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "The Kitchen Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
+   "title": "Selkirk Just Made the Boomstik Even Better | Boomstik ST Review",
+   "link": "https://www.youtube.com/watch?v=xjehd2q7_oI",
+   "video_id": "xjehd2q7_oI",
+   "date": "2026-11-10"
+  },
   {
    "channel": "All Drive No Drop Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
    "title": "I Tested the New Selkirk Boomstick ST: Is It Actually Better? First Impressions",
    "link": "https://www.youtube.com/watch?v=rxXAIJcxEYg",
    "video_id": "rxXAIJcxEYg",
+   "date": "2026-11-10"
+  },
+  {
+   "channel": "Matthew K Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
+   "title": "[GIVEAWAY!] Watch BEFORE You Buy! | Honolulu M 105 MPP Paddle Review",
+   "link": "https://www.youtube.com/watch?v=T68oa5OoeKc",
+   "video_id": "T68oa5OoeKc",
+   "date": "2026-11-10"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Honolulu J6CR M105 Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=vCMusHxcS78",
+   "video_id": "vCMusHxcS78",
    "date": "2026-11-10"
   },
   {
@@ -544,14 +584,6 @@
    "title": "RPM Jade Review – Big Spin, High Power, and the Durability Question",
    "link": "https://www.youtube.com/watch?v=H2ztCs2PFHE",
    "video_id": "H2ztCs2PFHE",
-   "date": "2026-11-06"
-  },
-  {
-   "channel": "The Kitchen Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
-   "title": "The Paddle That Got JW Johnson to DUPR No. 1 | Full Review",
-   "link": "https://www.youtube.com/watch?v=d-biKg1qwUY",
-   "video_id": "d-biKg1qwUY",
    "date": "2026-11-06"
   },
   {
@@ -648,14 +680,6 @@
    "title": "New Honolulu J6M+, RPM Diesel, Gearbox Pressure X, Spartus Spitfire Widebody, USAP  Fails Again",
    "link": "https://www.youtube.com/watch?v=I1BVqZ8-5us",
    "video_id": "I1BVqZ8-5us",
-   "date": "2026-11-02"
-  },
-  {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "Is Core Innovation MORE Important than DURABLE GRIT?!? | Special Paddletek Interview",
-   "link": "https://www.youtube.com/watch?v=3a5r9hSJGgI",
-   "video_id": "3a5r9hSJGgI",
    "date": "2026-11-02"
   },
   {
@@ -843,14 +867,6 @@
    "date": "2026-10-23"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Pakle Fuse Paddle Review | Match Play",
-   "link": "https://www.youtube.com/watch?v=EoQhYcWMIfU",
-   "video_id": "EoQhYcWMIfU",
-   "date": "2026-10-23"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "Volair CMD Hybrid Review, Comparisons & My Custom Setup",
@@ -928,14 +944,6 @@
    "title": "RPM Jade First Impressions Review | Rackets & Runners",
    "link": "https://www.youtube.com/watch?v=S6I0z22xTNs",
    "video_id": "S6I0z22xTNs",
-   "date": "2026-10-17"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "NXTGEN Hydra: A Cheaper All-Court Foam Paddle? | Minute Review",
-   "link": "https://www.youtube.com/watch?v=KEjystbQTzg",
-   "video_id": "KEjystbQTzg",
    "date": "2026-10-17"
   },
   {
@@ -1032,14 +1040,6 @@
    "title": "Bread and Butter Loco 2 Elongated Pickleball Paddle Review: Same Amazing Paddle but Better?",
    "link": "https://www.youtube.com/watch?v=fiU7D2ifU5A",
    "video_id": "fiU7D2ifU5A",
-   "date": "2026-10-12"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "This Cartoon Paddle Actually Plays GREAT 😳 Pickle Poppers Pop N’ Treasure Review",
-   "link": "https://www.youtube.com/watch?v=c0GHfxxiG98",
-   "video_id": "c0GHfxxiG98",
    "date": "2026-10-12"
   },
   {
@@ -1233,14 +1233,6 @@
    "link": "https://www.youtube.com/watch?v=Okpj-5p0euM",
    "video_id": "Okpj-5p0euM",
    "date": "2026-08-31"
-  },
-  {
-   "channel": "PickleBaller",
-   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
-   "title": "Ronbus Quanta Pro vs Quanta Pickleball Paddle Review: Is the Pro Better?",
-   "link": "https://www.youtube.com/watch?v=G4euE-o9aDs",
-   "video_id": "G4euE-o9aDs",
-   "date": "2026-08-29"
   },
   {
    "channel": "Tickle My Pickleball",
@@ -1562,7 +1554,7 @@
   "Pickleball Playbook Paddles": "ok (11)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
-  "Pickleball Advocate": "ok (12)"
+  "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-10T11:47"
+ "updated": "2026-11-11T11:51"
 }

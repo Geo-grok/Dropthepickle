@@ -1,6 +1,83 @@
 {
  "items": [
   {
+   "source": "Pickleball Union",
+   "title": "Why Your Feet Feel Like They’re Burning in Pickleball",
+   "link": "https://pickleballunion.com/hot-feet-pickleball/",
+   "date": "2026-11-11",
+   "summary": "Pickleball Union story from 2026-11-11, filed under Gear, Guides & Gear, Injury Prevention & Recovery."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "8 Pickleball Etiquette Rules You Probably Didn’t Know Were Rules",
+   "link": "https://pickleballunion.com/lesser-known-pickleball-etiquette-rules/",
+   "date": "2026-11-11",
+   "summary": "Pickleball Union story from 2026-11-11, filed under Pickleball 101, Pickleball Rules, Intermediate Pickleball."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "Where to Stand at the Kitchen Line to Keep Pressure in Doubles",
+   "link": "https://pickleballunion.com/pickleball-kitchen-pressure/",
+   "date": "2026-11-11",
+   "summary": "Pickleball Union story from 2026-11-11, filed under Intermediate Play, Advanced Play, Tips & Strategy."
+  },
+  {
+   "source": "The Dink",
+   "title": "Why Your Tennis Skills Might Be Holding You Back in Pickleball",
+   "link": "https://www.thedinkpickleball.com/3-mistakes-tennis-players-make-in-pickleball/",
+   "date": "2026-11-10",
+   "summary": "The Dink story from 2026-11-10, filed under up your game, pickleball tips, pickleball strategy."
+  },
+  {
+   "source": "The Dink",
+   "title": "5 Pickleball Warm Up Moves That Prevent Injuries Before You Play",
+   "link": "https://www.thedinkpickleball.com/pickleball-warm-up-5-moves-to-prevent-injuries/",
+   "date": "2026-11-10",
+   "summary": "The Dink story from 2026-11-10, filed under Pickleball 101, pickleball tips, pickleball strategy."
+  },
+  {
+   "source": "The Dink",
+   "title": "5 Gauges That Tell You When to Let a Pickleball Out Go",
+   "link": "https://www.thedinkpickleball.com/pickleball-out-ball-gauges/",
+   "date": "2026-11-10",
+   "summary": "The Dink story from 2026-11-10, filed under Pickleball 101, pickleball tips, pickleball strategy."
+  },
+  {
+   "source": "The Dink",
+   "title": "Revolin's New Arc Paddle Harnesses 'Playable Power' Thanks to a Natural Advantage",
+   "link": "https://www.thedinkpickleball.com/revolin-arc-a-new-spin-on-all-court-performance/",
+   "date": "2026-11-10",
+   "summary": "The Dink story from 2026-11-10, filed under Paddle Technology, Paddle Reviews, Revolin."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "Selkirk Now Owns LevelUp Pickleball Camps. Here’s What That Means If You Have a Camp Booked",
+   "link": "https://pickleballunion.com/selkirk-acquires-levelup-pickleball-camps/",
+   "date": "2026-11-10",
+   "summary": "Pickleball Union story from 2026-11-10, filed under Pickleball Industry, Pickleball News."
+  },
+  {
+   "source": "Pickleball Union",
+   "title": "The Pickleball Injury That Puts Players in the ER Is a Fall. Here’s What the Research Says",
+   "link": "https://pickleballunion.com/pickleball-falls-er-injuries/",
+   "date": "2026-11-10",
+   "summary": "Pickleball Union story from 2026-11-10, filed under Injury Prevention & Recovery."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "Andre Agassi’s company signs deal for Grateful Dead pickleball and padel gear",
+   "link": "https://thekitchenpickle.com/blogs/news/grateful-dead-pickleball-padel-merchandise-agassi-sports-entertainment-rhino/",
+   "date": "2026-11-10",
+   "summary": "The Kitchen Pickle story from 2026-11-10, filed under pickleball gear, pickleball paddles."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "Review: New Selkirk Boomstik ST is even better than the original",
+   "link": "https://thekitchenpickle.com/blogs/gear/selkirk-boomstik-st-pickleball-paddle-review/",
+   "date": "2026-11-10",
+   "summary": "The Kitchen Pickle story from 2026-11-10, filed under Gear, pickleball gear, pickleball paddles."
+  },
+  {
    "source": "The Dink",
    "title": "The Best Dressed Pros at the PPA Opendoor Pickleball World Championships",
    "link": "https://www.thedinkpickleball.com/our-picks-for-the-best-dressed-pros-at-ppa-worlds-2026/",
@@ -29,20 +106,6 @@
    "summary": "The Dink story from 2026-11-09, filed under Pickleball 101, pickleball tips, pickleball strategy."
   },
   {
-   "source": "The Dink",
-   "title": "7 Backhand Dink Fixes That Add Topspin and Stop Pop-Ups",
-   "link": "https://www.thedinkpickleball.com/7-backhand-dink-fixes-that-stop-pop-ups-and-nets/",
-   "date": "2026-11-09",
-   "summary": "The Dink story from 2026-11-09, filed under Pickleball 101, pickleball tips, pickleball strategy."
-  },
-  {
-   "source": "The Dink",
-   "title": "5 Pickleball Serve Speed Fixes That Added MPH on a Radar Gun",
-   "link": "https://www.thedinkpickleball.com/5-ways-to-boost-pickleball-serve-speed-fast/",
-   "date": "2026-11-09",
-   "summary": "The Dink story from 2026-11-09, filed under Pickleball 101, pickleball tips, pickleball strategy."
-  },
-  {
    "source": "Pickleball Union",
    "title": "The Most Forgiving Pickleball Paddles, Ranked by Lab Data",
    "link": "https://pickleballunion.com/most-forgiving-pickleball-paddles/",
@@ -62,13 +125,6 @@
    "link": "https://pickleballunion.com/should-3-5-pickleball-players-be-dinking-less/",
    "date": "2026-11-09",
    "summary": "Pickleball Union story from 2026-11-09, filed under Tips & Strategy, Intermediate Play, 3.5 Pickleball."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "Jack Sock Tried the Lob Serve—And That’s More Interesting Than Whether He Won the Point",
-   "link": "https://pickleballunion.com/jack-sock-lob-serve/",
-   "date": "2026-11-09",
-   "summary": "Pickleball Union story from 2026-11-09, filed under Advanced Play, Tips & Strategy."
   },
   {
    "source": "The Kitchen Pickle",
@@ -113,67 +169,11 @@
    "summary": "The Kitchen Pickle story from 2026-11-08, filed under Gear, pickleball gear, pickleball paddles."
   },
   {
-   "source": "The Dink",
-   "title": "3 Overhead Smash Tips That Make the Ball Never Come Back",
-   "link": "https://www.thedinkpickleball.com/3-overhead-smash-tips-for-power-that-ends-the-point/",
-   "date": "2026-11-07",
-   "summary": "The Dink story from 2026-11-07, filed under Pickleball 101, pickleball tips, pickleball strategy."
-  },
-  {
-   "source": "The Dink",
-   "title": "5 Pickleball Shots Beginners Should Learn First",
-   "link": "https://www.thedinkpickleball.com/5-pickleball-shots-beginners-should-learn-first/",
-   "date": "2026-11-07",
-   "summary": "The Dink story from 2026-11-07, filed under Pickleball 101, pickleball tips, pickleball strategy."
-  },
-  {
    "source": "The Kitchen Pickle",
    "title": "JOOLA and TOGETHXR launch ‘She’s Got a Point’ campaign to elevate women in pickleball",
    "link": "https://thekitchenpickle.com/blogs/news/joola-pickleball-togethxr-shes-got-a-point-campaign/",
    "date": "2026-11-07",
    "summary": "The Kitchen Pickle story from 2026-11-07, filed under pickleball gear, pickleball paddles."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "The Pickleball Endurance Plan for Players Who Hate Cardio",
-   "link": "https://pickleballunion.com/pickleball-endurance-training/",
-   "date": "2026-11-06",
-   "summary": "Pickleball Union story from 2026-11-06, filed under Training, Injury Prevention & Recovery, Intermediate Pickleball."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "When to Drive Instead of Reset in Pickleball’s Transition Zone",
-   "link": "https://pickleballunion.com/aggressive-transition-zone-drive/",
-   "date": "2026-11-06",
-   "summary": "Pickleball Union story from 2026-11-06, filed under Tips & Strategy, Beginner Play, Intermediate Play."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "Ben Johns Just Started Hitting Lefty Forehands at Worlds. Should You Try It?",
-   "link": "https://pickleballunion.com/ben-johns-left-handed-forehand/",
-   "date": "2026-11-06",
-   "summary": "Pickleball Union story from 2026-11-06, filed under Tips & Strategy, Advanced Play, Professional Pickleball."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "Pickleballers Season 5, Episode 5: Why Connor Garnett left big money for pickleball",
-   "link": "https://thekitchenpickle.com/blogs/news/connor-garnett-pickleballers-season-5-episode-5/",
-   "date": "2026-11-06",
-   "summary": "The Kitchen Pickle story from 2026-11-06, filed under Major League Pickleball, Pickleballers, PPA."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "Paddle tracker: What the pros are using at the Pickleball World Championships",
-   "link": "https://thekitchenpickle.com/blogs/gear/what-paddles-top-pickleball-pros-use-worlds-november-2026/",
-   "date": "2026-11-06",
-   "summary": "The Kitchen Pickle story from 2026-11-06, filed under Gear, pickleball gear, pickleball paddles."
-  },
-  {
-   "source": "Pickleball Union",
-   "title": "Screaming in Pickleball Is Having a Moment—Here’s the Rule Rec Players Actually Need",
-   "link": "https://pickleballunion.com/screaming-in-pickleball/",
-   "date": "2026-11-04",
-   "summary": "Pickleball Union story from 2026-11-04, filed under Pickleball 101, Intermediate Pickleball, Pickleball Controversy."
   },
   {
    "source": "The Pickler – Inside the Den",
@@ -459,5 +459,5 @@
   "The Pickler – Inside the Den": "ok (8)",
   "Pickleball England": "ok (8)"
  },
- "updated": "2026-11-10T11:47"
+ "updated": "2026-11-11T11:51"
 }

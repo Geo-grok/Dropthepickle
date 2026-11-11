@@ -20,8 +20,8 @@
   "v": 3
  },
  "best-16mm-paddles.html": {
-  "hash": "72e7c29357d0421fb948b731fdd8b43405cba2c13d8d319307fa8f4f23d96bf1",
-  "updated": "2026-11-10",
+  "hash": "e2c08a0949da968663f0e23bfbb85a3cd1de784125261bb887fe5f8a4900c202",
+  "updated": "2026-11-11",
   "v": 3
  },
  "best-crbn-paddles.html": {
@@ -30,8 +30,8 @@
   "v": 3
  },
  "best-elongated-paddles.html": {
-  "hash": "b77940c4956c740989024ce3daa7d0a2c6fafb75ef3225f0abb74c640568ba5e",
-  "updated": "2026-11-10",
+  "hash": "9f78a1238978d58a99d2647ed9befbfa3bb555311476110349e111900dc8a9e3",
+  "updated": "2026-11-11",
   "v": 3
  },
  "best-engage-paddles.html": {
@@ -50,13 +50,13 @@
   "v": 3
  },
  "best-luzz-paddles.html": {
-  "hash": "ff80f1ebd237fd986fed0b94dc50c655a723b6d42c0e1f7aaf70aa74fbd645b8",
-  "updated": "2026-11-07",
+  "hash": "8b2ec2910ca7fec68ecccc0ab746f7cc743960434576a67e563361d845dfc74c",
+  "updated": "2026-11-11",
   "v": 3
  },
  "best-paddles-for-beginners.html": {
-  "hash": "ba94ee31d946898a3b6c3b5ab9bb66f15e586d6d3e4ea4e4da797f3419766a79",
-  "updated": "2026-11-10",
+  "hash": "ec042f1b400f2af802d54913915d9dc92696c06eed361dbecd8a58a12fa33c49",
+  "updated": "2026-11-11",
   "v": 3
  },
  "best-paddles-for-control.html": {
@@ -65,18 +65,18 @@
   "v": 3
  },
  "best-paddles-for-power.html": {
-  "hash": "8f547fa138bd7131401539e94ccd4535866bc6e78d37b33f7817f00964d8a127",
-  "updated": "2026-11-07",
+  "hash": "7b82c0efb758f2ef83a2aa44bf70a6550c56bc4926715177c5b19ffe383f2186",
+  "updated": "2026-11-11",
   "v": 3
  },
  "best-paddles-for-tennis-players.html": {
-  "hash": "21628c73df46f16343c01b70fdde6fd9dccf575618a9ab295b1c51241d5a34fa",
-  "updated": "2026-11-10",
+  "hash": "fe9f3d06bac7ce08d5263e841a41f7822bb59cf7dcfdbcbe418e8794011cc55e",
+  "updated": "2026-11-11",
   "v": 3
  },
  "best-paddletek-paddles.html": {
-  "hash": "0e8738efb156f3f0ee8d39bdaa85a2277d5915768c2031a65b20e2b7fb2e9a60",
-  "updated": "2026-11-10",
+  "hash": "f8dc362637736af618bc27fb80631147b8a66231715f29c457e9c2ab9e7588ab",
+  "updated": "2026-11-11",
   "v": 3
  },
  "best-selkirk-paddles.html": {
@@ -90,33 +90,8 @@
   "v": 3
  },
  "buzz.html": {
-  "hash": "69a8287ad2d692604166cd1c97f20b92407b6afc3819e32c4dc38b869b8cb1a9",
-  "updated": "2026-11-09",
-  "v": 3
- },
- "buzz/2026-10-26-app-next-kansas-city-tristan-dussault-averry-chew.html": {
-  "hash": "1ea5f6c8396d933b98cf878d5b11d61548f5acd2694b7fa81cb6ec1209bd00a1",
-  "updated": "2026-10-26",
-  "v": 3
- },
- "buzz/2026-10-26-brentwood-calif-will-close-creekside-park-pickleball-courts.html": {
-  "hash": "342d4f63419d89989e92d17064f0da40e81d9795a8d5ee8b0fde57376dedbc0b",
-  "updated": "2026-10-26",
-  "v": 3
- },
- "buzz/2026-10-26-last-call-minor-league-pickleball-registration-nations-cup.html": {
-  "hash": "70265be7f4bda5805c6b6702e39a570e5e7498da762cae645584a37b19082568",
-  "updated": "2026-10-26",
-  "v": 3
- },
- "buzz/2026-10-26-mlp-nations-cup-week-full-rosters-format-how.html": {
-  "hash": "0bd54f169857949f57e812d2f8a844e2bc65147ed2f067c17a202a8fab2bb37f",
-  "updated": "2026-10-26",
-  "v": 3
- },
- "buzz/2026-10-26-moab-utah-opens-8-lighted-pickleball-courts-old.html": {
-  "hash": "ef4885d557807dc3c072417e998070537e3a4f1d9959150c19bc4c746c5cdbb2",
-  "updated": "2026-10-26",
+  "hash": "b28ee4feb057b7cfaccf78267e4bdc691c98b5223d7d4e32343dc13ec30e6858",
+  "updated": "2026-11-11",
   "v": 3
  },
  "buzz/2026-10-27-anna-bright-manila-international-pickleball-needs-be-philippines.html": {
@@ -439,6 +414,31 @@
   "updated": "2026-11-09",
   "v": 3
  },
+ "buzz/2026-11-10-gear-selkirks-boomstik-st-goes-sale-today-nov.html": {
+  "hash": "14a932dcd37b7d8827d92d421d978560560d77784bd1a5431fa5f4b163f8b67a",
+  "updated": "2026-11-11",
+  "v": 3
+ },
+ "buzz/2026-11-10-study-pickleball-arm-shoulder-injuries-skew-toward-women.html": {
+  "hash": "1c7b545b6f83d040fa4446f1ddafe75578e40d7f0c46f7876e1bf278acb3aeda",
+  "updated": "2026-11-11",
+  "v": 3
+ },
+ "buzz/2026-11-10-usa-pickleball-nationals-pro-golds-ronan-camron-seone.html": {
+  "hash": "bfcf0625b095885e281a1a263124e99d5cd012a59b5e687805f6e58b5f376f82",
+  "updated": "2026-11-11",
+  "v": 3
+ },
+ "buzz/2026-11-10-watch-worlds-2026-finals-full-replays-all-five.html": {
+  "hash": "0e56a5a53669c976932d56f561cfbf2210a391dca39978f0436138f11005faa8",
+  "updated": "2026-11-11",
+  "v": 3
+ },
+ "buzz/2026-11-10-week-ahead-mlp-asias-first-season-opens-friday.html": {
+  "hash": "05216ce8c8ec1db83044182de6bd5bc07b8672babcdfc996e16f50714141b4ea",
+  "updated": "2026-11-11",
+  "v": 3
+ },
  "community.html": {
   "hash": "c5e0093436989dc224d4ee6455aaef5392e2596fdb531da6f76646902b06a5fd",
   "updated": "2026-10-15",
@@ -460,13 +460,13 @@
   "v": 3
  },
  "deals.html": {
-  "hash": "cc92b9bcd34a341e817442df83563eb9d17e7eba95355a3cf779ad347790f79e",
-  "updated": "2026-11-10",
+  "hash": "17a52a5ee2814206a49d4231f87aceb0eca8b3202fd55a2bfcd61ef4fd40e325",
+  "updated": "2026-11-11",
   "v": 3
  },
  "deals/black-friday-pickleball-deals-2026.html": {
-  "hash": "1b5d89643c9448e01caca548dd60fbb7fcf703f28188353f4bb1322d49c4a078",
-  "updated": "2026-11-10",
+  "hash": "98c51544280bd1a40444e7b4678ec7c94576ab348cc73012e73645bad749766c",
+  "updated": "2026-11-11",
   "v": 3
  },
  "disclosure.html": {
@@ -475,8 +475,8 @@
   "v": 3
  },
  "discount-codes.html": {
-  "hash": "3d329686de61b4379fd570e2022c64221989f51ba30373e8ce9450a010b96cd9",
-  "updated": "2026-11-09",
+  "hash": "857037210706009d060f96f925788d44933515bf29204a10a8ec65477a8d1124",
+  "updated": "2026-11-11",
   "v": 3
  },
  "discount-codes/11six24.html": {
@@ -640,8 +640,8 @@
   "v": 3
  },
  "discount-codes/foam-pickleball.html": {
-  "hash": "42d1d02b0235dd98b6f2da34a3128297f8dc8416cd705101a3405a6ff48e280b",
-  "updated": "2026-10-23",
+  "hash": "51035a748b3b636000c05f98db706107c1e94efc335dea2c3b4b7768d943de4c",
+  "updated": "2026-11-11",
   "v": 3
  },
  "discount-codes/forwrd.html": {
@@ -1125,13 +1125,13 @@
   "v": 3
  },
  "guides.html": {
-  "hash": "842d4477d03a2fe1b5f493063a1f59e7ed368005d2b3171219e9015a2d13489d",
-  "updated": "2026-11-09",
+  "hash": "b93dc80b6ef7d09bd78234d455960166456cfb8565deb0fd906bf7f4034dfdf8",
+  "updated": "2026-11-11",
   "v": 3
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "0347bc506dc6312b2eb2f29f8321f4e76653cd9874f9fb93ff999311c40a6e5d",
-  "updated": "2026-11-10",
+  "hash": "b7f902e7c68cf4e0807597e3b2a2259fe7686d423d154841709d2d93a184b0d6",
+  "updated": "2026-11-11",
   "v": 3
  },
  "guides/best-volair-paddles.html": {
@@ -1190,8 +1190,8 @@
   "v": 3
  },
  "guides/pickleball-gift-guide-2026.html": {
-  "hash": "60f22f7cc5f39c8352297c8a5c72b4b543c22807e640a2f7dd5d11d86ca4ee6a",
-  "updated": "2026-11-10",
+  "hash": "4fcc2c77ab47cbb7057c64d36888e31ef9808ba93e86a3223350615ce264caeb",
+  "updated": "2026-11-11",
   "v": 3
  },
  "guides/pickleball-grip-size.html": {
@@ -1219,6 +1219,11 @@
   "updated": "2026-11-07",
   "v": 3
  },
+ "guides/pickleball-stacking.html": {
+  "hash": "87fa791d551733abd3005bc14c047845e836d7c0079c712c116427f94fef5e12",
+  "updated": "2026-11-11",
+  "v": 3
+ },
  "guides/six-zero-paddle-review.html": {
   "hash": "c6bc68860b2f4fbef8b06eea1dffc4787e393ce356d3f65b3f91fabcb53a3980",
   "updated": "2026-11-08",
@@ -1230,13 +1235,13 @@
   "v": 3
  },
  "index.html": {
-  "hash": "c2c5005d0f84f37e796a7b22ee2518f40f055565a424793a0249c2445a12f1d7",
-  "updated": "2026-11-10",
+  "hash": "de144b37eb5a58db04bf1408f340923402f3716b84b735a0ae6d90b1d3eb6832",
+  "updated": "2026-11-11",
   "v": 3
  },
  "news.html": {
-  "hash": "5d0bdaacf52ca0f4947d2ff978b4e347871fd8aae44577ac536a7644e5dd4461",
-  "updated": "2026-11-10",
+  "hash": "861b1da9ca7094f065c306e18d8b1bcc934cc1aeba27e6e00d769cd2ab678858",
+  "updated": "2026-11-11",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
@@ -1320,8 +1325,8 @@
   "v": 3
  },
  "paddle-luzz-cannon-xpp-m1.html": {
-  "hash": "ba88417a1a36e15f29d67317a4859a0331a0d0fcd8dc63523fbb14a47cd35ae9",
-  "updated": "2026-10-26",
+  "hash": "e2a7b6c29927d81b9a337a49838a34ccc64670484ca29e3e28960364e8167f3a",
+  "updated": "2026-11-11",
   "v": 3
  },
  "paddle-luzz-glider-2026-hybrid.html": {
@@ -1340,8 +1345,8 @@
   "v": 3
  },
  "paddle-paddletek-honeyfoam-tko-x.html": {
-  "hash": "04686c70d475b82575a02a5101420cfd7f0092d93db59cce8046393563521189",
-  "updated": "2026-11-10",
+  "hash": "58a3ba412b42a32f0b71335ef8f867d1d07a65abb8601958b6121d5589a29206",
+  "updated": "2026-11-11",
   "v": 3
  },
  "paddle-paddletek-tempest-veyra.html": {
@@ -1420,23 +1425,23 @@
   "v": 3
  },
  "paddle-volair-ctrl-1-forza.html": {
-  "hash": "67b7c3b2ff238308709380e66110e88b016bce2669cb16923359cb0a1b001b56",
-  "updated": "2026-11-10",
+  "hash": "3655cceb6ded9686265b25a5728701b8852b2a49436b68688ffcaea6f964d74f",
+  "updated": "2026-11-11",
   "v": 3
  },
  "paddle-volair-ctrl-2-forza.html": {
-  "hash": "8192da7ac1c090d0851dee14f276fc96cf0e73fd9effc989107db8c09ff67b79",
-  "updated": "2026-11-10",
+  "hash": "66a1cbafd8cc11b05cd56514070f0d2b6e647d40e52107c401b481ec731e3e16",
+  "updated": "2026-11-11",
   "v": 3
  },
  "paddle-volair-mach-1-forza.html": {
-  "hash": "19ea6a3966d96fd70645561465656c84645939c9db958b004d3521e908eb682c",
-  "updated": "2026-11-10",
+  "hash": "f386dfa9be64f43624e7fd6f451fb080d426e9f464c5ee3c8d02f9f8f303fc31",
+  "updated": "2026-11-11",
   "v": 3
  },
  "paddle-volair-mach-2-forza.html": {
-  "hash": "6a61953e8f3bb420e40eacd53c9e450f099448436945ec2db4e58fbc3cf3defd",
-  "updated": "2026-11-10",
+  "hash": "801674075c4c848941af4536078381458cbce75359ca892fc4b2b43336b5b42c",
+  "updated": "2026-11-11",
   "v": 3
  },
  "paddle-volair-mach-2.html": {
@@ -1460,18 +1465,18 @@
   "v": 3
  },
  "paddles.html": {
-  "hash": "35f489d86a9993ca9dbe3d4337b206f0a18f0a057fbc888c2ee458a4b5cd4ae7",
-  "updated": "2026-11-10",
+  "hash": "f12276145211625c0c9b15d47dffabcd716e4a23112859f30e0dde413ecb5fd6",
+  "updated": "2026-11-11",
   "v": 3
  },
  "podcasts.html": {
-  "hash": "c8935e1e1d32c05694ac1f08ad13f75abfdfeda87ab6ab1bcaa494e85b36ea26",
-  "updated": "2026-11-06",
+  "hash": "2eecd64a36931f9cd1be8b2164ba4f41ef84dc05b15814d679c0705fff35442d",
+  "updated": "2026-11-11",
   "v": 3
  },
  "price-index.html": {
-  "hash": "aab1fa6a6b3dc18670e0ff812801ba9c34751f631e36974d7a352c0f301c5d34",
-  "updated": "2026-11-10",
+  "hash": "934eacae624ae461a0ae5e871c6ebbe87180ca24c608e7aa2aa417bc3c9a567c",
+  "updated": "2026-11-11",
   "v": 3
  },
  "price-tracker.html": {
@@ -1495,8 +1500,8 @@
   "v": 3
  },
  "reviews.html": {
-  "hash": "7e0e60387630c17640b3610a51a4f109a6de1e9924e3fa43bb1365459a516b0c",
-  "updated": "2026-11-10",
+  "hash": "b07e235ad3da9e28b716389381b49a186305b668029230218be38203f2d582be",
+  "updated": "2026-11-11",
   "v": 3
  },
  "science.html": {
@@ -1650,8 +1655,8 @@
   "v": 3
  },
  "vs-luzz-cannon-xpp-m1-vs-luzz-glider-2026-hybrid.html": {
-  "hash": "ecad5d98bc0c7509bfd4be76c32ce03b39724a289e66cc8c0e6c324151dd2e16",
-  "updated": "2026-11-09",
+  "hash": "b3df84fb6c7b017e3daeed5b263106e51a31e84bc3d96a73e5e72ad3a3ac2208",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-paddletek-bantam-jolt-vs-paddletek-bantam-tko-c.html": {
@@ -1660,8 +1665,8 @@
   "v": 3
  },
  "vs-paddletek-bantam-jolt-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "d8207506b17ac79ad4eade89d0de55764ffacab1389274ce281a127d9c2a478d",
-  "updated": "2026-11-10",
+  "hash": "c4c699817224068e83001852ea8102810c99fd78b8634f5e313ed22be5512f06",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-paddletek-bantam-jolt-vs-paddletek-tempest-veyra.html": {
@@ -1675,8 +1680,8 @@
   "v": 3
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-honeyfoam-tko-x.html": {
-  "hash": "1a286c060c4814ab3cdad3f506ab7170ed36b9accdf94ede72d8f627977de52a",
-  "updated": "2026-11-10",
+  "hash": "811c2bec4c0e5875be76b8510f04be6bad3cf2053b6aa91c3c615feb3ab89336",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-paddletek-bantam-tko-c-vs-paddletek-tempest-veyra.html": {
@@ -1690,13 +1695,13 @@
   "v": 3
  },
  "vs-paddletek-honeyfoam-tko-x-vs-paddletek-tempest-veyra.html": {
-  "hash": "8c45c202e15be96dad6c08f1e406192dea1f9b8821609dac8506da88c38066f5",
-  "updated": "2026-11-10",
+  "hash": "f327030677349b4a49122d9503e6c095e55e5ec0e6b6d7dc56c4b38739ba7684",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-paddletek-honeyfoam-tko-x-vs-paddletek-tempest-wave-pro-c.html": {
-  "hash": "2fb9c8f9676663998897bcaf87a62e3badd82ce7a2d5e7fb2207b7447eb9b4b6",
-  "updated": "2026-11-10",
+  "hash": "6d6f1defac72e7c95b204e3c10cb37d5210f6834aabdc52055c6325b82a5acf2",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-paddletek-tempest-veyra-vs-paddletek-tempest-wave-pro-c.html": {
@@ -1795,23 +1800,23 @@
   "v": 3
  },
  "vs-volair-cmd-el-16mm-vs-volair-ctrl-1-forza.html": {
-  "hash": "13b93977d6166674caa3f60e873a5daf22dcd081705474be863d405060041770",
-  "updated": "2026-11-10",
+  "hash": "70ae25af1860afebadb52794ce185bd08649886e0f09b73a8d7917b478b6793f",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-volair-cmd-el-16mm-vs-volair-ctrl-2-forza.html": {
-  "hash": "7d05315b886b6a8e2b2711e862e4c4c97a65ad2c8fbe2287f5345fd9801a20ea",
-  "updated": "2026-11-10",
+  "hash": "3fefcbcb498b948ab173721db111e4c7e08c4892269976b00dc6a8c795c2ce81",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-1-forza.html": {
-  "hash": "9884f39d7a18957f8fad964bd859c59ae84f5d6fc05fee79e26a6880179094b5",
-  "updated": "2026-11-10",
+  "hash": "cd5e72b901280e34f95af54b1b255647f7da46a9441f374b0cc57c04f8cec96f",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-2-forza.html": {
-  "hash": "7691556afa295fbdef14022c5ac2b36f10414b1774f8ef79f21a522d498c6d54",
-  "updated": "2026-11-10",
+  "hash": "603fa36e8823e1c173b9520a044bd11ffe555ffebe8c6dee71c75445d42593a5",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-volair-cmd-el-16mm-vs-volair-mach-2.html": {
@@ -1840,23 +1845,23 @@
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-1-forza.html": {
-  "hash": "68754109434cce813bd1ecb5c618b08d582ebdd9d92e7e934b15c91d6da2dc16",
-  "updated": "2026-11-10",
+  "hash": "3f19f76ad633b972b6636309a8769332ab97856d4553aec8c430addb530f316a",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-2-forza.html": {
-  "hash": "7cfe9346710d7b49cb0bbbee9afe5eedd358ffc8949021f43ec23c49c5d68536",
-  "updated": "2026-11-10",
+  "hash": "5126acbd70c6383c7e7a597e701a23b3a0726166abab1ebe697d8dc3e1debc12",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-1-forza.html": {
-  "hash": "bc0880f1b8ab17f3607040d5ed0af1710c50b5e6a1376d7d8c8aa8be120c9769",
-  "updated": "2026-11-10",
+  "hash": "638f53c8b8f53262c4724dbf7030d9d78fc41952f6080f7ee641d71ca31b8d4c",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2-forza.html": {
-  "hash": "02bdffff3175791914a82d2d6dfc013b53388eb95992af1b6b488b890ed1a342",
-  "updated": "2026-11-10",
+  "hash": "9983fbe44cf2751111fdac19f242c9b4db866d84c59ca2c53175bcf328b3dd1b",
+  "updated": "2026-11-11",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2.html": {
