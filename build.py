@@ -987,7 +987,9 @@ def build():
         bp = [p for p in PD["paddles"] if p["brand"].lower() == b.lower()]
         stems = {paddle_pages.slug(p)[7:-5] for p in bp}
         plinks = [(paddle_pages.slug(p), ttl(paddle_pages.slug(p))) for p in bp if paddle_pages.slug(p) in CATALOG]
-        vs = [(f, ttl(f)) for f in sorted(CATALOG) if f.startswith("vs-") and set(f[3:-5].split("-vs-")) & stems][:6]
+        def vs_key(f):
+            return (0 if f in paddle_pages.VS_SEO else 1, f)
+        vs = [(f, ttl(f)) for f in sorted((f for f in CATALOG if f.startswith("vs-") and set(f[3:-5].split("-vs-")) & stems), key=vs_key)][:6]
         bestf = f"best-{s}-paddles.html"
         if bestf in CATALOG: plinks.insert(0, (bestf, ttl(bestf)))
         gear = ""

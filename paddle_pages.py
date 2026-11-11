@@ -411,9 +411,14 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in faqs)
             extra_schema.append({"@type": "FAQPage", "mainEntity": [
                 {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]})
+            also = ""
+            if fn == "vs-selkirk-omni-vs-selkirk-slk-era-power.html":
+                also = ' Also see <a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik price and specs</a>.'
+            elif fn == "vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html":
+                also = ' Also see <a href="vs-selkirk-omni-vs-selkirk-slk-era-power.html">Selkirk Era vs Omni</a>.'
             more = (f'<p class="meta">Paddle pages: <a href="{slug(A)}">{e(an)}</a> · <a href="{slug(B)}">{e(bn)}</a>. '
                     f'Shopping? <a href="/discount-codes">Discount codes</a> · <a href="discount-codes/selkirk.html">Selkirk codes</a> · '
-                    f'<a href="compare.html">All comparisons</a>.</p>')
+                    f'<a href="compare.html">All comparisons</a>.{also}</p>')
             body = body.replace(vh, vh + glance, 1)
             # Keep a short standalone price line just under the glance for the "omni vs boomstick price" query.
             body = body.replace(glance, glance + f'<p>{e(price_line)}</p>', 1)
@@ -476,7 +481,14 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     lst("Best pickleball paddles for beginners", "best-paddles-for-beginners.html", "Our beginner shortlist uses three spec rules: a price of $200 or less, plus a 16mm core option or a wider or hybrid face. Both are generally considered more forgiving. It's a starting point based on specs, not a test ranking.", beg,
         lambda p: "Budget-friendly with a forgiving spec profile: " + ", ".join(x for x in [p["core"], p["shape"]] if x) + ".")
     pw = [p for p in PP if "power" in p["model"].lower() or p["model"] in ("Pressure X 8E", "LABS Project Boomstik", "Cannon XPP M1")]
-    lst("Best pickleball paddles for power", "best-paddles-for-power.html", "These are paddles their makers market for power, or that the reviewers in our feeds cover as power paddles. The list is alphabetical, not a price or performance ranking. Elongated shapes add leverage on drives and serves.", sorted(pw, key=cur),
+    pw_intro = (
+        "These are paddles their makers market for power, or that the reviewers in our feeds cover as power paddles. "
+        "The list is alphabetical, not a price or performance ranking. Elongated shapes add leverage on drives and serves. "
+        "Two Selkirk models on this list, the SLK ERA Power and the LABS Project Boomstik, also have head-to-head pages against the OMNI: "
+        '<a href="vs-selkirk-omni-vs-selkirk-slk-era-power.html">Selkirk Era vs Omni</a> and '
+        '<a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik price and specs</a>.'
+    )
+    lst("Best pickleball paddles for power", "best-paddles-for-power.html", pw_intro, sorted(pw, key=cur),
         lambda p: "Marketed for power" + (" · elongated option for extra leverage" if "elongated" in p["shape"].lower() else "") + ".")
     ct = [p for p in PP if "control" in p["model"].lower() or (cores(p) and max(cores(p)) >= 16 and re.search("hybrid", p["shape"], re.I))]
     lst("Best pickleball paddles for control", "best-paddles-for-control.html", "These are paddles their makers market for control, plus 16mm+ hybrids. Thicker cores are generally described as softer and more controlled. The list is alphabetical, not a price or performance ranking.", sorted(ct, key=cur),
@@ -497,7 +509,12 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         items = [p for p in PP if p["brand"] == brand]
         slugb = re.sub(r"[^a-z0-9]+", "-", brand.lower()).strip("-")
         aud = " Maker prices for this brand are in AUD." if items and items[0]["currency"] != "USD" else ""
-        lst(f"Best {brand} paddles", f"best-{slugb}-paddles.html", f"Filter: brand is {brand} ({len(items)} paddles in our database).{aud} Not a ranking of {brand} models.", items, listed)
+        intro = f"Filter: brand is {brand} ({len(items)} paddles in our database).{aud} Not a ranking of {brand} models."
+        if brand == "Selkirk":
+            intro += (' For a side-by-side look at two of them, see '
+                      '<a href="vs-selkirk-omni-vs-selkirk-slk-era-power.html">Selkirk Era vs Omni</a> or '
+                      '<a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik price and specs</a>.')
+        lst(f"Best {brand} paddles", f"best-{slugb}-paddles.html", intro, items, listed)
     # hub
     cmp_table = spec_table(sorted(PP, key=lambda p: (p["brand"].lower(), p["model"].lower())), "Every paddle in this database: maker price, check date, and published specs. Not a playtest.")
     page("compare.html", "Pickleball Paddle Comparisons: Head-to-Head", f'<h1>Compare pickleball paddles</h1><p class="meta">Head-to-head pages pair paddles that share a brand, or one elongated paddle from each of two brands. Best-of lists are spec filters. The table below is maker facts: latest checked price, the date of that check, weight, core, shape, and the maker spec page. Notes on a head-to-head page are our reading of those fields. None of these pages is a playtest or a performance ranking.</p><h2>Maker specs side by side</h2>{cmp_table}<h2>Head to head</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in vs_links)}</ul><h2>Best-of lists</h2><ul>{"".join(f"<li><a href={chr(34)}{f}{chr(34)}>{e(t)}</a></li>" for f, t in list_links)}</ul><h2>All paddles</h2><ul>{"".join(f"<li><a href={chr(34)}{slug(p)}{chr(34)}>{e(p[chr(98)+chr(114)+chr(97)+chr(110)+chr(100)])} {e(p[chr(109)+chr(111)+chr(100)+chr(101)+chr(108)])}</a></li>" for p in PP)}</ul>',
