@@ -8,6 +8,19 @@ ROOT = pathlib.Path(__file__).parent
 # Keep the stem short so the full <title> stays near 60 characters. Optional h1 overrides the default
 # "{brand} {model} vs {brand} {model}" heading for query wording. Prices/specs are filled at build time
 # from paddles.json and price_history.json — never hardcoded here.
+# Thin-page Phase 1 (Geo approved 2026-11-12): these 9 zero-impression vs pages stay live
+# with robots noindex,follow and are omitted from the sitemap via page(..., noindex=True).
+NOINDEX_VS = {
+    "vs-crbn-crbn1-trufoam-barrage-vs-crbn-crbn1-x-series.html",
+    "vs-crbn-crbn1-trufoam-genesis-vs-crbn-crbn1-x-series.html",
+    "vs-crbn-crbn3-trufoam-waves-vs-crbn-crbn1-trufoam-barrage.html",
+    "vs-crbn-crbn3-trufoam-waves-vs-crbn-crbn1-x-series.html",
+    "vs-joola-hyperion-pro-v-vs-joola-perseus-3s-dual-16mm.html",
+    "vs-joola-hyperion-pro-v-vs-joola-scorpeus-pro-v.html",
+    "vs-joola-kosmos-pro-v-vs-joola-scorpeus-pro-v.html",
+    "vs-six-zero-black-opal-14mm-vs-six-zero-double-black-diamond-control.html",
+    "vs-six-zero-black-opal-14mm-vs-six-zero-ruby.html",
+}
 VS_SEO = {
     "vs-selkirk-omni-vs-selkirk-slk-era-power.html": {
         "title": "Selkirk Era vs Omni: Specs & Prices",
@@ -444,7 +457,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         else:
             sd = f"{t}: maker specs and latest checked prices for a same-category pair. No score or rating from us."
         page(fn, st or t, body, sd, raw_title=bool(st),
-             fresh=[fresh_p(A), fresh_p(B), {"verdict": [vsum, va, vb]}], schema=[item_list([A, B]), *extra_schema]); vs_links.append((fn, t))
+             fresh=[fresh_p(A), fresh_p(B), {"verdict": [vsum, va, vb]}], schema=[item_list([A, B]), *extra_schema],
+             noindex=fn in NOINDEX_VS); vs_links.append((fn, t))
     # best-of lists
     usd = [p for p in PP if p["currency"] == "USD"]
     list_links = []
