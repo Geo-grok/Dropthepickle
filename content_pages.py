@@ -45,6 +45,7 @@ GUIDES = [
     ("guides/third-shot-drop.html", "Third shot drop"),
     ("guides/pickleball-stacking.html", "Pickleball stacking"),
     ("guides/pickleball-reset.html", "Pickleball reset shot"),
+    ("guides/pickleball-return-of-serve.html", "Pickleball return of serve"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -344,7 +345,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>The serve</h2>
 <p>You serve diagonally into the opposite service court. The ball has to clear the kitchen and land in the correct box. On a volley serve, the paddle has to be moving upward, the paddle head must not be above your wrist, and the ball must not be above your waist when you hit it. A drop serve is the other legal motion: you drop the ball and hit it after it bounces, without propelling the ball on the way down. In singles, you start on the right when your score is even, and on the left when it is odd. Solo practice for this: <a href="pickleball-drills.html">Serving From a Basket</a> in our drills guide.</p>
 <h2>Two bounces, then anything</h2>
-<p>The receiver has to let the serve bounce. The serving side then has to let that return bounce. After those two bounces, either side may volley or play a groundstroke. Hitting the ball before the required bounce is a fault. Letting the ball bounce twice on your side is a fault.</p>
+<p>The receiver has to let the serve bounce. The serving side then has to let that return bounce. After those two bounces, either side may volley or play a groundstroke. Hitting the ball before the required bounce is a fault. Letting the ball bounce twice on your side is a fault. Where to stand and aim when you receive: <a href="pickleball-return-of-serve.html">pickleball return of serve</a>.</p>
 <h2>The kitchen</h2>
 <p>You can stand in the kitchen. You cannot hit a volley while touching it. If you volley from behind the line and your momentum carries you, your paddle, or your hat into the zone, that is still a fault, even if the ball is already dead. A ball that lands on a line is in, except a serve that lands on the kitchen line, which is short. Full NVZ faults walk-through: <a href="pickleball-kitchen-rules.html">pickleball kitchen rules</a>. The <a href="how-to-dink.html">dink guide</a> is the soft shot people hit into this zone once the two bounces are done.</p>
 <h2>Scoring</h2>
@@ -1396,7 +1397,7 @@ def make(page, e, fmt, PP, cur, ph):
 <li><b>Drop or drive:</b> drop low or deep returns; drive short, high ones when you are balanced.</li>
 </ul>
 <h2>Why the third shot is the hard one</h2>
-<p>A rally starts with the serve and the return, and both must bounce (<a href="pickleball-rules-for-beginners.html">two-bounce rule</a>). That means the returning team can walk up to the <a href="pickleball-kitchen-rules.html">kitchen line</a> while the serving team waits at the baseline. USA Pickleball calls the third shot one of the most important and toughest shots in the game because it is the serving team's bridge from the baseline to the kitchen, where most points are won. Court layout and kitchen depth: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</p>
+<p>A rally starts with the serve and the return, and both must bounce (<a href="pickleball-rules-for-beginners.html">two-bounce rule</a>). That means the returning team can walk up to the <a href="pickleball-kitchen-rules.html">kitchen line</a> while the serving team waits at the baseline (the receiving side of that race: <a href="pickleball-return-of-serve.html">return of serve</a>). USA Pickleball calls the third shot one of the most important and toughest shots in the game because it is the serving team's bridge from the baseline to the kitchen, where most points are won. Court layout and kitchen depth: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</p>
 <h2>How to hit a third shot drop</h2>
 <ol>
 <li><b>Stay back and get set.</b> Wait behind the baseline for the return, then take small steps so you hit the ball out in front of you (USA Pickleball).</li>
@@ -1665,6 +1666,107 @@ def make(page, e, fmt, PP, cur, ph):
          "How to hit a pickleball reset shot: loose grip, balanced stance, compact block, when to reset vs attack, what to do after a pop-up, common mistakes and drills.",
          fresh={"checked": RS_CHECKED, "choice": RS_CHOICE, "faq": rs_faq},
          schema=[rs_faq_ld])
+
+    # ----- Pickleball return of serve (Nov 12, 2026) -----
+    # Evergreen page for the approved P2 target "pickleball return of serve". Rules come from the 2026 USA Pickleball
+    # rulebook (RULES); every tip paraphrases the linked USA Pickleball, The Kitchen and Pickleheads pages read on
+    # RT_CHECKED. No invented stats, percentages or quotes.
+    RT_CHECKED = "2026-11-12"
+    rt_checked = _dt.date.fromisoformat(RT_CHECKED).strftime("%B %-d, %Y")
+    RT_USAP1 = "https://usapickleball.org/pickleball-skills/level-three/return-of-serve-tips/"
+    RT_USAP2 = "https://usapickleball.org/pickleball-skills/level-three/how-to-return-and-run-to-kitchen-and-keeping-the-ball-low/"
+    RT_K = "https://thekitchenpickle.com/blogs/tips/returning-serves-pickleball-strategies/"
+    RT_PH1 = "https://news.joinpickleheads.com/p/the-secret-to-a-killer-return-of-serve"
+    RT_PH2 = "https://news.joinpickleheads.com/p/a-footwork-fix-for-better-returns"
+    RT_OPTIONS = [
+        ("Deep and flat", "Against a big server or a team that loves third-shot drives", "Too short and it is easy to attack; can sail long"),
+        ("High and lofted", "When you need more time to reach the kitchen", "Better players can punish a high ball; can sail long"),
+        ("Down the middle", "Against partners who hesitate over who takes the middle", "A mis-hit opens up both sides"),
+        ("Topspin or slice", "Against players who struggle with spin", "Needs precision, or it sits up"),
+        ("At the weaker player", "When one opponent has the shakier third shot", "Gets predictable if it is all you do"),
+        ("Lob", "When you are struggling to move forward", "Risky against advanced players and in wind"),
+    ]
+    rt_faq = [
+        ("Does the return of serve have to bounce?",
+         "Yes, both ways. Under the two-bounce rule in the USA Pickleball rulebook (Rule 10.A), the receiver must let the serve bounce before hitting it, and the serving team must let the return bounce before hitting it. Volleying either ball before it bounces is a fault."),
+        ("Where should I stand to return serve?",
+         "USA Pickleball suggests the returner stands 2 to 3 feet behind the baseline, which gives you more time to react, while your partner waits at the kitchen line. The correct receiver lines up on the side set by your team's score."),
+        ("Where should I aim my return of serve?",
+         "Deep and through the middle, slightly toward the opponents' backhands, is USA Pickleball's bread-and-butter return. Aim 2 to 3 feet inside the baseline rather than at the line so the ball does not sail long."),
+        ("Should I run to the kitchen after I return?",
+         "Yes. USA Pickleball's return-and-run tip says to move up right after the return, because the serving team has to stay back and let your return bounce. Pickleheads adds that you should step into the ball as you hit rather than running through the shot, so you stay balanced."),
+        ("When should I hit a high or lob return?",
+         "When you need more time to get to the kitchen line. USA Pickleball and The Kitchen both say a higher, slower return buys time, but a high ball gives better players something to attack, and lobs are risky in wind."),
+        ("Is it a fault if the serve hits my partner at the kitchen line?",
+         "Yes. Under Rule 7.E.5, a serve that hits the receiver or the receiver's partner is a fault against the receiving team, so your partner at the kitchen line should stay clear of the ball."),
+    ]
+    rt_faq_html, rt_faq_ld = faq(rt_faq)
+    rt_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in RT_OPTIONS)
+    rtn = f'''<h1>Pickleball return of serve: rules, where to aim and how to get to the kitchen</h1>
+<p class="meta">Rules from the <a href="{RULES}" target="_blank" rel="noopener">2026 USA Pickleball Official Rulebook</a>. Tips from USA Pickleball's <a href="{RT_USAP1}" target="_blank" rel="noopener">return of serve tips</a> and <a href="{RT_USAP2}" target="_blank" rel="noopener">return and run</a> lessons, The Kitchen's <a href="{RT_K}" target="_blank" rel="noopener">return options breakdown</a>, and two Pickleheads footwork tips, all read {rt_checked}. No coaching stats are made up here.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>Rule:</b> let the serve bounce before you hit it. The serving team then has to let your return bounce (Rule 10.A).</li>
+<li><b>Stand:</b> 2 to 3 feet behind the baseline, partner at the kitchen line (USA Pickleball).</li>
+<li><b>Aim:</b> deep and through the middle, a little toward the backhands, 2 to 3 feet inside the baseline.</li>
+<li><b>Swing:</b> short backswing, step into the ball as you hit.</li>
+<li><b>Then:</b> move up to the kitchen line before the third shot arrives.</li>
+</ul>
+<h2>Return of serve rules</h2>
+<p>The <a href="pickleball-rules-for-beginners.html">two-bounce rule</a> is the one that shapes every return. Rule 10.A of the 2026 USA Pickleball rulebook says the serve and the return of serve must each bounce before being returned. If the receiver hits the serve out of the air, it is a fault against the receiver (10.A.1). If the server or the server's partner hits the return before it bounces, it is a fault against the serving side (10.A.2). After those two bounces, either side can volley.</p>
+<p>The return also has to land in: a ball that first lands outside the opponents' end of the court is a fault (10.C.1), and you cannot let it bounce twice on your side (10.B). Unlike the serve, the return does not have to land in a particular box or past the kitchen. Anywhere in the opponents' court counts.</p>
+<p>In doubles, the correct receiver is set by your team's score (Rule 5.B.3), and the rulebook lets a player ask who the correct server or receiver is before the serve. If the serve hits you or your partner, that is a fault against your team (7.E.5), so the partner waiting at the kitchen line should stay out of the ball's path. Teams that want a particular player on a particular side can <a href="pickleball-stacking.html">stack</a> within those position rules.</p>
+<h2>Why the return matters</h2>
+<p>USA Pickleball points out that the receiving team starts the rally with an edge: because the serving team must wait for the return to bounce, the returner can move up to the <a href="pickleball-kitchen-rules.html">kitchen line</a> while the servers are still at the baseline. The Kitchen calls getting to the kitchen as quickly and efficiently as possible the number one goal of the receiving team. A good return keeps the servers back and makes their <a href="third-shot-drop.html">third shot drop</a> harder.</p>
+<h2>Where to stand</h2>
+<p>USA Pickleball's starting setup: the returner stands 2 to 3 feet behind the baseline and the partner stands at the kitchen line. Starting back gives you more time to read the serve and set up. Most players like to return with a forehand. USA Pickleball says to move your feet to get there if you can, but if the serve is on your backhand and you can't get around it, hit the backhand rather than stretching.</p>
+<h2>How to hit the return</h2>
+<ol>
+<li><b>Short backswing, eyes on the ball.</b> USA Pickleball says compact swings give more control and fewer errors.</li>
+<li><b>Step into the ball as you hit.</b> Pickleheads' tip is to time your first step and your swing together, so your body weight goes into the shot and your momentum carries you toward the kitchen.</li>
+<li><b>Don't run through it.</b> The same Pickleheads coach says a common mistake is running through the return to get to the kitchen sooner. With your feet not planted, you lose control. Step, hit, then go.</li>
+<li><b>Keep moving forward.</b> Right after contact, head for the kitchen line (USA Pickleball).</li>
+</ol>
+<h2>Where to aim: the return options</h2>
+<p>USA Pickleball's default is deep and through the middle, slightly toward the opponents' backhands. A middle return makes the two servers decide who takes it and cuts down their angles on the third shot. Aim 2 to 3 feet inside the baseline instead of at the line itself: consistency is worth more than painting the line. The Kitchen breaks the options down like this:</p>
+<div class="tbl"><table><thead><tr><th>Return</th><th>When to use it</th><th>The risk</th></tr></thead><tbody>{rt_rows}</tbody></table></div>
+<p>A few notes from The Kitchen: a deep, flat return keeps the servers hitting their third shot from near or behind the baseline, which limits their options. On spin, The Kitchen says the traditional choice below the 4.5 level is a slice return, but many pros now recommend a flat or topspin return. Whatever you pick, The Kitchen's point is that the return does not need to be a winner. It needs to get you and your partner to the kitchen line.</p>
+<h2>Buying time with a higher return</h2>
+<p>If you keep getting caught halfway to the kitchen, hit the return higher and slower. USA Pickleball suggests a lob return or a return with more arc to buy time, and The Kitchen says a high, lofted return gives you time to set up at the kitchen even if the servers get a comfortable third shot. The trade-off: better players can punish high balls, and wind makes lobs risky.</p>
+<h2>After the return: get to the kitchen</h2>
+<p>USA Pickleball's "return and run" tip: the two-bounce rule keeps the servers at the baseline for the third shot, so train yourself to return and immediately move forward. With your team at the kitchen and the servers stuck at the baseline, you have a major advantage. If a hard ball comes at you before you get there, block it back soft with a <a href="pickleball-reset.html">reset</a> and keep moving up. Once both teams are at the line, the rally usually turns into <a href="how-to-dink.html">dinks</a>.</p>
+<h2>Common return of serve mistakes</h2>
+<ul>
+<li><b>Volleying the serve.</b> The serve has to bounce first. Hitting it out of the air is a fault.</li>
+<li><b>Aiming at the baseline.</b> Aim 2 to 3 feet inside it. Long returns give the point away.</li>
+<li><b>Short returns.</b> The Kitchen warns that a return that isn't deep is easier for the servers to attack.</li>
+<li><b>Big backswing.</b> Keep it compact for control.</li>
+<li><b>Running through the shot.</b> Step into it with planted feet, then move.</li>
+<li><b>Admiring the return.</b> Start moving forward right after contact instead of watching where it lands.</li>
+<li><b>Lobbing every time.</b> High returns buy time but give strong players an easy ball, and the wind can take them.</li>
+</ul>
+<h2>Return of serve drills</h2>
+<p>These are our partner drills built on the tips above, not an official program:</p>
+<ul>
+<li><b>Deep target.</b> Put a towel or cones 2 to 3 feet inside the baseline, a little toward the middle. Your partner serves, and you count how many returns land near the target without going long.</li>
+<li><b>Return and run.</b> Your partner serves and then plays the third shot. Return deep and get to the kitchen line before they hit. If you are still moving when they hit, split step and go again next ball.</li>
+<li><b>Step and swing.</b> Following the Pickleheads cue, say "step" as the ball comes and make your first step and your swing happen together. Start slow and build up.</li>
+<li><b>High-arc return.</b> Alternate one deep, flat return with one higher, slower return, and notice how much farther forward the high one lets you get.</li>
+</ul>
+<p>More partner and solo work: <a href="pickleball-drills.html">pickleball drills</a>. The serving team's side of the same rally: <a href="third-shot-drop.html">third shot drop</a>. A paddle that suits your game: <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+{money_links()}
+{rt_faq_html}
+{sources([("USA Pickleball: 2026 Official Rulebook", RULES, "Rules 5.B.3, 7.E.5, 10.A, 10.B and 10.C.1"),
+          ("USA Pickleball: Return of serve tips, 8 strategies", RT_USAP1, f"stand 2 to 3 feet back, short backswing, deep and middle, aim 2 to 3 feet inside, lob for time, read {rt_checked}"),
+          ("USA Pickleball: Return and run and keeping the ball low", RT_USAP2, f"two-bounce rule and moving up after the return, read {rt_checked}"),
+          ("The Kitchen: Returning serves in pickleball, all your options", RT_K, f"deep, lofted, middle, spin, weaker player and lob returns, read {rt_checked}"),
+          ("Pickleheads: The secret to a killer return of serve", RT_PH1, f"time your first step with your swing, read {rt_checked}"),
+          ("Pickleheads: A footwork fix for better returns", RT_PH2, f"don't run through the shot, keep the swing compact, read {rt_checked}")])}
+{more("guides/pickleball-return-of-serve.html")}'''
+    page("guides/pickleball-return-of-serve.html", "Pickleball Return of Serve: Rules, Strategy and Drills", rtn,
+         "How to return serve in pickleball: the two-bounce rule, where to stand, deep and middle targets, high returns, getting to the kitchen, mistakes and drills.",
+         fresh={"checked": RT_CHECKED, "options": RT_OPTIONS, "faq": rt_faq},
+         schema=[rt_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
