@@ -1,11 +1,105 @@
 {
- "updated": "2026-11-11T05:56-06:00",
- "date": "2026-11-11",
- "source_file": "dtp-newsroom/buzz-2026-11-11.json",
+ "updated": "2026-11-12T06:00-06:00",
+ "date": "2026-11-12",
+ "source_file": "dtp-newsroom/buzz-2026-11-12.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026 & Nations Cup",
- "seo_desc": "PPA Worlds 2026 champions and replays, MLP Nations Cup results, USA Pickleball's OWL Sport paddle ruling, new PPA Challenger contracts, and the pro calendar, all sourced.",
+ "seo_desc": "PPA Worlds 2026 champions and replays, MLP Nations Cup results, APP Arizona Open and MLP Asia previews, USA Pickleball's OWL Sport paddle ruling, and the pro calendar, all sourced.",
  "items": [
+  {
+   "title": "APP Arizona Open starts today in Mesa: Megan Fudge chases the APP women's pro gold record, Munro and Livornese go for an eighth straight",
+   "summary": "The APP Tour's Arizona Open runs Thursday to Sunday, Nov. 12-15 at Arizona Athletic Grounds in Mesa, per the APP, with a $125,000 purse and 349 players entered, per World Pickleball Magazine. Megan Fudge tied Simone Jardim's APP Tour record of 33 career women's pro gold medals in Overland Park and can take sole possession of it in Mesa. Jack Munro and Richard Livornese Jr. have won seven straight APP men's pro doubles titles this season. Per the APP, the championship court streams Friday, Nov. 13 from 2 to 8 p.m. ET on APPTV (YouTube), then moves to ESPN+ on Saturday (12:30-7 p.m. ET) and Sunday (noon-6 p.m. ET), with ESPN2 and CBS Sports Network TV windows.",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "sources": [
+    {
+     "label": "APP Tour: Arizona Open preview, 'Turning Up the Heat'",
+     "url": "https://www.theapp.global/news/arizona-preview-2026"
+    },
+    {
+     "label": "World Pickleball Magazine: APP Arizona Open 2026 preview",
+     "url": "https://worldpickleballmagazine.com/app-arizona-open-2026-mesa-preview-entries/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Preview post: 'APP Mesa starts today. Megan Fudge is one gold from the APP record. Munro/Livornese are going for eight straight.' Link the APP preview. On X, no hashtags.",
+   "tags": [
+    "APP",
+    "Arizona Open",
+    "Megan Fudge",
+    "Jack Munro",
+    "Richard Livornese Jr.",
+    "Schedule"
+   ]
+  },
+  {
+   "title": "MLP Asia opening night: THE DOTS TOKYO host Manila Helios and Malayan Stripes Friday in Ikebukuro",
+   "summary": "MLP Asia's first match day is Friday, Nov. 13 at Sansan Pickleball Court Ikebukuro in Tokyo, starting at 6 p.m. local time (3 a.m. Friday CT), per the league's preview. THE DOTS TOKYO play Manila Helios, then Malayan Stripes. Each match has four games to 11 (women's doubles, men's doubles and two mixed doubles), and a 2-2 tie goes to a singles DreamBreaker. The league lists Malayan Stripes as favorites on average World Pickleball Rankings, with Lacy Schneemann (No. 11) the highest-ranked player in Tokyo. THE DOTS TOKYO are led by captain Yuta Funemizu and Rika Fujiwara.",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "sources": [
+    {
+     "label": "MLP Asia: Preview, THE DOTS TOKYO host opening night in Ikebukuro",
+     "url": "https://mlp-asia.com/preview-the-dots-tokyo-host-opening-night-in-ikebukuro/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Countdown post: 'First points in MLP Asia history: Tokyo, Friday night. Schneemann's Malayan Stripes are the paper favorites.' Link the MLP Asia preview. On X, no hashtags.",
+   "tags": [
+    "MLP Asia",
+    "MLP",
+    "Tokyo",
+    "Lacy Schneemann",
+    "Schedule"
+   ]
+  },
+  {
+   "title": "Jack Sock's slide wins the PPA's Play of the Tournament from Worlds",
+   "summary": "The PPA Tour named a Jack Sock point, captioned 'Jack Sock slides into home base,' its o2 Sports Play of the Tournament from the Opendoor Pickleball World Championships.",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "sources": [
+    {
+     "label": "PPA Tour on X: Play of the Tournament from Worlds",
+     "url": "https://x.com/PPAtour/status/2120671193686835588"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2120671193686835588"
+   ],
+   "social_angle": "Clip post: quote the PPA post, 'Worlds Play of the Tournament goes to Jack Sock.' On X, no hashtags.",
+   "tags": [
+    "PPA",
+    "Worlds",
+    "Jack Sock",
+    "Highlights"
+   ],
+   "links": [
+    {
+     "href": "/events/opendoor-pickleball-world-championships",
+     "label": "Worlds 2026 hub"
+    }
+   ]
+  },
+  {
+   "title": "Courts watch: Lee County, Ga. approves a $5.2 million facility with 12 covered pickleball courts",
+   "summary": "Lee County, Ga. commissioners approved a $5.2 million pickleball and recreation facility in Leesburg on Nov. 10, per WALB. It will have 12 covered courts for year-round tournaments and programs plus a 12,000-square-foot event space, and county leaders want to bring pickleball tournaments to South Georgia. LRA Constructors won the contract with a $5,231,083.20 bid; funding comes from a SPLOST and impact fees. The first phase is expected to open in April 2028.",
+   "status": "confirmed",
+   "date": "2026-11-12",
+   "sources": [
+    {
+     "label": "WALB: Lee County commissioners approve new pickleball/recreation complex",
+     "url": "https://www.walb.com/2026/11/11/lee-county-commissioners-approve-new-pickleballrecreation-complex/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Local-growth post: '12 covered courts coming to South Georgia. Lee County just approved $5.2M.' Link WALB.",
+   "tags": [
+    "Facilities",
+    "Georgia",
+    "Courts"
+   ]
+  },
   {
    "title": "USA Pickleball will retire six OWL Sport quiet paddles from sanctioned play on Feb. 1, 2028 after spin-test findings",
    "summary": "USA Pickleball said Nov. 9 that six OWL Sport paddle models (Talon X1, CX, CXE, PX, PXE and SILENT STORM) show performance that improves with use, which it calls 'Degrade to Benefit,' based on evaluation following its new Spin Rate Test (in effect since Oct. 1, 2026). The paddles stay approved during a transition period through Jan. 31, 2028; starting Feb. 1, 2028 they will no longer be approved for USA Pickleball-sanctioned competition. USA Pickleball credited OWL Sport's work on noise, and OWL Sport is developing updated Quiet Category paddles that will go through standard certification.",
@@ -236,8 +330,8 @@
    "video_id": "OkYZnaBHnPE"
   },
   {
-   "title": "Week ahead: MLP Asia's first season opens Friday, Nov. 13 in Japan, and the APP Arizona Open runs Nov. 13-15",
-   "summary": "MLP Asia's inaugural season starts Friday, Nov. 13 in Japan, with Hong Kong, China hosting the next day, per the league. Six teams each host a pool-play match day over five weeks, and the top four go to the finals: semifinals Dec. 11 and Super Saturday Dec. 12. Franklin's new X-44 is the official ball and JOOLA is the official net partner. Per World Pickleball Magazine, THE DOTS TOKYO host opening night against Manila Helios and then Malayan Stripes. In the U.S., the APP Tour's Arizona Open is on Nov. 13-15, per the APP's posted stream schedule.",
+   "title": "Week ahead: MLP Asia's first season opens Friday, Nov. 13 in Japan, and the APP Arizona Open runs Nov. 12-15",
+   "summary": "MLP Asia's inaugural season starts Friday, Nov. 13 in Japan, with Hong Kong, China hosting the next day, per the league. Six teams each host a pool-play match day over five weeks, and the top four go to the finals: semifinals Dec. 11 and Super Saturday Dec. 12. Franklin's new X-44 is the official ball and JOOLA is the official net partner. Per World Pickleball Magazine, THE DOTS TOKYO host opening night against Manila Helios and then Malayan Stripes. In the U.S., the APP Tour's Arizona Open runs Nov. 12-15 in Mesa, per the APP.",
    "status": "confirmed",
    "date": "2026-11-10",
    "sources": [
@@ -252,6 +346,10 @@
     {
      "label": "World Pickleball Magazine: Li Xiaopeng and MLP Asia week",
      "url": "https://worldpickleballmagazine.com/li-xiaopeng-china-pickleball-tour-mlp-asia/"
+    },
+    {
+     "label": "APP Tour: Arizona Open preview (Nov. 12-15)",
+     "url": "https://www.theapp.global/news/arizona-preview-2026"
     },
     {
      "label": "APPTV: 2026 APP Arizona Open championship court stream (Nov. 13)",
@@ -2160,143 +2258,6 @@
     "Delaware",
     "New courts",
     "Noise"
-   ]
-  },
-  {
-   "title": "Worlds storylines: Anna Leigh Waters unbeaten in 2026 singles and women's doubles, Ben Johns seeded 19th in singles, Mark Wahlberg headlines Thursday's pro-am",
-   "summary": "The PPA Tour's storylines for the Opendoor Pickleball World Championships (Nov. 2-8, Brookhaven Country Club, Farmers Branch, Texas) say every top-ranked pro is in the draws, winners get 3,000 points, and all three doubles finals are best of five on Championship Sunday. Anna Leigh Waters has not lost a singles or women's doubles match in 2026 and, per the PPA, hasn't lost a singles match in 888 days. Top singles seeds are Waters, Fahey, Christian and Buckner for the women and Chris Haworth, Federico Staksrud, Hunter Johnson and Christian Alshon for the men; Ben Johns is the No. 19 seed and opens against Brandon French in the round of 64. Waters/Johns are the top mixed seeds, and Bright/Waters top women's doubles. The PPA says over 3,200 players are entered and the event page lists a $1,648,641 total payout. Pro rounds start Tuesday, Nov. 3, on PickleballTV at 11 a.m. CT (10 a.m. CT on Sunday), and Mark Wahlberg headlines the MUNICIPAL Celebrity Pickleball Showdown on Thursday, Nov. 5, at 7 p.m. CT on Tennis Channel.",
-   "status": "confirmed",
-   "date": "2026-10-28",
-   "sources": [
-    {
-     "label": "PPA Tour: Storylines for the Opendoor Pickleball World Championships",
-     "url": "https://www.ppatour.com/opendoor-pickleball-world-championships-storylines/"
-    },
-    {
-     "label": "PPA Tour: Worlds 2026 event page (dates, payout)",
-     "url": "https://www.ppatour.com/events/2026/pickleball-world-championships/"
-    },
-    {
-     "label": "Worlds site: pro schedule and TV windows",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    },
-    {
-     "label": "PPA Tour: Mark Wahlberg to headline the Celebrity Pickleball Showdown",
-     "url": "https://www.ppatour.com/municipal-celebrity-pickleball-showdown-wahlberg/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "'Can anyone beat Anna Leigh Waters?' poll plus a 'Ben Johns as a 19 seed' hook. Save the TV windows for a how-to-watch post. Tag the PPA Tour.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Preview",
-    "Anna Leigh Waters",
-    "Ben Johns",
-    "How to watch"
-   ]
-  },
-  {
-   "title": "Data: pickleball is winning at city council meetings, 1,152 speakers for vs. 89 against",
-   "summary": "Hamlet, which analyzes public meeting recordings and transcripts, counted 1,152 people speaking in favor of pickleball courts and 89 against at local government meetings since Oct. 19, 2024, The Kitchen reports. The comments came from meetings in 468 cities and towns, and pickleball was favored in 436 of them. Among larger cities (250,000+ residents), Fresno and Riverside, Calif. and Maricopa, Ariz. had many speakers in favor, while more people spoke against in Port St. Lucie and Tampa, Fla. The data went viral on X after Turner Novak shared a Hamlet chart framing pickleball as a hotter council topic than data centers; that ranking is Hamlet's and Novak's framing.",
-   "status": "confirmed",
-   "date": "2026-10-28",
-   "sources": [
-    {
-     "label": "The Kitchen: Pickleball is winning support at local government meetings",
-     "url": "https://thekitchenpickle.com/blogs/news/pickleball-local-government-meetings-data/"
-    },
-    {
-     "label": "Hamlet: local government topic rankings",
-     "url": "https://www.myhamlet.com/rankings"
-    },
-    {
-     "label": "@TurnerNovak: the viral chart post",
-     "url": "https://x.com/TurnerNovak/status/2114560778091053416"
-    }
-   ],
-   "embeds": [
-    "https://x.com/TurnerNovak/status/2114560778091053416"
-   ],
-   "social_angle": "Counterpoint to the noise-war headlines: 'For every 1 person against courts at city council, 13 spoke in favor.' Strong stat graphic.",
-   "tags": [
-    "Local government",
-    "Data",
-    "Courts",
-    "Noise",
-    "Viral"
-   ]
-  },
-  {
-   "title": "Columbus, Ga. pickleball complex hits $9.2 million and residents push back",
-   "summary": "Columbus, Ga.'s planned 25-court pickleball complex at 1641 3rd Ave. in Uptown is now estimated at about $9.2 million, including an $8.61 million guaranteed construction price from Brasfield & Gorrie that was on the council's Oct. 27 agenda, Fountain City News and Columbus Times report. The plan includes 16 covered courts and four courts under the 2nd Avenue bridge. The council voted 7-2 on Oct. 13 to add $1.7 million, and the Columbus Pickleball Association is expected to contribute roughly $300,000-$380,000. WTVM reports some residents are questioning whether the city's money should go to a pickleball facility over other priorities.",
-   "status": "confirmed",
-   "date": "2026-10-28",
-   "sources": [
-    {
-     "label": "WTVM: Columbus residents question $8.8 million pickleball facility city funding",
-     "url": "https://www.wtvm.com/2026/10/28/columbus-residents-question-88-million-pickleball-facility-funding/"
-    },
-    {
-     "label": "Fountain City News: Columbus pickleball complex, 25 courts, $9.2 million",
-     "url": "https://fountaincitynews.com/columbus-pickleball-complex-25-courts/"
-    },
-    {
-     "label": "Columbus Times: council agenda, $8.61 million pickleball contract",
-     "url": "https://columbustimes.com/story/479/columbus-council-tonight-macon-road-asphalt-plant-86-million-pickleball-cont"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Pairs with the Hamlet data: the other side of the council-meeting story. Question post: 'Is a $9M public pickleball complex worth it?'",
-   "tags": [
-    "Local government",
-    "Courts",
-    "Georgia",
-    "Funding"
-   ]
-  },
-  {
-   "title": "Asia gets one rating: the Asian Pickleball Association and DUPR partner on a unified rating system",
-   "summary": "The Asian Pickleball Association (APA) and DUPR are partnering so players across Asia are rated on the same DUPR system, Times Now reports. DUPR will measure playing level and help organizers seed draws, while the APA's own rankings will show a player's regional competitive standing.",
-   "status": "confirmed",
-   "date": "2026-10-28",
-   "sources": [
-    {
-     "label": "Times Now (via Dailyhunt): APA, DUPR join forces on a unified rating for Asian players",
-     "url": "https://m.dailyhunt.in/news/india/english/timesnow+english-epaper-tnneng/apa+dupr+join+forces+to+create+unified+global+rating+system+for+asian+players-newsid-n731806608"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Explainer hook: 'Rating vs. ranking, what is the difference?' Good evergreen DUPR content.",
-   "tags": [
-    "DUPR",
-    "Asia",
-    "Ratings",
-    "International"
-   ]
-  },
-  {
-   "title": "Courts watch: Fresno opens new pickleball courts at Vinland Park; Plymouth, Ohio plans 4 courts at Mary Fate Park",
-   "summary": "Fresno Mayor Jerry Dyer and Councilmember Tyler Maxwell cut the ribbon on new pickleball and futsal courts at Vinland Park on Tuesday, Oct. 27, KMPH Fox 26 reports. In Ohio, the Village of Plymouth plans four pickleball courts at Mary Fate Park, with work expected in the spring, and is seeking funding for removable nets, Richland Source reports.",
-   "status": "confirmed",
-   "date": "2026-10-28",
-   "sources": [
-    {
-     "label": "KMPH Fox 26: Vinland Park unveils new pickleball and futsal courts",
-     "url": "https://kmph.com/news/local/vinland-park-unveils-new-pickleball-and-futsal-courts"
-    },
-    {
-     "label": "Richland Source: Plymouth serves up 4 new pickleball courts",
-     "url": "https://www.richlandsource.com/2026/10/28/plymouth-village-council-pickle-ball/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Courts-near-you item; Fresno ties to the Hamlet data (one of the big cities with lots of pro-pickleball speakers).",
-   "tags": [
-    "Courts",
-    "California",
-    "Ohio",
-    "New courts"
    ]
   }
  ]
