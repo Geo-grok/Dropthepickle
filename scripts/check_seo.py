@@ -6,13 +6,12 @@ sitemap URLs that are not real built pages, broken internal links, and the
 specific contradictions fixed on 2026-11-07. Does not claim rich-result eligibility.
 """
 import json, re, sys, pathlib
-from xml.etree import ElementTree as ET
 from bs4 import BeautifulSoup
+import sitemap_util
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 BASE = "https://dropthepickle.com"
-NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 bad = []
 
 def fail(msg):
@@ -69,8 +68,26 @@ if "Sitemap: https://dropthepickle.com/sitemap.xml" not in robots:
 if "Disallow: /go/" not in robots:
     fail("robots.txt does not disallow /go/")
 
-sm = ET.parse(DIST / "sitemap.xml")
-locs = [el.text.strip() for el in sm.getroot().findall("sm:url/sm:loc", NS)]
+try:
+    locs, children = sitemap_util.page_locs_from_dist(DIST, BASE)
+except Exception as ex:
+    fail(f"sitemap index: {ex}")
+    locs, children = [], []
+if children:
+    child_names = []
+    for cloc in children:
+        try:
+            child_names.append(sitemap_util.child_filename(cloc, BASE))
+        except ValueError as ex:
+            fail(str(ex))
+    for name in sitemap_util.EXPECTED_CHILDREN:
+        if name not in child_names:
+            fail(f"sitemap index missing {name}")
+    extra = [n for n in child_names if n not in sitemap_util.EXPECTED_CHILDREN]
+    if extra:
+        fail(f"unexpected child sitemaps: {extra}")
+else:
+    fail("sitemap.xml is not a sitemap index with child sitemaps")
 seen = set()
 for loc in locs:
     if loc in seen: fail(f"duplicate sitemap URL {loc}")
@@ -264,6 +281,32 @@ if "Price checked" not in volair_best or ">volair.com</a>" not in volair_best or
 under_guide = text_of("guides/best-paddles-under-100.html")
 if "Price checked" not in under_guide or "maker product page" not in under_guide or "Not a playtest" not in under_guide:
     fail("under-$100 guide is missing price date, maker source, or the not-a-playtest line")
+
+# Phase 0 retired-URL 301s: map is in src/page-redirects.json; the Worker issues the 301s.
+REDIRECTS_EXPECTED = {
+    "/events/mojo-energy-pouches-virginia-beach-open": "/articles/virginia-beach-open-2026-first-time-champions",
+    "/vs-selkirk-labs-project-boomstik-vs-six-zero-coral-16mm": "/paddle-selkirk-labs-project-boomstik",
+    "/vs-gearbox-gbx-power-elongated-gen-3-vs-six-zero-coral-16mm": "/paddle-gearbox-gbx-power-elongated-gen-3",
+    "/vs-joola-hyperion-pro-v-vs-six-zero-coral-16mm": "/paddle-joola-hyperion-pro-v",
+    "/vs-gearbox-gbx-power-elongated-gen-3-vs-joola-hyperion-pro-v": "/paddle-gearbox-gbx-power-elongated-gen-3",
+}
+redir_path = ROOT / "src" / "page-redirects.json"
+if not redir_path.is_file():
+    fail("src/page-redirects.json is missing")
+    redirs = {}
+else:
+    redirs = json.loads(redir_path.read_text()).get("redirects") or {}
+if redirs != REDIRECTS_EXPECTED:
+    fail(f"page-redirects.json does not match the five retired 301s: {redirs}")
+for src, dest in REDIRECTS_EXPECTED.items():
+    src_fn = DIST / (src.lstrip("/") + ".html")
+    if src_fn.is_file():
+        fail(f"retired URL still has a built page (should 301): {src}")
+    dest_fn = DIST / "index.html" if dest == "/" else DIST / (dest.lstrip("/") + ".html")
+    if not dest_fn.is_file():
+        fail(f"301 target has no built page: {src} -> {dest}")
+    if (BASE + dest) not in seen:
+        fail(f"301 target is not in the sitemap: {dest}")
 
 print(f"checked {len(pages)} HTML pages, {len(locs)} sitemap URLs")
 if bad:

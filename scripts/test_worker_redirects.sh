@@ -41,7 +41,26 @@ t /nonexistent.html 404 -
 t /nonexistent/ 404 -
 t /nonexistent 404 -
 t /buzz/2001-01-01-no-such-story 301 "$B/buzz"
+t /events/mojo-energy-pouches-virginia-beach-open 301 "$B/articles/virginia-beach-open-2026-first-time-champions"
+t /events/mojo-energy-pouches-virginia-beach-open.html 301 "$B/articles/virginia-beach-open-2026-first-time-champions"
+t /events/mojo-energy-pouches-virginia-beach-open/ 301 "$B/articles/virginia-beach-open-2026-first-time-champions"
+t "/events/mojo-energy-pouches-virginia-beach-open?utm=1" 301 "$B/articles/virginia-beach-open-2026-first-time-champions?utm=1"
+t /events/mojo-energy-pouches-virginia-beach-open 301 "https://dropthepickle.com/articles/virginia-beach-open-2026-first-time-champions" www.dropthepickle.com
+t /vs-selkirk-labs-project-boomstik-vs-six-zero-coral-16mm 301 "$B/paddle-selkirk-labs-project-boomstik"
+t /vs-selkirk-labs-project-boomstik-vs-six-zero-coral-16mm.html 301 "$B/paddle-selkirk-labs-project-boomstik"
+t /vs-gearbox-gbx-power-elongated-gen-3-vs-six-zero-coral-16mm 301 "$B/paddle-gearbox-gbx-power-elongated-gen-3"
+t /vs-joola-hyperion-pro-v-vs-six-zero-coral-16mm 301 "$B/paddle-joola-hyperion-pro-v"
+t /vs-gearbox-gbx-power-elongated-gen-3-vs-joola-hyperion-pro-v 301 "$B/paddle-gearbox-gbx-power-elongated-gen-3"
+t /vs-gearbox-gbx-power-elongated-gen-3-vs-joola-hyperion-pro-v.html 301 "$B/paddle-gearbox-gbx-power-elongated-gen-3"
+t /articles/virginia-beach-open-2026-first-time-champions 200 -
+t /paddle-selkirk-labs-project-boomstik 200 -
 t /sitemap.xml 200 -
+t /sitemap-guides.xml 200 -
+t /sitemap-codes.xml 200 -
+t /sitemap-buzz.xml 200 -
+t /sitemap-paddles.xml 200 -
+t /sitemap-vs.xml 200 -
+t /sitemap-pages.xml 200 -
 t /robots.txt 200 -
 t /llms.txt 200 -
 t /style.css 200 -

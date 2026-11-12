@@ -1,0 +1,10 @@
+{
+  "_note": "Path-exact 301s, matched after stripping .html and a trailing slash. Not used for /go/ slugs. Query string is kept. www is sent to the https apex in the same hop.",
+  "redirects": {
+    "/events/mojo-energy-pouches-virginia-beach-open": "/articles/virginia-beach-open-2026-first-time-champions",
+    "/vs-selkirk-labs-project-boomstik-vs-six-zero-coral-16mm": "/paddle-selkirk-labs-project-boomstik",
+    "/vs-gearbox-gbx-power-elongated-gen-3-vs-six-zero-coral-16mm": "/paddle-gearbox-gbx-power-elongated-gen-3",
+    "/vs-joola-hyperion-pro-v-vs-six-zero-coral-16mm": "/paddle-joola-hyperion-pro-v",
+    "/vs-gearbox-gbx-power-elongated-gen-3-vs-joola-hyperion-pro-v": "/paddle-gearbox-gbx-power-elongated-gen-3"
+  }
+}

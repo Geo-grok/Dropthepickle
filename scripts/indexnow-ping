@@ -8,6 +8,8 @@ No account. The key file must already be live at https://dropthepickle.com/<key>
   python3 scripts/indexnow-ping --sitemap dist/sitemap.xml
 """
 import json, pathlib, re, sys, urllib.error, urllib.request
+from xml.etree import ElementTree as ET
+import sitemap_util
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 KEY = (ROOT / "data" / "indexnow-key.txt").read_text().strip()
 HOST = "dropthepickle.com"
@@ -15,13 +17,24 @@ ENDPOINT = "https://api.indexnow.org/indexnow"
 # Cloudflare rejects the default Python user agent on the sitemap.
 UA = "DropThePickle-IndexNow/1.0 (+https://dropthepickle.com)"
 
-def urls_from(src):
+def load_xml(src):
     if src.startswith("http"):
         req = urllib.request.Request(src, headers={"User-Agent": UA, "Accept": "application/xml"})
-        xml = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
-    else:
-        xml = pathlib.Path(src).read_text()
-    return re.findall(r"<loc>\s*([^<]+?)\s*</loc>", xml)
+        return urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
+    return pathlib.Path(src).read_text()
+
+def urls_from(src):
+    """Page URLs from a urlset, or from a sitemap index plus its children."""
+    def resolve_child(loc):
+        # Index children are listed as https://dropthepickle.com/sitemap-*.xml.
+        # A local --sitemap path should read sibling files next to the index.
+        if not src.startswith("http"):
+            name = sitemap_util.child_filename(loc)
+            return ET.parse(pathlib.Path(src).parent / name).getroot()
+        xml = load_xml(loc)
+        return ET.fromstring(xml)
+    pages, _children = sitemap_util.page_locs_from_xml_text(load_xml(src), resolve_child)
+    return pages
 
 def main():
     src = sys.argv[sys.argv.index("--sitemap") + 1] if "--sitemap" in sys.argv else f"https://{HOST}/sitemap.xml"

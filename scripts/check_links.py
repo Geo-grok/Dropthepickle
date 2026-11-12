@@ -17,6 +17,7 @@ Dist checks (fail the run):
 import pathlib, re, sys, json, requests, concurrent.futures as cf
 from xml.etree import ElementTree as ET
 from bs4 import BeautifulSoup
+import sitemap_util
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D = (ROOT / "dist").resolve(); bad = []; ext = set()
 BASE = "https://dropthepickle.com"
@@ -58,9 +59,14 @@ for rel, s in pages.items():
     if rel == "404.html" or is_noindex(s): continue
     c = s.find("link", rel="canonical"); cv = (c.get("href") or "").strip() if c else ""
     if cv != final_url(rel): bad.append((rel, f"canonical {cv!r} is not the page's final URL {final_url(rel)}"))
-# sitemap: built, self-canonical, indexable
-NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-locs = [el.text.strip() for el in ET.parse(D / "sitemap.xml").getroot().findall("sm:url/sm:loc", NS)]
+# sitemap: built, self-canonical, indexable (index + per-template children)
+try:
+    locs, children = sitemap_util.page_locs_from_dist(D, BASE)
+except Exception as ex:
+    bad.append(("sitemap.xml", str(ex)))
+    locs, children = [], []
+if not children:
+    bad.append(("sitemap.xml", "not a sitemap index with child sitemaps"))
 by_url = {final_url(rel): rel for rel in pages}
 for loc in locs:
     rel = by_url.get(loc)
@@ -76,7 +82,16 @@ if "--live" in args:
     i = args.index("--live"); live = (args[i + 1] if len(args) > i + 1 and args[i + 1].startswith("http") else BASE).rstrip("/")
     lbad = []
     sm = requests.get(live + "/sitemap.xml", headers=H, timeout=30)
-    llocs = re.findall(r"<loc>(.*?)</loc>", sm.text)
+    def resolve_live_child(loc):
+        url = loc.replace(BASE, live, 1) if loc.startswith(BASE) else loc
+        r = requests.get(url, headers=H, timeout=30)
+        r.raise_for_status()
+        return ET.fromstring(r.content)
+    try:
+        llocs, _lchildren = sitemap_util.page_locs_from_xml_text(sm.text, resolve_live_child)
+    except Exception as ex:
+        lbad.append(f"sitemap index: {ex}")
+        llocs = []
     def chk_live(u):
         u2 = u.replace(BASE, live, 1)
         r = requests.get(u2, headers=H, timeout=30, allow_redirects=False)

@@ -514,11 +514,47 @@ def emit_crawl_files():
     save_fresh()
     pages = [CATALOG[fn] for fn in CATALOG if fn != "404.html" and not CATALOG[fn].get("noindex")]
     pages.sort(key=lambda p: (p["fn"] != "index.html", p["fn"]))
-    urls = []
+    # Per-template child sitemaps, with sitemap.xml as the index. Grouping is by
+    # URL pattern / generator so GSC can show indexed vs submitted per template.
+    # Hubs stay with their template (guides.html, discount-codes.html, buzz.html).
+    # Remaining hubs, articles, best-of, events and similar go in sitemap-pages.xml.
+    def sitemap_bucket(fn):
+        if fn == "guides.html" or fn.startswith("guides/"):
+            return "guides"
+        if fn == "discount-codes.html" or fn.startswith("discount-codes/"):
+            return "codes"
+        if fn == "buzz.html" or fn.startswith("buzz/"):
+            return "buzz"
+        # Model pages are paddle-<brand>-.... Exclude /paddle-quiz (a tool, not a model page).
+        if fn.startswith("paddle-") and "/" not in fn and fn != "paddle-quiz.html":
+            return "paddles"
+        if fn.startswith("vs-") and "/" not in fn:
+            return "vs"
+        return "pages"
+    SITEMAP_ORDER = ("guides", "codes", "buzz", "paddles", "vs", "pages")
+    buckets = {name: [] for name in SITEMAP_ORDER}
     for p in pages:
-        last = f"\n    <lastmod>{p['updated']}</lastmod>" if p.get("updated") else ""
-        urls.append(f"  <url>\n    <loc>{html.escape(canon(p['fn']))}</loc>{last}\n  </url>")
-    (DIST / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(urls) + "\n</urlset>\n")
+        buckets[sitemap_bucket(p["fn"])].append(p)
+    def urlset_xml(items):
+        urls = []
+        for p in items:
+            last = f"\n    <lastmod>{p['updated']}</lastmod>" if p.get("updated") else ""
+            urls.append(f"  <url>\n    <loc>{html.escape(canon(p['fn']))}</loc>{last}\n  </url>")
+        return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(urls) + "\n</urlset>\n"
+    index_entries = []
+    for name in SITEMAP_ORDER:
+        items = buckets[name]
+        if not items:
+            continue
+        child = f"sitemap-{name}.xml"
+        (DIST / child).write_text(urlset_xml(items))
+        lastmods = [p["updated"] for p in items if p.get("updated")]
+        last = f"\n    <lastmod>{max(lastmods)}</lastmod>" if lastmods else ""
+        index_entries.append(f"  <sitemap>\n    <loc>{html.escape(base + '/' + child)}</loc>{last}\n  </sitemap>")
+    (DIST / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(index_entries) + "\n</sitemapindex>\n"
+    )
     bots = ["*", "GPTBot", "ChatGPT-User", "OAI-SearchBot", "Google-Extended", "GoogleOther", "anthropic-ai", "ClaudeBot",
             "Claude-SearchBot", "PerplexityBot", "Perplexity-User", "CCBot", "Bytespider", "Applebot-Extended", "Amazonbot",
             "meta-externalagent", "FacebookBot", "cohere-ai", "Diffbot", "AI2Bot", "DuckAssistBot", "MistralAI-User"]
@@ -551,7 +587,7 @@ CODE_SEO_BRANDS = {"RPM", "Bodhi", "Pickle Poppers"}
 
 def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumbs=None, image=None, raw_title=False, noindex=False):
     """noindex=True: the page stays reachable (links keep working) but carries <meta name="robots" content="noindex,follow">
-    and is left out of sitemap.xml and llms.txt."""
+    and is left out of the sitemaps and llms.txt."""
     prefix = "../" * fn.count("/")
     rel = lambda h: h if h.startswith(("http://", "https://", "mailto:", "#", "/")) else prefix + h
     nav = "".join(f'<a href="{rel(h)}" class="{"on" if h==fn else ""}">{t}</a>' for h, t in NAV)

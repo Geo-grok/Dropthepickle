@@ -2,7 +2,9 @@
 // and handles /go/<slug> outbound redirects (counted in D1 table go_clicks,
 // with user_agent and an is_bot flag; HEAD requests are redirected but not logged).
 import GO from "./go-links.json";
+import PAGE_REDIRECTS from "./page-redirects.json";
 const WORLDS_301 = new Set(["/events/ppa-worlds-2026", "/events/ppa-worlds-2026.html", "/events/ppa-worlds-2026/"]);
+const RETIRED_301 = PAGE_REDIRECTS.redirects;
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -34,6 +36,17 @@ export default {
         url.protocol = "https:";
       }
       url.pathname = "/guides/best-paddles-under-100";
+      return permanent(url.toString());
+    }
+    // Five retired URLs that had Search Console impressions and were 404ing.
+    // Path-exact after cleanPath (so .html and trailing slash are one hop). /go/ is handled above and is never in this map.
+    const retiredTo = RETIRED_301[cleanPath(url.pathname)];
+    if (retiredTo) {
+      if (url.hostname.startsWith("www.")) {
+        url.hostname = url.hostname.slice(4);
+        url.protocol = "https:";
+      }
+      url.pathname = retiredTo;
       return permanent(url.toString());
     }
     // www -> apex in one permanent hop, straight to the clean URL (only runs if a www request ever reaches the Worker).
@@ -78,6 +91,20 @@ function cleanPath(path) {
   else if (p.endsWith(".html")) p = p.slice(0, -".html".length);
   if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
   return p || "/";
+}
+
+// Used by scripts/check_retired_redirects.mjs. Same hop the fetch handler returns.
+export function retiredRedirect(href) {
+  const url = new URL(href);
+  if (url.pathname.startsWith("/go/")) return null;
+  const dest = RETIRED_301[cleanPath(url.pathname)];
+  if (!dest) return null;
+  if (url.hostname.startsWith("www.")) {
+    url.hostname = url.hostname.slice(4);
+    url.protocol = "https:";
+  }
+  url.pathname = dest;
+  return { status: 301, location: url.toString() };
 }
 
 // Public video files copied from media/ into dist/media by build.py. Served from static assets
