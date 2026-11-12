@@ -1,6 +1,20 @@
 {
  "items": [
   {
+   "source": "The Dink",
+   "title": "Andre Agassi Is Bringing the Grateful Dead to Pickleball",
+   "link": "https://www.thedinkpickleball.com/andre-agassi-brings-grateful-dead-to-pickleball-in-new-deal/",
+   "date": "2026-11-11",
+   "summary": "The Dink story from 2026-11-11, filed under News and Stories, Andre Agassi."
+  },
+  {
+   "source": "The Dink",
+   "title": "5 New Pickleball Paddles Pushing the Limits of Performance",
+   "link": "https://www.thedinkpickleball.com/5-new-pickleball-paddles-for-all-court-performance/",
+   "date": "2026-11-11",
+   "summary": "The Dink story from 2026-11-11, filed under Paddle Reviews, Selkirk, Revolin."
+  },
+  {
    "source": "Pickleball Union",
    "title": "Why Your Feet Feel Like They’re Burning in Pickleball",
    "link": "https://pickleballunion.com/hot-feet-pickleball/",
@@ -22,6 +36,20 @@
    "summary": "Pickleball Union story from 2026-11-11, filed under Intermediate Play, Advanced Play, Tips & Strategy."
   },
   {
+   "source": "The Kitchen Pickle",
+   "title": "Pickleball instruction: How to defend against the lob — and get lobbed less",
+   "link": "https://thekitchenpickle.com/blogs/tips/pickleball-instruction-defending-against-lobs/",
+   "date": "2026-11-11",
+   "summary": "The Kitchen Pickle story from 2026-11-11, filed under Tips, Pickleball instruction."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "What had Anna Leigh Waters so fired up? | Pickleball World Championships best moments",
+   "link": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-best-moments/",
+   "date": "2026-11-11",
+   "summary": "The Kitchen Pickle story from 2026-11-11, filed under PPA, Pro pickleball."
+  },
+  {
    "source": "The Dink",
    "title": "Why Your Tennis Skills Might Be Holding You Back in Pickleball",
    "link": "https://www.thedinkpickleball.com/3-mistakes-tennis-players-make-in-pickleball/",
@@ -37,8 +65,8 @@
   },
   {
    "source": "The Dink",
-   "title": "5 Gauges That Tell You When to Let a Pickleball Out Go",
-   "link": "https://www.thedinkpickleball.com/pickleball-out-ball-gauges/",
+   "title": "5 Gauges That Tell You When to Let a Pickleball Go Out",
+   "link": "https://www.thedinkpickleball.com/pickleball-out-ball-5-gauges-to-know-when-to-let-go/",
    "date": "2026-11-10",
    "summary": "The Dink story from 2026-11-10, filed under Pickleball 101, pickleball tips, pickleball strategy."
   },
@@ -90,20 +118,6 @@
    "link": "https://www.thedinkpickleball.com/ppa-tour-worlds-recap-teenage-sensation-wins-gold-waters-claims-triple-crown-and-goins-dominates/",
    "date": "2026-11-09",
    "summary": "The Dink story from 2026-11-09, filed under PPA Tour, PPA, PPA 26-27."
-  },
-  {
-   "source": "The Dink",
-   "title": "Why the Franklin X-44 Might Be Your New Favorite Pickleball",
-   "link": "https://www.thedinkpickleball.com/the-franklin-x-44-pickleball-faster-brighter-more-durable/",
-   "date": "2026-11-09",
-   "summary": "The Dink story from 2026-11-09, filed under Franklin Pickleball, videos."
-  },
-  {
-   "source": "The Dink",
-   "title": "7 Pickleball Dinking Drills That Build Every Dink You Need",
-   "link": "https://www.thedinkpickleball.com/7-pickleball-dinking-drill-sessions-for-every-dink/",
-   "date": "2026-11-09",
-   "summary": "The Dink story from 2026-11-09, filed under Pickleball 101, pickleball tips, pickleball strategy."
   },
   {
    "source": "Pickleball Union",
@@ -162,20 +176,6 @@
    "summary": "Pickleball Effect (site) story from 2026-11-09, filed under Paddle Tips, Resources."
   },
   {
-   "source": "The Kitchen Pickle",
-   "title": "Review: This paddle helped JW Johnson get to DUPR No. 1",
-   "link": "https://thekitchenpickle.com/blogs/gear/paddletek-bantam-jolt-tempest-veyra-paddle-review/",
-   "date": "2026-11-08",
-   "summary": "The Kitchen Pickle story from 2026-11-08, filed under Gear, pickleball gear, pickleball paddles."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "JOOLA and TOGETHXR launch ‘She’s Got a Point’ campaign to elevate women in pickleball",
-   "link": "https://thekitchenpickle.com/blogs/news/joola-pickleball-togethxr-shes-got-a-point-campaign/",
-   "date": "2026-11-07",
-   "summary": "The Kitchen Pickle story from 2026-11-07, filed under pickleball gear, pickleball paddles."
-  },
-  {
    "source": "The Pickler – Inside the Den",
    "title": "Who Takes the Middle? A Smarter Way to Cover the Court in Doubles",
    "link": "https://insideden.com/pickleball-blog/pickleball-middle-doubles-strategy/",
@@ -216,13 +216,6 @@
    "link": "https://insideden.com/pickleball-blog/pickleball-know-when-to-let-go/",
    "date": "2026-10-29",
    "summary": "The Pickler – Inside the Den story from 2026-10-29, filed under Quick Tips, Strategy & Technique, Strategy."
-  },
-  {
-   "source": "Major League Pickleball",
-   "title": "Houston Hammers to Join Major League Pickleball as 21st Team for 2027 Season",
-   "link": "https://majorleaguepickleball.co/news/houston-hammers-to-join-major-league-pickleball-as-21st-team-for-2027-season/",
-   "date": "2026-10-28",
-   "summary": "Major League Pickleball story from 2026-10-28, filed under MLP Updates."
   },
   {
    "source": "Pickleball Effect (site)",
@@ -281,60 +274,11 @@
    "summary": "Pickleball Effect (site) story from 2026-10-06, filed under Paddle Tips, Resources."
   },
   {
-   "source": "Major League Pickleball",
-   "title": "Match Schedule for MLP Nations Cup Released",
-   "link": "https://majorleaguepickleball.co/news/match-schedule-for-mlp-nations-cup-released/",
-   "date": "2026-09-29",
-   "summary": "Major League Pickleball story from 2026-09-29, filed under MLP Updates."
-  },
-  {
    "source": "Pickleball Effect (site)",
    "title": "2026 Best Budget Pickleball Paddles | Pickleball Effect’s Hot List",
    "link": "https://pickleballeffect.com/equipment-reviews/best-budget-pickleball-paddles/",
    "date": "2026-09-29",
    "summary": "Pickleball Effect (site) story from 2026-09-29, filed under Best of Lists, Best Paddles, Equipment Reviews."
-  },
-  {
-   "source": "Major League Pickleball",
-   "title": "Groups, Rosters, and Captains Announced for Inaugural MLP Nations Cup, Hosted at Brookhaven Country Club, Oct. 30-Nov. 1",
-   "link": "https://majorleaguepickleball.co/news/groups-rosters-and-captains-announced-for-inaugural-mlp-nations-cup-hosted-at-brookhaven-country-club-oct-30-nov-1/",
-   "date": "2026-09-24",
-   "summary": "Major League Pickleball story from 2026-09-24, filed under MLP Updates."
-  },
-  {
-   "source": "Major League Pickleball",
-   "title": "MLP Produces Record-Setting 2026 Season",
-   "link": "https://majorleaguepickleball.co/news/mlp-produces-record-setting-2026-season/",
-   "date": "2026-09-14",
-   "summary": "Major League Pickleball story from 2026-09-14, filed under MLP Updates."
-  },
-  {
-   "source": "Major League Pickleball",
-   "title": "Major League Pickleball Finals on CBS Set All-Time League Viewership Record",
-   "link": "https://majorleaguepickleball.co/news/major-league-pickleball-finals-on-cbs-set-all-time-league-viewership-record/",
-   "date": "2026-09-02",
-   "summary": "Major League Pickleball story from 2026-09-02, filed under MLP Updates."
-  },
-  {
-   "source": "Major League Pickleball",
-   "title": "MLP Finals Event Guide: Schedule, Map, & More",
-   "link": "https://majorleaguepickleball.co/news/mlp-finals-event-guide-schedule-map-more/",
-   "date": "2026-08-25",
-   "summary": "Major League Pickleball story from 2026-08-25, filed under MLP Updates, finals, map."
-  },
-  {
-   "source": "Major League Pickleball",
-   "title": "Tune In: Broadcast Info for 2026 MLP Finals",
-   "link": "https://majorleaguepickleball.co/news/how-to-watch-the-2026-mlp-finals/",
-   "date": "2026-08-24",
-   "summary": "Major League Pickleball story from 2026-08-24, filed under MLP Updates, cbs, tennischannel."
-  },
-  {
-   "source": "Major League Pickleball",
-   "title": "MLP Playoffs: Quarterfinal Recap & Bracket Update",
-   "link": "https://majorleaguepickleball.co/news/mlp-playoffs-quarterfinal-recap-bracket-update/",
-   "date": "2026-08-19",
-   "summary": "Major League Pickleball story from 2026-08-19, filed under MLP Updates."
   },
   {
    "source": "Pickleball England",
@@ -452,12 +396,12 @@
  "sources": {
   "The Dink": "ok (8)",
   "Pickleball Union": "ok (8)",
-  "Major League Pickleball": "ok (8)",
+  "Major League Pickleball": "failed: 503 Server Error: Service Unavailable for url: https://majorleaguepickleball.co/feed",
   "The Kitchen Pickle": "ok (8)",
   "Pickleball Kitchen": "ok (8)",
   "Pickleball Effect (site)": "ok (8)",
   "The Pickler – Inside the Den": "ok (8)",
   "Pickleball England": "ok (8)"
  },
- "updated": "2026-11-11T11:51"
+ "updated": "2026-11-12T11:53"
 }

@@ -1,11 +1,51 @@
 {
  "items": [
   {
+   "channel": "Pickleball Studio",
+   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
+   "title": "New Vatic Pro Flat Top Hybrid, Boomstik ST Grit Updates & More New Paddles",
+   "link": "https://www.youtube.com/watch?v=MvWr6xwdEe8",
+   "video_id": "MvWr6xwdEe8",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "Best Pickleball Paddles 2026: Our Favorites, Spartus Spitfire to RPM | Pickleball Podcast",
+   "link": "https://www.youtube.com/watch?v=M8VOs1GLXAg",
+   "video_id": "M8VOs1GLXAg",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Pickleball Pursuit",
+   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
+   "title": "These Paddles Are LEGIT | Gearbox Pressure X Review",
+   "link": "https://www.youtube.com/watch?v=iAuxs3s7IRY",
+   "video_id": "iAuxs3s7IRY",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Matthew K Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
+   "title": "[GIVEAWAY!] Watch BEFORE You Buy! | Honolulu M105 MPP Paddle Review",
+   "link": "https://www.youtube.com/watch?v=T68oa5OoeKc",
+   "video_id": "T68oa5OoeKc",
+   "date": "2026-11-11"
+  },
+  {
    "channel": "PickleBaller",
    "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
    "title": "Selkirk Boomstik ST vs Original Boomstik vs Omni Pickleball Paddle Review: Which Is Best?",
    "link": "https://www.youtube.com/watch?v=uxXX3DTIMhY",
    "video_id": "uxXX3DTIMhY",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Selkirk Boomstik ST Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=SL2oJ_LWq9c",
+   "video_id": "SL2oJ_LWq9c",
    "date": "2026-11-11"
   },
   {
@@ -33,14 +73,6 @@
    "date": "2026-11-10"
   },
   {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "[GIVEAWAY!] Watch BEFORE You Buy! | Honolulu M 105 MPP Paddle Review",
-   "link": "https://www.youtube.com/watch?v=T68oa5OoeKc",
-   "video_id": "T68oa5OoeKc",
-   "date": "2026-11-10"
-  },
-  {
    "channel": "Pickleball Playbook Paddles",
    "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
    "title": "Honolulu J6CR M105 Pickleball Paddle Review",
@@ -59,7 +91,7 @@
   {
    "channel": "Rackets & Runners - Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
-   "title": "These are the BEST Durable Grit Pickleball Paddles | Rackets & Runners",
+   "title": "These are the BEST Durable Grit Pickleball Paddles that we Carry | Rackets & Runners",
    "link": "https://www.youtube.com/watch?v=3V1EetH4WmQ",
    "video_id": "3V1EetH4WmQ",
    "date": "2026-11-08"
@@ -153,14 +185,6 @@
    "date": "2026-11-04"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Thrive Ignite Hybrid Game Play Paddle Review",
-   "link": "https://www.youtube.com/watch?v=3SuMB7d51i4",
-   "video_id": "3SuMB7d51i4",
-   "date": "2026-11-04"
-  },
-  {
    "channel": "Matt's Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
    "title": "RPM Jade vs Spartus Spitfire, Luzz Inferno 2, Loco 2: Softest of the Four | Pickleball",
@@ -207,14 +231,6 @@
    "link": "https://www.youtube.com/watch?v=3zY98wR_95Y",
    "video_id": "3zY98wR_95Y",
    "date": "2026-11-02"
-  },
-  {
-   "channel": "Matt's Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "The RPM Jade Is Already #2 | Top 10 Pickleball Paddles, October 2026",
-   "link": "https://www.youtube.com/watch?v=Bkwh9_fEWK4",
-   "video_id": "Bkwh9_fEWK4",
-   "date": "2026-11-01"
   },
   {
    "channel": "John Kew Pickleball",
@@ -463,31 +479,55 @@
    "link": "https://www.youtube.com/watch?v=gukaQpXxdmA",
    "video_id": "gukaQpXxdmA",
    "date": "2026-10-10"
-  },
-  {
-   "channel": "Farmer Lanky Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
-   "title": "Volair CMD Hybrid Pickleball Paddle Review: The Perfect Balance?",
-   "link": "https://www.youtube.com/watch?v=nkO_lNo02-0",
-   "video_id": "nkO_lNo02-0",
-   "date": "2026-10-09"
-  },
-  {
-   "channel": "Tickle My Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC5Txk5Su1Qv1AUVaXJ5FbzA",
-   "title": "Bread & Butter Loco 2 First Look: Is the Upgrade Worth It?",
-   "link": "https://www.youtube.com/watch?v=Oh_oorKPThk",
-   "video_id": "Oh_oorKPThk",
-   "date": "2026-10-08"
   }
  ],
  "all_items": [
+  {
+   "channel": "Pickleball Studio",
+   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
+   "title": "New Vatic Pro Flat Top Hybrid, Boomstik ST Grit Updates & More New Paddles",
+   "link": "https://www.youtube.com/watch?v=MvWr6xwdEe8",
+   "video_id": "MvWr6xwdEe8",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "Best Pickleball Paddles 2026: Our Favorites, Spartus Spitfire to RPM | Pickleball Podcast",
+   "link": "https://www.youtube.com/watch?v=M8VOs1GLXAg",
+   "video_id": "M8VOs1GLXAg",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Pickleball Pursuit",
+   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
+   "title": "These Paddles Are LEGIT | Gearbox Pressure X Review",
+   "link": "https://www.youtube.com/watch?v=iAuxs3s7IRY",
+   "video_id": "iAuxs3s7IRY",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Matthew K Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
+   "title": "[GIVEAWAY!] Watch BEFORE You Buy! | Honolulu M105 MPP Paddle Review",
+   "link": "https://www.youtube.com/watch?v=T68oa5OoeKc",
+   "video_id": "T68oa5OoeKc",
+   "date": "2026-11-11"
+  },
   {
    "channel": "PickleBaller",
    "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
    "title": "Selkirk Boomstik ST vs Original Boomstik vs Omni Pickleball Paddle Review: Which Is Best?",
    "link": "https://www.youtube.com/watch?v=uxXX3DTIMhY",
    "video_id": "uxXX3DTIMhY",
+   "date": "2026-11-11"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Selkirk Boomstik ST Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=SL2oJ_LWq9c",
+   "video_id": "SL2oJ_LWq9c",
    "date": "2026-11-11"
   },
   {
@@ -515,14 +555,6 @@
    "date": "2026-11-10"
   },
   {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "[GIVEAWAY!] Watch BEFORE You Buy! | Honolulu M 105 MPP Paddle Review",
-   "link": "https://www.youtube.com/watch?v=T68oa5OoeKc",
-   "video_id": "T68oa5OoeKc",
-   "date": "2026-11-10"
-  },
-  {
    "channel": "Pickleball Playbook Paddles",
    "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
    "title": "Honolulu J6CR M105 Pickleball Paddle Review",
@@ -541,7 +573,7 @@
   {
    "channel": "Rackets & Runners - Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
-   "title": "These are the BEST Durable Grit Pickleball Paddles | Rackets & Runners",
+   "title": "These are the BEST Durable Grit Pickleball Paddles that we Carry | Rackets & Runners",
    "link": "https://www.youtube.com/watch?v=3V1EetH4WmQ",
    "video_id": "3V1EetH4WmQ",
    "date": "2026-11-08"
@@ -699,14 +731,6 @@
    "date": "2026-11-02"
   },
   {
-   "channel": "Matt's Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "The RPM Jade Is Already #2 | Top 10 Pickleball Paddles, October 2026",
-   "link": "https://www.youtube.com/watch?v=Bkwh9_fEWK4",
-   "video_id": "Bkwh9_fEWK4",
-   "date": "2026-11-01"
-  },
-  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "RPM Jade Review: Love It or Hate It, There’s More to the Story",
@@ -803,14 +827,6 @@
    "date": "2026-10-28"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Holbrook Fuze Vantagrit Review & Drilling Test",
-   "link": "https://www.youtube.com/watch?v=STrZyMZkT14",
-   "video_id": "STrZyMZkT14",
-   "date": "2026-10-28"
-  },
-  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "NEW Paddle Haul: Gearbox Pressure X, Friday Durable Grit, Volair CMD, Enhance MPP AG & More",
@@ -825,30 +841,6 @@
    "link": "https://www.youtube.com/watch?v=9Zivh6G2WKM",
    "video_id": "9Zivh6G2WKM",
    "date": "2026-10-27"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Engage pursuit pro 2 Review",
-   "link": "https://www.youtube.com/watch?v=McXn-_cm7es",
-   "video_id": "McXn-_cm7es",
-   "date": "2026-10-27"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Luzz Cannon XPP M1 Review",
-   "link": "https://www.youtube.com/watch?v=XFqplEzYlbs",
-   "video_id": "XFqplEzYlbs",
-   "date": "2026-10-26"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Selkirk Omni Paddle Review | Match Play",
-   "link": "https://www.youtube.com/watch?v=OrUk1nheRrI",
-   "video_id": "OrUk1nheRrI",
-   "date": "2026-10-24"
   },
   {
    "channel": "John Kew Pickleball",
@@ -1532,7 +1524,7 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (4)",
+  "Pickleball Studio": "ok (5)",
   "John Kew Pickleball": "ok (7)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
@@ -1545,16 +1537,16 @@
   "Pickleball Warehouse": "ok (6)",
   "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
-  "Pickleball Pursuit": "ok (7)",
+  "Pickleball Pursuit": "ok (8)",
   "All Drive No Drop Pickleball": "ok (8)",
   "Matthew K Pickleball": "ok (1)",
   "Tickle My Pickleball": "ok (3)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
-  "Pickleball Playbook Paddles": "ok (11)",
+  "Pickleball Playbook Paddles": "ok (8)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-11T11:51"
+ "updated": "2026-11-12T11:53"
 }
