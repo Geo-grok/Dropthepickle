@@ -409,7 +409,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>What to watch</h2>
 <p>Ryan Morneau posted "{e(vtitle)}" on his Pickleball Breakdowns channel on {fmt(vdate)}. It is his clip, embedded here so you can watch the idea from a player who breaks down pro points. More of his recent clips are on the <a href="../creators/ryan-morneau.html">spotlight page</a>.</p>
 {embed(vid, vtitle)}
-<p>To build the habit, run the dink drills in our <a href="pickleball-drills.html">pickleball drills guide</a>, starting with the Down the Link Dink Game.</p>
+<p>To build the habit, run the dink drills in our <a href="pickleball-drills.html">pickleball drills guide</a>, starting with the Down the Link Dink Game. When the other team speeds the ball up, the soft answer is a <a href="pickleball-reset.html">reset shot</a>, the same touch under more pressure.</p>
 <h2>The paddle is the smaller part</h2>
 <p>A published light weight is easier to reset in a fast exchange. In our file the lightest listed number is {light[0]:.1f} oz, on the {alink(light[2])}. That is a spec, not a promise that the paddle dinks better. Read <a href="paddle-weight-and-core.html">weight and core</a> before you buy a new face to fix a swing.</p>
 {faq_html}
@@ -1241,7 +1241,7 @@ def make(page, e, fmt, PP, cur, ph):
 <p>Take a basket of balls and serve from one side until it's empty, focusing on consistency and placement. Collect the balls and repeat from the other side. This is the one you can do alone. Need a refresher on where a legal serve has to land? See the <a href="pickleball-rules-for-beginners.html">rules for beginners</a>.</p>
 <h2>Five 2-person drills from PlayPickleball</h2>
 <h3>5. Dink Dink Bang</h3>
-<p>Both players at the kitchen line. Hit three dinks, then the fourth shot is a speed-up and the fifth is a reset, then go back to dinking. The pattern is "dink, dink, dink, bang, reset," and PlayPickleball says it covers almost every kitchen-line shot.</p>
+<p>Both players at the kitchen line. Hit three dinks, then the fourth shot is a speed-up and the fifth is a reset, then go back to dinking. The pattern is "dink, dink, dink, bang, reset," and PlayPickleball says it covers almost every kitchen-line shot. For the soft block after the bang, see <a href="pickleball-reset.html">how to hit a reset</a>.</p>
 <h3>6. Fast Hands</h3>
 <p>Volley back and forth from the kitchen line, aiming at each other's hips. Both players then step one step into the kitchen and keep volleying, adding a step at a time until someone faults. It's a drill, not a game: in a real point, you can't volley while you're touching the kitchen. PlayPickleball says the ball seems much slower once you're back at the line.</p>
 <h3>7. Slinky</h3>
@@ -1653,7 +1653,7 @@ def make(page, e, fmt, PP, cur, ph):
 <li><b>Step back and reset.</b> Same setup, but your partner sends you a high ball first. Following USA Pickleball's tip, take a big step back, get low, and reset the next ball.</li>
 <li><b>Dink, dink, bang, reset.</b> The kitchen-line pattern from our <a href="pickleball-drills.html">pickleball drills</a> guide includes a reset after every speed-up.</li>
 </ul>
-<p>A paddle with a softer, more controlled feel can help this shot. See <a href="../best-paddles-for-control.html">best control paddles</a>, <a href="paddle-weight-and-core.html">paddle weight and core</a> and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+<p>A paddle with a softer, more controlled feel can help this shot. See <a href="../best-paddles-for-control.html">best control paddles</a>, <a href="paddle-weight-and-core.html">paddle weight and core</a> and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>, then check recent prices on the <a href="../price-tracker.html">paddle price tracker</a>.</p>
 {money_links()}
 {rs_faq_html}
 {sources([("USA Pickleball: Pickleball reset technique to keep the ball down", RS_USAP1, f"grip pressure 2 to 3 of 10, balance and a still body, read {rs_checked}"),
