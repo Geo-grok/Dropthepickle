@@ -90,33 +90,8 @@
   "v": 3
  },
  "buzz.html": {
-  "hash": "b4bf6f85c14453ad6f57803b337e6abdf22a6e4b58871be1cda988b7532c9dba",
-  "updated": "2026-11-12",
-  "v": 3
- },
- "buzz/2026-10-28-asia-gets-one-rating-asian-pickleball-association-dupr.html": {
-  "hash": "d348c00a7fbbdc50079d6592a2677b35d1d41fc985bd73acd8153205bc0071a2",
-  "updated": "2026-10-28",
-  "v": 3
- },
- "buzz/2026-10-28-columbus-ga-pickleball-complex-hits-9-2-million.html": {
-  "hash": "bd775ed9de15ce91676c24361a8ab7194760da03ce2afa2dd56d7863cd9d7512",
-  "updated": "2026-10-28",
-  "v": 3
- },
- "buzz/2026-10-28-courts-watch-fresno-opens-new-pickleball-courts-vinland.html": {
-  "hash": "ce5dffa8ccaec9060aada3da54d4e46bfa69112da98b0aba2402db192c00213e",
-  "updated": "2026-10-28",
-  "v": 3
- },
- "buzz/2026-10-28-data-pickleball-winning-city-council-meetings-1-152.html": {
-  "hash": "62d0ccaa031dcce8de4565c64e66206ac953ee070621c2c17d3f2d413b41f5ff",
-  "updated": "2026-10-28",
-  "v": 3
- },
- "buzz/2026-10-28-worlds-storylines-anna-leigh-waters-unbeaten-2026-singles.html": {
-  "hash": "fec4d57c6e7d128a82f5b52a2634a976ce9768bf9bbd5f73d077f12c0d2895fa",
-  "updated": "2026-10-28",
+  "hash": "bed2ad3879d6611629abb9faa4bdf083d9c9e6a9d4e25ad639e572579f27e58a",
+  "updated": "2026-11-13",
   "v": 3
  },
  "buzz/2026-10-29-boca-raton-hoa-sued-its-former-racquet-sports.html": {
@@ -410,8 +385,8 @@
   "v": 3
  },
  "buzz/2026-11-10-week-ahead-mlp-asias-first-season-opens-friday.html": {
-  "hash": "05216ce8c8ec1db83044182de6bd5bc07b8672babcdfc996e16f50714141b4ea",
-  "updated": "2026-11-11",
+  "hash": "a14bfdf69c9ea37c0c63b9425f536c67859826cb3ca0b6f631efc7540dc35e28",
+  "updated": "2026-11-13",
   "v": 3
  },
  "buzz/2026-11-11-15-tama-shimabukuro-youngest-mens-doubles-champion-ppa.html": {
@@ -437,6 +412,26 @@
  "buzz/2026-11-11-usa-pickleball-will-retire-six-owl-sport-quiet.html": {
   "hash": "9e65dbf409748bfd4b9377861a4aaf2c65cb0b6b33033ff5dcc510b7be802713",
   "updated": "2026-11-12",
+  "v": 3
+ },
+ "buzz/2026-11-12-app-arizona-open-starts-today-mesa-megan-fudge.html": {
+  "hash": "17b72e1f6b46379af50202068286a495ec8678515614d2b704fe2f7a2fb3c755",
+  "updated": "2026-11-13",
+  "v": 3
+ },
+ "buzz/2026-11-12-courts-watch-lee-county-ga-approves-5-2.html": {
+  "hash": "b4f5b724be0ba2e7584789323032ee8a4aa450da48de4ed36fc64a25abf624d6",
+  "updated": "2026-11-13",
+  "v": 3
+ },
+ "buzz/2026-11-12-jack-socks-slide-wins-ppas-play-tournament-worlds.html": {
+  "hash": "584e743145dc1cdc1ce1106dd53bb26e1b3253f2122b431fd251c4af4838e3f4",
+  "updated": "2026-11-13",
+  "v": 3
+ },
+ "buzz/2026-11-12-mlp-asia-opening-night-dots-tokyo-host-manila.html": {
+  "hash": "a6fa91b2ce5071f51c3afdf4224ef44727888c33ee450b5a8e78df08b54db154",
+  "updated": "2026-11-13",
   "v": 3
  },
  "community.html": {
@@ -1125,8 +1120,8 @@
   "v": 3
  },
  "guides.html": {
-  "hash": "64ed62ebc707900997f4609b705884c8a0cc757449314df070f96f21ee8f9b42",
-  "updated": "2026-11-12",
+  "hash": "4bf169b821718cd6b40713fc8854a56beb1820d5bdc6c2fa4fba47c4171ac6fd",
+  "updated": "2026-11-13",
   "v": 3
  },
  "guides/best-paddles-under-100.html": {
@@ -1214,6 +1209,11 @@
   "updated": "2026-11-12",
   "v": 3
  },
+ "guides/pickleball-return-of-serve.html": {
+  "hash": "17f72fa90b3284591c173dd7e1b44c9646c57914a61d6a36c2151a63e0e8678b",
+  "updated": "2026-11-13",
+  "v": 3
+ },
  "guides/pickleball-rules-cheat-sheet-2026.html": {
   "hash": "c71b44f0217a82dd02a205897eadc6f618bbe694df1e8259fd016942d0469c25",
   "updated": "2026-11-07",
@@ -1240,13 +1240,13 @@
   "v": 3
  },
  "index.html": {
-  "hash": "8b326b16b395ba186efee12e7b309618464ee07f5146b3d55f6b39f84a73b4c6",
-  "updated": "2026-11-12",
+  "hash": "8f72ac591313eae5ed033fa6f7ac07104ba9a6c9b589950939f8acb8a9464ff5",
+  "updated": "2026-11-13",
   "v": 3
  },
  "news.html": {
-  "hash": "9033ca8169ace567ac9029cb19c55ebf1fd6654b35372b78e2149e953d54aaf3",
-  "updated": "2026-11-12",
+  "hash": "4dc902bc0a361bc28224e91e8940c0c380ee12c5a6606a91663a0198b6c089c3",
+  "updated": "2026-11-13",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
@@ -1475,8 +1475,8 @@
   "v": 3
  },
  "podcasts.html": {
-  "hash": "2eecd64a36931f9cd1be8b2164ba4f41ef84dc05b15814d679c0705fff35442d",
-  "updated": "2026-11-11",
+  "hash": "b5ac789e8b50f20eba4aeb74351a8bcdbf56efadbf33ee8d992cc91159abe1b2",
+  "updated": "2026-11-13",
   "v": 3
  },
  "price-index.html": {
@@ -1505,8 +1505,8 @@
   "v": 3
  },
  "reviews.html": {
-  "hash": "7c69e28bf24cd2ed89ea8fa1796027345992a1672ae4b91c210eaa98aa47f622",
-  "updated": "2026-11-12",
+  "hash": "9d37f416d7ef313095a4a09c2fac2e3a2ff3c44b2f5620ae550f61ace288e052",
+  "updated": "2026-11-13",
   "v": 3
  },
  "science.html": {

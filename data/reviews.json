@@ -3,6 +3,22 @@
   {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
+   "title": "Vatic Pro V-Sol Tour Flash Flat Top Hybrid First Impressions",
+   "link": "https://www.youtube.com/watch?v=nsy34sTGSaY",
+   "video_id": "nsy34sTGSaY",
+   "date": "2026-11-12"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "B&B Loco 2 vs 11six24 Ultré Power 2 Paddle Review",
+   "link": "https://www.youtube.com/watch?v=CMj60TWz6cw",
+   "video_id": "CMj60TWz6cw",
+   "date": "2026-11-12"
+  },
+  {
+   "channel": "Pickleball Studio",
+   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
    "title": "New Vatic Pro Flat Top Hybrid, Boomstik ST Grit Updates & More New Paddles",
    "link": "https://www.youtube.com/watch?v=MvWr6xwdEe8",
    "video_id": "MvWr6xwdEe8",
@@ -143,14 +159,6 @@
    "link": "https://www.youtube.com/watch?v=6qxBJ2o9t0w",
    "video_id": "6qxBJ2o9t0w",
    "date": "2026-11-06"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Honolulu J6CR M105 CBES vs J6CR CBES Paddle Review",
-   "link": "https://www.youtube.com/watch?v=T-yCoKVVKqc",
-   "video_id": "T-yCoKVVKqc",
-   "date": "2026-11-05"
   },
   {
    "channel": "Pickleball Advocate",
@@ -471,17 +479,25 @@
    "link": "https://www.youtube.com/watch?v=fiU7D2ifU5A",
    "video_id": "fiU7D2ifU5A",
    "date": "2026-10-12"
-  },
-  {
-   "channel": "PickleBaller",
-   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
-   "title": "RPM Jade vs RPM Q2 vs JOOLA Power FX vs RPM V2 vs 11six24 Ultre Power 2 Review",
-   "link": "https://www.youtube.com/watch?v=gukaQpXxdmA",
-   "video_id": "gukaQpXxdmA",
-   "date": "2026-10-10"
   }
  ],
  "all_items": [
+  {
+   "channel": "Pickleball Studio",
+   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
+   "title": "Vatic Pro V-Sol Tour Flash Flat Top Hybrid First Impressions",
+   "link": "https://www.youtube.com/watch?v=nsy34sTGSaY",
+   "video_id": "nsy34sTGSaY",
+   "date": "2026-11-12"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "B&B Loco 2 vs 11six24 Ultré Power 2 Paddle Review",
+   "link": "https://www.youtube.com/watch?v=CMj60TWz6cw",
+   "video_id": "CMj60TWz6cw",
+   "date": "2026-11-12"
+  },
   {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
@@ -1171,14 +1187,6 @@
    "date": "2026-09-12"
   },
   {
-   "channel": "Pickleball Pursuit",
-   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
-   "title": "How Durable Grits Are Made, MPP Turbo Armor Grit, PB Apes Zen, Engage Axiom",
-   "link": "https://www.youtube.com/watch?v=ExDq4fUNwCk",
-   "video_id": "ExDq4fUNwCk",
-   "date": "2026-09-10"
-  },
-  {
    "channel": "Farmer Lanky Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
    "title": "Don't Buy the Six Zero Boulder Opal Until You Watch This",
@@ -1363,14 +1371,6 @@
    "date": "2026-05-14"
   },
   {
-   "channel": "Enhance Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
-   "title": "I Tested Fake Pickleball Products",
-   "link": "https://www.youtube.com/watch?v=M1bqUuCnVZ0",
-   "video_id": "M1bqUuCnVZ0",
-   "date": "2026-05-03"
-  },
-  {
    "channel": "Rackets & Runners - Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
    "title": "What does this new surface change? Honolulu Pickleball J2CR Crystal Blue Review | Rackets & Runners",
@@ -1524,29 +1524,29 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (5)",
+  "Pickleball Studio": "ok (6)",
   "John Kew Pickleball": "ok (7)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (0)",
   "The Kitchen Pickleball": "ok (1)",
-  "Enhance Pickleball": "ok (2)",
+  "Enhance Pickleball": "ok (1)",
   "PickleballPlaybook - Austin Hardy": "ok (6)",
   "Pickleball Kitchen": "ok (0)",
   "PickleballCentral": "ok (4)",
   "Pickleball Warehouse": "ok (6)",
   "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
-  "Pickleball Pursuit": "ok (8)",
+  "Pickleball Pursuit": "ok (7)",
   "All Drive No Drop Pickleball": "ok (8)",
   "Matthew K Pickleball": "ok (1)",
   "Tickle My Pickleball": "ok (3)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
-  "Pickleball Playbook Paddles": "ok (8)",
+  "Pickleball Playbook Paddles": "ok (9)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-12T11:53"
+ "updated": "2026-11-13T11:51"
 }
