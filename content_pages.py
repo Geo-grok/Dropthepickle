@@ -46,6 +46,7 @@ GUIDES = [
     ("guides/pickleball-stacking.html", "Pickleball stacking"),
     ("guides/pickleball-reset.html", "Pickleball reset shot"),
     ("guides/pickleball-return-of-serve.html", "Pickleball return of serve"),
+    ("guides/how-to-lob-in-pickleball.html", "How to lob in pickleball"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -1732,7 +1733,7 @@ def make(page, e, fmt, PP, cur, ph):
 <div class="tbl"><table><thead><tr><th>Return</th><th>When to use it</th><th>The risk</th></tr></thead><tbody>{rt_rows}</tbody></table></div>
 <p>A few notes from The Kitchen: a deep, flat return keeps the servers hitting their third shot from near or behind the baseline, which limits their options. On spin, The Kitchen says the traditional choice below the 4.5 level is a slice return, but many pros now recommend a flat or topspin return. Whatever you pick, The Kitchen's point is that the return does not need to be a winner. It needs to get you and your partner to the kitchen line.</p>
 <h2>Buying time with a higher return</h2>
-<p>If you keep getting caught halfway to the kitchen, hit the return higher and slower. USA Pickleball suggests a lob return or a return with more arc to buy time, and The Kitchen says a high, lofted return gives you time to set up at the kitchen even if the servers get a comfortable third shot. The trade-off: better players can punish high balls, and wind makes lobs risky.</p>
+<p>If you keep getting caught halfway to the kitchen, hit the return higher and slower. USA Pickleball suggests a lob return or a return with more arc to buy time, and The Kitchen says a high, lofted return gives you time to set up at the kitchen even if the servers get a comfortable third shot. The trade-off: better players can punish high balls, and wind makes lobs risky. Technique and aiming: <a href="how-to-lob-in-pickleball.html">how to lob in pickleball</a>.</p>
 <h2>After the return: get to the kitchen</h2>
 <p>USA Pickleball's "return and run" tip: the two-bounce rule keeps the servers at the baseline for the third shot, so train yourself to return and immediately move forward. With your team at the kitchen and the servers stuck at the baseline, you have a major advantage. If a hard ball comes at you before you get there, block it back soft with a <a href="pickleball-reset.html">reset</a> and keep moving up. Once both teams are at the line, the rally usually turns into <a href="how-to-dink.html">dinks</a>.</p>
 <h2>Common return of serve mistakes</h2>
@@ -1767,6 +1768,100 @@ def make(page, e, fmt, PP, cur, ph):
          "How to return serve in pickleball: the two-bounce rule, where to stand, deep and middle targets, high returns, getting to the kitchen, mistakes and drills.",
          fresh={"checked": RT_CHECKED, "options": RT_OPTIONS, "faq": rt_faq},
          schema=[rt_faq_ld])
+
+    # ----- How to lob in pickleball (Nov 13, 2026) -----
+    # Evergreen page for the approved P2 target "how to lob in pickleball". Every tip paraphrases the linked
+    # USA Pickleball, The Kitchen and Pickleball.com pages read on LB_CHECKED. No invented stats or quotes beyond
+    # what those pages say.
+    LB_CHECKED = "2026-11-13"
+    lb_checked = _dt.date.fromisoformat(LB_CHECKED).strftime("%B %-d, %Y")
+    LB_USAP1 = "https://usapickleball.org/pickleball-skills/level-three/pickleball-lob-shots/"
+    LB_USAP2 = "https://usapickleball.org/pickleball-skills/level-three/where-to-hit-overheads-and-where-to-lob/"
+    LB_USAP3 = "https://usapickleball.org/pickleball-skills/level-three/how-to-recover-a-lob-that-goes-over-your-head-and-keys-to-hitting-an-overhead-slam/"
+    LB_K1 = "https://thekitchenpickle.com/blogs/tips/how-to-lob-in-pickleball-technique-strategies-counters/"
+    LB_K2 = "https://thekitchenpickle.com/blogs/tips/pickleball-instruction-defending-against-lobs/"
+    LB_PB = "https://pickleball.com/docs/en/article/how-to-hit-a-pickleball-lob"
+    LB_TYPES = [
+        ("Offensive lob", "From the kitchen line, over opponents who are also at the line and expecting a dink or drive", "Too short gives them an overhead; too long is out. Only 15 feet from kitchen line to baseline"),
+        ("Defensive lob", "From deep or wide, when you or your partner need time to get back into position", "Opponents may smash it; USA Pickleball notes a drop can be the safer approach shot"),
+        ("Topspin lob", "When you can brush up the back of the ball", "Harder to control; a flat lob sits up after it lands and is easier to chase down"),
+        ("Lob return of serve", "When you keep getting caught short of the kitchen after returning", "High balls give strong players something to attack, and wind can push it long"),
+    ]
+    lb_faq = [
+        ("When should you lob in pickleball?",
+         "USA Pickleball says the offensive lob works best when both opponents are at the kitchen line expecting a dink or a drive, because surprise is what makes it work. The Kitchen adds the cues: an opponent leaning forward with shoulders toward the net, feet not set, or still recovering after you moved them around."),
+        ("When should you not lob?",
+         "The Kitchen says to skip it when opponents are off the kitchen line or in the transition zone, when an opponent is very tall or quick, or when a speed-up would win the point. Lobbing too often also kills the surprise, per USA Pickleball."),
+        ("Where should you aim a lob?",
+         "Deep, near the baseline, and toward the opponent's backhand. USA Pickleball says a backhand overhead is much weaker than a forehand one. Pro James Ignatowich, quoted by The Kitchen, says a cross-court lob has more court to land in, and a down-the-line lob should go over the front opponent's backhand side."),
+        ("How do you disguise a lob?",
+         "Make it look like your dink: same stance, same small backswing. USA Pickleball says it is the last-second wrist flick and follow-through that turn a dink into a lob, and Pickleball.com says to brush up through the ball and finish high."),
+        ("Should a lob have topspin?",
+         "Ideally, yes. The Kitchen says a flat lob sits up after it lands, while a topspin lob keeps moving forward after the bounce, so it is harder to run down."),
+        ("How do you defend a lob?",
+         "Anticipate it, then turn and run instead of backpedaling. USA Pickleball says to get under or slightly behind the ball and hit an overhead out of the air when you can. If it clears you, its question-mark footwork gets you behind the ball so you can hit a drop and move back up."),
+    ]
+    lb_faq_html, lb_faq_ld = faq(lb_faq)
+    lb_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in LB_TYPES)
+    lob = f'''<h1>How to lob in pickleball: when, where to aim, and how to defend it</h1>
+<p class="meta">Tips from USA Pickleball's <a href="{LB_USAP1}" target="_blank" rel="noopener">lob shots</a>, <a href="{LB_USAP2}" target="_blank" rel="noopener">where to lob</a> and <a href="{LB_USAP3}" target="_blank" rel="noopener">recovering a lob</a> lessons, The Kitchen's <a href="{LB_K1}" target="_blank" rel="noopener">lob technique</a> and <a href="{LB_K2}" target="_blank" rel="noopener">lob defense</a> guides, and <a href="{LB_PB}" target="_blank" rel="noopener">Pickleball.com</a>, all read {lb_checked}. No coaching stats are made up here.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>When:</b> both opponents are at the kitchen line, leaning in and expecting a dink (USA Pickleball, The Kitchen).</li>
+<li><b>How:</b> set up like a dink, then brush up through the ball and finish high.</li>
+<li><b>Where:</b> deep, near the baseline, over the opponent's backhand.</li>
+<li><b>Spin:</b> topspin if you can; a flat lob sits up.</li>
+<li><b>How often:</b> rarely. Surprise is the whole shot.</li>
+</ul>
+<h2>What a lob is</h2>
+<p>USA Pickleball defines the lob as a lofted shot that sends the ball high overhead and deep. It has two jobs. The offensive lob goes over opponents at the <a href="pickleball-kitchen-rules.html">kitchen line</a> to catch them off guard. The defensive lob buys time: if you or your partner get pulled wide or deep, a high, deep ball gives you time to get back into position.</p>
+<div class="tbl"><table><thead><tr><th>Type</th><th>When to use it</th><th>The risk</th></tr></thead><tbody>{lb_rows}</tbody></table></div>
+<h2>How to hit a lob</h2>
+<ol>
+<li><b>Look like a dink.</b> Same stance, same short backswing. The Kitchen warns that a big backswing gives the lob away. The best time is mid-<a href="how-to-dink.html">dink</a> exchange.</li>
+<li><b>Open the face and brush up.</b> Pickleball.com says to get slightly under the ball and brush upward through contact. USA Pickleball says the last-second wrist flick and follow-through are what turn a dink into a lob.</li>
+<li><b>Finish high.</b> A low follow-through makes a flat ball that is easy to smash (Pickleball.com). USA Pickleball's cue is a full follow-through with the paddle at least head high.</li>
+<li><b>Add topspin when you can.</b> The Kitchen says a topspin lob dips and keeps moving after it lands; a flat one sits up.</li>
+</ol>
+<h2>Where to aim</h2>
+<p>Deep. USA Pickleball points out there are only 15 feet from the kitchen line to the baseline, so the margin is small: short sets up an overhead, long loses the point. Pickleball.com says to aim for the back third of the court.</p>
+<p>Then the backhand. USA Pickleball's "where to lob" lesson says forehand overheads are the most powerful shots in pickleball, while most players can't wind up or reach as well on the backhand side, so a lob over the backhand can even get away with less height. On direction, pro James Ignatowich tells The Kitchen that cross-court gives the ball more room to land, so you can hit it harder, and that a down-the-line lob should go over the front opponent's backhand side.</p>
+<h2>When to lob, and when not to</h2>
+<p>The Kitchen's checklist for a good moment: your opponent is leaning forward and taking balls out of the air, their shoulders are down toward the net, their feet aren't set, or you have just moved them around the kitchen. Skip the lob when they are back in the transition zone, when an opponent is very tall or fast, or when a speed-up is the better play. USA Pickleball's warning: lob too often and you lose the surprise, and a lob your opponent sees coming is just a couple of side steps and an overhead.</p>
+<p>The defensive lob is a different call. When you are pinned deep and both opponents are at the kitchen, a deep lob gives you time to recover. The Kitchen suggests lobbing it back in that spot. When you do get a short or weak reply, use a <a href="third-shot-drop.html">drop</a> or a <a href="pickleball-reset.html">reset</a> to get back to the line.</p>
+<h2>The lob return of serve</h2>
+<p>If you keep getting caught halfway to the kitchen after returning, USA Pickleball suggests a lob or higher-arc return to buy time. The trade-off is that better players can attack a high ball, and wind makes it risky. More on that choice: <a href="pickleball-return-of-serve.html">pickleball return of serve</a>.</p>
+<h2>How to defend a lob</h2>
+<ul>
+<li><b>Anticipate it.</b> USA Pickleball says it is nearly impossible to lob someone who is ready for it. When your partner is in a dink exchange, you watch for the lob. The Kitchen says to stay low in your dink stance so you can get back.</li>
+<li><b>Read the setup.</b> An opponent leaning back or opening up to lift the ball is a cue (The Kitchen). Pickleball.com says an upward brush at contact signals a lob.</li>
+<li><b>Turn and run, don't backpedal.</b> All three sources say it: turn sideways and move, because backpedaling is slow and unsafe.</li>
+<li><b>Take it in the air if you can.</b> USA Pickleball says letting it bounce gives up the overhead and lets opponents move up. Let it bounce only if you lose it in the sun, can't get under it, or think it is going out.</li>
+<li><b>If it clears you, use the question mark.</b> USA Pickleball's footwork: pivot to face the baseline, run straight back watching the ball, then curl around behind it to face the net and hit a drop.</li>
+<li><b>Call it.</b> Say "mine" or "yours" early so you and your partner don't collide (Pickleball.com).</li>
+</ul>
+<p>An overhead is a volley, so the <a href="pickleball-kitchen-rules.html">kitchen rules</a> apply if you are close to the line when you hit it.</p>
+<h2>Lob drills</h2>
+<p>These are our partner drills built on the tips above, not an official program:</p>
+<ul>
+<li><b>Dink, dink, lob.</b> Dink cross-court with a partner. On a call, hit the lob with the same setup as your dink. Your partner tells you whether they saw it coming.</li>
+<li><b>Back-third target.</b> Put a towel in the back third of the court near the backhand corner and count how many lobs land past the kitchen-to-baseline midpoint without going long.</li>
+<li><b>Turn-and-run.</b> One player stands at the kitchen line, the other feeds lobs over them. The player at the line turns, runs, and either hits an overhead or lets it bounce and hits a drop.</li>
+</ul>
+<p>More partner and solo work: <a href="pickleball-drills.html">pickleball drills</a>. A paddle that suits your game: <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+{money_links()}
+{lb_faq_html}
+{sources([("USA Pickleball: Pickleball lob shots", LB_USAP1, f"offensive and defensive lob, disguise, 15 feet of margin, returning the lob, read {lb_checked}"),
+          ("USA Pickleball: Where to hit overheads and where to lob", LB_USAP2, f"lob to the backhand side, read {lb_checked}"),
+          ("USA Pickleball: How to recover a lob that goes over your head", LB_USAP3, f"question-mark footwork, no backpedaling, read {lb_checked}"),
+          ("The Kitchen: How to lob in pickleball", LB_K1, f"disguise, topspin, cross-court vs down the line, when and when not to lob, read {lb_checked}"),
+          ("The Kitchen: How to defend against the lob", LB_K2, f"reading the setup, turn and move, lobbing back from deep, read {lb_checked}"),
+          ("Pickleball.com: How to hit a pickleball lob", LB_PB, f"brush up, finish high, back-third depth, calling the ball, read {lb_checked}")])}
+{more("guides/how-to-lob-in-pickleball.html")}'''
+    page("guides/how-to-lob-in-pickleball.html", "How to Lob in Pickleball: Technique, Strategy and Defense", lob,
+         "How to lob in pickleball: when to lob, how to disguise it, where to aim, topspin, the lob return, how to defend a lob, plus drills and FAQs.",
+         fresh={"checked": LB_CHECKED, "types": LB_TYPES, "faq": lb_faq},
+         schema=[lb_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
