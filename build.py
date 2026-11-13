@@ -322,6 +322,9 @@ def _with_fallbacks(css):
         css = re.sub(r'(font(?:-family)?:[^;{}]*?(?<![\w"-])' + re.escape(fam) + r')(?=\s*,)', lambda m: m.group(1) + f',"{fb}"', css)
     return css
 CSS = _with_fallbacks(CSS)
+# Content hash for the stylesheet URL (style.css?v=...). The Worker caches versioned style.css for a year,
+# so a CSS change gets a new URL and browsers never keep stale styles.
+CSS_V = hashlib.sha256(CSS.encode("utf-8")).hexdigest()[:10]
 # Buzz: load X's embed script only when the first embed nears the viewport (or on first interaction), not at page load (TBT).
 XLAZY = ("<script>(function(){var d=0;function go(){if(d)return;d=1;var s=document.createElement('script');"
          "s.src='https://platform.twitter.com/widgets.js';s.async=true;s.charset='utf-8';document.body.appendChild(s)}"
@@ -612,7 +615,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
 <link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="{GFONTS}"><link rel="stylesheet" href="{GFONTS}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="{GFONTS}"></noscript>
-<link rel="stylesheet" href="{rel("style.css")}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+<link rel="stylesheet" href="{rel("style.css")}?v={CSS_V}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <script type="application/ld+json">{ld}</script>
 <script async src="https://aromatic-caribou-889.convex.site/api/a/am_WGwXq9YSwrdbKKse"></script></head>
 <body><header><div class="bar"><a class="logo" href="{rel("index.html")}" aria-label="{e(n)} home">{mark}</a>

@@ -67,6 +67,14 @@ export default {
 const PERMANENT_FROM = new Set([302, 303, 307, 308]);
 async function canonicalize(request, env, url) {
   const res = await env.ASSETS.fetch(request);
+  if (res.status === 200) {
+    const cc = staticCacheControl(url);
+    if (cc) {
+      const out = new Response(res.body, res);
+      out.headers.set("cache-control", cc);
+      return out;
+    }
+  }
   // A Buzz story URL that no longer exists (story dropped from data/buzz.json) goes to the Buzz hub.
   if (res.status === 404 && /^\/buzz\/[^/]+$/.test(url.pathname)) return permanent(new URL("/buzz", url).toString());
   if (!PERMANENT_FROM.has(res.status)) return res;
@@ -76,6 +84,18 @@ async function canonicalize(request, env, url) {
   if (target.origin !== url.origin) return res;
   if (!target.search && url.search) target.search = url.search;
   return permanent(target.toString());
+}
+
+// Browser caching for static files (the asset layer sends max-age=0, must-revalidate on everything, so each
+// page view re-checked the stylesheet, logo and icons). HTML, XML, txt, csv and JSON keep the default.
+// style.css?v=<content hash> (written by build.py) is immutable for a year: a CSS change gets a new URL.
+// Unversioned /style.css keeps the default. Site images and icons are cached for a day, then served stale
+// while revalidating for up to a week (file names are reused, so no immutable here). /media/ video is separate.
+const IMG_EXT = /\.(png|webp|jpe?g|gif|svg|ico|avif)$/i;
+function staticCacheControl(url) {
+  if (url.pathname === "/style.css") return url.searchParams.has("v") ? "public, max-age=31536000, immutable" : null;
+  if (IMG_EXT.test(url.pathname)) return "public, max-age=86400, stale-while-revalidate=604800";
+  return null;
 }
 
 function permanent(location) {
