@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "channel": "Matthew K Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
+   "title": "OWL's Quiet Paddles Are STILL Legal! | Plus, Are Grit Tiers DEAD?!?",
+   "link": "https://www.youtube.com/watch?v=tWQnqq73To8",
+   "video_id": "tWQnqq73To8",
+   "date": "2026-11-14"
+  },
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "Paddle Rankings from Speak Pickleball: Find the Best Pickleball Paddle For You With Ratings",
+   "link": "https://www.youtube.com/watch?v=9SaWWtpO9DU",
+   "video_id": "9SaWWtpO9DU",
+   "date": "2026-11-13"
+  },
+  {
+   "channel": "Tickle My Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC5Txk5Su1Qv1AUVaXJ5FbzA",
+   "title": "Selkirk Boomstik ST vs Honolulu M105 vs Luzz Cannon XPP: Paddle Battles Ep. 1",
+   "link": "https://www.youtube.com/watch?v=bWfS-VBP3EQ",
+   "video_id": "bWfS-VBP3EQ",
+   "date": "2026-11-13"
+  },
+  {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
    "title": "Vatic Pro V-Sol Tour Flash Flat Top Hybrid First Impressions",
@@ -193,14 +217,6 @@
    "date": "2026-11-04"
   },
   {
-   "channel": "Matt's Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "RPM Jade vs Spartus Spitfire, Luzz Inferno 2, Loco 2: Softest of the Four | Pickleball",
-   "link": "https://www.youtube.com/watch?v=0LqSsmy8tOk",
-   "video_id": "0LqSsmy8tOk",
-   "date": "2026-11-03"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Luzz Cannon XPP M1 Paddle Review | Game Analysis",
@@ -321,14 +337,6 @@
    "date": "2026-10-29"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "OWL Paddle Hits 2800 RPM, New Hybrid Pressure X, & Jade 16mm vs 14mm",
-   "link": "https://www.youtube.com/watch?v=QwfGfy9QahI",
-   "video_id": "QwfGfy9QahI",
-   "date": "2026-10-28"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
@@ -425,14 +433,6 @@
    "date": "2026-10-16"
   },
   {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "I Tested the Luzz Cannon XPP - Here Is What Happened",
-   "link": "https://www.youtube.com/watch?v=d3u9esoe7-w",
-   "video_id": "d3u9esoe7-w",
-   "date": "2026-10-15"
-  },
-  {
    "channel": "Farmer Lanky Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
    "title": "Luzz Cannon XPP M1 Pickleball Paddle Review: High Power and Tier 1 Grit But..",
@@ -482,6 +482,30 @@
   }
  ],
  "all_items": [
+  {
+   "channel": "Matthew K Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
+   "title": "OWL's Quiet Paddles Are STILL Legal! | Plus, Are Grit Tiers DEAD?!?",
+   "link": "https://www.youtube.com/watch?v=tWQnqq73To8",
+   "video_id": "tWQnqq73To8",
+   "date": "2026-11-14"
+  },
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "Paddle Rankings from Speak Pickleball: Find the Best Pickleball Paddle For You With Ratings",
+   "link": "https://www.youtube.com/watch?v=9SaWWtpO9DU",
+   "video_id": "9SaWWtpO9DU",
+   "date": "2026-11-13"
+  },
+  {
+   "channel": "Tickle My Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC5Txk5Su1Qv1AUVaXJ5FbzA",
+   "title": "Selkirk Boomstik ST vs Honolulu M105 vs Luzz Cannon XPP: Paddle Battles Ep. 1",
+   "link": "https://www.youtube.com/watch?v=bWfS-VBP3EQ",
+   "video_id": "bWfS-VBP3EQ",
+   "date": "2026-11-13"
+  },
   {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
@@ -691,14 +715,6 @@
    "date": "2026-11-04"
   },
   {
-   "channel": "Matt's Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "RPM Jade vs Spartus Spitfire, Luzz Inferno 2, Loco 2: Softest of the Four | Pickleball",
-   "link": "https://www.youtube.com/watch?v=0LqSsmy8tOk",
-   "video_id": "0LqSsmy8tOk",
-   "date": "2026-11-03"
-  },
-  {
    "channel": "Pickleball Playbook Paddles",
    "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
    "title": "Pickle Poppers Pop N Rush Game Play Paddle Review",
@@ -833,14 +849,6 @@
    "link": "https://www.youtube.com/watch?v=b_rKvx3ebq0",
    "video_id": "b_rKvx3ebq0",
    "date": "2026-10-29"
-  },
-  {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "OWL Paddle Hits 2800 RPM, New Hybrid Pressure X, & Jade 16mm vs 14mm",
-   "link": "https://www.youtube.com/watch?v=QwfGfy9QahI",
-   "video_id": "QwfGfy9QahI",
-   "date": "2026-10-28"
   },
   {
    "channel": "Pickleball Advocate",
@@ -1145,14 +1153,6 @@
    "link": "https://www.youtube.com/watch?v=zkScWko2G9A",
    "video_id": "zkScWko2G9A",
    "date": "2026-09-30"
-  },
-  {
-   "channel": "PickleballPlaybook - Austin Hardy",
-   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
-   "title": "Volair CMD HYB Paddle Review | On court drill & play test",
-   "link": "https://www.youtube.com/watch?v=cvp0RCVGrzs",
-   "video_id": "cvp0RCVGrzs",
-   "date": "2026-09-29"
   },
   {
    "channel": "PickleBaller",
@@ -1524,23 +1524,23 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (6)",
+  "Pickleball Studio": "ok (5)",
   "John Kew Pickleball": "ok (7)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (0)",
   "The Kitchen Pickleball": "ok (1)",
   "Enhance Pickleball": "ok (1)",
-  "PickleballPlaybook - Austin Hardy": "ok (6)",
+  "PickleballPlaybook - Austin Hardy": "ok (5)",
   "Pickleball Kitchen": "ok (0)",
   "PickleballCentral": "ok (4)",
   "Pickleball Warehouse": "ok (6)",
-  "Matt's Pickleball": "ok (3)",
+  "Matt's Pickleball": "ok (2)",
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (7)",
-  "All Drive No Drop Pickleball": "ok (8)",
-  "Matthew K Pickleball": "ok (1)",
-  "Tickle My Pickleball": "ok (3)",
+  "All Drive No Drop Pickleball": "ok (9)",
+  "Matthew K Pickleball": "ok (2)",
+  "Tickle My Pickleball": "ok (4)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
   "Pickleball Playbook Paddles": "ok (9)",
@@ -1548,5 +1548,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-13T11:51"
+ "updated": "2026-11-14T11:33"
 }

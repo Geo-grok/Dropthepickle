@@ -1,11 +1,32 @@
 {
  "items": [
   {
+   "source": "The Dink",
+   "title": "More Than a Game: Liam Duffin Wants to Bring Pickleball to Guatemala",
+   "link": "https://www.thedinkpickleball.com/more-than-a-game-liam-duffin-wants-to-bring-pickleball-to-guatemala/",
+   "date": "2026-11-13",
+   "summary": "The Dink story from 2026-11-13, filed under News and Stories, PPA Tour, Selkirk."
+  },
+  {
+   "source": "The Dink",
+   "title": "11SIX24's Secret Weapon Isn't Just Its Paddles, It's Customer Service",
+   "link": "https://www.thedinkpickleball.com/how-11six24-is-raising-the-bar-for-pickleball-customer-service/",
+   "date": "2026-11-13",
+   "summary": "The Dink story from 2026-11-13, filed under 11Six24, Paddle Technology, News and Stories."
+  },
+  {
    "source": "Pickleball Union",
    "title": "Are You Allowed to Say No to an Open-Play Partner?",
    "link": "https://pickleballunion.com/refusing-open-play-partner-in-pickleball/",
    "date": "2026-11-13",
    "summary": "Pickleball Union story from 2026-11-13, filed under Pickleball 101, Open Play Etiquette, Pickleball Behavior."
+  },
+  {
+   "source": "The Kitchen Pickle",
+   "title": "Juan Varon bet on himself a year ago. Now he’s heading to the PPA Tour",
+   "link": "https://thekitchenpickle.com/blogs/news/juan-varon-ppa-challenger-showdown-winner-2026/",
+   "date": "2026-11-13",
+   "summary": "The Kitchen Pickle story from 2026-11-13, filed under PPA, Pro pickleball."
   },
   {
    "source": "The Kitchen Pickle",
@@ -78,20 +99,6 @@
    "summary": "The Kitchen Pickle story from 2026-11-12, filed under Major League Pickleball, PPA, Pro pickleball."
   },
   {
-   "source": "The Dink",
-   "title": "Andre Agassi Is Bringing the Grateful Dead to Pickleball",
-   "link": "https://www.thedinkpickleball.com/andre-agassi-brings-grateful-dead-to-pickleball-in-new-deal/",
-   "date": "2026-11-11",
-   "summary": "The Dink story from 2026-11-11, filed under News and Stories, Andre Agassi."
-  },
-  {
-   "source": "The Dink",
-   "title": "5 New Pickleball Paddles Pushing the Limits of Performance",
-   "link": "https://www.thedinkpickleball.com/5-new-pickleball-paddles-for-all-court-performance/",
-   "date": "2026-11-11",
-   "summary": "The Dink story from 2026-11-11, filed under Paddle Reviews, Selkirk, Revolin."
-  },
-  {
    "source": "Pickleball Union",
    "title": "Why Your Feet Feel Like They’re Burning in Pickleball",
    "link": "https://pickleballunion.com/hot-feet-pickleball/",
@@ -160,13 +167,6 @@
    "link": "https://pickleballunion.com/most-forgiving-pickleball-paddles/",
    "date": "2026-11-09",
    "summary": "Pickleball Union story from 2026-11-09, filed under Gear."
-  },
-  {
-   "source": "The Kitchen Pickle",
-   "title": "How stacking in pickleball helps you own the middle",
-   "link": "https://thekitchenpickle.com/blogs/tips/stacking-in-pickleball-basics-how-to-stack/",
-   "date": "2026-11-09",
-   "summary": "The Kitchen Pickle story from 2026-11-09, filed under Tips, Pickleball instruction."
   },
   {
    "source": "Pickleball Effect (site)",
@@ -403,5 +403,5 @@
   "The Pickler – Inside the Den": "ok (8)",
   "Pickleball England": "ok (8)"
  },
- "updated": "2026-11-13T11:51"
+ "updated": "2026-11-14T11:33"
 }

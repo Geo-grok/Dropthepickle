@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "show": "This is Pickleball",
+   "title": "Pros & Money, Worlds Mindset & DUPR Drama",
+   "link": "https://267631d5-5c65-4806-932e-f15ff1927658.libsyn.com/pros-money-worlds-mindset-dupr-drama",
+   "date": "2026-11-13"
+  },
+  {
    "show": "Pickleballers (Jared Paul & Roscoe Bellamy)",
    "title": "Allyce Jones: The Truth About Being a Pro, Her Anna Leigh Theory, and Raising a Future Pro | S5 E6",
    "link": "https://podcasters.spotify.com/pod/show/pickleballers",
@@ -137,12 +143,6 @@
    "title": "Episode 113 - The Birthplace of Pickleball & Our Biggest Tennis Hot Take",
    "link": "https://podcasters.spotify.com/pod/show/dinkingaround/episodes/Episode-113---The-Birthplace-of-Pickleball--Our-Biggest-Tennis-Hot-Take-e3pc34q",
    "date": "2026-09-25"
-  },
-  {
-   "show": "This is Pickleball",
-   "title": "Sean Munoz (JuanSeanPB) on Sean O'Malley, Volair & Going Viral",
-   "link": "https://267631d5-5c65-4806-932e-f15ff1927658.libsyn.com/sean-munoz-juanseanpb-on-sean-omalley-volair-going-viral",
-   "date": "2026-09-23"
   },
   {
    "show": "Pickleball Tips - 4.0 To Pro",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-11-13T11:51"
+ "updated": "2026-11-14T11:33"
 }
