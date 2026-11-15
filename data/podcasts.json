@@ -1,6 +1,12 @@
 {
  "items": [
   {
+   "show": "Everything But The Kitchen Dink",
+   "title": "Episode 152: Live from the 2026 Nationals",
+   "link": "https://podcasters.spotify.com/pod/show/ebtkd/episodes/Episode-152-Live-from-the-2026-Nationals-e3scal7",
+   "date": "2026-11-14"
+  },
+  {
    "show": "This is Pickleball",
    "title": "Pros & Money, Worlds Mindset & DUPR Drama",
    "link": "https://267631d5-5c65-4806-932e-f15ff1927658.libsyn.com/pros-money-worlds-mindset-dupr-drama",
@@ -131,12 +137,6 @@
    "title": "50 Episodes Later: PPA Vegas, Tournament Struggles, and Lessons Learned",
    "link": "https://bleav.com/shows/cracked-paddles-podcast-pickleball-podcast/?post_type=gp_podcast_episode&p=73",
    "date": "2026-10-08"
-  },
-  {
-   "show": "Everything But The Kitchen Dink",
-   "title": "Episode 149: The Party's Over!",
-   "link": "https://podcasters.spotify.com/pod/show/ebtkd/episodes/Episode-149-The-Partys-Over-e3prr5f",
-   "date": "2026-10-04"
   },
   {
    "show": "Dinking Around with Eddie and Webby",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-11-14T11:33"
+ "updated": "2026-11-15T11:36"
 }

@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "I Can’t Recommend the $350 Selkirk Boomstik ST | Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=g6vKJxnRjLw",
+   "video_id": "g6vKJxnRjLw",
+   "date": "2026-11-14"
+  },
+  {
    "channel": "Matthew K Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
    "title": "OWL's Quiet Paddles Are STILL Legal! | Plus, Are Grit Tiers DEAD?!?",
@@ -471,17 +479,17 @@
    "link": "https://www.youtube.com/watch?v=pmJsBaoMWaE",
    "video_id": "pmJsBaoMWaE",
    "date": "2026-10-12"
-  },
-  {
-   "channel": "Farmer Lanky Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
-   "title": "Bread and Butter Loco 2 Elongated Pickleball Paddle Review: Same Amazing Paddle but Better?",
-   "link": "https://www.youtube.com/watch?v=fiU7D2ifU5A",
-   "video_id": "fiU7D2ifU5A",
-   "date": "2026-10-12"
   }
  ],
  "all_items": [
+  {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "I Can’t Recommend the $350 Selkirk Boomstik ST | Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=g6vKJxnRjLw",
+   "video_id": "g6vKJxnRjLw",
+   "date": "2026-11-14"
+  },
   {
    "channel": "Matthew K Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
@@ -1535,7 +1543,7 @@
   "Pickleball Kitchen": "ok (0)",
   "PickleballCentral": "ok (4)",
   "Pickleball Warehouse": "ok (6)",
-  "Matt's Pickleball": "ok (2)",
+  "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (7)",
   "All Drive No Drop Pickleball": "ok (9)",
@@ -1548,5 +1556,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-14T11:33"
+ "updated": "2026-11-15T11:36"
 }
