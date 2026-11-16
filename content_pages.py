@@ -41,6 +41,7 @@ GUIDES = [
     ("guides/pickleball-court-dimensions.html", "Pickleball court dimensions"),
     ("guides/pickleball-grip-size.html", "Pickleball grip size chart"),
     ("guides/pickleball-drills.html", "Pickleball drills"),
+    ("guides/pickleball-split-step.html", "Pickleball split step"),
     ("guides/pickleball-kitchen-rules.html", "Pickleball kitchen rules"),
     ("guides/third-shot-drop.html", "Third shot drop"),
     ("guides/pickleball-stacking.html", "Pickleball stacking"),
@@ -1248,7 +1249,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h3>7. Slinky</h3>
 <p>Your partner stays put at the kitchen line. You hit three dinks, step back, hit three more shots, and keep stepping back three shots at a time until you reach the baseline. Then work your way forward the same way. The point is to hit from every part of the transition zone.</p>
 <h3>8. Work-Up</h3>
-<p>One player at the kitchen line feeds to the other at the baseline. The baseline player tries to work up to the kitchen while the net player tries to keep them back, then they play out the point. Start over after each fault. PlayPickleball says it works your drives, drops and speed-ups.</p>
+<p>One player at the kitchen line feeds to the other at the baseline. The baseline player tries to work up to the kitchen while the net player tries to keep them back, then they play out the point. Start over after each fault. PlayPickleball says it works your drives, drops and speed-ups. Moving up is also the time to practice your <a href="pickleball-split-step.html">split step</a>.</p>
 <h3>9. Skinny Singles</h3>
 <p>Play singles using only half of each side of the court, scored like a regular game to 11. PlayPickleball calls it the drill that's most like a real game when there are just two of you.</p>
 <h2>10. Solo: wall drills from a pro</h2>
@@ -1638,7 +1639,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>After you pop one up</h2>
 <p>USA Pickleball notes that pros almost always take a big step back right after hitting a ball a little high. The extra distance buys reaction time and room to soften the next ball. Then get low, bend your knees, put your weight behind the paddle and reset into the kitchen instead of trying to counterattack a hard shot.</p>
 <h2>Moving forward after a reset</h2>
-<p>The Kitchen's advice for the transition zone: after each shot your opponents can't put away, take one or two small steps forward, and split step before they hit so you land balanced. Do not charge the net. If the drop comes back, hit another drop or reset and keep inching in.</p>
+<p>The Kitchen's advice for the transition zone: after each shot your opponents can't put away, take one or two small steps forward, and <a href="pickleball-split-step.html">split step</a> before they hit so you land balanced. Do not charge the net. If the drop comes back, hit another drop or reset and keep inching in.</p>
 <h2>Common reset mistakes</h2>
 <ul>
 <li><b>Death grip.</b> A tight grip makes the ball fly. Relax toward 2 or 3 out of 10.</li>
@@ -1667,6 +1668,107 @@ def make(page, e, fmt, PP, cur, ph):
          "How to hit a pickleball reset shot: loose grip, balanced stance, compact block, when to reset vs attack, what to do after a pop-up, common mistakes and drills.",
          fresh={"checked": RS_CHECKED, "choice": RS_CHOICE, "faq": rs_faq},
          schema=[rs_faq_ld])
+
+    # ----- Pickleball split step (Nov 16, 2026) -----
+    # Evergreen footwork page for the approved P3 target "split step pickleball". Every tip paraphrases the linked
+    # USA Pickleball, The Kitchen, Pickleheads and Sarah Ansboury pages read on SS_CHECKED. No invented stats or quotes.
+    SS_CHECKED = "2026-11-16"
+    ss_checked = _dt.date.fromisoformat(SS_CHECKED).strftime("%B %-d, %Y")
+    SS_USAP1 = "https://usapickleball.org/pickleball-skills/level-four/how-to-master-the-split-step-for-faster-reactions/"
+    SS_USAP2 = "https://usapickleball.org/pickleball-skills/level-two/pickleball-basics-positioning-tips/"
+    SS_K1 = "https://thekitchenpickle.com/blogs/tips/split-step-pickleball-instruction/"
+    SS_K2 = "https://thekitchenpickle.com/blogs/tips/pickleball-positioning-strategy-basics/"
+    SS_PH1 = "https://www.pickleheads.com/guides/beginner-pickleball-mistakes"
+    SS_PH2 = "https://news.joinpickleheads.com/p/is-it-time-to-wear-eye-guards-in-pickleball"
+    SS_PH3 = "https://news.joinpickleheads.com/p/return-serves-perfectly-like-this"
+    SS_SA = "https://sarahansbourypickleballacademy.com/pickleball-split-step-not-split-stop/"
+    SS_WHEN = [
+        ("Returning serve", "Just as the server is about to make contact with the serve", "Pickleheads"),
+        ("Moving up after your return or third shot", "Just before your opponents hit, wherever you are on the way in", "USA Pickleball, The Kitchen"),
+        ("In the transition zone", "Before every opponent shot. Don't be moving while they hit at your feet", "The Kitchen (James Ignatowich)"),
+        ("At the kitchen line", "As your opponent is about to hit, so you can move sideways for dinks and passes", "Pickleheads, USA Pickleball"),
+    ]
+    ss_faq = [
+        ("What is a split step in pickleball?",
+         "A small hop you take just as your opponent makes contact with the ball. You land on the balls of your feet with your feet about shoulder-width apart, knees slightly bent and paddle ready, so you can move in any direction (USA Pickleball, The Kitchen)."),
+        ("When should you split step?",
+         "Time it to your opponent's contact. USA Pickleball says to start the hop just before they hit, be in the air as their paddle meets the ball, and land as the ball leaves their paddle. The Kitchen's pro James Ignatowich says split-stepping before every shot is critical."),
+        ("How big should a split step be?",
+         "Small. The Kitchen says you don't need a big jump, and a small hop or a shuffle both work. Coach Sarah Ansboury sees many players jump too big and land hard, jarring their feet, ankles and knees. Land softly."),
+        ("Is a split step the same as stopping?",
+         "Not quite. It stops your forward momentum (USA Pickleball), but Sarah Ansboury calls it a split step, not a split stop: the goal is a balanced, ready position you can push off from in any direction, not freezing in place, which she says can leave you stuck and popping the ball up."),
+        ("Should you split step at the kitchen line?",
+         "Yes. USA Pickleball says the split step is useful in every phase of the game, from the baseline to the kitchen line. Pickleheads says the stable base helps you move sideways to cover dinks and passes."),
+        ("How do you practice the split step?",
+         "Pickleheads suggests running from the baseline toward the kitchen line and doing a split step about halfway, at mid-court. Then add a partner at the kitchen line and time your hop to their contact."),
+    ]
+    ss_faq_html, ss_faq_ld = faq(ss_faq)
+    ss_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in SS_WHEN)
+    ss = f'''<h1>Split step in pickleball: when to hop, how to land, and drills</h1>
+<p class="meta">Built from USA Pickleball's <a href="{SS_USAP1}" target="_blank" rel="noopener">split step lesson</a> and <a href="{SS_USAP2}" target="_blank" rel="noopener">positioning basics</a>, The Kitchen's <a href="{SS_K1}" target="_blank" rel="noopener">split step guide</a> and <a href="{SS_K2}" target="_blank" rel="noopener">positioning tips from James Ignatowich</a>, Pickleheads tips on <a href="{SS_PH1}" target="_blank" rel="noopener">footwork</a>, <a href="{SS_PH2}" target="_blank" rel="noopener">split stepping</a> and the <a href="{SS_PH3}" target="_blank" rel="noopener">return</a>, and coach <a href="{SS_SA}" target="_blank" rel="noopener">Sarah Ansboury</a>, all read {ss_checked}. No coaching stats are made up here.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>What:</b> a small hop that lands you balanced on the balls of your feet, ready to move any direction.</li>
+<li><b>When:</b> timed to your opponent's contact. Start just before they hit and land as the ball leaves their paddle (USA Pickleball).</li>
+<li><b>Landing:</b> feet about shoulder-width apart, knees slightly bent, paddle ready (The Kitchen).</li>
+<li><b>Size:</b> small and soft. It is not a jump.</li>
+<li><b>Where:</b> everywhere, from the return to the kitchen line, but it matters most while you move forward.</li>
+</ul>
+<h2>What a split step is</h2>
+<p>USA Pickleball describes the split step as a small hop you take just as your opponent makes contact with the ball, putting you on your toes with your weight evenly balanced. The Kitchen points out that tennis players do the same quick hop as the serve is struck. Coach Sarah Ansboury notes the move was originally taught in tennis as "split and step in the direction of the ball," which is a good way to think about it: the hop gets you balanced, and the step takes you to the ball.</p>
+<h2>Why it matters</h2>
+<ul>
+<li><b>It stops you running through the shot.</b> Pickleheads says one of the most common beginner footwork mistakes is still moving forward while swinging, which adds energy that sends the ball long. The Kitchen says hitting on the move is how shots sail long, pop up or lose control.</li>
+<li><b>It lets you change direction.</b> USA Pickleball says the split step absorbs your momentum so you can move the other way fast if the ball goes away from where you were running.</li>
+<li><b>It sets up resets.</b> USA Pickleball's point: you can't hit an effective <a href="pickleball-reset.html">reset</a> if you are still in motion. The split step gives you a wide, balanced base to hit from.</li>
+<li><b>It helps at the line, too.</b> Pickleheads says the stable base makes it easier to move sideways across the kitchen to cover passes and dinks.</li>
+</ul>
+<h2>How to split step</h2>
+<ol>
+<li><b>Watch your opponent's paddle.</b> The Kitchen says to time the hop to the moment they hit.</li>
+<li><b>Hop lightly.</b> Small hop or a quick shuffle, whichever keeps you light on your feet (The Kitchen).</li>
+<li><b>Land balanced.</b> Feet about shoulder-width apart, knees slightly bent, weight forward on the balls of your feet, paddle up and ready.</li>
+<li><b>Push off toward the ball.</b> Once you see where it is going, step to it. Sarah Ansboury's reminder: it is a split step, not a split stop.</li>
+</ol>
+<h2>Timing: the hard part</h2>
+<p>USA Pickleball says the movement is easy and the timing is what separates good movers from great ones. Begin the hop just before your opponent hits, be in the air as their paddle makes contact, and land the moment the ball leaves their paddle. That way you are on the ground and ready to push off as soon as you know where the ball is going. USA Pickleball adds that this matters even more against bangers who hit fast drives.</p>
+<div class="tbl"><table><thead><tr><th>Where you are</th><th>When to split step</th><th>Source</th></tr></thead><tbody>{ss_rows}</tbody></table></div>
+<h2>Using it on the way to the kitchen</h2>
+<p>USA Pickleball lists the split step as one of three keys for moving from the baseline to the kitchen line, along with following the ball and staying linked with your partner. The Kitchen's picture is the same: after your return or <a href="third-shot-drop.html">drop</a>, you move forward, and just as your opponent is about to hit, you hop and land ready instead of overrunning the ball.</p>
+<p>Pro James Ignatowich, writing for The Kitchen, says too many players fly through the transition zone as if it were a race to the kitchen. Get there quickly, but not at the cost of balance: you do not want to be moving while your opponent is hitting at your feet. He also says to react with your feet first, getting behind the ball instead of stabbing at it with your paddle.</p>
+<p>On the return of serve, a Pickleheads tip from coach Tanner Tomassi says to split step just as the server is about to hit, which helps move your weight forward. More on that shot: <a href="pickleball-return-of-serve.html">pickleball return of serve</a>.</p>
+<h2>Split step, not split stop</h2>
+<p>Sarah Ansboury says many players hear "stop before you hit" and freeze completely. She sees two problems: a big jump that lands hard and jars the feet, ankles and knees, and a full stop that leaves players stuck and popping the ball up. What you want is dynamic stability: a small hop, a soft landing, and a position you can step out of in any direction. USA Pickleball's version of the same idea: stop your forward momentum, then be ready to push off.</p>
+<h2>Common split step mistakes</h2>
+<ul>
+<li><b>Jumping too big.</b> Sarah Ansboury sees players land hard after a big jump. Keep it small and soft.</li>
+<li><b>Bad timing.</b> USA Pickleball's target: in the air as their paddle makes contact, landing as the ball leaves it, so you are grounded and ready to push off.</li>
+<li><b>Running through the ball.</b> Moving forward while you swing adds energy you didn't plan for.</li>
+<li><b>Freezing.</b> Stopping dead instead of staying ready to step to the ball.</li>
+<li><b>Paddle before feet.</b> Reaching with the paddle when your feet could have gotten you behind the ball.</li>
+</ul>
+<h2>Split step drills</h2>
+<ul>
+<li><b>Baseline to mid-court (Pickleheads).</b> Run from the baseline toward the kitchen line and split step about halfway, at mid-court. Repeat until the hop feels automatic.</li>
+<li><b>Contact call.</b> Our variation: a partner at the kitchen line feeds balls as you walk in from the baseline. Split step each time their paddle meets the ball, then move to the ball and hit it soft.</li>
+<li><b>Work-Up.</b> The Work-Up drill in our <a href="pickleball-drills.html">pickleball drills</a> guide has you working forward from the baseline while a net player tries to keep you back. Split step before every one of their shots.</li>
+</ul>
+<p>All that hopping and pushing off is easier in proper court shoes: see <a href="how-to-choose-pickleball-shoes.html">how to choose pickleball shoes</a>. A paddle that suits your game: <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>
+{money_links()}
+{ss_faq_html}
+{sources([("USA Pickleball: How to master the split step for faster reactions", SS_USAP1, f"definition, stopping momentum, changing direction, timing to the opponent's contact, read {ss_checked}"),
+          ("USA Pickleball: Pickleball basics, positioning and kitchen line strategy", SS_USAP2, f"split step as one of three keys for moving up, read {ss_checked}"),
+          ("The Kitchen: How to use the split step and stay balanced", SS_K1, f"small hop as the opponent hits, landing stance, tennis comparison, read {ss_checked}"),
+          ("The Kitchen: Pickleball positioning strategy basics (James Ignatowich)", SS_K2, f"split step before every shot, feet first, don't fly through the transition zone, read {ss_checked}"),
+          ("Pickleheads: 7 pickleball mistakes beginners make", SS_PH1, f"running through the shot, split step fix, baseline to mid-court drill, read {ss_checked}"),
+          ("Pickleheads newsletter: Whether it's singles or doubles, split step", SS_PH2, f"stable base, moving sideways at the kitchen, read {ss_checked}"),
+          ("Pickleheads newsletter: Return serves perfectly like this (Tanner Tomassi)", SS_PH3, f"split step as the server makes contact, read {ss_checked}"),
+          ("Sarah Ansboury Pickleball Academy: Pickleball split step, not a split stop", SS_SA, f"small hop, soft landing, dynamic stability vs a full stop, read {ss_checked}")])}
+{more("guides/pickleball-split-step.html")}'''
+    page("guides/pickleball-split-step.html", "Split Step in Pickleball: Timing, Footwork and Drills", ss,
+         "How to split step in pickleball: what it is, how to time the hop to your opponent's contact, how to land, using it on the way to the kitchen, mistakes, drills and FAQs.",
+         fresh={"checked": SS_CHECKED, "when": SS_WHEN, "faq": ss_faq},
+         schema=[ss_faq_ld])
 
     # ----- Pickleball return of serve (Nov 12, 2026) -----
     # Evergreen page for the approved P2 target "pickleball return of serve". Rules come from the 2026 USA Pickleball
