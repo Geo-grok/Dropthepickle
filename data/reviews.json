@@ -1,6 +1,38 @@
 {
  "items": [
   {
+   "channel": "John Kew Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
+   "title": "4 New Paddles | Vatic’s Revised Evergrit + 3 MPP Paddles | KewCast 130",
+   "link": "https://www.youtube.com/watch?v=G5ONK8DbBdQ",
+   "video_id": "G5ONK8DbBdQ",
+   "date": "2026-11-16"
+  },
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "The Best Pickleball Black Friday Deals, Enhance Echos, and Gherkin Draco OPs",
+   "link": "https://www.youtube.com/watch?v=BSR-yw7cb_Q",
+   "video_id": "BSR-yw7cb_Q",
+   "date": "2026-11-16"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Gherkin Draco OP Review & Drilling Test",
+   "link": "https://www.youtube.com/watch?v=treEKDQIffs",
+   "video_id": "treEKDQIffs",
+   "date": "2026-11-16"
+  },
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "Which is the Best Honolulu from the Crystal Blue Series? J6CR vs J6CR M105 vs J6M+",
+   "link": "https://www.youtube.com/watch?v=pB6PugPPhI8",
+   "video_id": "pB6PugPPhI8",
+   "date": "2026-11-15"
+  },
+  {
    "channel": "Matt's Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
    "title": "I Can’t Recommend the $350 Selkirk Boomstik ST | Pickleball Paddle Review",
@@ -105,14 +137,6 @@
    "date": "2026-11-11"
   },
   {
-   "channel": "The Kitchen Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
-   "title": "Selkirk Just Made the Boomstik Even Better | Boomstik ST Review",
-   "link": "https://www.youtube.com/watch?v=xjehd2q7_oI",
-   "video_id": "xjehd2q7_oI",
-   "date": "2026-11-10"
-  },
-  {
    "channel": "All Drive No Drop Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
    "title": "I Tested the New Selkirk Boomstick ST: Is It Actually Better? First Impressions",
@@ -182,14 +206,6 @@
    "title": "RPM Jade Review – Big Spin, High Power, and the Durability Question",
    "link": "https://www.youtube.com/watch?v=H2ztCs2PFHE",
    "video_id": "H2ztCs2PFHE",
-   "date": "2026-11-06"
-  },
-  {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Selkirk Boomstik ST Paddle Review | On Court Drill Test",
-   "link": "https://www.youtube.com/watch?v=6qxBJ2o9t0w",
-   "video_id": "6qxBJ2o9t0w",
    "date": "2026-11-06"
   },
   {
@@ -337,14 +353,6 @@
    "date": "2026-10-29"
   },
   {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "RPM Diesel First Impressions: Can This Shape Change the Game of Pickleball?",
-   "link": "https://www.youtube.com/watch?v=RL7t7zlFwPU",
-   "video_id": "RL7t7zlFwPU",
-   "date": "2026-10-29"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
@@ -409,14 +417,6 @@
    "date": "2026-10-20"
   },
   {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "CPX Hyper +, RPM Jade, B&B Loco 2, Luzz Cannon XPP",
-   "link": "https://www.youtube.com/watch?v=HMR0WXzLdsI",
-   "video_id": "HMR0WXzLdsI",
-   "date": "2026-10-19"
-  },
-  {
    "channel": "Rackets & Runners - Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
    "title": "RPM Jade First Impressions Review | Rackets & Runners",
@@ -473,15 +473,47 @@
    "date": "2026-10-13"
   },
   {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "RPM Jade, Loco 2 & Cannon XPP: Promising Early Spin Results | KewCast 126",
-   "link": "https://www.youtube.com/watch?v=pmJsBaoMWaE",
-   "video_id": "pmJsBaoMWaE",
+   "channel": "Farmer Lanky Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
+   "title": "Bread and Butter Loco 2 Elongated Pickleball Paddle Review: Same Amazing Paddle but Better?",
+   "link": "https://www.youtube.com/watch?v=fiU7D2ifU5A",
+   "video_id": "fiU7D2ifU5A",
    "date": "2026-10-12"
   }
  ],
  "all_items": [
+  {
+   "channel": "John Kew Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
+   "title": "4 New Paddles | Vatic’s Revised Evergrit + 3 MPP Paddles | KewCast 130",
+   "link": "https://www.youtube.com/watch?v=G5ONK8DbBdQ",
+   "video_id": "G5ONK8DbBdQ",
+   "date": "2026-11-16"
+  },
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "The Best Pickleball Black Friday Deals, Enhance Echos, and Gherkin Draco OPs",
+   "link": "https://www.youtube.com/watch?v=BSR-yw7cb_Q",
+   "video_id": "BSR-yw7cb_Q",
+   "date": "2026-11-16"
+  },
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "Gherkin Draco OP Review & Drilling Test",
+   "link": "https://www.youtube.com/watch?v=treEKDQIffs",
+   "video_id": "treEKDQIffs",
+   "date": "2026-11-16"
+  },
+  {
+   "channel": "All Drive No Drop Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
+   "title": "Which is the Best Honolulu from the Crystal Blue Series? J6CR vs J6CR M105 vs J6M+",
+   "link": "https://www.youtube.com/watch?v=pB6PugPPhI8",
+   "video_id": "pB6PugPPhI8",
+   "date": "2026-11-15"
+  },
   {
    "channel": "Matt's Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
@@ -585,14 +617,6 @@
    "link": "https://www.youtube.com/watch?v=i93BGLoaAmw",
    "video_id": "i93BGLoaAmw",
    "date": "2026-11-11"
-  },
-  {
-   "channel": "The Kitchen Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
-   "title": "Selkirk Just Made the Boomstik Even Better | Boomstik ST Review",
-   "link": "https://www.youtube.com/watch?v=xjehd2q7_oI",
-   "video_id": "xjehd2q7_oI",
-   "date": "2026-11-10"
   },
   {
    "channel": "All Drive No Drop Pickleball",
@@ -955,14 +979,6 @@
    "date": "2026-10-19"
   },
   {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Pro Pickleball Journey to 10K: MATCH # 85 RPM Friction Pro - Quarter Finals (High Quality 4k)",
-   "link": "https://www.youtube.com/watch?v=UR2ARxpTtxQ",
-   "video_id": "UR2ARxpTtxQ",
-   "date": "2026-10-19"
-  },
-  {
    "channel": "Rackets & Runners - Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
    "title": "RPM Jade First Impressions Review | Rackets & Runners",
@@ -1048,14 +1064,6 @@
    "title": "RPM Jade, Loco 2 & Cannon XPP: Promising Early Spin Results | KewCast 126",
    "link": "https://www.youtube.com/watch?v=pmJsBaoMWaE",
    "video_id": "pmJsBaoMWaE",
-   "date": "2026-10-12"
-  },
-  {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "Insane October Paddle Season; RPM Jade, Honolulu MPP J6CR, Joola Power FX, and Luzz Cannon XPP",
-   "link": "https://www.youtube.com/watch?v=RKE7njjZQdg",
-   "video_id": "RKE7njjZQdg",
    "date": "2026-10-12"
   },
   {
@@ -1533,11 +1541,11 @@
  ],
  "sources": {
   "Pickleball Studio": "ok (5)",
-  "John Kew Pickleball": "ok (7)",
+  "John Kew Pickleball": "ok (8)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (0)",
-  "The Kitchen Pickleball": "ok (1)",
+  "The Kitchen Pickleball": "ok (0)",
   "Enhance Pickleball": "ok (1)",
   "PickleballPlaybook - Austin Hardy": "ok (5)",
   "Pickleball Kitchen": "ok (0)",
@@ -1546,15 +1554,15 @@
   "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (7)",
-  "All Drive No Drop Pickleball": "ok (9)",
+  "All Drive No Drop Pickleball": "ok (10)",
   "Matthew K Pickleball": "ok (2)",
   "Tickle My Pickleball": "ok (4)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
-  "Pickleball Playbook Paddles": "ok (9)",
+  "Pickleball Playbook Paddles": "ok (10)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
-  "Pickleball Advocate": "ok (11)"
+  "Pickleball Advocate": "ok (10)"
  },
- "updated": "2026-11-15T11:36"
+ "updated": "2026-11-16T20:53"
 }
