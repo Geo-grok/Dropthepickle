@@ -1,11 +1,124 @@
 {
- "updated": "2026-11-15T06:00-06:00",
- "date": "2026-11-15",
- "source_file": "dtp-newsroom/buzz-2026-11-15.json",
+ "updated": "2026-11-16T06:00-06:00",
+ "date": "2026-11-16",
+ "source_file": "dtp-newsroom/buzz-2026-11-16.json",
  "note": "Hand-curated; not touched by update.py.",
- "seo_title": "Pickleball Buzz: Worlds 2026 & Nations Cup",
- "seo_desc": "PPA Worlds 2026 champions and replays, MLP Nations Cup results, APP Arizona Open results and the Atlantic Cup's return, MLP Asia, PPA Daytona draws, the Hall of Fame Class of 2026, and The Picklr bankruptcy, all sourced.",
+ "seo_title": "Pickleball Buzz: Worlds 2026, APP Mesa & PPA Daytona",
+ "seo_desc": "PPA Worlds 2026 champions and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP Asia, the Atlantic Cup's return, the Hall of Fame Class of 2026, and The Picklr bankruptcy, all sourced.",
  "items": [
+  {
+   "title": "APP Arizona Open: 41st seed Alvi Regalado wins men's singles in his first APP event, Kat Stewart takes women's singles 11-4, 11-0",
+   "summary": "Alvi Regalado, the lowest seed (41st) in the men's pro singles draw and playing his first career APP Tour event, beat sixth seed Andre Millet 11-7, 4-11, 11-5 for the title at the APP Arizona Open in Mesa on Sunday, per the APP. Millet leaves with doubles gold and singles silver. Kat Stewart beat Domenika Turkovic 11-4, 11-0 for her fifth women's pro singles gold of the season, per the APP; Turkovic had won the APP's previous two women's singles titles, per World Pickleball Magazine. Turkovic still won gold: she and Jay Devilliers, the No. 12 seeds, beat No. 6 seeds Vivian Glozman and Ronan Camron 11-2, 11-9 in the mixed final. Bronzes went to Max Green (over Ryler DeHeart 1-11, 11-9, 11-9), Roos Van Reek (over Amanda Hendry 11-0, 12-10) and, in mixed, Megan Fudge and Aidan Schenk, per the APP. Fudge's bronze isn't a gold, so her APP record of 33 women's pro golds stays shared with Simone Jardim.",
+   "status": "confirmed",
+   "date": "2026-11-16",
+   "sources": [
+    {
+     "label": "APP: Regalado's Cinderella run highlights 2026 APP Arizona Open",
+     "url": "https://www.theapp.global/news/arizona-2026-recap"
+    },
+    {
+     "label": "APP Tour on X: Regalado beats Millet for men's pro singles, 11-7, 4-11, 11-5",
+     "url": "https://x.com/OfficialAPPTour/status/2122101103432991107"
+    },
+    {
+     "label": "APP Tour on X: Stewart beats Turkovic for women's pro singles, 11-4, 11-0",
+     "url": "https://x.com/OfficialAPPTour/status/2122102433731977399"
+    },
+    {
+     "label": "APP Tour on X: Devilliers & Turkovic win mixed pro doubles, 11-2, 11-9",
+     "url": "https://x.com/OfficialAPPTour/status/2122073310678704419"
+    },
+    {
+     "label": "APP Tour on X: Max Green wins men's singles bronze",
+     "url": "https://x.com/OfficialAPPTour/status/2122062619934613629"
+    },
+    {
+     "label": "APP Tour on X: Van Reek wins women's singles bronze",
+     "url": "https://x.com/OfficialAPPTour/status/2122034799875428392"
+    },
+    {
+     "label": "World Pickleball Magazine: Mesa day three and Sunday preview",
+     "url": "https://worldpickleballmagazine.com/app-arizona-open-2026-mesa-day-three/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/OfficialAPPTour/status/2122101103432991107",
+    "https://x.com/OfficialAPPTour/status/2122073310678704419"
+   ],
+   "social_angle": "Upset post: 'Seeded 41st of 41. First APP event. Champion. Alvi Regalado beat Andre Millet 11-7, 4-11, 11-5 to win the APP Arizona Open.' Quote the APP result post. On X, no hashtags.",
+   "tags": [
+    "APP",
+    "Arizona Open",
+    "Alvi Regalado",
+    "Kat Stewart",
+    "Domenika Turkovic",
+    "Results"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy: debtors move to reject five more closed-club leases in Utah and Illinois, with a hearing set for Dec. 8",
+   "summary": "The Picklr's Nov. 13 omnibus motion (Dkt. 122) asks the bankruptcy court to reject five leases for clubs the debtors call the 'Closed Clubs': Logan and Bluffdale, Utah, and Kildeer, Villa Park and Mundelein, Ill. The filing says those clubs 'have not supported the Debtors' operations' and that the debtors have surrendered, or will surrender, the premises. A Nov. 14 notice (Dkt. 124) sets a Dec. 8 hearing at 1:30 p.m. CT, by Webex, on that motion, the separate Naperville, Ill. lease rejection (Dkt. 109) and procedures for paying professionals (Dkt. 121), per the docket. Still on the court calendar: the 341 meeting of creditors on Nov. 18, a hearing on Nov. 23 and a status conference on Nov. 24, per Omni.",
+   "status": "confirmed",
+   "date": "2026-11-16",
+   "sources": [
+    {
+     "label": "Omni: Debtors' first omnibus lease rejection motion (Dkt. 122)",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/5190fd32-d996-4b66-ba1f-003ae31baa07_122.pdf"
+    },
+    {
+     "label": "BKalerts: Picklr, Inc. docket (Dkt. 122-125, Dec. 8 hearing notice)",
+     "url": "https://www.bkalerts.com/recent-bankruptcy-cases/texas-northern-bankruptcy-court/3:26-bk-34687/bankruptcy-case-picklr-inc"
+    },
+    {
+     "label": "Omni: Picklr, Inc. court calendar",
+     "url": "https://cases.omniagentsolutions.com/calendar?clientId=3812"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Business post: 'The Picklr wants out of five more club leases: Logan and Bluffdale, Utah; Kildeer, Villa Park and Mundelein, Ill. A judge takes it up Dec. 8.' Link the court filing. Stick to what's on the docket.",
+   "tags": [
+    "Business",
+    "The Picklr",
+    "Bankruptcy",
+    "Clubs"
+   ]
+  },
+  {
+   "title": "PPA Daytona Beach Open starts today at Pictona: Bright and Waters go for 19 straight, and Kunimoto gets a shot at a first singles title",
+   "summary": "The Proton Daytona Beach Open, a 1,000-point PPA Open with a listed $1,063,327 in payouts, runs Nov. 16-22 at Pictona at Holly Hill, Fla., per Pickleballer. Pro qualifying, the round of 64 and the round of 32 stream on the PPA Tour's YouTube channel Monday through Wednesday; PickleballTV picks up the round of 16 on Thursday, Nov. 19, per pickleball.com. Anna Bright and Anna Leigh Waters are chasing a 19th straight tournament title and an unbeaten 2026. With Waters, Kate Fahey and Kaitlyn Christian out of women's singles, No. 2 seed Kiora Kunimoto is looking for her first PPA singles title. John Lucian Goins goes for a third straight men's singles title, and Christian Alshon and Andrei Daescu are the top men's doubles seeds after losing a two-game lead in the Worlds final, per pickleball.com.",
+   "status": "confirmed",
+   "date": "2026-11-16",
+   "sources": [
+    {
+     "label": "pickleball.com: Draws released for the Proton Daytona Beach Open",
+     "url": "https://pickleball.com/news/draws-released-for-the-proton-daytona-beach-open"
+    },
+    {
+     "label": "Pickleballer: Daytona preview, three questions after Worlds",
+     "url": "https://pickleballer.world/stories/daytona-breakdown-three-questions-after-worlds/"
+    },
+    {
+     "label": "Pickleballer: Daytona draws, Bright-Alshon reunite, Goins seeks third straight",
+     "url": "https://pickleballer.world/stories/daytona-draws-bright-alshon-reunite-goins-three-straight/"
+    },
+    {
+     "label": "PPA Tour on X: All five pro draws are out for Daytona",
+     "url": "https://x.com/PPAtour/status/2121677066223427671"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2121677066223427671"
+   ],
+   "social_angle": "Week-ahead post: 'Daytona week. Bright/Waters go for 19 straight, Goins for three straight, and women's singles has no Waters, Fahey or Christian.' Quote the PPA draws post. On X, no hashtags.",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Anna Bright",
+    "Anna Leigh Waters",
+    "Kiora Kunimoto",
+    "John Lucian Goins"
+   ]
+  },
   {
    "title": "APP Arizona Open: Kawka and Millet end Munro/Livornese's seven-title run, and Glozman and Van Reek win women's doubles",
    "summary": "Patrick Kawka and Andre Millet beat Jack Munro and Richard Livornese Jr. 3-11, 11-3, 11-5 to win men's pro doubles at the APP Arizona Open in Mesa on Saturday, per the APP Tour. Munro and Livornese came in with seven straight APP men's doubles titles this season, per World Pickleball Magazine. Tanner Tomassi and Jay Devilliers took bronze 11-2, 11-8. In women's pro doubles, Vivian Glozman and Roos Van Reek beat Kat Stewart and Brooke Revuelta 11-6, 11-8 for the title, and Arielle Butler and Allison Harris took bronze 1-11, 11-2, 11-9, per the APP. Megan Fudge, who came to Mesa level with Simone Jardim on a record 33 women's pro golds (per WPM), won't get a 34th gold in Mesa: she and Aidan Schenk lost the mixed semifinal, and she and Jada Bui missed the women's doubles podium, so the record stays shared. Millet is also in Sunday's men's singles final against 41st seed Alvi Regalado; Stewart plays Domenika Turkovic for the women's singles title. Championship Sunday streams on ESPN+, with bronze matches from 11 a.m. ET, per the APP.",
@@ -1954,106 +2067,6 @@
     "New paddle",
     "JW Johnson",
     "Jorja Johnson"
-   ]
-  },
-  {
-   "title": "Team USA goes 5-0 to win the first MLP Nations Cup, sweeping Latin America 3-0 in the final",
-   "summary": "Team USA is the inaugural MLP Nations Cup champion. In Sunday's final at Brookhaven Country Club in Farmers Branch, Texas, USA beat Latin America 3-0 (11-9 women's doubles, 11-1 men's doubles, 11-6 mixed), per the official MLP results on United Pickleball. USA reached the final by beating Europe East 3-1 (11-3, 11-6, 12-14, 11-7), and Latin America beat Asia Domestic 3-1 (11-3, 9-11, 11-3, 11-3). USA finished the event unbeaten. PPA Worlds pro qualifying begins Monday, Nov 2 at the same venue.",
-   "status": "confirmed",
-   "date": "2026-11-01",
-   "sources": [
-    {
-     "label": "United Pickleball: Nations Cup scores and standings (official MLP results)",
-     "url": "https://worlds.unitedpickleball.com/nations-cup"
-    },
-    {
-     "label": "@MajorLeaguePB: USA is the 2026 Nations Cup champions",
-     "url": "https://x.com/MajorLeaguePB/status/2117008397656863145"
-    },
-    {
-     "label": "@MajorLeaguePB: USA beats Europe East 3-1 to reach the final",
-     "url": "https://x.com/MajorLeaguePB/status/2116984380857999747"
-    },
-    {
-     "label": "pickleball.com: Team USA sweeps Team Latin America for MLP Nations Cup crown",
-     "url": "https://pickleball.com/news/team-usa-sweeps-team-latin-america-for-mlp-nations-cup-crown"
-    },
-    {
-     "label": "The Kitchen: Team USA wins inaugural MLP Nations Cup",
-     "url": "https://thekitchenpickle.com/blogs/news/major-league-pickleball-nations-cup-2026-recap/"
-    },
-    {
-     "label": "PickleballTV on YouTube: full championship match",
-     "url": "https://www.youtube.com/watch?v=4qNiVXVkToA"
-    }
-   ],
-   "embeds": [
-    "https://x.com/MajorLeaguePB/status/2117008397656863145"
-   ],
-   "social_angle": "Champions post: 'USA sweeps Latin America 3-0 to win the first MLP Nations Cup.' Embed MLP's champions post. Tag MLP.",
-   "tags": [
-    "MLP",
-    "Nations Cup",
-    "Team USA",
-    "Final",
-    "Dallas"
-   ],
-   "links": [
-    {
-     "href": "/events/mlp-nations-cup-2026",
-     "label": "Nations Cup final results"
-    },
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Next up: PPA Worlds 2026"
-    }
-   ],
-   "video_id": "4qNiVXVkToA"
-  },
-  {
-   "title": "Eye safety: Singapore doctors report pickleball eye injuries as U.S. data shows older players at higher risk",
-   "summary": "The Straits Times reports that Singapore hospitals have treated pickleball eye injuries from direct ball hits, including retinal breaks that needed laser treatment and a dislocated lens implant that needed surgery, though doctors there say cases can't be counted reliably. The article cites a JAMA Ophthalmology study of U.S. emergency department data: estimated pickleball eye injuries rose from fewer than 200 in 2021 to 1,262 in 2024, 43% came from direct ball impact, and players over 50 had a 39% higher risk than younger players. Doctors advise protective eyewear and urgent eye checks after any hit; one sports scientist notes injuries are rising mainly because more people are playing.",
-   "status": "confirmed",
-   "date": "2026-11-01",
-   "sources": [
-    {
-     "label": "The Straits Times: A ball in your face at 60kmh, older pickleball players more prone to eye injuries",
-     "url": "https://www.straitstimes.com/singapore/health/in-your-face-at-60kmh-older-pickleball-players-more-prone-to-eye-injuries"
-    },
-    {
-     "label": "JAMA Ophthalmology: Pickleball-related ocular injuries in emergency departments",
-     "url": "https://jamanetwork.com/journals/jamaophthalmology/fullarticle/2839640"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Safety tip post: 'Players over 50 have a 39% higher eye-injury risk, per a JAMA Ophthalmology study. Do you wear eye protection?' Keep it helpful, not scary.",
-   "tags": [
-    "Safety",
-    "Eye protection",
-    "Seniors",
-    "Health"
-   ]
-  },
-  {
-   "title": "Should fighting have a place in pro pickleball? Zane Navratil and NicoTheLefty debate it on PicklePod",
-   "summary": "The taunting debate continues: on the latest PicklePod episode, The Dink says Zane Navratil and NicoTheLefty argue over whether fighting should have a place in professional pickleball. It follows last week's exchange of columns on taunting and player behavior.",
-   "status": "confirmed",
-   "date": "2026-11-01",
-   "sources": [
-    {
-     "label": "@Pickleball (The Dink): PicklePod debate clip",
-     "url": "https://x.com/Pickleball/status/2116628779820806270"
-    }
-   ],
-   "embeds": [
-    "https://x.com/Pickleball/status/2116628779820806270"
-   ],
-   "social_angle": "Poll: 'Heated moments in pro pickleball: good for the sport or bad look?' Quote the clip without picking a side.",
-   "tags": [
-    "Debate",
-    "Taunting",
-    "PicklePod",
-    "Pros"
    ]
   }
  ]
