@@ -4,7 +4,8 @@ event and newsroom pages). Links to the three money-saving pages: brand discount
 Counts come straight from data/discount-codes.json (distinct brands) and data/price-tracker.json (rows), so the
 labels never claim more than the data holds. Absolute extensionless hrefs work at any directory depth.
 Buzz story pages (buzz/*), best-X buying guides, head-to-head comparison pages and the pros, podcasts, reviews and science pages get it too.
-Paddle pages get their own brand-specific row (paddle_pages.py), and shopping pages already link these, so both are skipped.
+Paddle pages get their own brand-specific row (paddle_pages.py), and the codes, deals and tracker pages already link these, so both are skipped.
+The paddle database, pro paddles, compare, guides hub, creator and 404 pages get it too.
 """
 import json, pathlib, re
 
@@ -32,12 +33,15 @@ def wants(fn):
     # Buying-intent pages (best-X paddle guides, head-to-head comparisons) and pro/podcast/review/science pages
     # social and search visitors land on; they only linked codes and the tracker from the menu and footer.
     if "/" not in fn and fn.startswith(("best-", "vs-")) and fn.endswith(".html"): return True
-    return fn in ("pros.html", "podcasts.html", "reviews.html", "science.html")
+    if fn in ("pros.html", "podcasts.html", "reviews.html", "science.html"): return True
+    # Nov 16, 2026: paddle-shopping hubs (paddle database, pro paddles, compare), the guides hub, creator pages and the
+    # 404 page had no codes/deals/tracker link above the footer, so phone visitors had to dig through the menu.
+    return fn in ("paddles.html", "pro-paddles.html", "compare.html", "guides.html", "creators.html", "404.html") or fn.startswith("creators/")
 
 # Tournament-traffic pages (Worlds week) also get gift guide, Black Friday hub and Top 5 buttons.
 # Scoped by filename so event pages (events/*) keep their exact built HTML.
 PLUS = {"buzz.html", "tournaments.html", "guides/how-to-watch-pro-pickleball.html"}
-EARLY = {"tournaments.html"}  # intro paragraphs push the row below the fold at 320px, so put it right after the header
+EARLY = {"tournaments.html", "guides.html"}  # intro paragraphs (tournaments) or an all-card list (guides hub, else the row lands at the very end) push it below the fold at 320px, so put it right after the header
 def html(plus=False):
     brands = len({c.get("brand") for c in _load("discount-codes.json").get("codes", []) if c.get("brand")})
     tracked = len(_load("price-tracker.json").get("rows", []))
