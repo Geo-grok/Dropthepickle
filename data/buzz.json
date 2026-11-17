@@ -1,11 +1,133 @@
 {
- "updated": "2026-11-16T06:00-06:00",
- "date": "2026-11-16",
- "source_file": "dtp-newsroom/buzz-2026-11-16.json",
+ "updated": "2026-11-17T06:00-06:00",
+ "date": "2026-11-17",
+ "source_file": "dtp-newsroom/buzz-2026-11-17.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026, APP Mesa & PPA Daytona",
- "seo_desc": "PPA Worlds 2026 champions and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP Asia, the Atlantic Cup's return, the Hall of Fame Class of 2026, and The Picklr bankruptcy, all sourced.",
+ "seo_desc": "PPA Worlds 2026 champions and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP's new commissioner, MLP Asia, Brisbane 2032 and the Olympics, and The Picklr bankruptcy, all sourced.",
  "items": [
+  {
+   "title": "MLP names Tanner Groff its new commissioner, moving over from running events for the PPA Tour",
+   "summary": "Major League Pickleball named Tanner Groff its commissioner on Monday, Nov. 16, per the league. Groff, most recently Pickleball Inc.'s senior vice president of events, helped build the PPA Challenger Series (more than 30 events a year) and the Powerball Amateur State Championship Series. As commissioner he runs all MLP league operations, with a focus on owner relations and on-court competition. Chief tour officer Zach Gallin takes over MLP event operations, production, fan experience and financials, and Courtney Johnson was promoted to senior director of team competition for MLP and senior director of officiating for the PPA. Former commissioner Samin Odhwani stays on as a strategic advisor, per pickleball.com. MLP says more 2027 season information is coming in the next few weeks.",
+   "status": "confirmed",
+   "date": "2026-11-17",
+   "sources": [
+    {
+     "label": "MLP: Major League Pickleball names Tanner Groff commissioner",
+     "url": "https://majorleaguepickleball.co/news/major-league-pickleball-names-tanner-groff-commissioner/"
+    },
+    {
+     "label": "pickleball.com: Tanner Groff named MLP commissioner",
+     "url": "https://pickleball.com/news/tanner-groff-named-mlp-commissioner"
+    },
+    {
+     "label": "The Kitchen: Major League Pickleball names Tanner Groff new commissioner",
+     "url": "https://thekitchenpickle.com/blogs/news/major-league-pickleball-new-commissioner-tanner-groff/"
+    },
+    {
+     "label": "MLP on X: Tanner Groff named commissioner",
+     "url": "https://x.com/MajorLeaguePB/status/2122472204331880517"
+    }
+   ],
+   "embeds": [
+    "https://x.com/MajorLeaguePB/status/2122472204331880517"
+   ],
+   "social_angle": "Business post: 'MLP has a new commissioner: Tanner Groff, the PPA exec who built the Challenger Series. 2027 season details are due in the next few weeks.' Quote the MLP post.",
+   "tags": [
+    "MLP",
+    "Business",
+    "Tanner Groff",
+    "Pickleball Inc."
+   ]
+  },
+  {
+   "title": "Brisbane 2032 organizers say pickleball won't be considered for the Olympics because the sport has no recognized international federation",
+   "summary": "The Brisbane 2032 organizing committee told ABC News (Australia) that pickleball will not be considered for the 2032 Olympic program because it doesn't meet the criteria, including having a recognized international federation. The same ABC profile reported that committee president Andrew Liveris holds an interest in almost 70% of the equity in the holding company behind PPA Tour Australia, whose president is his son Anthony; Liveris declared a potential conflict in 2024 and declined to answer the ABC's questions about pickleball. The IOC only adds sports governed by IOC-recognized federations, and no pickleball body has that recognition yet, per World Pickleball Magazine and The Kitchen. The Kitchen notes the IOC's final vote on the Brisbane program is set for April 2027.",
+   "status": "confirmed",
+   "date": "2026-11-17",
+   "sources": [
+    {
+     "label": "ABC News: Andrew Liveris, Brisbane 2032 and pickleball conflicts",
+     "url": "https://www.abc.net.au/news/2026-11-16/andrew-liveris-brisbane-olympics-profile/107379516"
+    },
+    {
+     "label": "The Kitchen: Pickleball won't be considered for the 2032 Brisbane Olympics",
+     "url": "https://thekitchenpickle.com/blogs/news/pickleball-brisbane-2032-olympics-andrew-liveris-ppa-tour-australia/"
+    },
+    {
+     "label": "World Pickleball Magazine: Brisbane 2032 will not consider pickleball",
+     "url": "https://worldpickleballmagazine.com/brisbane-2032-will-not-consider-pickleball/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Explainer post: 'No Olympics in 2032. Brisbane's organizers say pickleball doesn't qualify, because the sport still has no IOC-recognized federation.' Link The Kitchen or WPM. Keep the Liveris stake factual and attributed to the ABC.",
+   "tags": [
+    "Olympics",
+    "Brisbane 2032",
+    "PPA Tour Australia",
+    "Governance"
+   ]
+  },
+  {
+   "title": "PPA Daytona Beach Open: Matt Burkhardt qualifies in two events, Johns plays only mixed, and the round of 64 starts today",
+   "summary": "Main-draw play at the Proton Daytona Beach Open starts today, Tuesday, Nov. 17, at Pictona at Holly Hill, Fla. Per the PPA, coverage starts at noon ET (11 a.m. CT) daily through Sunday; the round of 64 and round of 32 are in the PickleballTV app, and the round of 16 through Championship Sunday is on PickleballTV. Monday's qualifying sent Matt Burkhardt through in both men's singles (second of 37, behind Armaan Jiwa Mawji) and men's doubles with Mike Radermacher, per World Pickleball Magazine. Alvi Regalado, a day after winning the APP Arizona Open, finished 21st in the singles qualifier without a win, per WPM. Ben Johns is playing only mixed, with Anna Leigh Waters as the top seeds, and a Worlds-final rematch with Jorja and JW Johnson is possible in Saturday's semifinal, per WPM, citing the PPA's draw show. Fourth seed John Lucian Goins opens his bid for a third straight singles title today against qualifier Jemere Plummer, per WPM.",
+   "status": "confirmed",
+   "date": "2026-11-17",
+   "sources": [
+    {
+     "label": "World Pickleball Magazine: Daytona qualifying, draws and week ahead",
+     "url": "https://worldpickleballmagazine.com/daytona-beach-open-2026-qualifying-burkhardt-wade-powell/"
+    },
+    {
+     "label": "PPA Tour on X: Daytona broadcast schedule",
+     "url": "https://x.com/PPAtour/status/2122386058843496912"
+    },
+    {
+     "label": "PPA Tour on X: What to watch for at the Proton Daytona Beach Open",
+     "url": "https://x.com/PPAtour/status/2122441132588367974"
+    },
+    {
+     "label": "PPA Tour on YouTube: Daytona draw reveal show",
+     "url": "https://www.youtube.com/watch?v=l9Z1wO2dUNs"
+    },
+    {
+     "label": "PPA Tour: Proton Daytona Beach Open event page",
+     "url": "https://www.ppatour.com/events/2026/proton-daytona-beach-open/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2122386058843496912"
+   ],
+   "social_angle": "Day-one post: 'Daytona main draw starts today. Johns is here for mixed only, with Waters. Goins starts his three-straight bid vs. a qualifier.' Quote the PPA broadcast post for where to watch.",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Matt Burkhardt",
+    "Ben Johns",
+    "John Lucian Goins",
+    "How to watch"
+   ]
+  },
+  {
+   "title": "Courts watch: Scotts Valley, Calif. council takes up noise and parking complaints about the Skypark pickleball courts Wednesday",
+   "summary": "The Scotts Valley City Council will discuss the pickleball courts at Skypark, which have drawn neighbor complaints about noise and parking, at its 6 p.m. meeting on Wednesday, Nov. 18, Bay City News reported. The city added a reservation system in 2024 and, in August, started a pilot with an 8 p.m. closing time and earlier lights-out. It is surveying neighbors and players this week, staff say options for courts elsewhere are limited and talks with school districts about shared courts are underway, and the Parks and Recreation Commission revisits the issue in December, per the report.",
+   "status": "confirmed",
+   "date": "2026-11-17",
+   "sources": [
+    {
+     "label": "Local News Matters (Bay City News): Scotts Valley council to discuss controversial pickleball courts",
+     "url": "https://localnewsmatters.org/2026/11/16/scotts-valley-pickleball-courts-noise-complaints/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Community post: 'Another town, another pickleball noise fight: Scotts Valley, Calif. weighs what to do about its Skypark courts Wednesday.' Link the story.",
+   "tags": [
+    "Courts",
+    "Noise",
+    "Scotts Valley",
+    "California"
+   ]
+  },
   {
    "title": "APP Arizona Open: 41st seed Alvi Regalado wins men's singles in his first APP event, Kat Stewart takes women's singles 11-4, 11-0",
    "summary": "Alvi Regalado, the lowest seed (41st) in the men's pro singles draw and playing his first career APP Tour event, beat sixth seed Andre Millet 11-7, 4-11, 11-5 for the title at the APP Arizona Open in Mesa on Sunday, per the APP. Millet leaves with doubles gold and singles silver. Kat Stewart beat Domenika Turkovic 11-4, 11-0 for her fifth women's pro singles gold of the season, per the APP; Turkovic had won the APP's previous two women's singles titles, per World Pickleball Magazine. Turkovic still won gold: she and Jay Devilliers, the No. 12 seeds, beat No. 6 seeds Vivian Glozman and Ronan Camron 11-2, 11-9 in the mixed final. Bronzes went to Max Green (over Ryler DeHeart 1-11, 11-9, 11-9), Roos Van Reek (over Amanda Hendry 11-0, 12-10) and, in mixed, Megan Fudge and Aidan Schenk, per the APP. Fudge's bronze isn't a gold, so her APP record of 33 women's pro golds stays shared with Simone Jardim.",
@@ -39,6 +161,10 @@
     {
      "label": "World Pickleball Magazine: Mesa day three and Sunday preview",
      "url": "https://worldpickleballmagazine.com/app-arizona-open-2026-mesa-day-three/"
+    },
+    {
+     "label": "APPTV on YouTube: Regalado vs. Millet, men's pro singles final",
+     "url": "https://www.youtube.com/watch?v=zQ-toFAXy0s"
     }
    ],
    "embeds": [
@@ -85,7 +211,7 @@
   },
   {
    "title": "PPA Daytona Beach Open starts today at Pictona: Bright and Waters go for 19 straight, and Kunimoto gets a shot at a first singles title",
-   "summary": "The Proton Daytona Beach Open, a 1,000-point PPA Open with a listed $1,063,327 in payouts, runs Nov. 16-22 at Pictona at Holly Hill, Fla., per Pickleballer. Pro qualifying, the round of 64 and the round of 32 stream on the PPA Tour's YouTube channel Monday through Wednesday; PickleballTV picks up the round of 16 on Thursday, Nov. 19, per pickleball.com. Anna Bright and Anna Leigh Waters are chasing a 19th straight tournament title and an unbeaten 2026. With Waters, Kate Fahey and Kaitlyn Christian out of women's singles, No. 2 seed Kiora Kunimoto is looking for her first PPA singles title. John Lucian Goins goes for a third straight men's singles title, and Christian Alshon and Andrei Daescu are the top men's doubles seeds after losing a two-game lead in the Worlds final, per pickleball.com.",
+   "summary": "The Proton Daytona Beach Open, a 1,000-point PPA Open with a listed $1,063,327 in payouts, runs Nov. 16-22 at Pictona at Holly Hill, Fla., per Pickleballer. Per the PPA's broadcast schedule, coverage starts at noon ET daily Nov. 17-22; the round of 64 and round of 32 are in the PickleballTV app, and PickleballTV has the round of 16 (Thursday, Nov. 19) through Championship Sunday. Anna Bright and Anna Leigh Waters are chasing a 19th straight tournament title and an unbeaten 2026. With Waters, Kate Fahey and Kaitlyn Christian out of women's singles, No. 2 seed Kiora Kunimoto is looking for her first PPA singles title. John Lucian Goins goes for a third straight men's singles title, and Christian Alshon and Andrei Daescu are the top men's doubles seeds after losing a two-game lead in the Worlds final, per pickleball.com.",
    "status": "confirmed",
    "date": "2026-11-16",
    "sources": [
@@ -104,6 +230,10 @@
     {
      "label": "PPA Tour on X: All five pro draws are out for Daytona",
      "url": "https://x.com/PPAtour/status/2121677066223427671"
+    },
+    {
+     "label": "PPA Tour on X: Daytona broadcast schedule",
+     "url": "https://x.com/PPAtour/status/2122386058843496912"
     }
    ],
    "embeds": [
@@ -2032,41 +2162,6 @@
     "Honolulu",
     "New paddle",
     "Full foam"
-   ]
-  },
-  {
-   "title": "Paddletek launches the Bantam Jolt and Tempest Veyra, and the Veyra is the mystery paddle JW and Jorja Johnson have been using",
-   "summary": "Paddletek has released full-foam, 16mm updates to two long-running lines: the power-focused Bantam Jolt ($224.99) with an EPP foam 'FlexCore' scored-grid core, and the control-focused Tempest Veyra ($179.99) with patent-pending perimeter 'damping rods.' Both come in elongated and widebody shapes and, per Paddletek's product pages, are expected to ship in mid to late November. The Kitchen reports that the Veyra is the unreleased, blacked-out PIKKL paddle JW and Jorja Johnson have played since the spring; Paddletek acquired PIKKL in July. Performance claims are Paddletek's own.",
-   "status": "confirmed",
-   "date": "2026-11-02",
-   "sources": [
-    {
-     "label": "The Kitchen: Paddletek launches new Bantam Jolt, Tempest Veyra paddles",
-     "url": "https://thekitchenpickle.com/blogs/gear/paddletek-releases-new-bantam-jolt-tempest-veyra-pickleball-paddles/"
-    },
-    {
-     "label": "Paddletek: Bantam Jolt and Tempest Veyra",
-     "url": "https://www.paddletek.com/pages/bantam-jolt-tempest-veyra"
-    },
-    {
-     "label": "Paddletek: Tempest Veyra Elongated product page",
-     "url": "https://www.paddletek.com/products/tempest-veyra-elongated"
-    },
-    {
-     "label": "Paddletek: Bantam Jolt Elongated product page",
-     "url": "https://www.paddletek.com/products/bantam-jolt-elongated"
-    }
-   ],
-   "embeds": [
-    "https://x.com/TheKitchenPB/status/2117077128072106168"
-   ],
-   "social_angle": "Gear post: 'The mystery paddle JW and Jorja Johnson have been winning with finally has a name: the Paddletek Tempest Veyra, $179.99, shipping mid to late November.' Embed The Kitchen's post.",
-   "tags": [
-    "Gear",
-    "Paddletek",
-    "New paddle",
-    "JW Johnson",
-    "Jorja Johnson"
    ]
   }
  ]
