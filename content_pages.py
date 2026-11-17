@@ -48,6 +48,7 @@ GUIDES = [
     ("guides/pickleball-reset.html", "Pickleball reset shot"),
     ("guides/pickleball-return-of-serve.html", "Pickleball return of serve"),
     ("guides/how-to-lob-in-pickleball.html", "How to lob in pickleball"),
+    ("guides/tennis-vs-pickleball.html", "Tennis vs pickleball"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -1069,7 +1070,7 @@ def make(page, e, fmt, PP, cur, ph):
 <h2>Pickleball court vs tennis court</h2>
 <p>Tennis numbers are from the <a href="{CD_ITF}" target="_blank" rel="noopener">ITF 2026 Rules of Tennis</a>.</p>
 <div class="tbl"><table><thead><tr><th></th><th>Pickleball</th><th>Tennis</th></tr></thead><tbody>{cd_ten_rows}</tbody></table></div>
-<p>By our math, a pickleball court (880 square feet) is under a third of a doubles tennis court (78 by 36 feet, 2,808 square feet). Planning to convert tennis courts? USA Pickleball and the American Sports Builders Association publish a <a href="{CD_MANUAL}" target="_blank" rel="noopener">court construction and maintenance manual</a> with a section on tennis conversions.</p>
+<p>By our math, a pickleball court (880 square feet) is under a third of a doubles tennis court (78 by 36 feet, 2,808 square feet). For the rest of the differences, from the serve to scoring, see <a href="tennis-vs-pickleball.html">tennis vs pickleball</a>. Planning to convert tennis courts? USA Pickleball and the American Sports Builders Association publish a <a href="{CD_MANUAL}" target="_blank" rel="noopener">court construction and maintenance manual</a> with a section on tennis conversions.</p>
 <h2>Gear for your court</h2>
 <p>Court surface changes the ball you should use: see <a href="indoor-vs-outdoor-pickleball-balls.html">indoor vs outdoor pickleball balls</a>. Gym floor or asphalt also changes your shoes: see <a href="how-to-choose-pickleball-shoes.html">how to choose pickleball shoes</a>. Then learn the shot that lives in that 7-foot zone in <a href="how-to-dink.html">how to dink</a>, and check the <a href="pickleball-rules-cheat-sheet-2026.html">2026 rules cheat sheet</a>.</p>
 {money_links()}
@@ -1964,6 +1965,107 @@ def make(page, e, fmt, PP, cur, ph):
          "How to lob in pickleball: when to lob, how to disguise it, where to aim, topspin, the lob return, how to defend a lob, plus drills and FAQs.",
          fresh={"checked": LB_CHECKED, "types": LB_TYPES, "faq": lb_faq},
          schema=[lb_faq_ld])
+
+    # ----- Tennis vs pickleball (Nov 17, 2026) -----
+    # Evergreen comparison for the approved P2 target "tennis vs pickleball" (Pickleheads gap, Nov 16 pass).
+    # Pickleball specs: 2026 USA Pickleball Official Rulebook + USA Pickleball rules summary. Tennis specs: ITF 2026
+    # Rules of Tennis. Players: SFIA 2026 figures (2025 data) via SFIA and Pickleball.com. Coaching notes paraphrase
+    # The Dink and Pickleball Warehouse. All read on TP_CHECKED. Square feet and inch gaps are our own arithmetic.
+    TP_CHECKED = "2026-11-17"
+    tp_checked = _dt.date.fromisoformat(TP_CHECKED).strftime("%B %-d, %Y")
+    TP_USAP_RB = "https://usapickleball.org/docs/rules/USAP-Official-Rulebook.pdf"
+    TP_USAP_SUM = "https://usapickleball.org/rules/summary/"
+    TP_ITF = "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf"
+    TP_SFIA = "https://www.sfia.org/sports-fitness-industry-association/resources/sfia-releases-2026-pickleball-single-sport-report-team-sports-reports-to-follow"
+    TP_PBCOM = "https://pickleball.com/news/sfia-report-confirms-over-24-million-americans-playing-pickleball"
+    TP_DINK = "https://www.thedinkpickleball.com/3-mistakes-tennis-players-make-in-pickleball/"
+    TP_PW = "https://www.pickleballwarehouse.com/learning_center/pickleball/from-tennis-to-pickleball.html"
+    TP_CMP = [
+        ("Court size", "20 x 44 ft for singles and doubles (Rule 3.A.1)", "78 ft long; 27 ft wide for singles, 36 ft for doubles (ITF Rule 1)"),
+        ("Court area", "880 sq ft", "2,106 sq ft singles, 2,808 sq ft doubles"),
+        ("Net height", "36 in at the sidelines, 34 in at the center (Rules 3.B.6-7)", "3 1/2 ft (42 in) at the posts, 3 ft (36 in) at the center"),
+        ("What you hit with", "Solid paddle: length max 17 in, length + width max 24 in, no weight limit (Rule 3.D)", "Strung racket: max 29 in long and 12.5 in wide (ITF Appendix II)"),
+        ("Ball", "Perforated, molded ball with a smooth surface (Rules 1, 3.C)", "Fabric-covered ball, 2.57-2.70 in and 56.0-59.4 g for standard types (ITF Appendix I)"),
+        ("Serve", "Underhand: upward arc, contact no higher than the waist, or a drop serve; one attempt (Rule 7, rules summary)", "Ball released by hand and hit before it lands; a second service after a fault (ITF Rules 16, 20)"),
+        ("Serve clips the net", "Played if it clears the kitchen and lands in the service court (Rule 7.E)", "A let: the serve is replayed (ITF Rule 22)"),
+        ("Scoring", "Traditional: only the serving side scores; games to 11, win by 2. Rally scoring is a provisional option", "15, 30, 40, game, with deuce; sets to six games, win by two, tie-break at 6-all in a tie-break set"),
+        ("Special zones", "7-ft non-volley zone (kitchen) on each side; two-bounce rule after the serve", "No no-volley zone; the receiver must let the serve bounce"),
+        ("U.S. players in 2025 (SFIA)", "24.3 million", "27.3 million"),
+    ]
+    tp_faq = [
+        ("What is the main difference between pickleball and tennis?",
+         "Size and pace. A pickleball court is 20 by 44 feet for both singles and doubles (2026 USA Pickleball rulebook), while a doubles tennis court is 78 by 36 feet (ITF Rules of Tennis). Pickleball is played with a solid paddle and a perforated molded ball, has an underhand serve, and adds two rules tennis does not have: the two-bounce rule and the 7-foot non-volley zone, or kitchen."),
+        ("How much smaller is a pickleball court than a tennis court?",
+         "By our math, a pickleball court is 880 square feet, under a third of a doubles tennis court (2,808 square feet) and well under half of a singles tennis court (2,106 square feet). Pickleball uses the same court for singles and doubles; tennis singles uses a narrower 27-foot width."),
+        ("Is a pickleball net lower than a tennis net?",
+         "Yes. A pickleball net is 36 inches at the sidelines and 34 inches at the center (USA Pickleball rules 3.B.6 and 3.B.7). A tennis net is 3.5 feet (42 inches) at the posts and 3 feet (36 inches) at the center (ITF Rule 1), so the pickleball net is 2 inches lower in the middle."),
+        ("How is pickleball scored compared to tennis?",
+         "In traditional pickleball scoring, only the serving side scores, and games usually go to 11, win by 2 (USA Pickleball). Rally scoring, where every rally scores, is a provisional option. Tennis counts 15, 30, 40 and game, with deuce and advantage, and the first player to six games with a two-game lead wins the set (ITF Rules 5 and 6)."),
+        ("Can you serve overhand in pickleball?",
+         "No. The volley serve must be hit with the arm moving in an upward arc, with contact no higher than the waist and the paddle head not above the wrist. The alternative is a drop serve off the bounce. Each server also gets only one attempt, unlike tennis, which allows a second service (USA Pickleball rules summary, ITF Rule 20)."),
+        ("Do more people play tennis or pickleball?",
+         "Tennis still has more players. SFIA figures for 2025 put tennis at 27.3 million U.S. players and pickleball at 24.3 million, but pickleball grew 22.8% year over year versus 6.2% for tennis (as reported by Pickleball.com). SFIA calls pickleball the fastest-growing sport in the country for five straight years."),
+        ("Do tennis skills transfer to pickleball?",
+         "Many do. Pickleball Warehouse says groundstrokes, return of serve, slice volleys, lobs and overheads use similar motions. The habits to change are a big backswing, trying to hit through opponents from the baseline, and impatience in dink rallies, according to former college tennis coach and PPA pro Eric Roddy in The Dink."),
+    ]
+    tp_faq_html, tp_faq_ld = faq(tp_faq)
+    tp_rows = "".join(f'<tr><th scope="row">{e(a)}</th><td>{e(b)}</td><td>{e(c)}</td></tr>' for a, b, c in TP_CMP)
+    tvp = f'''<h1>Tennis vs pickleball: court, net, rules, scoring and gear compared</h1>
+<p class="meta">Pickleball numbers from the <a href="{TP_USAP_RB}" target="_blank" rel="noopener">2026 USA Pickleball Official Rulebook</a> and USA Pickleball's <a href="{TP_USAP_SUM}" target="_blank" rel="noopener">rules summary</a>; tennis numbers from the <a href="{TP_ITF}" target="_blank" rel="noopener">ITF 2026 Rules of Tennis</a>; player counts from <a href="{TP_SFIA}" target="_blank" rel="noopener">SFIA</a>. All read {tp_checked}. Square-foot and inch comparisons are our own arithmetic.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>Court:</b> pickleball is 20 x 44 ft for singles and doubles; a doubles tennis court is 78 x 36 ft.</li>
+<li><b>Net:</b> pickleball is 34 in at the center, tennis 36 in.</li>
+<li><b>Gear:</b> a solid paddle and a perforated ball vs a strung racket and a felt ball.</li>
+<li><b>Serve:</b> underhand, one try in pickleball; tennis gives you a second serve.</li>
+<li><b>Scoring:</b> games to 11, win by 2 (serving side scores) vs 15-30-40 games and six-game sets.</li>
+<li><b>Rules tennis doesn't have:</b> the two-bounce rule and the 7-ft kitchen.</li>
+</ul>
+<h2>Side-by-side</h2>
+<div class="tbl"><table><thead><tr><th></th><th>Pickleball</th><th>Tennis</th></tr></thead><tbody>{tp_rows}</tbody></table></div>
+<h2>Court size</h2>
+<p>The 2026 USA Pickleball rulebook (Rule 3.A.1) sets the court at 20 feet wide and 44 feet long, the same for singles and doubles. The ITF Rules of Tennis set a tennis court at 78 feet long, 27 feet wide for singles and 36 feet wide for doubles. By our math, the pickleball court is 880 square feet against 2,808 for doubles tennis, so it is under a third of the size. Full layout, kitchen and space numbers: <a href="pickleball-court-dimensions.html">pickleball court dimensions</a>.</p>
+<p>Can you play pickleball on a tennis court? Yes, with pickleball lines and a net at pickleball height. The court dimensions guide links the USA Pickleball and American Sports Builders Association construction manual, which has a section on tennis conversions.</p>
+<h2>Net height</h2>
+<p>A pickleball net is 36 inches at the sidelines and 34 inches at the center (Rules 3.B.6 and 3.B.7). A tennis net is 3 1/2 feet at the posts and 3 feet at the center (ITF Rule 1). The center difference is just 2 inches, so if you are setting up pickleball on a tennis court, lowering the center strap matters more than you might think.</p>
+<h2>Paddle vs racket, and the ball</h2>
+<p>A pickleball paddle has no strings. The rulebook says it must be made of rigid, non-compressible material, the length can't exceed 17 inches, length plus width can't exceed 24 inches, and there is no weight limit (Rule 3.D). A tennis racket can be up to 29 inches long and 12.5 inches wide (ITF Appendix II). The balls are just as different: pickleball uses a perforated, molded ball with a smooth surface, while a standard tennis ball is fabric-covered, 2.57 to 2.70 inches across and 56.0 to 59.4 grams (ITF Appendix I). Pickleball Warehouse notes that tennis players are used to longer swings because of the bigger court, longer racquet and faster, heavier ball.</p>
+<p>New to paddles? Start with <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>, take the <a href="../paddle-quiz.html">paddle quiz</a>, or browse our <a href="../best-paddles-for-tennis-players.html">paddles for tennis players</a> filter (elongated, 16mm core).</p>
+<h2>The serve</h2>
+<p>This is where tennis players notice the difference first. In pickleball, the volley serve must be hit with an upward arc, contact can't be above the waist, and the paddle head can't be above the wrist. A drop serve, hit after the ball bounces, is also allowed. You serve diagonally, the ball has to clear the kitchen, and each server gets only one attempt (USA Pickleball rules summary). If the serve clips the net and still lands in the right box, it is in play (Rule 7.E).</p>
+<p>In tennis, the server releases the ball and hits it before it lands, gets a second service after a fault, and a serve that touches the net and is otherwise good is a let and replayed (ITF Rules 16, 20 and 22). Pickleball Warehouse describes the pickleball serve as essentially a groundstroke from the hand or off the bounce, a lot like a tennis feed.</p>
+<h2>Scoring</h2>
+<p>Traditional pickleball uses side-out scoring: only the serving side scores, and games are normally played to 11, win by 2 (tournaments may play to 15 or 21). In doubles, both partners serve before the serve passes to the other team, except at the start of each game. Rally scoring, where a point is scored on every rally, is provisionally approved as an option. Tennis scores 15, 30, 40 and game, with deuce and advantage, and a set goes to the first player to win six games with a two-game margin, with a tie-break at six games all in a tie-break set (ITF Rules 5 and 6). The full rundown: <a href="pickleball-rules-for-beginners.html">pickleball rules for beginners</a>.</p>
+<h2>Two rules tennis doesn't have</h2>
+<p><b>The two-bounce rule.</b> The serve and the return must each bounce before being hit (Rule 10.A). USA Pickleball says the rule eliminates the serve-and-volley advantage and extends rallies. Pickleball Warehouse adds that the serve-and-volley instinct is one of the easiest ways to spot a new tennis convert, and that in doubles the serving team usually starts with both players back, not one at the net.</p>
+<p><b>The kitchen.</b> The non-volley zone extends 7 feet from the net on each side, and you can't volley while standing in it or let your momentum carry you into it after a volley. You can step in to play a ball that has bounced. Details and edge cases: <a href="pickleball-kitchen-rules.html">pickleball kitchen rules</a>.</p>
+<h2>Strategy: why pickleball plays differently</h2>
+<p>Former college tennis coach and PPA pro Eric Roddy, writing in <a href="{TP_DINK}" target="_blank" rel="noopener">The Dink</a>, says doubles pickleball is "more ping pong than tennis." Once players are at the kitchen there is almost no time for a big backswing. He also notes that winners hit straight through opponents, common in tennis, are much less common once the skill gap narrows, so placement and spin matter more than power. Tennis converts who drive from everywhere have to learn the <a href="third-shot-drop.html">third shot drop</a>, the <a href="pickleball-reset.html">reset</a> and patient <a href="how-to-dink.html">dinking</a>.</p>
+<h2>Switching from tennis: what to keep, what to change</h2>
+<ul>
+<li><b>Keep:</b> groundstrokes, return of serve, slice volleys, lobs and overheads use similar motions, per <a href="{TP_PW}" target="_blank" rel="noopener">Pickleball Warehouse</a>. Roddy says players who liked drop shots, volleys and angles in tennis usually convert faster.</li>
+<li><b>Shorten your swing.</b> Roddy's cue: imagine a hula hoop around your waist and keep the paddle inside it. Pickleball Warehouse says the closer you are to the kitchen, the shorter the swing.</li>
+<li><b>Be patient at the line.</b> Wait for a ball near or above net height before attacking; Pickleball Warehouse says impatience in dink rallies is one of the biggest adjustments.</li>
+<li><b>Stay open at the kitchen.</b> Use an open stance and shuffle or <a href="pickleball-split-step.html">split step</a> instead of crossing your feet (Pickleball Warehouse).</li>
+<li><b>Roll your volleys.</b> Topspin volleys are standard at intermediate and higher levels of pickleball, far more than in tennis (Pickleball Warehouse).</li>
+</ul>
+<p>Footwear crosses over too: see <a href="how-to-choose-pickleball-shoes.html">how to choose pickleball shoes</a> for court shoes vs running shoes. Ready to practice? Try these <a href="pickleball-drills.html">pickleball drills</a>.</p>
+<h2>Which sport has more players?</h2>
+<p>Tennis, for now. <a href="{TP_PBCOM}" target="_blank" rel="noopener">Pickleball.com</a>, reporting SFIA's 2026 participation report, puts 2025 U.S. tennis participation at 27.3 million (up 6.2% year over year) and pickleball at 24.3 million (up 22.8%). SFIA says pickleball has been the fastest-growing sport in the country for five straight years and grew from 4.2 million players in 2020.</p>
+{money_links()}
+{tp_faq_html}
+{sources([("USA Pickleball: 2026 Official Rulebook", TP_USAP_RB, f"court 3.A.1, net 3.B.6-7, paddle 3.D, ball 3.C, serve 7, two-bounce 10.A, scoring 4 and 14.A, read {tp_checked}"),
+          ("USA Pickleball: Pickleball rules summary", TP_USAP_SUM, f"serve rules, one serve attempt, side-out and rally scoring, two-bounce rule, kitchen, read {tp_checked}"),
+          ("ITF: 2026 Rules of Tennis", TP_ITF, f"court and net (Rule 1), racket (Appendix II), scoring (Rules 5-6), service and let (Rules 16, 20, 22), ball (Appendix I), read {tp_checked}"),
+          ("SFIA: 2026 Pickleball Single Sport Report release", TP_SFIA, f"24.3 million players in 2025, 4.2 million in 2020, fastest-growing five years, read {tp_checked}"),
+          ("Pickleball.com: SFIA report confirms over 24 million Americans playing pickleball", TP_PBCOM, f"pickleball +22.8%, tennis 27.3 million (+6.2%) in 2025, read {tp_checked}"),
+          ("The Dink: 3 mistakes tennis players make in pickleball (Eric Roddy)", TP_DINK, f"backswing, power vs placement, shot selection, read {tp_checked}"),
+          ("Pickleball Warehouse: From tennis to pickleball", TP_PW, f"shared strokes, swing length, open stance, two-bounce rule, read {tp_checked}")])}
+{more("guides/tennis-vs-pickleball.html")}'''
+    page("guides/tennis-vs-pickleball.html", "Tennis vs Pickleball: Court Size, Net, Rules and Scoring Compared", tvp,
+         "Tennis vs pickleball side by side: court size (20x44 vs 78x36 ft), net height, paddle vs racket, serve, scoring, the kitchen, and tips for tennis converts.",
+         fresh={"checked": TP_CHECKED, "cmp": TP_CMP, "faq": tp_faq},
+         schema=[tp_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
