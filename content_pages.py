@@ -2070,12 +2070,17 @@ def make(page, e, fmt, PP, cur, ph):
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
     WT_CHECKED = "2026-10-29"
+    WT_CHECKED = "2026-11-17"  # Daytona refresh; leave the Oct 29 assignment above for patch context
     wt_checked = _dt.date.fromisoformat(WT_CHECKED).strftime("%B %-d, %Y")
     WT_PPA = "https://www.ppatour.com/watch/"
     WT_PPA_TV = "https://www.ppatour.com/watch/tv/"
+    WT_PPA_EV = "https://www.ppatour.com/events/2026/proton-daytona-beach-open/"
     WT_PBTV = "https://pickleballtv.com/"
+    WT_PLANS = "https://stream.pickleballtv.com/plans"
     WT_IOS = "https://apps.apple.com/us/app/pickleballtv/id6739588861"
     WT_PLAY = "https://play.google.com/store/apps/details?id=com.apppickleballtv"
+    WT_YT_SC = "https://www.youtube.com/@PPAStreamedCourts"
+    WT_YT_PPA = "https://www.youtube.com/@PPAtour"
     WT_UP_PRO = "https://worlds.unitedpickleball.com/ppa-tour"
     WT_MLP = "https://majorleaguepickleball.co/news/houston-hammers-to-join-major-league-pickleball-as-21st-team-for-2027-season/"
     WT_CBS = "https://pickleball.com/news/carvana-masters-broadcast-schedule-features-national-coverage-on-championship-sunday"
@@ -2086,137 +2091,150 @@ def make(page, e, fmt, PP, cur, ph):
     WT_NC_MLP = "https://majorleaguepickleball.co/news/match-schedule-for-mlp-nations-cup-released/"
     WT_NC_UP = "https://worlds.unitedpickleball.com/nations-cup"
     WT_WHO = [
-        ("PPA Tour", "PickleballTV streams every round of every event", "Select rounds on Tennis Channel, FS1 and FS2 in the PPA's 2026 schedule; CBS carried Championship Sunday at the Carvana Masters in January", WT_PPA_TV),
+        ("PPA Tour", "PickleballTV streams every round of every event", "Select rounds on Tennis Channel, FS1 and FS2 in the PPA's 2026 schedule; CBS carried Championship Sunday at the Carvana Masters in January. No Tennis Channel window is listed for the Proton Daytona Beach Open.", WT_PPA_TV),
         ("Major League Pickleball (MLP)", "PickleballTV", "MLP reports 2026 records on CBS (733K viewers, NYC Finals, Aug. 30) and FS1 (146K, Orlando, Aug. 1)", WT_MLP),
         ("APP Tour", "APPTV on YouTube (Players Court) and ESPN+ (Championship Court)", "National windows on ESPN2 and CBS Sports Network at some 2026 events", WT_APP_DET),
         ("USA Pickleball Nationals", "VS Sports livestreams and records every match", "None listed", WT_UN_LIVE),
     ]
-    WT_WEEK = [
-        ("Fri Oct 30", "MLP Nations Cup, pool play", "PickleballTV", "10 AM – 7 PM"),
-        ("Sat Oct 31", "MLP Nations Cup, pool play", "PickleballTV", "10 AM – 7 PM"),
-        ("Sun Nov 1", "MLP Nations Cup, semifinals", "PickleballTV", "10 AM – 1 PM"),
-        ("Sun Nov 1", "MLP Nations Cup, finals", "PickleballTV", "2 – 3:30 PM"),
-        ("Oct 31 – Nov 8", "USA Pickleball Nationals, San Diego", "VS Sports livestream", "Every match; match times posted closer to play"),
-        ("Tue Nov 3", "PPA Worlds, round of 64", "PickleballTV", "11 AM – 7 PM"),
-        ("Wed Nov 4", "PPA Worlds, round of 32", "PickleballTV", "11 AM – 7 PM"),
-        ("Thu Nov 5", "PPA Worlds, round of 16", "PickleballTV", "11 AM – 6 PM"),
-        ("Thu Nov 5", "PPA Worlds, Celebrity Pro-Am", "Tennis Channel and PickleballTV", "7 – 9 PM"),
-        ("Fri Nov 6", "PPA Worlds, quarterfinals", "PickleballTV", "11 AM – 7 PM"),
-        ("Sat Nov 7", "PPA Worlds, semifinals", "PickleballTV", "11 AM – 7 PM"),
-        ("Sun Nov 8", "PPA Worlds, Championship Sunday", "PickleballTV", "10 AM – 4 PM"),
+    # Official PPA watch-page windows, all Eastern. CT is one hour earlier (arithmetic only).
+    WT_DAYTONA = [
+        ("Mon Nov 16", "Pro qualifiers · 20+ courts", "YouTube", "8 a.m.–4 p.m. ET (7 a.m.–3 p.m. CT)"),
+        ("Tue Nov 17", "Round of 64 · Humana Championship Court", "PickleballTV App", "12–8 p.m. ET (11 a.m.–7 p.m. CT)"),
+        ("Tue Nov 17", "Round of 64 · Carvana Grandstand + more pro courts", "YouTube", "12–8 p.m. ET (11 a.m.–7 p.m. CT)"),
+        ("Wed Nov 18", "Round of 32 · Humana Championship Court", "PickleballTV App", "12–8 p.m. ET (11 a.m.–7 p.m. CT)"),
+        ("Wed Nov 18", "Round of 32 · Carvana Grandstand + more pro courts", "YouTube", "12–8 p.m. ET (11 a.m.–7 p.m. CT)"),
+        ("Thu Nov 19", "Round of 16", "PickleballTV", "12–8 p.m. ET (11 a.m.–7 p.m. CT)"),
+        ("Fri Nov 20", "Quarterfinals", "PickleballTV", "12–8 p.m. ET (11 a.m.–7 p.m. CT)"),
+        ("Sat Nov 21", "Semifinals", "PickleballTV", "12–8 p.m. ET (11 a.m.–7 p.m. CT)"),
+        ("Sun Nov 22", "Championship Sunday", "PickleballTV", "12–5 p.m. ET (11 a.m.–4 p.m. CT)"),
     ]
     WT_NEXT = [
-        ("Nov 12–15", "APP Arizona Open, Mesa, AZ", "On the APP's 2026 nationally televised calendar; channels on the APP's event posts"),
-        ("Nov 19–22", "PPA Proton Daytona Beach Open, Daytona Beach, FL", "PickleballTV, round of 16 through Championship Sunday"),
         ("Dec 3–6", "APP Tour Championships, Fort Lauderdale, FL", "On the APP's 2026 nationally televised calendar"),
         ("Dec 17–20", "PPA Veolia Malibu Showcase, Malibu, CA", "PickleballTV every day, plus Tennis Channel all four days"),
     ]
     wt_who_rows = "".join(f'<tr><th scope="row">{e(t)}</th><td>{e(s)}</td><td>{e(n)}</td><td><a href="{e(u)}" target="_blank" rel="noopener">source</a></td></tr>' for t, s, n, u in WT_WHO)
-    wt_week_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(c)}</td><td>{e(t)}</td></tr>' for d, w, c, t in WT_WEEK)
+    wt_day_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(c)}</td><td>{e(t)}</td></tr>' for d, w, c, t in WT_DAYTONA)
     wt_next_rows = "".join(f'<tr><th scope="row">{e(d)}</th><td>{e(w)}</td><td>{e(c)}</td></tr>' for d, w, c in WT_NEXT)
     wt_faq = [
-        ("What time is the MLP Nations Cup final?",
-         "The MLP Nations Cup final was Sunday, November 1, 2026 at 2 p.m. CT at Brookhaven Country Club in Farmers Branch, Texas. Team USA beat Latin America 3-0. The semifinals were at 10 a.m. and 11:30 a.m. CT. Matches streamed on PickleballTV and the PickleballTV app. Results are on our MLP Nations Cup page."),
+        ("How do I watch PPA pickleball this week?",
+         "The Proton Daytona Beach Open streams on the PPA's published windows, all in ET: YouTube Monday 8 a.m.–4 p.m. for qualifying; PickleballTV App and YouTube Tuesday–Wednesday, 12–8 p.m.; PickleballTV Thursday–Saturday 12–8 p.m. and Sunday finals 12–5 p.m. Windows can move."),
+        ("Where is the Proton Daytona Beach Open, and when is it?",
+         "November 16–22, 2026, at Pictona at Holly Hill, 1060 Ridgewood Ave, Holly Hill, Florida 32117, per the official PPA event page. It is a 1,000-point PPA Open with a listed $1,063,327 total payout, including appearance fees."),
+        ("Is the Daytona Beach Open on Tennis Channel?",
+         "No. The PPA watch schedule, read November 17, 2026, does not list a Tennis Channel window for this event. The next listed Tennis Channel windows are at the Veolia Malibu Showcase, December 17–20, 2026."),
+        ("What time does Daytona coverage start?",
+         "The PPA event page lists first serve at 8 a.m. ET Monday, November 16, and 10 a.m. ET Tuesday through Sunday. Featured broadcast windows on the PPA watch page start at 12 p.m. ET Tuesday through Sunday. Confirm that day's order of play."),
         ("Is PickleballTV free?",
-         "Partly. PickleballTV runs a free 24/7 channel with selected matches and original shows, offered on Fubo, Samsung TV Plus, Roku, Fire TV and Plex. Every court, full replays and DVR features need a paid PickleballTV app subscription."),
+         "Partly. PickleballTV's site, read November 17, 2026, bills a free 24/7 channel with no sign-up, also on Prime Video, The Roku Channel, Samsung TV Plus and more. Every court, full replays and DVR features need the paid PickleballTV app."),
         ("How much does the PickleballTV app cost?",
-         "The App Store and Google Play listings say full access costs $5.99 a month or $59.99 a year, with a 30-day free trial. The app streams up to six courts live per event, plus on-demand replays."),
+         "The official PickleballTV plans page, plus the App Store and Google Play listings, read November 17, 2026, list full access at $5.99 a month or $59.99 a year, with a 30-day free trial. Listings say the app streams up to six courts live per event, plus replays."),
         ("What channel is pro pickleball on?",
-         "Most pro pickleball streams on PickleballTV. In 2026 the PPA Tour also put select rounds on Tennis Channel, FS1 and FS2, and CBS aired Championship Sunday at the Carvana Masters. MLP matches aired on CBS and FS1. The APP Tour uses ESPN+, APPTV on YouTube, and national windows on ESPN2 and CBS Sports Network."),
-        ("Is Pickleball Worlds 2026 on TV?",
-         "The Celebrity Pro-Am is on Tennis Channel on Thursday, November 5, 7 to 9 p.m. CT. The pro main draw, November 3 to 8, streams on PickleballTV, per United Pickleball and the PPA Tour."),
-        ("How can I watch PPA Worlds 2026?",
-         "United Pickleball says every day of the main draw, from the round of 64 on Tuesday, November 3 through Championship Sunday on November 8, is live on PickleballTV. The Celebrity Pro-Am is on Tennis Channel and PickleballTV on Thursday, November 5, from 7 to 9 p.m. CT."),
-        ("How do I watch the APP Tour?",
-         "At 2026 APP events, Championship Court has aired on ESPN+ and the Players Court on APPTV on YouTube, per the APP. Some Championship Sundays also had national windows on ESPN2 or CBS Sports Network."),
+         "Most pro pickleball streams on PickleballTV. In 2026 the PPA also put select rounds on Tennis Channel, FS1 and FS2, and CBS aired the Carvana Masters final. MLP aired on CBS and FS1. The APP Tour uses ESPN+, APPTV on YouTube, and some ESPN2 and CBS Sports Network windows."),
         ("How can I watch USA Pickleball Nationals 2026?",
-         "The official Nationals site says every match at the 2026 Oceanview USA Pickleball National Championships, October 31 to November 8 in San Diego, is livestreamed and recorded by VS Sports."),
+         "The official Nationals site said every match at the 2026 Oceanview USA Pickleball National Championships, October 31 to November 8 in San Diego, was livestreamed and recorded by VS Sports."),
     ]
     wt_faq_html, wt_faq_ld = faq(wt_faq)
     import os as _os
     from zoneinfo import ZoneInfo as _ZI
     _bd = _os.environ.get("DTP_BUILD_DATE")
     build_day = _dt.date.fromisoformat(_bd) if _bd else _dt.datetime.now(_ZI("America/Chicago")).date()
-    _sat, _sun = _dt.date(2026, 11, 7), _dt.date(2026, 11, 8)
     _built = build_day.strftime("%B %-d, %Y")
-    _wt_link = '<a href="../events/opendoor-pickleball-world-championships.html#this-weekend">Worlds weekend schedule</a>'
-    if build_day == _sat:
-        wt_weekend = (f'<p><b>Page built {_built}.</b> The published schedule has semifinals that day on <b>PickleballTV</b> from 11 AM to 7 PM CT, '
-                      f'and Championship Sunday on November 8, first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window, not an event-end clock. '
-                      f'A November 7 reading of United Pickleball marked Monday through Friday completed. Full table: {_wt_link}.</p>')
-        wt_week_note = f'This page was built {_built}. PPA Worlds semifinals are on the published Saturday schedule, and Championship Sunday is November 8.'
-    elif build_day == _sun:
-        wt_weekend = (f'<p><b>Page built {_built}.</b> Semifinals were Saturday, November 7 (PickleballTV 11 AM to 7 PM CT). '
-                      f'Championship Sunday is November 8: first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window. Full table: {_wt_link}.</p>')
-        wt_week_note = f'This page was built {_built}. Championship Sunday is the remaining published PPA Worlds day. Semifinals were Saturday, November 7.'
-    elif build_day > _sun:
-        wt_weekend = (f'<p><b>Page built {_built}, after Championship Sunday.</b> Published windows were semifinals on Saturday, November 7, on <b>PickleballTV</b> from 11 AM to 7 PM CT, '
-                      f'and Championship Sunday on November 8, first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window, not an event-end clock. Full table: {_wt_link}.</p>')
-        wt_week_note = f'This page was built {_built}. The published PPA Worlds windows were semifinals on November 7 and Championship Sunday on November 8.'
+    _sat, _sun = _dt.date(2026, 11, 7), _dt.date(2026, 11, 8)  # used by the Worlds page below
+    _d_start, _d_end = _dt.date(2026, 11, 16), _dt.date(2026, 11, 22)
+    _d_rounds = {
+        _dt.date(2026, 11, 16): "pro qualifying, published on YouTube from 8 a.m. to 4 p.m. ET",
+        _dt.date(2026, 11, 17): "the round of 64: PickleballTV App for Humana Championship Court and YouTube for the Carvana Grandstand and more pro courts, 12–8 p.m. ET",
+        _dt.date(2026, 11, 18): "the round of 32: PickleballTV App for Humana Championship Court and YouTube for the Carvana Grandstand and more pro courts, 12–8 p.m. ET",
+        _dt.date(2026, 11, 19): "the round of 16 on PickleballTV, 12–8 p.m. ET",
+        _dt.date(2026, 11, 20): "quarterfinals on PickleballTV, 12–8 p.m. ET",
+        _dt.date(2026, 11, 21): "semifinals on PickleballTV, 12–8 p.m. ET",
+        _dt.date(2026, 11, 22): "Championship Sunday on PickleballTV, 12–5 p.m. ET",
+    }
+    if _d_start <= build_day <= _d_end:
+        today_round = _d_rounds[build_day]
+        wt_lead = (f'<p><b>Page built {_built}.</b> This week is the <b>Proton Daytona Beach Open</b> at Pictona at Holly Hill in Holly Hill, Florida (November 16–22, 2026). '
+                   f'Today on the published schedule: {today_round}. Windows can move — confirm on the {ext(WT_PPA, "PPA watch page")}.</p>')
+        wt_week_note = f'This page was built {_built}, during the Proton Daytona Beach Open (November 16–22). Today\'s published session is listed in the table.'
+        wt_bucket = "during"
+    elif build_day < _d_start:
+        wt_lead = (f'<p><b>Page built {_built}.</b> The next listed PPA event is the <b>Proton Daytona Beach Open</b>, November 16–22, 2026, at Pictona at Holly Hill in Holly Hill, Florida. '
+                   f'Published watch windows are in the table below, from the {ext(WT_PPA, "PPA watch page")}. They can move.</p>')
+        wt_week_note = f'This page was built {_built}, before the Proton Daytona Beach Open opens November 16.'
+        wt_bucket = "before"
     else:
-        wt_weekend = (f'<p><b>Page built {_built}.</b> Published windows: semifinals Saturday, November 7, on <b>PickleballTV</b> from 11 AM to 7 PM CT, '
-                      f'and Championship Sunday November 8, first serve 10 AM CT, PickleballTV 10 AM to 4 PM CT. The 4 PM time is the broadcast window. Full table: {_wt_link}.</p>')
-        wt_week_note = f'This page was built {_built}. The published PPA Worlds windows are semifinals on November 7 and Championship Sunday on November 8.'
-    watch = f'''<h1>How to watch pro pickleball on TV and streaming (2026)</h1>
-<p class="meta">Where the PPA Tour, Major League Pickleball, the APP Tour and USA Pickleball Nationals stream and air, from the tours' own pages and the PickleballTV app listings, read {wt_checked}. Broadcast windows move, so confirm on the linked schedule before you tune in. Times are Central (CT) unless noted.</p>
+        wt_lead = (f'<p><b>Page built {_built}, after Championship Sunday.</b> The Proton Daytona Beach Open ran November 16–22, 2026, at Pictona at Holly Hill. '
+                   f'The published windows below were on the {ext(WT_PPA, "PPA watch page")} when we read it on {wt_checked}. Later events are in the coming-up table.</p>')
+        wt_week_note = f'This page was built {_built}, after the Proton Daytona Beach Open (November 16–22, 2026).'
+        wt_bucket = "after"
+    watch = f'''<h1>How to watch PPA pickleball on TV and streaming (2026)</h1>
+<p class="meta">Where the PPA Tour, Major League Pickleball, the APP Tour and USA Pickleball Nationals stream and air, from the tours' own pages and the PickleballTV listings, read {wt_checked}. Broadcast windows move, so confirm on the linked schedule before you tune in. Times below follow the official PPA listings in Eastern (ET); Central (CT) is one hour earlier.</p>
+{wt_lead}
 <h2>The short answer</h2>
 <ul>
-<li><b>PPA Tour and MLP:</b> stream on <b>PickleballTV</b>. The {ext(WT_PPA, "PPA Tour")} says PickleballTV streams every round of every Carvana PPA Tour event, with marquee rounds on national TV.</li>
+<li><b>This week — how to watch PPA pickleball:</b> the {ext(WT_PPA_EV, "Proton Daytona Beach Open")} runs <b>November 16–22, 2026</b> at Pictona at Holly Hill in Holly Hill, Florida. The {ext(WT_PPA, "PPA watch page")} lists <b>YouTube</b> for Monday qualifying and for Tuesday–Wednesday outer courts, the <b>PickleballTV app</b> for Tuesday–Wednesday Championship Court, and <b>PickleballTV</b> from the round of 16 through Championship Sunday. It does not list Tennis Channel for this event.</li>
+<li><b>PPA Tour and MLP in general:</b> stream on <b>PickleballTV</b>. The PPA says PickleballTV streams every round of every Carvana PPA Tour event, with select rounds on national TV at some stops — not this one, on the schedule we read.</li>
 <li><b>APP Tour:</b> <b>ESPN+</b> for Championship Court and <b>APPTV on YouTube</b> for the Players Court, per the {ext(WT_APP_DET, "APP")}.</li>
-<li><b>USA Pickleball Nationals:</b> every match is livestreamed and recorded by <b>VS Sports</b>, per the {ext(WT_UN_LIVE, "official Nationals site")}.</li>
+<li><b>USA Pickleball Nationals 2026</b> (October 31–November 8): every match was livestreamed and recorded by <b>VS Sports</b>, per the {ext(WT_UN_LIVE, "official Nationals site")}.</li>
 </ul>
-<h2 id="nations-cup-final">MLP Nations Cup final: result (Sunday Nov 1)</h2>
-<p>The inaugural MLP Nations Cup final was <b>Sunday, November 1, 2026</b> at Brookhaven Country Club in Farmers Branch, Texas. <b>Team USA beat Latin America 3-0.</b> Scores and the published watch windows are on our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026 page</a>. The schedule {ext(WT_NC_MLP, "MLP published")} before the event, all on Championship Court, was:</p>
-<ul><li><b>Semifinal 1:</b> 10:00 AM CT (Group A No. 2 vs Group B No. 1). Result: Latin America def. Asia Domestic 3-1.</li><li><b>Semifinal 2:</b> 11:30 AM CT (Group A No. 1 vs Group B No. 2). Result: USA def. Europe East 3-1.</li><li><b>Final:</b> 2:00 PM CT. Result: USA def. Latin America 3-0.</li></ul>
-<p><b>Where it streamed:</b> <b>PickleballTV</b> and the PickleballTV app. MLP said all Nations Cup matches were available there, and {ext(WT_NC_UP, "United Pickleball")} listed PickleballTV windows of 10 AM to 1 PM CT for the semifinals and 2 to 3:30 PM CT for the final.</p>
-<h2 id="ppa-worlds">How to watch PPA Worlds 2026 (published windows)</h2>
-{wt_weekend}
-<ul><li><b>Mon Nov 2 (completed):</b> pro qualifying in all five pro events; no stream window listed. First serve was recorded as 8 AM CT per United Pickleball and the PPA's Oct 28 X post; the PPA event page still listed 11 AM on a November 7 recheck. Details: <a href="../events/opendoor-pickleball-world-championships.html#qualifying">Worlds qualifying Monday</a>.</li><li><b>Tue Nov 3 to Fri Nov 6 (completed):</b> round of 64 through quarterfinals on <b>PickleballTV</b>, 11 AM to 7 PM CT (6 PM on Thursday).</li><li><b>Thu Nov 5 (completed):</b> Celebrity Pro-Am on <b>Tennis Channel</b> and PickleballTV, 7 to 9 PM CT.</li><li><b>Sat Nov 7:</b> semifinals on <b>PickleballTV</b>, 11 AM to 7 PM CT.</li><li><b>Sun Nov 8:</b> Championship Sunday on PickleballTV, 10 AM to 4 PM CT. The 4 PM time is the broadcast window.</li></ul>
-<p>The PPA released the seeded draws on October 31. Full day-by-day table, draws and FAQs: <a href="../events/opendoor-pickleball-world-championships.html#how-to-watch">how to watch Pickleball Worlds 2026</a>.</p>
-<p><b>Gear up for Worlds:</b> <a href="../paddle-volair-mach-1-forza.html">Volair Mach 1 Forza</a> · <a href="../paddle-volair-mach-2-forza.html">Volair Mach 2 Forza</a> · <a href="../paddle-volair-cmd-el-16mm.html">Volair CMD EL 16mm</a> · <a href="../guides/pickleball-gift-guide-2026.html">2026 gift guide</a> · <a href="../discount-codes.html">discount codes</a></p>
+<h2 id="daytona">How to watch the Proton Daytona Beach Open (Nov 16–22)</h2>
+<p>The official event page lists a <b>1,000-point</b> PPA Open with a <b>$1,063,327</b> total payout, including appearance fees, at <b>Pictona at Holly Hill</b>, 1060 Ridgewood Ave, Holly Hill, FL 32117. {wt_week_note} Use these steps, then confirm the day's window — the PPA says windows are subject to change.</p>
+<ol>
+<li><b>Check the official schedule</b> on the {ext(WT_PPA, "PPA watch page")} or the {ext(WT_PPA_EV, "event page")} before you tune in.</li>
+<li><b>Monday, November 16, qualifying:</b> watch on <b>YouTube</b>, 8 a.m.–4 p.m. ET (7 a.m.–3 p.m. CT). The event page lists first serve at 8 a.m. ET.</li>
+<li><b>Tuesday–Wednesday, rounds of 64 and 32:</b> <b>PickleballTV App</b> for Humana Championship Court and <b>YouTube</b> for the Carvana Grandstand and more pro courts, both 12–8 p.m. ET (11 a.m.–7 p.m. CT). First serve is listed at 10 a.m. ET.</li>
+<li><b>Thursday–Saturday, round of 16 through semifinals:</b> watch on <b>PickleballTV</b>, 12–8 p.m. ET (11 a.m.–7 p.m. CT).</li>
+<li><b>Sunday, November 22, Championship Sunday:</b> watch on <b>PickleballTV</b>, 12–5 p.m. ET (11 a.m.–4 p.m. CT).</li>
+</ol>
+<p>Early-round YouTube courts have run on the official {ext(WT_YT_SC, "PPA Streamed Courts")} channel. The {ext(WT_YT_PPA, "PPA Tour YouTube channel")} carries tour shows, including the draw reveal below.</p>
+<div class="tbl"><table><thead><tr><th>Day</th><th>Session</th><th>Where to watch</th><th>Published window</th></tr></thead><tbody>{wt_day_rows}</tbody></table></div>
+<p class="meta">Source: {ext(WT_PPA, "PPA watch page")} and {ext(WT_PPA_TV, "PPA TV schedule")}, read {wt_checked}. The event page also lists first serve at 8 a.m. ET Monday and 10 a.m. ET Tuesday–Sunday (local time at Holly Hill, which is Eastern in November). Those first-serve times are earlier than the featured broadcast windows on Tuesday through Sunday.</p>
+<h2 id="video">Draw reveal</h2>
+<p>The official PPA Tour YouTube channel posted this draw reveal show for the Proton Daytona Beach Open. It is a primer for the week, not a live court stream.</p>
+{embed("l9Z1wO2dUNs", "Draws are SET for the Proton Daytona Beach Open | Draw Reveal Show | Ensure Max Protein", short=False)}
 <h2>Who streams what</h2>
 <div class="tbl"><table><thead><tr><th>Tour or event</th><th>Streaming</th><th>National TV</th><th>Source</th></tr></thead><tbody>{wt_who_rows}</tbody></table></div>
 <p>The CBS window at the Carvana Masters ran 12 to 2 p.m. ET on Championship Sunday in January 2026, per {ext(WT_CBS, "Pickleball.com")}. MLP's viewer numbers are from its {ext(WT_MLP, "October 28, 2026 release")}.</p>
 <h2>PickleballTV: free channel vs the app</h2>
-<p><b>The free channel.</b> {ext(WT_PBTV, "PickleballTV")} runs 24/7 and says it is offered on <b>Fubo, Samsung TV Plus, Roku, Fire TV and Plex</b>. The app listings describe this free FAST channel as carrying selected matches and original shows.</p>
-<p><b>The paid app.</b> The {ext(WT_IOS, "App Store")} (iPhone, iPad, Apple TV) and {ext(WT_PLAY, "Google Play")} listings say the app is a free download, and full access costs <b>$5.99 a month or $59.99 a year</b>, with a 30-day free trial. Paid access adds up to six live courts per event, full replays on demand, and pause and rewind. The listings say it covers more than 3,000 live hours from 32 PPA and MLP tournaments a year.</p>
+<p><b>The free channel.</b> {ext(WT_PBTV, "PickleballTV")}, read {wt_checked}, bills itself as live, 24/7 and free, with no sign-up required, and says it is also on <b>Prime Video, The Roku Channel, Samsung TV Plus and more</b>. The app listings describe a free FAST channel that carries selected matches and original shows.</p>
+<p><b>The paid app.</b> The official {ext(WT_PLANS, "PickleballTV plans page")}, plus the {ext(WT_IOS, "App Store")} and {ext(WT_PLAY, "Google Play")} listings, read {wt_checked}, say full access costs <b>$5.99 a month or $59.99 a year</b>, with a 30-day free trial. Paid access adds up to six live courts per event, full replays on demand, and pause and rewind. The listings say it covers more than 3,000 live hours from 32 PPA and MLP tournaments a year.</p>
 <p>So if you only want the feature court, the free channel may be enough. If you want to follow one player on an outer court, or rewatch a match, you need the app.</p>
-<h2>This week: Nations Cup, Nationals and PPA Worlds</h2>
-<p>The table is the published week of windows, not a live board. The Nations Cup ended November 1 (Team USA won; <a href="../events/mlp-nations-cup-2026.html">results</a>). {wt_week_note} Nations Cup times are converted from the {ext(WT_PPA, "PPA's watch page")} (listed in ET). PPA Worlds times are from {ext(WT_UP_PRO, "United Pickleball")} (listed in CT), which says windows can move. All times CT.</p>
-<div class="tbl"><table><thead><tr><th>Day</th><th>Event</th><th>Where to watch</th><th>Window (CT)</th></tr></thead><tbody>{wt_week_rows}</tbody></table></div>
-<p>PPA pro qualifying on Monday, November 2 had no stream window on the PPA's schedule when we checked. For tickets, parking and rosters, see our <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026</a>, <a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026</a> and <a href="../events/opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> guides.</p>
-<p>For the full Worlds day-by-day schedule, ticket prices and entrants, see <a href="../events/opendoor-pickleball-world-championships.html">Pickleball World Championships 2026: schedule, TV and tickets</a>.</p>
-<h2>Coming up after Worlds</h2>
+<h2>Coming up after Daytona</h2>
 <div class="tbl"><table><thead><tr><th>Dates</th><th>Event</th><th>Coverage listed</th></tr></thead><tbody>{wt_next_rows}</tbody></table></div>
 <p>PPA rows are from the {ext(WT_PPA_TV, "PPA TV schedule")}. APP rows are from the APP's {ext(WT_APP_CAL, "2026 nationally televised calendar")}. The APP posts exact channels and times in a broadcast post during each event, like its {ext(WT_APP_OP, "Overland Park Championship Sunday post")} (APPTV, ESPN+ and ESPN2). Full pro calendar: <a href="../tournaments.html">upcoming tournaments</a>.</p>
+<h2>Recently completed</h2>
+<p>The <a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup</a> final was Sunday, November 1, 2026 at Brookhaven Country Club in Farmers Branch, Texas. Team USA beat Latin America 3-0. Matches streamed on PickleballTV. <a href="../events/opendoor-pickleball-world-championships.html">PPA Worlds 2026</a> ran November 2–8 at the same club; the pro main draw streamed on PickleballTV, and the Celebrity Pro-Am aired on Tennis Channel and PickleballTV on November 5, 7 to 9 p.m. CT. <a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026</a> ran October 31–November 8 in San Diego, with every match on VS Sports.</p>
 <h2>Tips</h2>
 <ul>
-<li><b>Check the time zone.</b> The PPA lists ET. United Pickleball's Worlds pages list CT.</li>
-<li><b>Look for the official schedule on the day.</b> Order of play and court assignments come out shortly before each day, so a match you want may land on an outer court that only the paid app carries.</li>
-<li><b>Replays:</b> the PickleballTV app has on-demand replays, and VS Sports records every Nationals match.</li>
+<li><b>Check the time zone.</b> The PPA lists Daytona windows in ET. This page also shows CT, one hour earlier. United Pickleball's Worlds pages listed CT.</li>
+<li><b>Look for the official schedule on the day.</b> Order of play and court assignments come out shortly before each day, so a match you want may land on an outer court that only the paid app or a YouTube court carries.</li>
+<li><b>Replays:</b> the PickleballTV app has on-demand replays, and VS Sports recorded every 2026 Nationals match.</li>
 </ul>
 <h2>Gear while you watch</h2>
 <p>Seen a paddle you like on the broadcast? Our <a href="../pro-paddles.html">pro paddles page</a> lists what the pros use. Then check the <a href="/discount-codes">pickleball discount codes</a> and today's <a href="../deals.html">paddle deals</a> before you pay full price.</p>
 {wt_faq_html}
-{sources([("Major League Pickleball: Nations Cup match schedule", WT_NC_MLP, f"semifinal and final times (CT) and PickleballTV, read October 31, 2026"),
-          ("United Pickleball: MLP Nations Cup", WT_NC_UP, "PickleballTV windows for Sunday semifinals and final (CT), read October 31, 2026"),
-          ("PPA Tour: Watch pro pickleball", WT_PPA, f"PickleballTV coverage, Nations Cup and Worlds windows (ET), read {wt_checked}"),
-          ("PPA Tour: TV schedule", WT_PPA_TV, f"2026 broadcast and streaming windows, read {wt_checked}"),
-          ("United Pickleball: Worlds pro play", WT_UP_PRO, f"Worlds windows in CT, read {wt_checked}"),
-          ("PickleballTV", WT_PBTV, "free 24/7 channel and platforms"),
-          ("PickleballTV on the App Store", WT_IOS, f"app prices and features, read {wt_checked}"),
-          ("PickleballTV on Google Play", WT_PLAY, "app prices and features"),
+{sources([("PPA Tour: Watch pro pickleball", WT_PPA, f"Daytona windows in ET, PickleballTV and YouTube, no Tennis Channel listed for this event, read {wt_checked}"),
+          ("PPA Tour: TV schedule", WT_PPA_TV, f"Daytona and Veolia Malibu Showcase windows, read {wt_checked}"),
+          ("PPA Tour: Proton Daytona Beach Open", WT_PPA_EV, f"dates, Pictona at Holly Hill address, 1,000-point Open, $1,063,327 payout, first-serve times, read {wt_checked}"),
+          ("PickleballTV", WT_PBTV, f"free 24/7 channel, no sign-up, Prime Video, The Roku Channel, Samsung TV Plus and more, read {wt_checked}"),
+          ("PickleballTV plans", WT_PLANS, f"$5.99/month or $59.99/year, read {wt_checked}"),
+          ("PickleballTV on the App Store", WT_IOS, f"app prices, 30-day trial and features, read {wt_checked}"),
+          ("PickleballTV on Google Play", WT_PLAY, f"app prices, 30-day trial and features, read {wt_checked}"),
+          ("PPA Streamed Courts on YouTube", WT_YT_SC, "official outer-court live streams"),
+          ("PPA Tour on YouTube: Daytona draw reveal", "https://www.youtube.com/watch?v=l9Z1wO2dUNs", "official draw reveal show, checked November 17, 2026"),
           ("Pickleball.com: Carvana Masters broadcast schedule", WT_CBS, "CBS window, January 13, 2026"),
           ("Major League Pickleball: Houston Hammers release", WT_MLP, "2026 CBS and FS1 viewership, October 28, 2026"),
+          ("Major League Pickleball: Nations Cup match schedule", WT_NC_MLP, "semifinal and final times (CT) and PickleballTV, read October 31, 2026"),
+          ("United Pickleball: MLP Nations Cup", WT_NC_UP, "PickleballTV windows for Sunday semifinals and final (CT), read October 31, 2026"),
+          ("United Pickleball: Worlds pro play", WT_UP_PRO, "Worlds windows in CT"),
           ("APP: 2026 APP Tour evolution", WT_APP_CAL, "2026 nationally televised calendar, December 23, 2025"),
           ("APP: Detroit Open preview", WT_APP_DET, "ESPN+, APPTV on YouTube, ESPN2 and CBS Sports Network, August 19, 2026"),
           ("APP: Championship Sunday from Overland Park", WT_APP_OP, "APPTV, ESPN+ and ESPN2, September 20, 2026"),
           ("USA Pickleball Nationals: Livestream", WT_UN_LIVE, "VS Sports livestream and recordings")])}
 {gift_pages.holiday_note("watch")}
 {more("guides/how-to-watch-pro-pickleball.html")}'''
-    page("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball: TV channels, PickleballTV and streaming (2026)", watch,
-         "How to watch pro pickleball in 2026: PickleballTV free channel vs $5.99 app, PPA and MLP on Tennis Channel, FS1 and CBS, APP on ESPN+, plus PPA Worlds windows.",
-         fresh={"checked": WT_CHECKED, "who": WT_WHO, "week": WT_WEEK, "next": WT_NEXT, "faq": wt_faq, "weekend_bucket": ("sat" if build_day == _sat else "sun" if build_day == _sun else "after" if build_day > _sun else "before")},
+    page("guides/how-to-watch-pro-pickleball.html", "How to watch PPA pickleball: Daytona, PickleballTV and streaming (2026)", watch,
+         "How to watch PPA pickleball at the Proton Daytona Beach Open (Nov 16–22, 2026): YouTube, the PickleballTV app and PickleballTV, plus the free PickleballTV channel vs the $5.99 app.",
+         fresh={"checked": WT_CHECKED, "who": WT_WHO, "daytona": WT_DAYTONA, "next": WT_NEXT, "faq": wt_faq, "weekend_bucket": wt_bucket},
          schema=[wt_faq_ld])
 
     # ----- PPA Worlds 2026 -----
