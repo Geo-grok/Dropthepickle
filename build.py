@@ -4,8 +4,16 @@ import json, pathlib, shutil, html, urllib.parse, datetime, re, hashlib, os
 from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).parent; DIST = ROOT / "dist"
 C = json.loads((ROOT / "config.json").read_text())
-# Google Fonts: loaded non-blocking (preload + media="print" swap, <noscript> fallback); display=swap shows fallback text at once.
-GFONTS = "https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap"
+# Web fonts are self-hosted from assets/fonts (Anton, Bebas Neue, Inter, Oswald; SIL OFL, see assets/fonts/OFL.txt), copied
+# from Google Fonts' latin + latin-ext files with the same @font-face rules (weights, unicode-range, display=swap).
+# Same origin = no extra DNS/TLS to fonts.googleapis.com + fonts.gstatic.com on a phone, and the font request no
+# longer waits on a third-party CSS file. Each URL carries ?v=<content hash> so the Worker can cache it for a year.
+FONT_DIR = ROOT / "assets" / "fonts"
+FONT_V = {f.name: hashlib.sha256(f.read_bytes()).hexdigest()[:10] for f in sorted(FONT_DIR.glob("*.woff2"))}
+def font_url(name): return f"/fonts/{name}?v={FONT_V[name]}"
+FONT_CSS = re.sub(r"url\(/fonts/([\w.-]+\.woff2)\)", lambda m: f"url({font_url(m.group(1))})", (FONT_DIR / "fonts.css").read_text())
+# Preload the two latin faces every page paints above the fold: Inter (body, home h1) and Oswald (h1-h3).
+FONT_PRELOAD = "".join(f'<link rel="preload" as="font" type="font/woff2" href="{font_url(n)}" crossorigin>' for n in ("inter-latin.woff2", "oswald-latin.woff2"))
 
 def D(n):
     p = ROOT / "data" / n
@@ -322,6 +330,7 @@ def _with_fallbacks(css):
         css = re.sub(r'(font(?:-family)?:[^;{}]*?(?<![\w"-])' + re.escape(fam) + r')(?=\s*,)', lambda m: m.group(1) + f',"{fb}"', css)
     return css
 CSS = _with_fallbacks(CSS)
+CSS = FONT_CSS + CSS  # self-hosted @font-face rules (see FONT_DIR above)
 # Content hash for the stylesheet URL (style.css?v=...). The Worker caches versioned style.css for a year,
 # so a CSS change gets a new URL and browsers never keep stale styles.
 CSS_V = hashlib.sha256(CSS.encode("utf-8")).hexdigest()[:10]
@@ -471,6 +480,9 @@ def publish_brand():
         shutil.copyfile(brand / name, DIST / name)
     for name in ("logo-full.png", "logo-full.webp", "avatar.png", "avatar.webp", "favicon.ico", "favicon-32.png", "apple-touch-icon.png"):
         shutil.copyfile(web / name, DIST / name)
+    (DIST / "fonts").mkdir(parents=True, exist_ok=True)
+    for name in [*FONT_V, "OFL.txt"]:
+        shutil.copyfile(FONT_DIR / name, DIST / "fonts" / name)
 def publish_media():
     """Public files under media/, including media/receipts/. Served at /media/<path>."""
     src = ROOT / "media"
@@ -613,8 +625,7 @@ def page(fn, title, body, desc="", full=False, *, fresh=None, schema=None, crumb
 <title>{e(doc_title)}</title><meta name="description" content="{e(desc)}"><meta name="theme-color" content="#0b1426">{'<meta name="robots" content="noindex,follow">' if noindex else ""}
 <meta property="og:type" content="website"><meta property="og:site_name" content="{e(n)}"><meta property="og:title" content="{e(doc_title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}"><meta property="og:image" content="{e(img)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="DropThePickle">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(doc_title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{e(img)}">
-<link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="{GFONTS}"><link rel="stylesheet" href="{GFONTS}" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="{GFONTS}"></noscript>
+<link rel="icon" href="{rel("favicon.ico")}" sizes="48x48"><link rel="icon" type="image/png" href="{rel("favicon-32.png")}" sizes="32x32"><link rel="apple-touch-icon" href="{rel("apple-touch-icon.png")}" sizes="180x180">{FONT_PRELOAD}
 <link rel="stylesheet" href="{rel("style.css")}?v={CSS_V}"><link rel="canonical" href="{e(url)}"><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <script type="application/ld+json">{ld}</script>
 <script async src="https://aromatic-caribou-889.convex.site/api/a/am_WGwXq9YSwrdbKKse"></script></head>

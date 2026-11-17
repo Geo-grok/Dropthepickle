@@ -95,6 +95,8 @@ const IMG_EXT = /\.(png|webp|jpe?g|gif|svg|ico|avif)$/i;
 function staticCacheControl(url) {
   if (url.pathname === "/style.css") return url.searchParams.has("v") ? "public, max-age=31536000, immutable" : null;
   if (IMG_EXT.test(url.pathname)) return "public, max-age=86400, stale-while-revalidate=604800";
+  // Self-hosted web fonts: build.py links /fonts/<name>.woff2?v=<content hash>, so a font change gets a new URL.
+  if (/^\/fonts\/[\w.-]+\.woff2$/.test(url.pathname)) return url.searchParams.has("v") ? "public, max-age=31536000, immutable" : "public, max-age=86400";
   return null;
 }
 
