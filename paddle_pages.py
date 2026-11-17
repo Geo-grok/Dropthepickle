@@ -32,6 +32,11 @@ VS_SEO = {
         "h1": "Selkirk Omni vs Boomstik Price",
         "query": "omni vs boomstick price",
     },
+    "vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html": {
+        "title": "Boomstik vs Perseus Pro V: Specs",
+        "h1": "Boomstik vs Perseus Pro V",
+        "query": "boomstik vs perseus pro v",
+    },
 }
 
 def slug(p): return "paddle-" + re.sub(r"[^a-z0-9]+", "-", f'{p["brand"]} {p["model"]}'.lower().replace("¹","1").replace("³","3")).strip("-") + ".html"
@@ -309,6 +314,14 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             b = sorted(elong[elong_brands[j]], key=lambda p: p["model"].lower())[0]
             add_pair(a, b)
     if len(vs_pairs) > 70: vs_pairs = vs_pairs[:70]
+    # Forced SEO pairs the one-per-brand-combo elongated matcher does not emit.
+    def paddle_named(brand, model):
+        hits = [p for p in PP if p["brand"] == brand and p["model"] == model]
+        return hits[0] if hits else None
+    _force_boom = paddle_named("Selkirk", "LABS Project Boomstik")
+    _force_perseus = paddle_named("JOOLA", "Perseus Pro V")
+    if _force_boom and _force_perseus:
+        add_pair(_force_perseus, _force_boom)
     # paddle detail pages (built after the pair list so each one links to its own head-to-head pages)
     vs_of = {}
     for A, B in vs_pairs:
@@ -407,7 +420,25 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 (f"How much is the {A['model']} vs the {B['model']}?",
                  price_line + " We only report the maker's own price from our latest check; we do not invent street or coupon prices."),
             ]
-            if "boomstik" in fn:
+            VS_BOOM_PER = "vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html"
+            if fn == VS_BOOM_PER:
+                boom, per = (A, B) if "Boomstik" in A["model"] else (B, A)
+                faqs = [
+                    ("What is the difference between the Boomstik and the Perseus Pro V?",
+                     f"Published fields differ: the Perseus Pro V lists core {per['core']} and shape {per['shape']}; "
+                     f"the Boomstik lists core {boom['core']} and shape {boom['shape']}. "
+                     "Weights and dated prices are in the table. This is not a playtest."),
+                    ("How much is the Boomstik vs the Perseus Pro V?",
+                     f"At our latest maker-price check, the Boomstik was {_price(boom)}. The Perseus Pro V was {_price(per)}. "
+                     "We only report the maker's own price from that check, not a street or coupon price."),
+                    ("Is the Selkirk Boomstik the same as Boomstick?",
+                     "Yes. The maker lists this paddle as the Selkirk LABS Project Boomstik (no c). Searches for Boomstick vs Perseus refer to the same model."),
+                    ("Which should I buy, the Boomstik or the Perseus Pro V?",
+                     f"Compare the published fields: Perseus Pro V lists core {per['core']} and shape {per['shape']}; "
+                     f"Boomstik lists core {boom['core']}, shape {boom['shape']}, and a lower checked maker price. "
+                     "Choose from those file facts. This is not a playtest or a rating."),
+                ]
+            elif "boomstik" in fn:
                 faqs.insert(0, (
                     "Is the Selkirk Boomstik the same as Boomstick?",
                     "Yes. The maker lists this paddle as the Selkirk LABS Project Boomstik (no c). Searches for Omni vs Boomstick price refer to the same model."
@@ -428,13 +459,28 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             if fn == "vs-selkirk-omni-vs-selkirk-slk-era-power.html":
                 also = ' Also see <a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik price and specs</a>.'
             elif fn == "vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html":
-                also = ' Also see <a href="vs-selkirk-omni-vs-selkirk-slk-era-power.html">Selkirk Era vs Omni</a>.'
+                also = ' Also see <a href="vs-selkirk-omni-vs-selkirk-slk-era-power.html">Selkirk Era vs Omni</a> and <a href="vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html">Boomstik vs Perseus Pro V</a>.'
+            elif fn == "vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html":
+                also = (' Also see <a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik</a>, '
+                        '<a href="vs-joola-hyperion-pro-v-vs-joola-perseus-pro-v.html">Perseus Pro V vs Hyperion Pro V</a>, '
+                        '<a href="best-selkirk-paddles.html">best Selkirk paddles</a> and '
+                        '<a href="best-joola-paddles.html">best JOOLA paddles</a>. '
+                        'Codes: <a href="discount-codes/joola.html">JOOLA</a> · <a href="discount-codes/selkirk.html">Selkirk</a>.')
             more = (f'<p class="meta">Paddle pages: <a href="{slug(A)}">{e(an)}</a> · <a href="{slug(B)}">{e(bn)}</a>. '
                     f'Shopping? <a href="/discount-codes">Discount codes</a> · <a href="discount-codes/selkirk.html">Selkirk codes</a> · '
                     f'<a href="compare.html">All comparisons</a>.{also}</p>')
             body = body.replace(vh, vh + glance, 1)
             # Keep a short standalone price line just under the glance for the "omni vs boomstick price" query.
             body = body.replace(glance, glance + f'<p>{e(price_line)}</p>', 1)
+            if fn == "vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html":
+                steps = (
+                    '<h2>How to compare them</h2><ol>'
+                    '<li>Read the at-a-glance prices and published specs above. Those figures come from our dated maker-page checks, not a playtest.</li>'
+                    '<li>Use the table for weight, core, shape and the latest checked price side by side.</li>'
+                    f'<li>Open the <a href="{slug(A)}">{e(an)}</a> and <a href="{slug(B)}">{e(bn)}</a> pages for full spec sheets and reviewer videos, or see <a href="best-selkirk-paddles.html">best Selkirk paddles</a>.</li>'
+                    '</ol>'
+                )
+                body = body.replace(f'<p>{e(price_line)}</p>', f'<p>{e(price_line)}</p>' + steps, 1)
             body += more + faq_html
             # Tight query-matching meta; prices and dates come from the same check used in the body.
             def _short(p):
@@ -445,7 +491,12 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
                 return s
             dates = sorted({_chk(A), _chk(B)})
             when = fmt(dates[-1]) if dates and dates[-1] != "not recorded" else "our latest check"
-            if "boomstik" in fn:
+            if fn == "vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html":
+                boom, per = (A, B) if "Boomstik" in A["model"] else (B, A)
+                sd = (f"Boomstik vs Perseus Pro V: Selkirk LABS Project Boomstik {_short(boom)} vs "
+                      f"JOOLA Perseus Pro V {_short(per)} "
+                      f"at our {when} maker-price check, plus published specs. Not a playtest.")
+            elif "boomstik" in fn:
                 boom, omni = (A, B) if "Boomstik" in A["model"] else (B, A)
                 sd = (f"Omni vs Boomstik price: Selkirk OMNI {_short(omni)} vs "
                       f"LABS Project Boomstik {_short(boom)} "
@@ -500,7 +551,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         "The list is alphabetical, not a price or performance ranking. Elongated shapes add leverage on drives and serves. "
         "Two Selkirk models on this list, the SLK ERA Power and the LABS Project Boomstik, also have head-to-head pages against the OMNI: "
         '<a href="vs-selkirk-omni-vs-selkirk-slk-era-power.html">Selkirk Era vs Omni</a> and '
-        '<a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik price and specs</a>.'
+        '<a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik price and specs</a>. '
+        'For a cross-brand look at the Boomstik, see <a href="vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html">Boomstik vs JOOLA Perseus Pro V</a>.'
     )
     lst("Best pickleball paddles for power", "best-paddles-for-power.html", pw_intro, sorted(pw, key=cur),
         lambda p: "Marketed for power" + (" · elongated option for extra leverage" if "elongated" in p["shape"].lower() else "") + ".")
@@ -524,10 +576,14 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         slugb = re.sub(r"[^a-z0-9]+", "-", brand.lower()).strip("-")
         aud = " Maker prices for this brand are in AUD." if items and items[0]["currency"] != "USD" else ""
         intro = f"Filter: brand is {brand} ({len(items)} paddles in our database).{aud} Not a ranking of {brand} models."
+        if brand == "JOOLA":
+            intro += (' For a cross-brand comparison of the Perseus Pro V, see '
+                      '<a href="vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html">Boomstik vs Perseus Pro V</a>.')
         if brand == "Selkirk":
             intro += (' For a side-by-side look at two of them, see '
-                      '<a href="vs-selkirk-omni-vs-selkirk-slk-era-power.html">Selkirk Era vs Omni</a> or '
-                      '<a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik price and specs</a>.')
+                      '<a href="vs-selkirk-omni-vs-selkirk-slk-era-power.html">Selkirk Era vs Omni</a>, '
+                      '<a href="vs-selkirk-labs-project-boomstik-vs-selkirk-omni.html">Selkirk Omni vs Boomstik price and specs</a>, or '
+                      '<a href="vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html">Boomstik vs JOOLA Perseus Pro V</a>.')
         lst(f"Best {brand} paddles", f"best-{slugb}-paddles.html", intro, items, listed)
     # hub
     cmp_table = spec_table(sorted(PP, key=lambda p: (p["brand"].lower(), p["model"].lower())), "Every paddle in this database: maker price, check date, and published specs. Not a playtest.")
