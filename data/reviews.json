@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "RPM Jade Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=EWnpEpvN5bM",
+   "video_id": "EWnpEpvN5bM",
+   "date": "2026-11-17"
+  },
+  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "4 New Paddles | Vatic’s Revised Evergrit + 3 MPP Paddles | KewCast 130",
@@ -193,14 +201,6 @@
    "date": "2026-11-07"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Honolulu J6CR M105 Paddle Review | On Court Drill Test",
-   "link": "https://www.youtube.com/watch?v=59VuUzSHGLY",
-   "video_id": "59VuUzSHGLY",
-   "date": "2026-11-07"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "RPM Jade Review – Big Spin, High Power, and the Durability Question",
@@ -345,14 +345,6 @@
    "date": "2026-10-30"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "What is Going on with the RPM Jade?",
-   "link": "https://www.youtube.com/watch?v=_Fituzwc7xw",
-   "video_id": "_Fituzwc7xw",
-   "date": "2026-10-29"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
@@ -479,9 +471,25 @@
    "link": "https://www.youtube.com/watch?v=fiU7D2ifU5A",
    "video_id": "fiU7D2ifU5A",
    "date": "2026-10-12"
+  },
+  {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "RPM Jade vs RPM Q2 vs JOOLA Power FX vs RPM V2 vs 11six24 Ultre Power 2 Review",
+   "link": "https://www.youtube.com/watch?v=gukaQpXxdmA",
+   "video_id": "gukaQpXxdmA",
+   "date": "2026-10-10"
   }
  ],
  "all_items": [
+  {
+   "channel": "Pickleball Playbook Paddles",
+   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
+   "title": "RPM Jade Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=EWnpEpvN5bM",
+   "video_id": "EWnpEpvN5bM",
+   "date": "2026-11-17"
+  },
   {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
@@ -747,14 +755,6 @@
    "date": "2026-11-04"
   },
   {
-   "channel": "Pickleball Playbook Paddles",
-   "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "Pickle Poppers Pop N Rush Game Play Paddle Review",
-   "link": "https://www.youtube.com/watch?v=YRizC0ZybDQ",
-   "video_id": "YRizC0ZybDQ",
-   "date": "2026-11-03"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Luzz Cannon XPP M1 Paddle Review | Game Analysis",
@@ -857,14 +857,6 @@
    "link": "https://www.youtube.com/watch?v=OQY04l3nMlM",
    "video_id": "OQY04l3nMlM",
    "date": "2026-10-30"
-  },
-  {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "What is Going on with the RPM Jade?",
-   "link": "https://www.youtube.com/watch?v=_Fituzwc7xw",
-   "video_id": "_Fituzwc7xw",
-   "date": "2026-10-29"
   },
   {
    "channel": "All Drive No Drop Pickleball",
@@ -976,6 +968,14 @@
    "title": "LUZZ Inferno 2 M1 Review: They FINALLY Fixed the Grit 🔥",
    "link": "https://www.youtube.com/watch?v=YZoWGNKKv4w",
    "video_id": "YZoWGNKKv4w",
+   "date": "2026-10-19"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "Pro Pickleball Journey to 10K: MATCH # 85 RPM Friction Pro - Quarter Finals (High Quality 4k)",
+   "link": "https://www.youtube.com/watch?v=UR2ARxpTtxQ",
+   "video_id": "UR2ARxpTtxQ",
    "date": "2026-10-19"
   },
   {
@@ -1540,7 +1540,7 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (5)",
+  "Pickleball Studio": "ok (4)",
   "John Kew Pickleball": "ok (8)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
@@ -1562,7 +1562,7 @@
   "Pickleball Playbook Paddles": "ok (10)",
   "Pickleball Blast": "ok (5)",
   "The Paddle Plug": "ok (11)",
-  "Pickleball Advocate": "ok (10)"
+  "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-16T20:53"
+ "updated": "2026-11-17T19:42"
 }

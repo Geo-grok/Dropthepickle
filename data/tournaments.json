@@ -61,7 +61,7 @@
    "start": "2027-03-02",
    "end": "2027-03-07",
    "location": "Tennis Club at Newport Beach, 11 Clubhouse Dr, Newport Beach, CA 92660",
-   "tickets": ""
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-newport-beach-211406"
   },
   {
    "source": "Carvana PPA Tour",
@@ -112,5 +112,5 @@
  "sources": {
   "Carvana PPA Tour": "ok (12)"
  },
- "updated": "2026-11-16T20:53"
+ "updated": "2026-11-17T19:43"
 }

@@ -20,8 +20,8 @@
   "v": 3
  },
  "best-16mm-paddles.html": {
-  "hash": "a6a4f8b58a8eb94a48a2c69dd460ecfb357b50284c1159377f96a945f2294934",
-  "updated": "2026-11-16",
+  "hash": "0e40e72b0f66fe89fc77383c3766ccea56ec179f598acdd94479c6619f3e2a04",
+  "updated": "2026-11-17",
   "v": 3
  },
  "best-crbn-paddles.html": {
@@ -30,8 +30,8 @@
   "v": 3
  },
  "best-elongated-paddles.html": {
-  "hash": "84fc791b8ea69839a162227ad9e585a9eac7a86554340e100ca40f079caf8727",
-  "updated": "2026-11-16",
+  "hash": "e142cf003d884bb49ca6d66837dec4c5a9c5efe64b991a4a0719c51084c6426b",
+  "updated": "2026-11-17",
   "v": 3
  },
  "best-engage-paddles.html": {
@@ -60,8 +60,8 @@
   "v": 3
  },
  "best-paddles-for-control.html": {
-  "hash": "12ce9c3cf1ee592b5ab547c9df01ed4eae13c95148165bd5a5a63fbfb0e90c15",
-  "updated": "2026-11-16",
+  "hash": "ec5ed80163e1378757d8bd1cce1f8715380d67eae7018809cd5b3d78748c4422",
+  "updated": "2026-11-17",
   "v": 3
  },
  "best-paddles-for-power.html": {
@@ -70,8 +70,8 @@
   "v": 3
  },
  "best-paddles-for-tennis-players.html": {
-  "hash": "32e39eaaa5108c5e86d10256ab1247e9848c25cd4533ed93a7d6b87f58e14da1",
-  "updated": "2026-11-16",
+  "hash": "a1d6121a06e8fc1796dc9e649fea069b0362f91270778c53df9e303a6fdaa82e",
+  "updated": "2026-11-17",
   "v": 3
  },
  "best-paddletek-paddles.html": {
@@ -85,143 +85,13 @@
   "v": 3
  },
  "best-six-zero-paddles.html": {
-  "hash": "4f0a4f680946ec0c69d2e7728a84838e85b1db9226fbfa055b6e97e269b2b3b5",
-  "updated": "2026-11-16",
+  "hash": "54cfcdd817ebb9f1fe60fb22c28284a49894419d7867f6b3e3d4dcc5620c6250",
+  "updated": "2026-11-17",
   "v": 3
  },
  "buzz.html": {
-  "hash": "bed2ad3879d6611629abb9faa4bdf083d9c9e6a9d4e25ad639e572579f27e58a",
-  "updated": "2026-11-13",
-  "v": 3
- },
- "buzz/2026-10-29-boca-raton-hoa-sued-its-former-racquet-sports.html": {
-  "hash": "7c77e785ee231628abfe2663cf211a0b9b60e29912a0e807d5d98d15504aed5d",
-  "updated": "2026-10-29",
-  "v": 3
- },
- "buzz/2026-10-29-courts-watch-champaign-doubles-16-courts-this-saturday.html": {
-  "hash": "36f955e0a44163ce8703b93d6df8348b14eb6d0b3d94c42071638a189feae54b",
-  "updated": "2026-10-29",
-  "v": 3
- },
- "buzz/2026-10-29-florida-man-arrested-after-pickleball-format-dispute-spruce.html": {
-  "hash": "29363401f5cd2af84b01a8ca73803f244f01a9b72b84bf0b38d57c3a4796c396",
-  "updated": "2026-10-29",
-  "v": 3
- },
- "buzz/2026-10-29-houston-hammers-join-major-league-pickleball-21st-team.html": {
-  "hash": "0d4d59b7cb259c308803b0b423ed2cf7c77a08610b6960ec1c6d9203d704d83b",
-  "updated": "2026-10-29",
-  "v": 3
- },
- "buzz/2026-10-29-mlp-nations-cup-starts-friday-brookhaven-8-regional.html": {
-  "hash": "27e6c7f17be63f5654f4d303de89c53bb858a446e894dd8e360bd6bdad69e3a9",
-  "updated": "2026-10-29",
-  "v": 3
- },
- "buzz/2026-10-29-worlds-update-pro-qualifying-now-starts-monday-nov.html": {
-  "hash": "97772110300424aba7606a9056a0af2c6dbaac01ed696416e3e062e996fc24ec",
-  "updated": "2026-10-29",
-  "v": 3
- },
- "buzz/2026-10-30-ben-johns-heads-into-worlds-without-mens-doubles.html": {
-  "hash": "53de3105e790bab1a500ed85b3c4e8022592953207a992a2fefac480e779da1e",
-  "updated": "2026-10-30",
-  "v": 3
- },
- "buzz/2026-10-30-bossier-city-bystanders-including-barksdale-afb-medic-honored.html": {
-  "hash": "c6a7ae8d981efa016049b556581e264b4fd29962a20ad555d11c86d48f0de283",
-  "updated": "2026-10-30",
-  "v": 3
- },
- "buzz/2026-10-30-club-shakeout-bisnow-says-pickleballs-retail-bet-souring.html": {
-  "hash": "c4e9d7371476d50565389639c3e5a282b7832c392945f69ae2984f73da66faaf",
-  "updated": "2026-10-30",
-  "v": 3
- },
- "buzz/2026-10-30-courts-watch-hot-springs-ark-may-buy-30.html": {
-  "hash": "c33219ff19038bf20770ccb907f7b4e03b6a382e667dc6020ca574898307a7f1",
-  "updated": "2026-10-30",
-  "v": 3
- },
- "buzz/2026-10-30-gear-holbrook-launches-fuze-vantagrit-paddle-199-99.html": {
-  "hash": "00eec52e2702ff500496ca10b48e6ac8d6b9c2c87d40ec22c54b9a98b68f938f",
-  "updated": "2026-10-30",
-  "v": 3
- },
- "buzz/2026-10-30-mlp-nations-cup-day-1-australia-beats-asia.html": {
-  "hash": "5720df27a0f155be0f39f853aa477009c17e845ec42ee7f4faa14179fca0f887",
-  "updated": "2026-10-30",
-  "v": 3
- },
- "buzz/2026-10-30-mlp-nations-cup-starts-today-dallas-bright-fahey.html": {
-  "hash": "b1da71d935a71e543130d1bb7546e30744b6af46dde2ef4ce3b1b02a4be75a06",
-  "updated": "2026-10-30",
-  "v": 3
- },
- "buzz/2026-10-30-pods-eddie-webby-questionable-ai-line-calls-tony.html": {
-  "hash": "43f5d131bd1a99b1867dfeead88b471e3aefa5d630911c9e5721dd28507bb6c2",
-  "updated": "2026-10-30",
-  "v": 3
- },
- "buzz/2026-10-31-big-week-ahead-ppa-worlds-draws-are-set.html": {
-  "hash": "8a6034dd2cfcfb46d4ddd2bfbfd62fd357c99becdf10a32cde1c169392f9db45",
-  "updated": "2026-10-31",
-  "v": 3
- },
- "buzz/2026-10-31-could-pickleball-get-its-own-web-address-pickleball.html": {
-  "hash": "4ee4ed8e431ee02a7419db168dae09b12bf649b9eb466aa016669b1dd7a30cd1",
-  "updated": "2026-10-31",
-  "v": 3
- },
- "buzz/2026-10-31-gear-selkirks-boomstik-st-launches-nov-10-kitchen.html": {
-  "hash": "554601ebef8f6de300c50e6ce03773ba263d0db6eb5e58b7697196916f572399",
-  "updated": "2026-10-31",
-  "v": 3
- },
- "buzz/2026-10-31-jw-johnson-passes-ben-johns-top-mens-doubles.html": {
-  "hash": "ef1cbf6d9e308a780bfdd2e8c08076f4a272e14ff659a9fbca47f1c56add8747",
-  "updated": "2026-10-31",
-  "v": 3
- },
- "buzz/2026-10-31-mlp-nations-cup-day-1-asia-domestic-australia.html": {
-  "hash": "5a9e564624d036751296e94a7e90487b8592431bf18cf6c4463b8b575fd1d97b",
-  "updated": "2026-10-31",
-  "v": 3
- },
- "buzz/2026-10-31-mlp-nations-cup-day-2-latin-america-europe.html": {
-  "hash": "252449e7b3ecf482f2d5befcff59792c46f301c32cea517fe3248ee3a9666288",
-  "updated": "2026-10-31",
-  "v": 3
- },
- "buzz/2026-10-31-noise-fight-walnut-creeks-rudgear-park-pickleball-dispute.html": {
-  "hash": "c5860ebe44bd9746f6cc5bb001680ef1f2829530d4889b8adae24d9776d0c43e",
-  "updated": "2026-10-31",
-  "v": 3
- },
- "buzz/2026-10-31-pickleball-hall-fame-names-its-2026-class-matt.html": {
-  "hash": "690b7ad2d1a1223fe47b4c17c245e70b101eae9034cbdf6802dfb97c188e38e0",
-  "updated": "2026-10-31",
-  "v": 3
- },
- "buzz/2026-11-01-eye-safety-singapore-doctors-report-pickleball-eye-injuries.html": {
-  "hash": "d0494d27031c2945a30590f659b9e7d705122d256db9d15442d192b674931fd6",
-  "updated": "2026-11-01",
-  "v": 3
- },
- "buzz/2026-11-01-should-fighting-have-place-pro-pickleball-zane-navratil.html": {
-  "hash": "4146d00f9dc8d204e336ba636453ca30a97720d17dcd0147f901cb46a3be31ed",
-  "updated": "2026-11-01",
-  "v": 3
- },
- "buzz/2026-11-01-team-usa-goes-5-0-win-first-mlp.html": {
-  "hash": "9660c6af629fe8a5791d4077e928534a46b3182cc3c62ca09c45ae61d886a345",
-  "updated": "2026-11-02",
-  "v": 3
- },
- "buzz/2026-11-02-paddletek-launches-bantam-jolt-tempest-veyra-veyra-mystery.html": {
-  "hash": "c598b159bc3d243528059ef8fb0a4f13a4962974a928649273a2fb0b25fc05aa",
-  "updated": "2026-11-02",
+  "hash": "7ceef628a88ab05b846d28ca4e1830f791181b9a4cd414bf6438da5201dbd4fe",
+  "updated": "2026-11-17",
   "v": 3
  },
  "buzz/2026-11-03-gear-honolulus-j6m-jam-paddle-brings-its-crystal.html": {
@@ -434,14 +304,124 @@
   "updated": "2026-11-13",
   "v": 3
  },
+ "buzz/2026-11-13-app-arizona-open-41st-seed-alvi-regalado-beats.html": {
+  "hash": "57fb6d789c4d1c84eb466cf0bed59e50aa216661ef6ab616fefb7f15737bf887",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-13-courts-watch-gilroy-calif-opens-six-new-public.html": {
+  "hash": "aca42e8c47e3115a2f2381402c4d9ca2c5de5c66ead2b1122efee1e3021a931c",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-13-mlp-asia-opens-two-tokyo-wins-dots-tokyo.html": {
+  "hash": "7926420cf089c1d38d0a0140a747f7b871f337465d7b0b0edb7cca7746b362dc",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-13-worlds-2026-semifinal-replays-are-up-pickleballtvs-youtube.html": {
+  "hash": "8e69087923f6b06e89c5408867ab851d80978d45e49c5b3371e935463b392de2",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-14-anna-bright-says-anna-leigh-waters-viral-get.html": {
+  "hash": "49c5e19f469195d8c8212948e0ba36a3e58c7315aa75b06072eb47163c5a033b",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-14-app-arizona-open-glozman-camron-turkovic-devilliers-reach.html": {
+  "hash": "0effacfaca19ec194c1cd15b9823fdd22ff09d28229025c3b2e16308e8638778",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-14-courts-watch-casa-grande-ariz-doubles-24-courts.html": {
+  "hash": "4b1efb1c24c4d323f856a3aad5de55f3ddc2ae2dd606fdc86fe1b9d83c5457d0",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-14-mlp-asia-postpones-saturdays-hong-kong-match-day.html": {
+  "hash": "4f5e645ea0acdf49a53d36844d3590ae570b9705fed10c2de2f61ea9567ca8bc",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-14-picklr-bankruptcy-judge-signs-final-dip-order-approving.html": {
+  "hash": "7d803806a868d5654d3209ff04e83ee9dc024999675c7cb8a674062d22c84389",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-14-ppa-daytona-beach-open-draws-anna-bright-christian.html": {
+  "hash": "83e2701f94e0868fef180d3c0c62df01daffbc80e962758a65f1ccd219f85903",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-15-app-arizona-open-kawka-millet-end-munro-livorneses.html": {
+  "hash": "b16dc4eeafb39e52f30e23c3e1f93f49c57ddfc83ec4addbb6d397c3df00c13e",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-15-app-brings-back-atlantic-cup-team-usa-vs.html": {
+  "hash": "25d00f785d3f81a4fc78021a49b76c8ffb6996b63698b33db75bd3265c14d1d1",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-15-courts-watch-oxford-miss-s-24-court-pickleball.html": {
+  "hash": "42bc10a6f98a6e52802b39447aa2907e023a6f152bad683f26da6441302aaf9a",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-15-pickleball-hall-fame-inducts-its-class-2026-matt.html": {
+  "hash": "7413c9839556ddbe7b1195a58250eeed0c36ab5f056f5cf43fb2cd2f5e1e79b2",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-15-picklr-bankruptcy-reaches-clubs-newark-del-closes-abruptly.html": {
+  "hash": "4daa65a7222acc1dfafeda43a9d4ccef4fe1137d2c0af1ee40ac10b98dcc69cf",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-16-app-arizona-open-41st-seed-alvi-regalado-wins.html": {
+  "hash": "0c1177c14f061097a2daab30f1f87888c24addb1cbdd2fcfdc4537f0e2f26614",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-16-picklr-bankruptcy-debtors-move-reject-five-more-closed.html": {
+  "hash": "db9de95b9f022f1570f99c388d8549fa5820dea2706d865b7cd740561ab21fb5",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-16-ppa-daytona-beach-open-starts-today-pictona-bright.html": {
+  "hash": "d6ff0092cb27ef802a911187c16aa5ed66db20bca9f5d0bb2453a8b677c089aa",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-17-brisbane-2032-organizers-say-pickleball-wont-be-considered.html": {
+  "hash": "0c5b5fc0d9be36f094b7e5a91957fc19acd0f7436c1f5f81f23a31c2c3ea1859",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-17-courts-watch-scotts-valley-calif-council-takes-up.html": {
+  "hash": "7752b8aa8b4dc67988e045b793c3530e7ae10f0a9565ceaa73b3314730dc921a",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-17-mlp-names-tanner-groff-its-new-commissioner-moving.html": {
+  "hash": "c07c7910f9eeea45e2c4558f4cd8036d258121d521b619646e442795d99299d3",
+  "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-17-ppa-daytona-beach-open-matt-burkhardt-qualifies-two.html": {
+  "hash": "663af04439c24d8a9c1c841251ec514297d96e25f7c12faac5515f985ea302cf",
+  "updated": "2026-11-17",
+  "v": 3
+ },
  "community.html": {
   "hash": "c5e0093436989dc224d4ee6455aaef5392e2596fdb531da6f76646902b06a5fd",
   "updated": "2026-10-15",
   "v": 3
  },
  "compare.html": {
-  "hash": "a499344e0af7c57f2b0add6cdeeed403f4eba3c9b8701e330788103cdd2d3f84",
-  "updated": "2026-11-10",
+  "hash": "c9052005739179f1c4f5ae91a9982f90e960dfce6c2d913f5d1c40455bb72c46",
+  "updated": "2026-11-17",
   "v": 3
  },
  "creators.html": {
@@ -455,13 +435,13 @@
   "v": 3
  },
  "deals.html": {
-  "hash": "6da87e2eca69ff70ba433a3be4308df82938c2e6654bbdd94c79dc0b108093ef",
-  "updated": "2026-11-16",
+  "hash": "412c7548cac03b68ac2128bfc96fef41cb819da249fc093d0a39d3f5fbc7c414",
+  "updated": "2026-11-17",
   "v": 3
  },
  "deals/black-friday-pickleball-deals-2026.html": {
-  "hash": "5a0dfb089dd8825978329c6d448f25883844ca7839d1de52199296cc8ea04b55",
-  "updated": "2026-11-16",
+  "hash": "98c51544280bd1a40444e7b4678ec7c94576ab348cc73012e73645bad749766c",
+  "updated": "2026-11-17",
   "v": 3
  },
  "disclosure.html": {
@@ -470,8 +450,8 @@
   "v": 3
  },
  "discount-codes.html": {
-  "hash": "1ce550007db8d9a0ec50b5f85057321c1c5027a281a44b9bca422fd3f47da56c",
-  "updated": "2026-11-14",
+  "hash": "bbaa213cfd28d34aa960f52803af683aeea973f0b2638f6b3e54519b43b5cb38",
+  "updated": "2026-11-17",
   "v": 3
  },
  "discount-codes/11six24.html": {
@@ -860,8 +840,8 @@
   "v": 3
  },
  "discount-codes/proton.html": {
-  "hash": "debc755d82064de8b400f58f86f5671f97470810ef1f7f8a266593793e3cf206",
-  "updated": "2026-10-23",
+  "hash": "28f3e53cbda0ff3f6a28cfbed4866b8b6c030df6fcd90f94110f14e48d825ee4",
+  "updated": "2026-11-17",
   "v": 3
  },
  "discount-codes/proxr.html": {
@@ -1080,8 +1060,8 @@
   "v": 3
  },
  "events/newport-beach-open.html": {
-  "hash": "d01acac58a4690d7f5901fb0afa6e04801b92897954afb2573f9576fb9789ea6",
-  "updated": "2026-10-24",
+  "hash": "b71b65aaf659753a640906ab6c87790649400e08566f0827ce78b257b587b62d",
+  "updated": "2026-11-17",
   "v": 3
  },
  "events/opendoor-pickleball-world-championships.html": {
@@ -1120,8 +1100,8 @@
   "v": 3
  },
  "guides.html": {
-  "hash": "4bf169b821718cd6b40713fc8854a56beb1820d5bdc6c2fa4fba47c4171ac6fd",
-  "updated": "2026-11-13",
+  "hash": "caad671f2aa45c24ed9c778efb3486a572ebf8fc21f724ebfb12bb471f6de73f",
+  "updated": "2026-11-17",
   "v": 3
  },
  "guides/best-paddles-under-100.html": {
@@ -1149,14 +1129,19 @@
   "updated": "2026-11-09",
   "v": 3
  },
+ "guides/how-to-lob-in-pickleball.html": {
+  "hash": "49b8f52655e65b525bbaaf1192ef9fbf2e36540a72919d9e4a7a645dd0cbe682",
+  "updated": "2026-11-17",
+  "v": 3
+ },
  "guides/how-to-read-dupr-ratings.html": {
   "hash": "43d0bb10b4b04d7051a1026b50bfe9a85a558f70e41606cc9164d470f37b3cdb",
   "updated": "2026-11-07",
   "v": 3
  },
  "guides/how-to-watch-pro-pickleball.html": {
-  "hash": "e7e3fe578d7153c06a82eff411108aef0c333b40f40ffa6c7c9661a7a2e6584d",
-  "updated": "2026-11-08",
+  "hash": "ceacb280b667aded7772fa314aec0fde41c4c4a2b9eba2e1c3b193752ac536c5",
+  "updated": "2026-11-17",
   "v": 3
  },
  "guides/indoor-vs-outdoor-pickleball-balls.html": {
@@ -1185,8 +1170,8 @@
   "v": 3
  },
  "guides/pickleball-gift-guide-2026.html": {
-  "hash": "0d6f39041c31b52b73491620328abf2a04ec581815e265ff96a3f60259913555",
-  "updated": "2026-11-16",
+  "hash": "4fcc2c77ab47cbb7057c64d36888e31ef9808ba93e86a3223350615ce264caeb",
+  "updated": "2026-11-17",
   "v": 3
  },
  "guides/pickleball-grip-size.html": {
@@ -1224,6 +1209,11 @@
   "updated": "2026-11-07",
   "v": 3
  },
+ "guides/pickleball-split-step.html": {
+  "hash": "13ac08e15c1e3c184905915b9d77ba65c155aafd5def7ca7b2bc8316d31a8831",
+  "updated": "2026-11-17",
+  "v": 3
+ },
  "guides/pickleball-stacking.html": {
   "hash": "87fa791d551733abd3005bc14c047845e836d7c0079c712c116427f94fef5e12",
   "updated": "2026-11-11",
@@ -1234,19 +1224,24 @@
   "updated": "2026-11-08",
   "v": 3
  },
+ "guides/tennis-vs-pickleball.html": {
+  "hash": "454b4cada9d9ab5138b60708344368d2d8ab95fda91a6494796f5bb7853e2a0b",
+  "updated": "2026-11-17",
+  "v": 3
+ },
  "guides/third-shot-drop.html": {
   "hash": "440a71f4946aca2b066ba7e2aa520891f67815472ae11f8d5a455653f99ad51e",
   "updated": "2026-11-09",
   "v": 3
  },
  "index.html": {
-  "hash": "97cee3e4f55332b149c3073c333ae7bde26c91485fc3246e365e8e0157b8e2d9",
-  "updated": "2026-11-16",
+  "hash": "d397f55aca602320b9a46d8145ef171e9e72e70a1f33ebe2c93ed848d101f7be",
+  "updated": "2026-11-17",
   "v": 3
  },
  "news.html": {
-  "hash": "462e2ee5f132d5f82b67bbde8e50e3a52a1b494d6299c10eaf0d7f59d23b73fb",
-  "updated": "2026-11-16",
+  "hash": "4e9e73d1596da626a9602175ae07b47d3abd44858f13ac8cea3fa4c6450ae662",
+  "updated": "2026-11-17",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
@@ -1395,23 +1390,23 @@
   "v": 3
  },
  "paddle-six-zero-black-opal-14mm.html": {
-  "hash": "83b6b9e14d0d465c9122ca9e3db4a5348ad5920aaedbf0561e1b3f116ea95cea",
-  "updated": "2026-11-16",
+  "hash": "12836673952e8519d15a8bcde4f12190317a1b8216bde5f306048e5d79f617f7",
+  "updated": "2026-11-17",
   "v": 3
  },
  "paddle-six-zero-coral-16mm.html": {
-  "hash": "688df6e72671987f5adfce034f1f5d58e8b731d0302a644587fa73867ef6bb66",
-  "updated": "2026-11-16",
+  "hash": "67dd255397fc56713f654d593115b7e285a9de99c6196c927dd8abbc9901de55",
+  "updated": "2026-11-17",
   "v": 3
  },
  "paddle-six-zero-double-black-diamond-control.html": {
-  "hash": "42e796b9fcfd565214d12fa00e15e8491e01be35fc1ac633dd9c9b9f6ded12bc",
-  "updated": "2026-11-16",
+  "hash": "79477d02df3f929dc1ec6b7d4aee14b8f4da84e06cf1c68f3351abf8532cdcfe",
+  "updated": "2026-11-17",
   "v": 3
  },
  "paddle-six-zero-ruby.html": {
-  "hash": "423db1f3b10b3837eac9dd620a06a63bd8f0d934a8a770f193aec7c2715c7b24",
-  "updated": "2026-11-16",
+  "hash": "8b8acbf417734bab6d689bdbd7be12f5eb6dbb27e2f89f30bc15ccec54a673d1",
+  "updated": "2026-11-17",
   "v": 3
  },
  "paddle-volair-cmd-el-16mm.html": {
@@ -1420,8 +1415,8 @@
   "v": 3
  },
  "paddle-volair-cmd-hyb-16mm-dylan-frazier.html": {
-  "hash": "1ac664c0ab87d71de9ea027183f5c8476483f1db4ecfe631bcb149c0ff5f6f7a",
-  "updated": "2026-11-16",
+  "hash": "4eec18b672d3c31bba965b13ffed0d5dcd8b10ef686bdd7a67c9721c58b47930",
+  "updated": "2026-11-17",
   "v": 3
  },
  "paddle-volair-cmd-wb-16mm.html": {
@@ -1470,18 +1465,18 @@
   "v": 3
  },
  "paddles.html": {
-  "hash": "d6e5785c3c6c36959a53f0effaa17587f67feae821950ff2703061fa8b0581b5",
-  "updated": "2026-11-16",
+  "hash": "7f188bd74f9a071915e9fd284018d367f17c61351563801309a4b412873ef618",
+  "updated": "2026-11-17",
   "v": 3
  },
  "podcasts.html": {
-  "hash": "9f41775c34f4351ae446837c5c7d9f620e1b49e7e671c9e309093b68bc72e56c",
-  "updated": "2026-11-16",
+  "hash": "a9ec8490b53d6ade85a1cdf78aa5dd1d70a685bfd37d74bdce7f9ecc9ba9f71e",
+  "updated": "2026-11-17",
   "v": 3
  },
  "price-index.html": {
-  "hash": "8feaee18fe11fdfdbc11732e43ec2de50982d4df20cb1efd29098e26263fbc79",
-  "updated": "2026-11-16",
+  "hash": "019d4679b96a286c289bb9f90dba1864922ad0bfd6e74aa03f3db72dc7648b24",
+  "updated": "2026-11-17",
   "v": 3
  },
  "price-tracker.html": {
@@ -1505,8 +1500,8 @@
   "v": 3
  },
  "reviews.html": {
-  "hash": "19ee23ffc47d257df2a3734afccda050c98f5864f4c1f7bc5c0472b660f388f7",
-  "updated": "2026-11-16",
+  "hash": "549072d5de990b2f6517643b85f90f6b12dc3d737985337dae433b4935c1b767",
+  "updated": "2026-11-17",
   "v": 3
  },
  "science.html": {
@@ -1520,8 +1515,8 @@
   "v": 3
  },
  "tournaments.html": {
-  "hash": "1616f7c3aaeef84a5b85d8d1572f656c2c2adbd8ece2aabef498e2b78027d1c6",
-  "updated": "2026-11-10",
+  "hash": "bd559621ec91391caea0201702e9406c7e72d7716eda97e1bec9a0e6b1fd02a8",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-crbn-crbn1-trufoam-barrage-vs-crbn-crbn1-trufoam-genesis.html": {
@@ -1654,6 +1649,11 @@
   "updated": "2026-11-09",
   "v": 3
  },
+ "vs-joola-perseus-pro-v-vs-selkirk-labs-project-boomstik.html": {
+  "hash": "c52d87825b2356d24aa1223a32d7e8e26420b7c4a6407683b025b00ee6c5ddcd",
+  "updated": "2026-11-17",
+  "v": 3
+ },
  "vs-joola-radius-pro-v-vs-joola-scorpeus-pro-v.html": {
   "hash": "289e787abf978369ac601181e60e862ca3a60729c88970ddd044823ad303c128",
   "updated": "2026-11-09",
@@ -1765,38 +1765,38 @@
   "v": 3
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-coral-16mm.html": {
-  "hash": "8d12bf40a06503c614586b7949791e40b80fa2878a2a33ca1612b710de62baad",
-  "updated": "2026-11-16",
+  "hash": "44e2e9c86480f6d916f100c16df84440b5e9db6b484a7085a34e173166520ecb",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-double-black-diamond-control.html": {
-  "hash": "284e21c5d3a21b8f7dfea96ec30cbeaab8453af41fe7079ed3632c06eec7061f",
-  "updated": "2026-11-16",
+  "hash": "f323bb4ad8d57dd4f859a15efa114757d28c1b25e14e61debd5dda24d7c75669",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-ruby.html": {
-  "hash": "a7fe90df283663a0e382f1f648201fcc835f1ed94e02f64d2279ec3756e8f5d6",
-  "updated": "2026-11-16",
+  "hash": "194ddd7e561f1fe918bf717256e11e237301531bed4b2938fcab5c126360e2df",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-six-zero-coral-16mm-vs-six-zero-double-black-diamond-control.html": {
-  "hash": "dcb7a9d3abcdbbf8283a94ec0e0b1ecbc4c6616ff1167f4b81694fa077be6238",
-  "updated": "2026-11-16",
+  "hash": "c066195a012bb5589420db1344355e7bb4e0d85960967da874629935780ecc2a",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-six-zero-coral-16mm-vs-six-zero-ruby.html": {
-  "hash": "959018f9e25d69eef4b9c0a31c0b9fe4110a406c4d2cdee639af75fc8b7729c5",
-  "updated": "2026-11-16",
+  "hash": "7424d888fdfaffbaf6ad024e4f8ea9815199ddad9df042925a231d1314faa2fd",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-six-zero-double-black-diamond-control-vs-six-zero-ruby.html": {
-  "hash": "0878476d725fec2cb4ee6ef03deac56ca5147ee04b50a16ecb8263b41e48354c",
-  "updated": "2026-11-16",
+  "hash": "0b2065c82a9dd36aef9143f45107c2e7981a309448d3c620f629e3e6007f850d",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-volair-cmd-el-16mm-vs-volair-cmd-hyb-16mm-dylan-frazier.html": {
-  "hash": "eb09cba2916a0f05e9921661f7c7ba45a2ed2ec389735c84848d1445dfbc98d9",
-  "updated": "2026-11-16",
+  "hash": "08009aa5e5c530ce68d1b0c1a49f12406e629ebba2becc9282817b9c0a2f0d3f",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-volair-cmd-el-16mm-vs-volair-cmd-wb-16mm.html": {
@@ -1845,33 +1845,33 @@
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-cmd-wb-16mm.html": {
-  "hash": "52de549646647b3812ad91c376e19fb89277388f600d89cffe7c4a8c18dc29b0",
-  "updated": "2026-11-16",
+  "hash": "366460ad6a3af0b13f492036bdaebf95a50f2965d81bb8a63b2dec63f5d96de1",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-1-forza.html": {
-  "hash": "896fc5cef144a8d0b2dda1c76b1c7670ce4fabe7a0e705eba7744d6f85e61aa9",
-  "updated": "2026-11-16",
+  "hash": "3f19f76ad633b972b6636309a8769332ab97856d4553aec8c430addb530f316a",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-ctrl-2-forza.html": {
-  "hash": "c66bca82213842260a24fc5054cbdbb6639cc20ef76d8c3549a666b8822f1505",
-  "updated": "2026-11-16",
+  "hash": "5126acbd70c6383c7e7a597e701a23b3a0726166abab1ebe697d8dc3e1debc12",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-1-forza.html": {
-  "hash": "3e34087e45dd0fdeeb1f7368d424f0fad135191ebe8d56aa0686a09fe0a37d1b",
-  "updated": "2026-11-16",
+  "hash": "638f53c8b8f53262c4724dbf7030d9d78fc41952f6080f7ee641d71ca31b8d4c",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2-forza.html": {
-  "hash": "8b4ac35ab75239189cc8318a80bb70554bfe4aed0f6752e836cdf5cbe05d62d3",
-  "updated": "2026-11-16",
+  "hash": "9983fbe44cf2751111fdac19f242c9b4db866d84c59ca2c53175bcf328b3dd1b",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-volair-cmd-hyb-16mm-dylan-frazier-vs-volair-mach-2.html": {
-  "hash": "fa3eb632fc8d3cf9f639d1adbaa2afc02151896e31f4d7a44b56424e8a7c1f47",
-  "updated": "2026-11-16",
+  "hash": "b5c8c5b097623316198aa33aef7cc31e1cbe4b44ac63ab3cbc89908d9483d8f6",
+  "updated": "2026-11-17",
   "v": 3
  },
  "vs-volair-mach-2-forza-vs-volair-pro-1.html": {
