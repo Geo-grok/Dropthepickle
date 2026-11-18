@@ -90,23 +90,8 @@
   "v": 3
  },
  "buzz.html": {
-  "hash": "7ceef628a88ab05b846d28ca4e1830f791181b9a4cd414bf6438da5201dbd4fe",
-  "updated": "2026-11-17",
-  "v": 3
- },
- "buzz/2026-11-03-gear-honolulus-j6m-jam-paddle-brings-its-crystal.html": {
-  "hash": "e28c8e9254cdb375e8407b6f9175af1db9b7e07854e297f62d84e5085e529eeb",
-  "updated": "2026-11-03",
-  "v": 3
- },
- "buzz/2026-11-03-mark-wahlberg-jeremy-piven-john-isner-sean-omalley.html": {
-  "hash": "c16840c9fddcfd4ed92e2f81a72337fbaecabcd1b1eea1e85b82d67e0001bf32",
-  "updated": "2026-11-03",
-  "v": 3
- },
- "buzz/2026-11-03-worlds-main-draw-starts-today-waters-bright-chase.html": {
-  "hash": "3d59c3687ce69fbbf4c9c7120e00305022dfa01e9928741731d2ce644b29fefb",
-  "updated": "2026-11-03",
+  "hash": "73aa403303f0888672afb6ddc09563289713d7d4d44c2241596fd76a3ffbaf68",
+  "updated": "2026-11-18",
   "v": 3
  },
  "buzz/2026-11-04-13-year-old-natalia-simson-knocks-out-genie.html": {
@@ -412,6 +397,41 @@
  "buzz/2026-11-17-ppa-daytona-beach-open-matt-burkhardt-qualifies-two.html": {
   "hash": "663af04439c24d8a9c1c841251ec514297d96e25f7c12faac5515f985ea302cf",
   "updated": "2026-11-17",
+  "v": 3
+ },
+ "buzz/2026-11-18-boca-paddle-citypickle-opens-today-19-pickleball-six.html": {
+  "hash": "5c897f62d5820042bbddd148eb14c02495cc8a51d4a019f1624ab10672a8b948",
+  "updated": "2026-11-18",
+  "v": 3
+ },
+ "buzz/2026-11-18-courts-watch-leesburg-va-opens-its-first-town.html": {
+  "hash": "c11dbb5696becfdc441a7421510a1f99f194959c45630a729992bfae669241d3",
+  "updated": "2026-11-18",
+  "v": 3
+ },
+ "buzz/2026-11-18-mlp-asia-moves-hong-kongs-postponed-match-day.html": {
+  "hash": "b8892fc9b8f3aecac2d95322bfb1c537c1d8581b23659eb432ee48cb026a320f",
+  "updated": "2026-11-18",
+  "v": 3
+ },
+ "buzz/2026-11-18-ppa-daytona-day-one-no-41-maria-ford.html": {
+  "hash": "2df9356ab31f91d7cd69d1bbfe29d347104323011e3d71e5080a9bc10e82aec2",
+  "updated": "2026-11-18",
+  "v": 3
+ },
+ "buzz/2026-11-18-prince-harry-plays-pickleball-wounded-ukrainian-veterans-invictus.html": {
+  "hash": "0ff61f5d550c748b7a2329f7341e8b2cd7182edaeeed09c883350477a08fe7d3",
+  "updated": "2026-11-18",
+  "v": 3
+ },
+ "buzz/2026-11-18-usa-pickleball-joola-end-their-legal-fight-team.html": {
+  "hash": "9bc70dfcee03719cc65eabcc602ea6dc54c0c4fd2e76bde0c1375cb2399bbe2f",
+  "updated": "2026-11-18",
+  "v": 3
+ },
+ "buzz/2026-11-18-zane-navratil-signs-off-dinks-picklepod-after-years.html": {
+  "hash": "b1706e0a33146d642adedaf28d7fe8f59d62451529eac39df8becd5e985c2ec0",
+  "updated": "2026-11-18",
   "v": 3
  },
  "community.html": {
@@ -1100,8 +1120,8 @@
   "v": 3
  },
  "guides.html": {
-  "hash": "caad671f2aa45c24ed9c778efb3486a572ebf8fc21f724ebfb12bb471f6de73f",
-  "updated": "2026-11-17",
+  "hash": "d89bdfa72c08f50370394c2706f735777d1c5cdae8ebbed3730039c78eabc60d",
+  "updated": "2026-11-18",
   "v": 3
  },
  "guides/best-paddles-under-100.html": {
@@ -1219,6 +1239,11 @@
   "updated": "2026-11-11",
   "v": 3
  },
+ "guides/pickleball-swing-weight.html": {
+  "hash": "008027d7f090be3b9ea8b5a04d5ade91f9dfcb1567ae1e8f159671fcd4a2147a",
+  "updated": "2026-11-18",
+  "v": 3
+ },
  "guides/six-zero-paddle-review.html": {
   "hash": "c6bc68860b2f4fbef8b06eea1dffc4787e393ce356d3f65b3f91fabcb53a3980",
   "updated": "2026-11-08",
@@ -1235,13 +1260,13 @@
   "v": 3
  },
  "index.html": {
-  "hash": "d397f55aca602320b9a46d8145ef171e9e72e70a1f33ebe2c93ed848d101f7be",
-  "updated": "2026-11-17",
+  "hash": "1e07009cf036766807bd8c114210ead744a2fc0f586bc6c8bf5a859b87fa005d",
+  "updated": "2026-11-18",
   "v": 3
  },
  "news.html": {
-  "hash": "4e9e73d1596da626a9602175ae07b47d3abd44858f13ac8cea3fa4c6450ae662",
-  "updated": "2026-11-17",
+  "hash": "83609496600cb9762b0be4192a51a60ec516df6d93694156aa4159e77beb3249",
+  "updated": "2026-11-18",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
@@ -1500,8 +1525,8 @@
   "v": 3
  },
  "reviews.html": {
-  "hash": "549072d5de990b2f6517643b85f90f6b12dc3d737985337dae433b4935c1b767",
-  "updated": "2026-11-17",
+  "hash": "404f331c18da1ed11398eb06e70f2e35b47f917a414a43ea54a7985420348103",
+  "updated": "2026-11-18",
   "v": 3
  },
  "science.html": {
