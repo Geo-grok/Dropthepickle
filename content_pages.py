@@ -49,6 +49,7 @@ GUIDES = [
     ("guides/pickleball-return-of-serve.html", "Pickleball return of serve"),
     ("guides/how-to-lob-in-pickleball.html", "How to lob in pickleball"),
     ("guides/tennis-vs-pickleball.html", "Tennis vs pickleball"),
+    ("guides/pickleball-swing-weight.html", "Pickleball swing weight"),
     ("guides/how-to-watch-pro-pickleball.html", "How to watch pro pickleball"),
     ("guides/pickleball-gift-guide-2026.html", "Pickleball gift guide 2026"),
 ]
@@ -460,7 +461,7 @@ def make(page, e, fmt, PP, cur, ph):
 <ul>{"".join(thick_bits)}</ul>
 <p>The <a href="../best-16mm-paddles.html">16mm filter</a> is every paddle whose core field includes 16mm. It is not an ordered list of the softest paddles.</p>
 <h2>What to do with the numbers</h2>
-<p>If you mishit on the sides, look at a wider shape before you look at a heavier weight. If the ball feels too lively, look at a thicker published core before you add tape. Then open <a href="how-to-choose-a-paddle.html">how to choose a paddle</a> and the <a href="../compare.html">comparison pages</a>, which put two spec sheets side by side. The third number to check is grip circumference: see the <a href="pickleball-grip-size.html">pickleball grip size chart</a>.</p>
+<p>If you mishit on the sides, look at a wider shape before you look at a heavier weight. If the ball feels too lively, look at a thicker published core before you add tape. Then open <a href="how-to-choose-a-paddle.html">how to choose a paddle</a> and the <a href="../compare.html">comparison pages</a>, which put two spec sheets side by side. The third number to check is grip circumference: see the <a href="pickleball-grip-size.html">pickleball grip size chart</a>. Two paddles with the same ounces can still swing very differently; see <a href="pickleball-swing-weight.html">pickleball swing weight</a> for what that number means and a chart of maker figures.</p>
 {faq_html}
 {more("guides/paddle-weight-and-core.html")}'''
     page("guides/paddle-weight-and-core.html", "Paddle weight and core explained", weight,
@@ -2066,6 +2067,138 @@ def make(page, e, fmt, PP, cur, ph):
          "Tennis vs pickleball side by side: court size (20x44 vs 78x36 ft), net height, paddle vs racket, serve, scoring, the kitchen, and tips for tennis converts.",
          fresh={"checked": TP_CHECKED, "cmp": TP_CMP, "faq": tp_faq},
          schema=[tp_faq_ld])
+
+    # ----- Pickleball swing weight (Nov 18, 2026) -----
+    # Evergreen explainer for the approved P3 target "pickleball swing weight" (Geo, Growth chat, Nov 10).
+    # Every swing/twist number below was copied from the maker's own product page on SW_CHECKED (linked per row).
+    # Makers measure differently and say figures vary, so the chart is a list of published numbers, not a ranking.
+    # Definitions/ranges: Pickleball Warehouse, Pickleball Effect (Nov 9, 2026 post), The Kitchen (paddles page,
+    # calculator FAQ, weight guide). Volair CMD EL reads 115 on volair.com today (paddles.json still says 114, Oct 23).
+    SW_CHECKED = "2026-11-18"
+    sw_checked = _dt.date.fromisoformat(SW_CHECKED).strftime("%B %-d, %Y")
+    SW_PW = "https://www.pickleballwarehouse.com/learning_center/pickleball/paddle-swingweight-explained.html"
+    SW_PE = "https://pickleballeffect.com/resources/other/swing-weight-vs-twist-weight/"
+    SW_TK = "https://thekitchenpickle.com/paddles/"
+    SW_TK_CALC = "https://thekitchenpickle.com/swing-weight-calculator/"
+    SW_TK_TAPE = "https://thekitchenpickle.com/blogs/gear/pickleball-paddle-weight-guide-add-more-power-stability-hand-speed/"
+    # (catalog model, version as the maker labels it, swing weight as published, sort value, twist weight as published)
+    SW_ROWS = [
+        ("CMD WB 16mm", "Widebody, 16mm", "104", 104, "7.1"),
+        ("Mach 2", "Widebody, 14mm", "105", 105, "6.88"),
+        ("Pro 2", "Widebody, 14mm", "106", 106, "6.78"),
+        ("Mach 2", "Widebody, 16mm", "107", 107, "6.93"),
+        ("Mach 2 Forza", "Widebody, 14mm", "108", 108, "6.99"),
+        ("Pro 2", "Widebody, 16mm", "109", 109, "7.12"),
+        ("SLK ERA Power", "Widebody", "109 (average)", 109, "7.3"),
+        ("LUXX Control Air (InfiniGrit)", "Epic", "109 (average)", 109, "6.6"),
+        ("Mach 1 Forza", "14mm", "110", 110, "5.92"),
+        ("CTRL 2 Forza", "Widebody, 16mm", "110", 110, "7.32"),
+        ("Double Black Diamond Control", "14mm", "110", 110, "6.4"),
+        ("Coral 16mm", "Widebody", "110", 110, "7.1"),
+        ("CMD HYB 16mm (Dylan Frazier)", "Hybrid, 16mm", "111", 111, "6.4"),
+        ("Mach 2 Forza", "Widebody, 16mm", "112", 112, "7.37"),
+        ("OMNI", "Widebody", "112 +/- 2 (average, as sold)", 112, "7.9"),
+        ("LABS Project Boomstik", "Widebody", "112 +/- 2 (average)", 112, "8.2"),
+        ("Ruby", "14mm", "112", 112, "6.5"),
+        ("Black Opal 14mm", "14mm", "113", 113, "6.6"),
+        ("LUXX Control Air (InfiniGrit)", "Invikta", "113 (average)", 113, "6.0"),
+        ("Pro 1", "Hybrid, 14mm", "114", 114, "5.82"),
+        ("Double Black Diamond Control", "16mm, standard weight (light 112, pro-weight 116)", "114", 114, "6.8"),
+        ("Coral 16mm", "Hybrid", "114", 114, "6.70"),
+        ("CMD EL 16mm", "Elongated, 16mm", "115", 115, "6"),
+        ("V.1F/ XL-W 16mm", "Widebody, 16mm", "115", 115, "7.03"),
+        ("Ruby", "16mm", "115", 115, "6.8"),
+        ("Honeyfoam TKO-X", "Elongated, 14mm", "115", 115, "about 6"),
+        ("Bantam TKO-C", "Elongated, 12.7mm", "115-123", 115, "6.7-7.5"),
+        ("CTRL 1 Forza", "16mm", "116", 116, "6.35"),
+        ("Mach 1 Forza", "16mm", "117", 117, "6.41"),
+        ("Coral 16mm", "Elongated", "117", 117, "5.9"),
+        ("CRBN¹ TruFoam Barrage", "Elongated, long handle", "117-119", 117, "5.88"),
+        ("SLK ERA Power", "Elongated", "118 (average)", 118, "6.6"),
+        ("OMNI", "Elongated", "118 +/- 2 (average, as sold)", 118, "6.9"),
+        ("LABS Project Boomstik", "Elongated", "118 +/- 2 (average)", 118, "7.2"),
+        ("Double Black Diamond Control", "15mm (elongated)", "118", 118, "6.0"),
+        ("CRBN¹ TruFoam Genesis", "Elongated, long handle", "118-120", 118, "5.75"),
+        ("CRBN³ TruFoam Waves", "Elongated", "118-120", 118, "6.5"),
+        ("Pro 1", "Hybrid, 16mm", "120", 120, "6.09"),
+    ]
+    sw_rows = sorted(SW_ROWS, key=lambda r: (r[3], P(r[0])["brand"], r[0], r[1]))
+    sw_brands = sorted({P(r[0])["brand"] for r in SW_ROWS})
+    sw_models = sorted({r[0] for r in SW_ROWS})
+    sw_tbl = "".join(
+        f'<tr><td>{alink(P(m))}</td><td>{e(v)}</td><td>{e(s)}</td><td>{e(t)}</td>'
+        f'<td><a href="{e(P(m)["source_url"])}" target="_blank" rel="noopener">{e(P(m)["brand"])}</a></td></tr>'
+        for m, v, s, _n, t in sw_rows)
+    sw_faq = [
+        ("What is swing weight in pickleball?",
+         "Swing weight is how heavy a paddle feels when you swing it, not what it weighs on a scale. Pickleball Warehouse defines it as the paddle's resistance to swinging about an axis near the end of the handle. Total weight, balance and length all feed into it, so two 8-ounce paddles can swing very differently."),
+        ("What is a good swing weight for a pickleball paddle?",
+         "There is no single right number. Pickleball Effect's database calls 110 and below light, 111 to 116 mid and 117 or more heavy. The Kitchen says the paddles it has tested run 99 to 126, mostly 113 to 118. Lower suits fast hands at the kitchen; higher adds power on drives but reacts slower."),
+        ("What is the difference between swing weight and twist weight?",
+         "Swing weight is about how much effort it takes to swing and reposition the paddle. Twist weight is how much the paddle resists twisting when you hit the ball away from the center. Pickleball Effect says lower swing weight generally means easier maneuverability, and higher twist weight means more resistance to twisting on off-center hits."),
+        ("Do elongated paddles have a higher swing weight?",
+         "Usually. In Pickleball Effect's sample of 16mm paddles, elongated models averaged 117.6, hybrids 112.9 and widebodies 109.2, at almost the same static weight. Makers in our chart that list two shapes of one paddle, such as the Selkirk OMNI (118 vs 112) and Six Zero Coral (117 vs 110), show the same pattern."),
+        ("Can you compare swing weights across brands?",
+         "Carefully. Pickleball Warehouse notes that measuring machines grip the handle at different spots and no two paddles are identical, so published numbers vary. Selkirk lists some figures as averages that may vary by 2 points, and Six Zero calls some figures estimates from internal lab testing. A gap of a point or two may not mean much."),
+        ("How do you change a paddle's swing weight?",
+         "Add or move weight. The Kitchen says tape along the top raises swing weight a lot, tape at the throat raises twist weight with only a small swing-weight increase, and weight at the handle makes a paddle feel more maneuverable. Pickleball Effect suggests small changes, one at a time."),
+    ]
+    sw_faq_html, sw_faq_ld = faq(sw_faq)
+    swg = f'''<h1>Pickleball swing weight: what it means, plus a chart of published paddle numbers</h1>
+<p class="meta">Definitions from <a href="{SW_PW}" target="_blank" rel="noopener">Pickleball Warehouse</a>, <a href="{SW_PE}" target="_blank" rel="noopener">Pickleball Effect</a> and <a href="{SW_TK}" target="_blank" rel="noopener">The Kitchen</a>. Every paddle number in the chart was copied from that maker's own product page on {sw_checked}. We did not measure any paddle, and this is not a ranking.</p>
+<h2>The short answer</h2>
+<ul>
+<li><b>What it is:</b> how heavy a paddle feels when you swing it, not its weight on a scale.</li>
+<li><b>Lower number:</b> quicker hands in fast exchanges at the kitchen; you may need to swing harder for pace.</li>
+<li><b>Higher number:</b> more plow-through on drives and serves, but slower to react.</li>
+<li><b>Typical range:</b> The Kitchen's tested paddles run 99 to 126, and most sit between 113 and 118. The maker numbers in our chart run from 104 to 120 (one maker range reaches 123).</li>
+<li><b>Shape matters:</b> elongated paddles usually swing heavier than widebodies of the same weight.</li>
+</ul>
+<h2>What swing weight measures</h2>
+<p>Pickleball Warehouse defines swing weight as a paddle's resistance to swinging about an axis near the end of the handle. It is a dynamic number: the higher it is, the more effort it takes to get the paddle moving. The Kitchen describes it as the paddle's moment of inertia around the point where you hold it, typically 10 cm up from the butt cap, and stresses that it measures rotational inertia, not just mass. Total weight, balance (where the weight sits) and length all feed into it.</p>
+<p>Pickleball Warehouse's easy way to feel it: swing a hammer by the handle, then flip it and hold the head. The hammer weighs the same both ways, but the effort to swing it changes completely. A paddle with more of its mass toward the tip works the same way.</p>
+<h2>Swing weight vs static weight vs twist weight</h2>
+<ul>
+<li><b>Static weight</b> is the number on a scale, in ounces. It is the figure most spec pages lead with; see <a href="paddle-weight-and-core.html">paddle weight and core</a>.</li>
+<li><b>Swing weight</b> is how heavy the paddle feels in motion. Pickleball Effect notes that two 8-ounce paddles can feel completely different if one carries more weight toward the tip.</li>
+<li><b>Twist weight</b> is how much the paddle resists twisting when you hit the ball away from the center. Pickleball Effect's database calls below 6.0 low, 6.0 to 6.8 typical and above 6.8 high, and says a higher number doesn't by itself guarantee a bigger sweet spot.</li>
+</ul>
+<h2>What counts as light, medium or heavy?</h2>
+<p>Sources draw the lines a little differently, so treat these as rough bands:</p>
+<ul>
+<li><a href="{SW_PE}" target="_blank" rel="noopener">Pickleball Effect</a> (database classification): 110 and below is light, 111 to 116 is mid, 117 and above is heavy.</li>
+<li><a href="{SW_TK}" target="_blank" rel="noopener">The Kitchen</a> (paddles it has tested): 99 to 126, most between 113 and 118. Under 110 means quick hands at the kitchen line; 118 and up adds power on drives and serves but is slower to react.</li>
+</ul>
+<h2>How paddle shape changes swing weight</h2>
+<p>Elongated paddles put more of the face farther from your hand. In Pickleball Effect's comparison of 16mm paddles, elongated models averaged a swing weight of 117.6, hybrids 112.9 and widebodies 109.2, while average static weight was almost identical (8.01 to 8.02 oz). Twist weight went the other way: 6.11, 6.45 and 6.85. The makers in our chart that sell two shapes of one paddle show the same pattern: the Selkirk SLK ERA Power lists 118 elongated vs 109 widebody, the Selkirk OMNI and LABS Project Boomstik 118 vs 112, and the Six Zero Coral 16mm 117 elongated, 114 hybrid and 110 widebody.</p>
+<h2>Published swing weights for paddles in our catalog</h2>
+<p>{len(SW_ROWS)} versions of {len(sw_models)} paddles from {len(sw_brands)} brands ({", ".join(sw_brands)}), lowest to highest. Each number is exactly as the maker lists it on its own product page, read {sw_checked}. Paddles whose makers don't publish a swing weight on the product page are left out rather than estimated.</p>
+<div class="tbl"><table><thead><tr><th>Paddle</th><th>Version</th><th>Swing weight</th><th>Twist weight</th><th>Maker spec page</th></tr></thead><tbody>{sw_tbl}</tbody></table></div>
+<p>Read the chart within a brand first. <a href="{SW_PW}" target="_blank" rel="noopener">Pickleball Warehouse</a> explains that machines grip the handle at different points and materials vary from paddle to paddle, so published numbers aren't always the same. Selkirk labels some figures as averages that may vary by 2 points, and Six Zero calls some of its figures estimates from internal lab testing. A one- or two-point gap between brands may not mean much.</p>
+<h2>Which swing weight fits your game?</h2>
+<ul>
+<li><b>You play doubles at the kitchen and lose fast hand battles:</b> look lower. Pickleball Warehouse says a lighter-swinging paddle will probably feel more adept near the kitchen line.</li>
+<li><b>You hit a lot of drives, play singles or come from tennis:</b> a higher number gives more plow-through. Pickleball Warehouse says higher swing weight adds easy power, especially from the backcourt, and Pickleball Effect suggests tennis players who like driving through the ball might test a heavier-swinging paddle.</li>
+<li><b>You mishit off the edges:</b> compare twist weight, and look at a wider shape, before you chase a heavier swing.</li>
+<li><b>You want to copy a paddle you already like:</b> this is where swing weight helps most, per Pickleball Warehouse. Match its number within the same brand when you can.</li>
+</ul>
+<p>Next steps: browse the <a href="../best-paddles-for-control.html">control paddles</a> or <a href="../best-paddles-for-power.html">power paddles</a> filters, put two spec sheets side by side on the <a href="../compare.html">comparison pages</a>, check your <a href="pickleball-grip-size.html">grip size</a>, or take the <a href="../paddle-quiz.html">paddle quiz</a>.</p>
+<h2>Changing swing weight with lead tape</h2>
+<p>The Kitchen's weight guide breaks down the common setups: tape across the top gives a very high increase in swing weight and a significant increase in power, which it says singles players often use; tape at the top corners (10 and 2 o'clock) gives a high twist-weight increase and a moderate swing-weight increase; tape at the throat, where it says many pros including Ben Johns add weight, raises twist weight with only a small swing-weight increase; and weight at the handle or end cap makes a paddle feel more maneuverable. Pickleball Effect adds that any added weight also raises total weight, so start small and change one thing at a time. Write down the maker's stock numbers first.</p>
+<p>Want a rough number for your own paddle? The Kitchen's <a href="{SW_TK_CALC}" target="_blank" rel="noopener">swing weight calculator</a> estimates it from static weight, length and balance point, and says the result can be off by 5 to 10 points, so use it to compare paddles, not as an exact spec.</p>
+{money_links()}
+{sw_faq_html}
+{sources([("Pickleball Warehouse: Pickleball paddle swingweight explained", SW_PW, f"definition, hammer test, what changes it, why published numbers differ, read {sw_checked}"),
+          ("Pickleball Effect: Swing weight vs. twist weight (Matt Reny, Nov 9, 2026)", SW_PE, f"light/mid/heavy and twist bands, shape averages for 16mm paddles, customizing, read {sw_checked}"),
+          ("The Kitchen: Compare every paddle we've tested", SW_TK, f"tested range 99 to 126, most 113 to 118, read {sw_checked}"),
+          ("The Kitchen: Swing weight calculator", SW_TK_CALC, f"moment of inertia about a point about 10 cm from the butt cap, estimate accuracy, read {sw_checked}"),
+          ("The Kitchen: Adding weight to your pickleball paddle", SW_TK_TAPE, f"tape placements and their effect on swing and twist weight, read {sw_checked}"),
+          ("Maker product pages, linked per row in the chart (example: Volair Pro 1)", "https://volair.com/products/pro-1", f"swing and twist weights for every chart row, linked per row above, read {sw_checked}")])}
+{more("guides/pickleball-swing-weight.html")}'''
+    page("guides/pickleball-swing-weight.html", "Pickleball Swing Weight Explained (Chart of Paddle Numbers)", swg,
+         f"What pickleball paddle swing weight means, how it differs from static and twist weight, light vs heavy ranges, and maker-published numbers for {len(SW_ROWS)} paddle versions.",
+         fresh={"checked": SW_CHECKED, "rows": SW_ROWS, "faq": sw_faq},
+         schema=[sw_faq_ld])
 
     # ----- How to watch pro pickleball (Oct 29, 2026) -----
     # Every fact below was read on the linked official page on WT_CHECKED. Broadcast windows move; no invented times.
