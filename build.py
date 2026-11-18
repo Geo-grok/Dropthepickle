@@ -695,6 +695,24 @@ def evwk_page(fn):
 def evwk_build_date():
     v = os.environ.get("DTP_BUILD_DATE")  # override for testing, YYYY-MM-DD
     return datetime.date.fromisoformat(v) if v else datetime.datetime.now(ZoneInfo("America/Chicago")).date()
+def event_watch_path(t):
+    """Path of an event-scoped how-to-watch page, or None.
+
+    Matched on this event's name or official link so unrelated tour cards stay
+    plain. Hidden when the event's end (or start) date is before the build date
+    in America/Chicago. Not stored in tournaments.json, which update.py rewrites
+    from the PPA feed (past events also drop from that feed the day after they end).
+    """
+    blob = f'{t.get("name", "")} {t.get("link", "")}'.lower()
+    if "daytona" not in blob:
+        return None
+    end = t.get("end") or t.get("start") or ""
+    if end and end < evwk_build_date().isoformat():
+        return None
+    return "guides/how-to-watch-pro-pickleball.html"
+def event_watch_suffix(t, rel=""):
+    path = event_watch_path(t)
+    return f' · <a href="{rel}{path}">How to watch</a>' if path else ""
 def evwk_html():
     """Strip HTML, or "" if past EVWK_END or no linked event page exists in dist."""
     if evwk_build_date() > EVWK_END: return ""
@@ -770,7 +788,7 @@ def build():
         rest = parts[:-2]
         if rest and re.match(r"\d", rest[-1]): addr["streetAddress"] = rest.pop()
         return {"@type": "Place", "name": ", ".join(rest) or parts[-2], "address": addr}
-    tcard = lambda t: f'<div class="card tcard">{dbadge(t["start"]) if t.get("start") else ""}<span class="tag b-pub">{e(t["source"])}</span><h3><a href="{event_fn(t)}">{e(t["name"])}</a></h3><div class="meta">{(fmt(t["start"]) + " – " + fmt(t["end"])) if t.get("start") and t.get("end") else ""}{(" · " + e(t["location"])) if t.get("location") else ""}</div><p><a href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a>{(" · <a href="+chr(34)+e(t["tickets"])+chr(34)+" target=_blank rel=noopener>Tickets</a>") if t.get("tickets") else ""}</p></div>'
+    tcard = lambda t: f'<div class="card tcard">{dbadge(t["start"]) if t.get("start") else ""}<span class="tag b-pub">{e(t["source"])}</span><h3><a href="{event_fn(t)}">{e(t["name"])}</a></h3><div class="meta">{(fmt(t["start"]) + " – " + fmt(t["end"])) if t.get("start") and t.get("end") else ""}{(" · " + e(t["location"])) if t.get("location") else ""}</div><p><a href="{e(t["link"])}" target="_blank" rel="noopener">Official event page</a>{(" · <a href="+chr(34)+e(t["tickets"])+chr(34)+" target=_blank rel=noopener>Tickets</a>") if t.get("tickets") else ""}{event_watch_suffix(t)}</p></div>'
     ncard = lambda n: f'<div class="card newscard"><div class="pub"><span class="tag b-pub">{e(n["source"])}</span></div><h3><a href="{e(n["link"])}" target="_blank" rel="noopener">{e(n["title"])}</a></h3><div class="meta">{e(n["summary"])}</div></div>'
     def rcard(v, embed=True):
         if not embed and v.get("video_id"):
@@ -802,6 +820,9 @@ def build():
         bits.append('<h2>What this page does not have</h2><p>Entry fees, the division list, and the registration deadline are not fields in this feed record. DropThePickle does not invent them. A ticket link, when the feed has one, is only a ticket link.</p>')
         if "World Championships" in t["name"] and (t.get("start") or "").startswith("2026"):
             bits.append('<p><a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide: dates, venue, parking and ticket prices</a></p>')
+        wh = event_watch_path(t)
+        if wh:
+            bits.append(f'<p><a href="../{wh}">How to watch the {e(t["name"])}</a></p>')
         bits.append('<p><a href="../tournaments.html">All tournaments</a></p>')
         loc = t.get("location") or ""
         when_desc = " – ".join(t[k] for k in ("start", "end") if t.get(k))

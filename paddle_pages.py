@@ -268,7 +268,11 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
         if not vs: return '<p class="meta">No matching reviewer videos in our feeds yet. They refresh daily.</p>'
         return "<ul>" + "".join(f'<li><a href="{e(v["link"])}" target="_blank" rel="noopener">{e(v["title"])}</a> <span class="meta">({e(v["channel"])}, {fmt(v["date"])})</span></li>' for v in vs) + "</ul>"
     EXTRA = [("face", "Face"), ("core_material", "Core material"), ("length", "Length"), ("width", "Width"), ("handle", "Handle"), ("grip", "Grip circumference"), ("swing_weight", "Swing weight"), ("twist_weight", "Twist weight"), ("note", "Note")]
-    def specs(p): return f'<table><tr><th scope="row">Weight</th><td>{e(p["weight"]) or "not published"}</td></tr><tr><th scope="row">Core</th><td>{e(p["core"]) or "not published"}</td></tr><tr><th scope="row">Shape</th><td>{e(p["shape"]) or "not published"}</td></tr>{"".join(f'<tr><th scope="row">{lab}</th><td>{e(p[k])}</td></tr>' for k, lab in EXTRA if p.get(k))}<tr><th scope="row">List price</th><td>{money(p)}</td></tr><tr><th scope="row">Latest price</th><td>{pricecell(p)}</td></tr></table>'
+    def spec_lab(k, lab):
+        if k == "swing_weight":
+            return f'<a href="guides/pickleball-swing-weight.html">{lab}</a>'
+        return lab
+    def specs(p): return f'<table><tr><th scope="row">Weight</th><td>{e(p["weight"]) or "not published"}</td></tr><tr><th scope="row">Core</th><td>{e(p["core"]) or "not published"}</td></tr><tr><th scope="row">Shape</th><td>{e(p["shape"]) or "not published"}</td></tr>{"".join(f'<tr><th scope="row">{spec_lab(k, lab)}</th><td>{e(p[k])}</td></tr>' for k, lab in EXTRA if p.get(k))}<tr><th scope="row">List price</th><td>{money(p)}</td></tr><tr><th scope="row">Latest price</th><td>{pricecell(p)}</td></tr></table>'
     def pc(p):
         a, b = notes(p, ph(p)); return f'<div class="grid proscons"><div class="card"><h3>👍 Pros</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in a)}</ul></div><div class="card"><h3>👎 Cons</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in b)}</ul></div></div>'
     # Thumb-friendly "save money" row on every paddle page (social visitors land here on phones):

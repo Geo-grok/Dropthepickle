@@ -78,9 +78,10 @@ def make(page, e, fmt, C, B, *, nudge, NUDGEJS, XLAZY, SIGNUP_TITLE, SIGNUP_BLUR
     def indexable(b): return b.get("status") == "confirmed" and len(b.get("summary", "").split()) >= MIN_WORDS
     def tcard(b, s, *, rel=""):
         """Hub/teaser card: headline links to the story page; no embeds, no source list (those live on the story page)."""
+        links = "".join(f'<p class="watch"><a href="{e(l["href"])}">{e(l["label"])} →</a></p>' for l in b.get("links", []))
         return (f'<div class="card buzzcard"><div class="pub">{sbadge(b)}</div><h3><a href="{rel}buzz/{s}">{e(b["title"])}</a></h3>'
                 f'<div class="meta"><time datetime="{e(b.get("date", ""))}">{fmt(b.get("date"))}</time></div><p>{e(excerpt(b["summary"]))}</p>'
-                f'<p class="watch"><a href="{rel}buzz/{s}">Read the story and sources →</a></p></div>')
+                f'{links}<p class="watch"><a href="{rel}buzz/{s}">Read the story and sources →</a></p></div>')
     teaser = (f'<h2>Pickleball Buzz <a class="seemore" href="buzz.html">All buzz →</a></h2><div class="grid">'
               + "".join(tcard(b, s) for b, s in list(zip(items, slugs))[:3]) + '</div>') if items else ""
     # story pages
