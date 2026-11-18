@@ -132,7 +132,7 @@ def make(page, e, fmt, PP, cur, ph, buy, OWN, item_list, absu):
              f'<h2>$75 to $100</h2>{thin3}{table(t3, "../") if t3 else "<p>No items in our price data in this range right now.</p>"}'
              f'<h2>$100 and up</h2><p class="meta">{len(t4)} paddles, lowest price first.' + (f' Six Zero ({len(aud)} paddles) prices in AUD only, so they are on the <a href="../price-index.html">price index</a> instead.' if aud else "") + f'</p>{table(t4, "../")}'
              f'<h2>Beginner gifts</h2><p>Our beginner rule: $200 or less, plus a 16mm core option or a wider or hybrid face. These are the {len(beg)} lowest-priced paddles that pass it. New players will also like <a href="pickleball-rules-for-beginners.html">rules for beginners</a> and <a href="how-to-choose-a-paddle.html">how to choose a paddle</a>.</p>{table(beg, "../")}'
-             f'<h2>Paddle picks by player</h2><p>Know how they play? These spec-filter lists narrow it down.</p><ul>{pick_lis}</ul>'
+             f'<h2>Paddle picks by player</h2><p>Know how they play? These spec-filter lists narrow it down.</p><ul class="ll">{pick_lis}</ul>'
              f'<h2>Save with codes</h2><p>One code per order at most stores, so check the total at checkout. See every code on our <a href="/discount-codes">pickleball discount codes</a> page, re-checked daily. For the brands in this guide:</p><ul>{code_lis}</ul>'
              f'{faq(gqa)}'
              f'<p class="meta">More: <a href="../deals.html">Deals</a> · <a href="../price-tracker.html">Price tracker</a> · <a href="../price-index.html">Price index</a> · <a href="../paddle-quiz.html">Paddle quiz</a> · <a href="../disclosure.html">Disclosure</a></p>')

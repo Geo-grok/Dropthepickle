@@ -323,6 +323,22 @@ CSS += """
 .cshop{font-weight:800;color:var(--navy)}
 }
 """
+# Nov 18 mobile UX: link-only lists (guide "Keep going", Buzz story Sources / More from Buzz,
+# compare-page lists, gift-guide picks) and links inside data tables were ~20px-tall tap targets
+# on phones. Phone widths only: each list link becomes its own 44px+ row with a thin divider,
+# and table links get a 44px hit area. Home Top-5 "-65%" badges go 14px -> 16px. Colors and copy unchanged.
+CSS += """
+@media(max-width:720px){
+ul.ll{list-style:none;padding-left:0;margin-left:0}
+ul.ll li{margin:0;border-bottom:1px solid var(--line)}
+ul.ll li:last-child{border-bottom:0}
+ul.ll a{display:flex;align-items:center;min-height:44px;padding:.3rem 0;font-weight:600}
+ul.ll li>.meta{display:block;margin:-.25rem 0 .45rem}
+.ll1 a,article p.watch a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+main table td a,main table th a{display:inline-flex;align-items:center;min-height:44px}
+.top5 .off{font-size:16px}
+}
+"""
 _FB = {"Inter": "Inter Fallback", "Oswald": "Oswald Fallback", '"Bebas Neue"': "Bebas Neue Fallback", "Anton": "Anton Fallback"}
 def _with_fallbacks(css):
     # insert the metric-matched fallback right after each web font in every font/font-family stack
@@ -823,7 +839,7 @@ def build():
         wh = event_watch_path(t)
         if wh:
             bits.append(f'<p><a href="../{wh}">How to watch the {e(t["name"])}</a></p>')
-        bits.append('<p><a href="../tournaments.html">All tournaments</a></p>')
+        bits.append('<p class="ll1"><a href="../tournaments.html">All tournaments</a></p>')
         loc = t.get("location") or ""
         when_desc = " – ".join(t[k] for k in ("start", "end") if t.get(k))
         desc_bits = [t["name"]]

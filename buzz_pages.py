@@ -99,10 +99,10 @@ def make(page, e, fmt, C, B, *, nudge, NUDGEJS, XLAZY, SIGNUP_TITLE, SIGNUP_BLUR
         paras = "".join(f"<p>{e(p)}</p>" for p in re.split(r"\n\s*\n", b["summary"].strip()) if p.strip())
         body = (f'<article><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="../buzz.html">Buzz</a> › <span>Story</span></nav>'
                 f'<h1>{e(b["title"])}</h1><p class="meta">Pickleball Buzz · <time datetime="{e(b.get("date", ""))}">{fmt(b.get("date"))}</time> · {sbadge(b)} {tags}</p>'
-                f'{paras}{links}<h2>Sources</h2><ul class="srcs">{srcs or "<li>No source recorded.</li>"}</ul>'
+                f'{paras}{links}<h2>Sources</h2><ul class="srcs ll">{srcs or "<li>No source recorded.</li>"}</ul>'
                 f'{f"<div class={chr(34)}buzzx{chr(34)}>{emb}</div>" if emb else ""}'
                 f'<p class="meta">DropThePickle summarizes what the linked sources report. Items marked Unconfirmed have no official confirmation.</p>'
-                f'<h2>More from Pickleball Buzz</h2><ul>{more}</ul><p><a href="../buzz.html">All Pickleball Buzz stories →</a></p></article>'
+                f'<h2>More from Pickleball Buzz</h2><ul class="ll">{more}</ul><p class="ll1"><a href="../buzz.html">All Pickleball Buzz stories →</a></p></article>'
                 f'{XLAZY if b.get("embeds") else ""}')
         art = {"@type": "NewsArticle", "headline": b["title"][:110], "datePublished": b.get("date"), "description": describe(b["summary"]),
                "url": url, "mainEntityOfPage": url, "image": [base + "/og-1200x630.png"],

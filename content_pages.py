@@ -87,7 +87,7 @@ def make(page, e, fmt, PP, cur, ph):
     def more(current):
         links = "".join(f'<li><a href="../{fn}">{e(title)}</a></li>' for fn, title in GUIDES if fn != current)
         links += '<li><a href="../price-index.html">Paddle price index</a></li><li><a href="../tournaments.html">Pro events</a></li><li><a href="../events/opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide</a></li><li><a href="../events/mlp-nations-cup-2026.html">MLP Nations Cup 2026: how to watch</a></li><li><a href="../events/usa-pickleball-nationals-2026.html">USA Pickleball Nationals 2026: schedule and how to watch</a></li><li><a href="../creators/ryan-morneau.html">Ryan Morneau spotlight</a></li>'
-        return f'<h2>Keep going</h2><ul>{links}</ul>'
+        return f'<h2>Keep going</h2><ul class="ll">{links}</ul>'
 
     def embed(vid, title, short=True):
         klass = "vid short" if short else "vid"
