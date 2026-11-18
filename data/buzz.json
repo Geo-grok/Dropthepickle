@@ -1,11 +1,182 @@
 {
- "updated": "2026-11-17T06:00-06:00",
- "date": "2026-11-17",
- "source_file": "dtp-newsroom/buzz-2026-11-17.json",
+ "updated": "2026-11-18T06:00-06:00",
+ "date": "2026-11-18",
+ "source_file": "dtp-newsroom/buzz-2026-11-18.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026, APP Mesa & PPA Daytona",
  "seo_desc": "PPA Worlds 2026 champions and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP's new commissioner, MLP Asia, Brisbane 2032 and the Olympics, and The Picklr bankruptcy, all sourced.",
  "items": [
+  {
+   "title": "USA Pickleball and JOOLA end their legal fight and team up, with JOOLA giving $150,000 a year in equipment to USA Pickleball Serves",
+   "summary": "USA Pickleball and JOOLA announced a strategic partnership on Tuesday, Nov. 17, which USA Pickleball says follows the resolution of litigation between the two organizations; no settlement terms were announced. JOOLA becomes an official sponsor of USA Pickleball Serves, the governing body's charitable arm, and will contribute $150,000 in equipment each year for programs serving youth and schools, service members and first responders, adaptive pickleball, and grant programs such as Grow the Game and Play It Forward. The deal also covers USA Pickleball's national events, player development and coach education, per the announcement. Separately, USA Pickleball said it will expand coaching resources through RacketPro Organization (RPO) and work with 150+ Health on programming for older adults.",
+   "status": "confirmed",
+   "date": "2026-11-18",
+   "sources": [
+    {
+     "label": "USA Pickleball: USA Pickleball and JOOLA join forces to grow the game",
+     "url": "https://usapickleball.org/usap-news/partnerships/usa-pickleball-and-joola-join-forces-to-grow-the-game-expanding-access-for-youth-service-members-and-adaptive-players/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Business post: 'USA Pickleball and JOOLA are partners now. The litigation is resolved, and JOOLA puts $150K a year in paddles toward kids, vets and adaptive players.' Link the USA Pickleball release; don't speculate on settlement terms.",
+   "tags": [
+    "USA Pickleball",
+    "JOOLA",
+    "Business",
+    "Grow the game"
+   ]
+  },
+  {
+   "title": "PPA Daytona day one: No. 41 Maria Ford upsets the 13th seed, 19 lower seeds win, and Haworth, Hunter Johnson and Kunimoto start today",
+   "summary": "Nineteen lower-seeded players and teams won on Tuesday's round-of-64 day at the Proton Daytona Beach Open, World Pickleball Magazine counted. In women's singles, 41st seed Maria Ford came back to beat No. 13 Keilly Ulery 6-11, 11-4, 13-11, per the PPA, and in men's singles 36th seed Jonathan Truong beat No. 18 Michael Loyd 4-11, 11-8, 11-6. John Lucian Goins, going for a third straight singles title, beat qualifier Jemere Plummer 11-5, 11-0. Qualifier Matt Burkhardt's week ended: he lost his first singles match to the 15th seed in three games, and he and Mike Radermacher lost to Joel Poland and Eduardo Santini Ayon 14-12, 11-5 in men's doubles, per WPM. In men's doubles, 38th seeds Edgaras Zilys and Nicholas Wade beat the 22nd seeds 6-11, 11-9, 11-9; all four mixed qualifying pairs lost. Today's round of 32 brings in men's singles top seeds Christopher Haworth and Hunter Johnson and women's No. 2 seed Kiora Kunimoto. Anna Leigh Waters is skipping singles this week, the Daytona Beach News-Journal reported; she and the other top doubles seeds (Waters/Anna Bright, Waters/Ben Johns) start Thursday. The PPA's event page lists coverage in the PickleballTV app and on YouTube today, with Humana Championship Court exclusive to the app.",
+   "status": "confirmed",
+   "date": "2026-11-18",
+   "sources": [
+    {
+     "label": "World Pickleball Magazine: Nineteen lower seeds won at Daytona on Tuesday",
+     "url": "https://worldpickleballmagazine.com/daytona-beach-open-2026-round-of-32-nineteen-upset-winners-top-16-seeds/"
+    },
+    {
+     "label": "PPA Tour on X: No. 41 Maria Ford upsets No. 13 Keilly Ulery",
+     "url": "https://x.com/PPAtour/status/2122805293985706211"
+    },
+    {
+     "label": "Daytona Beach News-Journal: PPA stars back at Pictona for the Daytona Beach Open",
+     "url": "https://www.news-journalonline.com/story/sports/2026/11/17/ppa-tour-anna-leigh-waters-ben-johns-pictona/92807574007/"
+    },
+    {
+     "label": "PPA Tour on X: Wednesday's order of play",
+     "url": "https://x.com/PPAtour/status/2122902712941412528"
+    },
+    {
+     "label": "PPA Tour: Proton Daytona Beach Open event page",
+     "url": "https://www.ppatour.com/events/2026/proton-daytona-beach-open/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2122805293985706211"
+   ],
+   "social_angle": "Upset post: 'No. 41 over No. 13, 13-11 in the third. Maria Ford opens Daytona with the upset of the day.' Quote the PPA post, then tease today's round of 32 (Haworth, Hunter Johnson, Kunimoto).",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Maria Ford",
+    "Upsets",
+    "John Lucian Goins"
+   ]
+  },
+  {
+   "title": "MLP Asia moves Hong Kong's postponed match day to Kuala Lumpur on Nov. 26, and the Dragon Warriors' home day moves there too",
+   "summary": "MLP Asia has set a new date for the Hong Kong Cannons matches that were postponed on Nov. 14 over a visa-agency failure: the Cannons now play the Viet Panthers and the Dragon Warriors on Thursday, Nov. 26 at Tomaz Pickleball Club in Kuala Lumpur, Malaysia, per the league's updated schedule. The league says the Dragon Warriors' match day (vs. THE DOTS TOKYO and the Viet Panthers, Friday, Nov. 27) was also moved to Malaysia \"due to operational reasons.\" The regular season continues in Manila on Friday, Nov. 20 and Ho Chi Minh City on Saturday, Nov. 21, and the Malayan Stripes host on Nov. 28; the top four go to the MLP Asia Finals in Kuala Lumpur on Dec. 11-12.",
+   "status": "confirmed",
+   "date": "2026-11-18",
+   "sources": [
+    {
+     "label": "MLP Asia: The road to the MLP Asia Finals (schedule updated Nov. 17)",
+     "url": "https://mlp-asia.com/from-tokyo-to-the-title-the-road-to-the-mlp-asia-finals/"
+    },
+    {
+     "label": "World Pickleball Magazine: Hong Kong's MLP Asia night postponed after visa agency admits altering records",
+     "url": "https://worldpickleballmagazine.com/mlp-asia-hong-kong-cannons-postponed-visa/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Update post: 'Hong Kong's lost MLP Asia night has a new date, but not in Hong Kong: Nov. 26 in Kuala Lumpur.' Link the MLP Asia schedule.",
+   "tags": [
+    "MLP Asia",
+    "Hong Kong Cannons",
+    "Schedule",
+    "Kuala Lumpur"
+   ]
+  },
+  {
+   "title": "Boca Paddle by CityPickle opens today: 19 pickleball and six padel courts, home of MLP's Palm Beach Royals, backed by Ben Johns, Anna Bright and the Johnsons",
+   "summary": "Boca Paddle by CityPickle, a 100,000-square-foot indoor/outdoor club in Boca Raton, Fla., set its grand opening for Wednesday, Nov. 18, per the club's announcement and the South Florida Business Journal. It has 19 pickleball courts (including a stadium court) and six padel courts, 16 of them indoors, and is the official home of Major League Pickleball's Palm Beach Royals. Co-founders include former MLP CEO Brian Levine, and the investor group includes pros Anna Bright, Ben Johns, JW Johnson, Jorja Johnson and Gabriel Tardio, plus Life Time, per the release. It was built in a public-private partnership with the Greater Boca Raton Beach & Parks District; memberships start at $49 a month, and day passes are $35 for Boca Raton residents and $40 for others, per the release.",
+   "status": "confirmed",
+   "date": "2026-11-18",
+   "sources": [
+    {
+     "label": "Boca Paddle by CityPickle: November 18 grand opening announcement (via Fitt Insider)",
+     "url": "https://insider.fitt.co/press-release/boca-paddle-by-citypickle-announces-november-18-grand-opening/"
+    },
+    {
+     "label": "South Florida Business Journal: Boca Paddle by CityPickle to open Nov. 18",
+     "url": "https://www.bizjournals.com/southflorida/news/2026/11/04/boca-paddle-sets-grand-opening.html"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Venue post: 'Florida's biggest indoor/outdoor paddle club opens today in Boca, and Ben Johns, Anna Bright, the Johnsons and Tardio are investors.' Link the announcement.",
+   "tags": [
+    "Clubs",
+    "CityPickle",
+    "Boca Raton",
+    "MLP",
+    "Business"
+   ]
+  },
+  {
+   "title": "Prince Harry plays pickleball with wounded Ukrainian veterans at Invictus Games trials in Lviv",
+   "summary": "Prince Harry played pickleball with wounded Ukrainian veterans in Lviv on Sunday, Nov. 15, during Ukraine's trials for the 2027 Invictus Games, the Associated Press reported. He teamed with a veteran who had lost an arm against two men who had each lost a leg, per the AP, as reported by The Kitchen. Pickleball makes its Invictus debut at the 2027 Games in Birmingham, England, and Ukraine plans to send 60 competitors, its largest team, per The Kitchen. The Invictus Games Foundation gave the All-Ukrainian Pickleball Federation a 30,000-pound grant in July to train injured veterans as pickleball instructors, The Kitchen reported.",
+   "status": "confirmed",
+   "date": "2026-11-18",
+   "sources": [
+    {
+     "label": "The Kitchen: Prince Harry plays pickleball with wounded veterans in Ukraine",
+     "url": "https://thekitchenpickle.com/blogs/news/prince-harry-pickleball-ukraine-veterans-lviv-invictus-games/"
+    },
+    {
+     "label": "AP: Prince Harry salutes wounded Ukrainian veterans on surprise Ukraine visit",
+     "url": "https://apnews.com/article/prince-harry-ukraine-britain-invictus-wounded-veterans-ea4373cfbc0aaad3d1f32895d587013a"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Feel-good post: 'Prince Harry picked up a paddle with wounded Ukrainian veterans in Lviv. Pickleball debuts at the Invictus Games in 2027.' Link The Kitchen; no copied photos.",
+   "tags": [
+    "Invictus Games",
+    "Prince Harry",
+    "Adaptive pickleball",
+    "Ukraine"
+   ]
+  },
+  {
+   "title": "Courts watch: Leesburg, Va. opens its first town-run pickleball courts at Freedom Park",
+   "summary": "Leesburg, Va. opened its first town-run pickleball courts, five first-come, first-served courts with a central pavilion at Freedom Park on Tolbert Lane SE, after a ribbon cutting on Saturday, Nov. 14, Leesburg Daily reported, citing the town. The courts were added to the town's capital improvements program in fiscal 2023 after residents asked the council for them, per the report.",
+   "status": "confirmed",
+   "date": "2026-11-18",
+   "sources": [
+    {
+     "label": "Leesburg Daily: Leesburg opens first town pickleball courts at Freedom Park",
+     "url": "https://leesburgdaily.com/freedom-park-pickleball-courts-open/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Community post: 'New public courts: Leesburg, Va. opens five at Freedom Park, first come, first served.' Link the story.",
+   "tags": [
+    "Courts",
+    "Virginia",
+    "Public courts"
+   ]
+  },
+  {
+   "title": "Zane Navratil signs off from The Dink's PicklePod after years as co-host",
+   "summary": "The Dink's PicklePod released Zane Navratil's final episode as co-host on Tuesday, Nov. 17, per the episode listing. Navratil and Nico talk through the MLP Asia visa mess, MLP's commissioner news and the OWL paddle controversy, and hold a draft for Nico's next co-host. Navratil announced his departure on the Nov. 10 episode.",
+   "status": "confirmed",
+   "date": "2026-11-18",
+   "sources": [
+    {
+     "label": "PicklePod (The Dink) podcast feed: Zane Navratil's last episode of PicklePod",
+     "url": "https://feeds.megaphone.fm/picklepod"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Media note: 'End of an era on PicklePod: Zane Navratil's last episode is out.' Optional; link the show.",
+   "tags": [
+    "Media",
+    "Podcast",
+    "The Dink",
+    "Zane Navratil"
+   ]
+  },
   {
    "title": "MLP names Tanner Groff its new commissioner, moving over from running events for the PPA Tour",
    "summary": "Major League Pickleball named Tanner Groff its commissioner on Monday, Nov. 16, per the league. Groff, most recently Pickleball Inc.'s senior vice president of events, helped build the PPA Challenger Series (more than 30 events a year) and the Powerball Amateur State Championship Series. As commissioner he runs all MLP league operations, with a focus on owner relations and on-court competition. Chief tour officer Zach Gallin takes over MLP event operations, production, fan experience and financials, and Courtney Johnson was promoted to senior director of team competition for MLP and senior director of officiating for the PPA. Former commissioner Samin Odhwani stays on as a strategic advisor, per pickleball.com. MLP says more 2027 season information is coming in the next few weeks.",
@@ -2049,119 +2220,6 @@
     "Anna Leigh Waters",
     "Shoes",
     "Worlds"
-   ]
-  },
-  {
-   "title": "Worlds main draw starts today: Waters and Bright chase a record 18th straight title together, and Ben Johns (19 seed) opens singles vs. Brandon French",
-   "summary": "Main-draw play at the Opendoor Pickleball World Championships begins today, Tuesday Nov. 3, at Brookhaven Country Club in Farmers Branch, Texas, with the round of 64 (first serve 11 a.m. CT, live on PickleballTV). Each title is worth 3,000 ranking points, total payouts are $1,648,641, and all three doubles finals are best of five. Per the PPA's Stats Desk, Anna Leigh Waters and Anna Bright are trying to win an 18th straight tournament together, which would break the all-doubles record of 17 that Waters shares with Ben Johns. The PPA's storylines note Waters hasn't lost a singles match in 888 days, Johns is the 19 seed in men's singles and faces local favorite Brandon French in the round of 64. Waters is the defending champion in women's singles, women's doubles (with Bright) and mixed (with Johns). Qualifying was Monday; no official list of qualifiers has been published yet, so we aren't naming any. Separately, USA Pickleball Nationals are underway in San Diego.",
-   "status": "confirmed",
-   "date": "2026-11-03",
-   "sources": [
-    {
-     "label": "PPA Tour: Stats Desk preview (record streak, career numbers, defending medalists)",
-     "url": "https://www.ppatour.com/worlds-preview-from-the-stats-desk/"
-    },
-    {
-     "label": "PPA Tour: Storylines for Worlds (seeds and matchups)",
-     "url": "https://www.ppatour.com/opendoor-pickleball-world-championships-storylines/"
-    },
-    {
-     "label": "PPA Tour: Worlds event page, daily schedule and TV",
-     "url": "https://www.ppatour.com/events/2026/pickleball-world-championships/"
-    },
-    {
-     "label": "@PPAtour: Worlds broadcast schedule (CT)",
-     "url": "https://x.com/PPAtour/status/2117328428231741544"
-    },
-    {
-     "label": "NBC 7 San Diego: Nationals bring thousands to San Diego",
-     "url": "https://www.nbcsandiego.com/video/videos/pickleball-national-championships-bring-thousands-to-san-diego/4095749/"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2117359338004107348"
-   ],
-   "social_angle": "Stat post: 'Anna Leigh Waters and Anna Bright are going for an 18th straight title together at Worlds. Nobody in pro doubles has ever won 18 in a row.' Embed the PPA's Worlds guide post. Tag the PPA Tour.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Anna Leigh Waters",
-    "Anna Bright",
-    "Ben Johns",
-    "Dallas"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Mark Wahlberg, Jeremy Piven, John Isner and Sean O'Malley headline Thursday's celebrity showdown at Worlds with Ben Johns and Anna Bright",
-   "summary": "The MUNICIPAL Celebrity Pickleball Showdown presented by Corient is Thursday, Nov. 5, at 7 p.m. CT on Powerball Championship Court at Brookhaven Country Club, live on Tennis Channel and PickleballTV. Wahlberg, co-founder of the MUNICIPAL apparel brand, is joined by actor Jeremy Piven, retired tennis pro John Isner, UFC fighter Sean 'Suga' O'Malley, basketball pro Isabelle Harrison and TV personality Richard Rawlings. Pros listed by the PPA include Ben Johns, Anna Bright, Roscoe Bellamy, Kate Fahey, Tyson McGuffin, Brooke Buckner, Jack Sock and Lacy Schneemann. Per the PPA, Wahlberg will debut MUNICIPAL's first court shoe, the CRT-01, with on-site try-ons and pre-orders ahead of an early 2027 release, and MUNICIPAL has teamed up with JOOLA on apparel for the match. pickleball.com adds that MUNICIPAL has a multi-year partnership with MLP's Dallas Flash starting in 2027.",
-   "status": "confirmed",
-   "date": "2026-11-03",
-   "sources": [
-    {
-     "label": "PPA Tour: Wahlberg, Piven, Isner headline the MUNICIPAL Celebrity Showdown",
-     "url": "https://www.ppatour.com/mark-wahlberg-jeremy-piven-john-isner-municipal-celebrity-pickleball-showdown/"
-    },
-    {
-     "label": "pickleball.com: Full roster revealed for the MUNICIPAL Celebrity Pickleball Showdown",
-     "url": "https://pickleball.com/culture/full-roster-revealed-for-municipal-celebrity-pickleball-showdown-presented-by-corient"
-    },
-    {
-     "label": "Fort Worth Star-Telegram: Mark Wahlberg headlining pickleball event in North Texas",
-     "url": "https://www.star-telegram.com/entertainment/fort-worth/article317894776.html"
-    },
-    {
-     "label": "@PPAtour: The stars are coming to Brookhaven",
-     "url": "https://x.com/PPAtour/status/2117372552939020602"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2117372552939020602"
-   ],
-   "social_angle": "Celebrity post: 'Mark Wahlberg, John Isner and Suga Sean O'Malley on a pickleball court with Ben Johns and Anna Bright. Thursday, 7 p.m. CT on Tennis Channel. Who wins?' Embed the PPA post. Tag the PPA Tour.",
-   "tags": [
-    "Worlds",
-    "Celebrity",
-    "Mark Wahlberg",
-    "Tennis Channel",
-    "PPA"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Gear: Honolulu's J6M+ 'Jam Paddle' brings its Crystal Blue grit to a softer, cheaper full-foam paddle",
-   "summary": "Honolulu Pickleball Company has released the J6M+, nicknamed the 'Jam Paddle': Honolulu's J6 elongated shape and Crystal Blue Endurance Surface ('Blue Grit') with a softer, fully floated MPP foam core and an EVA outer ring. It lists at $143 on 808Pickle; The Kitchen says it comes in under $130 with its own discount code. It's 16mm, listed as UPA-A approved with USA Pickleball approval pending, and is a preorder shipping at the end of December through early January, per the product listing. Feel and spin claims are Honolulu's own.",
-   "status": "confirmed",
-   "date": "2026-11-03",
-   "sources": [
-    {
-     "label": "The Kitchen on X: Honolulu J6M+ 'Jam Paddle'",
-     "url": "https://x.com/TheKitchenPB/status/2117431244908597569"
-    },
-    {
-     "label": "Honolulu Pickleball Company (808Pickle)",
-     "url": "https://808pickle.com/"
-    }
-   ],
-   "embeds": [
-    "https://x.com/TheKitchenPB/status/2117431244908597569"
-   ],
-   "social_angle": "Gear post: 'Honolulu's Blue Grit, softer foam core, $143. The J6M+ Jam Paddle ships late December.' Embed The Kitchen's post. Note USAP approval is still pending.",
-   "tags": [
-    "Gear",
-    "Honolulu",
-    "New paddle",
-    "Full foam"
    ]
   }
  ]
