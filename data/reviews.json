@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "channel": "Pickleball Effect",
+   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
+   "title": "LUZZ Cannon XPP M1 Review - I Didn't Expect to Love This Paddle",
+   "link": "https://www.youtube.com/watch?v=4kxtwlypp-s",
+   "video_id": "4kxtwlypp-s",
+   "date": "2026-11-19"
+  },
+  {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "This Paddle RIPS!! Enhance Echo Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=pc7-Z8QbFuA",
+   "video_id": "pc7-Z8QbFuA",
+   "date": "2026-11-19"
+  },
+  {
+   "channel": "Pickleball Pursuit",
+   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
+   "title": "$99. Durable Grit. ELITE Performance. What's the Catch? | Neonic FLX NEOGRIT Review",
+   "link": "https://www.youtube.com/watch?v=hsl9VXjLBg8",
+   "video_id": "hsl9VXjLBg8",
+   "date": "2026-11-19"
+  },
+  {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
    "title": "Spartus Spitfire vs Vatic V-Sol Tour vs Neonic FLX & Black Friday Deals Tracker",
@@ -35,7 +59,7 @@
   {
    "channel": "Pickleball Playbook Paddles",
    "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "$72 For Durable Grit? Gruvn Muvn vs Gruvn Bruzn Paddle Review",
+   "title": "$72 For Durable Grit? Gruvn – MUVN PRO vs BRUZN Paddle Review",
    "link": "https://www.youtube.com/watch?v=6LnJUaN8_Zw",
    "video_id": "6LnJUaN8_Zw",
    "date": "2026-11-18"
@@ -321,14 +345,6 @@
    "date": "2026-10-31"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "Bread & Butter Loco 2 Review | Welcome to Elite Spin Durability",
-   "link": "https://www.youtube.com/watch?v=tAUu6u3JmMY",
-   "video_id": "tAUu6u3JmMY",
-   "date": "2026-10-30"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "Bread & Butter Loco 2 Review – Same Great Paddle, Now With Durable Grit",
@@ -409,14 +425,6 @@
    "date": "2026-10-22"
   },
   {
-   "channel": "Pickleball Effect",
-   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
-   "title": "BNB's Doug Talks Durable Grit, Ditching Widebodies & Bringing Back the Shogun | EP 145",
-   "link": "https://www.youtube.com/watch?v=hB-c9JO0-0I",
-   "video_id": "hB-c9JO0-0I",
-   "date": "2026-10-20"
-  },
-  {
    "channel": "Pickleball Warehouse",
    "channel_url": "https://www.youtube.com/channel/UCmWrepJcpZaQIKOqU3MLKuA",
    "title": "The Best Paddles of 2026",
@@ -471,17 +479,33 @@
    "link": "https://www.youtube.com/watch?v=tSoBCAnwk6g",
    "video_id": "tSoBCAnwk6g",
    "date": "2026-10-13"
-  },
-  {
-   "channel": "Farmer Lanky Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
-   "title": "Gearbox Pressure 8M and 8E Pickleball Paddle Review : Their Best Paddle?",
-   "link": "https://www.youtube.com/watch?v=uzRr_dHTyUU",
-   "video_id": "uzRr_dHTyUU",
-   "date": "2026-10-13"
   }
  ],
  "all_items": [
+  {
+   "channel": "Pickleball Effect",
+   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
+   "title": "LUZZ Cannon XPP M1 Review - I Didn't Expect to Love This Paddle",
+   "link": "https://www.youtube.com/watch?v=4kxtwlypp-s",
+   "video_id": "4kxtwlypp-s",
+   "date": "2026-11-19"
+  },
+  {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "This Paddle RIPS!! Enhance Echo Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=pc7-Z8QbFuA",
+   "video_id": "pc7-Z8QbFuA",
+   "date": "2026-11-19"
+  },
+  {
+   "channel": "Pickleball Pursuit",
+   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
+   "title": "$99. Durable Grit. ELITE Performance. What's the Catch? | Neonic FLX NEOGRIT Review",
+   "link": "https://www.youtube.com/watch?v=hsl9VXjLBg8",
+   "video_id": "hsl9VXjLBg8",
+   "date": "2026-11-19"
+  },
   {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
@@ -517,7 +541,7 @@
   {
    "channel": "Pickleball Playbook Paddles",
    "channel_url": "https://www.youtube.com/channel/UCikz-D2j4_jMVYZrQuPin6A",
-   "title": "$72 For Durable Grit? Gruvn Muvn vs Gruvn Bruzn Paddle Review",
+   "title": "$72 For Durable Grit? Gruvn – MUVN PRO vs BRUZN Paddle Review",
    "link": "https://www.youtube.com/watch?v=6LnJUaN8_Zw",
    "video_id": "6LnJUaN8_Zw",
    "date": "2026-11-18"
@@ -843,14 +867,6 @@
    "date": "2026-10-31"
   },
   {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "Bread & Butter Loco 2 Review | Welcome to Elite Spin Durability",
-   "link": "https://www.youtube.com/watch?v=tAUu6u3JmMY",
-   "video_id": "tAUu6u3JmMY",
-   "date": "2026-10-30"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "Bread & Butter Loco 2 Review – Same Great Paddle, Now With Durable Grit",
@@ -977,14 +993,6 @@
    "link": "https://www.youtube.com/watch?v=nHZAioEHxeM",
    "video_id": "nHZAioEHxeM",
    "date": "2026-10-20"
-  },
-  {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "CPX Hyper +, RPM Jade, B&B Loco 2, Luzz Cannon XPP",
-   "link": "https://www.youtube.com/watch?v=HMR0WXzLdsI",
-   "video_id": "HMR0WXzLdsI",
-   "date": "2026-10-19"
   },
   {
    "channel": "Pickleball Advocate",
@@ -1115,14 +1123,6 @@
    "date": "2026-10-07"
   },
   {
-   "channel": "Pickleball Effect",
-   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
-   "title": "We Tested If Paddles Are Getting Faster + Anna Leigh’s Lob Serve Explained | EP 143",
-   "link": "https://www.youtube.com/watch?v=GMvvDrCajlg",
-   "video_id": "GMvvDrCajlg",
-   "date": "2026-10-06"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Gearbox Pressure X Paddle Review | On court drill test",
@@ -1161,14 +1161,6 @@
    "link": "https://www.youtube.com/watch?v=25Zop81gcKU",
    "video_id": "25Zop81gcKU",
    "date": "2026-10-05"
-  },
-  {
-   "channel": "PickleballPlaybook - Austin Hardy",
-   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
-   "title": "Honolulu J2CR vs J3CR vs J6CR on court paddle review & drill test",
-   "link": "https://www.youtube.com/watch?v=3WQ08ZV97a4",
-   "video_id": "3WQ08ZV97a4",
-   "date": "2026-09-30"
   },
   {
    "channel": "Pickleball Pursuit",
@@ -1548,7 +1540,7 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (5)",
+  "Pickleball Studio": "ok (4)",
   "John Kew Pickleball": "ok (8)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
@@ -1561,8 +1553,8 @@
   "Pickleball Warehouse": "ok (6)",
   "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
-  "Pickleball Pursuit": "ok (8)",
-  "All Drive No Drop Pickleball": "ok (9)",
+  "Pickleball Pursuit": "ok (9)",
+  "All Drive No Drop Pickleball": "ok (8)",
   "Matthew K Pickleball": "ok (2)",
   "Tickle My Pickleball": "ok (4)",
   "PickleBaller": "ok (8)",
@@ -1572,5 +1564,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-18T19:19"
+ "updated": "2026-11-19T19:26"
 }
