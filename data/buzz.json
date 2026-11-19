@@ -1,11 +1,201 @@
 {
- "updated": "2026-11-18T06:00-06:00",
- "date": "2026-11-18",
- "source_file": "dtp-newsroom/buzz-2026-11-18.json",
+ "updated": "2026-11-19T06:00-06:00",
+ "date": "2026-11-19",
+ "source_file": "dtp-newsroom/buzz-2026-11-19.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026, APP Mesa & PPA Daytona",
  "seo_desc": "PPA Worlds 2026 champions and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP's new commissioner, MLP Asia, Brisbane 2032 and the Olympics, and The Picklr bankruptcy, all sourced.",
  "items": [
+  {
+   "title": "PPA Daytona round of 32: No. 26 Mota Alhouni knocks out top seed Chris Haworth, Kelly Goodnow beats Genie Bouchard, and No. 41 Maria Ford keeps rolling",
+   "summary": "Wednesday's round of 32 at the Proton Daytona Beach Open, played through rain and wind at Pictona, produced the week's biggest singles upset so far: 26th seed Mota Alhouni beat No. 1 Christopher Haworth 11-4, 11-5, reversing Haworth's 2025 Daytona quarterfinal win over him, per Pickleball.com and the PPA. In women's singles, 14-year-old Kelly Goodnow beat No. 9 seed Genie Bouchard 11-4, 11-3 and plays No. 4 seed and defending champion Catherine Parenteau in today's round of 16. No. 41 Maria Ford, who beat the 13th seed on Tuesday, beat the 15th seed, Helena Jansen, 11-3, 11-9 and now meets No. 1 Brooke Buckner, per the PPA. Anouar Braham reached the round of 16 in all three of his events, clinched in men's doubles with Clayton Powell 11-7, 10-12, 11-3. In women's doubles, 30th seeds Jessica Evanier and Alexa Quintanilla beat the No. 8 seeds, Layne Sleeth and Cailyn Campbell, 11-9, 11-9. John Lucian Goins, chasing a third straight singles title, beat Braden Jacobson 11-6, 11-3. Today's round of 16 brings in the top doubles seeds, including Anna Leigh Waters with Anna Bright and with Ben Johns, with every court on PickleballTV from 12 p.m. ET (11 a.m. CT), per the PPA.",
+   "status": "confirmed",
+   "date": "2026-11-19",
+   "sources": [
+    {
+     "label": "Pickleball.com: Daytona Beach Wednesday recap: Goodnow, Alhouni notch marquee singles wins",
+     "url": "https://pickleball.com/news/daytona-beach-wednesday-recap-goodnow-alhouni-notch-marquee-singles-wins"
+    },
+    {
+     "label": "PPA Tour on X: No. 26 Mota Alhouni stuns No. 1 Christopher Haworth",
+     "url": "https://x.com/PPAtour/status/2123135991569420546"
+    },
+    {
+     "label": "PPA Tour on X: No. 41 Maria Ford beats Helena Jansen, faces Brooke Buckner",
+     "url": "https://x.com/PPAtour/status/2123187309830926758"
+    },
+    {
+     "label": "PPA Tour on X: Anouar Braham into the round of 16 in all three events",
+     "url": "https://x.com/PPAtour/status/2123222434006356090"
+    },
+    {
+     "label": "PPA Tour on X: Evanier/Quintanilla knock out the No. 8 seeds",
+     "url": "https://x.com/PPAtour/status/2123251481612566953"
+    },
+    {
+     "label": "PPA Tour on X: Thursday's order of play",
+     "url": "https://x.com/PPAtour/status/2123257412794601910"
+    },
+    {
+     "label": "PPA Tour: Proton Daytona Beach Open event page",
+     "url": "https://www.ppatour.com/events/2026/proton-daytona-beach-open/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2123135991569420546",
+    "https://x.com/PPAtour/status/2123153672687456558"
+   ],
+   "social_angle": "Upset post: 'No. 26 over No. 1, 11-4, 11-5. Mota Alhouni gets his Daytona revenge on Chris Haworth.' Quote the PPA post; second post on 14-year-old Kelly Goodnow beating Genie Bouchard and drawing defending champ Parenteau today.",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Mota Alhouni",
+    "Kelly Goodnow",
+    "Maria Ford",
+    "Upsets"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy: the creditors' meeting is pushed to Dec. 2, and Pickled! plans to take over the closed Naperville club",
+   "summary": "The Nov. 18 meeting of creditors in The Picklr's Chapter 11 case was adjourned; the docket now sets the 341(a) meeting for Wednesday, Dec. 2 at 3 p.m. by telephone, per a Nov. 18 statement on the court docket. Separately, Chicago-area operator Pickled! says it will take over The Picklr's closed Naperville, Ill. space at 740 Route 59 in Fox River Commons, the Daily Herald/Naperville Sun reported. The Picklr Naperville closed Friday, Nov. 13, per the shopping center's property manager. Pickled! co-owner Nathan Patrick Taylor said there is no opening date yet, that the company is working to reconcile former Picklr members' memberships, and that it may add golf simulators. The Naperville lease rejection is among the motions set for the Dec. 8 hearing.",
+   "status": "confirmed",
+   "date": "2026-11-19",
+   "sources": [
+    {
+     "label": "BKalerts: Picklr, Inc. docket (Statement adjourning 341(a) meeting to Dec. 2)",
+     "url": "https://www.bkalerts.com/recent-bankruptcy-cases/texas-northern-bankruptcy-court/3:26-bk-34687/bankruptcy-case-picklr-inc"
+    },
+    {
+     "label": "Daily Herald: New pickleball business plans to take over closed Picklr Naperville location",
+     "url": "https://www.dailyherald.com/2026/11/17/new-pickleball-business-plans-to-take-over-closed-picklr-naperville-location/"
+    },
+    {
+     "label": "Omni Agent Solutions: Picklr case calendar",
+     "url": "https://cases.omniagentsolutions.com/calendar?clientId=3812"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Business post: 'One closed Picklr club already has a taker. Pickled! is moving into the Naperville space, and the bankruptcy creditors' meeting slides to Dec. 2.' Link the Daily Herald story; don't speculate on other clubs.",
+   "tags": [
+    "The Picklr",
+    "Bankruptcy",
+    "Business",
+    "Pickled!",
+    "Naperville"
+   ]
+  },
+  {
+   "title": "USA Pickleball's Collegiate Equipment Program, powered by Selkirk, opens applications Friday, Nov. 20",
+   "summary": "College pickleball clubs can apply for free equipment bundles through USA Pickleball's Collegiate Equipment Program, powered by the Selkirk Growth Program, starting at 12:01 a.m. PT on Friday, Nov. 20 (2:01 a.m. CT), per USA Pickleball. Applicants must be USA Pickleball members in good standing and either current members of a collegiate club or faculty/staff at the school; the club must be listed on USA Pickleball's national collegiate registry. Applications are reviewed on a rolling basis and the window closes once the set number of bundles is awarded, so early applications matter. Equipment must be used by the club, not individual players, and priority goes to clubs with limited equipment, funding or sponsorship.",
+   "status": "confirmed",
+   "date": "2026-11-19",
+   "sources": [
+    {
+     "label": "USA Pickleball: Collegiate Equipment Program",
+     "url": "https://usapickleball.org/collegiate/equipment/"
+    },
+    {
+     "label": "USA Pickleball on X: Applications open Friday, November 20",
+     "url": "https://x.com/USAPickleball/status/2123113696130113964"
+    }
+   ],
+   "embeds": [
+    "https://x.com/USAPickleball/status/2123113696130113964"
+   ],
+   "social_angle": "Service post: 'College clubs: free gear applications open tomorrow (Fri) at 12:01 a.m. PT, first come, first served until the bundles run out.' Link the USA Pickleball page.",
+   "tags": [
+    "USA Pickleball",
+    "College pickleball",
+    "Selkirk",
+    "Grants",
+    "Grow the game"
+   ]
+  },
+  {
+   "title": "MLP Asia goes to Manila Friday: the Helios host the Dragon Warriors and Hong Kong Cannons, both making their debuts",
+   "summary": "MLP Asia's second stop is Friday, Nov. 20 at Tela Park Pickleball Center in Manila, starting at 6 p.m. local time (4 a.m. CT Friday), per the league. The Manila Helios, beaten 4-0 by THE DOTS TOKYO on opening night, play a doubleheader against two teams playing their first MLP Asia matches: the Dragon Warriors, led by world No. 20 Ting Chieh Wei, then the Hong Kong Cannons, with No. 13 Chao Yi Wang and captain Hong Kit 'Jack' Wong. Each match is four games to 11 (women's, men's and two mixed doubles), with a DreamBreaker on a 2-2 split. The Cannons' postponed matches from the Hong Kong stop are now set for Nov. 26 in Kuala Lumpur.",
+   "status": "confirmed",
+   "date": "2026-11-19",
+   "sources": [
+    {
+     "label": "MLP Asia: Preview: Helios head home to face Warriors and Cannons",
+     "url": "https://mlp-asia.com/helios-head-home-to-face-warriors-and-cannons/"
+    },
+    {
+     "label": "MLP Asia: From Tokyo to the title: the road to the MLP Asia Finals",
+     "url": "https://mlp-asia.com/from-tokyo-to-the-title-the-road-to-the-mlp-asia-finals/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Preview post: 'Manila gets its first MLP Asia night Friday, and the Hong Kong Cannons finally play.' Link the MLP Asia preview.",
+   "tags": [
+    "MLP Asia",
+    "Manila Helios",
+    "Hong Kong Cannons",
+    "Dragon Warriors"
+   ]
+  },
+  {
+   "title": "Courts watch: Oxford, Miss. accepts a $7.63 million bid for its 24-court Stone Center complex; Scotts Valley keeps its 8 p.m. closing while it surveys",
+   "summary": "Oxford's Board of Aldermen on Tuesday, Nov. 17 accepted Wagner General Contractors' low bid of $7,632,240, including all four alternates, for the Stone Center pickleball complex: 18 covered courts, six outdoor courts, two parking lots and a raised platform, per the meeting record. The bid came in about $1.4 million under the low end of the architect's $9 million estimate, Oxford News Now reported, and the 420-day schedule points to a January 2028 opening. In Scotts Valley, Calif., the City Council discussed noise and traffic complaints about the Skypark courts on Wednesday, Nov. 18 and took no action. The 8 p.m. nightly closing from the summer pilot stays in place while the city surveys residents and court users through Nov. 30; results go to the Parks and Recreation Commission on Dec. 17, per SFGate/Bay City News and the city.",
+   "status": "confirmed",
+   "date": "2026-11-19",
+   "sources": [
+    {
+     "label": "OpenMississippi: Oxford Board of Aldermen, Nov. 17 meeting record (video and transcript)",
+     "url": "https://oxford.openmississippi.org/meetings/b44459bb-05a5-4b29-871f-abeb6d3c45f3"
+    },
+    {
+     "label": "Oxford News Now: $7.6 million low bid goes to vote",
+     "url": "https://oxfordnewsnow.com/oxford-pickleball-courts-low-bid/"
+    },
+    {
+     "label": "SFGate (Bay City News): Scotts Valley council discusses pickleball courts",
+     "url": "https://www.sfgate.com/news/bayarea/article/scotts-valley-city-council-discusses-pickleball-22539090.php"
+    },
+    {
+     "label": "City of Scotts Valley: Court Hours Pilot Program",
+     "url": "https://www.scottsvalley.gov/803/Court-Hours-Pilot-Program"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Local post: 'Oxford, Miss. locks in 24 courts, 18 of them covered, for $7.6M. Meanwhile Scotts Valley is still deciding how late you can play.' Link both stories.",
+   "tags": [
+    "Courts",
+    "Oxford",
+    "Mississippi",
+    "Scotts Valley",
+    "Noise"
+   ]
+  },
+  {
+   "title": "Pickleballers podcast: Travis Rettenmaier on cheating, Andre Agassi's mentorship and how pickleball saved him",
+   "summary": "The Kitchen's Pickleballers podcast with Jared Paul and Roscoe Bellamy released Season 5, Episode 7 on Thursday, Nov. 19, with former tennis pro Travis Rettenmaier. Per the episode title, the conversation covers the sport's biggest cheaters, Andre Agassi's mentorship and how pickleball saved him. Also new this week: Pickleball Studio's episode 184 compares the Spartus Spitfire, Vatic V-Sol Tour and Neonic FLX paddles and starts a Black Friday deals tracker.",
+   "status": "confirmed",
+   "date": "2026-11-19",
+   "sources": [
+    {
+     "label": "Pickleballers podcast feed (S5 E7)",
+     "url": "https://feeds.redcircle.com/d7af585b-6cc2-4442-a351-6d4d350d98c8"
+    },
+    {
+     "label": "Pickleballers on Spotify for Podcasters",
+     "url": "https://podcasters.spotify.com/pod/show/pickleballers"
+    },
+    {
+     "label": "Pickleball Studio Podcast feed (ep. 184)",
+     "url": "https://rss.buzzsprout.com/1997851.rss"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Media post: 'New Pickleballers: Travis Rettenmaier on the sport's biggest cheaters.' Link the episode; don't repeat claims from it without listening.",
+   "tags": [
+    "Podcasts",
+    "Pickleballers",
+    "Travis Rettenmaier",
+    "Media"
+   ]
+  },
   {
    "title": "USA Pickleball and JOOLA end their legal fight and team up, with JOOLA giving $150,000 a year in equipment to USA Pickleball Serves",
    "summary": "USA Pickleball and JOOLA announced a strategic partnership on Tuesday, Nov. 17, which USA Pickleball says follows the resolution of litigation between the two organizations; no settlement terms were announced. JOOLA becomes an official sponsor of USA Pickleball Serves, the governing body's charitable arm, and will contribute $150,000 in equipment each year for programs serving youth and schools, service members and first responders, adaptive pickleball, and grant programs such as Grow the Game and Play It Forward. The deal also covers USA Pickleball's national events, player development and coach education, per the announcement. Separately, USA Pickleball said it will expand coaching resources through RacketPro Organization (RPO) and work with 150+ Health on programming for older adults.",
@@ -2060,190 +2250,6 @@
     "Philippines",
     "Manila",
     "Exhibition"
-   ]
-  },
-  {
-   "title": "Worlds round of 64 complete: Ben Johns survives Brandon French in three, No. 8 Connor Garnett and No. 5 Chao Yi Wang are upset, and Johns/Waters face the team that beat Collin Johns",
-   "summary": "All five round-of-64 draws at the Opendoor Pickleball World Championships finished Tuesday, Nov. 3, in Farmers Branch, Texas. Per the official bracket, Ben Johns (19 seed) beat local favorite Brandon French 11-7, 1-11, 11-5 in men's singles, and Anna Leigh Waters beat Frances Altick 11-3, 11-3. Johns and Waters opened mixed 11-3, 11-2, and Anna Bright and Hayden Patriquin won 11-7, 11-5. Upsets in men's singles: Jaxon Madsen (59) beat No. 8 Connor Garnett 11-7, 5-11, 11-1, Max Freeman (37) beat Kenta Miyoshi (27), Michael Loyd beat Tyson McGuffin 11-7, 11-0 and Harrison Brown beat Zane Navratil 11-3, 11-6. Women's singles: Shannon Pretorius (61) beat No. 5 Chao Yi Wang 11-2, 0-11, 11-7, and Alex Walker (54) beat No. 11 Liz Truluck. In mixed, Daria Walczak and Augie Ge (33) beat Collin Johns and Callie Smith 10-12, 11-4, 11-1, so there is no Johns-brothers matchup. Instead, Walczak and Ge face Ben Johns and Waters today. In men's doubles, Rio Newcombe and Andrew Caldarella beat Navratil and George Wall, and No. 8 Jaume Martinez Vich and Nicolas Acevedo are listed as a walkover loss (no reason given). The round of 32 is today, Wednesday, Nov. 4, on PickleballTV. Per the PPA, men's singles starts at 11 a.m. CT with Johns vs. No. 9 Noe Khlif and Madsen vs. JW Johnson. Women's singles starts at 11:45 a.m. with Waters vs. Kelly Goodnow. Mixed starts at 2 p.m., and men's and women's doubles at 3:30 p.m. Johns/Tardio play Scarpa/Jakovljevic, and Bright/Waters open women's doubles vs. Blatt/Morelli.",
-   "status": "confirmed",
-   "date": "2026-11-04",
-   "sources": [
-    {
-     "label": "Official Worlds bracket and scores (United Pickleball)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    },
-    {
-     "label": "@PPAtour: Men's singles round of 32 schedule",
-     "url": "https://x.com/PPAtour/status/2117795052596384197"
-    },
-    {
-     "label": "@PPAtour: Women's singles round of 32 schedule",
-     "url": "https://x.com/PPAtour/status/2117795052478976337"
-    },
-    {
-     "label": "@PPAtour: Mixed doubles round of 32 schedule",
-     "url": "https://x.com/PPAtour/status/2117795052390904293"
-    },
-    {
-     "label": "@PPAtour: Men's doubles round of 32 schedule",
-     "url": "https://x.com/PPAtour/status/2117811787894534481"
-    },
-    {
-     "label": "@PPAtour: Women's doubles round of 32 schedule",
-     "url": "https://x.com/PPAtour/status/2117811788011958537"
-    },
-    {
-     "label": "PickleballTV (YouTube): Ben Johns vs Brandon French, full match",
-     "url": "https://www.youtube.com/watch?v=7bbQod47ue8"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2117795052596384197"
-   ],
-   "social_angle": "Results post: 'Ben Johns dropped a game 1-11 to Brandon French, then won the decider 11-5. Today he gets No. 9 Noe Khlif at 11 a.m. CT.' Embed the PPA's men's singles R32 post. Tag the PPA Tour. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Ben Johns",
-    "Anna Leigh Waters",
-    "Upsets",
-    "Round of 32"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "13-year-old Natalia Simson knocks out Genie Bouchard at Worlds, 11-3, 4-11, 11-5",
-   "summary": "Natalia Simson, the No. 52 seed in the official bracket, beat No. 13 Genie Bouchard 11-3, 4-11, 11-5 in the women's singles round of 64. pickleball.com reports that Simson is 13, was newly signed as a PPA pro and recently switched to the JOOLA Agassi paddle. It adds that she and Bouchard were doubles partners in Virginia Beach. The PPA calls her a former Junior PPA champion. 'I wasn't even expecting to win this one,' Simson told pickleball.com. She plays Samantha Parker in today's round of 32, listed at 1:15 p.m. CT on the official schedule. Bouchard is also out of women's doubles: she and Allison Phillips lost to Kelly Goodnow and Elsie Hendershot 11-9, 6-11, 11-2.",
-   "status": "confirmed",
-   "date": "2026-11-04",
-   "sources": [
-    {
-     "label": "pickleball.com: 13-year-old Natalia Simson upsets Genie Bouchard",
-     "url": "https://pickleball.com/people/13-year-old-natalia-simson-upsets-genie-bouchard-in-womens-singles"
-    },
-    {
-     "label": "@PPAtour: SIMSON WINS!",
-     "url": "https://x.com/PPAtour/status/2117737483752587771"
-    },
-    {
-     "label": "@PPAtour: upset clip",
-     "url": "https://x.com/PPAtour/status/2117744022773195091"
-    },
-    {
-     "label": "PickleballTV (YouTube): Bouchard vs Simson, full match",
-     "url": "https://www.youtube.com/watch?v=39vT9g7qwf0"
-    },
-    {
-     "label": "Official Worlds bracket (United Pickleball)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2117744022773195091"
-   ],
-   "social_angle": "Upset post: 'A 13-year-old just beat Genie Bouchard at the World Championships.' Embed the PPA's clip. Tag the PPA Tour. On Instagram, use 1-2 hashtags at most and put the keywords in the caption.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Natalia Simson",
-    "Genie Bouchard",
-    "Upset"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Gear: Selkirk's Rob Barnes says the company will move away from widebody paddles, with more hybrids around mid-2027",
-   "summary": "Selkirk's Rob Barnes told Nico the Lefty's YouTube series 'The Main' that Selkirk will move away from the widebody shape over time, with more hybrid shapes coming around mid-2027, The Dink reports. Barnes said Selkirk sells about eight elongated paddles for every widebody, even though its engineers rate the widebody highly for sweet spot and consistency. The upcoming Boomstik ST still comes in widebody and elongated versions. Barnes called the flat-top hybrid trend mostly a fad. He also said the Boomstik and Omni together cover about 80% of players.",
-   "status": "confirmed",
-   "date": "2026-11-04",
-   "sources": [
-    {
-     "label": "The Dink: Why Selkirk is moving away from the widebody paddle",
-     "url": "https://www.thedinkpickleball.com/why-selkirk-is-moving-away-from-the-widebody-paddle/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Gear debate: 'Selkirk says it sells eight elongated paddles for every widebody, so the widebody is on its way out. Widebody or elongated?' Link The Dink's article.",
-   "tags": [
-    "Gear",
-    "Selkirk",
-    "Paddle shapes",
-    "Boomstik"
-   ]
-  },
-  {
-   "title": "USA Pickleball Nationals: pro round of 32 starts today in San Diego, streaming free on QVC+ and HSN+",
-   "summary": "The pro draws at the 2026 Oceanview USA Pickleball National Championships start today, Wednesday, Nov. 4, at the Barnes Tennis Center in San Diego. The official schedule lists today's round of 32 in pro mixed doubles, men's doubles and men's singles. All five pro events play the round of 16 Thursday, and gold and bronze medal matches are Sunday, Nov. 8. USA Pickleball posted its broadcast schedule for Nov. 4-8 on QVC and QVC+/HSN+. Select Championship Court matches stream free on QVCPlus.com and the QVC+/HSN+ app, and every match is livestreamed by VS Sports. This runs the same week as PPA Worlds in Dallas.",
-   "status": "confirmed",
-   "date": "2026-11-04",
-   "sources": [
-    {
-     "label": "USA Pickleball Nationals: daily schedule",
-     "url": "https://usapickleballnationals.com/schedule/"
-    },
-    {
-     "label": "USA Pickleball Nationals: how to watch on QVC+ and HSN+",
-     "url": "https://usapickleballnationals.com/watch/"
-    },
-    {
-     "label": "USA Pickleball Nationals: Know Before You Go (VS Sports livestreams)",
-     "url": "https://usapickleballnationals.com/athlete-know-before-you-go/"
-    },
-    {
-     "label": "@USAPickleball: broadcast schedule",
-     "url": "https://x.com/USAPickleball/status/2117642670592147555"
-    }
-   ],
-   "embeds": [
-    "https://x.com/USAPickleball/status/2117642670592147555"
-   ],
-   "social_angle": "Two-tournament week post: 'PPA Worlds in Dallas, USA Pickleball Nationals in San Diego, and both have pro draws on court today.' Embed USA Pickleball's broadcast post.",
-   "tags": [
-    "USA Pickleball",
-    "Nationals",
-    "San Diego",
-    "QVC"
-   ]
-  },
-  {
-   "title": "Anna Leigh Waters shows off a new Nike shoe colorway and Nike's pickleball booth at Worlds",
-   "summary": "Waters posted a tour of Nike's custom pickleball booth at Brookhaven Country Club, and The Kitchen reports she unveiled a new shoe colorway in the video. The booth is filled with ALW-themed merchandise. On X she wrote: 'New week, new shoes... Worlds start now.' She signed with Nike earlier this year, so this is a new colorway, not a new deal.",
-   "status": "confirmed",
-   "date": "2026-11-04",
-   "sources": [
-    {
-     "label": "The Kitchen: Anna Leigh Waters tours Nike's pickleball booth at Worlds",
-     "url": "https://thekitchenpickle.com/blogs/news/anna-leigh-waters-nike-booth-pickleball-world-championships/"
-    },
-    {
-     "label": "@AnnaLeighWaters: 'New week, new shoes'",
-     "url": "https://x.com/AnnaLeighWaters/status/2117679335134187630"
-    },
-    {
-     "label": "@TheKitchenPB on X",
-     "url": "https://x.com/TheKitchenPB/status/2117748965160493213"
-    }
-   ],
-   "embeds": [
-    "https://x.com/AnnaLeighWaters/status/2117679335134187630"
-   ],
-   "social_angle": "Light gear post: 'New week, new shoes.' Embed Waters' X post, tag Nike, and link The Kitchen's article.",
-   "tags": [
-    "Gear",
-    "Nike",
-    "Anna Leigh Waters",
-    "Shoes",
-    "Worlds"
    ]
   }
  ]
