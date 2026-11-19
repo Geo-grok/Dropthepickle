@@ -76,7 +76,7 @@ header{position:sticky;top:0;z-index:50;background:#0b1630;border-bottom:1px sol
 .top5 .px{font-size:20px;font-weight:800;color:#0b1630;display:flex;flex-wrap:wrap;align-items:center;gap:6px}.top5 .px s{color:#6b7a99;font-weight:600;font-size:16px}
 .top5 .off{background:#c6f432;color:#0b1630;font-size:14px;font-weight:800;padding:3px 8px;border-radius:6px}
 .top5 .go{display:inline-flex;margin-top:8px;min-height:44px;padding:10px 16px;font-size:16px}
-.topwrap .more{margin:4px 16px 0;color:#d5deeb;font-size:15px}.topwrap .more a{color:#c6f432;font-weight:700}
+.topwrap .more{margin:4px 16px 0;color:#d5deeb;font-size:16px}.topwrap .more a{color:#c6f432;font-weight:700}
 /* buttons, badges */
 .btn{display:inline-flex;align-items:center;gap:.45rem;background:var(--neon);color:var(--navy);font-weight:800;padding:.8rem 1.25rem;border-radius:12px;text-decoration:none;border:0;cursor:pointer;font-size:.98rem;transition:transform .15s,box-shadow .2s,background .2s;box-shadow:0 6px 18px rgba(198,244,50,.28)}
 .btn:hover{transform:translateY(-2px);background:#d4ff45;box-shadow:0 10px 26px rgba(198,244,50,.4)}
@@ -838,7 +838,7 @@ def build():
             bits.append('<p><a href="opendoor-pickleball-world-championships.html">PPA Worlds 2026 guide: dates, venue, parking and ticket prices</a></p>')
         wh = event_watch_path(t)
         if wh:
-            bits.append(f'<p><a href="../{wh}">How to watch the {e(t["name"])}</a></p>')
+            bits.append(f'<p class="ll1"><a href="../{wh}">How to watch the {e(t["name"])}</a></p>')
         bits.append('<p class="ll1"><a href="../tournaments.html">All tournaments</a></p>')
         loc = t.get("location") or ""
         when_desc = " – ".join(t[k] for k in ("start", "end") if t.get(k))

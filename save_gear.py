@@ -5,7 +5,7 @@ Counts come straight from data/discount-codes.json (distinct brands) and data/pr
 labels never claim more than the data holds. Absolute extensionless hrefs work at any directory depth.
 Buzz story pages (buzz/*), best-X buying guides, head-to-head comparison pages and the pros, podcasts, reviews and science pages get it too.
 Paddle pages get their own brand-specific row (paddle_pages.py), and the codes, deals and tracker pages already link these, so both are skipped.
-The paddle database, pro paddles, compare, guides hub, creator and 404 pages get it too.
+The paddle database, pro paddles, compare, guides hub, creator and 404 pages get it too, plus Merch, Marketplace, the price index and the home page (under Top 5).
 """
 import json, pathlib, re
 
@@ -22,7 +22,8 @@ CSS = (".savegear{background:var(--navy);border-radius:16px;padding:12px;margin:
        ".savegear a small{display:block;margin-top:3px;font:700 16px/1.2 Inter,system-ui,sans-serif;color:#d5deeb}"
        ".savegear a.hot{flex-basis:100%;background:var(--neon);color:var(--navy);box-shadow:none}.savegear a.hot small{color:var(--navy)}"
        ".savegear a:hover{background:#1f3360}.savegear a.hot:hover{background:#d6ff4a}"
-       ".savegear.sgplus a{flex-basis:120px}.savegear.sgplus a.hot{flex-basis:100%}")
+       ".savegear.sgplus a{flex-basis:120px}.savegear.sgplus a.hot{flex-basis:100%}"
+       ".topwrap .savegear{margin:6px 16px 0}")  # home: line up with the Top 5 cards (16px side margins)
 
 SKIP = {"guides/pickleball-gift-guide-2026.html"}  # already a shopping page full of these links
 def wants(fn):
@@ -36,6 +37,9 @@ def wants(fn):
     if fn in ("pros.html", "podcasts.html", "reviews.html", "science.html"): return True
     # Nov 16, 2026: paddle-shopping hubs (paddle database, pro paddles, compare), the guides hub, creator pages and the
     # 404 page had no codes/deals/tracker link above the footer, so phone visitors had to dig through the menu.
+    # Nov 19, 2026: the Merch and Marketplace menu pages are "coming soon" dead ends, and the price index is a paddle-price page
+    # with no deals/tracker link above the footer. (The home page gets the row under its Top 5 deals in paddle_pages.py.)
+    if fn in ("shop.html", "community.html", "price-index.html"): return True
     return fn in ("paddles.html", "pro-paddles.html", "compare.html", "guides.html", "creators.html", "404.html") or fn.startswith("creators/")
 
 # Tournament-traffic pages (Worlds week) also get gift guide, Black Friday hub and Top 5 buttons.
