@@ -525,7 +525,7 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             src = f'<a href="{e(p["source_url"])}" target="_blank" rel="noopener">Maker page</a>' if p.get("source_url") else "not recorded"
             body_rows.append(f'<tr><th scope="row"><a href="{slug(p)}">{e(p["brand"])} {e(p["model"])}</a></th><td>{money(p, cur(p))}</td><td>{e((h.get("checked") or "")[:10])}</td><td>{e(p.get("weight") or "not published")}</td><td>{e(p.get("core") or "not published")}</td><td>{e(p.get("shape") or "not published")}</td><td>{src}</td></tr>')
         return '<div class="tbl"><table><caption>' + e(caption) + '</caption><thead><tr><th>Paddle</th><th>Latest maker price</th><th>Price checked</th><th>Weight</th><th>Core</th><th>Shape</th><th>Source</th></tr></thead><tbody>' + "".join(body_rows) + '</tbody></table></div>'
-    def lst(title, fn, intro, items, why, *, groups=None, desc=None):
+    def lst(title, fn, intro, items, why, *, groups=None, desc=None, extra="", extra_schema=None):
         schema = []
         if groups:
             ordered, blocks = [], []
@@ -544,7 +544,8 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
             if ordered: schema.append(item_list(ordered))
         if not desc:
             desc = f"{title}: spec filter of paddles in our database, using published maker specs and the latest checked maker price. Not a playtest or a scored ranking."
-        page(fn, title, f'<h1>{e(title)}</h1>{DISC}<p>{intro}</p>{own_codes.volair_link(OWN, "Looking at a Volair paddle?")}{SRC}{mid}',
+        schema += list(extra_schema or [])
+        page(fn, title, f'<h1>{e(title)}</h1>{DISC}<p>{intro}</p>{own_codes.volair_link(OWN, "Looking at a Volair paddle?")}{SRC}{mid}{extra}',
              desc, fresh={"desc": desc, "rows": [fresh_p(p) for p in ordered]}, schema=schema or None); list_links.append((fn, title))
     beg = sorted([p for p in usd if cur(p) <= 200 and (cores(p) and max(cores(p)) >= 16 or re.search("hybrid|widebody|max", p["shape"], re.I))], key=cur)[:8]
     lst("Best pickleball paddles for beginners", "best-paddles-for-beginners.html", "Our beginner shortlist uses three spec rules: a price of $200 or less, plus a 16mm core option or a wider or hybrid face. Both are generally considered more forgiving. It's a starting point based on specs, not a test ranking.", beg,
@@ -575,6 +576,70 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     lst("Best elongated paddles", "best-elongated-paddles.html", f"Filter: the shape field includes elongated ({len(elongated)} paddles). A blank shape is left out, even if another field mentions an elongated option. Not a ranking.", elongated, listed)
     tennis = [p for p in elongated if 16.0 in cores(p)]
     lst("Best for tennis players", "best-paddles-for-tennis-players.html", f"Filter only: the shape field includes elongated and the core field lists 16mm ({len(tennis)} paddles). Our database has no tennis-player field, so this is not a playtest ranking and not a claim about who should buy them.", tennis, listed)
+    # Full foam: grouped only by what each maker's own product page says about the core (checked Nov 19, 2026).
+    # Tier 1 = the maker says 100% foam. Tier 2 = the maker names the core material as foam (often with an EVA/foam ring).
+    FOAM_100 = {
+        "CRBN¹ TruFoam Genesis": "CRBN: \u201c100% foam core\u201d, \u201cno honeycomb\u201d (it calls this Gen-4).",
+        "CRBN³ TruFoam Waves": "CRBN: \u201c100% foam core\u201d, \u201cno honeycomb\u201d (Gen-4).",
+        "CRBN¹ TruFoam Barrage": "CRBN: \u201c100% TruFoam Floating Core\u201d, multi-density, with a carbon-reinforced frame.",
+        "X2 Elongated": "Engage: \u201c100% foam architecture\u201d with a quad-density foam core and an EVA foam ring.",
+    }
+    FOAM_CORE = {
+        "OMNI": "Selkirk lists the core material as PureFoam: a PureFoam center and PureFoam ring inside an EVA Power Ring.",
+        "LABS Project Boomstik": "Selkirk: BoomCore, \u201cPureFoam surrounded by an EVA Power Ring\u201d.",
+        "Black Opal 14mm": "Six Zero: \u201cG4 Aerospace Solid Foam Core\u201d (14mm only).",
+        "Coral 16mm": "Six Zero: \u201cTectonic Core with ProPulsion Foam\u201d.",
+        "Honeyfoam TKO-X": "Paddletek: three-foam Honeyfoam core, an EPP foam core with EVA foam and a foam perimeter ring.",
+        "Bantam Jolt": "Paddletek: FlexCore, \u201can EPP foam core with a precision-scored grid pattern\u201d.",
+        "Cannon XPP M1": "Luzz: \u201cGen4 XPOP foam core\u201d, a modified foam made for rebound.",
+        "CMD EL 16mm": "Volair: \u201cFull Floating EPP Foam Core\u201d surrounded by EVA foam.",
+        "CMD WB 16mm": "Volair: \u201cFull Floating EPP Foam Core\u201d surrounded by EVA foam.",
+        "CMD HYB 16mm (Dylan Frazier)": "Volair: \u201cFull Floating EPP Foam Core\u201d surrounded by EVA foam.",
+    }
+    FOAM_WHY = {**FOAM_100, **FOAM_CORE}
+    byname = {p["model"]: p for p in PP}
+    f100 = [byname[m] for m in FOAM_100 if m in byname]
+    fcore = sorted([byname[m] for m in FOAM_CORE if m in byname], key=lambda p: (p["brand"].lower(), p["model"].lower()))
+    def plink(model, label=None):
+        p = byname.get(model)
+        return f'<a href="{slug(p)}">{e(label or (p["brand"] + " " + p["model"]))}</a>' if p else e(label or model)
+    not_full = (
+        '<h2>Foam-enhanced, not full foam</h2>'
+        '<p>These makers also mention foam, but on their own pages the main core is still honeycomb or polymer, with foam at the edges or walls. They are left off the list above.</p><ul>'
+        f'<li>{plink("SLK ERA Power")}: Selkirk lists \u201cPolypropylene surrounded by EVA Foam\u201d.</li>'
+        f'<li>{plink("Mach 1 Forza")} and {plink("Mach 2 Forza", "Mach 2 Forza")}: Volair lists \u201cPolypropylene Honeycomb, Foam Walls\u201d.</li>'
+        f'<li>{plink("Axiom Elongated (Durable Grit)")}: Engage lists an \u201cOptimized Polymer Core with Dual Foam Wall Construction\u201d.</li>'
+        f'<li>{plink("Ruby")}: Six Zero lists a \u201cpremium honeycomb polymer\u201d core.</li>'
+        '</ul>'
+    )
+    foam_faq = [
+        ("What is a full foam pickleball paddle?",
+         "It is a paddle whose core is made of foam instead of a polypropylene honeycomb. CRBN, for example, calls its TruFoam paddles a \u201c100% foam core\u201d with \u201cno honeycomb\u201d and labels them Gen-4, versus Gen-3 paddles that add foam to a honeycomb core. Makers use different words, so this page quotes each one."),
+        ("Which paddles on this list do the makers call 100% foam?",
+         "CRBN\u00b9 TruFoam Genesis, CRBN\u00b3 TruFoam Waves and CRBN\u00b9 TruFoam Barrage (CRBN) and the Engage X2 Elongated (Engage). The other paddles have a core the maker names as foam, often with an EVA or foam ring, but the maker does not use the words 100% foam."),
+        ("Are full foam paddles legal for tournaments?",
+         "Foam is not banned. Approval is per model. CRBN's pages for Genesis, Waves and Barrage list USA Pickleball and UPA-A approval. For any other paddle, check the maker page and the USA Pickleball approved paddle list before a sanctioned event."),
+        ("Do foam core paddles avoid core crush?",
+         "Some makers say so. CRBN says its TruFoam paddles have no core crush and no break-in period, and Selkirk says the same of the Boomstik's BoomCore. Those are maker claims. We have not tested them. See our guide to core crush signs if your paddle feels dead."),
+        ("Is this a ranking?",
+         "No. Paddles are grouped by what each maker's product page says about the core, then listed with the latest maker price we checked. It is not a playtest or a scored ranking."),
+    ]
+    foam_extra = (
+        '<h2>How we built this list</h2><p>We read the core description on each maker\'s own product page on November 19, 2026, and grouped the paddles in our database by that wording. Weights, shapes and prices in the tables come from the same maker pages and our latest price check. A paddle can play very differently from its spec sheet, so pair this with the <a href="guides/pickleball-swing-weight.html">swing weight guide</a> and <a href="guides/paddle-weight-and-core.html">paddle weight and core</a>.</p>'
+        + not_full
+        + '<h2>Before you buy</h2><p>Check <a href="/discount-codes">pickleball discount codes</a> for CRBN, Selkirk, Six Zero, Paddletek, Engage, Luzz and Volair, and see <a href="deals.html">current paddle deals</a> for maker-site price drops. Not sure a foam paddle is right? Take the <a href="paddle-quiz.html">paddle quiz</a> or read <a href="guides/is-my-paddle-dead.html">is my paddle dead?</a></p>'
+        + '<h2>Full foam paddle FAQ</h2>' + "".join(f'<details class="faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in foam_faq)
+    )
+    foam_schema = [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in foam_faq]}]
+    foam_intro = (f"Full foam paddles replace the usual polypropylene honeycomb core with foam. This list covers the {len(f100) + len(fcore)} paddles in our database whose makers describe the core itself as foam, split into two groups by the maker's own wording. "
+                  "Quotes, specs and prices come from each brand's product page. It is not a playtest or a performance ranking.")
+    lst("Best full foam pickleball paddles (2026)", "best-full-foam-paddles.html", foam_intro, f100 + fcore,
+        lambda p: FOAM_WHY.get(p["model"], ""),
+        groups=[("Makers say 100% foam", "The maker's own page uses the words 100% foam for the core.", f100),
+                ("Foam core, per the maker", "The maker names the core material as foam, often with an EVA or foam ring, but does not say 100% foam.", fcore)],
+        desc=("Best full foam pickleball paddles for 2026: CRBN TruFoam, Engage X2, Selkirk Boomstik and OMNI, Six Zero, Paddletek, Luzz and Volair CMD, "
+              "grouped by each maker's own core wording, with latest maker prices. Not a playtest."),
+        extra=foam_extra, extra_schema=foam_schema)
     for brand in ("CRBN", "Engage", "Gearbox", "JOOLA", "Luzz", "Paddletek", "Selkirk", "Six Zero"):
         items = [p for p in PP if p["brand"] == brand]
         slugb = re.sub(r"[^a-z0-9]+", "-", brand.lower()).strip("-")
