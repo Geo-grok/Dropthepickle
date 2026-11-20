@@ -1,6 +1,30 @@
 {
  "items": [
   {
+   "channel": "ThatPickleballGuy",
+   "channel_url": "https://www.youtube.com/channel/UCuHP7q94VYp-9W19pk8cjjw",
+   "title": "Friday’s NEW paddle is insane",
+   "link": "https://www.youtube.com/watch?v=NRMlE6Tvow0",
+   "video_id": "NRMlE6Tvow0",
+   "date": "2026-11-20"
+  },
+  {
+   "channel": "The Kitchen Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
+   "title": "Top 5 Pickleball Paddles Right Now | November 2026",
+   "link": "https://www.youtube.com/watch?v=i7FjQzE8kj4",
+   "video_id": "i7FjQzE8kj4",
+   "date": "2026-11-20"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "Paddletek Tempest Veyra Review + Big Paddle Haul (RPM Diesel, Proton, Neonic)",
+   "link": "https://www.youtube.com/watch?v=9CNm_oQAjzw",
+   "video_id": "9CNm_oQAjzw",
+   "date": "2026-11-20"
+  },
+  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "LUZZ Cannon XPP M1 Review - I Didn't Expect to Love This Paddle",
@@ -107,7 +131,7 @@
   {
    "channel": "Matt's Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "I Can’t Recommend the $350 Selkirk Boomstik ST | Pickleball Paddle Review",
+   "title": "2026 Selkirk Boomstik ST Pickleball Paddle Review | $350 | Is It Worth It?",
    "link": "https://www.youtube.com/watch?v=g6vKJxnRjLw",
    "video_id": "g6vKJxnRjLw",
    "date": "2026-11-14"
@@ -369,14 +393,6 @@
    "date": "2026-10-30"
   },
   {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "The $130 Paddle Built for Ping Pong Players | Vanwin Alpha Power Quick Review",
-   "link": "https://www.youtube.com/watch?v=OQY04l3nMlM",
-   "video_id": "OQY04l3nMlM",
-   "date": "2026-10-30"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "RPM Jade & Luzz Cannon XPP First Impressions | EP 146",
@@ -463,25 +479,33 @@
    "link": "https://www.youtube.com/watch?v=oWk8xx1Nd24",
    "video_id": "oWk8xx1Nd24",
    "date": "2026-10-15"
-  },
-  {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "Bread & Butter Loco 2 Review: Did They Fix Its Biggest Weakness?",
-   "link": "https://www.youtube.com/watch?v=ni8rUyRqTas",
-   "video_id": "ni8rUyRqTas",
-   "date": "2026-10-14"
-  },
-  {
-   "channel": "Farmer Lanky Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
-   "title": "The Hardest Hitting Legal Paddle? CPX Hyper+ 16mm Elongated Pickleball Paddle Review",
-   "link": "https://www.youtube.com/watch?v=tSoBCAnwk6g",
-   "video_id": "tSoBCAnwk6g",
-   "date": "2026-10-13"
   }
  ],
  "all_items": [
+  {
+   "channel": "ThatPickleballGuy",
+   "channel_url": "https://www.youtube.com/channel/UCuHP7q94VYp-9W19pk8cjjw",
+   "title": "Friday’s NEW paddle is insane",
+   "link": "https://www.youtube.com/watch?v=NRMlE6Tvow0",
+   "video_id": "NRMlE6Tvow0",
+   "date": "2026-11-20"
+  },
+  {
+   "channel": "The Kitchen Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
+   "title": "Top 5 Pickleball Paddles Right Now | November 2026",
+   "link": "https://www.youtube.com/watch?v=i7FjQzE8kj4",
+   "video_id": "i7FjQzE8kj4",
+   "date": "2026-11-20"
+  },
+  {
+   "channel": "Pickleball Advocate",
+   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
+   "title": "Paddletek Tempest Veyra Review + Big Paddle Haul (RPM Diesel, Proton, Neonic)",
+   "link": "https://www.youtube.com/watch?v=9CNm_oQAjzw",
+   "video_id": "9CNm_oQAjzw",
+   "date": "2026-11-20"
+  },
   {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
@@ -589,7 +613,7 @@
   {
    "channel": "Matt's Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "I Can’t Recommend the $350 Selkirk Boomstik ST | Pickleball Paddle Review",
+   "title": "2026 Selkirk Boomstik ST Pickleball Paddle Review | $350 | Is It Worth It?",
    "link": "https://www.youtube.com/watch?v=g6vKJxnRjLw",
    "video_id": "g6vKJxnRjLw",
    "date": "2026-11-14"
@@ -899,14 +923,6 @@
    "date": "2026-10-30"
   },
   {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "RPM Diesel First Impressions: Can This Shape Change the Game of Pickleball?",
-   "link": "https://www.youtube.com/watch?v=RL7t7zlFwPU",
-   "video_id": "RL7t7zlFwPU",
-   "date": "2026-10-29"
-  },
-  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "Hit Testing the Loco 2 and Other New Gritty Paddles! Luzz Cannon XPP M1",
@@ -1000,14 +1016,6 @@
    "title": "LUZZ Inferno 2 M1 Review: They FINALLY Fixed the Grit 🔥",
    "link": "https://www.youtube.com/watch?v=YZoWGNKKv4w",
    "video_id": "YZoWGNKKv4w",
-   "date": "2026-10-19"
-  },
-  {
-   "channel": "Pickleball Advocate",
-   "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Pro Pickleball Journey to 10K: MATCH # 85 RPM Friction Pro - Quarter Finals (High Quality 4k)",
-   "link": "https://www.youtube.com/watch?v=UR2ARxpTtxQ",
-   "video_id": "UR2ARxpTtxQ",
    "date": "2026-10-19"
   },
   {
@@ -1544,8 +1552,8 @@
   "John Kew Pickleball": "ok (8)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
-  "ThatPickleballGuy": "ok (0)",
-  "The Kitchen Pickleball": "ok (0)",
+  "ThatPickleballGuy": "ok (1)",
+  "The Kitchen Pickleball": "ok (1)",
   "Enhance Pickleball": "ok (1)",
   "PickleballPlaybook - Austin Hardy": "ok (5)",
   "Pickleball Kitchen": "ok (0)",
@@ -1554,7 +1562,7 @@
   "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (9)",
-  "All Drive No Drop Pickleball": "ok (8)",
+  "All Drive No Drop Pickleball": "ok (7)",
   "Matthew K Pickleball": "ok (2)",
   "Tickle My Pickleball": "ok (4)",
   "PickleBaller": "ok (8)",
@@ -1564,5 +1572,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-19T19:26"
+ "updated": "2026-11-20T19:01"
 }
