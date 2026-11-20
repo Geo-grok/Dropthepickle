@@ -217,18 +217,21 @@ def make(page, e, fmt, buy, D, C, PD, R, P, X=None):
     ph = lambda p: H.get(f'{p["brand"]} {p["model"]}', {})
     cur = lambda p: ph(p).get("current", p["price"])
     pros = P.get("pros", [])
-    def img(p, cls="", w=600, eager=False, hi=False):
+    def img(p, cls="", w=600, eager=False, hi=False, sizes=""):
         # w: pixel width asked from the maker's Shopify CDN (sized to the slot, ~2.4x for phones).
         # eager/hi: for above-the-fold images, skip lazy-loading so the main picture paints sooner (LCP).
+        # sizes: upper bound of the painted width (card image box height, measured); adds a 300/450/600w srcset so most screens fetch a smaller file than 600w.
         u = ph(p).get("image")
         load = ('fetchpriority="high" ' if hi else "") + ("" if eager else 'loading="lazy" decoding="async" ')
         dim = f'width="{w}" height="{w}" ' if w <= 200 else ""  # top-5 thumbs sit in a fixed square box
-        if u: return f'<img {load}{dim}src="{e(u + ("&" if "?" in u else "?") + f"width={w}")}" alt="{e(p["brand"])} {e(p["model"])} (image: {e(p["brand"])})">'
+        cdn = lambda n: e(u + ("&" if "?" in u else "?") + f"width={n}")
+        ss = f'srcset="{cdn(300)} 300w, {cdn(450)} 450w, {cdn(600)} 600w" sizes="{sizes}" ' if u and sizes and w == 600 else ""
+        if u: return f'<img {load}{dim}{ss}src="{cdn(w)}" alt="{e(p["brand"])} {e(p["model"])} (image: {e(p["brand"])})">'
         return X.get("PADDLE_SVG", "")
     def credit(p): return f'<span class="credit">Image: {e(p["brand"])}</span>' if ph(p).get("image") else ""
     def pcard(p, why="", own=False):
         h = ph(p); was = f'<s>{money(p, h["compare_at"])}</s>' if h.get("sale") else ""
-        return f'<div class="card pcard"><a class="pimg" href="{slug(p)}">{img(p)}<span class="badges">{badge(h, p)}</span>{credit(p)}</a><div class="body"><span class="brand">{e(p["brand"])}</span><h3><a href="{slug(p)}">{e(p["model"])}</a></h3><div class="meta">{" · ".join(x for x in [p["core"], p["shape"], p["weight"]] if x)}</div><div class="pp">{money(p, cur(p))}{was}</div>{f"<p class={chr(34)}meta{chr(34)}>{e(why)}</p>" if why else ""}{owncall(p, js=False) if own else ""}<div class="meta" style="margin-top:auto">{buy(p)}</div></div></div>' 
+        return f'<div class="card pcard"><a class="pimg" href="{slug(p)}">{img(p, sizes="(max-width:600px) 62vw, (max-width:1280px) 250px, 180px")}<span class="badges">{badge(h, p)}</span>{credit(p)}</a><div class="body"><span class="brand">{e(p["brand"])}</span><h3><a href="{slug(p)}">{e(p["model"])}</a></h3><div class="meta">{" · ".join(x for x in [p["core"], p["shape"], p["weight"]] if x)}</div><div class="pp">{money(p, cur(p))}{was}</div>{f"<p class={chr(34)}meta{chr(34)}>{e(why)}</p>" if why else ""}{owncall(p, js=False) if own else ""}<div class="meta" style="margin-top:auto">{buy(p)}</div></div></div>' 
     PP = PD["paddles"]; by = {p["model"]: p for p in PP}
     base = C["BASE_URL"].rstrip("/")
     def absu(fn): return urls.canon(base, fn)
