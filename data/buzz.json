@@ -1,11 +1,80 @@
 {
- "updated": "2026-11-19T06:00-06:00",
- "date": "2026-11-19",
- "source_file": "dtp-newsroom/buzz-2026-11-19.json",
+ "updated": "2026-11-20T06:00-06:00",
+ "date": "2026-11-20",
+ "source_file": "dtp-newsroom/buzz-2026-11-20.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026, APP Mesa & PPA Daytona",
  "seo_desc": "PPA Worlds 2026 champions and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP's new commissioner, MLP Asia, Brisbane 2032 and the Olympics, and The Picklr bankruptcy, all sourced.",
  "items": [
+  {
+   "title": "PPA Daytona round of 16: Rafael Lenhard comes back from 0-11, Parenteau ends Kelly Goodnow's run, Buckner stops Maria Ford, and four double-digit seeds reach the men's singles quarterfinals",
+   "summary": "Thursday's round of 16 at the Proton Daytona Beach Open set up four men's singles quarterfinals with double-digit seeds in them, per the PPA. No. 10 Rafael Lenhard lost the first game 0-11 to No. 5 Christian Alshon, then won 13-11, 11-6. No. 12 JW Johnson came back from 4-11 down a game to beat No. 7 Noe Khlif in three, and No. 11 Eric Oncins beat No. 6 Roscoe Bellamy 12-10, 11-6. No. 14 Cason Campbell ended No. 26 Mota Alhouni's run, per PickLM's live results. Men's quarterfinals: No. 8 Zane Ford vs. No. 14 Campbell, No. 3 Federico Staksrud vs. No. 12 JW Johnson, No. 2 Hunter Johnson vs. No. 10 Lenhard and No. 4 John Lucian Goins vs. No. 11 Oncins. In women's singles, 14-year-old Kelly Goodnow took the first game 11-9 from defending champion Catherine Parenteau before Parenteau won 11-1, 11-1, and No. 1 Brooke Buckner beat No. 41 Maria Ford after losing the first game, per the PPA and PickLM. No. 11 Sofia Sewing beat No. 7 Cailyn Campbell 11-5, 11-2. Women's quarterfinals: No. 1 Buckner vs. No. 8 Jalina Ingram, No. 3 Judit Castillo vs. No. 5 Isabella Dunlap, No. 2 Kiora Kunimoto vs. No. 11 Sewing and No. 4 Parenteau vs. No. 10 Milan Rane. All doubles quarterfinals are also set, including No. 13 Will Howells/AJ Koller (who beat No. 4 Pablo Tellez/Staksrud) against No. 11 Clayton Powell/Anouar Braham, and Ben Johns/Anna Leigh Waters against Rachel Rohrabacher/Staksrud in mixed, per the PPA and PickLM. Quarterfinals are today on PickleballTV from 12 p.m. ET (11 a.m. CT). Separately, a Pickleball.com staff column on Nov. 19 argued that Genie Bouchard's losses to 13-year-old Natalia Simson and 14-year-old Goodnow raise questions about her commitment to the sport (opinion).",
+   "status": "confirmed",
+   "date": "2026-11-20",
+   "sources": [
+    {
+     "label": "PPA Tour on X: Men's singles quarterfinals set, four double-digit seeds",
+     "url": "https://x.com/PPAtour/status/2123516233161089480"
+    },
+    {
+     "label": "PPA Tour on X: Women's singles quarterfinals set",
+     "url": "https://x.com/PPAtour/status/2123529063687995574"
+    },
+    {
+     "label": "PPA Tour on X: Rafael Lenhard rallies from 0-11 past Christian Alshon",
+     "url": "https://x.com/PPAtour/status/2123501904797843579"
+    },
+    {
+     "label": "PPA Tour on X: Parenteau storms back past Kelly Goodnow 9-11, 11-1, 11-1",
+     "url": "https://x.com/PPAtour/status/2123513035813793815"
+    },
+    {
+     "label": "PPA Tour on X: JW Johnson rallies past Noe Khlif",
+     "url": "https://x.com/PPAtour/status/2123540404985278551"
+    },
+    {
+     "label": "PPA Tour on X: Eric Oncins beats Roscoe Bellamy",
+     "url": "https://x.com/PPAtour/status/2123540682753110460"
+    },
+    {
+     "label": "PPA Tour on X: Sofia Sewing upsets Cailyn Campbell",
+     "url": "https://x.com/PPAtour/status/2123540403903226000"
+    },
+    {
+     "label": "PPA Tour on X: Doubles quarterfinals set",
+     "url": "https://x.com/PPAtour/status/2123607922269737413"
+    },
+    {
+     "label": "PPA Tour on X: Mixed doubles quarterfinals set",
+     "url": "https://x.com/PPAtour/status/2123571350514041317"
+    },
+    {
+     "label": "PPA Tour on X: Friday order of play (quarterfinals)",
+     "url": "https://x.com/PPAtour/status/2123622969817587978"
+    },
+    {
+     "label": "PickLM: Proton Daytona Beach Open 2026 live results",
+     "url": "https://picklm.com/news/ppa-daytona-beach-open-2026/"
+    },
+    {
+     "label": "Pickleball.com: Wimbledon finalist keeps losing to teenagers in professional pickleball (column)",
+     "url": "https://pickleball.com/news/wimbledon-finalist-keeps-losing-to-teenagers-in-professional-pickleball"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2123501904797843579",
+    "https://x.com/PPAtour/status/2123513035813793815"
+   ],
+   "social_angle": "Comeback post: 'Down 0-11. Won 13-11, 11-6.' Quote the PPA's Rafael Lenhard post; second post on Parenteau answering 14-year-old Kelly Goodnow 11-1, 11-1 after dropping game one.",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Rafael Lenhard",
+    "Kelly Goodnow",
+    "Catherine Parenteau",
+    "Quarterfinals"
+   ]
+  },
   {
    "title": "PPA Daytona round of 32: No. 26 Mota Alhouni knocks out top seed Chris Haworth, Kelly Goodnow beats Genie Bouchard, and No. 41 Maria Ford keeps rolling",
    "summary": "Wednesday's round of 32 at the Proton Daytona Beach Open, played through rain and wind at Pictona, produced the week's biggest singles upset so far: 26th seed Mota Alhouni beat No. 1 Christopher Haworth 11-4, 11-5, reversing Haworth's 2025 Daytona quarterfinal win over him, per Pickleball.com and the PPA. In women's singles, 14-year-old Kelly Goodnow beat No. 9 seed Genie Bouchard 11-4, 11-3 and plays No. 4 seed and defending champion Catherine Parenteau in today's round of 16. No. 41 Maria Ford, who beat the 13th seed on Tuesday, beat the 15th seed, Helena Jansen, 11-3, 11-9 and now meets No. 1 Brooke Buckner, per the PPA. Anouar Braham reached the round of 16 in all three of his events, clinched in men's doubles with Clayton Powell 11-7, 10-12, 11-3. In women's doubles, 30th seeds Jessica Evanier and Alexa Quintanilla beat the No. 8 seeds, Layne Sleeth and Cailyn Campbell, 11-9, 11-9. John Lucian Goins, chasing a third straight singles title, beat Braden Jacobson 11-6, 11-3. Today's round of 16 brings in the top doubles seeds, including Anna Leigh Waters with Anna Bright and with Ben Johns, with every court on PickleballTV from 12 p.m. ET (11 a.m. CT), per the PPA.",
@@ -2036,220 +2105,6 @@
     "Selkirk",
     "LevelUp",
     "Camps"
-   ]
-  },
-  {
-   "title": "Ben Johns is out of Worlds singles: No. 9 Noe Khlif beats him 11-8, 11-8, and No. 25 Sofia Sewing upsets No. 8 Judit Castillo",
-   "summary": "Ben Johns' men's singles run at the Opendoor Pickleball World Championships ended in the round of 32 on Wednesday, Nov. 4. Per the official bracket, No. 9 Noe Khlif beat him 11-8, 11-8. Johns had pulled out a left-handed forehand during the week, and pickleball.com says it's a shot he used in 2016-17 and brought back for singles. He's still alive in mixed with Anna Leigh Waters and in men's doubles with Gabriel Tardio. Other round-of-32 results from the bracket and the PPA: No. 25 Sofia Sewing beat No. 8 Judit Castillo 12-10, 11-2, No. 34 Donald Young beat No. 6 Tama Shimabukuro 12-10, 11-7, No. 18 Luc Pham beat No. 10 seed Ford 11-1, 11-3, and No. 26 JW Johnson came back to beat Jaxon Madsen 8-11, 11-1, 11-6. Hong Kit Wong advanced on a walkover from Eric Oncins (no reason given). In men's doubles, No. 23 Rafa Hewett and Luc Pham beat No. 9 Collin Johns and Len Yang 11-9, 2-11, 12-10. Waters beat Kelly Goodnow and now plays Milan Rane. Natalia Simson's run ended, as her round-of-32 opponent Samantha Parker is in the round of 16.",
-   "status": "confirmed",
-   "date": "2026-11-05",
-   "sources": [
-    {
-     "label": "Official Worlds bracket and scores (United Pickleball)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    },
-    {
-     "label": "pickleball.com: What's up with Ben Johns' 'new' left-handed forehand?",
-     "url": "https://pickleball.com/news/whats-up-with-ben-johns-new-lefty-forehand"
-    },
-    {
-     "label": "The Dink: Ben Johns unleashes surprise lefty forehand at PPA Worlds",
-     "url": "https://www.thedinkpickleball.com/ben-johns-unleashes-surprise-lefty-forehand-at-ppa-worlds/"
-    },
-    {
-     "label": "@PPAtour: Sewing upsets Castillo",
-     "url": "https://x.com/PPAtour/status/2118114048630034701"
-    },
-    {
-     "label": "@PPAtour: Hewett/Pham beat Collin Johns/Len Yang",
-     "url": "https://x.com/PPAtour/status/2118121556652257746"
-    },
-    {
-     "label": "PickleballTV (YouTube): Castillo vs Sewing, full match",
-     "url": "https://www.youtube.com/watch?v=0KQTxat7ILU"
-    }
-   ],
-   "embeds": [
-    "https://x.com/pickleball_com/status/2118036635032191458",
-    "https://x.com/PPAtour/status/2118114048630034701"
-   ],
-   "social_angle": "Results post: 'Ben Johns is out of Worlds singles. Noe Khlif beat him 11-8, 11-8.' Embed pickleball.com's lefty-forehand clip as the hook. Tag the PPA Tour. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Ben Johns",
-    "Noe Khlif",
-    "Upsets",
-    "Round of 32"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Worlds round of 16 is today: Waters vs. Rane, Johns/Waters vs. Schneemann/Sock, and Johns/Tardio vs. Crouch/Braham",
-   "summary": "All five draws play the round of 16 today, Thursday, Nov. 5, in Farmers Branch, Texas, on PickleballTV. Per the PPA, men's singles starts at 11 a.m. CT with Christopher Haworth vs. Adam Harvey, Khlif vs. John Lucian Goins and Federico Staksrud vs. Jack Sock. Women's singles starts at 11:45 a.m. with Anna Leigh Waters vs. Milan Rane and Sewing vs. Jansen. Mixed starts at 2 p.m. with Ben Johns and Waters vs. Lacy Schneemann and Jack Sock, and Anna Bright and Hayden Patriquin vs. Mohaned Alhouni and Lina Padegimaite. Men's and women's doubles start at 3:30 p.m. Johns and Tardio play Chris Crouch and Anouar Braham, and Bright and Waters play Christa Gecheva and Padegimaite. Tonight at 7 p.m. CT, the MUNICIPAL Celebrity Pickleball Showdown at Worlds is headlined by Mark Wahlberg, per MLP.",
-   "status": "confirmed",
-   "date": "2026-11-05",
-   "sources": [
-    {
-     "label": "@PPAtour: Thursday's round of 16 order of play",
-     "url": "https://x.com/PPAtour/status/2118208306384642393"
-    },
-    {
-     "label": "@PPAtour: Men's singles round of 16",
-     "url": "https://x.com/PPAtour/status/2118175416540365143"
-    },
-    {
-     "label": "@PPAtour: Women's singles round of 16",
-     "url": "https://x.com/PPAtour/status/2118175612267560988"
-    },
-    {
-     "label": "@PPAtour: Mixed doubles round of 16",
-     "url": "https://x.com/PPAtour/status/2118175714906407318"
-    },
-    {
-     "label": "@PPAtour: Men's doubles round of 16",
-     "url": "https://x.com/PPAtour/status/2118175803704058057"
-    },
-    {
-     "label": "@PPAtour: Women's doubles round of 16",
-     "url": "https://x.com/PPAtour/status/2118175915603796433"
-    },
-    {
-     "label": "@MajorLeaguePB: Wahlberg headlines the Celebrity Showdown",
-     "url": "https://x.com/MajorLeaguePB/status/2118061750910124448"
-    },
-    {
-     "label": "Official Worlds bracket (United Pickleball)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2118208306384642393"
-   ],
-   "social_angle": "Watch guide: 'Round of 16 today at Worlds. Waters at 11:45, Johns/Waters at 2, Johns/Tardio at 3:30, all CT on PickleballTV.' Embed the PPA's order-of-play post and tag the PPA Tour.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Round of 16",
-    "Schedule",
-    "How to watch"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Hong Kit 'Jack' Wong walked away from a car crash days before Worlds, and he's into the singles round of 16",
-   "summary": "Hong Kit 'Jack' Wong told pickleball.com that the day after the MLP Nations Cup, another car hit his car on the way to practice and it flipped. 'The only scratch I had was from when I was crawling out from the car,' he said, adding that he couldn't sleep that night. 'I was really lucky; I could have died or been really seriously injured, but I'm just glad that I'm alive.' He won his opening singles and mixed matches Tuesday, then advanced in singles on a walkover from Eric Oncins. Pickleball News Asia says he faces Donald Young in today's round of 16.",
-   "status": "confirmed",
-   "date": "2026-11-05",
-   "sources": [
-    {
-     "label": "pickleball.com: Jack Wong recounts surviving car crash",
-     "url": "https://pickleball.com/people/jack-wong-recounts-surviving-car-crash-im-just-glad-that-im-alive"
-    },
-    {
-     "label": "Pickleball News Asia: Jack Wong walks away from car crash, returns to win at Worlds",
-     "url": "https://pickleballnewsasia.com/jack-wong-hong-kit-walks-away-from-car-crash-returns-to-win-at-pickleball-worlds/"
-    },
-    {
-     "label": "@PPAtour: Men's singles round of 16",
-     "url": "https://x.com/PPAtour/status/2118175416540365143"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Human-interest post: 'His car flipped on Sunday. On Thursday he's in the Worlds round of 16.' Link pickleball.com's interview. Keep the tone respectful.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Jack Wong",
-    "Hong Kong"
-   ]
-  },
-  {
-   "title": "Gear: RPM's Jade paddles now get three lifetime warranty claims, and replacements ship before you return the old paddle",
-   "summary": "RPM's own warranty page now says every Jade paddle, including ones already sold, is covered for three warranty claims over its lifetime, up from one. Once a claim is approved, RPM ships the replacement without waiting for the original paddle, though it may still ask for it back. A paddle that arrives defective before use doesn't count against the three claims, according to The Kitchen's interview with RPM founder James Ignatowich. Claims are approved at RPM's discretion, full coverage is for U.S. and Canadian orders, and the Friction Pro and Q2 lines keep their own terms.",
-   "status": "confirmed",
-   "date": "2026-11-05",
-   "sources": [
-    {
-     "label": "RPM Pickleball: Warranty policy",
-     "url": "https://rpmpb.com/pages/warranty"
-    },
-    {
-     "label": "The Kitchen: RPM just updated its paddle warranty policy",
-     "url": "https://thekitchenpickle.com/blogs/gear/rpm-pickleball-updated-warranty-policy-james-ignatowich-interview/"
-    },
-    {
-     "label": "@TheKitchenPB on X",
-     "url": "https://x.com/TheKitchenPB/status/2118070948616134749"
-    }
-   ],
-   "embeds": [
-    "https://x.com/TheKitchenPB/status/2118070948616134749"
-   ],
-   "social_angle": "Gear post: 'Three warranty claims for the life of the paddle. RPM just raised the bar on the Jade.' Link RPM's warranty page.",
-   "tags": [
-    "Gear",
-    "RPM",
-    "Warranty",
-    "Jade"
-   ]
-  },
-  {
-   "title": "Business: Professional Pickleball Partners (P3) is buying Professor Pickleball, the grips and paddle-eraser brand",
-   "summary": "Professional Pickleball Partners, based in Leawood, Kan., has agreed to buy Professor Sports LLC, the Florida company behind Professor Pickleball, founded by Ryan Maya. The brand is known for paddle grips, paddle erasers and instructional content. Terms and a closing date weren't disclosed. P3 already owns CORE Athletics, Pro-Pickle, Ameriball and Pickleball-U, and says it will keep Professor Pickleball's brand and its how-to content, with the site staying at professorpaddles.com.",
-   "status": "confirmed",
-   "date": "2026-11-05",
-   "sources": [
-    {
-     "label": "P3 press release (EIN Presswire)",
-     "url": "https://www.einpresswire.com/article/954286579/professional-pickleball-partners-announces-acquisition-of-professor-pickleball"
-    },
-    {
-     "label": "citybiz: P3 to acquire Professor Pickleball",
-     "url": "https://www.citybiz.co/article/929576/professional-pickleball-partners-to-acquire-professor-pickleball-expanding-accessories-portfolio/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Business note: 'Another pickleball brand roll-up: P3 adds Professor Pickleball.' Link the press release.",
-   "tags": [
-    "Business",
-    "Acquisition",
-    "P3",
-    "Professor Pickleball"
-   ]
-  },
-  {
-   "title": "Anna Leigh Waters returns to Manila for a Dec. 9 showcase at the Smart Araneta Coliseum",
-   "summary": "IAM Worldwide, which named Waters its global sports ambassador, will host 'IAM Experience: Anna Leigh Waters' on Wednesday, Dec. 9, at 3 p.m. local time at the Smart Araneta Coliseum in Quezon City. It promises exhibition matches, music and celebrity guests. The organizer moved it to the Big Dome after her October visit drew big crowds. Tickets aren't sold on their own: they come free with designated IAM product packages. The member pre-sale opens Nov. 5 and general release is Nov. 9.",
-   "status": "confirmed",
-   "date": "2026-11-05",
-   "sources": [
-    {
-     "label": "Philstar: Ticket mechanics bared for Anna Leigh Waters' Manila return",
-     "url": "https://www.philstar.com/sports/2026/11/05/2568055/ticket-mechanics-bared-pickleball-star-anna-leigh-waters-manila-return"
-    },
-    {
-     "label": "ABS-CBN: Ticket details released for Waters' Dec. 9 event",
-     "url": "https://www.abs-cbn.com/lifestyle/health-beauty-fashion/2026/11/5/ticket-details-released-for-anna-leigh-waters-dec-9-pickleball-event-1202"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "International angle: 'The world No. 1 is filling the Big Dome in Manila on Dec. 9.' Link Philstar.",
-   "tags": [
-    "Anna Leigh Waters",
-    "Philippines",
-    "Manila",
-    "Exhibition"
    ]
   }
  ]
