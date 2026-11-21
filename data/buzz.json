@@ -1,11 +1,143 @@
 {
- "updated": "2026-11-20T06:00-06:00",
- "date": "2026-11-20",
- "source_file": "dtp-newsroom/buzz-2026-11-20.json",
+ "updated": "2026-11-21T06:00-06:00",
+ "date": "2026-11-21",
+ "source_file": "dtp-newsroom/buzz-2026-11-21.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026, APP Mesa & PPA Daytona",
  "seo_desc": "PPA Worlds 2026 champions and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP's new commissioner, MLP Asia, Brisbane 2032 and the Olympics, and The Picklr bankruptcy, all sourced.",
  "items": [
+  {
+   "title": "PPA Daytona quarterfinals: Staksrud, Hunter Johnson, Goins and Ford make the men's singles final four, the women's top four seeds all advance, and Humberg/Rane upset Sewing/Parenteau",
+   "summary": "Friday's quarterfinals at the Proton Daytona Beach Open set the final four in all five pro divisions, per the PPA and PickLM's live results. Men's singles: No. 3 Federico Staksrud beat No. 12 JW Johnson 11-5, 11-6, No. 2 Hunter Johnson ended No. 10 Rafael Lenhard's run 11-9, 11-2, No. 4 John Lucian Goins beat No. 11 Eric Oncins 13-11, 11-5, and No. 8 Zane Ford beat No. 14 Cason Campbell in three games. Semifinals: Staksrud vs. Ford and Hunter Johnson vs. Goins. Women's singles: No. 1 Brooke Buckner beat No. 8 Jalina Ingram 11-5, 11-5, No. 2 Kiora Kunimoto beat No. 11 Sofia Sewing 11-2, 11-6, No. 3 Judit Castillo beat No. 5 Isabella Dunlap 11-3, 11-6 and No. 4 Catherine Parenteau beat No. 10 Milan Rane 11-7, 12-10. Semifinals: Buckner vs. Castillo and Kunimoto vs. Parenteau. Mixed doubles: Ben Johns/Anna Leigh Waters beat Rachel Rohrabacher/Staksrud 11-1, 11-8 and meet Jorja Johnson/JW Johnson; Anna Bright/Christian Alshon meet Tyra Hurricane Black/Oncins. Men's doubles: top seeds Andrei Daescu/Alshon beat Hunter Johnson/Roscoe Bellamy 11-6, 7-11, 11-9 and play Riley Newman/Noe Khlif, and No. 13 Will Howells/AJ Koller kept their run going against No. 11 Clayton Powell/Anouar Braham (11-8, 11-8) to face No. 2 Augustus Ge/JW Johnson. Women's doubles: No. 6 Mari Humberg/Rane edged No. 4 Sewing/Parenteau 5-11, 11-8, 11-9 to face top seeds Bright/Waters, and No. 2 Black/Jorja Johnson play No. 3 Rohrabacher/Parris Todd. Semifinal Saturday is on PickleballTV from 12 p.m. ET (11 a.m. CT), with doubles from 5:30 p.m. ET (4:30 p.m. CT), per the PPA. Finals are Sunday, Nov. 22.",
+   "status": "confirmed",
+   "date": "2026-11-21",
+   "sources": [
+    {
+     "label": "PPA Tour on X: Daytona singles semifinals set",
+     "url": "https://x.com/PPAtour/status/2123901575290597687"
+    },
+    {
+     "label": "PPA Tour on X: Staksrud d. JW Johnson 11-5, 11-6",
+     "url": "https://x.com/PPAtour/status/2123842832477704671"
+    },
+    {
+     "label": "PPA Tour on X: Hunter Johnson d. Rafael Lenhard 11-9, 11-2",
+     "url": "https://x.com/PPAtour/status/2123842702592610463"
+    },
+    {
+     "label": "PPA Tour on X: Kunimoto d. Sewing 11-2, 11-6",
+     "url": "https://x.com/PPAtour/status/2123847686617022899"
+    },
+    {
+     "label": "PPA Tour on X: Mixed doubles semifinals set",
+     "url": "https://x.com/PPAtour/status/2123931407248507191"
+    },
+    {
+     "label": "PPA Tour on X: Men's and women's doubles semifinals",
+     "url": "https://x.com/PPAtour/status/2123992288665776509"
+    },
+    {
+     "label": "PPA Tour on X: Semifinal Saturday order of play",
+     "url": "https://x.com/PPAtour/status/2123978981808521417"
+    },
+    {
+     "label": "PickLM: Proton Daytona Beach Open 2026 live results",
+     "url": "https://picklm.com/news/ppa-daytona-beach-open-2026/"
+    },
+    {
+     "label": "Pickleballer: Staksrud, Hunter Johnson and Goins reach Daytona semifinals",
+     "url": "https://pickleballer.world/stories/staksrud-hunter-johnson-goins-reach-daytona-semifinals/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2123842832477704671",
+    "https://x.com/PPAtour/status/2123971757623439773"
+   ],
+   "social_angle": "Semifinal Saturday preview card: four singles matchups (Staksrud-Ford, H. Johnson-Goins, Buckner-Castillo, Kunimoto-Parenteau), 11 a.m. CT on PickleballTV. Quote the PPA's Daescu/Alshon 'fight!' clip from their three-game quarterfinal.",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Federico Staksrud",
+    "Hunter Johnson",
+    "Kiora Kunimoto",
+    "Semifinals"
+   ]
+  },
+  {
+   "title": "MLP Asia in Manila: the Dragon Warriors and Hong Kong Cannons both beat the Manila Helios 3-1 in their debuts, and the hosts are still without points",
+   "summary": "The Dragon Warriors and Hong Kong Cannons opened their MLP Asia seasons on Friday, Nov. 20, with 3-1 wins over the Manila Helios at Tela Park Pickleball Center in Manila, per Pickleball News Asia. Against the Warriors, Helios captain Kim Saraza and Muhammad Aiman won the men's doubles 11-9 after trailing 5-8, but Ting Chieh Wei and captain Lingwei Kong won the women's doubles 11-0 and the Warriors took both mixed games. The Cannons won the first three games (11-0, 11-2, 11-6), with Armaan Bhatia and captain Jack Wong Hong-kit taking the men's doubles, before Saraza and Macy Ybañez won the second mixed 11-8. Because MLP Asia gives three points for any regulation win, Manila has two game wins and no points after three of its four regular-season matches, per Pickleball News Asia and World Pickleball Magazine. THE DOTS TOKYO lead with 5 points; the Warriors and Cannons have 3 each. The Viet Panthers make their debut at home in Ho Chi Minh City today (Nov. 21) against the Malayan Stripes and THE DOTS TOKYO.",
+   "status": "confirmed",
+   "date": "2026-11-21",
+   "sources": [
+    {
+     "label": "Pickleball News Asia: Dragon Warriors, Hong Kong Cannons win MLP Asia debuts in Manila",
+     "url": "https://pickleballnewsasia.com/dragon-warriors-hong-kong-cannons-win-mlp-asia-debuts/"
+    },
+    {
+     "label": "World Pickleball Magazine: MLP Asia Manila results, Viet Panthers v Stripes and DOTS",
+     "url": "https://worldpickleballmagazine.com/mlp-asia-manila-results-viet-panthers-ho-chi-minh-city-preview/"
+    },
+    {
+     "label": "MLP Asia",
+     "url": "https://mlp-asia.com/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Explainer post: 'Won two games, got zero points.' How MLP Asia's 3-points-for-any-regulation-win scoring left the Manila Helios empty-handed at home.",
+   "tags": [
+    "MLP Asia",
+    "Manila Helios",
+    "Dragon Warriors",
+    "Hong Kong Cannons",
+    "Jack Wong"
+   ]
+  },
+  {
+   "title": "APP names the Atlantic Cup rosters: Camron, Munro, Stewart and Oshiro lead Team USA, and Fudge, Devilliers and Turkovic headline Team Europe for Dec. 4",
+   "summary": "The APP announced the rosters on Nov. 19 for the 2026 APP Atlantic Cup presented by Discover, Team USA vs. Team Europe on Friday night, Dec. 4, at The Fort in Fort Lauderdale. Team USA: Ronan Camron, Christine Maddox, Jack Munro, Bobbi Oshiro, Aidan Schenk and Kat Stewart, coached by Chad Edwards and Lee Whitwell. Team Europe: Glauka Carvajal-Lane (Spain), Ben Cawston (England), Ignasi de Rueda (Spain), Jay Devilliers (France), Megan Fudge (England), the APP Tour's all-time career medals leader with 96, and Domenika Turkovic (Croatia), coached by Louis Laville. CBS will air the event nationally from 4:30 to 5:30 p.m. ET on Saturday, Dec. 5, per the APP. It runs alongside the APP Tour Championships at The Fort, Dec. 3-6.",
+   "status": "confirmed",
+   "date": "2026-11-21",
+   "sources": [
+    {
+     "label": "APP: Atlantic Cup rosters announced",
+     "url": "https://www.theapp.global/news/2026-atlantic-cup-rosters-announced"
+    },
+    {
+     "label": "Pickleballer: APP names Team Europe's six for the Atlantic Cup",
+     "url": "https://pickleballer.world/stories/team-europe-atlantic-cup-roster-four-countries/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Roster graphic: Team USA vs. Team Europe, six players each, Dec. 4 at The Fort. Ask followers to pick a winner.",
+   "tags": [
+    "APP",
+    "Atlantic Cup",
+    "Team USA",
+    "Team Europe",
+    "Megan Fudge",
+    "Ronan Camron"
+   ]
+  },
+  {
+   "title": "Purdue adds 18 fenced pickleball courts, including three championship courts, at its new Pickett-Chaney complex",
+   "summary": "Purdue University built 18 individually fenced pickleball courts, three of them championship-sized, in under six months at the new Pickett-Chaney Pickleball & Tennis Complex next to its Gold Fields in West Lafayette, Ind., per a Nov. 20 USA Pickleball story. The complex was built from March to August 2026 as the first phase of Purdue Recreation & Wellness's master plan, opened to students this fall and has already hosted several tournaments, according to the story.",
+   "status": "confirmed",
+   "date": "2026-11-21",
+   "sources": [
+    {
+     "label": "USA Pickleball: Purdue adds 18 pickleball courts to its campus",
+     "url": "https://usapickleball.org/pickleball-stories/purdue-adds-18-pickleball-courts-to-its-campus-to-match-growing-demand-for-the-sport/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "College pickleball is building: 18 courts in under six months at Purdue. Ask followers whether their campus has courts.",
+   "tags": [
+    "USA Pickleball",
+    "Purdue",
+    "College pickleball",
+    "Courts"
+   ]
+  },
   {
    "title": "PPA Daytona round of 16: Rafael Lenhard comes back from 0-11, Parenteau ends Kelly Goodnow's run, Buckner stops Maria Ford, and four double-digit seeds reach the men's singles quarterfinals",
    "summary": "Thursday's round of 16 at the Proton Daytona Beach Open set up four men's singles quarterfinals with double-digit seeds in them, per the PPA. No. 10 Rafael Lenhard lost the first game 0-11 to No. 5 Christian Alshon, then won 13-11, 11-6. No. 12 JW Johnson came back from 4-11 down a game to beat No. 7 Noe Khlif in three, and No. 11 Eric Oncins beat No. 6 Roscoe Bellamy 12-10, 11-6. No. 14 Cason Campbell ended No. 26 Mota Alhouni's run, per PickLM's live results. Men's quarterfinals: No. 8 Zane Ford vs. No. 14 Campbell, No. 3 Federico Staksrud vs. No. 12 JW Johnson, No. 2 Hunter Johnson vs. No. 10 Lenhard and No. 4 John Lucian Goins vs. No. 11 Oncins. In women's singles, 14-year-old Kelly Goodnow took the first game 11-9 from defending champion Catherine Parenteau before Parenteau won 11-1, 11-1, and No. 1 Brooke Buckner beat No. 41 Maria Ford after losing the first game, per the PPA and PickLM. No. 11 Sofia Sewing beat No. 7 Cailyn Campbell 11-5, 11-2. Women's quarterfinals: No. 1 Buckner vs. No. 8 Jalina Ingram, No. 3 Judit Castillo vs. No. 5 Isabella Dunlap, No. 2 Kiora Kunimoto vs. No. 11 Sewing and No. 4 Parenteau vs. No. 10 Milan Rane. All doubles quarterfinals are also set, including No. 13 Will Howells/AJ Koller (who beat No. 4 Pablo Tellez/Staksrud) against No. 11 Clayton Powell/Anouar Braham, and Ben Johns/Anna Leigh Waters against Rachel Rohrabacher/Staksrud in mixed, per the PPA and PickLM. Quarterfinals are today on PickleballTV from 12 p.m. ET (11 a.m. CT). Separately, a Pickleball.com staff column on Nov. 19 argued that Genie Bouchard's losses to 13-year-old Natalia Simson and 14-year-old Goodnow raise questions about her commitment to the sport (opinion).",
@@ -1867,244 +1999,6 @@
      "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
      "label": "How to watch Worlds week"
     }
-   ]
-  },
-  {
-   "title": "Worlds quarterfinal results: Sock wins again; Johns/Waters advance and Staksrud/Patriquin exit",
-   "summary": "As of 5:19:52 PM CT on Friday, Nov. 6, the official United Pickleball Worlds live board marks 15 pro quarterfinals Final at the Opendoor Pickleball World Championships in Farmers Branch, Texas. All 15 finals are unchanged from the 5:10:47 PM CT check, including the five already final at 1:10 PM CT. Women's singles: Anna Leigh Waters defeated Sofia Sewing 11-2, 11-8; Kate Fahey defeated Catherine Parenteau 11-3, 11-0; Kaitlyn Christian defeated Jorja Johnson 11-13, 12-10, 11-7; Brooke Buckner defeated Rika Fujiwara 13-11, 11-4. Men's singles: Jack Sock defeated Roscoe Bellamy 11-8, 11-7; John Lucian Goins defeated Christopher Haworth 11-5, 11-5; Christian Alshon defeated Jaume Martinez Vich 11-5, 11-9; Hunter Johnson defeated Hong Kit Wong 11-3, 11-6. Mixed doubles: Anna Bright and Hayden Patriquin defeated P. Todd and A. Daescu 11-2, 11-3; Ben Johns and Anna Leigh Waters defeated Sahra Dennehy and Tama Shimabukuro 11-5, 11-0; J. Johnson and J. Johnson defeated Catherine Parenteau and Eric Oncins 11-5, 11-2; R. Rohrabacher and Christian Alshon defeated T. Black and Gabriel Tardio 11-4, 11-7. Men's doubles: C. Klinger and Eric Oncins defeated Federico Staksrud and Hayden Patriquin 11-8, 11-4. Women's doubles: Anna Bright and Anna Leigh Waters defeated C. Wang and L. Sleeth 11-1, 11-4; Kate Fahey and T. Pisnik defeated M. Humberg and Milan Rane 12-10, 11-9. All 15 results are from the official board linked below. Five gender-doubles quarterfinals remain unresolved, two Live and three Up Next: men's doubles Ben Johns and Gabriel Tardio vs. C. Garnett and D. Frazier (Live), A. Daescu and Christian Alshon vs. W. Mackinnon and H. Johnson (Live), and Tama Shimabukuro and J. Johnson vs. R. Newman and Noe Khlif (Up Next); women's doubles R. Rohrabacher and P. Todd vs. Brooke Buckner and Kaitlyn Christian (Up Next), and T. Black and J. Johnson vs. Sofia Sewing and Catherine Parenteau (Up Next). These matches are not final; live scores are intentionally omitted. This is a partial results snapshot, not a complete quarterfinal recap.",
-   "status": "confirmed",
-   "date": "2026-11-06",
-   "sources": [
-    {
-     "label": "Official United Pickleball Worlds live board: 15 quarterfinals marked Final (as of 5:19:52 PM CT, Nov. 6)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Official partial quarterfinal results only; five gender-doubles quarterfinals still unresolved as of 5:19:52 PM CT. These matches are not final; live scores are intentionally omitted. No posting requested.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Quarterfinals",
-    "Jack Sock",
-    "Ben Johns",
-    "Anna Leigh Waters",
-    "Kate Fahey",
-    "Kaitlyn Christian",
-    "Christian Alshon",
-    "Hunter Johnson",
-    "Federico Staksrud"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Team Wahlberg beats Team Piven in a DreamBreaker at the MUNICIPAL Celebrity Showdown at Worlds",
-   "summary": "Team Wahlberg defeated Team Piven in a DreamBreaker on Thursday evening at the MUNICIPAL Celebrity Pickleball Showdown presented by Corient, on Powerball Championship Court at the Opendoor Pickleball World Championships. The line score was 6-11, 11-5, 11-7, 4-11, 15-13. Celebrities on the court included Mark Wahlberg, Sean O'Malley, Jeremy Piven, Isabelle Harrison, John Isner, Richard Rawlings and Lauren Riihimaki, paired with pros Ben Johns, Anna Bright, Kate Fahey, Jack Sock, Brooke Buckner, Roscoe Bellamy, Tyson McGuffin and Lacy Schneemann. Per the pickleball.com recap, Team Wahlberg was Wahlberg, O'Malley, Harrison, Johns, Bright, Schneemann and Sock; Team Piven was Piven, Rawlings, Riihimaki, Isner, McGuffin, Fahey, Buckner and Bellamy.",
-   "status": "confirmed",
-   "date": "2026-11-06",
-   "sources": [
-    {
-     "label": "Pickleball.com: Team Wahlberg defeats Team Piven in MUNICIPAL Celebrity Showdown",
-     "url": "https://pickleball.com/culture/team-wahlberg-defeats-team-piven-to-win-muncipal-celebrity-showdown-presented-by-corient"
-    },
-    {
-     "label": "PickleballTV (YouTube): Mark Wahlberg on-court interview at the MUNICIPAL Celebrity Showdown",
-     "url": "https://www.youtube.com/watch?v=RMOpEXFkpXk"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Short recap / celebs-on-the-court: 'Team Wahlberg edged Team Piven 15-13 in the DreamBreaker at Worlds.' Link the pickleball.com recap. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Celebrity",
-    "Mark Wahlberg",
-    "Jeremy Piven",
-    "MUNICIPAL"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Jack Sock upsets No. 2 Federico Staksrud 3-11, 11-6, 11-8 and knocks the defending Worlds champ out of singles",
-   "summary": "No. 13 Jack Sock beat No. 2 Federico Staksrud, the defending Opendoor Pickleball World Championships men's singles champion, 3-11, 11-6, 11-8 in the round of 16 on Thursday, Nov. 5, in Farmers Branch, Texas. Per the PPA and the official bracket, Sock dropped the first game badly, then took the next two. Selkirk's match report says Sock is leaner and fitter this week and that this is his third career win over Staksrud in eight meetings. Sock plays No. 5 Roscoe Bellamy in Friday's quarterfinals. Staksrud is still alive in men's doubles with Hayden Patriquin.",
-   "status": "confirmed",
-   "date": "2026-11-06",
-   "sources": [
-    {
-     "label": "@PPAtour: Sock upsets Staksrud",
-     "url": "https://x.com/PPAtour/status/2118405060090564686"
-    },
-    {
-     "label": "@PPAtour: Sock advances to quarterfinals",
-     "url": "https://x.com/PPAtour/status/2118420702650876223"
-    },
-    {
-     "label": "Selkirk: Jack Sock stuns defending champion Federico Staksrud",
-     "url": "https://www.selkirk.com/blogs/professional-tournament-coverage/jack-sock-stuns-defending-champion-federico-staksrud-at-ppa-worlds"
-    },
-    {
-     "label": "Official Worlds bracket and scores (United Pickleball)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2118405060090564686"
-   ],
-   "social_angle": "Results post: 'Sock just beat the defending Worlds champ. Staksrud is out of singles, 3-11, 11-6, 11-8.' Embed the PPA upset post and tag the PPA Tour. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Jack Sock",
-    "Federico Staksrud",
-    "Upset",
-    "Round of 16"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Worlds round of 16 is done: Waters vs. Sewing and Sock vs. Bellamy headline Friday's quarterfinals; Johns still alive in mixed and men's doubles",
-   "summary": "Thursday's round of 16 set Friday's quarterfinals at the Opendoor Pickleball World Championships. Per the PPA and the official bracket: in men's singles, No. 1 Christopher Haworth beat Adam Harvey 11-9, 11-3; No. 7 John Lucian Goins beat No. 9 Noe Khlif 11-6, 3-11, 11-2; No. 4 Christian Alshon beat Harrison Brown 11-3, 11-8; No. 12 Jaume Martinez Vich beat JW Johnson 11-4, 1-11, 11-3; Sock beat Staksrud; No. 5 Roscoe Bellamy beat Luc Pham 11-4, 11-7; No. 3 Hunter Johnson beat Rafael Lenhard 11-1, 11-4; and No. 11 Hong Kit Wong beat Donald Young 12-10, 11-9. In women's singles, No. 1 Anna Leigh Waters beat Milan Rane 11-0, 11-2; No. 25 Sofia Sewing beat Helena Jansen 11-1, 13-15, 11-2 and draws Waters; No. 4 Brooke Buckner beat Samantha Parker; No. 12 Rika Fujiwara beat Shannon Pretorius 11-2, 8-11, 11-3; No. 2 Kate Fahey, No. 7 Catherine Parenteau, No. 3 Kaitlyn Christian and No. 22 Jorja Johnson also advanced. Ben Johns and Waters beat Schneemann/Sock in mixed; Johns and Gabriel Tardio beat Crouch/Braham in men's doubles; Bright/Waters advanced in women's doubles. Mixed seed upset: No. 11 Sahra Dennehy and Tama Shimabukuro beat No. 7 Fahey/Staksrud and now play Johns/Waters. Per Friday's order of play, singles quarterfinals start at 11 a.m. CT on PickleballTV (Waters-Sewing and Hunter Johnson-Wong among the early matches), mixed at 2 p.m., and doubles at 3:30 p.m. Thursday night's MUNICIPAL Celebrity Showdown with Mark Wahlberg and Sean O'Malley aired on Tennis Channel and PickleballTV.",
-   "status": "confirmed",
-   "date": "2026-11-06",
-   "sources": [
-    {
-     "label": "@PPAtour: Friday's quarterfinal order of play",
-     "url": "https://x.com/PPAtour/status/2118588413490155940"
-    },
-    {
-     "label": "@PPAtour: Men's singles quarterfinals are set",
-     "url": "https://x.com/PPAtour/status/2118471766276288609"
-    },
-    {
-     "label": "@PPAtour: Women's singles quarterfinals are set",
-     "url": "https://x.com/PPAtour/status/2118472016462266478"
-    },
-    {
-     "label": "@PPAtour: Mixed doubles quarterfinals are set",
-     "url": "https://x.com/PPAtour/status/2118526618507284884"
-    },
-    {
-     "label": "@PPAtour: Men's doubles quarterfinals are set",
-     "url": "https://x.com/PPAtour/status/2118547246232830433"
-    },
-    {
-     "label": "@PPAtour: Women's doubles quarterfinals are set",
-     "url": "https://x.com/PPAtour/status/2118533664329924870"
-    },
-    {
-     "label": "@PPAtour: Sewing advances to face Waters",
-     "url": "https://x.com/PPAtour/status/2118447268084830472"
-    },
-    {
-     "label": "@PPAtour: Dennehy/Shimabukuro upset Fahey/Staksrud",
-     "url": "https://x.com/PPAtour/status/2118487118896943483"
-    },
-    {
-     "label": "Official Worlds bracket (United Pickleball)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    },
-    {
-     "label": "PickleballTV (YouTube): Waters vs Rane, full match",
-     "url": "https://www.youtube.com/watch?v=GhuuTNbmPd4"
-    },
-    {
-     "label": "PickleballTV (YouTube): Johns/Tardio vs Crouch/Braham",
-     "url": "https://www.youtube.com/watch?v=CBbLkzc0V4E"
-    },
-    {
-     "label": "PickleballTV (YouTube): Wahlberg Celebrity Showdown interview",
-     "url": "https://www.youtube.com/watch?v=RMOpEXFkpXk"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2118588413490155940",
-    "https://x.com/PPAtour/status/2118471766276288609"
-   ],
-   "social_angle": "Watch guide: 'Quarterfinals today at Worlds. Waters vs Sewing at 11, Johns/Waters mixed at 2:45, Johns/Tardio at 5, all CT on PickleballTV.' Embed the PPA order-of-play post.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Quarterfinals",
-    "Schedule",
-    "How to watch",
-    "Anna Leigh Waters",
-    "Ben Johns"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
-   ]
-  },
-  {
-   "title": "Gear: USA Pickleball delists the CPX Hyper+ elongated 14mm and 16mm paddles after retail samples failed compliance testing",
-   "summary": "USA Pickleball has removed the CPX Hyper+ elongated 14mm and 16mm models from its certified paddle list after courtside testing and market sampling found significant differences in PBCoR and deflection between the paddles submitted for certification and mass-production units sold to players. USA Pickleball's Nov. 2 equipment statement says it is working with CPX on new versions under a new model name. CPX's own Hyper+ update page says some recent production units played hotter than the certified samples, that current Hyper+ paddles are not for USA Pickleball-sanctioned events, and that a Hyper+ 2 is in recertification with dual factory/warehouse testing and serial numbers planned. The Dink, reporting Nov. 5 from the USA Pickleball Nationals in San Diego, says officials told paddle reviewer John Kew that potential financial penalties against CPX are 'in consideration.' No fines have been announced. Rec play is unaffected; tournament players who need an approved paddle can request a Hyper+ 2 swap once it is available, per CPX.",
-   "status": "confirmed",
-   "date": "2026-11-06",
-   "sources": [
-    {
-     "label": "USA Pickleball: Statement on CPX Hyper+ 14mm and 16mm",
-     "url": "https://usapickleball.org/usap-news/equipment-news/statement-from-usa-pickleball-regarding-the-cpx-hyper-14mm-and-hyper-16mm-paddles/"
-    },
-    {
-     "label": "CPX: An update on the Hyper+",
-     "url": "https://cpxpickleball.com/pages/hyper-plus-update"
-    },
-    {
-     "label": "The Dink: USA Pickleball delists CPX Hyper+ paddles, weighs fines",
-     "url": "https://www.thedinkpickleball.com/usa-pickleball-delists-cpx-hyper-paddles-weighs-fines/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Gear post: 'USA Pickleball pulled the CPX Hyper+ off the approved list. Retail paddles tested hotter than the certified samples.' Link the USAP statement and CPX's update page. Keep fines talk as 'under consideration,' not announced.",
-   "tags": [
-    "Gear",
-    "USA Pickleball",
-    "CPX",
-    "Hyper+",
-    "Certification",
-    "Paddles"
-   ]
-  },
-  {
-   "title": "Business: Selkirk Sport buys LevelUp Pickleball Camps, claiming the world's largest pickleball camp network",
-   "summary": "Selkirk Sport announced Nov. 5 that it has acquired LevelUp Pickleball Camps, which runs more than 400 camps a year in more than 35 states. The Coeur d'Alene, Idaho-based paddle brand says the deal, combined with Selkirk Academy, makes Selkirk and LevelUp the largest pickleball camp provider in the world. LevelUp founder Wayne Dollard and the Dollard family stay on as head pros, the existing 30-plus coaches remain, and the 2027 calendar — including new international destination camps — is set. Terms were not disclosed. LevelUp's camp registration site remains live.",
-   "status": "confirmed",
-   "date": "2026-11-06",
-   "sources": [
-    {
-     "label": "Selkirk Sport acquires LevelUp Pickleball Camps (Endurance Sportswire)",
-     "url": "https://www.endurancesportswire.com/selkirk-sport-acquires-levelup-pickleball-camps/"
-    },
-    {
-     "label": "LevelUp Pickleball Camps: camp calendar",
-     "url": "https://www.leveluppickleballcamps.com/camps"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Business note: 'Selkirk just bought LevelUp's 400-camp network.' Link the press release. Frame as camps consolidation, not a paddle launch.",
-   "tags": [
-    "Business",
-    "Acquisition",
-    "Selkirk",
-    "LevelUp",
-    "Camps"
    ]
   }
  ]
