@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "channel": "Enhance Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
+   "title": "You Should Probably Be Using a Power Paddle (Let me Explain)",
+   "link": "https://www.youtube.com/watch?v=JxRWuXC8bVs",
+   "video_id": "JxRWuXC8bVs",
+   "date": "2026-11-21"
+  },
+  {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "How Good Is GripNotGrit vs Armorgrit+? Gherkin Draco OP & Enhance Echo Paddle Review",
+   "link": "https://www.youtube.com/watch?v=eUP1SoMcO1I",
+   "video_id": "eUP1SoMcO1I",
+   "date": "2026-11-21"
+  },
+  {
    "channel": "ThatPickleballGuy",
    "channel_url": "https://www.youtube.com/channel/UCuHP7q94VYp-9W19pk8cjjw",
    "title": "Friday’s NEW paddle is insane",
@@ -17,9 +33,17 @@
    "date": "2026-11-20"
   },
   {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "Neonic FLX NeoGrit Swift & Frost: Coming for the Spartus Spitfire | Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=_ICMB8abgUw",
+   "video_id": "_ICMB8abgUw",
+   "date": "2026-11-20"
+  },
+  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Paddletek Tempest Veyra Review + Big Paddle Haul (RPM Diesel, Proton, Neonic)",
+   "title": "Paddletek Tempest Veyra Review + Big Paddle Haul (RPM Diesel, Boomstik ST, Proton, Neonic)",
    "link": "https://www.youtube.com/watch?v=9CNm_oQAjzw",
    "video_id": "9CNm_oQAjzw",
    "date": "2026-11-20"
@@ -35,7 +59,7 @@
   {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
-   "title": "This Paddle RIPS!! Enhance Echo Pickleball Paddle Review",
+   "title": "Enhance Echo Pickleball Paddle Review | Tier 1 Grit, Quick Hands, Big Sweet Spot.",
    "link": "https://www.youtube.com/watch?v=pc7-Z8QbFuA",
    "video_id": "pc7-Z8QbFuA",
    "date": "2026-11-19"
@@ -185,14 +209,6 @@
    "date": "2026-11-11"
   },
   {
-   "channel": "Matt's Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "Best Pickleball Paddles 2026: Our Favorites, Spartus Spitfire to RPM | Pickleball Podcast",
-   "link": "https://www.youtube.com/watch?v=M8VOs1GLXAg",
-   "video_id": "M8VOs1GLXAg",
-   "date": "2026-11-11"
-  },
-  {
    "channel": "Pickleball Pursuit",
    "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
    "title": "These Paddles Are LEGIT | Gearbox Pressure X Review",
@@ -287,14 +303,6 @@
    "link": "https://www.youtube.com/watch?v=OybwlQ-4C2E",
    "video_id": "OybwlQ-4C2E",
    "date": "2026-11-05"
-  },
-  {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "Selkirk Boomstik ST First Impressions | I am so confused...",
-   "link": "https://www.youtube.com/watch?v=Vwvmr7l5pr4",
-   "video_id": "Vwvmr7l5pr4",
-   "date": "2026-11-04"
   },
   {
    "channel": "John Kew Pickleball",
@@ -471,17 +479,25 @@
    "link": "https://www.youtube.com/watch?v=3JKDFs8RqTI",
    "video_id": "3JKDFs8RqTI",
    "date": "2026-10-16"
-  },
-  {
-   "channel": "Farmer Lanky Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCk4QHrMaOo8a3LQ2fs3xEeQ",
-   "title": "Luzz Cannon XPP M1 Pickleball Paddle Review: High Power and Tier 1 Grit But..",
-   "link": "https://www.youtube.com/watch?v=oWk8xx1Nd24",
-   "video_id": "oWk8xx1Nd24",
-   "date": "2026-10-15"
   }
  ],
  "all_items": [
+  {
+   "channel": "Enhance Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
+   "title": "You Should Probably Be Using a Power Paddle (Let me Explain)",
+   "link": "https://www.youtube.com/watch?v=JxRWuXC8bVs",
+   "video_id": "JxRWuXC8bVs",
+   "date": "2026-11-21"
+  },
+  {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "How Good Is GripNotGrit vs Armorgrit+? Gherkin Draco OP & Enhance Echo Paddle Review",
+   "link": "https://www.youtube.com/watch?v=eUP1SoMcO1I",
+   "video_id": "eUP1SoMcO1I",
+   "date": "2026-11-21"
+  },
   {
    "channel": "ThatPickleballGuy",
    "channel_url": "https://www.youtube.com/channel/UCuHP7q94VYp-9W19pk8cjjw",
@@ -499,9 +515,17 @@
    "date": "2026-11-20"
   },
   {
+   "channel": "Matt's Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
+   "title": "Neonic FLX NeoGrit Swift & Frost: Coming for the Spartus Spitfire | Pickleball Paddle Review",
+   "link": "https://www.youtube.com/watch?v=_ICMB8abgUw",
+   "video_id": "_ICMB8abgUw",
+   "date": "2026-11-20"
+  },
+  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
-   "title": "Paddletek Tempest Veyra Review + Big Paddle Haul (RPM Diesel, Proton, Neonic)",
+   "title": "Paddletek Tempest Veyra Review + Big Paddle Haul (RPM Diesel, Boomstik ST, Proton, Neonic)",
    "link": "https://www.youtube.com/watch?v=9CNm_oQAjzw",
    "video_id": "9CNm_oQAjzw",
    "date": "2026-11-20"
@@ -517,7 +541,7 @@
   {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
-   "title": "This Paddle RIPS!! Enhance Echo Pickleball Paddle Review",
+   "title": "Enhance Echo Pickleball Paddle Review | Tier 1 Grit, Quick Hands, Big Sweet Spot.",
    "link": "https://www.youtube.com/watch?v=pc7-Z8QbFuA",
    "video_id": "pc7-Z8QbFuA",
    "date": "2026-11-19"
@@ -667,14 +691,6 @@
    "date": "2026-11-11"
   },
   {
-   "channel": "Matt's Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8JA18cHIr0DJfbvRE11bSA",
-   "title": "Best Pickleball Paddles 2026: Our Favorites, Spartus Spitfire to RPM | Pickleball Podcast",
-   "link": "https://www.youtube.com/watch?v=M8VOs1GLXAg",
-   "video_id": "M8VOs1GLXAg",
-   "date": "2026-11-11"
-  },
-  {
    "channel": "Pickleball Pursuit",
    "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
    "title": "These Paddles Are LEGIT | Gearbox Pressure X Review",
@@ -801,14 +817,6 @@
    "link": "https://www.youtube.com/watch?v=OybwlQ-4C2E",
    "video_id": "OybwlQ-4C2E",
    "date": "2026-11-05"
-  },
-  {
-   "channel": "Pickleball Studio",
-   "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
-   "title": "Selkirk Boomstik ST First Impressions | I am so confused...",
-   "link": "https://www.youtube.com/watch?v=Vwvmr7l5pr4",
-   "video_id": "Vwvmr7l5pr4",
-   "date": "2026-11-04"
   },
   {
    "channel": "John Kew Pickleball",
@@ -1548,14 +1556,14 @@
   }
  ],
  "sources": {
-  "Pickleball Studio": "ok (4)",
+  "Pickleball Studio": "ok (3)",
   "John Kew Pickleball": "ok (8)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (1)",
   "The Kitchen Pickleball": "ok (1)",
-  "Enhance Pickleball": "ok (1)",
-  "PickleballPlaybook - Austin Hardy": "ok (5)",
+  "Enhance Pickleball": "ok (2)",
+  "PickleballPlaybook - Austin Hardy": "ok (6)",
   "Pickleball Kitchen": "ok (0)",
   "PickleballCentral": "ok (4)",
   "Pickleball Warehouse": "ok (6)",
@@ -1572,5 +1580,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-20T19:01"
+ "updated": "2026-11-21T17:55"
 }
