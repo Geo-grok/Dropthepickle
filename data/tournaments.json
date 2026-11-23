@@ -2,15 +2,6 @@
  "items": [
   {
    "source": "Carvana PPA Tour",
-   "name": "Proton Daytona Beach Open",
-   "link": "https://www.ppatour.com/events/2026/proton-daytona-beach-open/",
-   "start": "2026-11-16",
-   "end": "2026-11-22",
-   "location": "Pictona at Holly Hill, 1060 Ridgewood Ave, Holly Hill, FL 32117",
-   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-daytona-beach-203020"
-  },
-  {
-   "source": "Carvana PPA Tour",
    "name": "Veolia Malibu Showcase",
    "link": "https://www.ppatour.com/events/2026/veolia-malibu-cup/",
    "start": "2026-12-14",
@@ -110,7 +101,7 @@
   }
  ],
  "sources": {
-  "Carvana PPA Tour": "ok (12)"
+  "Carvana PPA Tour": "ok (11)"
  },
- "updated": "2026-11-22T18:23"
+ "updated": "2026-11-23T22:30"
 }

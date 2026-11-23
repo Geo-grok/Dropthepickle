@@ -20,28 +20,28 @@
   "v": 3
  },
  "best-16mm-paddles.html": {
-  "hash": "161cd89509119d3040e95a626d61dac1dac1da807f9a4708db60ace25a5edb3b",
-  "updated": "2026-11-21",
+  "hash": "e5acd9836a75cce8514ab759721e30a8a2ae4afe5242496322ab177dfd7bf09e",
+  "updated": "2026-11-23",
   "v": 3
  },
  "best-crbn-paddles.html": {
-  "hash": "9cd26c53fb70f29870553ea75a54027cc587de6295d4bc044d2d84419ff276bc",
-  "updated": "2026-11-07",
+  "hash": "6aa503232fa8d1cc3311aa8255d3bba1b260a37fe3022cfe4421e005010a8cf2",
+  "updated": "2026-11-23",
   "v": 3
  },
  "best-elongated-paddles.html": {
-  "hash": "b80abf9bc92bfb492d160aab17ddb5035f36a1fd0070a62f85ac5457747b4593",
-  "updated": "2026-11-21",
+  "hash": "baaba5298949bf5f97e5098d1cefdb70a64abcee5d0a31b74b623a1f1635cb17",
+  "updated": "2026-11-23",
   "v": 3
  },
  "best-engage-paddles.html": {
-  "hash": "2e157836a014cb3fb60d399aaa347382c8ff969c162cf9d0ec8171e52b009851",
-  "updated": "2026-11-08",
+  "hash": "3d0418d2426245916ba4d1d9d35651763733d2c7cd87fc78c75ad474ce9b7000",
+  "updated": "2026-11-23",
   "v": 3
  },
  "best-full-foam-paddles.html": {
-  "hash": "042024d8551f13290221eaf41a72a6b35622060217723b6cace59ccb24bd5b72",
-  "updated": "2026-11-19",
+  "hash": "a5465446bf5bb2f2e1bb5c574aa034158b4b33f8f9bdbbea8a52258d4b413ae0",
+  "updated": "2026-11-23",
   "v": 3
  },
  "best-gearbox-paddles.html": {
@@ -70,13 +70,13 @@
   "v": 3
  },
  "best-paddles-for-power.html": {
-  "hash": "be008db9c106a87c7b0f15219641626d22d8c246714de88460bd4942afda0d95",
-  "updated": "2026-11-21",
+  "hash": "809eb4aa30cac72983bc736fa9363b95912bfc9ee80b033c27dbd70982819084",
+  "updated": "2026-11-23",
   "v": 3
  },
  "best-paddles-for-tennis-players.html": {
-  "hash": "c6e950080d0b147e30daea93e6988f0873f031fb2dd2b2389d09fbbc6289b5f2",
-  "updated": "2026-11-21",
+  "hash": "ba4a367cc456e8fa8acf26f5b69b8d8f3d4ad2b5d506cee7d1e9d7e2be7244ca",
+  "updated": "2026-11-23",
   "v": 3
  },
  "best-paddletek-paddles.html": {
@@ -85,8 +85,8 @@
   "v": 3
  },
  "best-selkirk-paddles.html": {
-  "hash": "2c4691615950c32a96e7ca6a2766f39e7582dbe445caccb5ddac6cee880d9b03",
-  "updated": "2026-11-07",
+  "hash": "45ef4bcaede5492a87ace3e7a1499afbccd8837a934f6e7b3a11a818523e0b1a",
+  "updated": "2026-11-23",
   "v": 3
  },
  "best-six-zero-paddles.html": {
@@ -430,13 +430,13 @@
   "v": 3
  },
  "deals.html": {
-  "hash": "88fe2dc46308616b5c818e56c51e722163be58ba29e7de62564cbc38606a4390",
-  "updated": "2026-11-21",
+  "hash": "2d0c6080aa953fb5cf1b721961460cdef91f79c661bbffbbd4fd63d076b36d72",
+  "updated": "2026-11-23",
   "v": 3
  },
  "deals/black-friday-pickleball-deals-2026.html": {
-  "hash": "6f6632b2e2e9688afa2b22864d7dd90550ae7bf048e46529a7cc52c02a94c3af",
-  "updated": "2026-11-20",
+  "hash": "6a90bb5560154cbc3041f2a24db31216bded3a5bf16babe98f16236e165e054b",
+  "updated": "2026-11-23",
   "v": 3
  },
  "disclosure.html": {
@@ -1074,11 +1074,6 @@
   "updated": "2026-10-15",
   "v": 3
  },
- "events/proton-daytona-beach-open.html": {
-  "hash": "a42bd0f7febc4f0600ef3a6f3479500e41c72b470c0a408c524558912e71674f",
-  "updated": "2026-10-24",
-  "v": 3
- },
  "events/sacramento-open.html": {
   "hash": "6fbe29023c41abd81cec8d8a55a36396d0272e763fce4e402607c51077f6015e",
   "updated": "2026-10-15",
@@ -1100,8 +1095,8 @@
   "v": 3
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "597c15940d63132259fedb3ebb4b4d39accd9c82ace1a0d7a0e7197db87ee856",
-  "updated": "2026-11-20",
+  "hash": "07a9b1aa7eef62491ae2ffa18a2b5a330eba14d2c18acbc24dc87db3b88659a3",
+  "updated": "2026-11-23",
   "v": 3
  },
  "guides/best-volair-paddles.html": {
@@ -1135,8 +1130,8 @@
   "v": 3
  },
  "guides/how-to-watch-pro-pickleball.html": {
-  "hash": "ceacb280b667aded7772fa314aec0fde41c4c4a2b9eba2e1c3b193752ac536c5",
-  "updated": "2026-11-17",
+  "hash": "650f09f9b6aacb6f4d7f1a89d59272a38d94a4b856490275b93e18a15e4a88a9",
+  "updated": "2026-11-23",
   "v": 3
  },
  "guides/indoor-vs-outdoor-pickleball-balls.html": {
@@ -1165,8 +1160,8 @@
   "v": 3
  },
  "guides/pickleball-gift-guide-2026.html": {
-  "hash": "23a99db5fb68dc4482259ba7d8a57465c2bd6fd595238f766b428be73709ae62",
-  "updated": "2026-11-20",
+  "hash": "564e3011249db81e146f0c7fe598e456cd50126f84573f934e857b599c849dbf",
+  "updated": "2026-11-23",
   "v": 3
  },
  "guides/pickleball-grip-size.html": {
@@ -1235,23 +1230,23 @@
   "v": 3
  },
  "index.html": {
-  "hash": "48797935edb2dee1ee7c0eed35e96eaf55df0993d9371c165c47e3020e40b173",
-  "updated": "2026-11-22",
+  "hash": "7a9aafd6d661ffc4ca5f4333a5dc9fc349d9a528da176bd896a40c5a530dc040",
+  "updated": "2026-11-23",
   "v": 3
  },
  "news.html": {
-  "hash": "1f947ec6e6a1842ed56fd53ca013a60f3fd55f50caeecde1e089d5c4dc32b3fe",
-  "updated": "2026-11-22",
+  "hash": "2012c3469d10f5039a00e89279e3f0314a3718d473ea523a21570873ce13f22c",
+  "updated": "2026-11-23",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
-  "hash": "dc9f574209e8c863d95e7ae37e241d4b079958ca7bd42d9080d413718476a708",
-  "updated": "2026-10-15",
+  "hash": "8f014991169dfc083de55ae35247ffd99180ba8798170bfbe6ff0dd569b2f4c5",
+  "updated": "2026-11-23",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-genesis.html": {
-  "hash": "15b7bfd002374bcd5e49cebcf1c131bed267c1f9fbcc5d53bc1727cde6928604",
-  "updated": "2026-10-15",
+  "hash": "9f97abf7ef30925d0e39cd6257e25cac3a28afd62c099548d74f35752a733285",
+  "updated": "2026-11-23",
   "v": 3
  },
  "paddle-crbn-crbn1-x-series.html": {
@@ -1260,18 +1255,18 @@
   "v": 3
  },
  "paddle-crbn-crbn3-trufoam-waves.html": {
-  "hash": "33c84c7612ecc06bcb6b220172ed00635036d3b1dad05bdb0b1bef803e7b14b4",
-  "updated": "2026-10-15",
+  "hash": "4e1c1ec002415b140282874e46aa346fbfab3c2371581e0c6b05913c243c5b08",
+  "updated": "2026-11-23",
   "v": 3
  },
  "paddle-engage-axiom-elongated-durable-grit.html": {
-  "hash": "0fbc1333d1c77ca1d726bc3c600fc084cdee2f3bb0a8e4cd27a46d7cad4e4b48",
-  "updated": "2026-10-15",
+  "hash": "3d50013c447b3b58465d3c042483f4f8a86bb745ecafe5d1caca0de2d373e43b",
+  "updated": "2026-11-23",
   "v": 3
  },
  "paddle-engage-pursuit-pro2-elongated-16mm.html": {
-  "hash": "c0a3dfd3b737d6a651d0f19ca8a7f8e847f36470520fbcd3acb5cce6b2970326",
-  "updated": "2026-11-08",
+  "hash": "cee7a38947dca47ee8f7399ac30d31b48691061a9332cf8a832e98a4c443be83",
+  "updated": "2026-11-23",
   "v": 3
  },
  "paddle-engage-x2-elongated.html": {
@@ -1360,8 +1355,8 @@
   "v": 3
  },
  "paddle-quiz.html": {
-  "hash": "edd803a95048c87ec94e935fe23e1250b059e57c6ff52e1dcda26507b8d35e03",
-  "updated": "2026-11-20",
+  "hash": "b0e79ce0f735d27b6e85919b51f394248c1da6988e8b557b74624cc6999f151c",
+  "updated": "2026-11-23",
   "v": 3
  },
  "paddle-selkirk-labs-project-boomstik.html": {
@@ -1380,8 +1375,8 @@
   "v": 3
  },
  "paddle-selkirk-slk-era-power.html": {
-  "hash": "cd10494e085a36ec1fd0a4a6b37bf91231978408c7a978a862e76d9d6b54e730",
-  "updated": "2026-10-15",
+  "hash": "308e214941159f29ab3d7d9dfe23e3bad667a2f4b3e380c5b0890918cfbcffb8",
+  "updated": "2026-11-23",
   "v": 3
  },
  "paddle-selkirk-slk-halo-power.html": {
@@ -1465,8 +1460,8 @@
   "v": 3
  },
  "paddles.html": {
-  "hash": "0b20a773f4d5b734f4fd084a2996e423dce9f2c5508fe06f20d3fe84c49b9cf6",
-  "updated": "2026-11-21",
+  "hash": "9e29ada5048cce07c39c2ca62ddb4da60c19e5e4a88b2f3ec0790a3592f89475",
+  "updated": "2026-11-23",
   "v": 3
  },
  "podcasts.html": {
@@ -1475,13 +1470,13 @@
   "v": 3
  },
  "price-index.html": {
-  "hash": "48d7c4752b723355671cd1cd5e89dd33edb56292bdd9c4ddae6eae2c402e35a3",
-  "updated": "2026-11-21",
+  "hash": "58e84ec047b0de0380b5c922cb4b0004992225136e396127da7b98ff7f952e49",
+  "updated": "2026-11-23",
   "v": 3
  },
  "price-tracker.html": {
-  "hash": "8c30b2550e703c62ef59085b734f43a66358b07e9ef947aa4dcd8aebcf2ae19f",
-  "updated": "2026-11-20",
+  "hash": "850aca4abf55fce9ed5c14b3ddd378671a9ba04f053248df9b2f1d910eadaddc",
+  "updated": "2026-11-23",
   "v": 3
  },
  "privacy.html": {
@@ -1500,8 +1495,8 @@
   "v": 3
  },
  "reviews.html": {
-  "hash": "a48cef6cb8e8bef05e4a9f0062341f9ae65bdacad0cdfaf98dea76f94254f39e",
-  "updated": "2026-11-21",
+  "hash": "fa4f44a0cb2644bec542de9a3a6889c7b38b663d65043400596032fb284d7128",
+  "updated": "2026-11-23",
   "v": 3
  },
  "science.html": {
@@ -1515,53 +1510,53 @@
   "v": 3
  },
  "tournaments.html": {
-  "hash": "bd559621ec91391caea0201702e9406c7e72d7716eda97e1bec9a0e6b1fd02a8",
-  "updated": "2026-11-17",
+  "hash": "9009028832eed75194a02e043d04133582939c1c1048dbfd5703d5eefad492de",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-crbn-crbn1-trufoam-barrage-vs-crbn-crbn1-trufoam-genesis.html": {
-  "hash": "dfd6de6d3aedb2c089eb65d9be1db0f6e8e47713b02ae02dda21768b59f3c59e",
-  "updated": "2026-11-09",
+  "hash": "860dd494f696cda5a04afbf7386ee1e2bdac99773ed6dc89a8532feb281ec20e",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-crbn-crbn1-trufoam-barrage-vs-crbn-crbn1-x-series.html": {
-  "hash": "0eb6ba31adc38b22d5036b27504c7ec86179cb70086c544ec5f51e40a5e0c2f2",
-  "updated": "2026-11-09",
+  "hash": "d38337539b68f034f48113240b42df1447f24125c514b7bfc19645bb217726d9",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-crbn-crbn1-trufoam-genesis-vs-crbn-crbn1-x-series.html": {
-  "hash": "bebadda46c4390c81e0cd3b1611605d5e5904b84b438c29bb4ddf9d596565729",
-  "updated": "2026-11-09",
+  "hash": "ced819ffe60c0271fad1590637194f6d040427accd36b746506bda033b0e5892",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-crbn-crbn3-trufoam-waves-vs-crbn-crbn1-trufoam-barrage.html": {
-  "hash": "215e4cc1ad9e7c8bb7ad991b1e1ff5226f02d36cd4700c3759fcdde71e010ab8",
-  "updated": "2026-11-09",
+  "hash": "7f0893a88f25611ce752785495025f3122a8af5eb6c91e153a9c8e1699c8d270",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-crbn-crbn3-trufoam-waves-vs-crbn-crbn1-trufoam-genesis.html": {
-  "hash": "205eef054b2726b950bfcfa1a26135558b27d4caaafb69a23053f9db5b752131",
-  "updated": "2026-11-09",
+  "hash": "f6d7ca900c5974ed66e978d728eac692f71b2fc1ab5e610d8fe0fb7d31afabdc",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-crbn-crbn3-trufoam-waves-vs-crbn-crbn1-x-series.html": {
-  "hash": "1df87b07e7e18d11b2b0302b8646d73002b49edca55ddb29850a6936f0799a0d",
-  "updated": "2026-11-09",
+  "hash": "e2097bc69f567bc7943157a6592567e8ebdbcdc329432d016e1f26f1c523105f",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-engage-axiom-elongated-durable-grit-vs-engage-pursuit-pro2-elongated-16mm.html": {
-  "hash": "d57b134fa406b43364b40225e6ea1ff6c34f23a6cd20cf29ac1a36af7e3ec71b",
-  "updated": "2026-11-09",
+  "hash": "f4cec15bf3b462a60505452103c3239f9fd60917d56f846e11f3fa2df1366c41",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-engage-axiom-elongated-durable-grit-vs-engage-x2-elongated.html": {
-  "hash": "66a09e5bc0288f0bccfabb02048ac7492c86d870dcc8a8b37e2055a01df4530c",
-  "updated": "2026-11-09",
+  "hash": "bcbe4cf7715040d518c660df3e300bef223c4e89e629500a62174c12c8dfb435",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-engage-pursuit-pro2-elongated-16mm-vs-engage-x2-elongated.html": {
-  "hash": "217eae0c3b9c814a07ff809d76c9cee59b6bb7f2a2f0345e7ee3b52114cd75fe",
-  "updated": "2026-11-09",
+  "hash": "7f260ddfc9114b294eea871528c0c94b39144fb23c5bb4bfb464de7f49ab9c4c",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-gearbox-gbx-power-elongated-gen-3-vs-gearbox-gx2-power-hybrid.html": {
@@ -1725,8 +1720,8 @@
   "v": 3
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-slk-era-power.html": {
-  "hash": "6fd67abad068428b96979001855e518819df8e5d399afca7280f79cffa8a1ea0",
-  "updated": "2026-11-09",
+  "hash": "d8e735ac1fabf5894574a17ee243658a8376abb598ce5fc95511ed8f4c1d29af",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-selkirk-labs-project-boomstik-vs-selkirk-slk-halo-power.html": {
@@ -1740,8 +1735,8 @@
   "v": 3
  },
  "vs-selkirk-luxx-control-air-infinigrit-vs-selkirk-slk-era-power.html": {
-  "hash": "e97017d2f972c64d51fd88692ec918ab27958f9f15e1ab854a65c8c130b74ce3",
-  "updated": "2026-11-09",
+  "hash": "2d3d8b42c7bf4a52bbf07b4e8d29dd865d24cd6240067c41ddf85a034810a98a",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-selkirk-luxx-control-air-infinigrit-vs-selkirk-slk-halo-power.html": {
@@ -1750,8 +1745,8 @@
   "v": 3
  },
  "vs-selkirk-omni-vs-selkirk-slk-era-power.html": {
-  "hash": "7bbf520d55aa3eb35df88725c8cf33ac226553d844e6528859a6981f9fc17c0e",
-  "updated": "2026-11-09",
+  "hash": "8ab59ca89ec82f8c7894fd4beb0a7af91b2b921ba160bf3cd613d3ae9f280241",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-selkirk-omni-vs-selkirk-slk-halo-power.html": {
@@ -1760,8 +1755,8 @@
   "v": 3
  },
  "vs-selkirk-slk-era-power-vs-selkirk-slk-halo-power.html": {
-  "hash": "e160eacbba7b2c5a878f247533b4e53efbc01bd0893ac66d6ef0370dce8767ad",
-  "updated": "2026-11-09",
+  "hash": "386c94975aad2556b7d2b6694906554181ef7cbadeafd07411f9289b63a962cd",
+  "updated": "2026-11-23",
   "v": 3
  },
  "vs-six-zero-black-opal-14mm-vs-six-zero-coral-16mm.html": {

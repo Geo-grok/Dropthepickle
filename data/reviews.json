@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "channel": "John Kew Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
+   "title": "My Second Selkirk Boomstik ST: Did the Spin Hold? | KewCast 131",
+   "link": "https://www.youtube.com/watch?v=VmzggKwyUZU",
+   "video_id": "VmzggKwyUZU",
+   "date": "2026-11-23"
+  },
+  {
+   "channel": "Rackets & Runners - Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
+   "title": "These are the BEST-SELLING paddles of 2026!! | Rackets & Runners",
+   "link": "https://www.youtube.com/watch?v=-9dYroqhhr8",
+   "video_id": "-9dYroqhhr8",
+   "date": "2026-11-23"
+  },
+  {
    "channel": "Enhance Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
    "title": "You Should Probably Be Using a Power Paddle (Let me Explain)",
@@ -463,25 +479,25 @@
    "link": "https://www.youtube.com/watch?v=S6I0z22xTNs",
    "video_id": "S6I0z22xTNs",
    "date": "2026-10-17"
-  },
-  {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "Gearbox Pressure X Review: These Paddles Feel Backwards",
-   "link": "https://www.youtube.com/watch?v=eNRrrKuwoD8",
-   "video_id": "eNRrrKuwoD8",
-   "date": "2026-10-16"
-  },
-  {
-   "channel": "Pickleball Blast",
-   "channel_url": "https://www.youtube.com/channel/UCsPTdgkeMp68IyHd5gMFDfg",
-   "title": "AI Pickleball Training Partner | Tenniix Ball Machine Review",
-   "link": "https://www.youtube.com/watch?v=3JKDFs8RqTI",
-   "video_id": "3JKDFs8RqTI",
-   "date": "2026-10-16"
   }
  ],
  "all_items": [
+  {
+   "channel": "John Kew Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
+   "title": "My Second Selkirk Boomstik ST: Did the Spin Hold? | KewCast 131",
+   "link": "https://www.youtube.com/watch?v=VmzggKwyUZU",
+   "video_id": "VmzggKwyUZU",
+   "date": "2026-11-23"
+  },
+  {
+   "channel": "Rackets & Runners - Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
+   "title": "These are the BEST-SELLING paddles of 2026!! | Rackets & Runners",
+   "link": "https://www.youtube.com/watch?v=-9dYroqhhr8",
+   "video_id": "-9dYroqhhr8",
+   "date": "2026-11-23"
+  },
   {
    "channel": "Enhance Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
@@ -1419,14 +1435,6 @@
    "date": "2026-04-06"
   },
   {
-   "channel": "Rackets & Runners - Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
-   "title": "Honolulu has changed the game with these CRs | Honolulu J2CR & J6CR Review | Rackets & Runners",
-   "link": "https://www.youtube.com/watch?v=dWbEZOsP3Vk",
-   "video_id": "dWbEZOsP3Vk",
-   "date": "2026-03-06"
-  },
-  {
    "channel": "The Paddle Plug",
    "channel_url": "https://www.youtube.com/channel/UClgb_PSuuUN9u7ugZEKl1qA",
    "title": "Gherkin Draco: Quick Review on new foam type!",
@@ -1557,7 +1565,7 @@
  ],
  "sources": {
   "Pickleball Studio": "ok (3)",
-  "John Kew Pickleball": "ok (8)",
+  "John Kew Pickleball": "ok (9)",
   "Pickleball Effect": "ok (8)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (1)",
@@ -1580,5 +1588,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-22T18:23"
+ "updated": "2026-11-23T22:30"
 }
