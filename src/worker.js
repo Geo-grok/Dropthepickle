@@ -1,6 +1,7 @@
 // Serves dist/ through env.ASSETS, stores email signups in D1 (binding DB),
 // and handles /go/<slug> outbound redirects (counted in D1 table go_clicks,
-// with user_agent and an is_bot flag; HEAD requests are redirected but not logged).
+// with user_agent and an is_bot flag, including same-country bursts and cross-country
+// same-slug pairs within a few seconds; HEAD requests are redirected but not logged).
 import GO from "./go-links.json";
 import PAGE_REDIRECTS from "./page-redirects.json";
 const WORLDS_301 = new Set(["/events/ppa-worlds-2026", "/events/ppa-worlds-2026.html", "/events/ppa-worlds-2026/"]);
@@ -318,6 +319,19 @@ export function burstThreshold(country) {
   return BURST_WATCH.includes(String(country || "").toUpperCase()) ? BURST_WATCH_MIN : BURST_ANY_MIN;
 }
 
+// Cross-country same-slug pair: the same /go/<slug> hit from two different countries
+// within a few seconds. Growth found a homepage sweep (Nov 16-22) where 349 of 365
+// is_bot=0 clicks were the same paddle slug twice, about 2s apart, from Singapore plus
+// another country (often Brazil). Those passed the same-country burst check.
+// At write time the worker can only label the later click (and best-effort back-flags
+// the earlier row). The go_clicks_classified view (migration 0005) labels both sides,
+// including historical rows and simultaneous inserts the worker cannot see yet.
+// Keep PAIR_WINDOW_SEC in sync with migrations/0005_go_clicks_pair_burst.sql.
+const PAIR_WINDOW_SEC = 5;
+export function pairWindowSec() {
+  return PAIR_WINDOW_SEC;
+}
+
 // Header-only reasons (no DB lookup). Each entry is a short label stored comma-joined in go_clicks.bot_reason.
 export function botReasons(request) {
   const out = [];
@@ -359,24 +373,50 @@ async function logClick(env, request, slug, ref) {
     } catch (e) {
       console.error("go_clicks: burst query failed", slug, country, e && e.message);
     }
+    // Pair-burst lookback: earlier click of the same slug from a different country, within ~5s.
+    try {
+      const since = new Date(now - PAIR_WINDOW_SEC * 1000).toISOString();
+      const row = await env.DB.prepare(
+        "SELECT id FROM go_clicks WHERE slug = ? AND country IS NOT NULL AND country != ? AND created_at >= ? LIMIT 1"
+      ).bind(slug, country, since).first();
+      if (row) reasons.push("pair_burst");
+    } catch (e) {
+      console.error("go_clicks: pair_burst query failed", slug, country, e && e.message);
+    }
   }
   const at = new Date(now).toISOString();
   const isBotFlag = reasons.length ? 1 : 0;
+  let inserted = false;
   try {
     await env.DB.prepare(
       "INSERT INTO go_clicks (slug, referer_path, country, created_at, user_agent, is_bot, bot_reason) VALUES (?, ?, ?, ?, ?, ?, ?)"
     ).bind(slug, ref, country, at, ua, isBotFlag, reasons.join(",") || null).run();
-    return;
+    inserted = true;
   } catch (e) {
     console.error("go_clicks: insert with bot_reason failed, falling back to the old insert. Has migration 0004 run?", slug, e && e.message);
   }
-  try {
-    // Pre-0004 schema (no bot_reason column): keep the click; is_bot still records the flag.
-    await env.DB.prepare(
-      "INSERT INTO go_clicks (slug, referer_path, country, created_at, user_agent, is_bot) VALUES (?, ?, ?, ?, ?, ?)"
-    ).bind(slug, ref, country, at, ua, isBotFlag).run();
-  } catch (e) {
-    console.error("go_clicks: CLICK LOST, fallback insert failed too", slug, e && e.message);
+  if (!inserted) {
+    try {
+      // Pre-0004 schema (no bot_reason column): keep the click; is_bot still records the flag.
+      await env.DB.prepare(
+        "INSERT INTO go_clicks (slug, referer_path, country, created_at, user_agent, is_bot) VALUES (?, ?, ?, ?, ?, ?)"
+      ).bind(slug, ref, country, at, ua, isBotFlag).run();
+      inserted = true;
+    } catch (e) {
+      console.error("go_clicks: CLICK LOST, fallback insert failed too", slug, e && e.message);
+    }
+  }
+  // Back-flag the earlier click of a pair. Best-effort; the classified view also catches it.
+  // Labelling never throws into the redirect path (logClick is already isolated, but stay quiet).
+  if (inserted && reasons.includes("pair_burst") && country) {
+    try {
+      const since = new Date(now - PAIR_WINDOW_SEC * 1000).toISOString();
+      await env.DB.prepare(
+        "UPDATE go_clicks SET is_bot = 1, bot_reason = CASE WHEN bot_reason IS NULL OR bot_reason = '' THEN 'pair_burst' WHEN instr(bot_reason, 'pair_burst') > 0 THEN bot_reason ELSE bot_reason || ',pair_burst' END WHERE slug = ? AND country IS NOT NULL AND country != ? AND created_at >= ?"
+      ).bind(slug, country, since).run();
+    } catch (e) {
+      console.error("go_clicks: pair_burst backflag failed", slug, e && e.message);
+    }
   }
 }
 

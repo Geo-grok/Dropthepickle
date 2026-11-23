@@ -67,5 +67,8 @@ t /style.css 200 -
 t /media/physics-topspin.jpg 200 -
 t /buzz.html 301 "https://dropthepickle.com/buzz" www.dropthepickle.com
 FIRST=$(ls dist/buzz | head -1); t "/buzz/${FIRST%.html}" 200 -
+# /go/ stays a 302 (bot labelling must never change the redirect). HEAD is not used here.
+t /go/udrippin-home 302 "https://www.udrippin.com/?sca_ref=12702736.PmFAc1tWVv"
+t /go/no-such-slug-xyz 302 "$B/deals"
 t "/buzz/$FIRST" 301 "$B/buzz/${FIRST%.html}"
 exit $fail
