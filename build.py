@@ -339,6 +339,18 @@ main table td a,main table th a{display:inline-flex;align-items:center;min-heigh
 .top5 .off{font-size:16px}
 }
 """
+# Nov 23 mobile readability (Black Friday week): on phones a lot of the small print was still 15px (0.94rem):
+# price/spec tables on /price-index, the Black Friday deals table, code-card conditions, disclosures, card
+# brand/credit lines, tags, buttons. Phone widths only (<=720px), it all becomes 16px (desktop unchanged).
+# Also: home "Official event page"/"Tickets" links in event cards get a 44px tap area, and two gray texts that
+# were under 4.5:1 contrast get darker (home Top-5 struck "was" price 4.3:1 -> 7.3:1, "Unavailable" tag 3.9:1 -> 6.3:1).
+CSS += """
+.top5 .px s{color:var(--mut)}.b-out{color:#555}
+@media(max-width:720px){
+table,caption,.meta,.note,.disc,.codewarn,.ccard .ccond,.ccard .cmeta,.pcard .brand,.pcard .pp s,.credit,.chan,.tag,.badge,.eyebrow,.btn,.btn.sm,.seemore,.date small,.top5 .fr,.top5 .rk,.nudge .nudge-note,.buzzcard .srcs,.stats span,.hstrip p{font-size:16px}
+.tcard p a{display:inline-flex;align-items:center;min-height:44px}
+}
+"""
 _FB = {"Inter": "Inter Fallback", "Oswald": "Oswald Fallback", '"Bebas Neue"': "Bebas Neue Fallback", "Anton": "Anton Fallback"}
 def _with_fallbacks(css):
     # insert the metric-matched fallback right after each web font in every font/font-family stack
