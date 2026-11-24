@@ -199,6 +199,9 @@ footer a{color:#c9d3e6;text-decoration:none;display:block;margin:.3rem 0}footer 
 .tbl table td a{font-weight:600}
 .codes-best{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 1rem}.codes-best a{background:var(--navy);color:var(--neon);text-decoration:none;font-weight:800;padding:.5rem .8rem;border-radius:99px;font-size:.94rem}
 .cbrand{margin-top:1.8rem}
+/* /discount-codes is ~100,000px tall on phones (95 brand sections): let the browser skip layout/paint of brand sections until they scroll near. "auto" remembers each section's real height once seen. Side/bottom padding keeps card shadows from being clipped by paint containment; the h2 top margin moves onto the section (containment stops margin collapsing) so gaps stay 2.4rem. */
+.cbrand{content-visibility:auto;contain-intrinsic-size:auto 700px;padding:0 16px 24px;margin:calc(2.4rem - 24px) -16px 0}.cbrand>h2{margin-top:0}
+html.cvall .cbrand{content-visibility:visible}
 .cbrand h2 a{color:inherit;text-decoration:none}.cbrand h2 a:hover{text-decoration:underline}
 .crumbs{font-size:.9rem;margin:.4rem 0 1rem;color:#5b6475}.crumbs a{color:inherit}
 .ctype{font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}.ccard{display:flex;flex-direction:column;gap:.55rem}.ccard .cdisc{font-family:Anton,Impact,sans-serif;font-size:2rem;line-height:1;color:var(--navy);letter-spacing:.01em}
@@ -965,7 +968,11 @@ def build():
     for b, oc in OWN.items():  # own-only brands: jump chip uses our discount
         if b not in best: best[b] = {"discount": oc["discount"], "code": oc["code"]}
     jump = "".join(f'<a href="#{slugb(b)}">{e(b)} · {e(best[b]["discount"])}</a>' for b in brands)
-    secs = "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2>{f'<p class="meta">★ Our own {e(b)} code <b>{e(OWN[b]["code"])}</b> ({e(OWN[b]["discount"])}) is at the <a href="#own-codes">top of this page</a>.</p>' if b in OWN else ""}{f'<p><a class="btn" href="/discount-codes/{slugb(b)}">{e(b)} promo code: how to use it + lineup →</a></p>' if b == "Volair" else ""}<div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
+    # .cbrand sections use content-visibility:auto (style.css). Estimated heights would make a jump to #brand land in the
+    # wrong spot, so on a hash load or a tap on an in-page # link, render all sections first (html.cvall).
+    cvjs = ('<script>(function(){var r=document.documentElement;if(location.hash)r.classList.add("cvall");'
+            'document.addEventListener("click",function(v){var a=v.target.closest&&v.target.closest("a[href^=\'#\']");if(a)r.classList.add("cvall")},true)})()</script>')
+    secs = cvjs + "".join(f'<section class="cbrand" id="{slugb(b)}"><h2><a href="/discount-codes/{slugb(b)}">{e(b)} codes</a></h2>{f'<p class="meta">★ Our own {e(b)} code <b>{e(OWN[b]["code"])}</b> ({e(OWN[b]["discount"])}) is at the <a href="#own-codes">top of this page</a>.</p>' if b in OWN else ""}{f'<p><a class="btn" href="/discount-codes/{slugb(b)}">{e(b)} promo code: how to use it + lineup →</a></p>' if b == "Volair" else ""}<div class="grid">{"".join(ccard(c) for c in sorted([c for c in codes if c["brand"]==b], key=lambda c: -score(c)))}</div></section>' for b in brands)
     nocode = "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> {e(t)}</li>' for b, t in DC.get("no_code", {}).items())
     nocode += "".join(f'<li><b><a href="/discount-codes/{slugb(b)}">{e(b)}</a>:</b> The code we were tracking was no longer shown on its source page, so we removed it.</li>'
                       for b in sorted({r["brand"] for r in DC.get("removed", [])} - {c["brand"] for c in codes} - set(DC.get("no_code", {})), key=str.lower))
