@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "channel": "Pickleball Effect",
+   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
+   "title": "New Paddle Customization Meta & Best Paddles of November | EP 148",
+   "link": "https://www.youtube.com/watch?v=BS6IUAnsG9M",
+   "video_id": "BS6IUAnsG9M",
+   "date": "2026-11-24"
+  },
+  {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "Top 10 Best Pickleball Paddles for November 2026",
+   "link": "https://www.youtube.com/watch?v=d0CUbPa1sJQ",
+   "video_id": "d0CUbPa1sJQ",
+   "date": "2026-11-24"
+  },
+  {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
    "title": "My Second Selkirk Boomstik ST: Did the Spin Hold? | KewCast 131",
@@ -441,14 +457,6 @@
    "date": "2026-10-23"
   },
   {
-   "channel": "Pickleball Effect",
-   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
-   "title": "Volair CMD Hybrid Review, Comparisons & My Custom Setup",
-   "link": "https://www.youtube.com/watch?v=IeHweJ8CaTA",
-   "video_id": "IeHweJ8CaTA",
-   "date": "2026-10-22"
-  },
-  {
    "channel": "Pickleball Pursuit",
    "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
    "title": "RPM Jade, BnB Loco 2, What is Paddle Flex",
@@ -471,17 +479,25 @@
    "link": "https://www.youtube.com/watch?v=nHZAioEHxeM",
    "video_id": "nHZAioEHxeM",
    "date": "2026-10-20"
-  },
-  {
-   "channel": "Rackets & Runners - Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC-CTKnZZwrGMdVGWW34c22A",
-   "title": "RPM Jade First Impressions Review | Rackets & Runners",
-   "link": "https://www.youtube.com/watch?v=S6I0z22xTNs",
-   "video_id": "S6I0z22xTNs",
-   "date": "2026-10-17"
   }
  ],
  "all_items": [
+  {
+   "channel": "Pickleball Effect",
+   "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
+   "title": "New Paddle Customization Meta & Best Paddles of November | EP 148",
+   "link": "https://www.youtube.com/watch?v=BS6IUAnsG9M",
+   "video_id": "BS6IUAnsG9M",
+   "date": "2026-11-24"
+  },
+  {
+   "channel": "PickleballPlaybook - Austin Hardy",
+   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
+   "title": "Top 10 Best Pickleball Paddles for November 2026",
+   "link": "https://www.youtube.com/watch?v=d0CUbPa1sJQ",
+   "video_id": "d0CUbPa1sJQ",
+   "date": "2026-11-24"
+  },
   {
    "channel": "John Kew Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
@@ -867,14 +883,6 @@
    "date": "2026-11-02"
   },
   {
-   "channel": "All Drive No Drop Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC6XF2LqwvzbRYmaC1_RdD-w",
-   "title": "New Honolulu J6M+, RPM Diesel, Gearbox Pressure X, Spartus Spitfire Widebody, USAP  Fails Again",
-   "link": "https://www.youtube.com/watch?v=I1BVqZ8-5us",
-   "video_id": "I1BVqZ8-5us",
-   "date": "2026-11-02"
-  },
-  {
    "channel": "Pickleball Advocate",
    "channel_url": "https://www.youtube.com/channel/UCmIxk2O0tBS694eFJaWEvUQ",
    "title": "Loco 2 Review: Everything You Need To Know",
@@ -1177,14 +1185,6 @@
    "link": "https://www.youtube.com/watch?v=DcPEuBSy34E",
    "video_id": "DcPEuBSy34E",
    "date": "2026-10-06"
-  },
-  {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "All Tier 1 Paddles Have These 2 Things in Common | KewCast 125",
-   "link": "https://www.youtube.com/watch?v=aM5D-y2ziKw",
-   "video_id": "aM5D-y2ziKw",
-   "date": "2026-10-05"
   },
   {
    "channel": "PickleballPlaybook - Austin Hardy",
@@ -1565,20 +1565,20 @@
  ],
  "sources": {
   "Pickleball Studio": "ok (3)",
-  "John Kew Pickleball": "ok (9)",
-  "Pickleball Effect": "ok (8)",
+  "John Kew Pickleball": "ok (8)",
+  "Pickleball Effect": "ok (9)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (1)",
   "The Kitchen Pickleball": "ok (1)",
   "Enhance Pickleball": "ok (2)",
-  "PickleballPlaybook - Austin Hardy": "ok (6)",
+  "PickleballPlaybook - Austin Hardy": "ok (7)",
   "Pickleball Kitchen": "ok (0)",
   "PickleballCentral": "ok (4)",
   "Pickleball Warehouse": "ok (6)",
   "Matt's Pickleball": "ok (3)",
   "Rackets & Runners - Pickleball": "ok (14)",
   "Pickleball Pursuit": "ok (9)",
-  "All Drive No Drop Pickleball": "ok (7)",
+  "All Drive No Drop Pickleball": "ok (6)",
   "Matthew K Pickleball": "ok (2)",
   "Tickle My Pickleball": "ok (4)",
   "PickleBaller": "ok (8)",
@@ -1588,5 +1588,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-23T22:30"
+ "updated": "2026-11-24T21:04"
 }
