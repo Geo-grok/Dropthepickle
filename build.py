@@ -1180,9 +1180,14 @@ def build():
         extra.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq_pairs]})
         disc = (f'<p class="disc">Codes are published by the creators and brands linked on each card. Many are affiliate codes, so the creator may earn a commission. {earn_note(bc)} <a href="../disclosure.html">Disclosure</a>.</p>'
                 if bc else (f'<p class="disc"><b>Disclosure:</b> {own_codes.earn_line(OWN[b])} <a href="../disclosure.html">Details</a>.</p>' if b in OWN else ""))
+        # Nov 25, 2026: indexed brand code pages (search landings for "<brand> discount code") get the big Save-on-gear row
+        # (all codes, deals, price tracker) right after the codes, instead of a small text line near the bottom.
+        # Code-less noindex pages (thin) keep their old layout.
+        more = ('<h2>More ways to save</h2><p class="tapl"><a href="/discount-codes">All pickleball discount codes</a> · <a href="../deals.html">Paddle deals</a> · <a href="../price-tracker.html">Paddle Price Tracker</a></p>'
+                if thin else "")
         body = (f'<h1>{e(b)} discount codes</h1>{intro}{disc}'
-                f'{crumb_html}{main}{gift_pages.holiday_note("codes")}{gear}'
-                f'<h2>More ways to save</h2><p class="tapl"><a href="/discount-codes">All pickleball discount codes</a> · <a href="../deals.html">Paddle deals</a> · <a href="../price-tracker.html">Paddle Price Tracker</a></p>'
+                f'{crumb_html}{main}{gift_pages.holiday_note("codes")}{"" if thin else save_gear.html()}{gear}'
+                f'{more}'
                 + (f'<h2>Related brands</h2><div class="codes-best">{rel_html}</div>' if rel_html else "") + faq_html + (copyjs if (bc or b in OWN) else ""))
         ds = list(dict.fromkeys(c["discount"] for c in bc))
         # Short query-matching title; the full <title> with " · SITE_NAME" stays <= 60 chars (drop the month if it would not fit).
