@@ -1,6 +1,18 @@
 {
  "items": [
   {
+   "show": "PicklePod (The Dink)",
+   "title": "Hayden Patriquin Partied in Vegas All Week, Then Beat Ben Johns",
+   "link": "https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
+   "date": "2026-11-25"
+  },
+  {
+   "show": "Cracked Paddles Podcast",
+   "title": "Is the Pickleball Paddle Industry About to Change Forever?",
+   "link": "https://bleav.com/shows/cracked-paddles-podcast-pickleball-podcast/?post_type=gp_podcast_episode&p=77",
+   "date": "2026-11-25"
+  },
+  {
    "show": "Pickleball Effect: The Podcast",
    "title": "New Paddle Customization Meta & Best Paddles of November | EP 148",
    "link": "https://podcasters.spotify.com/pod/show/braydon-unsicker/episodes/New-Paddle-Customization-Meta--Best-Paddles-of-November--EP-148-e3sur1c",
@@ -73,12 +85,6 @@
    "date": "2026-11-04"
   },
   {
-   "show": "PicklePod (The Dink)",
-   "title": "Why Ben Johns' Team USA Isn't the Best MLP Team Ever",
-   "link": "https://podcasts.apple.com/us/podcast/picklepod/id1584931417",
-   "date": "2026-11-03"
-  },
-  {
    "show": "The World Pickleball Podcast",
    "title": "JW Johnson Is World No.1 — Is Ben Johns Sinking? | With Gordon Watson",
    "link": "https://worldpickleballpodcast.alitu.com/episode/cc6fbe66-89f0-47b8-b4ae-b081bda96abc",
@@ -131,12 +137,6 @@
    "title": "The Top 10 States for 5.0 Pickleball Players",
    "link": "https://267631d5-5c65-4806-932e-f15ff1927658.libsyn.com/the-top-10-states-for-50-pickleball-players",
    "date": "2026-10-13"
-  },
-  {
-   "show": "Cracked Paddles Podcast",
-   "title": "50 Episodes Later: PPA Vegas, Tournament Struggles, and Lessons Learned",
-   "link": "https://bleav.com/shows/cracked-paddles-podcast-pickleball-podcast/?post_type=gp_podcast_episode&p=73",
-   "date": "2026-10-08"
   },
   {
    "show": "Dinking Around with Eddie and Webby",
@@ -364,5 +364,5 @@
   "Balls Deep Pickleball Podcast": "ok (3)",
   "The Drop (Anna Bright & Dylan Frazier)": "ok (3)"
  },
- "updated": "2026-11-24T21:04"
+ "updated": "2026-11-25T20:25"
 }

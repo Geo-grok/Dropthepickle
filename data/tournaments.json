@@ -61,7 +61,7 @@
    "start": "2027-03-22",
    "end": "2027-03-28",
    "location": "Black Desert Resort, 1500 E Black Desert Dr, Ivins, UT 84738",
-   "tickets": ""
+   "tickets": "https://www.tixr.com/groups/ppa/events/ppa-utah-214767"
   },
   {
    "source": "Carvana PPA Tour",
@@ -103,5 +103,5 @@
  "sources": {
   "Carvana PPA Tour": "ok (11)"
  },
- "updated": "2026-11-24T21:04"
+ "updated": "2026-11-25T20:25"
 }

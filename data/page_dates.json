@@ -20,8 +20,8 @@
   "v": 3
  },
  "best-16mm-paddles.html": {
-  "hash": "9f7a98963c4f0e397bcc512adf498ff930362aefd96818495eba051bab6e15e7",
-  "updated": "2026-11-24",
+  "hash": "7cda4c3e4c9ace9c906998a5ad4f89700ddba2378356cca67042188839107766",
+  "updated": "2026-11-25",
   "v": 3
  },
  "best-crbn-paddles.html": {
@@ -50,8 +50,8 @@
   "v": 3
  },
  "best-joola-paddles.html": {
-  "hash": "c7ca7b490632eaa4789fcf4b991175bbd04109fa3b3ed60f484c292af6e3bcb3",
-  "updated": "2026-11-20",
+  "hash": "fb75de2909b11ed4db7a05d9e7aa75017f0c75623b729223ae873eec26dd0a96",
+  "updated": "2026-11-25",
   "v": 3
  },
  "best-luzz-paddles.html": {
@@ -430,13 +430,13 @@
   "v": 3
  },
  "deals.html": {
-  "hash": "a9d76ed0810ec1ed816ac9c909b441be0d97e994c6ee8d13c47e676a60a81ee7",
-  "updated": "2026-11-24",
+  "hash": "706cc5fd5d9be646fc1336a4619570b8b099c2416744887d2d59cefeae26dcb1",
+  "updated": "2026-11-25",
   "v": 3
  },
  "deals/black-friday-pickleball-deals-2026.html": {
-  "hash": "6a90bb5560154cbc3041f2a24db31216bded3a5bf16babe98f16236e165e054b",
-  "updated": "2026-11-23",
+  "hash": "f18a136a3ae4e91e441f3c9d4458bb5a3a93c41b914c40acd02bb22d6858fa93",
+  "updated": "2026-11-25",
   "v": 3
  },
  "disclosure.html": {
@@ -1040,8 +1040,8 @@
   "v": 3
  },
  "events/greater-zion-cup.html": {
-  "hash": "73fbf90c3744eaa847c8f3b271ed4f1850a7ff9496883944abf7c007712d751e",
-  "updated": "2026-10-24",
+  "hash": "d72b1c0d5db52decd5390b6cc37e5d9459709eab3ed18bbeb4f47f3208b407e0",
+  "updated": "2026-11-25",
   "v": 3
  },
  "events/minneapolis-indoor-open.html": {
@@ -1095,8 +1095,8 @@
   "v": 3
  },
  "guides/best-paddles-under-100.html": {
-  "hash": "07a9b1aa7eef62491ae2ffa18a2b5a330eba14d2c18acbc24dc87db3b88659a3",
-  "updated": "2026-11-23",
+  "hash": "92ee2f885bbbe443cc5e0df702a53acc8ea0255907433ba68d1ccaa5632f3da4",
+  "updated": "2026-11-25",
   "v": 3
  },
  "guides/best-volair-paddles.html": {
@@ -1160,8 +1160,8 @@
   "v": 3
  },
  "guides/pickleball-gift-guide-2026.html": {
-  "hash": "564e3011249db81e146f0c7fe598e456cd50126f84573f934e857b599c849dbf",
-  "updated": "2026-11-23",
+  "hash": "45b25708891ef5081b36b8c204acb8904d09ef8001e8f09deb8d0efef4156722",
+  "updated": "2026-11-25",
   "v": 3
  },
  "guides/pickleball-grip-size.html": {
@@ -1230,13 +1230,13 @@
   "v": 3
  },
  "index.html": {
-  "hash": "0c74d826cb8606c85d53e42fc92ba47f548975580638d8e6c5bd8f0b8d5af8ad",
-  "updated": "2026-11-24",
+  "hash": "4dceb7f8e311bc3f63593ab69e4c5fef932f8177b9caf4c490b9a7dbc9265285",
+  "updated": "2026-11-25",
   "v": 3
  },
  "news.html": {
-  "hash": "2eb253f20d099c4917205c0eb29aadd5d49dc2ca9d8bd551cf79e97a5e013b9a",
-  "updated": "2026-11-24",
+  "hash": "ecbdc7a01dc87f53a2aff5255aec05dc01070ca7fd9336f8fc97a685e82057ba",
+  "updated": "2026-11-25",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
@@ -1300,8 +1300,8 @@
   "v": 3
  },
  "paddle-joola-perseus-3s-dual-16mm.html": {
-  "hash": "e44d65a79a2605d7ec3313b8df28a22193bf4df43db5f9f284b541116c3ede2f",
-  "updated": "2026-10-15",
+  "hash": "176194b7190087d4510daeb35fe9d2034a560ad88c894fa96ca362f6a85834dc",
+  "updated": "2026-11-25",
   "v": 3
  },
  "paddle-joola-perseus-pro-v.html": {
@@ -1355,8 +1355,8 @@
   "v": 3
  },
  "paddle-quiz.html": {
-  "hash": "b0e79ce0f735d27b6e85919b51f394248c1da6988e8b557b74624cc6999f151c",
-  "updated": "2026-11-23",
+  "hash": "0f304dca96622d4275f39bd4979ef197159000cbba1b2ce1231e3a9772a0943b",
+  "updated": "2026-11-25",
   "v": 3
  },
  "paddle-selkirk-labs-project-boomstik.html": {
@@ -1460,23 +1460,23 @@
   "v": 3
  },
  "paddles.html": {
-  "hash": "53ac6241e2ea7fd1c00619b7c2401bbf51caed03bd3f7dcd2395ec9822571863",
-  "updated": "2026-11-24",
+  "hash": "ed892405cc5a907cbbfc727b0516bf8243b19d0cb6f4faccefc283f1f5aaa2dd",
+  "updated": "2026-11-25",
   "v": 3
  },
  "podcasts.html": {
-  "hash": "225f3f813fa89407b0e48194937fd376048ccb72cb40a6b4b65c28a3d78f94e9",
-  "updated": "2026-11-24",
+  "hash": "36ebad8ee22c36485ab66114062000c29441dfe5419b3905ff86c107442299d9",
+  "updated": "2026-11-25",
   "v": 3
  },
  "price-index.html": {
-  "hash": "089b40dec4279daef5317416d2b205bffbf7e932dde0b2131a5a05e41f6eb443",
-  "updated": "2026-11-24",
+  "hash": "278f3574cc95e285cc4f3a229b47e0d1098de6ca6b94aa566d7641a5870f7b3d",
+  "updated": "2026-11-25",
   "v": 3
  },
  "price-tracker.html": {
-  "hash": "850aca4abf55fce9ed5c14b3ddd378671a9ba04f053248df9b2f1d910eadaddc",
-  "updated": "2026-11-23",
+  "hash": "bdc1f3a7081c811673444f5f19fdc73a3a939897a1d41ed08eeebd39b0346d04",
+  "updated": "2026-11-25",
   "v": 3
  },
  "privacy.html": {
@@ -1495,8 +1495,8 @@
   "v": 3
  },
  "reviews.html": {
-  "hash": "e61e0856008692197f11d05d96e34b426da31416ee90046dd2f191aa8d305901",
-  "updated": "2026-11-24",
+  "hash": "7b67c91bb884c06a3d1c63bfe5922ead288dde45805edf9b6d9dca45dde695e0",
+  "updated": "2026-11-25",
   "v": 3
  },
  "science.html": {
@@ -1510,8 +1510,8 @@
   "v": 3
  },
  "tournaments.html": {
-  "hash": "9009028832eed75194a02e043d04133582939c1c1048dbfd5703d5eefad492de",
-  "updated": "2026-11-23",
+  "hash": "79840eac0da7dc482728af23e06f26a6bdd0b45e7e5c908183e212c8cd284dd2",
+  "updated": "2026-11-25",
   "v": 3
  },
  "vs-crbn-crbn1-trufoam-barrage-vs-crbn-crbn1-trufoam-genesis.html": {
@@ -1580,8 +1580,8 @@
   "v": 3
  },
  "vs-joola-hyperion-pro-v-vs-joola-perseus-3s-dual-16mm.html": {
-  "hash": "4fd7e3ac02acdacf6d4e6f47ad3764dda5f860e23903f50cecaddc46161b0528",
-  "updated": "2026-11-20",
+  "hash": "6f9db6553b6f0d6bc2a205d12b715fe375dbd7d49f89325b0342ad17def8536c",
+  "updated": "2026-11-25",
   "v": 3
  },
  "vs-joola-hyperion-pro-v-vs-joola-perseus-pro-v.html": {
@@ -1600,8 +1600,8 @@
   "v": 3
  },
  "vs-joola-kosmos-pro-v-vs-joola-perseus-3s-dual-16mm.html": {
-  "hash": "d2e6cb8d255b33e722f0fc215564003bb5827e964ec3ec11e823f4e7fc6087f8",
-  "updated": "2026-11-20",
+  "hash": "e7fd55d5fdf203614c2711a5e00e9ee3ce321d7a246aaa584fcd96a40bb9023d",
+  "updated": "2026-11-25",
   "v": 3
  },
  "vs-joola-kosmos-pro-v-vs-joola-perseus-pro-v.html": {
@@ -1620,18 +1620,18 @@
   "v": 3
  },
  "vs-joola-perseus-3s-dual-16mm-vs-joola-perseus-pro-v.html": {
-  "hash": "ffe8a9f987d73f6675fca4e8f8c8e9dd16439ed0f6786ba95065ff4eeb532122",
-  "updated": "2026-11-09",
+  "hash": "d3a36f3f242dfb129c2ce9d0a60bf90c59a1eb4b37fa71115331d53a4dc48100",
+  "updated": "2026-11-25",
   "v": 3
  },
  "vs-joola-perseus-3s-dual-16mm-vs-joola-radius-pro-v.html": {
-  "hash": "4ba67cf4673858430217e9e3703b55df034be967be4b522ac677827aa22583f0",
-  "updated": "2026-11-20",
+  "hash": "b3d71f3ec56469fb9ceae183aaf79cb63a4dd02411b9d185ef2cc158fa732ecc",
+  "updated": "2026-11-25",
   "v": 3
  },
  "vs-joola-perseus-3s-dual-16mm-vs-joola-scorpeus-pro-v.html": {
-  "hash": "6e6208aaef9981d8fe406e2a6c035c35b6ceec88b2a42213d4936469cdbc1a01",
-  "updated": "2026-11-20",
+  "hash": "9aa5f13d30431d94d189b54bde18b6b572cdc8993f9aa3a284eeea1b5d8b377a",
+  "updated": "2026-11-25",
   "v": 3
  },
  "vs-joola-perseus-pro-v-vs-joola-radius-pro-v.html": {
