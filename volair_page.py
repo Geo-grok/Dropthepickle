@@ -15,10 +15,10 @@ CSS = (".vhero{background:var(--navy);color:#fff;border-radius:var(--r);padding:
        ".vhero>p{font-size:1.15rem;margin:.3rem 0;color:#dfe6f3}.vhero .owncode p,.vhero .owncode .ownhead{color:var(--navy)}.vhero .owncode .owndisc{color:#3d4a63}.vhero .owncode .owntag{color:var(--neon)}.vhero .owncode{margin-top:14px}"
        ".vline{display:grid;gap:12px;grid-template-columns:1fr;margin:10px 0}@media(min-width:720px){.vline{grid-template-columns:1fr 1fr}}"
        ".vrow{background:#fff;border:2px solid var(--line);border-left:8px solid var(--neon);border-radius:16px;padding:14px 16px}"
-       ".vrow h3{font-size:1.3rem;margin:0 0 .2rem}.vrow h3 a{color:var(--navy)}.vrow .vp{font-size:1.35rem;font-weight:900;color:var(--navy);margin:.2rem 0}"
+       ".vrow h3{font-size:1.3rem;margin:0 0 .2rem}.vrow h3 a{color:var(--navy);display:inline-flex;align-items:center;min-height:44px}.vrow .vp{font-size:1.35rem;font-weight:900;color:var(--navy);margin:.2rem 0}"
        ".vrow .vp s{font-weight:600;color:var(--mut);font-size:1rem;margin-left:.4rem}.vrow ul{margin:.3rem 0 .5rem;padding-left:1.1rem;font-size:1.05rem}"
        ".vrow .vnote{font-size:1rem;background:#fff3c4;border-radius:10px;padding:6px 10px;margin:.3rem 0}"
-       ".vrow .vlinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:.4rem}.vrow .vlinks a{font-weight:800;font-size:1.05rem}"
+       ".vrow .vlinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:.4rem}.vrow .vlinks a{font-weight:800;font-size:1.05rem;display:inline-flex;align-items:center;min-height:44px}"
        ".vnext{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}")
 
 def make(page, e, fmt, C, OWN, PD, H, go_slug, paddle_slug, cards, copyjs, crumbs, crumb_html, canon, fresh):

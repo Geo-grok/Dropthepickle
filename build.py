@@ -342,6 +342,14 @@ main table td a,main table th a{display:inline-flex;align-items:center;min-heigh
 .top5 .off{font-size:16px}
 }
 """
+# Nov 26 mobile tap targets: the last ~20px-tall stand-alone links (paddle pages' "Compare paddles",
+# article "More pickleball news", creator spotlight links) now use .ll1 (44px row on phones);
+# the creator page social buttons get a 44px minimum height on phones too.
+CSS += """
+@media(max-width:720px){
+.socials .btn.sm{display:inline-flex;align-items:center;min-height:44px}
+}
+"""
 # Nov 23 mobile readability (Black Friday week): on phones a lot of the small print was still 15px (0.94rem):
 # price/spec tables on /price-index, the Black Friday deals table, code-card conditions, disclosures, card
 # brand/credit lines, tags, buttons. Phone widths only (<=720px), it all becomes 16px (desktop unchanged).
@@ -872,7 +880,7 @@ def build():
     ART = D("articles.json").get("items", []) if (ROOT / "data" / "articles.json").exists() else []
     for art in ART:
         page(f"articles/{art['slug']}.html", art.get("seo_title") or art["title"],
-             f'<article><h1>{e(art["title"])}</h1><p class="meta">DropThePickle newsroom · {fmt(art["date"])} · Sources linked inline</p>{art["body"]}<p class="meta"><a href="../news.html">More pickleball news</a></p></article>',
+             f'<article><h1>{e(art["title"])}</h1><p class="meta">DropThePickle newsroom · {fmt(art["date"])} · Sources linked inline</p>{art["body"]}<p class="meta ll1"><a href="../news.html">More pickleball news</a></p></article>',
              art["desc"], raw_title=bool(art.get("seo_title")), fresh={k: art.get(k) for k in ("title", "date", "body")},
              schema=[{"@type": "NewsArticle", "headline": art["title"], "datePublished": art["date"], "description": art["desc"],
                       "url": canon(f"articles/{art['slug']}.html"), "publisher": {"@id": C["BASE_URL"].rstrip("/") + "/#organization"}}])
@@ -919,7 +927,7 @@ def build():
         if items: csecs += f'<h2>{title}</h2><div class="grid">{"".join(ccard(s) for s in items)}</div>'
     socials = [s for s in SR if s["type"] in ("x","instagram")]
     srow = "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["name"])}</a> on {"X" if s["type"]=="x" else "Instagram"} ({e(s["audience"]["value"])} followers)</li>' for s in socials)
-    page("creators.html", "Pickleball Creators & YouTubers to Follow", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p><div class="card spot"><a href="creators/ryan-morneau.html"><img fetchpriority="high" decoding="async" width="480" height="360" src="https://i.ytimg.com/vi/Q7zUZLXK_gE/hqdefault.jpg" alt="The Most Important Singles Shots, a Pickleball Breakdowns clip"></a><div><span class="tag b-pub">Spotlight</span><h3><a href="creators/ryan-morneau.html">Ryan Morneau · Pickleball Breakdowns</a></h3><p>Match breakdowns and strategy tips. James Madison University reported him as the No. 1-ranked collegiate singles player. Six of his latest clips are embedded on his page.</p><p><a href="creators/ryan-morneau.html">Open the spotlight</a></p></div></div>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>',
+    page("creators.html", "Pickleball Creators & YouTubers to Follow", f'<h1>Pickleball creators</h1><p class="meta">The pickleball YouTubers, coaches, reviewers and pros worth following. Subscriber counts come from each public channel page (checked {e(D("sources.json").get("updated",""))}). We only link out, so go support them on their own channels.</p><div class="card spot"><a href="creators/ryan-morneau.html"><img fetchpriority="high" decoding="async" width="480" height="360" src="https://i.ytimg.com/vi/Q7zUZLXK_gE/hqdefault.jpg" alt="The Most Important Singles Shots, a Pickleball Breakdowns clip"></a><div><span class="tag b-pub">Spotlight</span><h3><a href="creators/ryan-morneau.html">Ryan Morneau · Pickleball Breakdowns</a></h3><p>Match breakdowns and strategy tips. James Madison University reported him as the No. 1-ranked collegiate singles player. Six of his latest clips are embedded on his page.</p><p class="ll1"><a href="creators/ryan-morneau.html">Open the spotlight</a></p></div></div>{csecs}<h2>On X and Instagram</h2><ul>{srow}</ul>',
          "The pickleball creators and influencers worth following: YouTubers, coaches, gear reviewers and pros, with subscriber counts and a Ryan Morneau spotlight.", raw_title=True,
          fresh={"youtube": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in yts],
                 "social": [(s["name"], s["url"], (s.get("audience") or {}).get("value")) for s in socials],

@@ -121,7 +121,7 @@ def make(page, e, fmt, PP, cur, ph):
 <div class="vgrid">{clips}</div>
 <p class="note">Credit: Ryan Morneau, Pickleball Breakdowns. <a href="{YT}" target="_blank" rel="noopener">youtube.com/@pickleball_breakdowns</a></p>
 <h2>Use this with the guides</h2>
-<ul>
+<ul class="ll">
 <li><a href="../guides/how-to-dink.html">How to dink</a> — his September 29, 2026 clip "The Secret to Never Missing Dinks" is embedded there.</li>
 <li><a href="../guides/pickleball-rules-for-beginners.html">Pickleball rules for beginners</a></li>
 <li><a href="../guides/how-to-choose-a-paddle.html">How to choose a paddle</a></li>
@@ -2566,7 +2566,7 @@ else if(n>=Date.UTC(2026,10,8,6)){h.textContent="Championship Sunday, November 8
           ("PickleballTV", PBTV, "free channel platforms"),
           ("PickleballTV on the App Store", PBTV_IOS, "app price and trial"),
           ("The Kitchen: 2026 Worlds schedule of events", KITCHEN, "daily programming, updated Oct 29, 2026")])}
-<p><a href="../tournaments.html">All tournaments</a></p>'''
+<p class="ll1"><a href="../tournaments.html">All tournaments</a></p>'''
     page(OW_FN, "Pickleball Worlds 2026: Schedule & TV", ow,
          "Pickleball Worlds 2026 in CT: semifinals Sat Nov 7 (PickleballTV 11 AM–7 PM), Championship Sunday Nov 8 (first serve 10 AM; 4 PM is the broadcast window). Qualifying Mon Nov 2 is on record at 8 AM CT; the PPA page lists 11 AM.",
          fresh={"checked": OW_CHECKED, "days": OW_DAYS, "tix": OW_TIX, "champs": OW_CHAMPS, "faq": ow_faq, "event": ow_event, "weekend_bucket": ("sat" if build_day == _sat else "sun" if build_day == _sun else "after" if build_day > _sun else "before")},
