@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "Best Pickleball Paddles in 2026  - UPDATED Rankings!",
+   "link": "https://www.youtube.com/watch?v=BhE8geuAAeA",
+   "video_id": "BhE8geuAAeA",
+   "date": "2026-11-26"
+  },
+  {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
    "title": "The Franklin Whip, Enhance Echo, Draco OP, & More Black Friday Deals",
@@ -19,7 +27,7 @@
   {
    "channel": "Matthew K Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "Black Friday Picks Under $100!? | Plus, Wika Paddles, NEW Thrive Fury, Pakle Fuse+ & More!",
+   "title": "Less than $100 Black Friday Picks! | Plus, Wika Paddles, NEW Thrive Fury, Pakle Fuse+ & More!",
    "link": "https://www.youtube.com/watch?v=Pz-5H60zcWo",
    "video_id": "Pz-5H60zcWo",
    "date": "2026-11-25"
@@ -33,14 +41,6 @@
    "date": "2026-11-24"
   },
   {
-   "channel": "The Kitchen Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
-   "title": "I Found the Best Pickleball Deals for Black Friday 2026",
-   "link": "https://www.youtube.com/watch?v=GSdM5lw1D2o",
-   "video_id": "GSdM5lw1D2o",
-   "date": "2026-11-24"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Top 10 Best Pickleball Paddles for November 2026",
@@ -51,7 +51,7 @@
   {
    "channel": "Tickle My Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC5Txk5Su1Qv1AUVaXJ5FbzA",
-   "title": "RPM Jade vs Luzz Inferno 2 M1 vs Witness Rival: Paddle Battles Ep. 2",
+   "title": "RPM Jade vs Luzz Inferno 2 M1 vs Witness Rival: Paddle Battles Ep. 2 ft PBVisionAI",
    "link": "https://www.youtube.com/watch?v=Z5lXD9HP1JA",
    "video_id": "Z5lXD9HP1JA",
    "date": "2026-11-24"
@@ -270,14 +270,6 @@
    "title": "These Paddles Are LEGIT | Gearbox Pressure X Review",
    "link": "https://www.youtube.com/watch?v=iAuxs3s7IRY",
    "video_id": "iAuxs3s7IRY",
-   "date": "2026-11-11"
-  },
-  {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "[GIVEAWAY!] Watch BEFORE You Buy! | Honolulu M105 MPP Paddle Review",
-   "link": "https://www.youtube.com/watch?v=T68oa5OoeKc",
-   "video_id": "T68oa5OoeKc",
    "date": "2026-11-11"
   },
   {
@@ -479,9 +471,25 @@
    "link": "https://www.youtube.com/watch?v=se5MAWYgDBY",
    "video_id": "se5MAWYgDBY",
    "date": "2026-10-22"
+  },
+  {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "Luzz Cannon XPP vs Cannon 1 vs Spartus Spitfire vs Pakle Fuse vs Friday Aura Pro Paddle Review",
+   "link": "https://www.youtube.com/watch?v=RVusOVD3UOM",
+   "video_id": "RVusOVD3UOM",
+   "date": "2026-10-22"
   }
  ],
  "all_items": [
+  {
+   "channel": "PickleBaller",
+   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
+   "title": "Best Pickleball Paddles in 2026  - UPDATED Rankings!",
+   "link": "https://www.youtube.com/watch?v=BhE8geuAAeA",
+   "video_id": "BhE8geuAAeA",
+   "date": "2026-11-26"
+  },
   {
    "channel": "Pickleball Studio",
    "channel_url": "https://www.youtube.com/channel/UCge5MvXGyRQPpFnxgRb_pXA",
@@ -501,7 +509,7 @@
   {
    "channel": "Matthew K Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "Black Friday Picks Under $100!? | Plus, Wika Paddles, NEW Thrive Fury, Pakle Fuse+ & More!",
+   "title": "Less than $100 Black Friday Picks! | Plus, Wika Paddles, NEW Thrive Fury, Pakle Fuse+ & More!",
    "link": "https://www.youtube.com/watch?v=Pz-5H60zcWo",
    "video_id": "Pz-5H60zcWo",
    "date": "2026-11-25"
@@ -515,14 +523,6 @@
    "date": "2026-11-24"
   },
   {
-   "channel": "The Kitchen Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UC8Kri-ozieZq01LLzQSNavQ",
-   "title": "I Found the Best Pickleball Deals for Black Friday 2026",
-   "link": "https://www.youtube.com/watch?v=GSdM5lw1D2o",
-   "video_id": "GSdM5lw1D2o",
-   "date": "2026-11-24"
-  },
-  {
    "channel": "PickleballPlaybook - Austin Hardy",
    "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
    "title": "Top 10 Best Pickleball Paddles for November 2026",
@@ -533,7 +533,7 @@
   {
    "channel": "Tickle My Pickleball",
    "channel_url": "https://www.youtube.com/channel/UC5Txk5Su1Qv1AUVaXJ5FbzA",
-   "title": "RPM Jade vs Luzz Inferno 2 M1 vs Witness Rival: Paddle Battles Ep. 2",
+   "title": "RPM Jade vs Luzz Inferno 2 M1 vs Witness Rival: Paddle Battles Ep. 2 ft PBVisionAI",
    "link": "https://www.youtube.com/watch?v=Z5lXD9HP1JA",
    "video_id": "Z5lXD9HP1JA",
    "date": "2026-11-24"
@@ -752,14 +752,6 @@
    "title": "These Paddles Are LEGIT | Gearbox Pressure X Review",
    "link": "https://www.youtube.com/watch?v=iAuxs3s7IRY",
    "video_id": "iAuxs3s7IRY",
-   "date": "2026-11-11"
-  },
-  {
-   "channel": "Matthew K Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCFvJjQiH3vm1b51hIjEYGEA",
-   "title": "[GIVEAWAY!] Watch BEFORE You Buy! | Honolulu M105 MPP Paddle Review",
-   "link": "https://www.youtube.com/watch?v=T68oa5OoeKc",
-   "video_id": "T68oa5OoeKc",
    "date": "2026-11-11"
   },
   {
@@ -1107,14 +1099,6 @@
    "date": "2026-10-15"
   },
   {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "Bread & Butter Loco 2 Review: Did They Fix Its Biggest Weakness?",
-   "link": "https://www.youtube.com/watch?v=ni8rUyRqTas",
-   "video_id": "ni8rUyRqTas",
-   "date": "2026-10-14"
-  },
-  {
    "channel": "Pickleball Effect",
    "channel_url": "https://www.youtube.com/channel/UC7uQuU1OFg0TFHMarvPoKAg",
    "title": "BNB Loco 2 Impressions + New Selkirk S2 Pro Ball Data | EP 144",
@@ -1211,14 +1195,6 @@
    "date": "2026-10-05"
   },
   {
-   "channel": "Pickleball Pursuit",
-   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
-   "title": "Are Pickleballs Too Fast, Neonic NEOGRIT, Gearbox Pressure X, Prototype Testing",
-   "link": "https://www.youtube.com/watch?v=zkScWko2G9A",
-   "video_id": "zkScWko2G9A",
-   "date": "2026-09-30"
-  },
-  {
    "channel": "PickleBaller",
    "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
    "title": "5 Best Pickleball Paddles in 2026",
@@ -1281,14 +1257,6 @@
    "link": "https://www.youtube.com/watch?v=Ji6HR45s35o",
    "video_id": "Ji6HR45s35o",
    "date": "2026-09-02"
-  },
-  {
-   "channel": "PickleBaller",
-   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
-   "title": "Vatic V-Sol Tour vs V-Sol Pro vs Spartus Spitfire vs Pakle Fuse Paddle Review",
-   "link": "https://www.youtube.com/watch?v=3ojBh67LZT8",
-   "video_id": "3ojBh67LZT8",
-   "date": "2026-09-01"
   },
   {
    "channel": "Farmer Lanky Pickleball",
@@ -1565,11 +1533,11 @@
  ],
  "sources": {
   "Pickleball Studio": "ok (4)",
-  "John Kew Pickleball": "ok (7)",
+  "John Kew Pickleball": "ok (6)",
   "Pickleball Effect": "ok (9)",
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (1)",
-  "The Kitchen Pickleball": "ok (1)",
+  "The Kitchen Pickleball": "ok (0)",
   "Enhance Pickleball": "ok (1)",
   "PickleballPlaybook - Austin Hardy": "ok (7)",
   "Pickleball Kitchen": "ok (0)",
@@ -1577,9 +1545,9 @@
   "Pickleball Warehouse": "ok (6)",
   "Matt's Pickleball": "ok (2)",
   "Rackets & Runners - Pickleball": "ok (14)",
-  "Pickleball Pursuit": "ok (9)",
+  "Pickleball Pursuit": "ok (8)",
   "All Drive No Drop Pickleball": "ok (7)",
-  "Matthew K Pickleball": "ok (3)",
+  "Matthew K Pickleball": "ok (2)",
   "Tickle My Pickleball": "ok (4)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
@@ -1588,5 +1556,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-25T20:25"
+ "updated": "2026-11-26T20:03"
 }
