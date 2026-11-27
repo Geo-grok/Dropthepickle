@@ -8,6 +8,8 @@ C = json.loads((ROOT / "config.json").read_text())
 # from Google Fonts' latin + latin-ext files with the same @font-face rules (weights, unicode-range, display=swap).
 # Same origin = no extra DNS/TLS to fonts.googleapis.com + fonts.gstatic.com on a phone, and the font request no
 # longer waits on a third-party CSS file. Each URL carries ?v=<content hash> so the Worker can cache it for a year.
+# Inter's variable axis is trimmed to wght 400-800 (the only weights fonts.css declares) by scripts/trim_fonts.py: same glyphs,
+# features and look, ~11KB less on the preloaded inter-latin file. Re-run it if the Inter files are ever replaced.
 FONT_DIR = ROOT / "assets" / "fonts"
 FONT_V = {f.name: hashlib.sha256(f.read_bytes()).hexdigest()[:10] for f in sorted(FONT_DIR.glob("*.woff2"))}
 def font_url(name): return f"/fonts/{name}?v={FONT_V[name]}"
