@@ -87,7 +87,6 @@ def make(C, e, canon, CATALOG, DIST, extra=None):
 <nav aria-label="Links">{btns}</nav>
 <p class="ft">Big Dill's home: <a href="{e(utm('/', src))}" data-utm>dropthepickle.com</a></p></main>
 {JS % alias_js}
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "8b857a29f29446008d526b7021a0eaa1"}}'></script>
 </body></html>"""
         out = DIST / fn; out.parent.mkdir(parents=True, exist_ok=True); out.write_text(urls.clean_hrefs(C["BASE_URL"], doc))
         return len(doc.encode())
