@@ -1230,13 +1230,13 @@
   "v": 3
  },
  "index.html": {
-  "hash": "29e3af3b1cfb706d0aa0c967cd028d5f9653cb921c1efeb175a3f4ba23809ca4",
-  "updated": "2026-11-26",
+  "hash": "082f29ff442f9faa8547a5c5a451a7a8e9e130eff5a95c5d1848e2f35ac65050",
+  "updated": "2026-11-27",
   "v": 3
  },
  "news.html": {
-  "hash": "2eb8c500aaad0afba52abdd3dd3af14bc5851a24844cf5721225c2c6497968d8",
-  "updated": "2026-11-26",
+  "hash": "b3ddb3d5151f11dec2398c5dcb9b8a12bbb8ff1bb228476e9e9ef7eb4bdba9b4",
+  "updated": "2026-11-27",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
@@ -1495,8 +1495,8 @@
   "v": 3
  },
  "reviews.html": {
-  "hash": "25c97058ed31ae681effa5777d6eb0b8250bb858c52bfa1463b49ea38e2dcd21",
-  "updated": "2026-11-26",
+  "hash": "de032c6eb5377726adf88e706d17c8537e4f7e4760387bd7eded3bbb34c89d86",
+  "updated": "2026-11-27",
   "v": 3
  },
  "science.html": {

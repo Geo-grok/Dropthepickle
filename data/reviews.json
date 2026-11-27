@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "channel": "Enhance Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
+   "title": "I Tested BANNED Pickleball Paddles",
+   "link": "https://www.youtube.com/watch?v=raMaod88uNo",
+   "video_id": "raMaod88uNo",
+   "date": "2026-11-27"
+  },
+  {
+   "channel": "Tickle My Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC5Txk5Su1Qv1AUVaXJ5FbzA",
+   "title": "Friday Aura Pro Tour (EPP vs MPP) First Look: Top-Tier Spin, Surprising Feel",
+   "link": "https://www.youtube.com/watch?v=UqallC8gYt8",
+   "video_id": "UqallC8gYt8",
+   "date": "2026-11-27"
+  },
+  {
    "channel": "PickleBaller",
    "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
    "title": "Best Pickleball Paddles in 2026  - UPDATED Rankings!",
@@ -463,25 +479,25 @@
    "link": "https://www.youtube.com/watch?v=aoAVYfoNLZE",
    "video_id": "aoAVYfoNLZE",
    "date": "2026-10-23"
-  },
-  {
-   "channel": "Pickleball Pursuit",
-   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
-   "title": "RPM Jade, BnB Loco 2, What is Paddle Flex",
-   "link": "https://www.youtube.com/watch?v=se5MAWYgDBY",
-   "video_id": "se5MAWYgDBY",
-   "date": "2026-10-22"
-  },
-  {
-   "channel": "PickleBaller",
-   "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
-   "title": "Luzz Cannon XPP vs Cannon 1 vs Spartus Spitfire vs Pakle Fuse vs Friday Aura Pro Paddle Review",
-   "link": "https://www.youtube.com/watch?v=RVusOVD3UOM",
-   "video_id": "RVusOVD3UOM",
-   "date": "2026-10-22"
   }
  ],
  "all_items": [
+  {
+   "channel": "Enhance Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
+   "title": "I Tested BANNED Pickleball Paddles",
+   "link": "https://www.youtube.com/watch?v=raMaod88uNo",
+   "video_id": "raMaod88uNo",
+   "date": "2026-11-27"
+  },
+  {
+   "channel": "Tickle My Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UC5Txk5Su1Qv1AUVaXJ5FbzA",
+   "title": "Friday Aura Pro Tour (EPP vs MPP) First Look: Top-Tier Spin, Surprising Feel",
+   "link": "https://www.youtube.com/watch?v=UqallC8gYt8",
+   "video_id": "UqallC8gYt8",
+   "date": "2026-11-27"
+  },
   {
    "channel": "PickleBaller",
    "channel_url": "https://www.youtube.com/channel/UCvTXVCFzDzF8Po0JvVAtdrg",
@@ -1171,14 +1187,6 @@
    "date": "2026-10-06"
   },
   {
-   "channel": "Pickleball Pursuit",
-   "channel_url": "https://www.youtube.com/channel/UCymbPCDl691HA0ErKcoY5EQ",
-   "title": "Can a Paddle Have Power and Control? Volair CMD Hybrid Review",
-   "link": "https://www.youtube.com/watch?v=vzR_tQpMK7M",
-   "video_id": "vzR_tQpMK7M",
-   "date": "2026-10-06"
-  },
-  {
    "channel": "Pickleball Blast",
    "channel_url": "https://www.youtube.com/channel/UCsPTdgkeMp68IyHd5gMFDfg",
    "title": "I Ranked EVERY Six Zero Pickleball Paddle… Here’s My Tier List",
@@ -1538,17 +1546,17 @@
   "Zane Navratil Pickleball": "ok (0)",
   "ThatPickleballGuy": "ok (1)",
   "The Kitchen Pickleball": "ok (0)",
-  "Enhance Pickleball": "ok (1)",
+  "Enhance Pickleball": "ok (2)",
   "PickleballPlaybook - Austin Hardy": "ok (7)",
   "Pickleball Kitchen": "ok (0)",
   "PickleballCentral": "ok (4)",
   "Pickleball Warehouse": "ok (6)",
   "Matt's Pickleball": "ok (2)",
   "Rackets & Runners - Pickleball": "ok (14)",
-  "Pickleball Pursuit": "ok (8)",
+  "Pickleball Pursuit": "ok (7)",
   "All Drive No Drop Pickleball": "ok (7)",
   "Matthew K Pickleball": "ok (2)",
-  "Tickle My Pickleball": "ok (4)",
+  "Tickle My Pickleball": "ok (5)",
   "PickleBaller": "ok (8)",
   "Farmer Lanky Pickleball": "ok (11)",
   "Pickleball Playbook Paddles": "ok (10)",
@@ -1556,5 +1564,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-26T20:03"
+ "updated": "2026-11-27T19:52"
 }
