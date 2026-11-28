@@ -1,11 +1,1144 @@
 {
- "updated": "2026-11-21T06:00-06:00",
- "date": "2026-11-21",
- "source_file": "dtp-newsroom/buzz-2026-11-21.json",
+ "updated": "2026-11-28T06:00-06:00",
+ "date": "2026-11-28",
+ "source_file": "dtp-newsroom/buzz-2026-11-28.json",
  "note": "Hand-curated; not touched by update.py.",
  "seo_title": "Pickleball Buzz: Worlds 2026, APP Mesa & PPA Daytona",
- "seo_desc": "PPA Worlds 2026 champions and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP's new commissioner, MLP Asia, Brisbane 2032 and the Olympics, and The Picklr bankruptcy, all sourced.",
+ "seo_desc": "PPA Worlds 2026 records and replays, APP Arizona Open results, PPA Daytona Beach Open, MLP's new commissioner, MLP Asia, DUPR's rating change, Brisbane 2032 and the Olympics, and The Picklr bankruptcy, all sourced.",
  "items": [
+  {
+   "title": "MLP Asia in Kuala Lumpur: the Dragon Warriors clinch a Finals spot, and the Viet Panthers sweep them 4-0 to retake first place",
+   "summary": "The Dragon Warriors beat THE DOTS TOKYO 3-1 on Nov. 27 at Tomaz Pickleball Club in Kuala Lumpur to clinch a place in the MLP Asia Finals, which also put the Viet Panthers through, MLP Asia reported. Kong/Wei won women's doubles 11-4, Funemizu/Hatakeyama won men's doubles 11-9 for the DOTS, then Wei/Pham (11-5) and Kong/Goldin (11-8) took both mixed games. The Panthers then swept the Dragon Warriors 4-0 (Christian/Huynh 11-9, Shimabukuro/Truong 11-6, Shimabukuro/Christian 11-7, Huynh/Truong 11-3), their second 4-0 of the season, to finish the regular season first on 9 points. Standings per MLP Asia: Panthers 9 (done), Hong Kong Cannons 8 (one match left), Dragon Warriors 6 (done), THE DOTS TOKYO 5 (done), Malayan Stripes 2 (two left); Manila Helios are out. On the final night, Nov. 28 (6 PM local), the Stripes host the Cannons and then the Helios: any Cannons win makes them regular-season champions, and the Stripes take the last Finals spot only by winning both matches, or one in regulation and losing the other in a DreamBreaker; otherwise THE DOTS TOKYO go through. The Finals are Dec. 11-12.",
+   "status": "confirmed",
+   "date": "2026-11-28",
+   "sources": [
+    {
+     "label": "MLP Asia: Warriors storm the Finals, Panthers pounce to the top",
+     "url": "https://mlp-asia.com/warriors-storm-the-finals-panthers-pounce-to-the-top/"
+    },
+    {
+     "label": "Pickleball News Asia: Dragon Warriors book Finals ticket, Viet Panthers reclaim top spot",
+     "url": "https://pickleballnewsasia.com/dragon-warriors-book-finals-ticket-viet-panthers-reclaim-top-spot/"
+    },
+    {
+     "label": "Pickleballer: Cannons, Dragon Warriors, Viet Panthers clinch MLP Asia Finals",
+     "url": "https://pickleballer.world/stories/cannons-dragon-warriors-viet-panthers-clinch-mlp-asia-finals/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Three teams in, one spot left: Malayan Stripes or THE DOTS TOKYO?",
+   "tags": [
+    "MLP",
+    "MLP Asia",
+    "Kuala Lumpur",
+    "Dragon Warriors",
+    "Viet Panthers",
+    "Tama Shimabukuro",
+    "Results"
+   ]
+  },
+  {
+   "title": "Vietnam Masters semifinals: Domenika Turkovic clinches the D-Joy women's singles No. 1, and the singles finals are Turkovic vs. Van Reek and Phuc Huynh vs. Ly Hoang Nam",
+   "summary": "Domenika Turkovic beat Mihika Yadav 11-4, 11-4 in Saturday's women's singles semifinals at the Vietnam Masters in Ho Chi Minh City, which guarantees her the season's D-Joy women's singles No. 1 before Sunday's final, World Pickleball Magazine calculated: even with the title, Roos Van Reek would finish on 3,500 points, 100 behind Turkovic's guaranteed 3,600. Van Reek beat Trang Huynh 11-5, 1-11, 11-7 and is also in the women's doubles (with Vivian Glozman) and mixed (with Jack Munro) semifinals, the only player still alive in three draws. In men's singles, Ly Hoang Nam beat Aditya Nandal 11-7, 11-4, and Phuc Huynh, already the D-Joy No. 1, beat Ammar Wazir 11-0, 4-11, 13-11. Munro has clinched the men's mixed table, per WPM. Pro finals are Sunday, Nov. 29, from 8 AM local time (7 PM CT Saturday). Ranking math is WPM's, from D-Joy's draws.",
+   "status": "confirmed",
+   "date": "2026-11-28",
+   "sources": [
+    {
+     "label": "World Pickleball Magazine: Vietnam Masters women's singles, Turkovic No. 1",
+     "url": "https://worldpickleballmagazine.com/vietnam-masters-2026-turkovic-number-one-van-reek-three-draws/"
+    },
+    {
+     "label": "APP: 2026 Pickleball D-Joy event listing",
+     "url": "https://www.theapp.global/tour-schedule/2026-pickleball-d-joy4"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Turkovic has the No. 1 locked; Van Reek is playing for three trophies on one Sunday.",
+   "tags": [
+    "APP",
+    "Vietnam Masters",
+    "D-Joy Tour",
+    "Asia",
+    "Results"
+   ]
+  },
+  {
+   "title": "PPA Canada Toronto 125: Matthew Finnerty and Victoria DiMuzio win the pro singles titles",
+   "summary": "Matthew Finnerty won pro men's singles at the PPA Canada Toronto 125 (Nov. 26-29), ahead of Matt Burkhardt (silver) and Connor Mogle (bronze), and Victoria DiMuzio won pro women's singles ahead of Kelly Goodnow (silver) and Eileen Wang (bronze), according to the official event standings on PickleballTournaments.com. Pro doubles and mixed doubles are scheduled for the weekend.",
+   "status": "confirmed",
+   "date": "2026-11-28",
+   "sources": [
+    {
+     "label": "PickleballTournaments.com: PPA Canada Toronto 125, pro men's singles standings",
+     "url": "https://brackets.pickleballtournaments.com/tournaments/ppa-canada-toronto-125/events/3B65F311-BB37-4BBA-9812-8513E37D0BC0/standings"
+    },
+    {
+     "label": "PickleballTournaments.com: PPA Canada Toronto 125, pro women's singles standings",
+     "url": "https://brackets.pickleballtournaments.com/tournaments/ppa-canada-toronto-125/events/9F53ACA3-6643-4989-9967-D874DF3DEB04/standings"
+    },
+    {
+     "label": "PPA Tour Canada: schedule",
+     "url": "https://ppatourcanada.ca/schedule/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "The PPA's Canadian stop crowns its singles champions over Thanksgiving weekend.",
+   "tags": [
+    "PPA",
+    "PPA Canada",
+    "Toronto",
+    "Singles",
+    "Results"
+   ]
+  },
+  {
+   "title": "Australia: 301,553 people played pickleball in 2025-26, Pickleball Australia estimates from AusPlay data, but that counts anyone who played once",
+   "summary": "Pickleball Australia estimates that 301,553 Australians played pickleball in 2025-26, a figure drawn from AusPlay, the Australian Sports Commission's national participation survey, PIKL Australia and Times Now reported. AusPlay groups pickleball with padel, so Pickleball Australia applied pickleball's roughly 64% share of the combined figure across three years of data, and AusPlay counts anyone who took part at least once in the past 12 months, PIKL Australia explained. Pickleball Australia had 27,974 registered members on June 29, 2026, per PIKL Australia. PIKL's own estimate of about 90,000 regular players is an extrapolation from U.S. industry splits, not an AusPlay figure.",
+   "status": "confirmed",
+   "date": "2026-11-28",
+   "sources": [
+    {
+     "label": "PIKL Australia: 301,553 have tried pickleball in Australia. How many actually play?",
+     "url": "https://www.pikl.com.au/news/301-553-have-tried-pickleball-in-australia-how-many-actually-play"
+    },
+    {
+     "label": "Times Now: Australia embraces pickleball, over 3 lakh participants in 2025-26",
+     "url": "https://www.timesnownews.com/sports/pickleball/australia-embraces-pickleball-latest-data-reveals-over-3-lakh-participants-in-2025-26-article-156575139"
+    },
+    {
+     "label": "Australian Sports Commission: AusPlay results",
+     "url": "https://www.ausport.gov.au/clearinghouse/research/ausplay/results"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "301,553 tried it, 27,974 are members. Which number tells you how big pickleball really is?",
+   "tags": [
+    "Australia",
+    "Participation",
+    "Data",
+    "Growth"
+   ]
+  },
+  {
+   "title": "MLP Asia in Kuala Lumpur: the Hong Kong Cannons save five match points, beat the Viet Panthers in a DreamBreaker and become the first team into the Finals",
+   "summary": "The Hong Kong Cannons beat the league-leading Viet Panthers 3-2 on Nov. 26 at Tomaz Pickleball Club in Kuala Lumpur, MLP Asia reported. The Panthers led 2-1 (Christian/Huynh won women's doubles 11-6; Shimabukuro/Christian won Mixed 1 11-3 after Bhatia/Wong beat Shimabukuro/Truong 11-9, his first lost game in MLP Asia) and had five match points in Mixed 2, but Tang/Wong won it 13-11. The Panthers then led the DreamBreaker 9-3 before the Cannons won it 21-19, with captain Hong Kit (Jack) Wong closing it out. The Cannons then beat the Dragon Warriors 3-1 to clinch a Finals spot with a match to spare. Standings per MLP Asia: Cannons 8 points, Panthers 6, THE DOTS TOKYO 5, Dragon Warriors 3, Malayan Stripes 2, Manila Helios 0. The Cannons' double-header had been postponed from Nov. 14 because of a visa issue, per Pickleball News Asia. Nights 2-3 are Nov. 27-28; the MLP Asia Finals are Dec. 11-12.",
+   "status": "confirmed",
+   "date": "2026-11-27",
+   "sources": [
+    {
+     "label": "MLP Asia: Cannons survive and blast into MLP Asia Finals",
+     "url": "https://mlp-asia.com/cannons-survive-and-blast-into-mlp-asia-finals/"
+    },
+    {
+     "label": "Pickleball News Asia: Hong Kong Cannons pull off escape of the season vs. Viet Panthers",
+     "url": "https://pickleballnewsasia.com/hong-kong-cannons-pull-off-escape-of-season-vs-viet-panthers/"
+    },
+    {
+     "label": "World Pickleball Magazine: Cannons through, Panthers need a point tonight",
+     "url": "https://worldpickleballmagazine.com/mlp-asia-kuala-lumpur-cannons-finals-panthers-need-a-point/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Five match points saved, a 9-3 DreamBreaker deficit erased: the comeback of the MLP Asia season.",
+   "tags": [
+    "MLP",
+    "MLP Asia",
+    "Kuala Lumpur",
+    "Hong Kong Cannons",
+    "Viet Panthers",
+    "Tama Shimabukuro",
+    "Results"
+   ]
+  },
+  {
+   "title": "Vietnam Masters quarterfinals: Phuc Huynh clinches the D-Joy men's singles No. 1, Aditya Nandal upsets Andre Millet, and Van Reek and Turkovic reach the women's semis",
+   "summary": "Phuc Huynh beat Le Xuan Duc 11-9, 11-4 in Friday's men's singles quarterfinals at the Vietnam Masters in Ho Chi Minh City, and with Drake Palm (lost to Ammar Wazir 12-10, 11-9) and Ronan Camron (lost to Ly Hoang Nam 11-4, 10-12, 11-1) both out, nobody left in the draw can pass him for the season's D-Joy men's singles No. 1, World Pickleball Magazine calculated. India's Aditya Nandal (5.195 singles DUPR as listed) beat Andre Millet (6.107) 11-5, 11-8 to reach the semifinals. In women's singles, Roos Van Reek beat Selina Turlja 11-8, 11-1 and race leader Domenika Turkovic beat Jada Bui, so Van Reek needs Mihika Yadav to beat Turkovic to have a path to No. 1, per WPM. Semifinals: Huynh vs. Wazir, Nandal vs. Nam; Van Reek vs. Trang Huynh, Turkovic vs. Yadav. Pro finals are Nov. 29. Race math is WPM's, from D-Joy's draws.",
+   "status": "confirmed",
+   "date": "2026-11-27",
+   "sources": [
+    {
+     "label": "World Pickleball Magazine: Nandal reaches semis, Huynh seals No. 1",
+     "url": "https://worldpickleballmagazine.com/vietnam-masters-2026-nandal-semis-huynh-number-one/"
+    },
+    {
+     "label": "APP: 2026 Pickleball D-Joy event listing",
+     "url": "https://www.theapp.global/tour-schedule/2026-pickleball-d-joy4"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "A 5.2 beats a 6.1 in a pro quarterfinal. How much should we trust DUPR at the top level?",
+   "tags": [
+    "APP",
+    "Vietnam Masters",
+    "D-Joy Tour",
+    "Asia",
+    "Results",
+    "DUPR"
+   ]
+  },
+  {
+   "title": "Gear: Anna Leigh Waters' mystery paddle is the Franklin Whip, launching Dec. 9, and Selkirk releases its $178 All Day court shoe",
+   "summary": "Franklin and Anna Leigh Waters revealed on Instagram on Nov. 24 that the question-mark paddle she has been playing is the Whip, launching Dec. 9, Pickleball.com reported; it comes in hybrid and elongated shapes, with patent-pending Whipflex construction, a Gritlock surface and a Japanese Tri-Blend EPP core, per that report. No price has been announced, and Franklin's shop had no product page as of Nov. 26, World Pickleball Magazine noted. The UPA-A certified list (required at PPA and MLP pro events) has carried three versions since Aug. 12: Whip Elongated 14mm (WD14) and 16mm (WD16) and Whip Hybrid 14mm (WH14); there is no Hybrid 16mm. Separately, Selkirk's All Day court shoe, built for comfort over long sessions, is listed at $178 on Selkirk's site.",
+   "status": "confirmed",
+   "date": "2026-11-27",
+   "sources": [
+    {
+     "label": "Pickleball.com: Anna Leigh Waters and Franklin finally announce mystery paddle, The Whip",
+     "url": "https://pickleball.com/gear/anna-leigh-waters-and-franklin-finally-announce-mystery-paddle-the-whip"
+    },
+    {
+     "label": "UPA-A certified paddles list",
+     "url": "https://upaa.unitedpickleball.com/approved-paddles/"
+    },
+    {
+     "label": "World Pickleball Magazine: The Whip is on the approved lists, not in Franklin's shop",
+     "url": "https://worldpickleballmagazine.com/franklin-whip-paddle-waters-approved-list/"
+    },
+    {
+     "label": "Selkirk: All Day men's pickleball shoe",
+     "url": "https://www.selkirk.com/products/selkirk-mens-all-day-pickleball-shoe"
+    },
+    {
+     "label": "The Dink: Selkirk's new All Day pickleball shoe puts comfort first",
+     "url": "https://www.thedinkpickleball.com/selkirks-new-all-day-pickleball-shoe-puts-comfort-first/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "The world No. 1's paddle finally has a name, but no price. Would you buy it on day one?",
+   "tags": [
+    "Gear",
+    "Paddles",
+    "Franklin",
+    "Anna Leigh Waters",
+    "Selkirk",
+    "Shoes"
+   ]
+  },
+  {
+   "title": "Are there really too few courts? An Arlington, Va. survey finds nearly 60% of public pickleball courts went unreserved Nov. 1-14",
+   "summary": "Nancy Sharkey, a former member of Arlington County's Sports Commission, briefed the commission on Nov. 19 on her independent survey: nearly 60% of available county pickleball courts were not reserved on weekday evenings and weekends from Nov. 1 to 14, and on a Nov. 8 drive around the county she found 63% of courts in use by reservation or drop-in play, ARLnow reported Nov. 25. Arlington has 28 outdoor and 18 indoor courts striped for pickleball. In October the Arlington Pickleball Club had asked the commission to back a 'flagship' facility, possibly at Quincy Park. Commissioners urged caution about drawing conclusions from one snapshot. The Sports and Parks and Recreation commissions meet Dec. 8 on the Public Spaces Master Plan update; a final vote is set for early next year.",
+   "status": "confirmed",
+   "date": "2026-11-27",
+   "sources": [
+    {
+     "label": "ARLnow: New pickleball data challenges complaints about number of courts in Arlington",
+     "url": "https://www.arlnow.com/2026/11/25/new-pickleball-data-challenges-complaints-about-number-of-courts-in-arlington/"
+    },
+    {
+     "label": "Pickleballer: Arlington data finds 60% of pickleball courts went unreserved",
+     "url": "https://pickleballer.world/stories/arlington-pickleball-court-data-60-percent-unreserved/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Court shortage, or a peak-hours problem? Ask followers when their courts are actually full.",
+   "tags": [
+    "Courts",
+    "Virginia",
+    "Public Policy",
+    "Data"
+   ]
+  },
+  {
+   "title": "Pickleball Diplomacy: 39 Maryland high school athletes leave today for a 12-day trip to four Chinese cities",
+   "summary": "Montgomery County Public Schools' Sapphire Delegation, 39 student-athletes from 20 high schools plus six adult leaders, travels to China Nov. 27 through Dec. 8, visiting Haikou, Jiujiang, Hebi and Changchun for athletic, educational and cultural exchanges, the district announced via The MoCo Show. It is the fifth delegation since the Pickleball Diplomacy program began in April 2025 and the third MCPS group to visit China; student media members will document the trip. Pickleballer, citing China Daily, called it the largest student group the program has sent to China.",
+   "status": "confirmed",
+   "date": "2026-11-27",
+   "sources": [
+    {
+     "label": "The MoCo Show: 39 MCPS student-athletes to travel to China for international pickleball exchange",
+     "url": "https://mocoshow.com/2026/11/22/39-mcps-student-athletes-from-20-high-schools-to-travel-to-china-for-international-pickleball-exchange/"
+    },
+    {
+     "label": "Pickleballer: 39 Maryland students take Pickleball Diplomacy to four Chinese cities",
+     "url": "https://pickleballer.world/stories/maryland-students-pickleball-diplomacy-china-sapphire-delegation/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "High schoolers as pickleball ambassadors: a feel-good holiday-weekend story.",
+   "tags": [
+    "Pickleball Diplomacy",
+    "China",
+    "Youth",
+    "Maryland"
+   ]
+  },
+  {
+   "title": "Thanksgiving weekend: the PPA and MLP give thanks, Guam hosts its first Pickle & Turkey international tournament, and Tony Roig records a gratitude episode",
+   "summary": "The PPA Tour marked Thanksgiving by thanking the players, fans, staff and partners behind the record 2026 Worlds, and MLP posted its own holiday message on X. In Guam, Avira Sports hosts the inaugural Thanksgiving Pickle & Turkey International Pickleball Tournament Nov. 27-29 in Harmon, with an opening ceremony and challenge court tonight and players confirmed from the Philippines and Saipan; the club now has seven indoor courts, the most on the island, the Guam Daily Post reported. Pickleball Therapy's Ep. 323, 'Pickleball Gratitude,' has Tony Roig setting strategy aside for a gratitude practice.",
+   "status": "confirmed",
+   "date": "2026-11-27",
+   "sources": [
+    {
+     "label": "Guam Daily Post: Registration remains open for Avira Sports Thanksgiving pickleball tournament",
+     "url": "https://www.postguam.com/sports/local/registration-remains-open-for-avira-sports-thanksgiving-pickleball-tournament/article_8bbe4fde-59eb-4650-92d5-596480ad5cec.html"
+    },
+    {
+     "label": "Pickleball Therapy Ep. 323: Pickleball Gratitude",
+     "url": "https://share.transistor.fm/s/86f9179d"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2126044235082187246",
+    "https://x.com/MajorLeaguePB/status/2125980398014382102"
+   ],
+   "social_angle": "What are you thankful for in pickleball this year? Easy holiday engagement post.",
+   "tags": [
+    "Thanksgiving",
+    "Community",
+    "Guam",
+    "Podcasts",
+    "PPA",
+    "MLP"
+   ]
+  },
+  {
+   "title": "Listen and watch: Mari Humberg on the Pickleballers podcast, and Blaine Hovenier takes over the PPA's Pickleball Eats kitchen",
+   "summary": "Pickleballers S5 E8 (Nov. 26) has Mari Humberg with Roscoe Bellamy and Jared Paul, tracing her path from Brazil and college tennis at Louisville to the pro tour, per the episode notes: she scored three points against Anna Leigh Waters at her first PPA event, and she talks practice-group etiquette and when her slice return is worth hitting. The PPA Tour's YouTube channel posted Pickleball Eats Ep. 5 with Blaine Hovenier on Nov. 26.",
+   "status": "confirmed",
+   "date": "2026-11-27",
+   "sources": [
+    {
+     "label": "Pickleballers podcast feed: Mari Humberg, S5 E8",
+     "url": "https://feeds.redcircle.com/d7af585b-6cc2-4442-a351-6d4d350d98c8"
+    },
+    {
+     "label": "PPA Tour on YouTube: Blaine Hovenier takes over the kitchen, Pickleball Eats Ep. 5",
+     "url": "https://www.youtube.com/watch?v=liUzn360S9M"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Three points off Waters in her first pro event, and now partnering her: Humberg's story is a good holiday listen.",
+   "tags": [
+    "Podcasts",
+    "Pickleballers",
+    "Mari Humberg",
+    "PPA",
+    "Media"
+   ]
+  },
+  {
+   "title": "Philippines: the Abra River Paddlers sweep top seed Rizal to win MPPT Invitational Leg 4",
+   "summary": "The Abra River Paddlers beat the top-seeded Rizal Ilustrados 3-0 in the final of Leg 4 of the Maharlika Pilipinas Pickleball Tour (MPPT) Invitational in Bacoor on Nov. 22, winning men's and women's 11-6 and Mixed 1 11-8, Pickleball News Asia reported. Abra, runner-up in the inaugural leg, beat the Batangas Bangers 3-1 and the Tacloban Aces 3-0 on the way.",
+   "status": "confirmed",
+   "date": "2026-11-27",
+   "sources": [
+    {
+     "label": "Pickleball News Asia: Abra River Paddlers win MPPT Invitational Leg 4 crown",
+     "url": "https://pickleballnewsasia.com/abra-river-paddlers-win-mppt-invitational-leg-4-crown/"
+    },
+    {
+     "label": "Pickleballer: Abra River Paddlers sweep Rizal to win MPPT Invitational Leg 4",
+     "url": "https://pickleballer.world/stories/abra-river-paddlers-sweep-rizal-mppt-invitational-leg-4/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Team pickleball keeps spreading across the Philippines.",
+   "tags": [
+    "Philippines",
+    "Asia",
+    "Leagues",
+    "Results"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy: judge signs orders keeping club utilities on and approving Akerman and a chief restructuring officer, with a final utilities hearing Dec. 8",
+   "summary": "Judge Scott W. Everett signed three orders in The Picklr's Subchapter V case on Nov. 25, per the docket. An interim utilities order (Dkt. 143) bars utility providers from cutting off or refusing service because of the bankruptcy or unpaid pre-filing bills, sets a $500-per-account adequate-assurance deposit on valid request, and schedules the final hearing for Dec. 8 at 1:30 p.m. CT. The court also approved hiring Akerman LLP as the debtors' attorneys (Dkt. 144) and Fuel Break Capital Partners as financial adviser, with Rick Rosenbloom as chief restructuring officer effective as of the petition date (Dkt. 145). Dec. 8 is already the date for the hearing on rejecting closed-club leases.",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "Dkt. 143: Interim order on utility services (signed Nov. 25)",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/2b753d8f-26bd-439e-8f61-d8505c05c423_143.pdf"
+    },
+    {
+     "label": "Dkt. 144: Order approving Akerman LLP as debtors' attorneys",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/fe87a882-1c34-4009-b4b4-f3163acf8ae2_144.pdf"
+    },
+    {
+     "label": "Dkt. 145: Order approving Fuel Break Capital Partners and CRO Rick Rosenbloom",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/84439e1e-1135-433f-a06d-180c2c163d19_145.pdf"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Plain-English update: the lights stay on at Picklr clubs for now, and Dec. 8 is the next big court day.",
+   "tags": [
+    "Business",
+    "The Picklr",
+    "Bankruptcy",
+    "Clubs"
+   ]
+  },
+  {
+   "title": "Indoor clubs change hands: Bosse takes over The Picklr's Burlington, Mass. club, and Pickleball Kingdom's Pflugerville, Texas club closes Nov. 30",
+   "summary": "Bosse, which runs a club in Natick, is taking over The Picklr's facility at 40 Ray Ave. in Burlington, Mass., Patch reported Nov. 24, citing a company statement; hours stay the same, and members will get membership and credit details directly. Bosse plans to add food and drink, private and corporate events and more programming. In Texas, Pickleball Kingdom's Pflugerville club (11 indoor courts, 1900 E. Howard Lane) closes Nov. 30, Community Impact reported Nov. 24; franchisee Jared Jolly said in a Facebook video that rent costs were too high and the club had not been profitable in more than two years, and that the company will look for another operator. Pickleball Kingdom is not part of The Picklr's bankruptcy.",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "Patch: Burlington pickleball facility undergoes ownership change",
+     "url": "https://patch.com/massachusetts/burlington/burlington-pickleball-facility-undergoes-ownership-change"
+    },
+    {
+     "label": "Community Impact: Pickleball Kingdom to close Pflugerville location Nov. 30",
+     "url": "https://communityimpact.com/pflugerville-hutto/business/pickleball-kingdom-to-close-pflugerville-location-nov-30"
+    },
+    {
+     "label": "Pickleballer: Bosse takes over a Picklr club as Pickleball Kingdom closes in Texas",
+     "url": "https://pickleballer.world/stories/bosse-takes-over-picklr-burlington-pickleball-kingdom-pflugerville-closes/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Indoor clubs live or die on rent. Is your local club busy enough to survive? Ask, don't speculate.",
+   "tags": [
+    "Business",
+    "Clubs",
+    "The Picklr",
+    "Pickleball Kingdom",
+    "Indoor"
+   ]
+  },
+  {
+   "title": "Agassi Sports, owner of the World Series of Pickleball name, flags 'substantial doubt' about staying in business and has no date for the first event",
+   "summary": "Agassi Sports Entertainment Corp.'s quarterly report (Form 10-Q, quarter ended Sept. 30) says its obligations raise substantial doubt about its ability to continue as a going concern. The company reported no revenue, a third-quarter net loss of $2,744,184 (vs. $755,899 a year earlier), a nine-month net loss of $5,538,244, $273,079 in cash and total liabilities of $2,819,681. The filing says planning for the World Series of Pickleball is in its initial stages and the company has no timeline for the first event. Figures are from the SEC filing.",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "SEC: Agassi Sports Entertainment Corp. Form 10-Q (quarter ended Sept. 30, 2026)",
+     "url": "https://www.sec.gov/Archives/edgar/data/0000930245/000149315226051475/form10-q.htm"
+    },
+    {
+     "label": "Pickleballer: Agassi Sports flags going-concern doubt as its losses grow",
+     "url": "https://pickleballer.world/stories/agassi-sports-10-q-going-concern-world-series-of-pickleball/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Big names, no event date: what the filing actually says about the World Series of Pickleball. Stick to the numbers.",
+   "tags": [
+    "Business",
+    "Agassi Sports",
+    "World Series of Pickleball",
+    "SEC"
+   ]
+  },
+  {
+   "title": "Vietnam Masters, days 1-2: 11 walkovers in the first 73 pro matches, and Phuc Huynh closes in on the D-Joy men's singles race",
+   "summary": "World Pickleball Magazine counted 11 walkovers (10 in singles) in the first 73 settled pro matches at the Vietnam Masters in Ho Chi Minh City, where every pro title is worth double D-Joy Race Points. Phuc Huynh won all three of his matches Wednesday and reached the men's singles quarterfinals, where he plays Le Xuan Duc on Friday; Ronan Camron, who plays Ly Hoang Nam, is the main man who can still pass him. Roos Van Reek reached the women's singles quarterfinals via a bye and a walkover; race leader Domenika Turkovic plays Jada Bui. Quang Duong and Richard Livornese Jr. took singles walkovers but kept winning in mixed and men's doubles. Pro finals are Nov. 29. Counts and race math are WPM's, from D-Joy's draws.",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "World Pickleball Magazine: Vietnam Masters 2026, 11 walkovers and the D-Joy race",
+     "url": "https://worldpickleballmagazine.com/vietnam-masters-2026-walkovers-van-reek-huynh-race/"
+    },
+    {
+     "label": "APP: 2026 Pickleball D-Joy event listing",
+     "url": "https://www.theapp.global/tour-schedule/2026-pickleball-d-joy4"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Three events a day for double points: is the D-Joy ladder rewarding grinders or burning them out?",
+   "tags": [
+    "APP",
+    "Vietnam Masters",
+    "D-Joy Tour",
+    "Asia",
+    "Results"
+   ]
+  },
+  {
+   "title": "Pro calendar: PPA Canada's Toronto 125 starts today, and the $1.06 million Veolia Malibu Showcase (Dec. 14-20) has every No. 1 seed entered",
+   "summary": "PPA Tour Canada's Toronto 125 runs Nov. 26-29 at Pickleplex Social Club Downsview in North York, Ont. The PPA Tour's next Open, the Veolia Malibu Showcase, is Dec. 14-20 at Pepperdine University's Ralphs-Straus Tennis Center with $1,063,327 in total payouts across five pro divisions (including appearance fees) and 500 ranking points per title; the event page says every No. 1 seed is entered. Tickets start at $25 per the event page. Before that: the APP Tour Championships and Atlantic Cup at The Fort in Fort Lauderdale (Dec. 3-6) and MLP Asia Finals in Kuala Lumpur (Dec. 11-12).",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "PPA Tour Canada: Toronto 125",
+     "url": "https://ppatourcanada.ca/tournament/2026/toronto-125/"
+    },
+    {
+     "label": "PPA Tour: Veolia Malibu Showcase 2026",
+     "url": "https://www.ppatour.com/events/2026/veolia-malibu-cup/"
+    },
+    {
+     "label": "APP: 2026 APP Tour Championships",
+     "url": "https://www.theapp.global/tour-schedule/2026-app-tour-championships"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "December is stacked: Fort Lauderdale, Kuala Lumpur, Malibu. Which one are you watching?",
+   "tags": [
+    "PPA",
+    "PPA Canada",
+    "Malibu",
+    "Schedule",
+    "APP"
+   ]
+  },
+  {
+   "title": "Stars head to Asia in December: Tama Shimabukuro joins Anna Leigh Waters in Manila Dec. 9, and Ben Johns and Anna Bright play their first event in Japan Dec. 7-9",
+   "summary": "Tama Shimabukuro, 15, has been added to the IAM Experience: Anna Leigh Waters exhibition on Wednesday, Dec. 9 at Smart Araneta Coliseum in Quezon City, alongside Waters and PPA Tour Asia No. 1 Alix Truong, Philstar reported Nov. 23. In Tokyo, Ben Johns and Anna Bright are set for the PPA Asia 125 Infomart PJ Tokyo Challenger, Dec. 7-9 at Ariake Coliseum, per the Pickleball Japan Federation, which says Johns will pair with Japan's Yuta Funemizu in men's doubles; admission is free. The event runs with the PJ Championships (Dec. 7-11).",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "Philstar: Teen sensation Shimabukuro spices up Anna Leigh Waters' Manila pickleball event",
+     "url": "https://www.philstar.com/sports/2026/11/23/2572071/teen-sensation-shimabukuro-spices-anna-leigh-waters-manila-pickleball-event"
+    },
+    {
+     "label": "Pickleball Japan Federation: PPA Asia 125 Infomart PJ Tokyo Challenger 2026",
+     "url": "https://japanpickleball.org/en/ppa-asia-125/"
+    },
+    {
+     "label": "Pickleball Japan Federation: PJ Championships 2026",
+     "url": "https://japanpickleball.org/en/ch2026"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Pro pickleball's biggest names are going east for the holidays. Is Asia the sport's next big market?",
+   "tags": [
+    "Asia",
+    "Exhibitions",
+    "Tama Shimabukuro",
+    "Anna Leigh Waters",
+    "Ben Johns",
+    "Anna Bright",
+    "Japan",
+    "Philippines"
+   ]
+  },
+  {
+   "title": "Gear: Proton revives its Series One line with two $295 elongated paddles, the USA Pickleball-approved Project Cardinal and the UPA-A Pro Project Bluejay",
+   "summary": "Proton's new Project Cardinal (MPP foam core, power-oriented) and Project Bluejay (reworked Atomic high-density EPP core, touch-oriented) share an elongated shape, Proton's NanoTac face and a separate foam perimeter ring, with a limited lifetime warranty and a 30-day trial, The Kitchen reported Nov. 24. Both list at $295 and are on a Black Friday pre-sale for $35 off. Per Pickleballer, Cardinal is USA Pickleball approved and Bluejay carries UPA-A Pro certification, so check which approval your league or tournament requires before you buy.",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "The Kitchen: Proton revives Series One with new Project Cardinal and Project Bluejay paddles",
+     "url": "https://thekitchenpickle.com/blogs/gear/proton-project-bluejay-project-cardinal-series-one-pickleball-paddles/"
+    },
+    {
+     "label": "Pickleballer: Proton revives Series One with Project Cardinal and Project Bluejay",
+     "url": "https://pickleballer.world/stories/proton-project-cardinal-bluejay-series-one-paddles-295/"
+    },
+    {
+     "label": "USA Pickleball approved paddle list",
+     "url": "https://equipment.usapickleball.org/paddle-list/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Power or touch? Same shape, same face, two cores. Poll it.",
+   "tags": [
+    "Gear",
+    "Paddles",
+    "Proton",
+    "Black Friday"
+   ]
+  },
+  {
+   "title": "DUPR becomes the official rating system of the Philippines' Pickle Yard Conference League for Season 2",
+   "summary": "DUPR said Nov. 25 that the Pickle Yard Conference League (PYCL), which it calls the Philippines' first professional pickleball league, will use DUPR to rate players and record league results in Season 2. PYCL launched in March 2026 and now has 8 teams of 8 players (64 total), per the release. It follows DUPR's Nov. 24 multi-year partnership with the Philippine Pickleball Federation.",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "DUPR: Pickle Yard Conference League names DUPR official rating system for PYCL Season 2",
+     "url": "https://www.dupr.com/post/pickle-yard-conference-league-names-dupr-official-rating-system-for-pycl-season-2"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Philippine pickleball keeps growing: a pro league, a federation deal and Waters in Manila in December.",
+   "tags": [
+    "DUPR",
+    "Philippines",
+    "Leagues",
+    "Asia"
+   ]
+  },
+  {
+   "title": "PicklePod: Hayden Patriquin co-hosts with Nico and talks burnout, partners and what it would take for Ben Johns to retire",
+   "summary": "The Dink's PicklePod posted an episode Nov. 25 with Hayden Patriquin in the co-host chair. Per the episode notes, he and host Nico discuss end-of-season burnout, losing the MLP final, his Vegas gold run, whether he is sticking with Anna Bright, women's doubles matchups and Nico's court-side run-in with Christian Alshon. Also new Nov. 25: Pickleball Studio's episode 185 on Black Friday paddle deals (Franklin Whip, Enhance Echo, Draco OP).",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "PicklePod (The Dink) podcast feed: Hayden Patriquin Partied in Vegas All Week, Then Beat Ben Johns",
+     "url": "https://feeds.megaphone.fm/picklepod"
+    },
+    {
+     "label": "Pickleball Studio Podcast feed (ep. 185)",
+     "url": "https://rss.buzzsprout.com/1997851.rss"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Media post: 'Patriquin on what it would take for Ben Johns to retire.' Link the episode; don't put words in his mouth.",
+   "tags": [
+    "Podcasts",
+    "PicklePod",
+    "Hayden Patriquin",
+    "Media"
+   ]
+  },
+  {
+   "title": "Courts watch: Dill Dinkers opens 10 indoor courts in Kennesaw, Ga.; West Valley City, Utah approves 16 courts at Centennial Park; Sidney, B.C. defers an indoor-court request",
+   "summary": "Dill Dinkers opened its second metro Atlanta club on Nov. 19 at 2500 Cobb Place Lane NW in Kennesaw, with a free week of play through Nov. 25, per WhatNow Atlanta and the club's location page. West Valley City, Utah's council on Nov. 10 approved a $1,705,124 contract with Courts Unlimited to rebuild the East Courts at Centennial Park Sports Complex, going from 12 to 16 pickleball courts and from four to two basketball courts, per Utah Record's meeting summary. In Sidney, B.C., council on Nov. 23 referred the Peninsula Community Pickleball Club's request for $425,000 toward an eight-court, roughly $2.4 million indoor facility near Rotary Park to its strategic planning talks, Victoria Buzz reported.",
+   "status": "confirmed",
+   "date": "2026-11-26",
+   "sources": [
+    {
+     "label": "WhatNow Atlanta: A new pickleball destination is coming to Kennesaw with 10 indoor courts",
+     "url": "https://whatnow.com/atlanta/retail/a-new-pickleball-destination-is-coming-to-kennesaw-with-10-indoor-courts/"
+    },
+    {
+     "label": "Dill Dinkers Kennesaw location page",
+     "url": "https://locations.dilldinkers.com/locations/georgia/kennesaw/2500-cobb-place-lane-nw/"
+    },
+    {
+     "label": "Utah Record: West Valley City Council, Nov. 10 meeting summary",
+     "url": "https://utahrecord.org/westvalley/meetings/f4198d77-c30f-4374-aab0-ede3638ff80e"
+    },
+    {
+     "label": "Victoria Buzz: Sidney considers approval of year-round indoor pickleball courts",
+     "url": "https://victoriabuzz.com/2026/11/sidney-considers-approval-of-year-round-indoor-pickleball-courts-near-rotary-park/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "New courts near you? Tag your city.",
+   "tags": [
+    "Courts",
+    "Clubs",
+    "Georgia",
+    "Utah",
+    "Canada"
+   ]
+  },
+  {
+   "title": "Worlds 2026 was the biggest event in PPA/MLP history: 70,000 fans, $2 million in ticket and registration revenue and 79 million PickleballTV minutes",
+   "summary": "The PPA Tour said on Nov. 24 that the 2026 Opendoor Pickleball World Championships (Oct. 30-Nov. 8, Brookhaven Country Club, Farmers Branch, Texas) set all-time PPA single-event records: 70,000 total attendance (up 17% on 2025), $2 million in combined ticket and registration revenue, 79 million minutes of PPA and MLP coverage watched on PickleballTV (up 12%) and 60 million social impressions on official PPA and MLP accounts. More than 4,000 amateurs from 35 countries played more than 5,000 matches, and 51 teams entered the College World Championship, won by Utah Tech. The figures are the tour's own; no independent audit was cited.",
+   "status": "confirmed",
+   "date": "2026-11-25",
+   "sources": [
+    {
+     "label": "PPA Tour: 2026 Opendoor Pickleball World Championships Is Biggest Event in PPA/MLP History",
+     "url": "https://www.ppatour.com/2026-opendoor-pickleball-world-championships-biggest-event-in-ppa-mlp-history/"
+    },
+    {
+     "label": "Pickleball.com: Pickleball Worlds draws record 70,000 attendance, generates $2 million",
+     "url": "https://pickleball.com/news/pickleball-worlds-draws-record-70-000-attendance-generates-2-million"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2125319834636361829"
+   ],
+   "social_angle": "70,000 people went to Worlds. Were you one of them? Lead with the 17% jump.",
+   "tags": [
+    "PPA",
+    "MLP",
+    "Worlds",
+    "Business",
+    "PickleballTV"
+   ]
+  },
+  {
+   "title": "DUPR explains its new half-point rule: if the team rated 0.5 or more higher wins, nobody's rating moves",
+   "summary": "In a Nov. 24 blog post, DUPR explained an algorithm change that went live Nov. 4 after a smaller test: when the two teams' average ratings are 0.5 or more apart and the higher-rated team wins, all four players' ratings stay unchanged regardless of the score. Upsets still move ratings, and inside a 0.5 gap ratings still move on performance against the expected score, so a narrow win can still cost points. DUPR says the rule covers singles and doubles, rally and traditional scoring, tournament and self-posted matches, and that players had been reluctant to record matches for fear a win would lower their rating. World Pickleball Magazine notes the flip side: in a half-point mismatch the underdog can no longer gain rating by losing close. Separately, DUPR announced a multi-year partnership with the Philippine Pickleball Federation the same day.",
+   "status": "confirmed",
+   "date": "2026-11-25",
+   "sources": [
+    {
+     "label": "DUPR blog: Important algorithm update that protects your wins",
+     "url": "https://www.dupr.com/post/dupr-algorithm-update-when-a-win-wont-change-your-rating"
+    },
+    {
+     "label": "World Pickleball Magazine: DUPR's 0.5 rule, why playing up is now free",
+     "url": "https://worldpickleballmagazine.com/dupr-algorithm-update-playing-down-half-point-rule/"
+    },
+    {
+     "label": "Pickleball Union: DUPR changed the math on playing down",
+     "url": "https://pickleballunion.com/dupr-algorithm-update-playing-down/"
+    },
+    {
+     "label": "DUPR blog: DUPR and the Philippine Pickleball Federation announce multi-year partnership",
+     "url": "https://www.dupr.com/post/dupr-and-philippine-pickleball-federation-ppf-announce-multi-year-partnership-to-support-pickleball-growth-in-the-philippines"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Win 11-9 against a team half a point lower and your DUPR no longer drops. Good change or not?",
+   "tags": [
+    "DUPR",
+    "Ratings",
+    "Rec play"
+   ]
+  },
+  {
+   "title": "Pickleball England makes protective eyewear mandatory for under-18s at its competitions and strongly recommends it for adults",
+   "summary": "Pickleball England's board approved a Protective Eyewear Policy on Nov. 19. Players under 18 must wear suitable impact-rated eyewear, warm-ups included, at Pickleball England-run and sanctioned competitions and at its junior events and festivals, even when playing in adult categories; a junior without it may not take part. For adults, eyewear is strongly recommended but optional unless an event, venue, club or insurer requires it. The policy says ordinary prescription glasses and sunglasses should not be assumed to protect. World Pickleball Magazine, which tied the policy to this week's BMJ glaucoma case report, says it is the only such requirement among the pickleball bodies it checked.",
+   "status": "confirmed",
+   "date": "2026-11-25",
+   "sources": [
+    {
+     "label": "Pickleball England: Protective Eyewear Policy (approved by PbE Board 19.11.26), PDF",
+     "url": "https://www.pickleballengland.org/wp-content/uploads/2026/11/Protective-Eyewear-Policy.pdf"
+    },
+    {
+     "label": "World Pickleball Magazine: A pickleball hit her eye. Months later it was glaucoma. The new eyewear rule covers only children",
+     "url": "https://worldpickleballmagazine.com/pickleball-eye-injuries-glaucoma-eyewear-rules/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "England now requires eyewear for juniors. Should the US do the same, and should it cover adults?",
+   "tags": [
+    "Safety",
+    "Eyewear",
+    "Pickleball England",
+    "Juniors",
+    "UK"
+   ]
+  },
+  {
+   "title": "MLP Asia's last regular-season week starts Thursday in Kuala Lumpur, and the Viet Panthers can clinch the first Finals spot",
+   "summary": "Six matches over three nights (Nov. 26-28) at Tomaz Pickleball Club finish the MLP Asia regular season, with four Finals spots still open, per the league. The Viet Panthers and THE DOTS TOKYO lead on five points, the Dragon Warriors and Hong Kong Cannons have three each from one match, the Malayan Stripes have two from two DreamBreaker losses, and the Manila Helios have none after three matches. Thursday the Cannons play their relocated home night against the Panthers, who clinch a Finals place with a regulation win, then the Dragon Warriors; Friday the Dragon Warriors face THE DOTS TOKYO and the Panthers; Saturday the Stripes host the Cannons and the Helios. Play starts at 6 PM local (4 AM CT) on the PPA x MLP Asia YouTube channel. The Finals are Dec. 11-12 at the same club.",
+   "status": "confirmed",
+   "date": "2026-11-25",
+   "sources": [
+    {
+     "label": "MLP Asia: Six matches, four spots, nobody safe",
+     "url": "https://mlp-asia.com/six-matches-four-spots-nobody-safe/"
+    },
+    {
+     "label": "MLP Asia: From Tokyo to the Title, the road to the MLP Asia Finals",
+     "url": "https://mlp-asia.com/from-tokyo-to-the-title-the-road-to-the-mlp-asia-finals/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Four Finals spots, six teams, three nights. Who's in: Panthers, Tokyo, Cannons or Dragon Warriors?",
+   "tags": [
+    "MLP Asia",
+    "MLP",
+    "Kuala Lumpur",
+    "Asia"
+   ]
+  },
+  {
+   "title": "USA Pickleball adds venture investor David Horowitz and former U.S. Olympic Committee and Under Armour executive Blair Tripodi to its board",
+   "summary": "USA Pickleball announced on Nov. 19 that David Horowitz and Blair Tripodi will join its Board of Directors on Jan. 1, 2027. Horowitz is a partner who co-leads the Cerity Partners Ventures practice, was a founding team member of Comcast Ventures and teaches venture capital at Michigan's Ross School of Business. Tripodi spent six years in marketing and business-development roles at the U.S. Olympic Committee, later led Under Armour's EMEA business and was most recently COO of Masimo Consumer. Board chair Stephanie Russell and CEO Mike Nealy are quoted in the release.",
+   "status": "confirmed",
+   "date": "2026-11-25",
+   "sources": [
+    {
+     "label": "USA Pickleball: USA Pickleball Announces David Horowitz and Blair Tripodi to Board of Directors",
+     "url": "https://usapickleball.org/usap-news/usa-pickleball-announces-david-horowitz-and-blair-tripodi-to-board-of-directors/"
+    },
+    {
+     "label": "Pickleballer: USA Pickleball board, Horowitz and Tripodi join for 2027",
+     "url": "https://pickleballer.world/stories/usa-pickleball-board-horowitz-tripodi-join-2027/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "New faces on the USA Pickleball board: a VC and an ex-Olympic Committee marketer.",
+   "tags": [
+    "USA Pickleball",
+    "Governance",
+    "Business"
+   ]
+  },
+  {
+   "title": "The Picklr bankruptcy: the Subchapter V status conference is held, and no objections are filed to hiring Akerman and a chief restructuring officer",
+   "summary": "Judge Scott W. Everett held The Picklr's Subchapter V status conference by Webex on Nov. 24, per the docket (Dkt. 142); the entry does not say what was decided. The same day the debtors filed certificates of no objection on their applications to employ Akerman LLP as counsel (Dkt. 140) and Fuel Break Capital Partners as financial adviser with Rick Rosenbloom as chief restructuring officer (Dkt. 141). The court's scheduling order sets Jan. 7, 2027 as the deadline for a plan of reorganization. Next on the calendar: the Dec. 8 lease-rejection hearing; general claims are due Dec. 18 and Dec. 21.",
+   "status": "confirmed",
+   "date": "2026-11-25",
+   "sources": [
+    {
+     "label": "Omni Agent Solutions: Picklr, Inc. court docket (Dkt. 140-142, Nov. 24)",
+     "url": "https://cases.omniagentsolutions.com/documents?clientid=3812&tagid=1281"
+    },
+    {
+     "label": "Omni Agent Solutions: Picklr, Inc. calendar, Nov. 24 status conference",
+     "url": "https://cases.omniagentsolutions.com/calendar?clientId=3812&sd=11%2F24%2F2026"
+    },
+    {
+     "label": "U.S. Bankruptcy Court, N.D. Tex.: Scheduling Order and Notice of Status Conference (Doc. 39)",
+     "url": "https://casedocs.omniagentsolutions.com/cmsvol2/pub_47622/9a8a59ec-b7ad-4a48-8e44-db8bbe6215f9_39.pdf"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "",
+   "tags": [
+    "The Picklr",
+    "Bankruptcy",
+    "Business"
+   ]
+  },
+  {
+   "title": "Courts watch: Brockville, Ont. can now build all eight planned courts with a $75,000 grant; Davie, Fla. reopens Pine Island Park with six courts",
+   "summary": "Brockville's new council on Nov. 24 approved using a $75,000 Brockville and Area Community Foundation grant so all eight pickleball courts at the planned Multi-Use Recreation Facility can be built, instead of four after tenders came in over budget; the city aims to have them ready by spring, ahead of hosting the Ontario 55+ Summer Games (Brockville Recorder and Times). In Davie, Fla., the town resurfaced the Pine Island Park courts, added permanent nets, turned every court north-south to keep the sun out of players' eyes and went from five courts to six (PSBA Tribune).",
+   "status": "confirmed",
+   "date": "2026-11-25",
+   "sources": [
+    {
+     "label": "Brockville Recorder and Times: Brockville council paves way for pickleball courts",
+     "url": "https://www.recorder.ca/news/brockville-council-paves-way-for-pickleball-courts/"
+    },
+    {
+     "label": "PSBA Tribune: Davie renovates and improves pickleball courts",
+     "url": "https://news.psba.org/davie-renovates-and-improves-00314907/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "",
+   "tags": [
+    "Courts",
+    "Canada",
+    "Florida"
+   ]
+  },
+  {
+   "title": "Watch Daytona's finals: PickleballTV posts full replays of four championship matches, and the PPA adds finals highlights",
+   "summary": "PickleballTV's YouTube channel posted full replays from Championship Sunday at the Proton Daytona Beach Open on the evening of Nov. 22: Johns/Waters vs. Bright/Alshon (mixed final), Hunter Johnson vs. Federico Staksrud (men's singles final), Judit Castillo vs. Kiora Kunimoto (women's singles) and Bright/Waters vs. Tyra Black/Jorja Johnson (women's doubles). The PPA Tour's YouTube channel added highlight packages from the finals, including must-see points from Ge/JW Johnson's men's doubles win over Daescu/Alshon. Titles as posted on each channel's public feed.",
+   "status": "confirmed",
+   "date": "2026-11-24",
+   "sources": [
+    {
+     "label": "PickleballTV on YouTube: Waters & Johns vs Alshon & Bright, Daytona mixed final",
+     "url": "https://www.youtube.com/watch?v=L0EZQzV7oAk"
+    },
+    {
+     "label": "PickleballTV on YouTube: Hunter Johnson vs Federico Staksrud, Daytona men's singles final",
+     "url": "https://www.youtube.com/watch?v=hlqKTdAI85A"
+    },
+    {
+     "label": "PickleballTV on YouTube: Judit Castillo vs Kiora Kunimoto, Daytona",
+     "url": "https://www.youtube.com/watch?v=oMZ2lsisO6k"
+    },
+    {
+     "label": "PickleballTV on YouTube: Waters & Bright vs Black & Johnson, Daytona",
+     "url": "https://www.youtube.com/watch?v=15GFTWAYeNE"
+    },
+    {
+     "label": "PPA Tour on YouTube: Daescu/Alshon vs Ge/Johnson, must-see points, men's doubles final",
+     "url": "https://www.youtube.com/watch?v=_-k3dlAq4tk"
+    },
+    {
+     "label": "PPA Tour newsroom: Championship Sunday Standout Stats from the Proton Daytona Beach Open",
+     "url": "https://www.ppatour.com/news/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Missed Sunday? All the Daytona finals are free on YouTube. Which one should people watch first?",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Replays",
+    "PickleballTV",
+    "YouTube"
+   ]
+  },
+  {
+   "title": "Doctors warn of pickleball eye injuries after a player hit without eyewear develops glaucoma",
+   "summary": "A BMJ Case Reports paper by doctors at UMass Chan Medical School describes a woman in her early 50s who was hit directly in the left eye while playing pickleball without protective eyewear. She had blurred vision, severe pain and bleeding inside the eye (hyphema); three months later she had high eye pressure and optic nerve damage and was diagnosed with traumatic angle-recession glaucoma, which persisted despite surgery. The authors call it part of an emerging pattern of pickleball eye injuries, note that modern paddles can produce shots over 60 mph, and say sport-specific safety guidelines may be warranted. It is a single case report, not a study of injury rates.",
+   "status": "confirmed",
+   "date": "2026-11-24",
+   "sources": [
+    {
+     "label": "The Guardian: Soaring popularity of pickleball linked to eye injuries and disease, doctors warn",
+     "url": "https://www.theguardian.com/society/2026/nov/24/pickleball-eye-injuries-disease-doctors-warn"
+    },
+    {
+     "label": "Medical Xpress (BMJ release): Eye trauma from high-velocity pickleball may heighten glaucoma risk",
+     "url": "https://medicalxpress.com/news/2026-11-eye-trauma-high-velocity-pickleball.html"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Do you wear eye protection on court? Poll it, and point to the 60-mph number.",
+   "tags": [
+    "Health",
+    "Safety",
+    "Eye injuries",
+    "Eyewear",
+    "BMJ"
+   ]
+  },
+  {
+   "title": "Vietnam Masters, the D-Joy Tour finale listed by the APP, starts today in Ho Chi Minh City with 6 billion dong in prize money",
+   "summary": "Vietnam Masters | Petrolimex Cup 2026, the fourth and final stop of the D-Joy Pickleball Tour, runs Nov. 24-29 at D-Joy Pickleball Nam Sai Gon in Ho Chi Minh City, a 52-court site with a center court seating more than 650, per Pickleballer and Pickleball News Asia. Prize money is more than 6 billion dong (about US$234,000, per World Pickleball Magazine), and organizers expect more than 1,500 entries. Named pros include Phuc Huynh, Quang Duong, Ly Hoang Nam, Jack Munro and Roos Van Reek. The APP lists the week on its schedule as the 2026 Pickleball D-Joy Event Powered by the APP. Pro champions earn 2,000 D-Joy Race Points, double the earlier stops, and WPM says Huynh clinches the men's singles season title if he reaches Sunday's final.",
+   "status": "confirmed",
+   "date": "2026-11-24",
+   "sources": [
+    {
+     "label": "Pickleballer: Vietnam Masters opens Tuesday with Quang Duong in the field",
+     "url": "https://pickleballer.world/stories/vietnam-masters-petrolimex-cup-d-joy-tour-final-starts-tuesday/"
+    },
+    {
+     "label": "Pickleball News Asia: Vietnam Masters closes the D-Joy Pickleball Tour in Ho Chi Minh City",
+     "url": "https://pickleballnewsasia.com/vietnam-masters-closes-d-joy-pickleball-tour-in-ho-chi-minh-city/"
+    },
+    {
+     "label": "World Pickleball Magazine: Vietnam Masters 2026, double DRP points and 6bn dong",
+     "url": "https://worldpickleballmagazine.com/vietnam-masters-2026-preview-d-joy-race-points/"
+    },
+    {
+     "label": "Thể Thao & Văn Hóa: Vietnam Masters | Petrolimex Cup 2026",
+     "url": "https://thethaovanhoa.vn/vietnam-masters-petrolimex-cup-2026-chang-dau-dinh-cao-cua-d-joy-pickleball-tour-20261123162639391.htm"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Pickleball's biggest week in Vietnam: 52 courts, 1,500+ entries, and Jack Munro in the draw.",
+   "tags": [
+    "APP",
+    "D-Joy Tour",
+    "Vietnam Masters",
+    "Vietnam",
+    "Asia"
+   ]
+  },
+  {
+   "title": "Top Pickleball Tour finale in Andorra: Claudia Caymel wins all three pro events, and Ignasi de Rueda takes two titles before the Atlantic Cup",
+   "summary": "Claudia Caymel won women's singles, women's doubles (with Slovakia's Karina Zuštáková) and mixed doubles (with Pep Canyadell) at the Open Mundo Pickleball Andorra, the fourth and last stop of the Top Pickleball Tour's first season, Nov. 20-22 at Pavelló Prat Gran in Escaldes-Engordany, per Diari d'Andorra, AS and World Pickleball Magazine. Ignasi de Rueda won men's singles and, with Canyadell, men's doubles. The event drew more than 100 players across pro and amateur draws with €5,000 in prize money; WPM calculates Caymel's triple was worth about €900. WPM notes de Rueda is on Team Europe for the APP Atlantic Cup on Dec. 4 in Fort Lauderdale.",
+   "status": "confirmed",
+   "date": "2026-11-24",
+   "sources": [
+    {
+     "label": "Diari d'Andorra: Claudia Caymel firma un triplet al Top Pickleball Tour d'Andorra",
+     "url": "https://www.diariandorra.ad/nacional/261122/claudia-caymel-firma-triplet-top-pickleball-tour-d-andorra_209377.html"
+    },
+    {
+     "label": "AS: Claudia Caymel, protagonista en Andorra con un triplete de oro",
+     "url": "https://as.com/masdeporte/claudia-caymel-protagonista-en-andorra-con-un-triplete-de-oro-como-colofon-f202611-n/"
+    },
+    {
+     "label": "World Pickleball Magazine: Top Pickleball Tour Andorra 2026, Caymel wins the triple",
+     "url": "https://worldpickleballmagazine.com/top-pickleball-tour-andorra-2026-caymel-triple/"
+    },
+    {
+     "label": "Marca: El Top Pickleball Tour 2026 puso el broche en Andorra",
+     "url": "https://www.marca.com/otros-deportes/2026/11/22/top-pickleball-tour-2026-puso-broche-andorra.html"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "From Spanish table tennis champion to a pickleball triple crown in Andorra.",
+   "tags": [
+    "Europe",
+    "Top Pickleball Tour",
+    "Andorra",
+    "Claudia Caymel",
+    "Atlantic Cup"
+   ]
+  },
+  {
+   "title": "First South American pickleball championship: Brazil wins the over-50s team final and tops the medal table in Carmelo, Uruguay",
+   "summary": "Brazil narrowly beat Argentina in the over-50s final of the country event at the first Sudamericano de Pickleball in Carmelo, Uruguay, with the hosts taking bronze, per La Gaceta and World Pickleball Magazine. In the open individual and doubles events earlier in the week, Brazil won 34 of 117 medals (12 gold), Argentina 22 (10 gold) and Colombia 13. Argentina medaled in all three team categories (juniors, open and over-50s). Nine nations took part, players ranged from 12 to 80, and the event was sanctioned by the Panamerican Pickleball Federation.",
+   "status": "confirmed",
+   "date": "2026-11-24",
+   "sources": [
+    {
+     "label": "La Gaceta: Argentina hizo podio en todas las categorías del primer Sudamericano de selecciones",
+     "url": "https://www.lagaceta.com.ar/nota/1163739/deportes/argentina-hizo-podio-todas-categorias-primer-sudamericano-selecciones-pickleball.html"
+    },
+    {
+     "label": "La Gaceta: Argentina terminó segunda en el medallero del Abierto Sudamericano",
+     "url": "https://www.lagaceta.com.ar/nota/1163578/deportes/ocho-tucumanos-participaron-primer-abierto-sudamericano-pickleball-argentina-termino-segunda-medallero.html"
+    },
+    {
+     "label": "World Pickleball Magazine: Sudamericano de Pickleball 2026, Brazil win over-50s final",
+     "url": "https://worldpickleballmagazine.com/south-american-pickleball-championship-2026-brazil-argentina-results/"
+    },
+    {
+     "label": "Sudamericano de Pickleball (official site)",
+     "url": "https://www.sudamericanodepickleball.com/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Ages 12 to 80 at one championship. Pickleball's growth story in South America.",
+   "tags": [
+    "South America",
+    "Brazil",
+    "Argentina",
+    "Uruguay",
+    "International"
+   ]
+  },
+  {
+   "title": "PPA Daytona champions: Waters wins two, Hunter Johnson beats Staksrud, Castillo takes women's singles, and Ge/JW Johnson stop the top seeds",
+   "summary": "Championship Sunday at the Proton Daytona Beach Open (Nov. 22, Pictona at Holly Hill) ended with all five finals in straight games, per the official brackets as reported by Pickleballer and The Dink. Mixed doubles: No. 1 Ben Johns/Anna Leigh Waters beat No. 2 Anna Bright/Christian Alshon 11-4, 11-8. Women's singles: No. 3 Judit Castillo beat No. 2 Kiora Kunimoto 12-10, 11-2, a day after routing top seed Brooke Buckner. Women's doubles: No. 1 Bright/Waters beat No. 2 Tyra Black/Jorja Johnson 11-2, 11-4; the PPA says the pair went undefeated in women's doubles in 2026. Men's singles: No. 2 Hunter Johnson beat No. 3 Federico Staksrud 11-8, 11-7, which the PPA calls his 13th title. Men's doubles: No. 2 Augie Ge/JW Johnson beat No. 1 Andrei Daescu/Alshon 11-8, 11-3 to win Daytona for the second year in a row, per pickleball.com, leaving Alshon with two silver medals. The Dink notes it was the PPA's last 1,000-level event of 2026 and the first all-straight-games Championship Sunday since the PPA Finals on May 10.",
+   "status": "confirmed",
+   "date": "2026-11-23",
+   "sources": [
+    {
+     "label": "Pickleballer: Waters wins two at Daytona; Hunter Johnson and Castillo take singles",
+     "url": "https://pickleballer.world/stories/waters-wins-two-hunter-johnson-castillo-ge-jw-johnson-daytona-titles/"
+    },
+    {
+     "label": "The Dink: PPA Daytona Beach Open recap",
+     "url": "https://www.thedinkpickleball.com/ppa-daytona-beach-open-recap-castillo-breaks-through-waters-doubles-up-and-championship-sunday-delivers-five-sweeps/"
+    },
+    {
+     "label": "pickleball.com: Ge and JW Johnson deliver Daytona's biggest surprise with back-to-back titles",
+     "url": "https://pickleball.com/news/augie-ge-and-jw-johnson-deliver-daytonas-biggest-surprise-with-back-to-back-titles"
+    },
+    {
+     "label": "PPA Tour on X: Judit Castillo is a women's singles champion once again",
+     "url": "https://x.com/PPAtour/status/2124580926705520654"
+    },
+    {
+     "label": "PPA Tour on X: Lucky title #13 for Hunter Johnson",
+     "url": "https://x.com/PPAtour/status/2124619830171238556"
+    },
+    {
+     "label": "PPA Tour on X: Undefeated in women's doubles for 2026",
+     "url": "https://x.com/PPAtour/status/2124620607417630750"
+    },
+    {
+     "label": "PPA Tour on X: Men's doubles champs",
+     "url": "https://x.com/PPAtour/status/2124637514728362122"
+    },
+    {
+     "label": "PPA Tour event page: Proton Daytona Beach Open 2026",
+     "url": "https://www.ppatour.com/events/2026/proton-daytona-beach-open/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2124619830171238556",
+    "https://x.com/PPAtour/status/2124564379064795354"
+   ],
+   "social_angle": "Five finals, zero third games. Lead with Ge/JW Johnson upsetting the top seeds and the PPA's 74-shot rally clip.",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Anna Leigh Waters",
+    "Hunter Johnson",
+    "Judit Castillo",
+    "Augie Ge",
+    "JW Johnson",
+    "Finals"
+   ]
+  },
+  {
+   "title": "College pickleball: UVA wins the APP Selkirk Collegiate Washington, D.C. qualifier and an automatic bid to the Las Vegas championships",
+   "summary": "The University of Virginia won the APP Selkirk U.S. Collegiate Series Washington, D.C. qualifier, held Nov. 21-22 at Down the Line Sports Center in Annandale, Va., per the APP's official YouTube channel. It was the second of eight regional qualifiers this season. The top four teams at each regional earn automatic bids to the 48-team APP Selkirk U.S. Collegiate Championships, March 12-14, 2027, at The Flying Pickle in Las Vegas, per PickLM and the APP event page. The APP streams every match and replay free on YouTube.",
+   "status": "confirmed",
+   "date": "2026-11-23",
+   "sources": [
+    {
+     "label": "APP Tour on YouTube: UVA wins the APP Selkirk Collegiate Washington D.C. qualifier",
+     "url": "https://www.youtube.com/shorts/4Au9UzTwfyc"
+    },
+    {
+     "label": "APP event page: 2026-27 APP Selkirk U.S. Collegiate Series - Washington DC",
+     "url": "https://www.theapp.global/tour-schedule/2026-27-app-selkirk-us-collegiate-series-washington"
+    },
+    {
+     "label": "PickLM: College pickleball's road to Las Vegas runs through Virginia",
+     "url": "https://picklm.com/news/college-pickleball-dc-regional-2026/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "Wahoowa: UVA punches its ticket to Vegas. Ask followers which college team they're backing.",
+   "tags": [
+    "APP",
+    "Collegiate",
+    "UVA",
+    "APP Selkirk Collegiate Series"
+   ]
+  },
+  {
+   "title": "PPA Daytona semifinals: Castillo routs top seed Buckner, Staksrud and Hunter Johnson set a men's singles final, and Bright, Waters and Alshon each reach two finals",
+   "summary": "Saturday's semifinals at the Proton Daytona Beach Open set all five Championship Sunday finals, per the PPA and Pickleballer. Women's singles: No. 3 Judit Castillo beat top seed Brooke Buckner 11-1, 11-8, per Pickleballer, and No. 2 Kiora Kunimoto ended defending champion Catherine Parenteau's run 11-7, 11-8. Men's singles: No. 3 Federico Staksrud beat No. 8 Zane Ford 11-8, 13-11, and No. 2 Hunter Johnson beat No. 4 John Lucian Goins 11-7, 11-7, which the PPA says was Goins' first singles loss in over a month. Mixed doubles: No. 1 Ben Johns/Anna Leigh Waters beat No. 3 Jorja Johnson/JW Johnson 11-3, 11-5, and No. 2 Anna Bright/Christian Alshon beat No. 4 Eric Oncins/Tyra Hurricane Black 11-4, 11-1. Men's doubles: No. 1 Andrei Daescu/Alshon beat No. 5 Riley Newman/Noe Khlif 12-10, 11-9, and No. 2 Augustus Ge/JW Johnson ended No. 13 Will Howells/AJ Koller's run 11-7, 11-5. Women's doubles: No. 1 Bright/Waters beat No. 6 Mari Humberg/Milan Rane 11-4, 11-1, and No. 2 Black/Jorja Johnson beat No. 3 Rachel Rohrabacher/Parris Todd 11-5, 11-3. Sunday's finals are on the Humana Championship Court on PickleballTV, per the PPA's schedule (ET times; later starts approximate): mixed (Johns/Waters vs. Bright/Alshon) at 12 p.m. ET (11 a.m. CT), women's singles (Kunimoto vs. Castillo) at 1 p.m. ET, women's doubles (Bright/Waters vs. Black/Jorja Johnson) at 1:55 p.m. ET, men's singles (Hunter Johnson vs. Staksrud) at 2:55 p.m. ET and men's doubles (Alshon/Daescu vs. JW Johnson/Ge) at 3:50 p.m. ET.",
+   "status": "confirmed",
+   "date": "2026-11-22",
+   "sources": [
+    {
+     "label": "PPA Tour on X: Kunimoto d. Parenteau 11-7, 11-8",
+     "url": "https://x.com/PPAtour/status/2124237098001518720"
+    },
+    {
+     "label": "PPA Tour on X: Staksrud d. Ford 11-8, 13-11",
+     "url": "https://x.com/PPAtour/status/2124237114745238000"
+    },
+    {
+     "label": "PPA Tour on X: Hunter Johnson d. Goins 11-7, 11-7",
+     "url": "https://x.com/PPAtour/status/2124256432799228071"
+    },
+    {
+     "label": "PPA Tour on X: Johns/Waters d. Jorja Johnson/JW Johnson 11-3, 11-5",
+     "url": "https://x.com/PPAtour/status/2124268638978859148"
+    },
+    {
+     "label": "PPA Tour on X: Bright/Alshon d. Oncins/Black 11-4, 11-1",
+     "url": "https://x.com/PPAtour/status/2124280550424707530"
+    },
+    {
+     "label": "PPA Tour on X: Ge/JW Johnson d. Howells/Koller 11-7, 11-5",
+     "url": "https://x.com/PPAtour/status/2124289093563510848"
+    },
+    {
+     "label": "PPA Tour on X: Bright/Waters d. Humberg/Rane 11-4, 11-1",
+     "url": "https://x.com/PPAtour/status/2124296377719021689"
+    },
+    {
+     "label": "PPA Tour on X: Daescu/Alshon d. Newman/Khlif 12-10, 11-9",
+     "url": "https://x.com/PPAtour/status/2124337577251795212"
+    },
+    {
+     "label": "PPA Tour on X: Black/Jorja Johnson d. Rohrabacher/Todd 11-5, 11-3",
+     "url": "https://x.com/PPAtour/status/2124337751059517565"
+    },
+    {
+     "label": "PPA Tour on X: Championship Sunday schedule",
+     "url": "https://x.com/PPAtour/status/2124342566430630276"
+    },
+    {
+     "label": "Pickleballer: Castillo routs Buckner; Staksrud, Hunter Johnson reach Daytona final",
+     "url": "https://pickleballer.world/stories/castillo-stuns-buckner-staksrud-hunter-johnson-daytona-final/"
+    },
+    {
+     "label": "PickLM: Proton Daytona Beach Open 2026 live results",
+     "url": "https://picklm.com/news/ppa-daytona-beach-open-2026/"
+    }
+   ],
+   "embeds": [
+    "https://x.com/PPAtour/status/2124308608665956862",
+    "https://x.com/PPAtour/status/2124308984949588208"
+   ],
+   "social_angle": "Championship Sunday cheat sheet: five finals, start times in CT, and the hook that Bright, Waters and Alshon each play two finals. Quote the PPA's 'Zane Ford goes crazy' clip.",
+   "tags": [
+    "PPA",
+    "Daytona Beach Open",
+    "Judit Castillo",
+    "Kiora Kunimoto",
+    "Federico Staksrud",
+    "Hunter Johnson",
+    "Semifinals"
+   ]
+  },
+  {
+   "title": "MLP Asia in Ho Chi Minh City: Tama Shimabukuro leads the Viet Panthers to a DreamBreaker win over the Malayan Stripes and a 4-0 sweep of previously unbeaten DOTS Tokyo",
+   "summary": "The Viet Panthers won both of their home debut matches on Saturday, Nov. 21, at AP Sports Club 2 in Ho Chi Minh City, per Pickleball News Asia. They beat the Malayan Stripes 3-2 after a 2-2 split, winning the DreamBreaker 21-12, then swept THE DOTS TOKYO 4-0, the league leaders' first loss of the season. Tama Shimabukuro won every game he played, including the men's doubles with Quan Do (11-4) and with Hien Truong (11-3), and both mixed doubles 1 games with Kaitlyn Christian. The Panthers now top the MLP Asia table with 5 points from two matches, level on points with THE DOTS TOKYO (5 from three), per Pickleball News Asia's tracker. The Malayan Stripes have lost both of their matches in DreamBreakers and have 2 points. The postponed Hong Kong match day is now scheduled for Thursday, Nov. 26 in Kuala Lumpur.",
+   "status": "confirmed",
+   "date": "2026-11-22",
+   "sources": [
+    {
+     "label": "Pickleball News Asia: Shimabukuro powers Viet Panthers to the top of the MLP Asia table",
+     "url": "https://pickleballnewsasia.com/shimabukuro-powers-viet-panthers-to-the-top-of-the-mlp-asia-table/"
+    },
+    {
+     "label": "Pickleball News Asia: MLP Asia tracker (results and standings)",
+     "url": "https://pickleballnewsasia.com/mlp-asia-tracker-results-standings-whats-next/"
+    },
+    {
+     "label": "World Pickleball Magazine: Viet Panthers top the table as Shimabukuro wins every game",
+     "url": "https://worldpickleballmagazine.com/mlp-asia-viet-panthers-shimabukuro-ho-chi-minh-city-results/"
+    }
+   ],
+   "embeds": [],
+   "social_angle": "'Defend the den': the Viet Panthers go 2-0 at home and hand DOTS Tokyo their first loss. Post the updated MLP Asia table.",
+   "tags": [
+    "MLP Asia",
+    "Viet Panthers",
+    "Tama Shimabukuro",
+    "THE DOTS TOKYO",
+    "Malayan Stripes"
+   ]
+  },
   {
    "title": "PPA Daytona quarterfinals: Staksrud, Hunter Johnson, Goins and Ford make the men's singles final four, the women's top four seeds all advance, and Humberg/Rane upset Sewing/Parenteau",
    "summary": "Friday's quarterfinals at the Proton Daytona Beach Open set the final four in all five pro divisions, per the PPA and PickLM's live results. Men's singles: No. 3 Federico Staksrud beat No. 12 JW Johnson 11-5, 11-6, No. 2 Hunter Johnson ended No. 10 Rafael Lenhard's run 11-9, 11-2, No. 4 John Lucian Goins beat No. 11 Eric Oncins 13-11, 11-5, and No. 8 Zane Ford beat No. 14 Cason Campbell in three games. Semifinals: Staksrud vs. Ford and Hunter Johnson vs. Goins. Women's singles: No. 1 Brooke Buckner beat No. 8 Jalina Ingram 11-5, 11-5, No. 2 Kiora Kunimoto beat No. 11 Sofia Sewing 11-2, 11-6, No. 3 Judit Castillo beat No. 5 Isabella Dunlap 11-3, 11-6 and No. 4 Catherine Parenteau beat No. 10 Milan Rane 11-7, 12-10. Semifinals: Buckner vs. Castillo and Kunimoto vs. Parenteau. Mixed doubles: Ben Johns/Anna Leigh Waters beat Rachel Rohrabacher/Staksrud 11-1, 11-8 and meet Jorja Johnson/JW Johnson; Anna Bright/Christian Alshon meet Tyra Hurricane Black/Oncins. Men's doubles: top seeds Andrei Daescu/Alshon beat Hunter Johnson/Roscoe Bellamy 11-6, 7-11, 11-9 and play Riley Newman/Noe Khlif, and No. 13 Will Howells/AJ Koller kept their run going against No. 11 Clayton Powell/Anouar Braham (11-8, 11-8) to face No. 2 Augustus Ge/JW Johnson. Women's doubles: No. 6 Mari Humberg/Rane edged No. 4 Sewing/Parenteau 5-11, 11-8, 11-9 to face top seeds Bright/Waters, and No. 2 Black/Jorja Johnson play No. 3 Rohrabacher/Parris Todd. Semifinal Saturday is on PickleballTV from 12 p.m. ET (11 a.m. CT), with doubles from 5:30 p.m. ET (4:30 p.m. CT), per the PPA. Finals are Sunday, Nov. 22.",
@@ -1169,836 +2302,6 @@
     "Anna Leigh Waters",
     "Anna Bright",
     "Culture"
-   ]
-  },
-  {
-   "title": "MLP Asia opens with two Tokyo wins: THE DOTS TOKYO sweep Manila Helios 4-0, then beat Malayan Stripes 3-2 in a DreamBreaker",
-   "summary": "MLP Asia's inaugural season opened Friday, Nov. 13, at Sansan Pickleball Court Ikebukuro in Tokyo, and host THE DOTS TOKYO won both matches. They swept Manila Helios 4-0, then beat the paper favorites Malayan Stripes 3-2: Lacy Schneemann won both women's doubles and the second mixed for the Stripes to force the league's first DreamBreaker, where Tokyo trailed 11-17 before eight straight points from Mihae Kwon and Nasa Hatakeyama. Rika Fujiwara closed it 21-19, per MLP Asia. Captain Yuta Funemizu won all four of his games. THE DOTS TOKYO lead the standings with 5 points; the Stripes got 1 for the DreamBreaker loss. Saturday's Hong Kong match day has been postponed (see above).",
-   "status": "confirmed",
-   "date": "2026-11-13",
-   "sources": [
-    {
-     "label": "MLP Asia: THE DOTS TOKYO defend home court with opening night DreamBreaker",
-     "url": "https://mlp-asia.com/the-dots-tokyo-defend-home-court-with-opening-night-dreambreaker/"
-    },
-    {
-     "label": "World Pickleball Magazine: MLP Asia Tokyo results",
-     "url": "https://worldpickleballmagazine.com/mlp-asia-tokyo-results-dots-tokyo-dreambreaker/"
-    },
-    {
-     "label": "Pickleball News Asia: THE DOTS TOKYO open MLP Asia with two wins",
-     "url": "https://pickleballnewsasia.com/the-dots-tokyo-open-mlp-asia-with-two-wins/"
-    },
-    {
-     "label": "TBS Sports on X: THE DOTS TOKYO 4-0 Manila Helios",
-     "url": "https://x.com/tbs_sports/status/2121189358795620590"
-    }
-   ],
-   "embeds": [
-    "https://x.com/tbs_sports/status/2121189358795620590"
-   ],
-   "social_angle": "Result post: 'MLP Asia night one: THE DOTS TOKYO 2-0, including a comeback from 11-17 down in the league's first DreamBreaker.' Quote the TBS Sports post or link MLP Asia. On X, no hashtags.",
-   "tags": [
-    "MLP Asia",
-    "MLP",
-    "Tokyo",
-    "Yuta Funemizu",
-    "DreamBreaker",
-    "Results"
-   ]
-  },
-  {
-   "title": "APP Arizona Open: 41st seed Alvi Regalado beats the No. 1 seed and reaches the men's singles final in Mesa",
-   "summary": "Alvi Regalado, seeded last of 41 in the APP Arizona Open men's singles draw, beat top seed Ronan Camron 11-7, 9-11, 11-6 in the quarterfinals and No. 4 Ryler DeHeart 11-13, 11-3 in the semis to reach the final, per World Pickleball Magazine. He faces No. 6 Andre Millet, who beat Tristan Dussault and Max Green. The women's singles final is the top two seeds, Katerina Stewart vs. Domenika Turkovic, a rematch of the Louisville final that Turkovic won. Friday in Mesa is mixed doubles day, with Megan Fudge one gold from the APP Tour women's pro record, per WPM.",
-   "status": "confirmed",
-   "date": "2026-11-13",
-   "sources": [
-    {
-     "label": "World Pickleball Magazine: APP Arizona Open day one, Regalado reaches final",
-     "url": "https://worldpickleballmagazine.com/app-arizona-open-2026-mesa-day-one-regalado/"
-    },
-    {
-     "label": "APP Tour: Arizona Open preview",
-     "url": "https://www.theapp.global/news/arizona-preview-2026"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Upset post: 'The 41st seed is in the final. Alvi Regalado took out the APP's No. 1, Ronan Camron, in Mesa.' Link WPM. On X, no hashtags.",
-   "tags": [
-    "APP",
-    "Arizona Open",
-    "Alvi Regalado",
-    "Ronan Camron",
-    "Katerina Stewart",
-    "Domenika Turkovic",
-    "Results"
-   ]
-  },
-  {
-   "title": "Worlds 2026 semifinal replays are up on PickleballTV's YouTube, including Hunter Johnson vs. Jack Sock",
-   "summary": "PickleballTV posted full replays of Opendoor Pickleball World Championships semifinals on Nov. 12, including Hunter Johnson vs. Jack Sock (men's singles), Bright/Patriquin vs. Johnson/Johnson (mixed) and Fahey/Pisnik vs. Sewing/Parenteau (women's doubles), plus Johns/Tardio vs. Daescu/Alshon.",
-   "status": "confirmed",
-   "date": "2026-11-13",
-   "sources": [
-    {
-     "label": "PickleballTV: Hunter Johnson vs Jack Sock, Worlds semifinal",
-     "url": "https://www.youtube.com/watch?v=ARKZ4U9AtmM"
-    },
-    {
-     "label": "PickleballTV: Bright/Patriquin vs Johnson/Johnson, Worlds semifinal",
-     "url": "https://www.youtube.com/watch?v=kHsbYukYoFQ"
-    },
-    {
-     "label": "PickleballTV: Fahey/Pisnik vs Sewing/Parenteau, Worlds semifinal",
-     "url": "https://www.youtube.com/watch?v=RV41azPXAUw"
-    },
-    {
-     "label": "PickleballTV: Johns/Tardio vs Daescu/Alshon, Worlds",
-     "url": "https://www.youtube.com/watch?v=o4h0TUqKw_0"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Watch-list post: 'Missed the Worlds semis? Full replays are free on YouTube.' Link PickleballTV.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Replays",
-    "Jack Sock",
-    "Hunter Johnson"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Worlds 2026 hub"
-    }
-   ]
-  },
-  {
-   "title": "Courts watch: Gilroy, Calif. opens six new public pickleball courts at Las Animas Veterans Park",
-   "summary": "About 100 players joined Gilroy officials on Nov. 10 for the ribbon cutting of six new pickleball courts at Las Animas Veterans Park, per the Gilroy Dispatch. The city council approved a $1.2 million construction contract in June 2025; the courts are free for daytime use, and the city plans to add lights for night play in the coming weeks.",
-   "status": "confirmed",
-   "date": "2026-11-13",
-   "sources": [
-    {
-     "label": "Gilroy Dispatch: Gilroy celebrates new pickleball courts at Las Animas Park",
-     "url": "https://gilroydispatch.com/game-on-gilroy-celebrates-new-pickleball-courts-at-las-animas-park/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Local-growth post: 'Six new free courts in Gilroy, Calif., lights coming soon.' Link the Gilroy Dispatch.",
-   "tags": [
-    "Facilities",
-    "California",
-    "Courts"
-   ]
-  },
-  {
-   "title": "APP Arizona Open starts today in Mesa: Megan Fudge chases the APP women's pro gold record, Munro and Livornese go for an eighth straight",
-   "summary": "The APP Tour's Arizona Open runs Thursday to Sunday, Nov. 12-15 at Arizona Athletic Grounds in Mesa, per the APP, with a $125,000 purse and 349 players entered, per World Pickleball Magazine. Megan Fudge tied Simone Jardim's APP Tour record of 33 career women's pro gold medals in Overland Park and can take sole possession of it in Mesa. Jack Munro and Richard Livornese Jr. have won seven straight APP men's pro doubles titles this season. Per the APP, the championship court streams Friday, Nov. 13 from 2 to 8 p.m. ET on APPTV (YouTube), then moves to ESPN+ on Saturday (12:30-7 p.m. ET) and Sunday (noon-6 p.m. ET), with ESPN2 and CBS Sports Network TV windows.",
-   "status": "confirmed",
-   "date": "2026-11-12",
-   "sources": [
-    {
-     "label": "APP Tour: Arizona Open preview, 'Turning Up the Heat'",
-     "url": "https://www.theapp.global/news/arizona-preview-2026"
-    },
-    {
-     "label": "World Pickleball Magazine: APP Arizona Open 2026 preview",
-     "url": "https://worldpickleballmagazine.com/app-arizona-open-2026-mesa-preview-entries/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Preview post: 'APP Mesa starts today. Megan Fudge is one gold from the APP record. Munro/Livornese are going for eight straight.' Link the APP preview. On X, no hashtags.",
-   "tags": [
-    "APP",
-    "Arizona Open",
-    "Megan Fudge",
-    "Jack Munro",
-    "Richard Livornese Jr.",
-    "Schedule"
-   ]
-  },
-  {
-   "title": "MLP Asia opening night: THE DOTS TOKYO host Manila Helios and Malayan Stripes Friday in Ikebukuro",
-   "summary": "MLP Asia's first match day is Friday, Nov. 13 at Sansan Pickleball Court Ikebukuro in Tokyo, starting at 6 p.m. local time (3 a.m. Friday CT), per the league's preview. THE DOTS TOKYO play Manila Helios, then Malayan Stripes. Each match has four games to 11 (women's doubles, men's doubles and two mixed doubles), and a 2-2 tie goes to a singles DreamBreaker. The league lists Malayan Stripes as favorites on average World Pickleball Rankings, with Lacy Schneemann (No. 11) the highest-ranked player in Tokyo. THE DOTS TOKYO are led by captain Yuta Funemizu and Rika Fujiwara.",
-   "status": "confirmed",
-   "date": "2026-11-12",
-   "sources": [
-    {
-     "label": "MLP Asia: Preview, THE DOTS TOKYO host opening night in Ikebukuro",
-     "url": "https://mlp-asia.com/preview-the-dots-tokyo-host-opening-night-in-ikebukuro/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Countdown post: 'First points in MLP Asia history: Tokyo, Friday night. Schneemann's Malayan Stripes are the paper favorites.' Link the MLP Asia preview. On X, no hashtags.",
-   "tags": [
-    "MLP Asia",
-    "MLP",
-    "Tokyo",
-    "Lacy Schneemann",
-    "Schedule"
-   ]
-  },
-  {
-   "title": "Jack Sock's slide wins the PPA's Play of the Tournament from Worlds",
-   "summary": "The PPA Tour named a Jack Sock point, captioned 'Jack Sock slides into home base,' its o2 Sports Play of the Tournament from the Opendoor Pickleball World Championships.",
-   "status": "confirmed",
-   "date": "2026-11-12",
-   "sources": [
-    {
-     "label": "PPA Tour on X: Play of the Tournament from Worlds",
-     "url": "https://x.com/PPAtour/status/2120671193686835588"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2120671193686835588"
-   ],
-   "social_angle": "Clip post: quote the PPA post, 'Worlds Play of the Tournament goes to Jack Sock.' On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Jack Sock",
-    "Highlights"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Worlds 2026 hub"
-    }
-   ]
-  },
-  {
-   "title": "Courts watch: Lee County, Ga. approves a $5.2 million facility with 12 covered pickleball courts",
-   "summary": "Lee County, Ga. commissioners approved a $5.2 million pickleball and recreation facility in Leesburg on Nov. 10, per WALB. It will have 12 covered courts for year-round tournaments and programs plus a 12,000-square-foot event space, and county leaders want to bring pickleball tournaments to South Georgia. LRA Constructors won the contract with a $5,231,083.20 bid; funding comes from a SPLOST and impact fees. The first phase is expected to open in April 2028.",
-   "status": "confirmed",
-   "date": "2026-11-12",
-   "sources": [
-    {
-     "label": "WALB: Lee County commissioners approve new pickleball/recreation complex",
-     "url": "https://www.walb.com/2026/11/11/lee-county-commissioners-approve-new-pickleballrecreation-complex/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Local-growth post: '12 covered courts coming to South Georgia. Lee County just approved $5.2M.' Link WALB.",
-   "tags": [
-    "Facilities",
-    "Georgia",
-    "Courts"
-   ]
-  },
-  {
-   "title": "USA Pickleball will retire six OWL Sport quiet paddles from sanctioned play on Feb. 1, 2028 after spin-test findings",
-   "summary": "USA Pickleball said Nov. 9 that six OWL Sport paddle models (Talon X1, CX, CXE, PX, PXE and SILENT STORM) show performance that improves with use, which it calls 'Degrade to Benefit,' based on evaluation following its new Spin Rate Test (in effect since Oct. 1, 2026). The paddles stay approved during a transition period through Jan. 31, 2028; starting Feb. 1, 2028 they will no longer be approved for USA Pickleball-sanctioned competition. USA Pickleball credited OWL Sport's work on noise, and OWL Sport is developing updated Quiet Category paddles that will go through standard certification.",
-   "status": "confirmed",
-   "date": "2026-11-11",
-   "sources": [
-    {
-     "label": "USA Pickleball: Statement Regarding OWL Sport",
-     "url": "https://usapickleball.org/usap-news/equipment-news/statement-regarding-owl-sport/"
-    },
-    {
-     "label": "USA Pickleball: Spin Rate Test update and timeline",
-     "url": "https://usapickleball.org/usap-news/equipment-news/update-regarding-the-usa-pickleball-spin-rate-test-and-implementation-timeline/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Gear/rules post: 'Own an OWL quiet paddle? USA Pickleball says six models are legal for sanctioned play until Jan. 31, 2028, then they're out.' Link the USAP statement. On X, no hashtags.",
-   "tags": [
-    "USA Pickleball",
-    "Equipment",
-    "OWL Sport",
-    "Quiet paddles",
-    "Spin Rate Test"
-   ]
-  },
-  {
-   "title": "At 15, Tama Shimabukuro is the youngest men's doubles champion in PPA Tour history",
-   "summary": "The PPA Tour says Tama Shimabukuro's Worlds men's doubles title with JW Johnson makes him the youngest men's doubles champion in PPA Tour history. He is 15 and picked up pickleball in 2023 after skateboarding, per the tour. The pair came back from two games down to beat Christian Alshon and Andrei Daescu 5-11, 5-11, 11-4, 11-8, 11-4 on Nov. 8, their first title together. MLP noted he made his MLP debut at 14 on the same Brookhaven Country Club courts a year earlier.",
-   "status": "confirmed",
-   "date": "2026-11-11",
-   "sources": [
-    {
-     "label": "PPA Tour on X: youngest men's doubles champion in PPA Tour history",
-     "url": "https://x.com/PPAtour/status/2120259963209548210"
-    },
-    {
-     "label": "Open Scoring: Shimabukuro and Johnson rally for Worlds gold",
-     "url": "https://openscoringsports.com/pickleball/2026-11-10/"
-    },
-    {
-     "label": "MLP on X: one year after his MLP debut",
-     "url": "https://x.com/MajorLeaguePB/status/2120234277942010089"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2120259963209548210"
-   ],
-   "social_angle": "Stat post: 'Skateboard in 2023. World champion at 15. Tama Shimabukuro is the youngest men's doubles champ in PPA Tour history.' Quote the PPA post. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Tama Shimabukuro",
-    "JW Johnson",
-    "Record"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Worlds 2026 hub"
-    }
-   ]
-  },
-  {
-   "title": "PPA Challenger Showdown: Eileen Wang, Matt Burkhardt and three teams earn PPA Tour contracts",
-   "summary": "While Worlds was on, the top eight unsigned players and teams from the 2026 PPA Challenger season played the Challenger Showdown in Farmers Branch, Texas, with a PPA Tour contract for each division winner, per Pickleball.com. Women's singles: Eileen Wang beat Jessica Ho 6-11, 11-5, 13-11. Men's singles: Matt Burkhardt beat Troy Akin 11-0, 12-10. Women's doubles: Allie Reichert/Madalina Grigoriu beat Marisa Ruiz/Kelsey Laurente 9-11, 11-8, 11-0. Men's doubles: Riley Inn/Alex Emery beat Connor McCartney/Wade Heerboth 6-11, 11-7, 11-6. Mixed: Anne-Sophie Courteau/Juan Varon beat Grigoriu/Garrison Eaby 11-6, 10-12, 11-7.",
-   "status": "confirmed",
-   "date": "2026-11-11",
-   "sources": [
-    {
-     "label": "Pickleball.com: PPA contracts earned at 2026 Challenger Showdown",
-     "url": "https://pickleball.com/news/ppa-contracts-earned-at-2026-challenger-showdown"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Next-gen post: 'Five new PPA contracts: Wang, Burkhardt, Reichert/Grigoriu, Inn/Emery, Courteau/Varon won the Challenger Showdown.' Link Pickleball.com. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Challenger Series",
-    "Contracts",
-    "Results"
-   ]
-  },
-  {
-   "title": "Pro calendar after Worlds: APP Arizona Open in Mesa this week, then the $1.06M PPA Daytona Beach Open Nov. 16-22",
-   "summary": "The APP Tour's Arizona Open runs Thursday to Sunday, Nov. 12-15 at Arizona Athletic Grounds in Mesa with $125,000 in prize money, per Pickleballer citing the APP. PPA Tour Europe has a 125-level Challenger near Lille, France the same week. The PPA Tour is back Nov. 16-22 with the Proton Daytona Beach Open at Pictona at Holly Hill, Fla., an Open-level event (1,000 ranking points per title) with a listed $1,063,327 total payout. PickleballTV is the listed broadcaster, with finals Sunday, Nov. 22 from noon to 5 p.m. ET. MLP Asia's first season opens Friday, Nov. 13 in Japan.",
-   "status": "confirmed",
-   "date": "2026-11-11",
-   "sources": [
-    {
-     "label": "Pickleballer: After Worlds, the APP goes to Mesa and the PPA heads to Daytona",
-     "url": "https://pickleballer.world/stories/after-worlds-app-arizona-open-ppa-daytona/"
-    },
-    {
-     "label": "APPTV: 2026 APP Arizona Open championship court stream (Nov. 13)",
-     "url": "https://www.youtube.com/watch?v=t-Wcy47y1n0"
-    },
-    {
-     "label": "World Pickleball Magazine: MLP Asia opens Friday",
-     "url": "https://worldpickleballmagazine.com/li-xiaopeng-china-pickleball-tour-mlp-asia/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Schedule post: 'No rest after Worlds. APP Mesa this week, MLP Asia opens Friday, PPA Daytona ($1.06M) next week.' Link Pickleballer. On X, no hashtags.",
-   "tags": [
-    "APP",
-    "Arizona Open",
-    "PPA",
-    "Daytona Beach Open",
-    "MLP Asia",
-    "Schedule"
-   ]
-  },
-  {
-   "title": "Light item: Rockies GM Josh Byrnes and Ian Levin win the MLB GM meetings pickleball tournament",
-   "summary": "Colorado Rockies general manager Josh Byrnes and Ian Levin won the second annual pickleball tournament held at MLB's general managers meetings, per Purple Row. Rockies fans online joked it was the club's long-awaited title.",
-   "status": "confirmed",
-   "date": "2026-11-11",
-   "sources": [
-    {
-     "label": "Purple Row: Josh Byrnes & Ian Levin win the second annual MLB GM pickleball tournament",
-     "url": "https://www.purplerow.com/post/vTl7xgsRS4Tf"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Fun post: 'MLB's GMs held a pickleball tournament. The Rockies front office won it.' Link Purple Row; keep it playful.",
-   "tags": [
-    "MLB",
-    "Celebrity",
-    "Culture"
-   ]
-  },
-  {
-   "title": "USA Pickleball Nationals pro golds: Ronan Camron and Seone Mendez win singles, and Richard Livornese takes two titles",
-   "summary": "The five pro gold medals at the Oceanview USA Pickleball National Championships were decided Sunday, Nov. 8 at Barnes Tennis Center in San Diego, per World Pickleball Magazine, citing the Pickleball Den results board. Men's singles: Ronan Camron beat Andre Millet 11-8, 11-5. Women's singles: Seone Mendez beat Bobbi Oshiro 11-0, 11-4. Men's doubles: Jack Munro/Richard Livornese beat Jayden Broderick/Zack Card 8-11, 11-6, 11-5. Women's doubles: Vivian Glozman/Roos Van Reek beat Katerina Stewart/Bobbi Oshiro 9-11, 11-5, 11-5. Mixed doubles: Stewart/Livornese beat Munro/Van Reek 11-5, 12-10. USA Pickleball's own Nationals recap page had not posted Sunday's medalists at check time.",
-   "status": "confirmed",
-   "date": "2026-11-10",
-   "sources": [
-    {
-     "label": "World Pickleball Magazine: Nationals 2026 pro medals",
-     "url": "https://worldpickleballmagazine.com/usa-pickleball-nationals-2026-pro-medals-camron-mendez-stewart/"
-    },
-    {
-     "label": "USA Pickleball Nationals: professional divisions",
-     "url": "https://usapickleballnationals.com/professional/"
-    },
-    {
-     "label": "USA Pickleball Nationals: 2026 daily recaps",
-     "url": "https://usapickleballnationals.com/2026-daily-recaps/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Results post: 'USA Pickleball Nationals pro champs: Camron (MS), Mendez (WS), Munro/Livornese (MD), Glozman/Van Reek (WD), Stewart/Livornese (XD).' Link the WPM recap. On X, no hashtags.",
-   "tags": [
-    "USA Pickleball",
-    "Nationals",
-    "Results",
-    "Ronan Camron",
-    "Seone Mendez",
-    "Richard Livornese",
-    "Katerina Stewart"
-   ]
-  },
-  {
-   "title": "Gear: Selkirk's Boomstik ST goes on sale today, Nov. 10, at noon ET for $350",
-   "summary": "Selkirk's sequel to the Boomstik power paddle goes on sale Tuesday, Nov. 10 at noon Eastern at $350 in Elongated and Widebody shapes, per The Dink and Pickleballer. Selkirk says the new Sharktooth Groove perimeter adds bite for topspin and resets, and its InfiniGrit Ultra surface has four times the friction of standard surfaces (both are Selkirk's claims). It adds adjustable perimeter weights, a 16mm foam core and a limited lifetime warranty. The original Boomstik launched in August 2025 at $333.",
-   "status": "confirmed",
-   "date": "2026-11-10",
-   "sources": [
-    {
-     "label": "Pickleballer: Selkirk's Boomstik ST goes on sale Tuesday at $350",
-     "url": "https://pickleballer.world/stories/selkirk-boomstik-st-on-sale-tuesday/"
-    },
-    {
-     "label": "The Dink: The $350 Boomstik ST is here",
-     "url": "https://newsletter.thedinkpickleball.com/p/the-350-boomstik-st-is-here"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Gear post: 'Boomstik ST drops today at noon ET: $350, two shapes, swappable weights. Worth it over the original?' Link Pickleballer or The Dink. On X, no hashtags.",
-   "tags": [
-    "Gear",
-    "Selkirk",
-    "Boomstik ST",
-    "Paddle launch"
-   ]
-  },
-  {
-   "title": "Watch the Worlds 2026 finals: full replays of all five championship matches are up on PickleballTV's YouTube",
-   "summary": "PickleballTV posted full replays of all five Worlds 2026 finals on YouTube on Nov. 9: Goins vs. Sock, Johns/Waters vs. Jorja and JW Johnson, Shimabukuro/JW Johnson vs. Daescu/Alshon, Waters/Bright vs. Sewing/Parenteau, and Waters vs. Fahey. The PPA Tour's channel also has shorter highlight cuts of each final. The men's doubles comeback is embedded here.",
-   "status": "confirmed",
-   "date": "2026-11-10",
-   "sources": [
-    {
-     "label": "PickleballTV: Shimabukuro & JW Johnson vs Daescu & Alshon, men's doubles final (full)",
-     "url": "https://www.youtube.com/watch?v=OkYZnaBHnPE"
-    },
-    {
-     "label": "PickleballTV: Goins vs Sock, men's singles final (full)",
-     "url": "https://www.youtube.com/watch?v=4vVuq1cQMB0"
-    },
-    {
-     "label": "PickleballTV: Waters & Johns vs Johnson & Johnson, mixed doubles final (full)",
-     "url": "https://www.youtube.com/watch?v=TQoQs-44xZE"
-    },
-    {
-     "label": "PickleballTV: Waters & Bright vs Sewing & Parenteau, women's doubles final (full)",
-     "url": "https://www.youtube.com/watch?v=GYEMBKJaS_4"
-    },
-    {
-     "label": "PickleballTV: Waters vs Fahey, women's singles final (full)",
-     "url": "https://www.youtube.com/watch?v=wmavDAKBeRk"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Share post: 'Missed Championship Sunday? All five Worlds finals are up in full.' Link the PickleballTV replays; don't re-upload clips.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Replays",
-    "Video"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Worlds 2026 hub"
-    }
-   ],
-   "video_id": "OkYZnaBHnPE"
-  },
-  {
-   "title": "Week ahead: MLP Asia's first season opens Friday, Nov. 13 in Japan, and the APP Arizona Open runs Nov. 12-15",
-   "summary": "MLP Asia's inaugural season starts Friday, Nov. 13 in Japan, with Hong Kong, China hosting the next day, per the league. Six teams each host a pool-play match day over five weeks, and the top four go to the finals: semifinals Dec. 11 and Super Saturday Dec. 12. Franklin's new X-44 is the official ball and JOOLA is the official net partner. Per World Pickleball Magazine, THE DOTS TOKYO host opening night against Manila Helios and then Malayan Stripes. In the U.S., the APP Tour's Arizona Open runs Nov. 12-15 in Mesa, per the APP.",
-   "status": "confirmed",
-   "date": "2026-11-10",
-   "sources": [
-    {
-     "label": "MLP Asia: Franklin X-44 named official ball",
-     "url": "https://mlp-asia.com/franklin-x-44-named-official-ball-of-mlp-asia/"
-    },
-    {
-     "label": "MLP Asia: JOOLA named official net partner",
-     "url": "https://mlp-asia.com/joola-named-official-net-partner-of-mlp-asia/"
-    },
-    {
-     "label": "World Pickleball Magazine: Li Xiaopeng and MLP Asia week",
-     "url": "https://worldpickleballmagazine.com/li-xiaopeng-china-pickleball-tour-mlp-asia/"
-    },
-    {
-     "label": "APP Tour: Arizona Open preview (Nov. 12-15)",
-     "url": "https://www.theapp.global/news/arizona-preview-2026"
-    },
-    {
-     "label": "APPTV: 2026 APP Arizona Open championship court stream (Nov. 13)",
-     "url": "https://www.youtube.com/watch?v=t-Wcy47y1n0"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Preview post: 'Pro team pickleball hits Asia Friday. MLP Asia opens in Japan Nov. 13, six teams, final Dec. 12.' Link MLP Asia. On X, no hashtags.",
-   "tags": [
-    "MLP Asia",
-    "MLP",
-    "APP",
-    "Arizona Open",
-    "Schedule",
-    "Franklin X-44"
-   ]
-  },
-  {
-   "title": "Study: pickleball arm and shoulder injuries skew toward women and players over 60, and fractures are the most common",
-   "summary": "A descriptive study reported by Healio estimated 14,916 pickleball-related upper-extremity injuries in U.S. emergency-department data from 2014 to 2023. Players over 60 accounted for 83.1% and women for 59%. Fractures were the most common injury (58.6%, versus 36.1% of comparable tennis injuries), and the shoulder (36.4%) and forearm (34%) were the most-injured areas. Injury incidence per 100,000 players peaked in 2021 at 62.74, versus 5.27 in 2015 and 30.6 in 2022.",
-   "status": "confirmed",
-   "date": "2026-11-10",
-   "sources": [
-    {
-     "label": "Healio: Upper extremity pickleball injuries may be more common in women, older adults",
-     "url": "https://www.healio.com/news/orthopedics/20261109/upper-extremity-pickleball-injuries-may-be-more-common-in-women-older-adults"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Safety post: 'Most pickleball arm injuries in the ER are fractures, and most involve players over 60. Warm up and watch the backpedal.' Link Healio; keep it practical, not scary.",
-   "tags": [
-    "Health",
-    "Injuries",
-    "Study",
-    "Safety"
-   ]
-  },
-  {
-   "title": "Worlds 2026 champions: Goins wins men's singles, Johnson/Shimabukuro stun Alshon/Daescu, and Waters takes three titles",
-   "summary": "The Opendoor Pickleball World Championships ended Sunday, Nov. 8 at Brookhaven Country Club in Farmers Branch, Texas, with five pro finals. Mixed doubles: Ben Johns/Anna Leigh Waters beat Jorja Johnson/JW Johnson 9-11, 11-6, 11-9, 3-11, 11-4. Men's singles: John Lucian Goins beat Jack Sock 11-5, 12-10. Women's doubles: Waters/Anna Bright beat Sofia Sewing/Catherine Parenteau 11-4, 11-9, 11-5. Men's doubles: JW Johnson/Tama Shimabukuro beat Christian Alshon/Andrei Daescu 5-11, 5-11, 11-4, 11-8, 11-4 after trailing two games to none. Women's singles: Waters beat Kate Fahey 11-3, 11-2. Per The Kitchen, it is Johns/Waters' fourth straight Worlds mixed title.",
-   "status": "confirmed",
-   "date": "2026-11-09",
-   "sources": [
-    {
-     "label": "Pickleball.com: Worlds Championship Sunday recap",
-     "url": "https://pickleball.com/news/worlds-championship-sunday-recap-johnson-shimabukuro-pull-off-epic-comeback-as-waters-defends-triple-crown"
-    },
-    {
-     "label": "The Kitchen: 2026 Pickleball World Championships recap",
-     "url": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-recap-jw-johnson-tama-shimabukuro-ben-johns-anna-leigh-waters/"
-    },
-    {
-     "label": "ThePickleHub: Worlds 2026 results (official PPA scores feed)",
-     "url": "https://www.thepicklehub.net/blog/pickleball-world-championships-2026-results"
-    },
-    {
-     "label": "Official Worlds board (United Pickleball)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    },
-    {
-     "label": "@PPAtour: Johnny G is your men's singles champion",
-     "url": "https://x.com/PPAtour/status/2119525784310178174"
-    },
-    {
-     "label": "@PPAtour: your 2026 women's doubles champions",
-     "url": "https://x.com/PPAtour/status/2119539842602209743"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2119525784310178174",
-    "https://x.com/PPAtour/status/2119539842602209743"
-   ],
-   "social_angle": "Results post: 'Worlds 2026 champs: Goins (MS), Waters/Bright (WD), Johns/Waters (XD), Johnson/Shimabukuro (MD), Waters (WS).' Embed the PPA champion posts. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Champions",
-    "Anna Leigh Waters",
-    "John Lucian Goins",
-    "JW Johnson",
-    "Tama Shimabukuro",
-    "Ben Johns",
-    "Anna Bright"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Worlds 2026 hub"
-    }
-   ]
-  },
-  {
-   "title": "Anna Leigh Waters wins her 46th Triple Crown at Worlds, and she and Anna Bright set a PPA record with 18 straight titles together",
-   "summary": "Waters won mixed doubles with Ben Johns, women's doubles with Anna Bright and women's singles at Worlds, her 46th career Triple Crown per Pickleball.com. Bright and Waters' 18th straight tournament title together is a new PPA Tour record, per Pickleball.com; The Kitchen describes it as their 18th title together this year. Her 11-3, 11-2 win over Kate Fahey in the singles final was her 300th career PPA singles win (The Kitchen says her last singles loss was in May 2024, and that it was her fourth straight Worlds singles title and 10th singles title of 2026).",
-   "status": "confirmed",
-   "date": "2026-11-09",
-   "sources": [
-    {
-     "label": "Pickleball.com: Worlds Championship Sunday recap",
-     "url": "https://pickleball.com/news/worlds-championship-sunday-recap-johnson-shimabukuro-pull-off-epic-comeback-as-waters-defends-triple-crown"
-    },
-    {
-     "label": "The Kitchen: 2026 Pickleball World Championships recap",
-     "url": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-recap-jw-johnson-tama-shimabukuro-ben-johns-anna-leigh-waters/"
-    },
-    {
-     "label": "@PPAtour: Waters wins 300th singles match in a Triple Crown final",
-     "url": "https://x.com/PPAtour/status/2119613399986475302"
-    },
-    {
-     "label": "@PPAtour: your 2026 women's doubles champions",
-     "url": "https://x.com/PPAtour/status/2119539842602209743"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2119613399986475302"
-   ],
-   "social_angle": "Stat post: 'Anna Leigh Waters: 300 PPA singles wins, 46 Triple Crowns, and 18 straight titles with Anna Bright.' Embed the PPA post. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Anna Leigh Waters",
-    "Anna Bright",
-    "Triple Crown",
-    "Record"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Worlds 2026 hub"
-    }
-   ]
-  },
-  {
-   "title": "JW Johnson and Tama Shimabukuro come back from 0-2 to win Worlds men's doubles in their first title together",
-   "summary": "JW Johnson and 15-year-old Tama Shimabukuro, the No. 4 seeds, lost the first two games 5-11, 5-11 to Christian Alshon and Andrei Daescu, then won three straight, 11-4, 11-8, 11-4, per Pickleball.com and The Kitchen. It is their first title as a partnership in their fifth tournament together, and worth 3,000 ranking points per The Kitchen. Alshon/Daescu, who beat top seeds Johns/Tardio in the semifinals, had reached the final in all four of their prior events together.",
-   "status": "confirmed",
-   "date": "2026-11-09",
-   "sources": [
-    {
-     "label": "The Kitchen: 2026 Pickleball World Championships recap",
-     "url": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-recap-jw-johnson-tama-shimabukuro-ben-johns-anna-leigh-waters/"
-    },
-    {
-     "label": "Pickleball.com: Worlds Championship Sunday recap",
-     "url": "https://pickleball.com/news/worlds-championship-sunday-recap-johnson-shimabukuro-pull-off-epic-comeback-as-waters-defends-triple-crown"
-    },
-    {
-     "label": "ThePickleHub: Worlds 2026 results",
-     "url": "https://www.thepicklehub.net/blog/pickleball-world-championships-2026-results"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Hype post: 'Down 0-2, then three straight. JW Johnson and 15-year-old Tama Shimabukuro take Worlds men's doubles.' Link the Pickleball.com or Kitchen recap. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "JW Johnson",
-    "Tama Shimabukuro",
-    "Alshon",
-    "Daescu",
-    "Comeback"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Worlds 2026 hub"
-    }
-   ]
-  },
-  {
-   "title": "John Lucian Goins, 18, wins his second straight PPA men's singles title and his first Slam, beating Jack Sock at Worlds",
-   "summary": "Goins beat Jack Sock 11-5, 12-10 in the Worlds men's singles final, per Pickleball.com and The Kitchen. The Kitchen reports he did not drop a game all week, as at the Virginia Beach Open, beating No. 1 seed Chris Haworth 11-5, 11-5 and Alshon 11-4, 11-9 en route, and calls it his fourth career gold and first in a Slam. Sock had been chasing his first PPA singles title.",
-   "status": "confirmed",
-   "date": "2026-11-09",
-   "sources": [
-    {
-     "label": "The Kitchen: 2026 Pickleball World Championships recap",
-     "url": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-recap-jw-johnson-tama-shimabukuro-ben-johns-anna-leigh-waters/"
-    },
-    {
-     "label": "Pickleball.com: Worlds Championship Sunday recap",
-     "url": "https://pickleball.com/news/worlds-championship-sunday-recap-johnson-shimabukuro-pull-off-epic-comeback-as-waters-defends-triple-crown"
-    },
-    {
-     "label": "@PPAtour: Johnny G is your men's singles champion",
-     "url": "https://x.com/PPAtour/status/2119525784310178174"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2119525784310178174"
-   ],
-   "social_angle": "Post: '18 years old. Back-to-back singles titles. Johnny G beats Sock 11-5, 12-10 for Worlds gold.' Embed the PPA post. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "John Lucian Goins",
-    "Jack Sock",
-    "Men's singles"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships",
-     "label": "Worlds 2026 hub"
-    }
-   ]
-  },
-  {
-   "title": "The Picklr bankruptcy: final financing hearing is Tuesday, Nov. 10, and a franchise-agreement sale is due by Jan. 7, 2027",
-   "summary": "Indoor pickleball company The Picklr (parent Picklr, Inc., and Picklr Clubs, Inc.) filed Chapter 11 in Dallas on Oct. 9; per Bankruptcy Observer the franchisor entity did not file. Financing is led by franchisee Tom Neale's Dynamus Alliance. Per a bankruptcy docket tracker, the court is set to consider final approval of a $4.365 million financing facility on Nov. 10, and the U.S. Trustee and a landlord have filed objections. The loan sets milestones tied to a sale of franchise agreements, which that source estimates at about Nov. 23 for sale pleadings, Dec. 23 for a plan and sale order, and Jan. 7, 2027 for closing. The creditors' meeting is Nov. 18. Franchised clubs are not themselves debtors, and no buyer has been announced.",
-   "status": "confirmed",
-   "date": "2026-11-09",
-   "sources": [
-    {
-     "label": "ElevenFlo: Picklr, Inc. bankruptcy case summary",
-     "url": "https://elevenflo.com/cases/picklr-inc-20229"
-    },
-    {
-     "label": "BKO News: Picklr bankruptcy, what landlords and franchisees need to know",
-     "url": "https://www.bankruptcyobserver.com/news/picklr-bankruptcy-landlords-franchisees-lease-guarantees"
-    },
-    {
-     "label": "Sports Business Journal: The Picklr files for bankruptcy",
-     "url": "https://www.sportsbusinessjournal.com/Articles/2026/10/10/the-picklr-files-for-bankruptcy/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Business note only: 'The Picklr's bankruptcy court hears its final financing request Tuesday. Franchise clubs aren't debtors.' Link the BKO or SBJ piece; avoid speculating about closures.",
-   "tags": [
-    "Business",
-    "The Picklr",
-    "Bankruptcy",
-    "Franchise"
-   ]
-  },
-  {
-   "title": "Alshon and Daescu knocked out top seeds Johns/Tardio, then lost the Worlds men's doubles final after leading 2-0",
-   "summary": "No. 3 Christian Alshon and Andrei Daescu beat No. 1 Ben Johns and Gabe Tardio 11-9, 11-6 in Saturday's men's doubles semifinal at Worlds, per @PPAtour and The Kitchen. Pickleball.com had reported the pair led 7-1 in game one and 9-0 in game two of that semifinal, and that it was their second straight win over Johns/Tardio. Since reuniting ahead of the 2026-27 PPA season in August, Alshon and Daescu had reached the final in all four events they played together, but in Sunday's Worlds final they lost 5-11, 5-11, 11-4, 11-8, 11-4 to JW Johnson and Tama Shimabukuro after leading two games to none, per Pickleball.com and The Kitchen.",
-   "status": "confirmed",
-   "date": "2026-11-09",
-   "sources": [
-    {
-     "label": "@PPAtour: Seed upset, Daescu/Alshon defeat Johns/Tardio 11-9, 11-6",
-     "url": "https://x.com/PPAtour/status/2119213916144206029"
-    },
-    {
-     "label": "@PPAtour: Daescu/Alshon earn 4th men's doubles final as a team this season",
-     "url": "https://x.com/PPAtour/status/2119227694118527223"
-    },
-    {
-     "label": "Pickleball.com: Alshon, Daescu power past Johns, Tardio to make men's doubles final",
-     "url": "https://pickleball.com/news/alshon-daescu-power-past-johns-tardio-to-make-mens-doubles-final"
-    },
-    {
-     "label": "PPA Tour (YouTube): Johns/Tardio vs Daescu/Alshon full match highlights",
-     "url": "https://www.youtube.com/watch?v=OuFCzap8O8Y"
-    },
-    {
-     "label": "The Kitchen: 2026 Pickleball World Championships recap",
-     "url": "https://thekitchenpickle.com/blogs/news/2026-pickleball-world-championships-recap-jw-johnson-tama-shimabukuro-ben-johns-anna-leigh-waters/"
-    },
-    {
-     "label": "Pickleball.com: Worlds Championship Sunday recap",
-     "url": "https://pickleball.com/news/worlds-championship-sunday-recap-johnson-shimabukuro-pull-off-epic-comeback-as-waters-defends-triple-crown"
-    }
-   ],
-   "embeds": [
-    "https://x.com/PPAtour/status/2119213916144206029"
-   ],
-   "social_angle": "Context post: 'Alshon/Daescu reached every final since reuniting, then blew a 2-0 lead to Johnson/Shimabukuro at Worlds.' Link the Kitchen or Pickleball.com recap. On X, no hashtags.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Alshon",
-    "Daescu",
-    "Men's doubles",
-    "Semifinal"
-   ]
-  },
-  {
-   "title": "JOOLA and TOGETHXR launch 'She's Got a Point,' a long-term women-in-pickleball partnership that debuted at Worlds",
-   "summary": "JOOLA and women's sports media company TOGETHXR have launched 'She's Got a Point,' a long-term partnership spotlighting women in pickleball from the pro tour to local courts. Per JOOLA's announcement, it debuted Nov. 2-8 at a JOOLA x TOGETHXR Clubhouse at the Pickleball World Championships with appearances by JOOLA athletes including Anna Bright and Kate Fahey (both in Sunday finals), girls' clinics, morning yoga, conversations with Pickleball Nikki, and a limited-edition co-branded capsule sold on-site while supplies last. JOOLA cites SFIA data that 10.4 million women played pickleball in 2025, 43% of all players. The brands say the partnership sets the stage for 2027.",
-   "status": "confirmed",
-   "date": "2026-11-08",
-   "sources": [
-    {
-     "label": "JOOLA: JOOLA and TOGETHXR launch 'She's Got a Point'",
-     "url": "https://joola.com/blogs/blog/joola-and-togethxr-launch-shes-got-a-point-to-elevate-the-women-shaping-pickleball"
-    },
-    {
-     "label": "Pickleball.com: JOOLA x TOGETHXR launch 'She's Got a Point'",
-     "url": "https://pickleball.com/culture/joola-x-togethxr-launch-shes-got-a-point-to-elevate-women-shaping-pickleball"
-    },
-    {
-     "label": "She's Got a Point (campaign site)",
-     "url": "https://shesgotapoint.com/"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Brand/culture note: 'JOOLA and TOGETHXR's new She's Got a Point push puts women's pickleball front and center, and two of its faces, Bright and Fahey, play for titles today.' Link the release. Frame as a brand partnership, not news about results.",
-   "tags": [
-    "Business",
-    "JOOLA",
-    "TOGETHXR",
-    "Women in pickleball",
-    "Anna Bright",
-    "Kate Fahey"
-   ]
-  },
-  {
-   "title": "Worlds semifinal results: Sock beats Hunter Johnson; Daescu/Alshon eliminate Johns/Tardio; Sewing/Parenteau upset Fahey/Pisnik",
-   "summary": "All ten pro main-draw semifinals at the Opendoor Pickleball World Championships in Farmers Branch, Texas, finished Saturday, Nov. 7. These are semifinal results, not championship wins; finals are Sunday. Men's singles: John Lucian Goins defeated Christian Alshon 11-4, 11-9; Jack Sock defeated Hunter Johnson 11-5, 8-11, 11-1. Women's singles: Anna Leigh Waters defeated Brooke Buckner 11-2, 11-0; Kate Fahey defeated Kaitlyn Christian 11-1, 11-3. Mixed doubles: Ben Johns and Anna Leigh Waters defeated Rachel Rohrabacher and Christian Alshon 11-8, 11-5; Jorja Johnson and JW Johnson defeated Anna Bright and Hayden Patriquin 11-2, 11-4. Men's doubles: Andrei Daescu and Christian Alshon defeated Ben Johns and Gabriel Tardio 11-9, 11-6; Tama Shimabukuro and JW Johnson defeated CJ Klinger and Eric Oncins 11-4, 11-6. Women's doubles: Anna Bright and Anna Leigh Waters defeated Rachel Rohrabacher and Parris Todd 11-3, 11-5; Sofia Sewing and Catherine Parenteau defeated Kate Fahey and Tina Pisnik 11-5, 11-5. The first seven are from the official board (checked 5:09 PM CT); the last three are from @PPAtour and pickleball.com results.",
-   "status": "confirmed",
-   "date": "2026-11-07",
-   "sources": [
-    {
-     "label": "Official United Pickleball Worlds live board (semifinals checked 5:09:16 PM CT, Nov. 7)",
-     "url": "https://worlds.unitedpickleball.com/ppa-tour"
-    },
-    {
-     "label": "@PPAtour: Sewing/Parenteau defeat Fahey/Pisnik 11-5, 11-5",
-     "url": "https://x.com/PPAtour/status/2119260195884843317"
-    },
-    {
-     "label": "@PPAtour: Daescu/Alshon defeat Johns/Tardio 11-9, 11-6",
-     "url": "https://x.com/PPAtour/status/2119213916144206029"
-    },
-    {
-     "label": "@PPAtour: The Johnsons take down the No. 2 seed",
-     "url": "https://x.com/PPAtour/status/2119206119847460943"
-    },
-    {
-     "label": "Pickleball.com results: Anna Bright (WD semifinal)",
-     "url": "https://pickleball.com/players/anna-bright"
-    },
-    {
-     "label": "Pickleball.com results: JW Johnson (MD semifinal)",
-     "url": "https://pickleball.com/players/jw-johnson"
-    }
-   ],
-   "embeds": [],
-   "social_angle": "Semifinal results only, not championship wins. Finals are Sunday, Nov. 8 from 10 a.m. CT.",
-   "tags": [
-    "PPA",
-    "Worlds",
-    "Semifinals",
-    "Jack Sock",
-    "Hunter Johnson",
-    "Kate Fahey",
-    "Ben Johns",
-    "Andrei Daescu",
-    "John Lucian Goins",
-    "Anna Leigh Waters",
-    "Sofia Sewing",
-    "Catherine Parenteau",
-    "JW Johnson",
-    "Tama Shimabukuro"
-   ],
-   "links": [
-    {
-     "href": "/events/opendoor-pickleball-world-championships#how-to-watch",
-     "label": "How to watch Worlds week"
-    }
    ]
   }
  ]
