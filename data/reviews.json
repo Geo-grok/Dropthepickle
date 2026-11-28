@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "channel": "John Kew Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
+   "title": "Top 3 Budget Pickleball Paddles of 2026 (Q4) | Elite Spin for $100",
+   "link": "https://www.youtube.com/watch?v=5JGt3ARqhKQ",
+   "video_id": "5JGt3ARqhKQ",
+   "date": "2026-11-27"
+  },
+  {
    "channel": "Enhance Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
    "title": "I Tested BANNED Pickleball Paddles",
@@ -471,17 +479,17 @@
    "link": "https://www.youtube.com/watch?v=KoOb9tTRY2c",
    "video_id": "KoOb9tTRY2c",
    "date": "2026-10-23"
-  },
-  {
-   "channel": "PickleballPlaybook - Austin Hardy",
-   "channel_url": "https://www.youtube.com/channel/UCwkHWkyarHJFSQxk8SMs4zA",
-   "title": "The BEST Pickleball Tips I’ve Learned From 5 Years of Coaching",
-   "link": "https://www.youtube.com/watch?v=aoAVYfoNLZE",
-   "video_id": "aoAVYfoNLZE",
-   "date": "2026-10-23"
   }
  ],
  "all_items": [
+  {
+   "channel": "John Kew Pickleball",
+   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
+   "title": "Top 3 Budget Pickleball Paddles of 2026 (Q4) | Elite Spin for $100",
+   "link": "https://www.youtube.com/watch?v=5JGt3ARqhKQ",
+   "video_id": "5JGt3ARqhKQ",
+   "date": "2026-11-27"
+  },
   {
    "channel": "Enhance Pickleball",
    "channel_url": "https://www.youtube.com/channel/UCb6veypzEzufZ38NaY3fd_w",
@@ -1091,14 +1099,6 @@
    "date": "2026-10-17"
   },
   {
-   "channel": "John Kew Pickleball",
-   "channel_url": "https://www.youtube.com/channel/UCIZfb6Kaorky0xrb_v7Yt4g",
-   "title": "Gearbox Pressure X Review: These Paddles Feel Backwards",
-   "link": "https://www.youtube.com/watch?v=eNRrrKuwoD8",
-   "video_id": "eNRrrKuwoD8",
-   "date": "2026-10-16"
-  },
-  {
    "channel": "Pickleball Blast",
    "channel_url": "https://www.youtube.com/channel/UCsPTdgkeMp68IyHd5gMFDfg",
    "title": "AI Pickleball Training Partner | Tenniix Ball Machine Review",
@@ -1564,5 +1564,5 @@
   "The Paddle Plug": "ok (11)",
   "Pickleball Advocate": "ok (11)"
  },
- "updated": "2026-11-27T19:52"
+ "updated": "2026-11-28T18:45"
 }

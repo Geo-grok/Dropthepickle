@@ -95,138 +95,8 @@
   "v": 3
  },
  "buzz.html": {
-  "hash": "61e3c7bdca3961e86092fe73b1b99dbea4ba9bb6386a1f349676f641ac6198ba",
-  "updated": "2026-11-21",
-  "v": 3
- },
- "buzz/2026-11-07-worlds-semifinal-results-sock-beats-hunter-johnson-daescu.html": {
-  "hash": "13539f77e596ebf148543ae51fa4b9e8a93b2a30990de91da6a899def5294038",
-  "updated": "2026-11-08",
-  "v": 3
- },
- "buzz/2026-11-08-joola-togethxr-launch-shes-got-point-long-term.html": {
-  "hash": "ebd2fb86ab59db822f03b9d8e5d2f3dff284e2658cc7414a3e3ff32150416c2d",
-  "updated": "2026-11-08",
-  "v": 3
- },
- "buzz/2026-11-09-alshon-daescu-knocked-out-top-seeds-johns-tardio.html": {
-  "hash": "b405dbbb8968faa3e08ba06eb09cca058db5fc71c4b8c5787e72bc35549990c5",
-  "updated": "2026-11-09",
-  "v": 3
- },
- "buzz/2026-11-09-anna-leigh-waters-wins-her-46th-triple-crown.html": {
-  "hash": "092490b01ef6078740bcd6d7a043e36cdd9bb59ccd6f9c8144ce6a448967047a",
-  "updated": "2026-11-09",
-  "v": 3
- },
- "buzz/2026-11-09-john-lucian-goins-18-wins-his-second-straight.html": {
-  "hash": "672729e08ef90d311043b377d5f2d998957245b14c0a415f68e9b62fcc3825b8",
-  "updated": "2026-11-09",
-  "v": 3
- },
- "buzz/2026-11-09-jw-johnson-tama-shimabukuro-come-back-0-2.html": {
-  "hash": "3b3178391933b7b5a5b5c4095a9420cb4830a6194e2243f68ae00edb9a1a240d",
-  "updated": "2026-11-09",
-  "v": 3
- },
- "buzz/2026-11-09-picklr-bankruptcy-final-financing-hearing-tuesday-nov-10.html": {
-  "hash": "9a1b4ea37671a66202c67b17fc257698c18e3baa381a1d5f9351760edeb97ec4",
-  "updated": "2026-11-09",
-  "v": 3
- },
- "buzz/2026-11-09-worlds-2026-champions-goins-wins-mens-singles-johnson.html": {
-  "hash": "d21322ca31780ffa73b30fc10eccdd4b9843a974e3dcc2e67d0aa7f9a0594b09",
-  "updated": "2026-11-09",
-  "v": 3
- },
- "buzz/2026-11-10-gear-selkirks-boomstik-st-goes-sale-today-nov.html": {
-  "hash": "14a932dcd37b7d8827d92d421d978560560d77784bd1a5431fa5f4b163f8b67a",
-  "updated": "2026-11-11",
-  "v": 3
- },
- "buzz/2026-11-10-study-pickleball-arm-shoulder-injuries-skew-toward-women.html": {
-  "hash": "1c7b545b6f83d040fa4446f1ddafe75578e40d7f0c46f7876e1bf278acb3aeda",
-  "updated": "2026-11-11",
-  "v": 3
- },
- "buzz/2026-11-10-usa-pickleball-nationals-pro-golds-ronan-camron-seone.html": {
-  "hash": "bfcf0625b095885e281a1a263124e99d5cd012a59b5e687805f6e58b5f376f82",
-  "updated": "2026-11-11",
-  "v": 3
- },
- "buzz/2026-11-10-watch-worlds-2026-finals-full-replays-all-five.html": {
-  "hash": "0e56a5a53669c976932d56f561cfbf2210a391dca39978f0436138f11005faa8",
-  "updated": "2026-11-11",
-  "v": 3
- },
- "buzz/2026-11-10-week-ahead-mlp-asias-first-season-opens-friday.html": {
-  "hash": "a14bfdf69c9ea37c0c63b9425f536c67859826cb3ca0b6f631efc7540dc35e28",
-  "updated": "2026-11-13",
-  "v": 3
- },
- "buzz/2026-11-11-15-tama-shimabukuro-youngest-mens-doubles-champion-ppa.html": {
-  "hash": "d8361b8ec0c0e564dba87aa3e1e0ca7348f67c67337a4c48f29a426c6c39ee52",
-  "updated": "2026-11-12",
-  "v": 3
- },
- "buzz/2026-11-11-light-item-rockies-gm-josh-byrnes-ian-levin.html": {
-  "hash": "c5729834212843da33a984ac7479f8112ac46cdd3833b832a75dab2bcebd3d2b",
-  "updated": "2026-11-12",
-  "v": 3
- },
- "buzz/2026-11-11-ppa-challenger-showdown-eileen-wang-matt-burkhardt-three.html": {
-  "hash": "b72dc4061206fd7e2aa35f76a449cc1cb9c165e096f54e9c2bcaea6f5f1173f5",
-  "updated": "2026-11-12",
-  "v": 3
- },
- "buzz/2026-11-11-pro-calendar-after-worlds-app-arizona-open-mesa.html": {
-  "hash": "c64439a47815473f71ce4dc11234d68796b0cda0057e3e90cc56cfd48a3e4fe3",
-  "updated": "2026-11-12",
-  "v": 3
- },
- "buzz/2026-11-11-usa-pickleball-will-retire-six-owl-sport-quiet.html": {
-  "hash": "9e65dbf409748bfd4b9377861a4aaf2c65cb0b6b33033ff5dcc510b7be802713",
-  "updated": "2026-11-12",
-  "v": 3
- },
- "buzz/2026-11-12-app-arizona-open-starts-today-mesa-megan-fudge.html": {
-  "hash": "17b72e1f6b46379af50202068286a495ec8678515614d2b704fe2f7a2fb3c755",
-  "updated": "2026-11-13",
-  "v": 3
- },
- "buzz/2026-11-12-courts-watch-lee-county-ga-approves-5-2.html": {
-  "hash": "b4f5b724be0ba2e7584789323032ee8a4aa450da48de4ed36fc64a25abf624d6",
-  "updated": "2026-11-13",
-  "v": 3
- },
- "buzz/2026-11-12-jack-socks-slide-wins-ppas-play-tournament-worlds.html": {
-  "hash": "584e743145dc1cdc1ce1106dd53bb26e1b3253f2122b431fd251c4af4838e3f4",
-  "updated": "2026-11-13",
-  "v": 3
- },
- "buzz/2026-11-12-mlp-asia-opening-night-dots-tokyo-host-manila.html": {
-  "hash": "a6fa91b2ce5071f51c3afdf4224ef44727888c33ee450b5a8e78df08b54db154",
-  "updated": "2026-11-13",
-  "v": 3
- },
- "buzz/2026-11-13-app-arizona-open-41st-seed-alvi-regalado-beats.html": {
-  "hash": "57fb6d789c4d1c84eb466cf0bed59e50aa216661ef6ab616fefb7f15737bf887",
-  "updated": "2026-11-17",
-  "v": 3
- },
- "buzz/2026-11-13-courts-watch-gilroy-calif-opens-six-new-public.html": {
-  "hash": "aca42e8c47e3115a2f2381402c4d9ca2c5de5c66ead2b1122efee1e3021a931c",
-  "updated": "2026-11-17",
-  "v": 3
- },
- "buzz/2026-11-13-mlp-asia-opens-two-tokyo-wins-dots-tokyo.html": {
-  "hash": "7926420cf089c1d38d0a0140a747f7b871f337465d7b0b0edb7cca7746b362dc",
-  "updated": "2026-11-17",
-  "v": 3
- },
- "buzz/2026-11-13-worlds-2026-semifinal-replays-are-up-pickleballtvs-youtube.html": {
-  "hash": "8e69087923f6b06e89c5408867ab851d80978d45e49c5b3371e935463b392de2",
-  "updated": "2026-11-17",
+  "hash": "6a082d4535d8b034aa3e8dd2a0394331fb9bc8984a91891d93ce8518fd64da36",
+  "updated": "2026-11-28",
   "v": 3
  },
  "buzz/2026-11-14-anna-bright-says-anna-leigh-waters-viral-get.html": {
@@ -407,6 +277,196 @@
  "buzz/2026-11-21-purdue-adds-18-fenced-pickleball-courts-including-three.html": {
   "hash": "bea1c74d028844a8c9cff85019da7fd215a2c59d0f70badbfd227d2b8f4df023",
   "updated": "2026-11-21",
+  "v": 3
+ },
+ "buzz/2026-11-22-mlp-asia-ho-chi-minh-city-tama-shimabukuro.html": {
+  "hash": "36f5e28186a0185c74040c3a1ecf833113a62abe98019ed59d271279eb4c08b3",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-22-ppa-daytona-semifinals-castillo-routs-top-seed-buckner.html": {
+  "hash": "201cf80a447c80a1e413587c56df952a29fe8197252c8ee515e64f4d2a4341e4",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-23-college-pickleball-uva-wins-app-selkirk-collegiate-washington.html": {
+  "hash": "de210bcd843d42177d445fc641ef305461ce885d99170e8d29c255dce52b4b52",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-23-ppa-daytona-champions-waters-wins-two-hunter-johnson.html": {
+  "hash": "d41b257e8d87f246dfeee15c0f9aaccfee146be5e8e41eb8ae1e0a1e5ee1512e",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-24-doctors-warn-pickleball-eye-injuries-after-player-hit.html": {
+  "hash": "9bea7a20f02515490b77a98cc7f782e33a1594ef7ed115c19e5871166c0be289",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-24-first-south-american-pickleball-championship-brazil-wins-over.html": {
+  "hash": "bd2c94cb98db7f308f985f3f19f2c82f0cb08d7f833ba155e4ebfcdfb83b7d91",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-24-top-pickleball-tour-finale-andorra-claudia-caymel-wins.html": {
+  "hash": "e64bab0b228e6fa8b1e57125a891705b79d79befe608020c2fee8e1d0bf323ee",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-24-vietnam-masters-d-joy-tour-finale-listed-app.html": {
+  "hash": "1f12822133fd1d2c01e2502b92fd8e0d96b64472287fe7bad733ec5053c9e96b",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-24-watch-daytonas-finals-pickleballtv-posts-full-replays-four.html": {
+  "hash": "dbbbe012dcb25114fbbcadf4fcf7f5517ef57abc617a36b36cb70f9aadeca633",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-25-courts-watch-brockville-ont-can-now-build-all.html": {
+  "hash": "103dec7e283dc465613b496c8babc7f177c0eb7e6647bbca81d12afa575e781f",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-25-dupr-explains-its-new-half-point-rule-if.html": {
+  "hash": "29c8757f93cb8ee5a97ba13db637a141f52019b281edbabb8dcc5447a46fe727",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-25-mlp-asias-last-regular-season-week-starts-thursday.html": {
+  "hash": "95864f86036973d88ea41ad91ab931abf70f52a95235f87ab654ad8a97dc0273",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-25-pickleball-england-makes-protective-eyewear-mandatory-under-18s.html": {
+  "hash": "ded245b246b2f1f8adfa742d2ef3b8a34a06669650fe400012e06bf1b03a90c6",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-25-picklr-bankruptcy-subchapter-v-status-conference-held-no.html": {
+  "hash": "c78550a1139a5ab499c8702159a232d8806ff2bcd3efda55a06bd4d255418fd3",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-25-usa-pickleball-adds-venture-investor-david-horowitz-former.html": {
+  "hash": "e61ea2e4ec301c5efb0735bd42e461d51317d6d71af5512d69fe48915996ddab",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-25-worlds-2026-was-biggest-event-ppa-mlp-history.html": {
+  "hash": "feb974c75ec8e086457f4e586f7e5dedbf15c0616c71901e678f9920b0309c75",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-agassi-sports-owner-world-series-pickleball-name-flags.html": {
+  "hash": "953a2a940292aff9663cea473faf0d000829617b9f73bcb5558b5d10379e3c73",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-courts-watch-dill-dinkers-opens-10-indoor-courts.html": {
+  "hash": "1a173632382ca8b9e7a542c10588e88a4507610aab339a1fd4e7bcb563f1db19",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-dupr-becomes-official-rating-system-philippines-pickle-yard.html": {
+  "hash": "a721b396c9dfcb96aa4f200737a36f1818928a0986a85884a8d3073d707152a8",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-gear-proton-revives-its-series-one-line-two.html": {
+  "hash": "5c9fdae0c71ddf7bed11564dfd9469e42fb5e7afa1519ab2b5c348e3518e5b22",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-indoor-clubs-change-hands-bosse-takes-over-picklrs.html": {
+  "hash": "33d69d139b611d8ab95f5443bc4f8b2b6fe0210f7a11cb314a640d1fbaefa46a",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-picklepod-hayden-patriquin-co-hosts-nico-talks-burnout.html": {
+  "hash": "f144c653845997f3752d7f7a2682f80aae480372ecb62fa7924830c9dd9b9476",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-picklr-bankruptcy-judge-signs-orders-keeping-club-utilities.html": {
+  "hash": "3cd24de46de5f3c946fc398b44c83b8fa89a18a3745594547a4cd0713594f712",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-pro-calendar-ppa-canadas-toronto-125-starts-today.html": {
+  "hash": "0bd0bfb381fb2f365abf683fd6b5e20bf7b711d538190d2ffa3c63e818d3ba9b",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-stars-head-asia-december-tama-shimabukuro-joins-anna.html": {
+  "hash": "b388dcdcb512c15c2d387ef319daedb3f8bb51d56fb8a0e48957daad7163ec76",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-26-vietnam-masters-days-1-2-11-walkovers-first.html": {
+  "hash": "a6997214541bddb54870452be4a138665ce24a062cf3d3da8c66722a186781d2",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-27-are-there-really-too-few-courts-arlington-va.html": {
+  "hash": "cb23957ba54fc72a49a516da12200c21248781e533124a70eccf242c0466b825",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-27-gear-anna-leigh-waters-mystery-paddle-franklin-whip.html": {
+  "hash": "bb825920c9b54d92aba8bdb70a8f807554e38132beb8add4700d52967b995f1b",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-27-listen-watch-mari-humberg-pickleballers-podcast-blaine-hovenier.html": {
+  "hash": "f86a4cb0061c301f93016757f041fd3a6034a2c09f8dbb313a68dae4435987fd",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-27-mlp-asia-kuala-lumpur-hong-kong-cannons-save.html": {
+  "hash": "12b895fe3bc6864ddd5f0e84cf8b5dba94e7601151cbf6c168fbf2ed444e39aa",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-27-philippines-abra-river-paddlers-sweep-top-seed-rizal.html": {
+  "hash": "7c749cfdecb0342158e056a698937af178a14857818deaaddad146507fbd8636",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-27-pickleball-diplomacy-39-maryland-high-school-athletes-leave.html": {
+  "hash": "263bcafec10dbc88264af8082f20cfe9839a906542118c00895206186ce7da51",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-27-thanksgiving-weekend-ppa-mlp-give-thanks-guam-hosts.html": {
+  "hash": "e07e8f179dfdb06217c773b1e307aabcf1a3fe8795f37b82c6842fd5cbf93c6a",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-27-vietnam-masters-quarterfinals-phuc-huynh-clinches-d-joy.html": {
+  "hash": "0b685fd652834b140ddce795b224a106490210651fe9dc4011cdc52874f9c2a3",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-28-australia-301-553-people-played-pickleball-2025-26.html": {
+  "hash": "2f1888edc54408e4961a81d4c945bc47036efc54b105f4d05d20e08afd82e49a",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-28-mlp-asia-kuala-lumpur-dragon-warriors-clinch-finals.html": {
+  "hash": "a2604cee46fd3e5ea14899f47ccd6230dce372c95583ee504df0ac8d82753d8f",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-28-ppa-canada-toronto-125-matthew-finnerty-victoria-dimuzio.html": {
+  "hash": "2ec13e153e13871033e660707dcc7de90560531ccf2c0fdfa9b285d1542699db",
+  "updated": "2026-11-28",
+  "v": 3
+ },
+ "buzz/2026-11-28-vietnam-masters-semifinals-domenika-turkovic-clinches-d-joy.html": {
+  "hash": "85980a7a92dbc02d93bd10609cfa61f836febe9b8fb80d2ad5a0274bf0e9a742",
+  "updated": "2026-11-28",
   "v": 3
  },
  "community.html": {
@@ -1230,13 +1290,13 @@
   "v": 3
  },
  "index.html": {
-  "hash": "082f29ff442f9faa8547a5c5a451a7a8e9e130eff5a95c5d1848e2f35ac65050",
-  "updated": "2026-11-27",
+  "hash": "d9e87bcf560d7eeae36a90db82c8b3a258cc7f240fb8ea5968cafb2df2ec2858",
+  "updated": "2026-11-28",
   "v": 3
  },
  "news.html": {
-  "hash": "b3ddb3d5151f11dec2398c5dcb9b8a12bbb8ff1bb228476e9e9ef7eb4bdba9b4",
-  "updated": "2026-11-27",
+  "hash": "cc591afc67676bbe310a8f163441a2e36cc104916f9d73d2b84ce2af07956b87",
+  "updated": "2026-11-28",
   "v": 3
  },
  "paddle-crbn-crbn1-trufoam-barrage.html": {
@@ -1465,8 +1525,8 @@
   "v": 3
  },
  "podcasts.html": {
-  "hash": "690fdb97718e2d7df91803aa190d69c1db4180f318a2122c9e98545f60474618",
-  "updated": "2026-11-26",
+  "hash": "3bfde90b2b0e9fe3eb24b8fa81bef0018ca56ce5da1ef45f0c9ea3a05b923379",
+  "updated": "2026-11-28",
   "v": 3
  },
  "price-index.html": {
@@ -1495,8 +1555,8 @@
   "v": 3
  },
  "reviews.html": {
-  "hash": "de032c6eb5377726adf88e706d17c8537e4f7e4760387bd7eded3bbb34c89d86",
-  "updated": "2026-11-27",
+  "hash": "098284bf81e5eab04e3b0a11034e58bfc75408799c19b19fae9e7f61d8386816",
+  "updated": "2026-11-28",
   "v": 3
  },
  "science.html": {
